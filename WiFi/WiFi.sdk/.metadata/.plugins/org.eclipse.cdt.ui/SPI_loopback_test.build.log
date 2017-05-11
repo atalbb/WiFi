@@ -1,0 +1,6 @@
+11:27:04 **** Incremental Build of configuration Debug for project SPI_loopback_test ****
+make all 
+make: Nothing to be done for `all'.
+
+11:27:04 Build Finished (took 230ms)
+

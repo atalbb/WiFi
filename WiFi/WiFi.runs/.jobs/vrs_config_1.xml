@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="WiFi_ilmb_v10_0_synth_1" LaunchDir="C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.runs/WiFi_ilmb_v10_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="WiFi_dlmb_bram_if_cntlr_0_synth_1" LaunchDir="C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.runs/WiFi_dlmb_bram_if_cntlr_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="WiFi_dlmb_v10_0_synth_1" LaunchDir="C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.runs/WiFi_dlmb_v10_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="WiFi_microblaze_0_0_synth_1" LaunchDir="C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.runs/WiFi_microblaze_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="WiFi_lmb_bram_0_synth_1" LaunchDir="C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.runs/WiFi_lmb_bram_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="WiFi_ilmb_bram_if_cntlr_0_synth_1" LaunchDir="C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.runs/WiFi_ilmb_bram_if_cntlr_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="WiFi_axi_timer_0_0_synth_1" LaunchDir="C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.runs/WiFi_axi_timer_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="WiFi_axi_ethernetlite_0_0_synth_1" LaunchDir="C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.runs/WiFi_axi_ethernetlite_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="WiFi_axi_uartlite_0_0_synth_1" LaunchDir="C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.runs/WiFi_axi_uartlite_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="WiFi_microblaze_0_axi_intc_0_synth_1" LaunchDir="C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.runs/WiFi_microblaze_0_axi_intc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="WiFi_clk_wiz_1_0_synth_1" LaunchDir="C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.runs/WiFi_clk_wiz_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="WiFi_microblaze_0_xlconcat_0_synth_1" LaunchDir="C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.runs/WiFi_microblaze_0_xlconcat_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="WiFi_mdm_1_0_synth_1" LaunchDir="C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.runs/WiFi_mdm_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="WiFi_rst_clk_wiz_1_100M_0_synth_1" LaunchDir="C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.runs/WiFi_rst_clk_wiz_1_100M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="WiFi_axi_emc_0_0_synth_1" LaunchDir="C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.runs/WiFi_axi_emc_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="WiFi_mii_to_rmii_0_0_synth_1" LaunchDir="C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.runs/WiFi_mii_to_rmii_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="WiFi_axi_quad_spi_0_0_synth_1" LaunchDir="C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.runs/WiFi_axi_quad_spi_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="WiFi_xbar_0_synth_1" LaunchDir="C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.runs/WiFi_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="WiFi_xbar_1_synth_1" LaunchDir="C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.runs/WiFi_xbar_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="WiFi_ilmb_v10_0_synth_1"/>
+		<Parent Id="WiFi_dlmb_bram_if_cntlr_0_synth_1"/>
+		<Parent Id="WiFi_dlmb_v10_0_synth_1"/>
+		<Parent Id="WiFi_microblaze_0_0_synth_1"/>
+		<Parent Id="WiFi_lmb_bram_0_synth_1"/>
+		<Parent Id="WiFi_ilmb_bram_if_cntlr_0_synth_1"/>
+		<Parent Id="WiFi_axi_timer_0_0_synth_1"/>
+		<Parent Id="WiFi_axi_ethernetlite_0_0_synth_1"/>
+		<Parent Id="WiFi_axi_uartlite_0_0_synth_1"/>
+		<Parent Id="WiFi_microblaze_0_axi_intc_0_synth_1"/>
+		<Parent Id="WiFi_clk_wiz_1_0_synth_1"/>
+		<Parent Id="WiFi_microblaze_0_xlconcat_0_synth_1"/>
+		<Parent Id="WiFi_mdm_1_0_synth_1"/>
+		<Parent Id="WiFi_rst_clk_wiz_1_100M_0_synth_1"/>
+		<Parent Id="WiFi_axi_emc_0_0_synth_1"/>
+		<Parent Id="WiFi_mii_to_rmii_0_0_synth_1"/>
+		<Parent Id="WiFi_axi_quad_spi_0_0_synth_1"/>
+		<Parent Id="WiFi_xbar_0_synth_1"/>
+		<Parent Id="WiFi_xbar_1_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="WiFi_ilmb_v10_0_synth_1"/>
+		<Parent Id="WiFi_dlmb_bram_if_cntlr_0_synth_1"/>
+		<Parent Id="WiFi_dlmb_v10_0_synth_1"/>
+		<Parent Id="WiFi_microblaze_0_0_synth_1"/>
+		<Parent Id="WiFi_lmb_bram_0_synth_1"/>
+		<Parent Id="WiFi_ilmb_bram_if_cntlr_0_synth_1"/>
+		<Parent Id="WiFi_axi_timer_0_0_synth_1"/>
+		<Parent Id="WiFi_axi_ethernetlite_0_0_synth_1"/>
+		<Parent Id="WiFi_axi_uartlite_0_0_synth_1"/>
+		<Parent Id="WiFi_microblaze_0_axi_intc_0_synth_1"/>
+		<Parent Id="WiFi_clk_wiz_1_0_synth_1"/>
+		<Parent Id="WiFi_microblaze_0_xlconcat_0_synth_1"/>
+		<Parent Id="WiFi_mdm_1_0_synth_1"/>
+		<Parent Id="WiFi_rst_clk_wiz_1_100M_0_synth_1"/>
+		<Parent Id="WiFi_axi_emc_0_0_synth_1"/>
+		<Parent Id="WiFi_mii_to_rmii_0_0_synth_1"/>
+		<Parent Id="WiFi_axi_quad_spi_0_0_synth_1"/>
+		<Parent Id="WiFi_xbar_0_synth_1"/>
+		<Parent Id="WiFi_xbar_1_synth_1"/>
+	</Run>
+</Runs>
+

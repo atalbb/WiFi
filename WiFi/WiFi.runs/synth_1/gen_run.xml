@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1494512342">
+  <File Type="RDS-PROPCONSTRS" Name="WiFi_wrapper_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="WiFi_wrapper.tcl"/>
+  <File Type="RDS-RDS" Name="WiFi_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="WiFi_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="WiFi_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="WiFi_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="WiFi_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="WiFi_wrapper_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/WiFi/WiFi.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/WiFi/hdl/WiFi_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="WiFi_wrapper"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/WiFi.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="WiFi_dlmb_bram_if_cntlr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="WiFi_ilmb_v10_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="WiFi_axi_ethernetlite_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="WiFi_dlmb_v10_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="WiFi_microblaze_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="WiFi_axi_uartlite_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="WiFi_lmb_bram_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="WiFi_ilmb_bram_if_cntlr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="WiFi_axi_timer_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="WiFi_microblaze_0_axi_intc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="WiFi_clk_wiz_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="WiFi_microblaze_0_xlconcat_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="WiFi_mdm_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="WiFi_rst_clk_wiz_1_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="WiFi_axi_emc_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="WiFi_mii_to_rmii_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="WiFi_axi_quad_spi_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="WiFi_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="WiFi_xbar_1"/>
+</GenRun>
