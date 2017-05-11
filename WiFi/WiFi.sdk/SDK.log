@@ -17,3 +17,36 @@
 11:26:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
 11:26:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274592338A" && level==0} -index 0' command is executed.
 11:26:34 INFO  : FPGA configured successfully with bitstream "C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.sdk/WiFi_wrapper_hw_platform_0/download.bit"
+11:27:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274592338A" && level==0} -index 0' command is executed.
+11:27:05 INFO  : 'fpga -state' command is executed.
+11:27:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:27:05 INFO  : Jtag cable 'Digilent Nexys4 210274592338A' is selected.
+11:27:05 INFO  : 'jtag frequency' command is executed.
+11:27:05 INFO  : Context for processor 'microblaze_0' is selected.
+11:27:06 INFO  : Hardware design information is loaded from 'C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.sdk/WiFi_wrapper_hw_platform_0/system.hdf'.
+11:27:06 INFO  : Context for processor 'microblaze_0' is selected.
+11:27:06 INFO  : Processor reset is completed for 'microblaze_0'.
+11:27:06 INFO  : Context for processor 'microblaze_0' is selected.
+11:27:10 INFO  : The application 'C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.sdk/SPI_loopback_test/Debug/SPI_loopback_test.elf' is downloaded to processor 'microblaze_0'.
+11:27:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274592338A"} -index 0
+loadhw C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.sdk/WiFi_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274592338A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274592338A"} -index 0
+dow C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.sdk/SPI_loopback_test/Debug/SPI_loopback_test.elf
+----------------End of Script----------------
+
+11:27:10 INFO  : Memory regions updated for context MicroBlaze #0
+11:27:10 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+11:27:11 INFO  : Context for processor 'microblaze_0' is selected.
+11:27:11 INFO  : 'con' command is executed.
+11:27:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274592338A"} -index 0
+con
+----------------End of Script----------------
+
+11:27:11 INFO  : Launch script is exported to file 'C:\College\Thesis\VivadoProjects\WiFi\WiFi\WiFi.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_spi_loopback_test.elf_on_local.tcl'
+11:29:27 INFO  : Disconnected from the channel tcfchan#1.
+11:29:30 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
