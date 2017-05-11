@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
 -- Date        : Thu May 11 10:29:49 2017
 -- Host        : LAPTOP-L1N8U9P6 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.srcs/sources_1/bd/WiFi/ip/WiFi_clk_wiz_1_0/WiFi_clk_wiz_1_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top WiFi_clk_wiz_1_0 -prefix
+--               WiFi_clk_wiz_1_0_ WiFi_clk_wiz_1_0_sim_netlist.vhdl
 -- Design      : WiFi_clk_wiz_1_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -22,8 +22,6 @@ entity WiFi_clk_wiz_1_0_WiFi_clk_wiz_1_0_clk_wiz is
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of WiFi_clk_wiz_1_0_WiFi_clk_wiz_1_0_clk_wiz : entity is "WiFi_clk_wiz_1_0_clk_wiz";
 end WiFi_clk_wiz_1_0_WiFi_clk_wiz_1_0_clk_wiz;
 
 architecture STRUCTURE of WiFi_clk_wiz_1_0_WiFi_clk_wiz_1_0_clk_wiz is

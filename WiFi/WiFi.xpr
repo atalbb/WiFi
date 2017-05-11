@@ -58,11 +58,31 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_lmb_bram_0/WiFi_lmb_bram_0.xci">
+          <Proxy FileSetName="WiFi_lmb_bram_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_ilmb_bram_if_cntlr_0/WiFi_ilmb_bram_if_cntlr_0.xci">
+          <Proxy FileSetName="WiFi_ilmb_bram_if_cntlr_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_axi_emc_0_0/WiFi_axi_emc_0_0.xci">
+          <Proxy FileSetName="WiFi_axi_emc_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_rst_clk_wiz_1_100M_0/WiFi_rst_clk_wiz_1_100M_0.xci">
+          <Proxy FileSetName="WiFi_rst_clk_wiz_1_100M_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_mdm_1_0/WiFi_mdm_1_0.xci">
+          <Proxy FileSetName="WiFi_mdm_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_microblaze_0_xlconcat_0/WiFi_microblaze_0_xlconcat_0.xci">
+          <Proxy FileSetName="WiFi_microblaze_0_xlconcat_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_microblaze_0_axi_intc_0/WiFi_microblaze_0_axi_intc_0.xci">
+          <Proxy FileSetName="WiFi_microblaze_0_axi_intc_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_clk_wiz_1_0/WiFi_clk_wiz_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_microblaze_0_axi_periph_0/WiFi_microblaze_0_axi_periph_0.xci"/>
         <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_ilmb_v10_0/WiFi_ilmb_v10_0.xci">
           <Proxy FileSetName="WiFi_ilmb_v10_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_dlmb_bram_if_cntlr_0/WiFi_dlmb_bram_if_cntlr_0.xci">
-          <Proxy FileSetName="WiFi_dlmb_bram_if_cntlr_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_dlmb_v10_0/WiFi_dlmb_v10_0.xci">
           <Proxy FileSetName="WiFi_dlmb_v10_0"/>
@@ -70,59 +90,37 @@
         <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_microblaze_0_0/WiFi_microblaze_0_0.xci">
           <Proxy FileSetName="WiFi_microblaze_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_lmb_bram_0/WiFi_lmb_bram_0.xci">
-          <Proxy FileSetName="WiFi_lmb_bram_0"/>
+        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_axi_uartlite_0_0/WiFi_axi_uartlite_0_0.xci">
+          <Proxy FileSetName="WiFi_axi_uartlite_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_ilmb_bram_if_cntlr_0/WiFi_ilmb_bram_if_cntlr_0.xci">
-          <Proxy FileSetName="WiFi_ilmb_bram_if_cntlr_0"/>
+        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="hdl/WiFi.v"/>
+        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_xbar_1/WiFi_xbar_1.xci">
+          <Proxy FileSetName="WiFi_xbar_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_microblaze_0_axi_periph_0/WiFi_microblaze_0_axi_periph_0.xci"/>
+        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_xbar_0/WiFi_xbar_0.xci">
+          <Proxy FileSetName="WiFi_xbar_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_axi_mem_intercon_0/WiFi_axi_mem_intercon_0.xci"/>
+        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_axi_quad_spi_0_0/WiFi_axi_quad_spi_0_0.xci">
+          <Proxy FileSetName="WiFi_axi_quad_spi_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_axi_timer_0_0/WiFi_axi_timer_0_0.xci">
           <Proxy FileSetName="WiFi_axi_timer_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_axi_ethernetlite_0_0/WiFi_axi_ethernetlite_0_0.xci">
           <Proxy FileSetName="WiFi_axi_ethernetlite_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_axi_uartlite_0_0/WiFi_axi_uartlite_0_0.xci">
-          <Proxy FileSetName="WiFi_axi_uartlite_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_microblaze_0_axi_intc_0/WiFi_microblaze_0_axi_intc_0.xci">
-          <Proxy FileSetName="WiFi_microblaze_0_axi_intc_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_clk_wiz_1_0/WiFi_clk_wiz_1_0.xci">
-          <Proxy FileSetName="WiFi_clk_wiz_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_microblaze_0_xlconcat_0/WiFi_microblaze_0_xlconcat_0.xci">
-          <Proxy FileSetName="WiFi_microblaze_0_xlconcat_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_mdm_1_0/WiFi_mdm_1_0.xci">
-          <Proxy FileSetName="WiFi_mdm_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_rst_clk_wiz_1_100M_0/WiFi_rst_clk_wiz_1_100M_0.xci">
-          <Proxy FileSetName="WiFi_rst_clk_wiz_1_100M_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_axi_emc_0_0/WiFi_axi_emc_0_0.xci">
-          <Proxy FileSetName="WiFi_axi_emc_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_mii_to_rmii_0_0/WiFi_mii_to_rmii_0_0.xci">
           <Proxy FileSetName="WiFi_mii_to_rmii_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_axi_mem_intercon_0/WiFi_axi_mem_intercon_0.xci"/>
-        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_axi_quad_spi_0_0/WiFi_axi_quad_spi_0_0.xci">
-          <Proxy FileSetName="WiFi_axi_quad_spi_0_0"/>
+        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_dlmb_bram_if_cntlr_0/WiFi_dlmb_bram_if_cntlr_0.xci">
+          <Proxy FileSetName="WiFi_dlmb_bram_if_cntlr_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_xbar_0/WiFi_xbar_0.xci">
-          <Proxy FileSetName="WiFi_xbar_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="hdl/WiFi.v"/>
-        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="ip/WiFi_xbar_1/WiFi_xbar_1.xci">
-          <Proxy FileSetName="WiFi_xbar_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="WiFi.bmm"/>
         <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="WiFi_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="WiFi.bmm"/>
+        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="hw_handoff/WiFi.hwh"/>
         <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="hdl/WiFi.hwdef"/>
         <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="hw_handoff/WiFi_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="WiFi.bd" FileRelPathName="hw_handoff/WiFi.hwh"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/WiFi/hdl/WiFi_wrapper.v">
         <FileInfo>
@@ -150,6 +148,7 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <Filter Type="Srcs"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="WiFi_wrapper"/>
@@ -217,12 +216,6 @@
     <FileSet Name="WiFi_microblaze_0_axi_intc_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/WiFi_microblaze_0_axi_intc_0">
       <Config>
         <Option Name="TopModule" Val="WiFi_microblaze_0_axi_intc_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="WiFi_clk_wiz_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/WiFi_clk_wiz_1_0">
-      <Config>
-        <Option Name="TopModule" Val="WiFi_clk_wiz_1_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -296,9 +289,7 @@
   <Runs Version="1" Minor="10">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -306,9 +297,7 @@
     </Run>
     <Run Id="WiFi_ilmb_v10_0_synth_1" Type="Ft3:Synth" SrcSet="WiFi_ilmb_v10_0" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_ilmb_v10_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/WiFi_ilmb_v10_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -316,9 +305,7 @@
     </Run>
     <Run Id="WiFi_dlmb_bram_if_cntlr_0_synth_1" Type="Ft3:Synth" SrcSet="WiFi_dlmb_bram_if_cntlr_0" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_dlmb_bram_if_cntlr_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/WiFi_dlmb_bram_if_cntlr_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -326,9 +313,7 @@
     </Run>
     <Run Id="WiFi_dlmb_v10_0_synth_1" Type="Ft3:Synth" SrcSet="WiFi_dlmb_v10_0" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_dlmb_v10_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/WiFi_dlmb_v10_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -336,9 +321,7 @@
     </Run>
     <Run Id="WiFi_microblaze_0_0_synth_1" Type="Ft3:Synth" SrcSet="WiFi_microblaze_0_0" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_microblaze_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/WiFi_microblaze_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -346,9 +329,7 @@
     </Run>
     <Run Id="WiFi_lmb_bram_0_synth_1" Type="Ft3:Synth" SrcSet="WiFi_lmb_bram_0" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_lmb_bram_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/WiFi_lmb_bram_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -356,9 +337,7 @@
     </Run>
     <Run Id="WiFi_ilmb_bram_if_cntlr_0_synth_1" Type="Ft3:Synth" SrcSet="WiFi_ilmb_bram_if_cntlr_0" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_ilmb_bram_if_cntlr_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/WiFi_ilmb_bram_if_cntlr_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -366,9 +345,7 @@
     </Run>
     <Run Id="WiFi_axi_timer_0_0_synth_1" Type="Ft3:Synth" SrcSet="WiFi_axi_timer_0_0" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_axi_timer_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/WiFi_axi_timer_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -376,9 +353,7 @@
     </Run>
     <Run Id="WiFi_axi_ethernetlite_0_0_synth_1" Type="Ft3:Synth" SrcSet="WiFi_axi_ethernetlite_0_0" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_axi_ethernetlite_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/WiFi_axi_ethernetlite_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -386,9 +361,7 @@
     </Run>
     <Run Id="WiFi_axi_uartlite_0_0_synth_1" Type="Ft3:Synth" SrcSet="WiFi_axi_uartlite_0_0" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_axi_uartlite_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/WiFi_axi_uartlite_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -396,19 +369,7 @@
     </Run>
     <Run Id="WiFi_microblaze_0_axi_intc_0_synth_1" Type="Ft3:Synth" SrcSet="WiFi_microblaze_0_axi_intc_0" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_microblaze_0_axi_intc_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/WiFi_microblaze_0_axi_intc_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="WiFi_clk_wiz_1_0_synth_1" Type="Ft3:Synth" SrcSet="WiFi_clk_wiz_1_0" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_clk_wiz_1_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/WiFi_clk_wiz_1_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -416,9 +377,7 @@
     </Run>
     <Run Id="WiFi_microblaze_0_xlconcat_0_synth_1" Type="Ft3:Synth" SrcSet="WiFi_microblaze_0_xlconcat_0" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_microblaze_0_xlconcat_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/WiFi_microblaze_0_xlconcat_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -426,9 +385,7 @@
     </Run>
     <Run Id="WiFi_mdm_1_0_synth_1" Type="Ft3:Synth" SrcSet="WiFi_mdm_1_0" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_mdm_1_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/WiFi_mdm_1_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -436,9 +393,7 @@
     </Run>
     <Run Id="WiFi_rst_clk_wiz_1_100M_0_synth_1" Type="Ft3:Synth" SrcSet="WiFi_rst_clk_wiz_1_100M_0" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_rst_clk_wiz_1_100M_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/WiFi_rst_clk_wiz_1_100M_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -446,9 +401,7 @@
     </Run>
     <Run Id="WiFi_axi_emc_0_0_synth_1" Type="Ft3:Synth" SrcSet="WiFi_axi_emc_0_0" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_axi_emc_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/WiFi_axi_emc_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -456,9 +409,7 @@
     </Run>
     <Run Id="WiFi_mii_to_rmii_0_0_synth_1" Type="Ft3:Synth" SrcSet="WiFi_mii_to_rmii_0_0" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_mii_to_rmii_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/WiFi_mii_to_rmii_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -466,9 +417,7 @@
     </Run>
     <Run Id="WiFi_axi_quad_spi_0_0_synth_1" Type="Ft3:Synth" SrcSet="WiFi_axi_quad_spi_0_0" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_axi_quad_spi_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/WiFi_axi_quad_spi_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -476,9 +425,7 @@
     </Run>
     <Run Id="WiFi_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="WiFi_xbar_0" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_xbar_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/WiFi_xbar_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -486,9 +433,7 @@
     </Run>
     <Run Id="WiFi_xbar_1_synth_1" Type="Ft3:Synth" SrcSet="WiFi_xbar_1" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_xbar_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/WiFi_xbar_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -496,9 +441,7 @@
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -514,9 +457,7 @@
     </Run>
     <Run Id="WiFi_ilmb_v10_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_ilmb_v10_0" Description="Default settings for Implementation." SynthRun="WiFi_ilmb_v10_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -531,9 +472,7 @@
     </Run>
     <Run Id="WiFi_dlmb_bram_if_cntlr_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_dlmb_bram_if_cntlr_0" Description="Default settings for Implementation." SynthRun="WiFi_dlmb_bram_if_cntlr_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -548,9 +487,7 @@
     </Run>
     <Run Id="WiFi_dlmb_v10_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_dlmb_v10_0" Description="Default settings for Implementation." SynthRun="WiFi_dlmb_v10_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -565,9 +502,7 @@
     </Run>
     <Run Id="WiFi_microblaze_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_microblaze_0_0" Description="Default settings for Implementation." SynthRun="WiFi_microblaze_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -582,9 +517,7 @@
     </Run>
     <Run Id="WiFi_lmb_bram_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_lmb_bram_0" Description="Default settings for Implementation." SynthRun="WiFi_lmb_bram_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -599,9 +532,7 @@
     </Run>
     <Run Id="WiFi_ilmb_bram_if_cntlr_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_ilmb_bram_if_cntlr_0" Description="Default settings for Implementation." SynthRun="WiFi_ilmb_bram_if_cntlr_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -616,9 +547,7 @@
     </Run>
     <Run Id="WiFi_axi_timer_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_axi_timer_0_0" Description="Default settings for Implementation." SynthRun="WiFi_axi_timer_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -633,9 +562,7 @@
     </Run>
     <Run Id="WiFi_axi_ethernetlite_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_axi_ethernetlite_0_0" Description="Default settings for Implementation." SynthRun="WiFi_axi_ethernetlite_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -650,9 +577,7 @@
     </Run>
     <Run Id="WiFi_axi_uartlite_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_axi_uartlite_0_0" Description="Default settings for Implementation." SynthRun="WiFi_axi_uartlite_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -667,26 +592,7 @@
     </Run>
     <Run Id="WiFi_microblaze_0_axi_intc_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_microblaze_0_axi_intc_0" Description="Default settings for Implementation." SynthRun="WiFi_microblaze_0_axi_intc_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="WiFi_clk_wiz_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_clk_wiz_1_0" Description="Default settings for Implementation." SynthRun="WiFi_clk_wiz_1_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -701,9 +607,7 @@
     </Run>
     <Run Id="WiFi_microblaze_0_xlconcat_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_microblaze_0_xlconcat_0" Description="Default settings for Implementation." SynthRun="WiFi_microblaze_0_xlconcat_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -718,9 +622,7 @@
     </Run>
     <Run Id="WiFi_mdm_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_mdm_1_0" Description="Default settings for Implementation." SynthRun="WiFi_mdm_1_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -735,9 +637,7 @@
     </Run>
     <Run Id="WiFi_rst_clk_wiz_1_100M_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_rst_clk_wiz_1_100M_0" Description="Default settings for Implementation." SynthRun="WiFi_rst_clk_wiz_1_100M_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -752,9 +652,7 @@
     </Run>
     <Run Id="WiFi_axi_emc_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_axi_emc_0_0" Description="Default settings for Implementation." SynthRun="WiFi_axi_emc_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -769,9 +667,7 @@
     </Run>
     <Run Id="WiFi_mii_to_rmii_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_mii_to_rmii_0_0" Description="Default settings for Implementation." SynthRun="WiFi_mii_to_rmii_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -786,9 +682,7 @@
     </Run>
     <Run Id="WiFi_axi_quad_spi_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_axi_quad_spi_0_0" Description="Default settings for Implementation." SynthRun="WiFi_axi_quad_spi_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -803,9 +697,7 @@
     </Run>
     <Run Id="WiFi_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_xbar_0" Description="Default settings for Implementation." SynthRun="WiFi_xbar_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -820,9 +712,7 @@
     </Run>
     <Run Id="WiFi_xbar_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="WiFi_xbar_1" Description="Default settings for Implementation." SynthRun="WiFi_xbar_1_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

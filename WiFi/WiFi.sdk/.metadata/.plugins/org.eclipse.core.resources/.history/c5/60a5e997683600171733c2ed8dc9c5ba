@@ -1,0 +1,376 @@
+///*
+// *
+// * Xilinx, Inc.
+// * XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS" AS A
+// * COURTESY TO YOU.  BY PROVIDING THIS DESIGN, CODE, OR INFORMATION AS
+// * ONE POSSIBLE   IMPLEMENTATION OF THIS FEATURE, APPLICATION OR
+// * STANDARD, XILINX IS MAKING NO REPRESENTATION THAT THIS IMPLEMENTATION
+// * IS FREE FROM ANY CLAIMS OF INFRINGEMENT, AND YOU ARE RESPONSIBLE
+// * FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE FOR YOUR IMPLEMENTATION
+// * XILINX EXPRESSLY DISCLAIMS ANY WARRANTY WHATSOEVER WITH RESPECT TO
+// * THE ADEQUACY OF THE IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO
+// * ANY WARRANTIES OR REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE
+// * FROM CLAIMS OF INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY
+// * AND FITNESS FOR A PARTICULAR PURPOSE.
+// */
+//
+///*
+// *
+// *
+// * This file is a generated sample test application.
+// *
+// * This application is intended to test and/or illustrate some
+// * functionality of your system.  The contents of this file may
+// * vary depending on the IP in your system and may use existing
+// * IP driver functions.  These drivers will be generated in your
+// * SDK application project when you run the "Generate Libraries" menu item.
+// *
+// */
+//
+//#include <stdio.h>
+//#include "xparameters.h"
+//#include "xil_cache.h"
+//#include "xintc.h"
+//#include "intc_header.h"
+//#include "xemaclite.h"
+//#include "xemaclite_example.h"
+//#include "emaclite_header.h"
+//#include "emaclite_intr_header.h"
+//#include "xspi.h"
+//#include "spi_header.h"
+//#include "spi_intr_header.h"
+//#include "xtmrctr.h"
+//#include "tmrctr_header.h"
+//#include "tmrctr_intr_header.h"
+//int main()
+//{
+//   static XIntc intc;
+//   static XEmacLite axi_ethernetlite_0_EmacLite;
+//   static XSpi axi_quad_spi_0_Spi;
+//   static XTmrCtr axi_timer_0_Timer;
+//   Xil_ICacheEnable();
+//   Xil_DCacheEnable();
+//   print("---Entering main---\n\r");
+//
+//
+//   {
+//      int status;
+//
+//      print("\r\n Running IntcSelfTestExample() for microblaze_0_axi_intc...\r\n");
+//
+//      status = IntcSelfTestExample(XPAR_MICROBLAZE_0_AXI_INTC_DEVICE_ID);
+//
+//      if (status == 0) {
+//         print("IntcSelfTestExample PASSED\r\n");
+//      }
+//      else {
+//         print("IntcSelfTestExample FAILED\r\n");
+//      }
+//   }
+//
+//   {
+//       int Status;
+//
+//       Status = IntcInterruptSetup(&intc, XPAR_MICROBLAZE_0_AXI_INTC_DEVICE_ID);
+//       if (Status == 0) {
+//          print("Intc Interrupt Setup PASSED\r\n");
+//       }
+//       else {
+//         print("Intc Interrupt Setup FAILED\r\n");
+//      }
+//   }
+//
+//
+//   {
+//      int status;
+//
+//      print("\r\nRunning EmacLitePolledExample() for axi_ethernetlite_0...\r\n");
+//      status = EmacLitePolledExample(XPAR_AXI_ETHERNETLITE_0_DEVICE_ID);
+//      if (status == 0) {
+//         print("EmacLite Polled Example PASSED\r\n");
+//      }
+//      else {
+//         print("EmacLite Polled Example FAILED\r\n");
+//      }
+//   }
+//   {
+//      int Status;
+//
+//      print("\r\n Running Interrupt Test  for axi_ethernetlite_0...\r\n");
+//
+//      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+//                               XPAR_AXI_ETHERNETLITE_0_DEVICE_ID, \
+//                               XPAR_MICROBLAZE_0_AXI_INTC_AXI_ETHERNETLITE_0_IP2INTC_IRPT_INTR);
+//
+//      if (Status == 0) {
+//         print("EmacLite Interrupt Test PASSED\r\n");
+//      }
+//      else {
+//         print("EmacLite Interrupt Test FAILED\r\n");
+//      }
+//
+//   }
+//
+//
+//   {
+//      XStatus status;
+//
+//      print("\r\n Runnning SpiSelfTestExample() for axi_quad_spi_0...\r\n");
+//
+//      status = SpiSelfTestExample(XPAR_AXI_QUAD_SPI_0_DEVICE_ID);
+//
+//      if (status == 0) {
+//         print("SpiSelfTestExample PASSED\r\n");
+//      }
+//      else {
+//         print("SpiSelfTestExample FAILED\r\n");
+//      }
+//   }
+//    {
+//       XStatus Status;
+//
+//       print("\r\n Running Interrupt Test for axi_quad_spi_0...\r\n");
+//
+//       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+//                                XPAR_AXI_QUAD_SPI_0_DEVICE_ID, \
+//                                XPAR_MICROBLAZE_0_AXI_INTC_AXI_QUAD_SPI_0_IP2INTC_IRPT_INTR);
+//      if (Status == 0) {
+//         print("Spi Interrupt Test PASSED\r\n");
+//      }
+//      else {
+//         print("Spi Interrupt Test FAILED\r\n");
+//      }
+//
+//    }
+//
+//
+//   {
+//      int status;
+//
+//      print("\r\n Running TmrCtrSelfTestExample() for axi_timer_0...\r\n");
+//
+//      status = TmrCtrSelfTestExample(XPAR_AXI_TIMER_0_DEVICE_ID, 0x0);
+//
+//      if (status == 0) {
+//         print("TmrCtrSelfTestExample PASSED\r\n");
+//      }
+//      else {
+//         print("TmrCtrSelfTestExample FAILED\r\n");
+//      }
+//   }
+//   {
+//      int Status;
+//
+//      print("\r\n Running Interrupt Test  for axi_timer_0...\r\n");
+//
+//      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+//                                 XPAR_AXI_TIMER_0_DEVICE_ID, \
+//                                 XPAR_MICROBLAZE_0_AXI_INTC_AXI_TIMER_0_INTERRUPT_INTR, 0);
+//
+//      if (Status == 0) {
+//         print("Timer Interrupt Test PASSED\r\n");
+//      }
+//      else {
+//         print("Timer Interrupt Test FAILED\r\n");
+//      }
+//
+//   }
+//
+//   /*
+//    * Peripheral SelfTest will not be run for axi_uartlite_0
+//    * because it has been selected as the STDOUT device
+//    */
+//
+//   print("---Exiting main---\n\r");
+//   Xil_DCacheDisable();
+//   Xil_ICacheDisable();
+//   return 0;
+//}
+/******************************************************************************
+*
+* Copyright (C) 2002 - 2014 Xilinx, Inc.  All rights reserved.
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in
+* all copies or substantial portions of the Software.
+*
+* Use of the Software is limited solely to applications:
+* (a) running on a Xilinx device, or
+* (b) that interact with a Xilinx device through a bus or interconnect.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+* XILINX  BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
+* OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+* Except as contained in this notice, the name of the Xilinx shall not be used
+* in advertising or otherwise to promote the sale, use or other dealings in
+* this Software without prior written authorization from Xilinx.
+*
+******************************************************************************/
+/******************************************************************************/
+/**
+* @file  xspi_low_level_example.c
+*
+* This file contains a design example using the low-level driver of the
+* SPI driver (XSpi). These macros are found in xspi_l.h.  A simple loopback
+* test is done within an SPI device in polled mode. This example works only with
+* 8-bit wide data transfers.
+*
+* @note
+* This example works only with 8-bit wide data transfers in standard SPI mode.
+* This example will not work if the axi_qspi device is confiured in dual/quad
+* modes.
+*
+* To make this example work for 16 bit transfers change u8 Buffer[BUFFER_SIZE]
+* to u16 Buffer[BUFFER_SIZE]. The SPI Core should aslo be configured for 16 bit
+* access during the build time.
+*
+* To make this example work for 32 bit transfers change u8 Buffer[BUFFER_SIZE]
+* to u32 Buffer[BUFFER_SIZE]. The SPI Core should aslo be configured for 32 bit
+* access during the build time.
+*
+*
+*<pre>
+* MODIFICATION HISTORY:
+*
+* Ver   Who  Date     Changes
+* ----- ---- -------- ----------------------------------------------------------
+* 1.00b rpm  04/24/02 First release
+* 1.00b jhl  09/10/02 Added code to ensure it works with a fast processor.
+* 1.00b sv   05/16/05 Minor changes to comply to Doxygen and coding guidelines
+* 3.00a ktn  10/28/09 Converted all register accesses to 32 bit access.
+* 3.02a sdm  05/04/11 Added a note about dual/quad modes in axi_qspi.
+*
+*</pre>
+*******************************************************************************/
+
+/***************************** Include Files **********************************/
+#include <stdio.h>
+#include "xparameters.h"
+#include "xstatus.h"
+#include "xspi.h"
+#include "spi_header.h"
+#include "xil_cache.h"
+
+/************************** Constant Definitions ******************************/
+
+/*
+ * The following constants map to the XPAR parameters created in the
+ * xparameters.h file. They are defined here such that a user can easily
+ * change all the needed parameters in one place.
+ */
+#define SPI_BASEADDR		XPAR_SPI_0_BASEADDR
+
+/**************************** Type Definitions ********************************/
+
+
+/***************** Macros (Inline Functions) Definitions **********************/
+
+
+/************************** Function Prototypes *******************************/
+
+int XSpi_LowLevelExample(u32 BaseAddress);
+void spiTx(u8 byte);
+u8 spiRx();
+
+/******************************************************************************/
+/**
+* This function is the main function of the SPI Low Level example.
+*
+* @param	None
+*
+* @return	XST_SUCCESS to indicate success, else XST_FAILURE to indicate
+*		Failure.
+*
+* @note		None
+*
+*******************************************************************************/
+int main(void)
+{
+	int Status;
+   Xil_ICacheEnable();
+   Xil_DCacheEnable();
+	/*
+	 * Run the example, specify the Base Address that is generated in
+	 * xparameters.h
+	 */
+	print("Testing SPI\r\n");
+	Status = XSpi_LowLevelExample(SPI_BASEADDR);
+	if (Status != XST_SUCCESS) {
+		print("Failed\r\n");
+		return XST_FAILURE;
+	}
+	print("Success\r\n");
+	return XST_SUCCESS;
+   Xil_DCacheDisable();
+   Xil_ICacheDisable();
+}
+
+/******************************************************************************/
+/**
+*
+* This function does a simple loopback test within an SPI device.
+*
+* @param	BaseAddress is the BaseAddress of the SPI device
+*
+* @return	XST_SUCCESS if successful, XST_FAILURE if unsuccessful
+*
+* @note		Nonet
+*
+*******************************************************************************/
+int XSpi_LowLevelExample(u32 BaseAddress)
+{
+	u32 Control;
+	u8 txData = 55;
+	u8 rxData = 0;
+
+	/*
+	 * Set up the device in loopback mode and enable master mode.
+	 */
+	Control = XSpi_ReadReg(BaseAddress, XSP_CR_OFFSET);
+	Control |= (XSP_CR_LOOPBACK_MASK | XSP_CR_MASTER_MODE_MASK| XSP_CR_ENABLE_MASK);
+	Control &= ~(XSP_CR_TRANS_INHIBIT_MASK);
+	XSpi_WriteReg(BaseAddress, XSP_CR_OFFSET, Control);
+
+	/*
+	 * Fill up the transmitter with data, assuming the receiver can hold
+	 * the same amount of data.
+	 */
+	xil_printf("txData = %d\r\n",txData);
+//	XSpi_WriteReg((BaseAddress), XSP_DTR_OFFSET,txData);
+//	while (!(XSpi_ReadReg(BaseAddress, XSP_SR_OFFSET) & XSP_SR_TX_FULL_MASK)
+//				&&!(XSpi_ReadReg(BaseAddress, XSP_SR_OFFSET) & XSP_SR_TX_EMPTY_MASK));
+
+
+	/*
+	 * Transmitter is full, now receive the data just looped back
+	 */
+	while (!(XSpi_ReadReg(BaseAddress, XSP_SR_OFFSET) & XSP_SR_RX_FULL_MASK));
+		rxData = XSpi_ReadReg((BaseAddress),XSP_DRR_OFFSET);
+		xil_printf("rxData = %d\r\n",rxData);
+	/*
+	 * If no data was sent or the data that was sent was not received,
+	 * then return an error
+	 */
+	if (txData!=rxData) {
+		return XST_FAILURE;
+	}
+
+	return XST_SUCCESS;
+}
+void spiTx(u8 byte){
+	XSpi_WriteReg((SPI_BASEADDR), XSP_DTR_OFFSET,txData);
+	while (!(XSpi_ReadReg(SPI_BASEADDR, XSP_SR_OFFSET) & XSP_SR_TX_FULL_MASK)
+				&&!(XSpi_ReadReg(SPI_BASEADDR, XSP_SR_OFFSET) & XSP_SR_TX_EMPTY_MASK));
+}
+u8 spiRx();

@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
 // Date        : Thu May 11 10:29:49 2017
 // Host        : LAPTOP-L1N8U9P6 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.srcs/sources_1/bd/WiFi/ip/WiFi_clk_wiz_1_0/WiFi_clk_wiz_1_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top WiFi_clk_wiz_1_0 -prefix
+//               WiFi_clk_wiz_1_0_ WiFi_clk_wiz_1_0_sim_netlist.v
 // Design      : WiFi_clk_wiz_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -39,7 +39,6 @@ module WiFi_clk_wiz_1_0
         .resetn(resetn));
 endmodule
 
-(* ORIG_REF_NAME = "WiFi_clk_wiz_1_0_clk_wiz" *) 
 module WiFi_clk_wiz_1_0_WiFi_clk_wiz_1_0_clk_wiz
    (clk_out1,
     clk_out2,

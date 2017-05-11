@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
 -- Date        : Thu May 11 10:29:49 2017
 -- Host        : LAPTOP-L1N8U9P6 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.srcs/sources_1/bd/WiFi/ip/WiFi_clk_wiz_1_0/WiFi_clk_wiz_1_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top WiFi_clk_wiz_1_0 -prefix
+--               WiFi_clk_wiz_1_0_ WiFi_clk_wiz_1_0_stub.vhdl
 -- Design      : WiFi_clk_wiz_1_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tcsg324-1

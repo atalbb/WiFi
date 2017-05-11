@@ -385,3 +385,1636 @@ mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
 11:27:04 **** Incremental Build of configuration Debug for project SPI_loopback_test ****
 make all 
 make: Nothing to be done for `all'.
+11:45:50 **** Incremental Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+../src/testperiph.c:260:21: fatal error: xstatus.h: No such file or directory
+compilation terminated.
+make: *** [src/testperiph.o] Error 1
+11:46:57 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+../src/testperiph.c:261:18: fatal error: xspi.h: No such file or directory
+compilation terminated.
+make: *** [src/testperiph.o] Error 1
+11:47:13 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+../src/testperiph.c:260:21: fatal error: xstatus.h: No such file or directory
+compilation terminated.
+make: *** [src/testperiph.o] Error 1
+11:50:05 **** Auto Build of project SPI_loopback_test_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_1/src"
+make -C microblaze_0/libsrc/bram_v4_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/cpu_v2_5/src"
+make -C microblaze_0/libsrc/cpu_v2_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/emaclite_v4_3/src"
+make -C microblaze_0/libsrc/emaclite_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/intc_v3_5/src"
+make -C microblaze_0/libsrc/intc_v3_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/spi_v4_2/src"
+make -C microblaze_0/libsrc/spi_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/standalone_v6_0/src"
+make -C microblaze_0/libsrc/standalone_v6_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_1/src"
+make -C microblaze_0/libsrc/tmrctr_v4_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in microblaze_0/libsrc/bram_v4_1/src"
+make -C microblaze_0/libsrc/bram_v4_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_5/src"
+make -C microblaze_0/libsrc/cpu_v2_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/emaclite_v4_3/src"
+make -C microblaze_0/libsrc/emaclite_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling emaclite"
+"Running Make libs in microblaze_0/libsrc/intc_v3_5/src"
+make -C microblaze_0/libsrc/intc_v3_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/spi_v4_2/src"
+make -C microblaze_0/libsrc/spi_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling spi"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_0/src"
+make -C microblaze_0/libsrc/standalone_v6_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone";
+"Running Make libs in microblaze_0/libsrc/tmrctr_v4_1/src"
+make -C microblaze_0/libsrc/tmrctr_v4_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling tmrctr"
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartlite"
+'Finished building libraries'
+11:50:16 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building file: ../src/xemaclite_example_util.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xemaclite_example_util.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/xemaclite_example_util.d" -MT"src/xemaclite_example_util.o" -o "src/xemaclite_example_util.o" "../src/xemaclite_example_util.c"
+'Finished building: ../src/xemaclite_example_util.c'
+' '
+'Building file: ../src/xemaclite_intr_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xemaclite_intr_example.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/xemaclite_intr_example.d" -MT"src/xemaclite_intr_example.o" -o "src/xemaclite_intr_example.o" "../src/xemaclite_intr_example.c"
+../src/xemaclite_intr_example.c: In function 'EmacLiteSendHandler':
+../src/xemaclite_intr_example.c:556:13: warning: variable 'XEmacInstancePtr' set but not used [-Wunused-but-set-variable]
+  XEmacLite *XEmacInstancePtr;
+             ^
+'Finished building: ../src/xemaclite_intr_example.c'
+' '
+'Building file: ../src/xemaclite_polled_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xemaclite_polled_example.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/xemaclite_polled_example.d" -MT"src/xemaclite_polled_example.o" -o "src/xemaclite_polled_example.o" "../src/xemaclite_polled_example.c"
+'Finished building: ../src/xemaclite_polled_example.c'
+' '
+'Building file: ../src/xintc_tapp_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xintc_tapp_example.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/xintc_tapp_example.d" -MT"src/xintc_tapp_example.o" -o "src/xintc_tapp_example.o" "../src/xintc_tapp_example.c"
+'Finished building: ../src/xintc_tapp_example.c'
+' '
+'Building file: ../src/xspi_intr_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xspi_intr_example.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/xspi_intr_example.d" -MT"src/xspi_intr_example.o" -o "src/xspi_intr_example.o" "../src/xspi_intr_example.c"
+'Finished building: ../src/xspi_intr_example.c'
+' '
+'Building file: ../src/xspi_selftest_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xspi_selftest_example.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/xspi_selftest_example.d" -MT"src/xspi_selftest_example.o" -o "src/xspi_selftest_example.o" "../src/xspi_selftest_example.c"
+'Finished building: ../src/xspi_selftest_example.c'
+' '
+'Building file: ../src/xtmrctr_intr_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xtmrctr_intr_example.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/xtmrctr_intr_example.d" -MT"src/xtmrctr_intr_example.o" -o "src/xtmrctr_intr_example.o" "../src/xtmrctr_intr_example.c"
+'Finished building: ../src/xtmrctr_intr_example.c'
+' '
+'Building file: ../src/xtmrctr_selftest_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xtmrctr_selftest_example.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/xtmrctr_selftest_example.d" -MT"src/xtmrctr_selftest_example.o" -o "src/xtmrctr_selftest_example.o" "../src/xtmrctr_selftest_example.c"
+'Finished building: ../src/xtmrctr_selftest_example.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  34140	    440	   6580	  41160	   a0c8	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+11:51:25 **** Incremental Build of configuration Debug for project SPI_loopback_test ****
+make all 
+make: Nothing to be done for `all'.
+11:55:09 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  34188	    440	   6580	  41208	   a0f8	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+11:56:01 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  34096	    440	   6576	  41112	   a098	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+11:59:01 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  34128	    440	   6576	  41144	   a0b8	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+11:59:07 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  34128	    440	   6576	  41144	   a0b8	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+11:59:32 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  34048	    440	   6576	  41064	   a068	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:01:33 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  34012	    440	   6580	  41032	   a048	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:01:40 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  34000	    440	   6576	  41016	   a038	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:02:16 **** Incremental Build of configuration Debug for project SPI_loopback_test ****
+make all 
+make: Nothing to be done for `all'.
+12:05:28 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33944	    440	   6576	  40960	   a000	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:05:41 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  34000	    440	   6576	  41016	   a038	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:05:47 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  34000	    440	   6576	  41016	   a038	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:20:04 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  34056	    440	   6576	  41072	   a070	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:20:43 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33992	    440	   6576	  41008	   a030	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:20:55 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  34056	    440	   6576	  41072	   a070	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:21:03 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  34056	    440	   6576	  41072	   a070	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:21:42 **** Incremental Build of configuration Debug for project SPI_loopback_test ****
+make all 
+make: Nothing to be done for `all'.
+12:23:10 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  34056	    440	   6576	  41072	   a070	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:24:23 **** Incremental Build of configuration Debug for project SPI_loopback_test ****
+make all 
+make: Nothing to be done for `all'.
+12:25:37 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+../src/testperiph.c: In function 'XSpi_LowLevelExample':
+../src/testperiph.c:349:5: warning: unused variable 'rxData' [-Wunused-variable]
+  u8 rxData = 0;
+     ^
+../src/testperiph.c:348:5: warning: unused variable 'txData' [-Wunused-variable]
+  u8 txData = 100;
+     ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  34068	    440	   6580	  41088	   a080	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:26:44 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+../src/testperiph.c: In function 'XSpi_LowLevelExample':
+../src/testperiph.c:349:5: warning: unused variable 'rxData' [-Wunused-variable]
+  u8 rxData = 0;
+     ^
+../src/testperiph.c:348:5: warning: unused variable 'txData' [-Wunused-variable]
+  u8 txData = 100;
+     ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  34012	    440	   6580	  41032	   a048	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:27:49 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+../src/testperiph.c: In function 'XSpi_LowLevelExample':
+../src/testperiph.c:349:5: warning: unused variable 'rxData' [-Wunused-variable]
+  u8 rxData = 0;
+     ^
+../src/testperiph.c:347:6: warning: unused variable 'Count' [-Wunused-variable]
+  u32 Count;
+      ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  34004	    440	   6580	  41024	   a040	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:29:17 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+../src/testperiph.c: In function 'XSpi_LowLevelExample':
+../src/testperiph.c:349:5: warning: unused variable 'rxData' [-Wunused-variable]
+  u8 rxData = 0;
+     ^
+../src/testperiph.c:347:6: warning: unused variable 'Count' [-Wunused-variable]
+  u32 Count;
+      ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  34004	    440	   6580	  41024	   a040	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:29:29 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+../src/testperiph.c: In function 'XSpi_LowLevelExample':
+../src/testperiph.c:349:5: warning: unused variable 'rxData' [-Wunused-variable]
+  u8 rxData = 0;
+     ^
+../src/testperiph.c:347:6: warning: unused variable 'Count' [-Wunused-variable]
+  u32 Count;
+      ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  34004	    440	   6580	  41024	   a040	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:29:51 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+../src/testperiph.c: In function 'XSpi_LowLevelExample':
+../src/testperiph.c:349:5: warning: variable 'rxData' set but not used [-Wunused-but-set-variable]
+  u8 rxData = 0;
+     ^
+../src/testperiph.c:347:6: warning: unused variable 'Count' [-Wunused-variable]
+  u32 Count;
+      ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33964	    440	   6580	  40984	   a018	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:30:00 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+../src/testperiph.c: In function 'XSpi_LowLevelExample':
+../src/testperiph.c:347:6: warning: unused variable 'Count' [-Wunused-variable]
+  u32 Count;
+      ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33956	    440	   6580	  40976	   a010	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:30:05 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+../src/testperiph.c: In function 'XSpi_LowLevelExample':
+../src/testperiph.c:347:6: warning: unused variable 'Count' [-Wunused-variable]
+  u32 Count;
+      ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33948	    440	   6580	  40968	   a008	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:30:29 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+../src/testperiph.c: In function 'XSpi_LowLevelExample':
+../src/testperiph.c:347:6: warning: unused variable 'Count' [-Wunused-variable]
+  u32 Count;
+      ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33992	    440	   6576	  41008	   a030	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:30:49 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+../src/testperiph.c: In function 'XSpi_LowLevelExample':
+../src/testperiph.c:347:6: warning: unused variable 'Count' [-Wunused-variable]
+  u32 Count;
+      ^
+../src/testperiph.c:346:6: warning: unused variable 'NumBytesRcvd' [-Wunused-variable]
+  int NumBytesRcvd = 0;
+      ^
+../src/testperiph.c:345:6: warning: unused variable 'NumBytesSent' [-Wunused-variable]
+  int NumBytesSent = 0;
+      ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33984	    440	   6576	  41000	   a028	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:31:59 **** Incremental Build of configuration Debug for project SPI_loopback_test ****
+make all 
+make: Nothing to be done for `all'.
+12:32:54 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+../src/testperiph.c: In function 'XSpi_LowLevelExample':
+../src/testperiph.c:347:6: warning: unused variable 'Count' [-Wunused-variable]
+  u32 Count;
+      ^
+../src/testperiph.c:346:6: warning: unused variable 'NumBytesRcvd' [-Wunused-variable]
+  int NumBytesRcvd = 0;
+      ^
+../src/testperiph.c:345:6: warning: unused variable 'NumBytesSent' [-Wunused-variable]
+  int NumBytesSent = 0;
+      ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33940	    440	   6580	  40960	   a000	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:33:02 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33932	    440	   6580	  40952	   9ff8	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:33:20 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33932	    440	   6548	  40920	   9fd8	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:33:48 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33932	    440	   6548	  40920	   9fd8	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:34:19 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33932	    440	   6548	  40920	   9fd8	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:35:09 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+../src/testperiph.c: In function 'XSpi_LowLevelExample':
+../src/testperiph.c:341:14: error: expected expression before ')' token
+  Control &= ();
+              ^
+make: *** [src/testperiph.o] Error 1
+12:35:25 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33944	    440	   6544	  40928	   9fe0	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:35:33 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33872	    440	   6544	  40856	   9f98	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:35:54 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33900	    440	   6548	  40888	   9fb8	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:36:05 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33900	    440	   6548	  40888	   9fb8	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:36:44 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33868	    440	   6548	  40856	   9f98	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:37:43 **** Incremental Build of configuration Debug for project SPI_loopback_test ****
+make all 
+make: Nothing to be done for `all'.
+12:39:40 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33868	    440	   6548	  40856	   9f98	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:40:09 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33868	    440	   6548	  40856	   9f98	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:40:41 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+In file included from ../../SPI_loopback_test_bsp/microblaze_0/include/xspi.h:307:0,
+                 from ../src/testperiph.c:261:
+../src/testperiph.c: In function 'spiTx':
+../src/testperiph.c:372:47: error: 'txData' undeclared (first use in this function)
+  XSpi_WriteReg((SPI_BASEADDR), XSP_DTR_OFFSET,txData);
+                                               ^
+../../SPI_loopback_test_bsp/microblaze_0/include/xspi_l.h:121:43: note: in definition of macro 'XSpi_WriteReg'
+  XSpi_Out32((BaseAddress) + (RegOffset), (RegisterValue))
+                                           ^
+../src/testperiph.c:372:47: note: each undeclared identifier is reported only once for each function it appears in
+  XSpi_WriteReg((SPI_BASEADDR), XSP_DTR_OFFSET,txData);
+                                               ^
+../../SPI_loopback_test_bsp/microblaze_0/include/xspi_l.h:121:43: note: in definition of macro 'XSpi_WriteReg'
+  XSpi_Out32((BaseAddress) + (RegOffset), (RegisterValue))
+                                           ^
+make: *** [src/testperiph.o] Error 1
+12:40:51 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33908	    440	   6548	  40896	   9fc0	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:41:18 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+In file included from ../../SPI_loopback_test_bsp/microblaze_0/include/xspi.h:307:0,
+                 from ../src/testperiph.c:261:
+../src/testperiph.c: In function 'spiRx':
+../src/testperiph.c:377:24: error: 'BaseAddress' undeclared (first use in this function)
+  while (!(XSpi_ReadReg(BaseAddress, XSP_SR_OFFSET) & XSP_SR_RX_FULL_MASK));
+                        ^
+../../SPI_loopback_test_bsp/microblaze_0/include/xspi_l.h:102:13: note: in definition of macro 'XSpi_ReadReg'
+  XSpi_In32((BaseAddress) + (RegOffset))
+             ^
+../src/testperiph.c:377:24: note: each undeclared identifier is reported only once for each function it appears in
+  while (!(XSpi_ReadReg(BaseAddress, XSP_SR_OFFSET) & XSP_SR_RX_FULL_MASK));
+                        ^
+../../SPI_loopback_test_bsp/microblaze_0/include/xspi_l.h:102:13: note: in definition of macro 'XSpi_ReadReg'
+  XSpi_In32((BaseAddress) + (RegOffset))
+             ^
+../src/testperiph.c:378:3: error: 'rxData' undeclared (first use in this function)
+   rxData = XSpi_ReadReg((BaseAddress),XSP_DRR_OFFSET);
+   ^
+../src/testperiph.c:381:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/testperiph.o] Error 1
+12:41:24 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+../src/testperiph.c: In function 'spiRx':
+../src/testperiph.c:378:3: error: 'rxData' undeclared (first use in this function)
+   rxData = XSpi_ReadReg((BaseAddress),XSP_DRR_OFFSET);
+   ^
+../src/testperiph.c:378:3: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../../SPI_loopback_test_bsp/microblaze_0/include/xspi.h:307:0,
+                 from ../src/testperiph.c:261:
+../src/testperiph.c:378:26: error: 'BaseAddress' undeclared (first use in this function)
+   rxData = XSpi_ReadReg((BaseAddress),XSP_DRR_OFFSET);
+                          ^
+../../SPI_loopback_test_bsp/microblaze_0/include/xspi_l.h:102:13: note: in definition of macro 'XSpi_ReadReg'
+  XSpi_In32((BaseAddress) + (RegOffset))
+             ^
+../src/testperiph.c:381:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/testperiph.o] Error 1
+12:41:46 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+../src/testperiph.c: In function 'spiRx':
+../src/testperiph.c:379:3: error: 'rxData' undeclared (first use in this function)
+   rxData = XSpi_ReadReg((BaseAddress),XSP_DRR_OFFSET);
+   ^
+../src/testperiph.c:379:3: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../../SPI_loopback_test_bsp/microblaze_0/include/xspi.h:307:0,
+                 from ../src/testperiph.c:261:
+../src/testperiph.c:379:26: error: 'BaseAddress' undeclared (first use in this function)
+   rxData = XSpi_ReadReg((BaseAddress),XSP_DRR_OFFSET);
+                          ^
+../../SPI_loopback_test_bsp/microblaze_0/include/xspi_l.h:102:13: note: in definition of macro 'XSpi_ReadReg'
+  XSpi_In32((BaseAddress) + (RegOffset))
+             ^
+../src/testperiph.c:377:5: warning: unused variable 'byte' [-Wunused-variable]
+  u8 byte = 0;
+     ^
+../src/testperiph.c:382:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/testperiph.o] Error 1
+12:41:49 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+In file included from ../../SPI_loopback_test_bsp/microblaze_0/include/xspi.h:307:0,
+                 from ../src/testperiph.c:261:
+../src/testperiph.c: In function 'spiRx':
+../src/testperiph.c:379:24: error: 'BaseAddress' undeclared (first use in this function)
+   byte = XSpi_ReadReg((BaseAddress),XSP_DRR_OFFSET);
+                        ^
+../../SPI_loopback_test_bsp/microblaze_0/include/xspi_l.h:102:13: note: in definition of macro 'XSpi_ReadReg'
+  XSpi_In32((BaseAddress) + (RegOffset))
+             ^
+../src/testperiph.c:379:24: note: each undeclared identifier is reported only once for each function it appears in
+   byte = XSpi_ReadReg((BaseAddress),XSP_DRR_OFFSET);
+                        ^
+../../SPI_loopback_test_bsp/microblaze_0/include/xspi_l.h:102:13: note: in definition of macro 'XSpi_ReadReg'
+  XSpi_In32((BaseAddress) + (RegOffset))
+             ^
+../src/testperiph.c:380:32: error: 'rxData' undeclared (first use in this function)
+   xil_printf("rxData = %d\r\n",rxData);
+                                ^
+../src/testperiph.c:377:5: warning: variable 'byte' set but not used [-Wunused-but-set-variable]
+  u8 byte = 0;
+     ^
+../src/testperiph.c:382:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/testperiph.o] Error 1
+12:42:04 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33904	    440	   6544	  40888	   9fb8	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:42:15 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+../src/testperiph.c: In function 'XSpi_LowLevelExample':
+../src/testperiph.c:350:2: error: too few arguments to function 'spiTx'
+  spiTx();
+  ^
+../src/testperiph.c:283:6: note: declared here
+ void spiTx(u8 byte);
+      ^
+make: *** [src/testperiph.o] Error 1
+12:42:19 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33920	    440	   6544	  40904	   9fc8	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:42:39 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33932	    440	   6548	  40920	   9fd8	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:42:45 **** Auto Build of configuration Debug for project SPI_loopback_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../SPI_loopback_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:101:1: warning: multi-line comment [-Wcomment]
+ //      Status = EmacLiteIntrExample(&intc, &axi_ethernetlite_0_EmacLite, \
+ ^
+../src/testperiph.c:134:1: warning: multi-line comment [-Wcomment]
+ //       Status = SpiIntrExample(&intc, &axi_quad_spi_0_Spi, \
+ ^
+../src/testperiph.c:166:1: warning: multi-line comment [-Wcomment]
+ //      Status = TmrCtrIntrExample(&intc, &axi_timer_0_Timer, \
+ ^
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: SPI_loopback_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../SPI_loopback_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "SPI_loopback_test.elf"  ./src/testperiph.o ./src/xemaclite_example_util.o ./src/xemaclite_intr_example.o ./src/xemaclite_polled_example.o ./src/xintc_tapp_example.o ./src/xspi_intr_example.o ./src/xspi_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SPI_loopback_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size SPI_loopback_test.elf  |tee "SPI_loopback_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33976	    440	   6544	  40960	   a000	SPI_loopback_test.elf
+'Finished building: SPI_loopback_test.elf.size'
+' '
+12:43:28 **** Incremental Build of configuration Debug for project SPI_loopback_test ****
+make all 
+make: Nothing to be done for `all'.
+12:43:42 **** Incremental Build of configuration Debug for project SPI_loopback_test ****
+make all 
+make: Nothing to be done for `all'.
+13:19:45 **** Auto Build of configuration Debug for project echo_server ****
+make all 
+make: Nothing to be done for `all'.
+13:19:58 **** Auto Build of configuration Debug for project echo_server ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../echo_server_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: echo_server.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../echo_server_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "echo_server.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: echo_server.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size echo_server.elf  |tee "echo_server.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 119222	   1456	 750672	 871350	  d4bb6	echo_server.elf
+'Finished building: echo_server.elf.size'
+' '
+13:20:36 **** Incremental Build of configuration Debug for project echo_server ****
+make all 
+make: Nothing to be done for `all'.

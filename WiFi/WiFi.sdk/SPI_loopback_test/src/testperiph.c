@@ -280,19 +280,8 @@
 /************************** Function Prototypes *******************************/
 
 int XSpi_LowLevelExample(u32 BaseAddress);
-
-/************************** Variable Definitions ******************************/
-
-
-/*
- *  This is the size of the buffer to be transmitted/received in this example.
- */
-#define BUFFER_SIZE			 16
-
-/*
- * The buffer used for Transmission/Reception of the SPI test data
- */
-u16 Buffer[BUFFER_SIZE];
+void spiTx(u8 byte);
+u8 spiRx();
 
 /******************************************************************************/
 /**
@@ -342,79 +331,43 @@ int main(void)
 int XSpi_LowLevelExample(u32 BaseAddress)
 {
 	u32 Control;
-	int NumBytesSent = 0;
-	int NumBytesRcvd = 0;
-	u32 Count;
+	u8 txData = 55;
+	u8 rxData = 0;
 
 	/*
 	 * Set up the device in loopback mode and enable master mode.
 	 */
 	Control = XSpi_ReadReg(BaseAddress, XSP_CR_OFFSET);
-	Control |= (XSP_CR_LOOPBACK_MASK | XSP_CR_MASTER_MODE_MASK);
+	Control |= (XSP_CR_LOOPBACK_MASK | XSP_CR_MASTER_MODE_MASK| XSP_CR_ENABLE_MASK);
+	Control &= ~(XSP_CR_TRANS_INHIBIT_MASK);
 	XSpi_WriteReg(BaseAddress, XSP_CR_OFFSET, Control);
-
-
-	/*
-	 * Initialize the buffer with some data.
-	 */
-	for (Count = 0; Count < BUFFER_SIZE; Count++) {
-		Buffer[Count] = Count;
-		//xil_printf("Write buff[%d] = %d\r\n",Count,Buffer[Count]);
-	}
 
 	/*
 	 * Fill up the transmitter with data, assuming the receiver can hold
 	 * the same amount of data.
 	 */
-	while ((XSpi_ReadReg(BaseAddress, XSP_SR_OFFSET) &
-			XSP_SR_TX_FULL_MASK) == 0) {
-		XSpi_WriteReg((BaseAddress), XSP_DTR_OFFSET,
-				Buffer[NumBytesSent++]);
-	}
-
-	/*
-	 * Enable the device.
-	 */
-	Control = XSpi_ReadReg(BaseAddress, XSP_CR_OFFSET);
-	Control |= XSP_CR_ENABLE_MASK;
-	Control &= ~XSP_CR_TRANS_INHIBIT_MASK;
-	XSpi_WriteReg(BaseAddress, XSP_CR_OFFSET, Control);
-
-	/*
-	 * Initialize the buffer with zeroes so that it can be used to receive
-	 * data.
-	 */
-	for (Count = 0; Count < BUFFER_SIZE; Count++) {
-		Buffer[Count] = 0x0;
-	}
-
-	/*
-	 * Wait for the transmit FIFO to transition to empty before checking
-	 * the receive FIFO, this prevents a fast processor from seeing the
-	 * receive FIFO as empty
-	 */
-	while (!(XSpi_ReadReg(BaseAddress, XSP_SR_OFFSET) &
-					XSP_SR_TX_EMPTY_MASK));
-
-	/*
-	 * Transmitter is full, now receive the data just looped back until
-	 * the receiver is empty.
-	 */
-	while ((XSpi_ReadReg(BaseAddress, XSP_SR_OFFSET) &
-			XSP_SR_RX_EMPTY_MASK) == 0) {
-		Buffer[NumBytesRcvd++] = XSpi_ReadReg((BaseAddress),
-						XSP_DRR_OFFSET);
-	}
-	for(Count = 0;Count < BUFFER_SIZE; Count++){
-		xil_printf("Read buff[%d] = %d\r\n",Count,Buffer[Count]);
-	}
+	xil_printf("txData = %d\r\n",txData);
+	spiTx(txData);
+	rxData = spiRx();
+	xil_printf("rxData = %d\r\n",rxData);
 	/*
 	 * If no data was sent or the data that was sent was not received,
 	 * then return an error
 	 */
-	if ((NumBytesSent != NumBytesRcvd) || (NumBytesSent == 0)) {
+	if (txData!=rxData) {
 		return XST_FAILURE;
 	}
 
 	return XST_SUCCESS;
+}
+void spiTx(u8 byte){
+	XSpi_WriteReg((SPI_BASEADDR), XSP_DTR_OFFSET,byte);
+	while (!(XSpi_ReadReg(SPI_BASEADDR, XSP_SR_OFFSET) & XSP_SR_TX_FULL_MASK)
+				&&!(XSpi_ReadReg(SPI_BASEADDR, XSP_SR_OFFSET) & XSP_SR_TX_EMPTY_MASK));
+}
+u8 spiRx(){
+	u8 byte = 0;
+	while (!(XSpi_ReadReg(SPI_BASEADDR, XSP_SR_OFFSET) & XSP_SR_RX_FULL_MASK));
+		byte = XSpi_ReadReg((SPI_BASEADDR),XSP_DRR_OFFSET);
+		return byte;
 }

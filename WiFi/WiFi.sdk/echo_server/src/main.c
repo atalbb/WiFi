@@ -198,6 +198,5 @@ int main()
   
 	/* never reached */
 	cleanup_platform();
-
 	return 0;
 }
