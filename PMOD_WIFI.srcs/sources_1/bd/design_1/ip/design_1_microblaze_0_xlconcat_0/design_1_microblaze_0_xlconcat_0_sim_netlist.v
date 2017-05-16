@@ -1,10 +1,10 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-// Date        : Mon May 15 14:48:05 2017
+// Date        : Tue May 16 14:38:44 2017
 // Host        : LAPTOP-L1N8U9P6 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_xlconcat_0/design_1_microblaze_0_xlconcat_0_sim_netlist.v
+//               C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_xlconcat_0/design_1_microblaze_0_xlconcat_0_sim_netlist.v
 // Design      : design_1_microblaze_0_xlconcat_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -16,12 +16,20 @@
 (* NotValidForBitStream *)
 module design_1_microblaze_0_xlconcat_0
    (In0,
+    In1,
+    In2,
     dout);
   input [0:0]In0;
-  output [0:0]dout;
+  input [0:0]In1;
+  input [0:0]In2;
+  output [2:0]dout;
 
   wire [0:0]In0;
+  wire [0:0]In1;
+  wire [0:0]In2;
 
+  assign dout[2] = In2;
+  assign dout[1] = In1;
   assign dout[0] = In0;
 endmodule
 `ifndef GLBL

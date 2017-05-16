@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# updatemem v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# 
+# Start of session at: Tue May 16 15:32:28 2017
+# Process ID: 10788
+# Current directory: c:/College/Thesis/VivadoProjects/PMOD_WIFI
+# Command line: updatemem.exe -mode batch -source C:/Xilinx/SDK/2016.3/scripts/updatemem/main.tcl -notrace -tclargs -meminfo C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.mmi -data C:/Xilinx/SDK/2016.3/data/embeddedsw/lib/microblaze/mb_bootloop_le.elf -proc design_1_i/microblaze_0 -bit C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit -out C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk/design_1_wrapper_hw_platform_0/download.bit -force
+# Log file: c:/College/Thesis/VivadoProjects/PMOD_WIFI/updatemem.log
+# Journal file: c:/College/Thesis/VivadoProjects/PMOD_WIFI\updatemem.jou
+#-----------------------------------------------------------
+source C:/Xilinx/SDK/2016.3/scripts/updatemem/main.tcl -notrace

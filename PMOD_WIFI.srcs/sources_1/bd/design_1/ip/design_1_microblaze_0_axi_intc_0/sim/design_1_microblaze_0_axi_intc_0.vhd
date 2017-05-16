@@ -77,7 +77,7 @@ ENTITY design_1_microblaze_0_axi_intc_0 IS
     s_axi_rresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     s_axi_rvalid : OUT STD_LOGIC;
     s_axi_rready : IN STD_LOGIC;
-    intr : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    intr : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     processor_clk : IN STD_LOGIC;
     processor_rst : IN STD_LOGIC;
     irq : OUT STD_LOGIC;
@@ -137,7 +137,7 @@ ARCHITECTURE design_1_microblaze_0_axi_intc_0_arch OF design_1_microblaze_0_axi_
       s_axi_rresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
       s_axi_rvalid : OUT STD_LOGIC;
       s_axi_rready : IN STD_LOGIC;
-      intr : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+      intr : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
       processor_clk : IN STD_LOGIC;
       processor_rst : IN STD_LOGIC;
       irq : OUT STD_LOGIC;
@@ -181,12 +181,12 @@ BEGIN
       C_INSTANCE => "design_1_microblaze_0_axi_intc_0",
       C_S_AXI_ADDR_WIDTH => 9,
       C_S_AXI_DATA_WIDTH => 32,
-      C_NUM_INTR_INPUTS => 1,
+      C_NUM_INTR_INPUTS => 3,
       C_NUM_SW_INTR => 0,
-      C_KIND_OF_INTR => X"fffffffe",
+      C_KIND_OF_INTR => X"fffffffc",
       C_KIND_OF_EDGE => X"FFFFFFFF",
       C_KIND_OF_LVL => X"FFFFFFFF",
-      C_ASYNC_INTR => X"FFFFFFFE",
+      C_ASYNC_INTR => X"FFFFFFFC",
       C_NUM_SYNC_FF => 2,
       C_IVAR_RESET_VALUE => X"00000010",
       C_ENABLE_ASYNC => 0,

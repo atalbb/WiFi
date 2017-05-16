@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-| Date         : Mon May 15 14:51:42 2017
+| Date         : Tue May 16 15:22:47 2017
 | Host         : LAPTOP-L1N8U9P6 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_xbar_0_utilization_synth.rpt -pb design_1_xbar_0_utilization_synth.pb
 | Design       : design_1_xbar_0
@@ -149,11 +149,11 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     |  288 |        Flop & Latch |
-| LUT3     |  130 |                 LUT |
-| LUT2     |  121 |                 LUT |
-| LUT6     |   81 |                 LUT |
-| LUT5     |   46 |                 LUT |
-| LUT4     |   43 |                 LUT |
+| LUT3     |  129 |                 LUT |
+| LUT2     |  122 |                 LUT |
+| LUT6     |   83 |                 LUT |
+| LUT5     |   49 |                 LUT |
+| LUT4     |   42 |                 LUT |
 | FDSE     |   17 |        Flop & Latch |
 | LUT1     |   10 |                 LUT |
 | SRLC32E  |    2 |  Distributed Memory |

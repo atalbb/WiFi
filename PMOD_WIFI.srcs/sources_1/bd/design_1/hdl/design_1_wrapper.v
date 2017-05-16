@@ -1,7 +1,7 @@
 //Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-//Date        : Mon May 15 14:33:31 2017
+//Date        : Tue May 16 15:18:32 2017
 //Host        : LAPTOP-L1N8U9P6 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -20,6 +20,14 @@ module design_1_wrapper
     cellular_ram_wait,
     cellular_ram_wen,
     dip_switches_16bits_tri_i,
+    eth_mdio_mdc_mdc,
+    eth_mdio_mdc_mdio_io,
+    eth_ref_clk,
+    eth_rmii_crs_dv,
+    eth_rmii_rx_er,
+    eth_rmii_rxd,
+    eth_rmii_tx_en,
+    eth_rmii_txd,
     ja_pin10_io,
     ja_pin1_io,
     ja_pin2_io,
@@ -44,6 +52,14 @@ module design_1_wrapper
   input cellular_ram_wait;
   output cellular_ram_wen;
   input [15:0]dip_switches_16bits_tri_i;
+  output eth_mdio_mdc_mdc;
+  inout eth_mdio_mdc_mdio_io;
+  output eth_ref_clk;
+  input eth_rmii_crs_dv;
+  input eth_rmii_rx_er;
+  input [1:0]eth_rmii_rxd;
+  output eth_rmii_tx_en;
+  output [1:0]eth_rmii_txd;
   inout ja_pin10_io;
   inout ja_pin1_io;
   inout ja_pin2_io;
@@ -132,6 +148,17 @@ module design_1_wrapper
   wire cellular_ram_wait;
   wire cellular_ram_wen;
   wire [15:0]dip_switches_16bits_tri_i;
+  wire eth_mdio_mdc_mdc;
+  wire eth_mdio_mdc_mdio_i;
+  wire eth_mdio_mdc_mdio_io;
+  wire eth_mdio_mdc_mdio_o;
+  wire eth_mdio_mdc_mdio_t;
+  wire eth_ref_clk;
+  wire eth_rmii_crs_dv;
+  wire eth_rmii_rx_er;
+  wire [1:0]eth_rmii_rxd;
+  wire eth_rmii_tx_en;
+  wire [1:0]eth_rmii_txd;
   wire ja_pin10_i;
   wire ja_pin10_io;
   wire ja_pin10_o;
@@ -350,6 +377,16 @@ module design_1_wrapper
         .cellular_ram_wait(cellular_ram_wait),
         .cellular_ram_wen(cellular_ram_wen),
         .dip_switches_16bits_tri_i(dip_switches_16bits_tri_i),
+        .eth_mdio_mdc_mdc(eth_mdio_mdc_mdc),
+        .eth_mdio_mdc_mdio_i(eth_mdio_mdc_mdio_i),
+        .eth_mdio_mdc_mdio_o(eth_mdio_mdc_mdio_o),
+        .eth_mdio_mdc_mdio_t(eth_mdio_mdc_mdio_t),
+        .eth_ref_clk(eth_ref_clk),
+        .eth_rmii_crs_dv(eth_rmii_crs_dv),
+        .eth_rmii_rx_er(eth_rmii_rx_er),
+        .eth_rmii_rxd(eth_rmii_rxd),
+        .eth_rmii_tx_en(eth_rmii_tx_en),
+        .eth_rmii_txd(eth_rmii_txd),
         .ja_pin10_i(ja_pin10_i),
         .ja_pin10_o(ja_pin10_o),
         .ja_pin10_t(ja_pin10_t),
@@ -384,6 +421,11 @@ module design_1_wrapper
         .sys_clock(sys_clock),
         .usb_uart_rxd(usb_uart_rxd),
         .usb_uart_txd(usb_uart_txd));
+  IOBUF eth_mdio_mdc_mdio_iobuf
+       (.I(eth_mdio_mdc_mdio_o),
+        .IO(eth_mdio_mdc_mdio_io),
+        .O(eth_mdio_mdc_mdio_i),
+        .T(eth_mdio_mdc_mdio_t));
   IOBUF ja_pin10_iobuf
        (.I(ja_pin10_o),
         .IO(ja_pin10_io),

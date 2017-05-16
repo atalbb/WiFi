@@ -2,15 +2,15 @@
 # Vivado v2016.3 (64-bit)
 # SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
 # IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
-# Start of session at: Mon May 15 14:46:38 2017
-# Process ID: 8648
+# Start of session at: Tue May 16 14:37:04 2017
+# Process ID: 12116
 # Current directory: C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.runs/design_1_microblaze_0_axi_intc_0_synth_1
 # Command line: vivado.exe -log design_1_microblaze_0_axi_intc_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_microblaze_0_axi_intc_0.tcl
 # Log file: C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.runs/design_1_microblaze_0_axi_intc_0_synth_1/design_1_microblaze_0_axi_intc_0.vds
 # Journal file: C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.runs/design_1_microblaze_0_axi_intc_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source design_1_microblaze_0_axi_intc_0.tcl -notrace
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 357.293 ; gain = 147.336
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 359.352 ; gain = 149.984
 INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_axi_intc_0' [c:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0/synth/design_1_microblaze_0_axi_intc_0.vhd:89]
 INFO: [Synth 8-638] synthesizing module 'axi_intc' [c:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.srcs/sources_1/bd/design_1/ipshared/3dfb/hdl/axi_intc_v4_1_vh_rfs.vhd:3769]
 INFO: [Synth 8-638] synthesizing module 'intc_core' [c:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.srcs/sources_1/bd/design_1/ipshared/3dfb/hdl/axi_intc_v4_1_vh_rfs.vhd:782]
@@ -61,15 +61,15 @@ INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (5#1) [c:/Colleg
 INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (6#1) [c:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
 INFO: [Synth 8-256] done synthesizing module 'axi_intc' (7#1) [c:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.srcs/sources_1/bd/design_1/ipshared/3dfb/hdl/axi_intc_v4_1_vh_rfs.vhd:3769]
 INFO: [Synth 8-256] done synthesizing module 'design_1_microblaze_0_axi_intc_0' (8#1) [c:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0/synth/design_1_microblaze_0_axi_intc_0.vhd:89]
-Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 397.473 ; gain = 187.516
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 397.473 ; gain = 187.516
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 398.566 ; gain = 189.199
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 398.566 ; gain = 189.199
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.046 . Memory (MB): peak = 706.527 ; gain = 0.000
-Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 706.527 ; gain = 496.570
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 706.527 ; gain = 496.570
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 706.527 ; gain = 496.570
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 706.527 ; gain = 496.570
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 706.527 ; gain = 496.570
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 707.965 ; gain = 0.008
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 707.965 ; gain = 498.598
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 707.965 ; gain = 498.598
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 707.965 ; gain = 498.598
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 707.965 ; gain = 498.598
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 707.965 ; gain = 498.598
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
@@ -85,29 +85,29 @@ Note: The table above is a preliminary report that shows the Distributed RAMs at
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 706.527 ; gain = 496.570
-Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 706.527 ; gain = 496.570
-Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 706.527 ; gain = 496.570
-Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 706.527 ; gain = 496.570
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 706.527 ; gain = 496.570
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 706.527 ; gain = 496.570
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 706.527 ; gain = 496.570
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 706.527 ; gain = 496.570
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 706.527 ; gain = 496.570
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:45 . Memory (MB): peak = 707.965 ; gain = 498.598
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:46 . Memory (MB): peak = 707.965 ; gain = 498.598
+Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:46 . Memory (MB): peak = 707.965 ; gain = 498.598
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 707.965 ; gain = 498.598
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 707.965 ; gain = 498.598
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 707.965 ; gain = 498.598
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 707.965 ; gain = 498.598
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 707.965 ; gain = 498.598
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 707.965 ; gain = 498.598
 
 Report Cell Usage: 
 +------+---------+------+
 |      |Cell     |Count |
 +------+---------+------+
 |1     |LUT1     |     2|
-|2     |LUT2     |    14|
-|3     |LUT3     |    39|
-|4     |LUT4     |    28|
-|5     |LUT5     |    25|
-|6     |LUT6     |    19|
+|2     |LUT2     |    18|
+|3     |LUT3     |    42|
+|4     |LUT4     |    29|
+|5     |LUT5     |    29|
+|6     |LUT6     |    38|
 |7     |RAM16X1D |    32|
-|8     |FDRE     |   163|
+|8     |FDRE     |   185|
 |9     |FDSE     |     1|
 +------+---------+------+
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 706.527 ; gain = 496.570
-synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 706.527 ; gain = 425.816
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 707.965 ; gain = 498.598
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 707.965 ; gain = 426.918

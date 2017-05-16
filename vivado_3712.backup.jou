@@ -1,0 +1,68 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Tue May 16 14:08:53 2017
+# Process ID: 3712
+# Current directory: C:/College/Thesis/VivadoProjects/PMOD_WIFI
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7944 C:\College\Thesis\VivadoProjects\PMOD_WIFI\PMOD_WIFI.xpr
+# Log file: C:/College/Thesis/VivadoProjects/PMOD_WIFI/vivado.log
+# Journal file: C:/College/Thesis/VivadoProjects/PMOD_WIFI\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.xpr
+open_bd_design {C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property -dict [list CONFIG.CLKOUT2_USED {true} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {50.000} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKOUT1_DIVIDE {20} CONFIG.NUM_OUT_CLKS {2} CONFIG.CLKOUT2_JITTER {151.636}] [get_bd_cells clk_wiz_0]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:mii_to_rmii:2.0 mii_to_rmii_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_ethernetlite:3.0 axi_ethernetlite_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_timer:2.0 axi_timer_0
+endgroup
+connect_bd_intf_net [get_bd_intf_pins mii_to_rmii_0/MII] [get_bd_intf_pins axi_ethernetlite_0/MII]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "eth_rmii ( Ethernet RMII ) " }  [get_bd_intf_pins mii_to_rmii_0/RMII_PHY_M]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "reset ( Reset ) " }  [get_bd_pins mii_to_rmii_0/rst_n]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "sys_clock ( System Clock ) " }  [get_bd_pins mii_to_rmii_0/ref_clk]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/microblaze_0 (Periph)" Clk "Auto" }  [get_bd_intf_pins axi_ethernetlite_0/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "eth_mdio_mdc ( Ethernet MDIO MDC ) " }  [get_bd_intf_pins axi_ethernetlite_0/MDIO]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/microblaze_0 (Periph)" Clk "Auto" }  [get_bd_intf_pins axi_timer_0/S_AXI]
+endgroup
+startgroup
+set_property -dict [list CONFIG.NUM_PORTS {3}] [get_bd_cells microblaze_0_xlconcat]
+endgroup
+connect_bd_net [get_bd_pins axi_timer_0/interrupt] [get_bd_pins microblaze_0_xlconcat/In1]
+connect_bd_net [get_bd_pins axi_ethernetlite_0/ip2intc_irpt] [get_bd_pins microblaze_0_xlconcat/In2]
+delete_bd_objs [get_bd_nets sys_clock_1]
+connect_bd_net [get_bd_ports sys_clock] [get_bd_pins clk_wiz_0/clk_in1]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_out2] [get_bd_pins mii_to_rmii_0/ref_clk]
+create_bd_port -dir O -type clk eth_ref_clk
+connect_bd_net [get_bd_ports eth_ref_clk] [get_bd_pins clk_wiz_0/clk_out2]
+regenerate_bd_layout
+validate_bd_design
+save_bd_design
+file mkdir C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.srcs/constrs_1
+file mkdir C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.srcs/constrs_1/new
+close [ open C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.srcs/constrs_1/new/eth_ref_clk.xdc w ]
+add_files -fileset constrs_1 C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.srcs/constrs_1/new/eth_ref_clk.xdc
+make_wrapper -files [get_files C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.srcs/sources_1/bd/design_1/design_1.bd] -top
+reset_run synth_1
+reset_run design_1_clk_wiz_0_0_synth_1
+reset_run design_1_microblaze_0_axi_intc_0_synth_1
+reset_run design_1_microblaze_0_xlconcat_0_synth_1
+reset_run design_1_xbar_1_synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+file copy -force C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.runs/impl_1/design_1_wrapper.sysdef C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk -hwspec C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk/design_1_wrapper.hdf
+close_project
+open_project C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.xpr
+open_bd_design {C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.srcs/sources_1/bd/WiFi/WiFi.bd}
+launch_sdk -workspace C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.sdk -hwspec C:/College/Thesis/VivadoProjects/WiFi/WiFi/WiFi.sdk/WiFi_wrapper.hdf
+close_bd_design [get_bd_designs WiFi]
