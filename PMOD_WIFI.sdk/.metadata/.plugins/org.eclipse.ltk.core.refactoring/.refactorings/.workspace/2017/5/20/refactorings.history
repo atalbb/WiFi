@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;myWiFiScan&apos; to &apos;wifiApp&apos;" description="Rename resource &apos;myWiFiScan&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/myWiFiScan" name="wifiApp" stamp="1494878060389" updateReferences="true"/>
+</session>
