@@ -109,3 +109,6 @@ launch_sdk -workspace C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk -
 INFO: [Vivado 12-393] Launching SDK...
 INFO: [Vivado 12-417] Running xsdk -workspace C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk -hwspec C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk/design_1_wrapper.hdf
 INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+close_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue May 16 15:46:23 2017...

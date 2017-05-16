@@ -29,3 +29,4 @@ wait_on_run impl_1
 file copy -force C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.runs/impl_1/design_1_wrapper.sysdef C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk/design_1_wrapper.hdf
 
 launch_sdk -workspace C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk -hwspec C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk/design_1_wrapper.hdf
+close_project
