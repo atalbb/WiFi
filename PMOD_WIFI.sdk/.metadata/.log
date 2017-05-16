@@ -12788,3 +12788,18 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY com.xilinx.sdk.utils 1 0 2017-05-16 12:50:28.916
+!MESSAGE Executed Webtalk command
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-05-16 12:50:28.924
+!MESSAGE XSCT Command: [disconnect tcfchan#7], Thread: Thread-875
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-05-16 12:50:28.936
+!MESSAGE XSCT Command: [disconnect tcfchan#11], Thread: Thread-877
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-05-16 12:50:28.948
+!MESSAGE XSCT command with result: [disconnect tcfchan#7], Result: [{Format=channel "tcfchan#7" closed, Time=1494953428944, Code=1}, ]. Thread: Thread-875
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-05-16 12:50:29.004
+!MESSAGE XSCT command with result: [disconnect tcfchan#11], Result: [null, ]. Thread: Thread-877
