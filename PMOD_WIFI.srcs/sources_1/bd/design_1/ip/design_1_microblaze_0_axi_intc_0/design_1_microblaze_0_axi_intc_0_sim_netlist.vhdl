@@ -1,7 +1,7 @@
--- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
--- Date        : Tue May 16 14:37:57 2017
+-- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+-- Date        : Wed Oct 11 11:06:00 2017
 -- Host        : LAPTOP-L1N8U9P6 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0/design_1_microblaze_0_axi_intc_0_sim_netlist.vhdl
@@ -2500,7 +2500,7 @@ entity design_1_microblaze_0_axi_intc_0_intc_core is
     \IVR_GEN.ivr_reg[1]_0\ : out STD_LOGIC;
     p_0_in8_in : out STD_LOGIC;
     p_0_in7_in : out STD_LOGIC;
-    SR : out STD_LOGIC_VECTOR ( 0 to 0 );
+    SS : out STD_LOGIC_VECTOR ( 0 to 0 );
     irq : out STD_LOGIC;
     \REG_GEN[0].IMR_FAST_MODE_GEN.imr_reg[0]_0\ : out STD_LOGIC;
     p_0_in2_in : out STD_LOGIC;
@@ -2589,7 +2589,7 @@ architecture STRUCTURE of design_1_microblaze_0_axi_intc_0_intc_core is
   signal \REG_GEN[2].IAR_FAST_MODE_GEN.iar[2]_i_2_n_0\ : STD_LOGIC;
   signal \^reg_gen[2].imr_fast_mode_gen.imr_reg[2]_0\ : STD_LOGIC;
   signal \REG_GEN[2].isr[2]_i_2_n_0\ : STD_LOGIC;
-  signal \^sr\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal \^ss\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal ack_or : STD_LOGIC;
   signal ack_or_i : STD_LOGIC;
   signal current_state : STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -2652,7 +2652,7 @@ begin
   \REG_GEN[0].ier_reg[0]_0\ <= \^reg_gen[0].ier_reg[0]_0\;
   \REG_GEN[0].ier_reg[0]_1\ <= \^reg_gen[0].ier_reg[0]_1\;
   \REG_GEN[2].IMR_FAST_MODE_GEN.imr_reg[2]_0\ <= \^reg_gen[2].imr_fast_mode_gen.imr_reg[2]_0\;
-  SR(0) <= \^sr\(0);
+  SS(0) <= \^ss\(0);
   p_0_in <= \^p_0_in\;
   p_0_in21_in <= \^p_0_in21_in\;
   p_0_in23_in <= \^p_0_in23_in\;
@@ -2679,7 +2679,7 @@ begin
       CE => '1',
       D => \ACK_EN_SYNC_ON_AXI_CLK_GEN.NO_CASCADE_MASTER.first_ack_active_i_1_n_0\,
       Q => first_ack_active,
-      R => \^sr\(0)
+      R => \^ss\(0)
     );
 \ACK_EN_SYNC_ON_AXI_CLK_GEN.NO_CASCADE_MASTER.first_ack_i_1\: unisim.vcomponents.LUT2
     generic map(
@@ -2696,7 +2696,7 @@ begin
       CE => '1',
       D => \ACK_EN_SYNC_ON_AXI_CLK_GEN.NO_CASCADE_MASTER.first_ack_i_1_n_0\,
       Q => first_ack,
-      R => \^sr\(0)
+      R => \^ss\(0)
     );
 \ACK_EN_SYNC_ON_AXI_CLK_GEN.NO_CASCADE_MASTER.second_ack_i_1\: unisim.vcomponents.LUT2
     generic map(
@@ -2713,7 +2713,7 @@ begin
       CE => '1',
       D => \ACK_EN_SYNC_ON_AXI_CLK_GEN.NO_CASCADE_MASTER.second_ack_i_1_n_0\,
       Q => second_ack,
-      R => \^sr\(0)
+      R => \^ss\(0)
     );
 \ACK_EN_SYNC_ON_AXI_CLK_GEN.NO_CASCADE_MASTER.second_ack_sync_d1_reg\: unisim.vcomponents.FDRE
      port map (
@@ -2721,7 +2721,7 @@ begin
       CE => '1',
       D => second_ack,
       Q => second_ack_sync_d1,
-      R => \^sr\(0)
+      R => \^ss\(0)
     );
 \ACK_EN_SYNC_ON_AXI_CLK_GEN.NO_CASCADE_MASTER.second_ack_sync_d2_reg\: unisim.vcomponents.FDRE
      port map (
@@ -2729,7 +2729,7 @@ begin
       CE => '1',
       D => second_ack_sync_d1,
       Q => second_ack_sync_d2,
-      R => \^sr\(0)
+      R => \^ss\(0)
     );
 \CIE_GEN.CIE_BIT_GEN[0].cie_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -2841,7 +2841,7 @@ begin
       CE => '1',
       D => intr_ff(1),
       Q => intr_d1,
-      R => \^sr\(0)
+      R => \^ss\(0)
     );
 \IPR_GEN.ipr[0]_i_1\: unisim.vcomponents.LUT2
     generic map(
@@ -2876,7 +2876,7 @@ begin
       CE => '1',
       D => \IPR_GEN.ipr[0]_i_1_n_0\,
       Q => \s_axi_rdata_i_reg[2]\(0),
-      R => \^sr\(0)
+      R => \^ss\(0)
     );
 \IPR_GEN.ipr_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -2884,7 +2884,7 @@ begin
       CE => '1',
       D => \IPR_GEN.ipr[1]_i_1_n_0\,
       Q => \s_axi_rdata_i_reg[2]\(1),
-      R => \^sr\(0)
+      R => \^ss\(0)
     );
 \IPR_GEN.ipr_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -2892,7 +2892,7 @@ begin
       CE => '1',
       D => \IPR_GEN.ipr[2]_i_1_n_0\,
       Q => \s_axi_rdata_i_reg[2]\(2),
-      R => \^sr\(0)
+      R => \^ss\(0)
     );
 \IRQ_LEVEL_GEN.IRQ_LEVEL_FAST_ON_AXI_CLK_GEN.Irq_i_1\: unisim.vcomponents.LUT1
     generic map(
@@ -2900,7 +2900,7 @@ begin
     )
         port map (
       I0 => s_axi_aresetn,
-      O => \^sr\(0)
+      O => \^ss\(0)
     );
 \IRQ_LEVEL_GEN.IRQ_LEVEL_FAST_ON_AXI_CLK_GEN.Irq_i_2\: unisim.vcomponents.LUT2
     generic map(
@@ -2917,7 +2917,7 @@ begin
       CE => '1',
       D => Irq_i,
       Q => irq,
-      R => \^sr\(0)
+      R => \^ss\(0)
     );
 \IRQ_LEVEL_GEN.IRQ_LEVEL_FAST_ON_AXI_CLK_GEN.current_state[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -2962,7 +2962,7 @@ begin
       CE => '1',
       D => current_state(0),
       Q => \IRQ_LEVEL_GEN.IRQ_LEVEL_FAST_ON_AXI_CLK_GEN.current_state_reg_n_0_[0]\,
-      R => \^sr\(0)
+      R => \^ss\(0)
     );
 \IRQ_LEVEL_GEN.IRQ_LEVEL_FAST_ON_AXI_CLK_GEN.current_state_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -2970,7 +2970,7 @@ begin
       CE => '1',
       D => current_state(1),
       Q => \IRQ_LEVEL_GEN.IRQ_LEVEL_FAST_ON_AXI_CLK_GEN.current_state_reg_n_0_[1]\,
-      R => \^sr\(0)
+      R => \^ss\(0)
     );
 \IRQ_LEVEL_GEN.IRQ_LEVEL_FAST_ON_AXI_CLK_GEN.in_idle_i_1\: unisim.vcomponents.LUT2
     generic map(
@@ -2987,7 +2987,7 @@ begin
       CE => '1',
       D => \IRQ_LEVEL_GEN.IRQ_LEVEL_FAST_ON_AXI_CLK_GEN.in_idle_i_1_n_0\,
       Q => in_idle,
-      R => \^sr\(0)
+      R => \^ss\(0)
     );
 \IVAR_FAST_MODE_GEN.IVAR_REG_MEM_AXI_CLK_GEN.IVAR_REG_MEM_I\: entity work.design_1_microblaze_0_axi_intc_0_shared_ram_ivar
      port map (
@@ -3015,7 +3015,7 @@ begin
       CE => '1',
       D => idle_and_irq,
       Q => idle_and_irq_d1,
-      R => \^sr\(0)
+      R => \^ss\(0)
     );
 \IVAR_INDEX_SYNC_ON_AXI_CLK_GEN.ivar_index_axi_clk[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -3049,7 +3049,7 @@ begin
       CE => '1',
       D => \IVAR_INDEX_SYNC_ON_AXI_CLK_GEN.ivar_index_axi_clk[0]_i_1_n_0\,
       Q => ivar_index_axi_clk(0),
-      R => \^sr\(0)
+      R => \^ss\(0)
     );
 \IVAR_INDEX_SYNC_ON_AXI_CLK_GEN.ivar_index_axi_clk_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -3057,7 +3057,7 @@ begin
       CE => '1',
       D => \IVAR_INDEX_SYNC_ON_AXI_CLK_GEN.ivar_index_axi_clk[1]_i_1_n_0\,
       Q => ivar_index_axi_clk(1),
-      R => \^sr\(0)
+      R => \^ss\(0)
     );
 \IVAR_INDEX_SYNC_ON_AXI_CLK_GEN.ivar_index_sample_en_i_1\: unisim.vcomponents.LUT4
     generic map(
@@ -3076,7 +3076,7 @@ begin
       CE => '1',
       D => ivar_index_sample_en_i,
       Q => ivar_index_sample_en,
-      R => \^sr\(0)
+      R => \^ss\(0)
     );
 \IVR_GEN.ivr[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -3109,7 +3109,7 @@ begin
       CE => '1',
       D => ivr_in(0),
       Q => \^q\(0),
-      S => \^sr\(0)
+      S => \^ss\(0)
     );
 \IVR_GEN.ivr_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -3159,7 +3159,7 @@ begin
       CE => '1',
       D => \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]\,
       Q => \^reg_gen[0].imr_fast_mode_gen.imr_reg[0]_0\,
-      R => \^sr\(0)
+      R => \^ss\(0)
     );
 \REG_GEN[0].ier[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -3252,7 +3252,7 @@ begin
       CE => '1',
       D => \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0\,
       Q => \^p_0_in2_in\,
-      R => \^sr\(0)
+      R => \^ss\(0)
     );
 \REG_GEN[1].ier[1]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -3345,7 +3345,7 @@ begin
       CE => '1',
       D => \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_1\,
       Q => \^reg_gen[2].imr_fast_mode_gen.imr_reg[2]_0\,
-      R => \^sr\(0)
+      R => \^ss\(0)
     );
 \REG_GEN[2].ier[2]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -3438,7 +3438,7 @@ ack_or_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => ack_or_i,
       Q => ack_or,
-      R => \^sr\(0)
+      R => \^ss\(0)
     );
 irq_gen_i_1: unisim.vcomponents.LUT6
     generic map(
@@ -3459,7 +3459,7 @@ irq_gen_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => irq_gen_i,
       Q => irq_gen,
-      R => \^sr\(0)
+      R => \^ss\(0)
     );
 \mer_int_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -3467,7 +3467,7 @@ irq_gen_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => \GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg[7]\,
       Q => \^ivar_index_sync_on_axi_clk_gen.ivar_index_axi_clk_reg[1]_0\,
-      R => \^sr\(0)
+      R => \^ss\(0)
     );
 \mer_int_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -3475,7 +3475,7 @@ irq_gen_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => Bus_RNW_reg_reg_2,
       Q => \^p_0_in\,
-      R => \^sr\(0)
+      R => \^ss\(0)
     );
 end STRUCTURE;
 library IEEE;
@@ -3515,7 +3515,7 @@ entity design_1_microblaze_0_axi_intc_0_slave_attachment is
     Or128_vec2stdlogic19_out : out STD_LOGIC;
     ip2bus_rdack_prev2 : out STD_LOGIC;
     s_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    SR : in STD_LOGIC_VECTOR ( 0 to 0 );
+    SS : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_aclk : in STD_LOGIC;
     ip2bus_wrack_int_d1 : in STD_LOGIC;
     \REG_GEN[2].IMR_FAST_MODE_GEN.imr_reg[2]_0\ : in STD_LOGIC;
@@ -3997,7 +3997,7 @@ rst_reg: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => '1',
-      D => SR(0),
+      D => SS(0),
       Q => rst,
       R => '0'
     );
@@ -4715,7 +4715,7 @@ entity design_1_microblaze_0_axi_intc_0_axi_lite_ipif is
     Or128_vec2stdlogic19_out : out STD_LOGIC;
     ip2bus_rdack_prev2 : out STD_LOGIC;
     s_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    SR : in STD_LOGIC_VECTOR ( 0 to 0 );
+    SS : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_aclk : in STD_LOGIC;
     ip2bus_wrack_int_d1 : in STD_LOGIC;
     \REG_GEN[2].IMR_FAST_MODE_GEN.imr_reg[2]_0\ : in STD_LOGIC;
@@ -4788,7 +4788,7 @@ I_SLAVE_ATTACHMENT: entity work.design_1_microblaze_0_axi_intc_0_slave_attachmen
       \SIE_GEN.SIE_BIT_GEN[0].sie_reg[0]_1\ => \SIE_GEN.SIE_BIT_GEN[0].sie_reg[0]_0\,
       \SIE_GEN.SIE_BIT_GEN[1].sie_reg[1]\ => \SIE_GEN.SIE_BIT_GEN[1].sie_reg[1]\,
       \SIE_GEN.SIE_BIT_GEN[2].sie_reg[2]\ => \SIE_GEN.SIE_BIT_GEN[2].sie_reg[2]\,
-      SR(0) => SR(0),
+      SS(0) => SS(0),
       bus2ip_wrce(0) => bus2ip_wrce(0),
       ip2bus_rdack => ip2bus_rdack,
       ip2bus_rdack_int_d1 => ip2bus_rdack_int_d1,
@@ -4956,7 +4956,6 @@ architecture STRUCTURE of design_1_microblaze_0_axi_intc_0_axi_intc is
   signal INTC_CORE_I_n_16 : STD_LOGIC;
   signal INTC_CORE_I_n_19 : STD_LOGIC;
   signal INTC_CORE_I_n_20 : STD_LOGIC;
-  signal INTC_CORE_I_n_3 : STD_LOGIC;
   signal INTC_CORE_I_n_5 : STD_LOGIC;
   signal INTC_CORE_I_n_7 : STD_LOGIC;
   signal INTC_CORE_I_n_8 : STD_LOGIC;
@@ -4982,6 +4981,7 @@ architecture STRUCTURE of design_1_microblaze_0_axi_intc_0_axi_intc is
   signal p_0_in40_in : STD_LOGIC;
   signal p_0_in7_in : STD_LOGIC;
   signal p_0_in8_in : STD_LOGIC;
+  signal p_0_in_0 : STD_LOGIC;
   signal p_1_in : STD_LOGIC;
   signal p_1_in9_in : STD_LOGIC;
   signal \^s_axi_bresp\ : STD_LOGIC_VECTOR ( 1 to 1 );
@@ -5025,7 +5025,7 @@ AXI_LITE_IPIF_I: entity work.design_1_microblaze_0_axi_intc_0_axi_lite_ipif
       \SIE_GEN.SIE_BIT_GEN[0].sie_reg[0]_0\ => INTC_CORE_I_n_8,
       \SIE_GEN.SIE_BIT_GEN[1].sie_reg[1]\ => AXI_LITE_IPIF_I_n_21,
       \SIE_GEN.SIE_BIT_GEN[2].sie_reg[2]\ => AXI_LITE_IPIF_I_n_22,
-      SR(0) => INTC_CORE_I_n_3,
+      SS(0) => p_0_in,
       bus2ip_wrce(0) => bus2ip_wrce(0),
       ip2bus_rdack => ip2bus_rdack,
       ip2bus_rdack_int_d1 => ip2bus_rdack_int_d1,
@@ -5036,7 +5036,7 @@ AXI_LITE_IPIF_I: entity work.design_1_microblaze_0_axi_intc_0_axi_lite_ipif
       \mer_int_reg[0]\ => AXI_LITE_IPIF_I_n_26,
       \mer_int_reg[0]_0\ => INTC_CORE_I_n_14,
       \mer_int_reg[1]\ => AXI_LITE_IPIF_I_n_27,
-      p_0_in => p_0_in,
+      p_0_in => p_0_in_0,
       p_0_in21_in => p_0_in21_in,
       p_0_in23_in => p_0_in23_in,
       p_0_in2_in => p_0_in2_in,
@@ -5099,13 +5099,13 @@ INTC_CORE_I: entity work.design_1_microblaze_0_axi_intc_0_intc_core
       \REG_GEN[0].ier_reg[0]_0\ => INTC_CORE_I_n_8,
       \REG_GEN[0].ier_reg[0]_1\ => INTC_CORE_I_n_11,
       \REG_GEN[2].IMR_FAST_MODE_GEN.imr_reg[2]_0\ => INTC_CORE_I_n_7,
-      SR(0) => INTC_CORE_I_n_3,
+      SS(0) => p_0_in,
       \bus2ip_addr_i_reg[5]\(3 downto 0) => bus2ip_addr(5 downto 2),
       bus2ip_wrce(0) => bus2ip_wrce(0),
       interrupt_address(31 downto 0) => interrupt_address(31 downto 0),
       intr(2 downto 0) => intr(2 downto 0),
       irq => irq,
-      p_0_in => p_0_in,
+      p_0_in => p_0_in_0,
       p_0_in21_in => p_0_in21_in,
       p_0_in23_in => p_0_in23_in,
       p_0_in2_in => p_0_in2_in,
@@ -5129,7 +5129,7 @@ ip2bus_rdack_int_d1_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => Or128_vec2stdlogic19_out,
       Q => ip2bus_rdack_int_d1,
-      R => INTC_CORE_I_n_3
+      R => p_0_in
     );
 ip2bus_rdack_reg: unisim.vcomponents.FDRE
      port map (
@@ -5137,7 +5137,7 @@ ip2bus_rdack_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => ip2bus_rdack_prev2,
       Q => ip2bus_rdack,
-      R => INTC_CORE_I_n_3
+      R => p_0_in
     );
 ip2bus_wrack_int_d1_reg: unisim.vcomponents.FDRE
      port map (
@@ -5145,7 +5145,7 @@ ip2bus_wrack_int_d1_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => Or128_vec2stdlogic,
       Q => ip2bus_wrack_int_d1,
-      R => INTC_CORE_I_n_3
+      R => p_0_in
     );
 ip2bus_wrack_reg: unisim.vcomponents.FDRE
      port map (
@@ -5153,7 +5153,7 @@ ip2bus_wrack_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => ip2bus_wrack_prev2,
       Q => ip2bus_wrack,
-      R => INTC_CORE_I_n_3
+      R => p_0_in
     );
 end STRUCTURE;
 library IEEE;
@@ -5195,7 +5195,7 @@ entity design_1_microblaze_0_axi_intc_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of design_1_microblaze_0_axi_intc_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of design_1_microblaze_0_axi_intc_0 : entity is "axi_intc,Vivado 2016.3";
+  attribute x_core_info of design_1_microblaze_0_axi_intc_0 : entity is "axi_intc,Vivado 2017.2";
 end design_1_microblaze_0_axi_intc_0;
 
 architecture STRUCTURE of design_1_microblaze_0_axi_intc_0 is

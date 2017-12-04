@@ -44,7 +44,7 @@
 * The configuration table for devices
 */
 
-XUartLite_Config XUartLite_ConfigTable[] =
+XUartLite_Config XUartLite_ConfigTable[XPAR_XUARTLITE_NUM_INSTANCES] =
 {
 	{
 		XPAR_AXI_UARTLITE_0_DEVICE_ID,

@@ -47,14 +47,14 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:ip:mii_to_rmii:2.0
--- IP Revision: 12
+-- IP Revision: 15
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-LIBRARY mii_to_rmii_v2_0_12;
-USE mii_to_rmii_v2_0_12.mii_to_rmii;
+LIBRARY mii_to_rmii_v2_0_15;
+USE mii_to_rmii_v2_0_15.mii_to_rmii;
 
 ENTITY design_1_mii_to_rmii_0_0 IS
   PORT (
@@ -109,11 +109,11 @@ ARCHITECTURE design_1_mii_to_rmii_0_0_arch OF design_1_mii_to_rmii_0_0 IS
     );
   END COMPONENT mii_to_rmii;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF design_1_mii_to_rmii_0_0_arch: ARCHITECTURE IS "mii_to_rmii,Vivado 2016.3";
+  ATTRIBUTE X_CORE_INFO OF design_1_mii_to_rmii_0_0_arch: ARCHITECTURE IS "mii_to_rmii,Vivado 2017.2";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF design_1_mii_to_rmii_0_0_arch : ARCHITECTURE IS "design_1_mii_to_rmii_0_0,mii_to_rmii,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF design_1_mii_to_rmii_0_0_arch: ARCHITECTURE IS "design_1_mii_to_rmii_0_0,mii_to_rmii,{x_ipProduct=Vivado 2016.3,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=mii_to_rmii,x_ipVersion=2.0,x_ipCoreRevision=12,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_INSTANCE=design_1_mii_to_rmii_0_0,C_FIXED_SPEED=1,C_INCLUDE_BUF=0,C_SPEED_100=1}";
+  ATTRIBUTE CORE_GENERATION_INFO OF design_1_mii_to_rmii_0_0_arch: ARCHITECTURE IS "design_1_mii_to_rmii_0_0,mii_to_rmii,{x_ipProduct=Vivado 2017.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=mii_to_rmii,x_ipVersion=2.0,x_ipCoreRevision=15,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_INSTANCE=design_1_mii_to_rmii_0_0,C_FIXED_SPEED=1,C_INCLUDE_BUF=0,C_SPEED_100=1}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_INFO OF rst_n: SIGNAL IS "xilinx.com:signal:reset:1.0 rst RST";
   ATTRIBUTE X_INTERFACE_INFO OF ref_clk: SIGNAL IS "xilinx.com:signal:clock:1.0 clock CLK";

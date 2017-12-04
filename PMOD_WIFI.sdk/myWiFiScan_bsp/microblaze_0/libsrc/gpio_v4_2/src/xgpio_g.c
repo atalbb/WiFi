@@ -44,7 +44,7 @@
 * The configuration table for devices
 */
 
-XGpio_Config XGpio_ConfigTable[] =
+XGpio_Config XGpio_ConfigTable[XPAR_XGPIO_NUM_INSTANCES] =
 {
 	{
 		XPAR_AXI_GPIO_LED_DEVICE_ID,

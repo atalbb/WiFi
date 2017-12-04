@@ -1,10 +1,10 @@
 /************************************************************************/
 /*                                                                      */
-/*       TCPEchoServer                                                  */
+/*      TCPEchoClient                                                   */
 /*                                                                      */
-/*       A DEWFcK TCP Server application to           			        */
-/*       demonstrate how to use the TcpServer Class.                    */
-/*       This can be used in conjuction  with TCPEchoClient             */
+/*        A DEIPcK TCP Client application to                    		*/
+/*        demonstrate how to use the TcpClient Class.                   */
+/*        This can be used in conjunction with TCPEchoServer            */
 /*                                                                      */
 /************************************************************************/
 /*       Author:        Keith Vogel                                     */
@@ -58,20 +58,19 @@
 #define PMODWIFI_VEC_ID XPAR_FABRIC_PMODWIFI_0_WF_INTERRUPT_INTR
 #endif
 
+
 /************************************************************************/
 /*                                                                      */
 /*              SET THESE VALUES FOR YOUR NETWORK                       */
 /*                                                                      */
 /************************************************************************/
 
-
-IPv4 ipServer = {192,168,1,190};//{0,0,0,0} for DHCP
-
-unsigned short portServer = DEIPcK::iPersonalPorts44 + 300;     // port 44300
+const char * szIPServer = "192.168.1.140";    // server to connect to
+uint16_t portServer = DEIPcK::iPersonalPorts44 + 300;     // port 44300
 
 // Specify the SSID
-const char * szSsid = "HTC One_M8 4996";
-
+const char * szSsid = "SM-G950U5F0";
+//const char * szSsid = "Himalayan Panthers";
 // select 1 for the security you want, or none for no security
 #define USE_WPA2_PASSPHRASE
 //#define USE_WPA2_KEY
@@ -82,33 +81,34 @@ const char * szSsid = "HTC One_M8 4996";
 // modify the security key to what you have.
 #if defined(USE_WPA2_PASSPHRASE)
 
-    const char * szPassPhrase = "bajracha";
+    const char * szPassPhrase = "atal1234";
+    //const char * szPassPhrase = "Aay0gorkhali@2016";
     #define WiFiConnectMacro() deIPcK.wfConnect(szSsid, szPassPhrase, &status)
 
 #elif defined(USE_WPA2_KEY)
 
     WPA2KEY key = { 0x27, 0x2C, 0x89, 0xCC, 0xE9, 0x56, 0x31, 0x1E,
-                        0x3B, 0xAD, 0x79, 0xF7, 0x1D, 0xC4, 0xB9, 0x05,
-                        0x7A, 0x34, 0x4C, 0x3E, 0xB5, 0xFA, 0x38, 0xC2,
-                        0x0F, 0x0A, 0xB0, 0x90, 0xDC, 0x62, 0xAD, 0x58 };
+                    0x3B, 0xAD, 0x79, 0xF7, 0x1D, 0xC4, 0xB9, 0x05,
+                    0x7A, 0x34, 0x4C, 0x3E, 0xB5, 0xFA, 0x38, 0xC2,
+                    0x0F, 0x0A, 0xB0, 0x90, 0xDC, 0x62, 0xAD, 0x58 };
     #define WiFiConnectMacro() deIPcK.wfConnect(szSsid, key, &status)
 
 #elif defined(USE_WEP40)
 
     const int iWEPKey = 0;
-    DEWFcK::WEP40KEY keySet = {    0xBE, 0xC9, 0x58, 0x06, 0x97,     // Key 0
-                                    0x00, 0x00, 0x00, 0x00, 0x00,     // Key 1
-                                    0x00, 0x00, 0x00, 0x00, 0x00,     // Key 2
-                                    0x00, 0x00, 0x00, 0x00, 0x00 };   // Key 3
+    WEP40KEY keySet = { 0xBE, 0xC9, 0x58, 0x06, 0x97,     // Key 0
+                        0x00, 0x00, 0x00, 0x00, 0x00,     // Key 1
+                        0x00, 0x00, 0x00, 0x00, 0x00,     // Key 2
+                        0x00, 0x00, 0x00, 0x00, 0x00 };   // Key 3
     #define WiFiConnectMacro() deIPcK.wfConnect(szSsid, keySet, iWEPKey, &status)
 
 #elif defined(USE_WEP104)
 
     const int iWEPKey = 0;
-    DEWFcK::WEP104KEY keySet = {   0x3E, 0xCD, 0x30, 0xB2, 0x55, 0x2D, 0x3C, 0x50, 0x52, 0x71, 0xE8, 0x83, 0x91,   // Key 0
-                                    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,   // Key 1
-                                    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,   // Key 2
-                                    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 }; // Key 3
+    WEP104KEY keySet = { 0x3E, 0xCD, 0x30, 0xB2, 0x55, 0x2D, 0x3C, 0x50, 0x52, 0x71, 0xE8, 0x83, 0x91,   // Key 0
+                         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,   // Key 1
+                         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,   // Key 2
+                         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 }; // Key 3
     #define WiFiConnectMacro() deIPcK.wfConnect(szSsid, keySet, iWEPKey, &status)
 
 #elif defined(USE_WF_CONFIG_H)
@@ -121,45 +121,42 @@ const char * szSsid = "HTC One_M8 4996";
 
 #endif
 
+
+
+
+
 //******************************************************************************************
 //******************************************************************************************
 //***************************** END OF CONFIGURATION ***************************************
 //******************************************************************************************
 //******************************************************************************************
 
-typedef enum
-{
-    NONE = 0,
-    CONNECT,
-    LISTEN,
-    ISLISTENING,
-    WAITISLISTENING,
-    AVAILABLECLIENT,
-    ACCEPTCLIENT,
-    READ,
-    WRITE,
-    CLOSE,
-    EXIT,
-    DONE
-} STATE;
+    typedef enum
+    {
+        NONE = 0,
+        CONNECT,
+        TCPCONNECT,
+        WRITE,
+        READ,
+        CLOSE,
+        DONE,
+    } STATE;
 
 STATE state = CONNECT;
 
 unsigned tStart = 0;
 unsigned tWait = 5000;
 
-TCPServer tcpServer;
-#define cTcpClients 2
-TCPSocket rgTcpClient[cTcpClients];
+TCPSocket tcpSocket;
+byte rgbRead[1024];
 
-TCPSocket * ptcpClient = NULL;
+// this is for Print.write to print
+byte rgbWrite[] = {'*','W','r','o','t','e',' ','f','r','o','m',' ','p','r','i','n','t','.','w','r','i','t','e','*','\n'};
+int cbWrite = sizeof(rgbWrite);
 
-u8 rgbRead[1024];
-int cbRead = 0;
-int count = 0;
-
-IPSTATUS status;
-
+// this is for tcpSocket.writeStream to print
+byte rgbWriteStream[] = {'*','W','r','o','t','e',' ','f','r','o','m',' ','t','c','p','C','l','i','e','n','t','.','w','r','i','t','e','S','t','r','e','a','m','*','\n'};
+int cbWriteStream = sizeof(rgbWriteStream);
 
 void DemoInitialize();
 void DemoRun();
@@ -170,8 +167,7 @@ int main(void)
 	Xil_ICacheEnable();
 	Xil_DCacheEnable();
 
-	xil_printf("TCP Echo Server\r\nConnecting...\r\n");
-
+	xil_printf("WiFiTCPEchoClient 3.0\r\nConnecting to network...\r\n");
 	DemoInitialize();
 	DemoRun();
 	return 0;
@@ -186,156 +182,78 @@ void DemoInitialize()
 
 void DemoRun()
 {
+	IPSTATUS status;
+	int cbRead=0;
 	while (1){
 		switch(state)
 		    {
-		        case CONNECT:
+		 case CONNECT:
 		            if(WiFiConnectMacro())
 		            {
-		                xil_printf("Connection Created\r\n");
-		                deIPcK.begin(ipServer);
-		                state = LISTEN;
+		                xil_printf("WiFi connected\r\n");
+		                deIPcK.begin();
+		                state = TCPCONNECT;
 		            }
 		            else if(IsIPStatusAnError(status))
 		            {
-		            	xil_printf("Unable to make connection, status: 0x%X\r\n", status);
+		                xil_printf("Unable to connect, status: %d\r\n", status);
 		                state = CLOSE;
 		            }
 		            break;
 
-		    // say to listen on the port
-		    case LISTEN:
-		        if(deIPcK.tcpStartListening(portServer, tcpServer))
-		        {
-		            for(int i = 0; i < cTcpClients; i++)
+		        case TCPCONNECT:
+		            if(deIPcK.tcpConnect(szIPServer, portServer, tcpSocket))
 		            {
-		                tcpServer.addSocket(rgTcpClient[i]);
+		                xil_printf("Connected to server.\r\n");
+		                state = WRITE;
 		            }
-		        }
-		        state = ISLISTENING;
 		        break;
 
-		    case ISLISTENING:
-		        count = tcpServer.isListening();
+		        // write out the strings
+		        case WRITE:
+		            if(tcpSocket.isEstablished())
+		                {
+		                tcpSocket.writeStream(rgbWriteStream, cbWriteStream);
 
-		        if(count > 0)
-		        {
-		        	deIPcK.getMyIP(ipServer);
-		        	xil_printf("Server started on %d.%d.%d.%d:%d\r\n",ipServer.u8[0],ipServer.u8[1],ipServer.u8[2],ipServer.u8[3], portServer);
-		        	xil_printf("%d sockets listening on port: %d\r\n", count, portServer);
-		            state = AVAILABLECLIENT;
-		        }
-		        else
-		        {
-		        	xil_printf("%d sockets listening on port: %d\r\n", count, portServer);
-		            state = WAITISLISTENING;
-		        }
-		        break;
+		                xil_printf("Bytes Read Back:\r\n");
+		                state = READ;
+		                tStart = (unsigned) SYSGetMilliSecond();
+		                }
+		            break;
 
-		    case WAITISLISTENING:
-		        if(tcpServer.isListening() > 0)
-		        {
-		            state = ISLISTENING;
-		        }
-		        break;
+		            // look for the echo back
+		            case READ:
 
-		    // wait for a connection
-		    case AVAILABLECLIENT:
-		        if((count = tcpServer.availableClients()) > 0)
-		        {
-		        	xil_printf("Got %d clients pending\r\n", count);
-		            state = ACCEPTCLIENT;
-		        }
-		        break;
+		                // see if we got anything to read
+		                if((cbRead = tcpSocket.available()) > 0)
+		                {
+		                    cbRead = cbRead < (int) sizeof(rgbRead) ? cbRead : sizeof(rgbRead);
+		                    cbRead = tcpSocket.readStream(rgbRead, cbRead);
+		                    rgbRead[cbRead]=0;//Null Terminator
+		                    xil_printf("%s\r\n", rgbRead);
+		                }
 
-		    // accept the connection
-		    case ACCEPTCLIENT:
+		                // give us some time to get everything echo'ed back
+		                else if( (((unsigned) SYSGetMilliSecond()) - tStart) > tWait )
+		                {
+		                    xil_printf("\r\n");
+		                    state = CLOSE;
+		                }
+		                break;
 
-		        // accept the client
-		        if((ptcpClient = tcpServer.acceptClient()) != NULL && ptcpClient->isConnected())
-		        {
-		        	xil_printf("Got a Connection\r\n");
-		            state = READ;
-		            tStart = (unsigned) SYSGetMilliSecond();
-		        }
+		        // done, so close up the tcpSocket
+		        case CLOSE:
+		            tcpSocket.close();
+		            xil_printf("Closing TcpClient, Done with sketch.\r\n");
+		            state = DONE;
+		            break;
 
-		        // this probably won't happen unless the connection is dropped
-		        // if it is, just release our socket and go back to listening
-		        else
-		        {
-		            state = CLOSE;
-		        }
-		        break;
-
-		    // wait fot the read, but if too much time elapses (5 seconds)
-		    // we will just close the tcpClient and go back to listening
-		    case READ:
-
-		        // see if we got anything to read
-		        if((cbRead = ptcpClient->available()) > 0)
-		        {
-		            cbRead = cbRead < (int) sizeof(rgbRead) ? cbRead : sizeof(rgbRead);
-		            cbRead = ptcpClient->readStream(rgbRead, cbRead);
-
-		            xil_printf("Got %d bytes\r\n", cbRead);
-
-		            state = WRITE;
-		        }
-
-		        //If connection was closed by the user
-		        else if(!ptcpClient->isConnected())
-		        //else if( (((unsigned) SYSGetMilliSecond()) - tStart) > tWait ) // If too much time elapsed between reads, close the connection
-		        {
-		            state = CLOSE;
-		        }
-		        break;
-
-		    // echo back the string
-		    case WRITE:
-		        if(ptcpClient->isConnected())
-		        {
-		        	xil_printf("Writing: \r\n");
-		            for(int i=0; i < cbRead; i++)
-		            {
-		            	xil_printf("%c\r\n",(char) rgbRead[i]);
-		            }
-		            xil_printf("\r\n");
-
-		            ptcpClient->writeStream(rgbRead, cbRead);
-		            state = READ;
-		            tStart = (unsigned) SYSGetMilliSecond();
-		        }
-
-		        // the connection was closed on us, go back to listening
-		        else
-		        {
-		        	xil_printf("Unable to write back.\r\n");
-		            state = CLOSE;
-		        }
-		        break;
-
-		    // close our tcpClient and go back to listening
-		    case CLOSE:
-		    	xil_printf("Closing connection\r\n");
-		        if (ptcpClient)ptcpClient->close();
-		        tcpServer.addSocket(*ptcpClient);
-		        xil_printf("\r\n");
-		        state = ISLISTENING;
-		        break;
-
-		    // something bad happen, just exit out of the program
-		    case EXIT:
-		        tcpServer.close();
-		        xil_printf("Something went wrong, sketch is done.\r\n");
-		        state = DONE;
-		        break;
-
-		    // do nothing in the loop
-		    case DONE:
-		    default:
-		        break;
+		        case DONE:
+		        default:
+		            break;
 		    }
-		    // every pass through loop(), keep the stack alive
+
+		    // keep the stack alive each pass through the loop()
 		    DEIPcK::periodicTasks();
 	}
 }

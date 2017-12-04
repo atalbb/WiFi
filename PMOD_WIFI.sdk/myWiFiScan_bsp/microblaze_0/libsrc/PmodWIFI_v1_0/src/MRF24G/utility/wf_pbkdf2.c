@@ -30,6 +30,28 @@
 
 #if defined(WF_USE_HOST_WPA_KEY_CALCULATION)
 
+#define ROTLEFT(a, b) ((a << b) | (a >> (32 - b)))
+/** typedef struct {
+	uint32_t state[5];
+	uint32_t count[2];
+	unsigned char buffer[64];
+} SHA1_CTX;
+*/
+typedef unsigned char BYTE;             // 8-bit byte
+typedef unsigned int  WORD;             // 32-bit word, change to "long" for 16-bit machines
+
+typedef struct {
+	BYTE data[64];
+	WORD datalen;
+	unsigned long long bitlen;
+	WORD state[5];
+	//WORD k[4];
+} SHA1_CTX;
+static void SHA1Init(SHA1_CTX *context);
+static void SHA1Update(SHA1_CTX *context, const void *data, uint32_t len);
+static void SHA1Final(unsigned char digest[20], SHA1_CTX* context);
+//static void SHA1Transform(uint32_t state[5], const unsigned char buffer[64]);
+void SHA1Transform(SHA1_CTX *ctx, const BYTE data[]);
 
 #define SHA1_MAC_LEN 20
 
@@ -261,11 +283,11 @@ static void pbkdf2_sha1_f(const char *passphrase, const char *ssid,
 	for (i = 1; i < iterations; i++) {
 		uint8_t* pTemp;
 
-		
+
 		hmac_sha1((uint8_t *) passphrase, passphrase_len, ((i&0x01)? tmp:tmp2), SHA1_MAC_LEN,
 			  ((i&0x01)? tmp2:tmp));
 		//memcpy(tmp, tmp2, SHA1_MAC_LEN);
-		 
+
 		pTemp = (i&0x01)? tmp2 : tmp;
 
 		for (j = 0; j < SHA1_MAC_LEN; j++)
@@ -295,28 +317,30 @@ void pbkdf2_sha1(const char *passphrase, const char *ssid, uint16_t ssid_len,
 	unsigned char *pos = buf;
 	size_t left = buflen, plen;
 	unsigned char digest[SHA1_MAC_LEN];
+	uint8_t i =0;
 
 	while (left > 0) {
+        i++;
 		count++;
+		// DK = T1||T2||......T(dklen/hlen)
+		// dklen = 256 bits(32 bytes) , hlen = 160 bits(20 bytes)
+		// so, DK = T1||T2...here || means concatenate
 		pbkdf2_sha1_f(passphrase, ssid, ssid_len, iterations, count,
 			      digest);
 		plen = left > SHA1_MAC_LEN ? SHA1_MAC_LEN : left;
 		memcpy(pos, digest, plen);
+		//printf("%d bytes of key for i= %d for T",plen,i);
+		//printf("T%d:",i);
+		//dump(pos,plen);
 		pos += plen;
 		left -= plen;
 	}
+	//printf("Number of i's for T in PBKDF2 = %d\r\n",i);
 }
 
-typedef struct {
-	uint32_t state[5];
-	uint32_t count[2];
-	unsigned char buffer[64];
-} SHA1_CTX;
 
-static void SHA1Init(SHA1_CTX *context);
-static void SHA1Update(SHA1_CTX *context, const void *data, uint32_t len);
-static void SHA1Final(unsigned char digest[20], SHA1_CTX* context);
-static void SHA1Transform(uint32_t state[5], const unsigned char buffer[64]);
+
+
 
 /**
  * sha1_vector - SHA-1 hash for data vector
@@ -362,7 +386,7 @@ By Steve Reid <sreid@sea-to-sky.net>
 100% Public Domain
 
 -----------------
-Modified 7/98 
+Modified 7/98
 By James H. Brown <jbrown@burgoyne.com>
 Still 100% Public Domain
 
@@ -384,7 +408,7 @@ Since the file IO in main() reads 16K at a time, any file 8K or larger would
 be guaranteed to generate the wrong hash (e.g. Test Vector #3, a million
 "a"s).
 
-I also changed the declaration of variables i & j in SHA1Update to 
+I also changed the declaration of variables i & j in SHA1Update to
 unsigned long from unsigned int for the same reason.
 
 These changes should make no difference to any 32 bit implementations since
@@ -411,7 +435,7 @@ Still 100% public domain
 Modified 4/01
 By Saul Kravitz <Saul.Kravitz@celera.com>
 Still 100% PD
-Modified to run on Compaq Alpha hardware.  
+Modified to run on Compaq Alpha hardware.
 
 -----------------
 Modified 4/01
@@ -469,7 +493,7 @@ void SHAPrintContext(SHA1_CTX *context, char *msg)
 {
 	printf("%s (%d,%d) %x %x %x %x %x\n",
 	       msg,
-	       context->count[0], context->count[1], 
+	       context->count[0], context->count[1],
 	       context->state[0],
 	       context->state[1],
 	       context->state[2],
@@ -480,7 +504,7 @@ void SHAPrintContext(SHA1_CTX *context, char *msg)
 
 /* Hash a single 512-bit block. This is the core of the algorithm. */
 
-static void SHA1Transform(uint32_t state[5], const unsigned char buffer[64])
+/**static void SHA1Transform(uint32_t state[5], const unsigned char buffer[64])
 {
 	uint32_t a, b, c, d, e;
 	typedef union {
@@ -493,13 +517,13 @@ static void SHA1Transform(uint32_t state[5], const unsigned char buffer[64])
 	block = (CHAR64LONG16 *) workspace;
 	memcpy((uint8_t*)block, (uint8_t*)buffer, 64);
 	/* Copy context->state[] to working vars */
-	a = state[0];
+/**	a = state[0];
 	b = state[1];
 	c = state[2];
 	d = state[3];
 	e = state[4];
 	/* 4 rounds of 20 operations each. Loop unrolled. */
-	R0(a,b,c,d,e, 0); R0(e,a,b,c,d, 1); R0(d,e,a,b,c, 2); R0(c,d,e,a,b, 3);
+/**	R0(a,b,c,d,e, 0); R0(e,a,b,c,d, 1); R0(d,e,a,b,c, 2); R0(c,d,e,a,b, 3);
 	R0(b,c,d,e,a, 4); R0(a,b,c,d,e, 5); R0(e,a,b,c,d, 6); R0(d,e,a,b,c, 7);
 	R0(c,d,e,a,b, 8); R0(b,c,d,e,a, 9); R0(a,b,c,d,e,10); R0(e,a,b,c,d,11);
 	R0(d,e,a,b,c,12); R0(c,d,e,a,b,13); R0(b,c,d,e,a,14); R0(a,b,c,d,e,15);
@@ -520,32 +544,98 @@ static void SHA1Transform(uint32_t state[5], const unsigned char buffer[64])
 	R4(d,e,a,b,c,72); R4(c,d,e,a,b,73); R4(b,c,d,e,a,74); R4(a,b,c,d,e,75);
 	R4(e,a,b,c,d,76); R4(d,e,a,b,c,77); R4(c,d,e,a,b,78); R4(b,c,d,e,a,79);
 	/* Add the working vars back into context.state[] */
-	state[0] += a;
+	/**state[0] += a;
 	state[1] += b;
 	state[2] += c;
 	state[3] += d;
 	state[4] += e;
 	/* Wipe variables */
-	a = b = c = d = e = 0;
+	/**a = b = c = d = e = 0;
 
 	memset((uint8_t*)block, 0, 64);
+}*/
+void SHA1Transform(SHA1_CTX *ctx, const BYTE data[])
+{
+	WORD a, b, c, d, e, i, j, t, m[80];
+
+	for (i = 0, j = 0; i < 16; ++i, j += 4)
+		m[i] = (data[j] << 24) + (data[j + 1] << 16) + (data[j + 2] << 8) + (data[j + 3]);
+	for ( ; i < 80; ++i) {
+		m[i] = (m[i - 3] ^ m[i - 8] ^ m[i - 14] ^ m[i - 16]);
+		m[i] = (m[i] << 1) | (m[i] >> 31);
+	}
+
+	a = ctx->state[0];
+	b = ctx->state[1];
+	c = ctx->state[2];
+	d = ctx->state[3];
+	e = ctx->state[4];
+
+	for (i = 0; i < 20; ++i) {
+		t = ROTLEFT(a, 5) + ((b & c) ^ (~b & d)) + e + 0x5a827999 + m[i];
+		e = d;
+		d = c;
+		c = ROTLEFT(b, 30);
+		b = a;
+		a = t;
+	}
+	for ( ; i < 40; ++i) {
+		t = ROTLEFT(a, 5) + (b ^ c ^ d) + e + 0x6ed9eba1 + m[i];
+		e = d;
+		d = c;
+		c = ROTLEFT(b, 30);
+		b = a;
+		a = t;
+	}
+	for ( ; i < 60; ++i) {
+		t = ROTLEFT(a, 5) + ((b & c) ^ (b & d) ^ (c & d))  + e + 0x8f1bbcdc + m[i];
+		e = d;
+		d = c;
+		c = ROTLEFT(b, 30);
+		b = a;
+		a = t;
+	}
+	for ( ; i < 80; ++i) {
+		t = ROTLEFT(a, 5) + (b ^ c ^ d) + e + 0xca62c1d6 + m[i];
+		e = d;
+		d = c;
+		c = ROTLEFT(b, 30);
+		b = a;
+		a = t;
+	}
+
+	ctx->state[0] += a;
+	ctx->state[1] += b;
+	ctx->state[2] += c;
+	ctx->state[3] += d;
+	ctx->state[4] += e;
 }
 
 /* SHA1Init - Initialize new context */
-static void SHA1Init(SHA1_CTX* context)
+/** static void SHA1Init(SHA1_CTX* context)
 {
 	/* SHA1 initialization constants */
-	context->state[0] = 0x67452301;
+	/**context->state[0] = 0x67452301;
 	context->state[1] = 0xEFCDAB89;
 	context->state[2] = 0x98BADCFE;
 	context->state[3] = 0x10325476;
 	context->state[4] = 0xC3D2E1F0;
 	context->count[0] = context->count[1] = 0;
-}
+}*/
 
+static void SHA1Init(SHA1_CTX *context)
+{
+	context->datalen = 0;
+	context->bitlen = 0;
+	context->state[0] = 0x67452301;
+	context->state[1] = 0xEFCDAB89;
+	context->state[2] = 0x98BADCFE;
+	context->state[3] = 0x10325476;
+	context->state[4] = 0xc3d2e1f0;
+}
 /* Run your data through this. */
 
-static void SHA1Update(SHA1_CTX* context, const void *_data, uint32_t len)
+/** static void SHA1Update(SHA1_CTX* context, const void *_data, uint32_t len)
 {
 	uint32_t i, j;
 	const unsigned char *data = (const unsigned char*)_data;
@@ -571,9 +661,25 @@ static void SHA1Update(SHA1_CTX* context, const void *_data, uint32_t len)
 	SHAPrintContext(context, "after ");
 #endif
 }
+**/
 
+static void SHA1Update(SHA1_CTX *context, const void *_data, uint32_t len)
+{
+	uint32_t i;
+    const unsigned char *data = (const unsigned char*)_data;
+
+	for (i = 0; i < len; ++i) {
+		context->data[context->datalen] = data[i];
+		context->datalen++;
+		if (context->datalen == 64) {
+			SHA1Transform(context, context->data);
+			context->bitlen += 512;
+			context->datalen = 0;
+		}
+	}
+}
 /* Add padding and return the message digest. */
-static void SHA1Final(unsigned char digest[20], SHA1_CTX* context)
+/** static void SHA1Final(unsigned char digest[20], SHA1_CTX* context)
 {
 	uint32_t i;
 	unsigned char finalcount[8];
@@ -582,24 +688,66 @@ static void SHA1Final(unsigned char digest[20], SHA1_CTX* context)
 		finalcount[i] = (unsigned char)
 			((context->count[(i >= 4 ? 0 : 1)] >>
 			  ((3-(i & 3)) * 8) ) & 255);  /* Endian independent */
-	}
+	/**}
 	SHA1Update(context, (unsigned char *) "\200", 1);
 	while ((context->count[0] & 504) != 448) {
 		SHA1Update(context, (unsigned char *) "\0", 1);
 	}
 	SHA1Update(context, finalcount, 8);  /* Should cause a SHA1Transform()
 					      */
-	for (i = 0; i < 20; i++) {
+	/**for (i = 0; i < 20; i++) {
 		digest[i] = (unsigned char)
 			((context->state[i >> 2] >> ((3 - (i & 3)) * 8)) &
 			 255);
 	}
 	/* Wipe variables */
-	i = 0;
+	/**i = 0;
 	memset(context->buffer, 0, 64);
 	memset((uint8_t*)(context->state), 0, 20);
 	memset((uint8_t*)(context->count), 0, 8);
 	memset(finalcount, 0, 8);
-}
+}*/
+//void sha1_final(SHA1_CTX *ctx, BYTE hash[])
+static void SHA1Final(unsigned char digest[20], SHA1_CTX* context)
+{
+	WORD i;
 
+	i = context->datalen;
+
+	// Pad whatever data is left in the buffer.
+	if (context->datalen < 56) {
+		context->data[i++] = 0x80;
+		while (i < 56)
+			context->data[i++] = 0x00;
+	}
+	else {
+		context->data[i++] = 0x80;
+		while (i < 64)
+			context->data[i++] = 0x00;
+		SHA1Transform(context, context->data);
+		memset(context->data, 0, 56);
+	}
+
+	// Append to the padding the total message's length in bits and transform.
+	context->bitlen += context->datalen * 8;
+	context->data[63] = context->bitlen;
+	context->data[62] = context->bitlen >> 8;
+	context->data[61] = context->bitlen >> 16;
+	context->data[60] = context->bitlen >> 24;
+	context->data[59] = context->bitlen >> 32;
+	context->data[58] = context->bitlen >> 40;
+	context->data[57] = context->bitlen >> 48;
+	context->data[56] = context->bitlen >> 56;
+	SHA1Transform(context, context->data);
+
+	// Since this implementation uses little endian byte ordering and MD uses big endian,
+	// reverse all the bytes when copying the final state to the output hash.
+	for (i = 0; i < 4; ++i) {
+		digest[i]      = (context->state[0] >> (24 - i * 8)) & 0x000000ff;
+		digest[i + 4]  = (context->state[1] >> (24 - i * 8)) & 0x000000ff;
+		digest[i + 8]  = (context->state[2] >> (24 - i * 8)) & 0x000000ff;
+		digest[i + 12] = (context->state[3] >> (24 - i * 8)) & 0x000000ff;
+		digest[i + 16] = (context->state[4] >> (24 - i * 8)) & 0x000000ff;
+	}
+}
 #endif /* WF_USE_HOST_WPA_KEY_CALCULATION */

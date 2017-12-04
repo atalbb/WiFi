@@ -1,0 +1,116 @@
+/*
+
+Vivado v2016.3 (64-bit)
+SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+Process ID: 9368
+
+Current time: 	5/16/17 5:00:29 PM EDT
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+Version: 10.0
+Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1536x864
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Tahoma,name=Tahoma,style=plain,size=11
+
+Java version: 	1.8.0_66 64-bit
+Java home: 	C:/Xilinx/Vivado/2016.3/tps/win64/jre
+
+User name: 	Atalville
+User home directory: C:/Users/Atalville
+User working directory: C:/College/Thesis/VivadoProjects/PMOD_WIFI
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI base root directory: C:/Xilinx/Vivado
+RDI data directory: C:/Xilinx/Vivado/2016.3/data
+RDI bin directory: C:/Xilinx/Vivado/2016.3/bin
+
+Vivado preferences path: C:/Users/Atalville/AppData/Roaming/Xilinx/Vivado/2016.3/vivado.ini
+Vivado layouts directory: C:/Users/Atalville/AppData/Roaming/Xilinx/Vivado/2016.3/layouts
+
+GUI allocated memory:	219 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 455 MB
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 56 MB (+55826kb) [00:00:03]
+// [Engine Memory]: 390 MB (+257604kb) [00:00:03]
+// Opening Vivado Project: C:\College\Thesis\VivadoProjects\PMOD_WIFI\PMOD_WIFI.xpr. Version: Vivado v2016.3 
+// bt:g (cd:JFrame):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// [Engine Memory]: 468 MB (+60677kb) [00:00:07]
+// TclEventType: IP_LOCK_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 491 MB. GUI used memory: 26 MB. Current time: 5/16/17 5:00:31 PM EDT
+// TclEventType: IP_LOCK_CHANGE
+// [Engine Memory]: 534 MB (+45638kb) [00:00:12]
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 585 MB (+24648kb) [00:00:14]
+// [GUI Memory]: 59 MB (+808kb) [00:00:15]
+// [GUI Memory]: 62 MB (+317kb) [00:00:17]
+// [Engine Memory]: 636 MB (+23332kb) [00:00:17]
+// Tcl Message: open_project C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/College/Thesis/vivado-library-master'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.3/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:14 . Memory (MB): peak = 941.785 ; gain = 267.348 
+// Project name: PMOD_WIFI; location: C:/College/Thesis/VivadoProjects/PMOD_WIFI; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // bt:g (cd:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [Engine Memory]: 671 MB (+2719kb) [00:00:26]
+// HMemoryUtils.trashcanNow. Engine heap size: 676 MB. GUI used memory: 46 MB. Current time: 5/16/17 5:01:11 PM EDT
+// Elapsed time: 57 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cd:JFrame)
+// Elapsed time: 16 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, "Open Recent File"); // Z:JMenu (JPopupMenu:JComponent, cd:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cd:JFrame)
+// [GUI Memory]: 66 MB (+225kb) [00:01:48]
+// [GUI Memory]: 69 MB (+89kb) [00:04:08]
+// [GUI Memory]: 74 MB (+1737kb) [00:06:08]
+// [GUI Memory]: 79 MB (+687kb) [00:07:24]
+// [GUI Memory]: 85 MB (+2022kb) [00:10:24]
+// [GUI Memory]: 90 MB (+1387kb) [00:12:14]
+// [GUI Memory]: 95 MB (+453kb) [00:18:04]
+// HMemoryUtils.trashcanNow. Engine heap size: 680 MB. GUI used memory: 56 MB. Current time: 5/16/17 5:31:12 PM EDT
+// [GUI Memory]: 100 MB (+290kb) [00:32:51]
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 680 MB. GUI used memory: 57 MB. Current time: 5/16/17 8:41:58 PM EDT
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 680 MB. GUI used memory: 43 MB. Current time: 5/16/17 10:32:27 PM EDT
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 5000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 5000 ms.
+// [GUI Memory]: 106 MB (+455kb) [05:39:28]
+// [GUI Memory]: 111 MB (+258kb) [05:49:39]
+// [GUI Memory]: 119 MB (+2033kb) [05:51:30]
+// [GUI Memory]: 125 MB (+600kb) [05:53:35]
+// [GUI Memory]: 133 MB (+1604kb) [05:55:25]
+// [GUI Memory]: 141 MB (+1394kb) [05:57:15]
+// [GUI Memory]: 150 MB (+1478kb) [05:59:10]
+// [GUI Memory]: 157 MB (+71kb) [06:01:01]
+// [GUI Memory]: 166 MB (+539kb) [06:01:26]
+// HMemoryUtils.trashcanNow. Engine heap size: 680 MB. GUI used memory: 45 MB. Current time: 5/16/17 11:02:27 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 680 MB. GUI used memory: 44 MB. Current time: 5/16/17 11:32:28 PM EDT

@@ -76,11 +76,6 @@ typedef struct {
    void *CallBackRef;
 } MB_ExceptionVectorTableEntry;
 
-/*typedef struct {
-   Xil_ExceptionHandler Handler,
-   void *CallBackRef,
-} MB_InterruptVectorTableEntry, */
-
 #ifdef __cplusplus
 }
 #endif
@@ -88,7 +83,7 @@ typedef struct {
 
 /************************** Variable Definitions *****************************/
 extern MB_ExceptionVectorTableEntry MB_ExceptionVectorTable[XIL_EXCEPTION_ID_INT];
-extern MB_InterruptVectorTableEntry MB_InterruptVectorTable;
+extern MB_InterruptVectorTableEntry MB_InterruptVectorTable[MB_INTERRUPT_VECTOR_TABLE_ENTRIES];
 
 /**
  *
@@ -198,8 +193,8 @@ void Xil_ExceptionRegisterHandler(u32 Id, Xil_ExceptionHandler Handler,
 				  void *Data)
 {
 	if (Id == XIL_EXCEPTION_ID_INT) {
-		MB_InterruptVectorTable.Handler = Handler;
-		MB_InterruptVectorTable.CallBackRef = Data;
+		MB_InterruptVectorTable[0].Handler = Handler;
+		MB_InterruptVectorTable[0].CallBackRef = Data;
 	}
 	else {
 #ifdef MICROBLAZE_EXCEPTIONS_ENABLED
@@ -230,8 +225,8 @@ void Xil_ExceptionRegisterHandler(u32 Id, Xil_ExceptionHandler Handler,
 void Xil_ExceptionRemoveHandler(u32 Id)
 {
 	if (Id == XIL_EXCEPTION_ID_INT) {
-		MB_InterruptVectorTable.Handler = Xil_ExceptionNullHandler;
-		MB_InterruptVectorTable.CallBackRef = NULL;
+		MB_InterruptVectorTable[0].Handler = Xil_ExceptionNullHandler;
+		MB_InterruptVectorTable[0].CallBackRef = NULL;
 	}
 	else {
 

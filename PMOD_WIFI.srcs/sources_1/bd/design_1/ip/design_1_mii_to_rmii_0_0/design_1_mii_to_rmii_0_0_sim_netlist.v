@@ -1,10 +1,10 @@
-// Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-// Date        : Tue May 16 14:43:07 2017
+// Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+// Date        : Wed Oct 11 11:10:31 2017
 // Host        : LAPTOP-L1N8U9P6 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.srcs/sources_1/bd/design_1/ip/design_1_mii_to_rmii_0_0/design_1_mii_to_rmii_0_0_sim_netlist.v
+//               C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.srcs/sources_1/bd/design_1/ip/design_1_mii_to_rmii_0_0/design_1_mii_to_rmii_0_0_sim_netlist.v
 // Design      : design_1_mii_to_rmii_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_mii_to_rmii_0_0,mii_to_rmii,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "mii_to_rmii,Vivado 2016.3" *) 
+(* CHECK_LICENSE_TYPE = "design_1_mii_to_rmii_0_0,mii_to_rmii,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "mii_to_rmii,Vivado 2017.2" *) 
 (* NotValidForBitStream *)
 module design_1_mii_to_rmii_0_0
    (rst_n,
@@ -1091,11 +1091,11 @@ module design_1_mii_to_rmii_0_0_rmii_tx_fixed
   input mac2Rmii_tx_en_d2;
   input [3:0]Q;
 
+  wire \/FSM_sequential_present_state[1]_i_1_n_0 ;
+  wire \/FSM_sequential_present_state[2]_i_1_n_0 ;
+  wire \/FSM_sequential_present_state[4]_i_1_n_0 ;
   wire \FSM_sequential_present_state[0]_i_1_n_0 ;
-  wire \FSM_sequential_present_state[1]_i_1_n_0 ;
-  wire \FSM_sequential_present_state[2]_i_1_n_0 ;
   wire \FSM_sequential_present_state[3]_i_1_n_0 ;
-  wire \FSM_sequential_present_state[4]_i_1_n_0 ;
   wire [3:0]Q;
   wire Rmii2Phy_tx_en;
   wire \Rmii2Phy_txd[0]_i_1_n_0 ;
@@ -1117,6 +1117,33 @@ module design_1_mii_to_rmii_0_0_rmii_tx_fixed
   wire txd_dibit;
   wire txd_error;
 
+  LUT5 #(
+    .INIT(32'h115722AA)) 
+    \/FSM_sequential_present_state[1]_i_1 
+       (.I0(present_state[1]),
+        .I1(present_state[4]),
+        .I2(present_state[2]),
+        .I3(present_state[3]),
+        .I4(present_state[0]),
+        .O(\/FSM_sequential_present_state[1]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h543850F0)) 
+    \/FSM_sequential_present_state[2]_i_1 
+       (.I0(present_state[3]),
+        .I1(present_state[0]),
+        .I2(present_state[2]),
+        .I3(present_state[4]),
+        .I4(present_state[1]),
+        .O(\/FSM_sequential_present_state[2]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h00807F00)) 
+    \/FSM_sequential_present_state[4]_i_1 
+       (.I0(present_state[1]),
+        .I1(present_state[0]),
+        .I2(present_state[2]),
+        .I3(present_state[4]),
+        .I4(present_state[3]),
+        .O(\/FSM_sequential_present_state[4]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'h00000020)) 
     \/i_ 
@@ -1161,24 +1188,6 @@ module design_1_mii_to_rmii_0_0_rmii_tx_fixed
         .I2(present_state[0]),
         .O(\FSM_sequential_present_state[0]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'h115722AA)) 
-    \FSM_sequential_present_state[1]_i_1 
-       (.I0(present_state[1]),
-        .I1(present_state[4]),
-        .I2(present_state[2]),
-        .I3(present_state[3]),
-        .I4(present_state[0]),
-        .O(\FSM_sequential_present_state[1]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h543850F0)) 
-    \FSM_sequential_present_state[2]_i_1 
-       (.I0(present_state[3]),
-        .I1(present_state[0]),
-        .I2(present_state[2]),
-        .I3(present_state[4]),
-        .I4(present_state[1]),
-        .O(\FSM_sequential_present_state[2]_i_1_n_0 ));
-  LUT5 #(
     .INIT(32'h00006AAA)) 
     \FSM_sequential_present_state[3]_i_1 
        (.I0(present_state[3]),
@@ -1187,15 +1196,6 @@ module design_1_mii_to_rmii_0_0_rmii_tx_fixed
         .I3(present_state[2]),
         .I4(present_state[4]),
         .O(\FSM_sequential_present_state[3]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h00807F00)) 
-    \FSM_sequential_present_state[4]_i_1 
-       (.I0(present_state[1]),
-        .I1(present_state[0]),
-        .I2(present_state[2]),
-        .I3(present_state[4]),
-        .I4(present_state[3]),
-        .O(\FSM_sequential_present_state[4]_i_1_n_0 ));
   (* KEEP = "yes" *) 
   FDRE \FSM_sequential_present_state_reg[0] 
        (.C(ref_clk),
@@ -1207,14 +1207,14 @@ module design_1_mii_to_rmii_0_0_rmii_tx_fixed
   FDRE \FSM_sequential_present_state_reg[1] 
        (.C(ref_clk),
         .CE(1'b1),
-        .D(\FSM_sequential_present_state[1]_i_1_n_0 ),
+        .D(\/FSM_sequential_present_state[1]_i_1_n_0 ),
         .Q(present_state[1]),
         .R(SR));
   (* KEEP = "yes" *) 
   FDRE \FSM_sequential_present_state_reg[2] 
        (.C(ref_clk),
         .CE(1'b1),
-        .D(\FSM_sequential_present_state[2]_i_1_n_0 ),
+        .D(\/FSM_sequential_present_state[2]_i_1_n_0 ),
         .Q(present_state[2]),
         .R(SR));
   (* KEEP = "yes" *) 
@@ -1228,7 +1228,7 @@ module design_1_mii_to_rmii_0_0_rmii_tx_fixed
   FDRE \FSM_sequential_present_state_reg[4] 
        (.C(ref_clk),
         .CE(1'b1),
-        .D(\FSM_sequential_present_state[4]_i_1_n_0 ),
+        .D(\/FSM_sequential_present_state[4]_i_1_n_0 ),
         .Q(present_state[4]),
         .R(SR));
   FDRE Rmii2Phy_tx_en_reg
@@ -1352,8 +1352,8 @@ module glbl ();
     reg JTAG_USER_TDO3_GLBL = 1'bz;
     reg JTAG_USER_TDO4_GLBL = 1'bz;
 
-    assign (weak1, weak0) GSR = GSR_int;
-    assign (weak1, weak0) GTS = GTS_int;
+    assign (strong1, weak0) GSR = GSR_int;
+    assign (strong1, weak0) GTS = GTS_int;
     assign (weak1, weak0) PRLD = PRLD_int;
 
     initial begin

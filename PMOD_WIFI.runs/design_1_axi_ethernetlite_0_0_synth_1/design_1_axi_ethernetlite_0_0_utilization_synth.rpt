@@ -1,7 +1,7 @@
-Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-| Date         : Tue May 16 14:42:13 2017
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Wed Oct 11 11:11:56 2017
 | Host         : LAPTOP-L1N8U9P6 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_axi_ethernetlite_0_0_utilization_synth.rpt -pb design_1_axi_ethernetlite_0_0_utilization_synth.pb
 | Design       : design_1_axi_ethernetlite_0_0
@@ -30,8 +30,8 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |  611 |     0 |     63400 |  0.96 |
-|   LUT as Logic             |  599 |     0 |     63400 |  0.94 |
+| Slice LUTs*                |  618 |     0 |     63400 |  0.97 |
+|   LUT as Logic             |  606 |     0 |     63400 |  0.96 |
 |   LUT as Memory            |   12 |     0 |     19000 |  0.06 |
 |     LUT as Distributed RAM |   12 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
@@ -152,10 +152,10 @@ Table of Contents
 | FDRE     |  451 |        Flop & Latch |
 | LUT6     |  200 |                 LUT |
 | LUT4     |  155 |                 LUT |
-| LUT2     |  139 |                 LUT |
+| LUT2     |  140 |                 LUT |
 | FDCE     |  110 |        Flop & Latch |
-| LUT5     |   99 |                 LUT |
-| LUT3     |   87 |                 LUT |
+| LUT5     |  102 |                 LUT |
+| LUT3     |   89 |                 LUT |
 | FDSE     |   51 |        Flop & Latch |
 | FDPE     |   44 |        Flop & Latch |
 | LUT1     |   42 |                 LUT |

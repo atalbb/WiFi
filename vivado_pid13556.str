@@ -1,0 +1,170 @@
+/*
+
+Vivado v2017.2 (64-bit)
+SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+
+Process ID: 13556
+License: Customer
+
+Current time: 	12/3/17 3:12:20 PM EST
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 34 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2017.2/tps/win64/jre
+JVM executable location: 	C:/Xilinx/Vivado/2017.2/tps/win64/jre/bin/java.exe
+Java library paths: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o;C:/WINDOWS/Sun/Java/bin;C:/WINDOWS/system32;C:/WINDOWS;C:/Xilinx/Vivado/2017.2/bin;C:/Xilinx/Vivado/2017.2/lib/win64.o;C:/Xilinx/Vivado/2017.2/tps/win64/jre/bin/server;C:/Xilinx/Vivado/2017.2/tps/win64/jre/bin;C:/Xilinx/SDK/2017.2/bin;C:/Xilinx/Vivado/2017.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2017.2/ids_lite/ISE/lib/nt64;C:/Xilinx/Vivado_HLS/2017.2/bin;C:/ProgramData/Oracle/Java/javapath;C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/ia32/mpirt;C:/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/ia32/compiler;C:/Program Files (x86)/Intel/iCLS Client/;C:/Program Files/Intel/iCLS Client/;C:/Windows/system32;C:/Windows;C:/Windows/System32/Wbem;C:/Windows/System32/WindowsPowerShell/v1.0/;C:/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL;C:/Program Files/Intel/Intel(R) Management Engine Components/DAL;C:/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT;C:/Program Files/Intel/Intel(R) Management Engine Components/IPT;C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common;C:/Program Files (x86)/Skype/Phone/;C:/Program Files/Java/jdk1.8.0_121/bin;C:/Program Files/Git/cmd;C:/Users/Atalville/AppData/Local/Microsoft/WindowsApps;;C:/Xilinx/Vivado/2017.2/tps/mingw/6.2.0/win64.o/nt/bin;C:/Xilinx/Vivado/2017.2/tps/mingw/6.2.0/win64.o/nt/libexec/gcc/x86_64-w64-mingw32/6.2.0;.
+
+User name: 	Atalville
+User home directory: C:/Users/Atalville
+User working directory: C:/College/Thesis/VivadoProjects/PMOD_WIFI
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2017.2
+RDI_DATADIR: C:/Xilinx/Vivado/2017.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2017.2/bin
+
+User preferences location: C:/Users/Atalville/AppData/Roaming/Xilinx/Vivado
+Vivado preferences directory: C:/Users/Atalville/AppData/Roaming/Xilinx/Vivado/2017.2/vivado.xml
+Vivado layouts directory: C:/Users/Atalville/AppData/Roaming/Xilinx/Vivado/2017.2/layouts
+PlanAhead jar location: 	C:/Xilinx/Vivado/2017.2/lib/classes/planAhead.jar
+Vivado Look & Feel: 	[Synthetica - the extended Synth Look and Feel. - ui.g.i.H]
+Engine tmp dir: 	C:/College/Thesis/VivadoProjects/PMOD_WIFI/.Xil/Vivado-13556-LAPTOP-L1N8U9P6
+
+GUI allocated memory:	169 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 475 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 41 MB (+40053kb) [00:00:10]
+// [Engine Memory]: 440 MB (+309856kb) [00:00:10]
+// Opening Vivado Project: C:\College\Thesis\VivadoProjects\PMOD_WIFI\PMOD_WIFI.xpr. Version: Vivado v2017.2 
+// bs:g (cg:JFrame):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.xpr 
+// [GUI Memory]: 53 MB (+10524kb) [00:00:12]
+// [Engine Memory]: 475 MB (+13795kb) [00:00:12]
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// HMemoryUtils.trashcanNow. Engine heap size: 519 MB. GUI used memory: 36 MB. Current time: 12/3/17 3:12:22 PM EST
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// [Engine Memory]: 528 MB (+30022kb) [00:00:17]
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 574 MB (+21536kb) [00:00:27]
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 595 MB. GUI used memory: 35 MB. Current time: 12/3/17 3:12:37 PM EST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 59 MB (+3786kb) [00:00:35]
+// [Engine Memory]: 678 MB (+78692kb) [00:00:35]
+// [GUI Memory]: 65 MB (+3378kb) [00:00:37]
+// [GUI Memory]: 70 MB (+1544kb) [00:00:39]
+// Tcl Message: open_project C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/College/Thesis/vivado-library-master'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'. 
+// [GUI Memory]: 74 MB (+469kb) [00:00:41]
+// [Engine Memory]: 715 MB (+2590kb) [00:00:41]
+// Tcl Message: open_project: Time (s): cpu = 00:00:36 ; elapsed = 00:00:31 . Memory (MB): peak = 898.188 ; gain = 237.578 
+// Project name: PMOD_WIFI; location: C:/College/Thesis/VivadoProjects/PMOD_WIFI; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // bs:g (cg:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, "Open Recent File"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // ac:JMenuItem (JPopupMenu:JComponent, cg:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// aa:p (cg:JFrame): Launch SDK: addNotify
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, aa:p)
+dismissDialog("Launch SDK"); // aa:p (cg:JFrame)
+// Tcl Message: launch_sdk -workspace C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk -hwspec C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk/design_1_wrapper.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk -hwspec C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk/design_1_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+// [GUI Memory]: 78 MB (+385kb) [00:00:50]
+// [GUI Memory]: 82 MB (+168kb) [00:01:28]
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// [GUI Memory]: 89 MB (+2802kb) [00:03:18]
+// HMemoryUtils.trashcanNow. Engine heap size: 735 MB. GUI used memory: 54 MB. Current time: 12/3/17 3:15:43 PM EST
+// [GUI Memory]: 94 MB (+1111kb) [00:07:04]
+// PAPropertyPanels.initPanels (design_1_wrapper.v) elapsed time: 0.2s
+// Elapsed time: 374 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v)]", 1, true); // B:i (D:JPanel, cg:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v)]", 1, true, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v)]", 3, true); // B:i (D:JPanel, cg:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), axi_ethernetlite_0 : design_1_axi_ethernetlite_0_0 (design_1_axi_ethernetlite_0_0.xci)]", 6, false, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "IP Sources", 1); // i:JideTabbedPane (N:aJ, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Block Designs, design_1]", 1, true); // B:i (D:JPanel, cg:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Block Designs, design_1]", 1, true, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click - Node
+// bs:g (cg:JFrame):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// Tcl Message: open_bd_design {C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.srcs/sources_1/bd/design_1/design_1.bd} 
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: Adding cell -- digilentinc.com:IP:PmodWIFI:1.0 - PmodWIFI_0 Adding cell -- xilinx.com:ip:axi_emc:3.0 - axi_emc_0 Adding cell -- xilinx.com:ip:axi_ethernetlite:3.0 - axi_ethernetlite_0 Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_led Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_sw 
+// TclEventType: LOAD_FEATURE
+// [Engine Memory]: 753 MB (+2614kb) [00:07:13]
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: Adding cell -- xilinx.com:ip:axi_timer:2.0 - axi_timer_0 Adding cell -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_0 Adding cell -- xilinx.com:ip:clk_wiz:5.4 - clk_wiz_0 Adding cell -- xilinx.com:ip:mdm:3.2 - mdm_1 Adding cell -- xilinx.com:ip:microblaze:10.0 - microblaze_0 Adding cell -- xilinx.com:ip:axi_intc:4.1 - microblaze_0_axi_intc Adding cell -- xilinx.com:ip:xlconcat:2.1 - microblaze_0_xlconcat Adding cell -- xilinx.com:ip:mii_to_rmii:2.0 - mii_to_rmii_0 Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_clk_wiz_0_100M 
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar Adding cell -- xilinx.com:ip:lmb_v10:3.0 - dlmb_v10 Adding cell -- xilinx.com:ip:lmb_v10:3.0 - ilmb_v10 Adding cell -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - dlmb_bram_if_cntlr Adding cell -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - ilmb_bram_if_cntlr Adding cell -- xilinx.com:ip:blk_mem_gen:8.3 - lmb_bram Successfully read diagram <design_1> from BD file <C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.srcs/sources_1/bd/design_1/design_1.bd> 
+// TclEventType: RSB_OPEN_DIAGRAM
+// [GUI Memory]: 100 MB (+719kb) [00:07:21]
+// [Engine Memory]: 823 MB (+34360kb) [00:07:21]
+// PAPropertyPanels.initPanels (design_1.bd) elapsed time: 0.2s
+// TclEventType: RSB_CONNECTION_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 859 MB. GUI used memory: 62 MB. Current time: 12/3/17 3:19:32 PM EST
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// Tcl Message: open_bd_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 1014.559 ; gain = 95.520 
+// Elapsed time: 13 seconds
+dismissDialog("Open Block Design"); // bs:g (cg:JFrame)
+// [Engine Memory]: 867 MB (+2507kb) [00:07:25]
+// [GUI Memory]: 106 MB (+1681kb) [00:20:49]
+// [GUI Memory]: 113 MB (+1350kb) [00:31:40]
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 63 MB. Current time: 12/3/17 3:49:33 PM EST
+// [GUI Memory]: 119 MB (+201kb) [00:48:36]
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 59 MB. Current time: 12/3/17 4:19:33 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 60 MB. Current time: 12/3/17 4:49:34 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 60 MB. Current time: 12/3/17 5:19:34 PM EST
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking too long to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking too long to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 60 MB. Current time: 12/3/17 5:49:34 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 60 MB. Current time: 12/3/17 6:19:34 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 59 MB. Current time: 12/3/17 6:49:35 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 61 MB. Current time: 12/3/17 7:19:35 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 59 MB. Current time: 12/3/17 7:49:35 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 60 MB. Current time: 12/3/17 8:19:36 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 61 MB. Current time: 12/3/17 8:49:36 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 61 MB. Current time: 12/3/17 9:19:36 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 59 MB. Current time: 12/3/17 9:49:36 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 59 MB. Current time: 12/3/17 10:19:37 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 59 MB. Current time: 12/3/17 10:49:37 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 61 MB. Current time: 12/3/17 11:19:37 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 59 MB. Current time: 12/3/17 11:49:38 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 60 MB. Current time: 12/4/17 12:19:38 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 59 MB. Current time: 12/4/17 12:49:38 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 61 MB. Current time: 12/4/17 1:19:38 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 59 MB. Current time: 12/4/17 10:45:03 AM EST
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 4000 ms.

@@ -47,11 +47,14 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:ip:axi_timer:2.0
--- IP Revision: 12
+-- IP Revision: 15
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
+
+LIBRARY axi_timer_v2_0_15;
+USE axi_timer_v2_0_15.axi_timer;
 
 ENTITY design_1_axi_timer_0_0 IS
   PORT (
@@ -129,11 +132,11 @@ ARCHITECTURE design_1_axi_timer_0_0_arch OF design_1_axi_timer_0_0 IS
     );
   END COMPONENT axi_timer;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF design_1_axi_timer_0_0_arch: ARCHITECTURE IS "axi_timer,Vivado 2016.3";
+  ATTRIBUTE X_CORE_INFO OF design_1_axi_timer_0_0_arch: ARCHITECTURE IS "axi_timer,Vivado 2017.2";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF design_1_axi_timer_0_0_arch : ARCHITECTURE IS "design_1_axi_timer_0_0,axi_timer,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF design_1_axi_timer_0_0_arch: ARCHITECTURE IS "design_1_axi_timer_0_0,axi_timer,{x_ipProduct=Vivado 2016.3,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_timer,x_ipVersion=2.0,x_ipCoreRevision=12,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_COUNT_WIDTH=32,C_ONE_TIMER_ONLY=0,C_TRIG0_ASSERT=1,C_TRIG1_ASSERT=1,C_GEN0_ASSERT=1,C_GEN1_ASSERT=1,C_S_AXI_DATA_WIDTH=32,C_S_AXI_ADDR_WIDTH=5}";
+  ATTRIBUTE CORE_GENERATION_INFO OF design_1_axi_timer_0_0_arch: ARCHITECTURE IS "design_1_axi_timer_0_0,axi_timer,{x_ipProduct=Vivado 2017.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_timer,x_ipVersion=2.0,x_ipCoreRevision=15,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_COUNT_WIDTH=32,C_ONE_TIMER_ONLY=0,C_TRIG0_ASSERT=1,C_TRIG1_ASSERT=1,C_GEN0_ASSERT=1,C_GEN1_ASSERT=1,C_S_AXI_DATA_WIDTH=32,C_S_AXI_ADDR_WIDTH=5}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_INFO OF interrupt: SIGNAL IS "xilinx.com:signal:interrupt:1.0 INTERRUPT INTERRUPT";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_aclk: SIGNAL IS "xilinx.com:signal:clock:1.0 S_AXI_ACLK CLK";

@@ -6,6 +6,7 @@ BEGIN OS
  PARAMETER OS_NAME = standalone
  PARAMETER OS_VER = 6.0
  PARAMETER PROC_INSTANCE = microblaze_0
+ PARAMETER profile_timer = axi_timer_0
  PARAMETER stdin = axi_uartlite_0
  PARAMETER stdout = axi_uartlite_0
 END
@@ -64,6 +65,18 @@ BEGIN DRIVER
  PARAMETER DRIVER_NAME = bram
  PARAMETER DRIVER_VER = 4.1
  PARAMETER HW_INSTANCE = microblaze_0_local_memory_ilmb_bram_if_cntlr
+END
+
+BEGIN DRIVER
+ PARAMETER DRIVER_NAME = emaclite
+ PARAMETER DRIVER_VER = 4.3
+ PARAMETER HW_INSTANCE = axi_ethernetlite_0
+END
+
+BEGIN DRIVER
+ PARAMETER DRIVER_NAME = tmrctr
+ PARAMETER DRIVER_VER = 4.1
+ PARAMETER HW_INSTANCE = axi_timer_0
 END
 
 
