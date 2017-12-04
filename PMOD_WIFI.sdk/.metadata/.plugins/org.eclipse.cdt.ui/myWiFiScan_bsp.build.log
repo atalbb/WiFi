@@ -1,4 +1,4 @@
-11:12:36 **** Auto Build of project myWiFiScan_bsp ****
+12:45:04 **** Auto Build of project myWiFiScan_bsp ****
 make -k all 
 "Running Make include in microblaze_0/libsrc/bram_v4_1/src"
 make -C microblaze_0/libsrc/bram_v4_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
@@ -539,5 +539,5 @@ make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-
 "Compiling uartlite"
 'Finished building libraries'
 
-11:12:59 Build Finished (took 23s.198ms)
+12:45:28 Build Finished (took 23s.553ms)
 
