@@ -172,3 +172,15 @@ dismissDialog("Open Block Design"); // bs:g (cg:JFrame)
 // HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 53 MB. Current time: 12/4/17 11:45:04 AM EST
 // HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 52 MB. Current time: 12/4/17 12:15:04 PM EST
 // HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 52 MB. Current time: 12/4/17 12:45:05 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 53 MB. Current time: 12/4/17 1:15:06 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 53 MB. Current time: 12/4/17 1:45:06 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 53 MB. Current time: 12/4/17 2:15:07 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 52 MB. Current time: 12/4/17 3:04:13 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 52 MB. Current time: 12/4/17 5:40:31 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 51 MB. Current time: 12/4/17 6:10:32 PM EST
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 4000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 52 MB. Current time: 12/4/17 6:40:35 PM EST
+// WARNING: HTimer (WrapperUtils Delayed Delete Timer) is taking too long to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 53 MB. Current time: 12/4/17 9:57:59 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 52 MB. Current time: 12/5/17 9:44:10 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 52 MB. Current time: 12/5/17 10:14:05 AM EST

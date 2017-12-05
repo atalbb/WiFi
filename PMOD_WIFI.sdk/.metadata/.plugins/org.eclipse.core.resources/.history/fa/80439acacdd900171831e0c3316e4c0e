@@ -38,10 +38,10 @@ typedef struct {
 	unsigned long long bitlen;
 	uint32_t state[5];
 } SHA1_CTX;
-
 static void SHA1Init(SHA1_CTX *context);
 static void SHA1Update(SHA1_CTX *context, const void *data, uint32_t len);
 static void SHA1Final(unsigned char digest[20], SHA1_CTX* context);
+//static void SHA1Transform(uint32_t state[5], const unsigned char buffer[64]);
 void SHA1Transform(SHA1_CTX *ctx, const uint8_t data[]);
 
 #define SHA1_MAC_LEN 20
@@ -204,7 +204,6 @@ void hmac_sha1(const uint8_t *key, size_t key_len, const uint8_t *data, size_t d
 {
 	//hmac_sha1_vector(key, key_len, 1, &data, &data_len, mac);
 	my_hmac_sha1(data,data_len,key,key_len,mac);
-	//asm();
 }
 
 

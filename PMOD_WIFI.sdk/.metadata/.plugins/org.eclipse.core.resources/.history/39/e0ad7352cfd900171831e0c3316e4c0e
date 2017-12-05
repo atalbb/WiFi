@@ -204,7 +204,7 @@ void hmac_sha1(const uint8_t *key, size_t key_len, const uint8_t *data, size_t d
 {
 	//hmac_sha1_vector(key, key_len, 1, &data, &data_len, mac);
 	my_hmac_sha1(data,data_len,key,key_len,mac);
-	//asm();
+	asm();
 }
 
 
