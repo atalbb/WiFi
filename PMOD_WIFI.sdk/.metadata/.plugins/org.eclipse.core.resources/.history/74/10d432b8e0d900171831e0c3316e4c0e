@@ -48,6 +48,80 @@ void SHA1Transform(SHA1_CTX *ctx, const uint8_t data[]);
 
 #define LITTLEENDIAN 1
 
+void sha1_vector(size_t num_elem, const uint8_t *addr[], const size_t *len, uint8_t *mac);
+
+/**
+ * hmac_sha1_vector - HMAC-SHA1 over data vector (RFC 2104)
+ * @key: Key for HMAC operations
+ * @key_len: Length of the key in bytes
+ * @num_elem: Number of elements in the data vector
+ * @addr: Pointers to the data areas
+ * @len: Lengths of the data blocks
+ * @mac: Buffer for the hash (20 bytes)
+ */
+void hmac_sha1_vector(const uint8_t *key, size_t key_len, size_t num_elem,
+		      const uint8_t *addr[], const size_t *len, uint8_t *mac)
+{
+	unsigned char k_pad[64]; /* padding - key XORd with ipad/opad */
+	unsigned char tk[20];
+	unsigned int i;
+	const uint8_t *_addr[6];
+	size_t _len[6];
+
+	if (num_elem > 5) {
+		/*
+		 * Fixed limit on the number of fragments to avoid having to
+		 * allocate memory (which could fail).
+		 */
+		return;
+	}
+
+        /* if key is longer than 64 bytes reset it to key = SHA1(key) */
+        if (key_len > 64) {
+		sha1_vector(1, &key, &key_len, tk);
+		key = tk;
+		key_len = 20;
+        }
+
+	/* the HMAC_SHA1 transform looks like:
+	 *
+	 * SHA1(K XOR opad, SHA1(K XOR ipad, text))
+	 *
+	 * where K is an n byte key
+	 * ipad is the byte 0x36 repeated 64 times
+	 * opad is the byte 0x5c repeated 64 times
+	 * and text is the data being protected */
+
+	/* start out by storing key in ipad */
+	memset(k_pad, 0, sizeof(k_pad));
+	memcpy((uint8_t*)k_pad, (uint8_t*)key, key_len);
+	/* XOR key with ipad values */
+	for (i = 0; i < 64; i++)
+		k_pad[i] ^= 0x36;
+
+	/* perform inner SHA1 */
+	_addr[0] = k_pad;
+	_len[0] = 64;
+	for (i = 0; i < num_elem; i++) {
+		_addr[i + 1] = addr[i];
+		_len[i + 1] = len[i];
+	}
+	sha1_vector(1 + num_elem, _addr, _len, mac);
+
+	memset(k_pad, 0, sizeof(k_pad));
+	memcpy((uint8_t*)k_pad, (uint8_t*)key, key_len);
+	/* XOR key with opad values */
+	for (i = 0; i < 64; i++)
+		k_pad[i] ^= 0x5c;
+
+	/* perform outer SHA1 */
+	_addr[0] = k_pad;
+	_len[0] = 64;
+	_addr[1] = mac;
+	_len[1] = SHA1_MAC_LEN;
+	sha1_vector(2, _addr, _len, mac);
+}
+
 void
 my_hmac_sha1(const unsigned char *text, int text_len,
 	       const unsigned char *key, int key_len,
@@ -133,6 +207,119 @@ void hmac_sha1(const uint8_t *key, size_t key_len, const uint8_t *data, size_t d
 	//asm();
 }
 
+
+
+
+static void pbkdf2_sha1_f(const char *passphrase, const char *ssid,
+			  size_t ssid_len, int iterations, int count,
+			  uint8_t *digest)
+{
+	unsigned char tmp[SHA1_MAC_LEN], tmp2[SHA1_MAC_LEN];
+	int i, j;
+	unsigned char count_buf[4];
+	const uint8_t *addr[2];
+	size_t len[2];
+	size_t passphrase_len = strlen(passphrase);
+
+	addr[0] = (uint8_t *) ssid;
+	len[0] = ssid_len;
+	addr[1] = count_buf;
+	len[1] = 4;
+
+	/* F(P, S, c, i) = U1 xor U2 xor ... Uc
+	 * U1 = PRF(P, S || i)
+	 * U2 = PRF(P, U1)
+	 * Uc = PRF(P, Uc-1)
+	 */
+
+	count_buf[0] = (count >> 24) & 0xff;
+	count_buf[1] = (count >> 16) & 0xff;
+	count_buf[2] = (count >> 8) & 0xff;
+	count_buf[3] = count & 0xff;
+	hmac_sha1_vector((uint8_t *) passphrase, passphrase_len, 2, addr, len, tmp);
+	memcpy(digest, tmp, SHA1_MAC_LEN);
+
+	for (i = 1; i < iterations; i++) {
+		uint8_t* pTemp;
+
+
+		hmac_sha1((uint8_t *) passphrase, passphrase_len, ((i&0x01)? tmp:tmp2), SHA1_MAC_LEN,
+			  ((i&0x01)? tmp2:tmp));
+		//memcpy(tmp, tmp2, SHA1_MAC_LEN);
+
+		pTemp = (i&0x01)? tmp2 : tmp;
+
+		for (j = 0; j < SHA1_MAC_LEN; j++)
+			digest[j] ^= pTemp[j];
+	}
+}
+
+
+/**
+ * pbkdf2_sha1 - SHA1-based key derivation function (PBKDF2) for IEEE 802.11i
+ * @passphrase: ASCII passphrase
+ * @ssid: SSID
+ * @ssid_len: SSID length in bytes
+ * @interations: Number of iterations to run
+ * @buf: Buffer for the generated key
+ * @buflen: Length of the buffer in bytes
+ *
+ * This function is used to derive PSK for WPA-PSK. For this protocol,
+ * iterations is set to 4096 and buflen to 32. This function is described in
+ * IEEE Std 802.11-2004, Clause H.4. The main construction is from PKCS#5 v2.0.
+ */
+
+void pbkdf2_sha1(const char *passphrase, const char *ssid, uint16_t ssid_len,
+		 uint16_t iterations, uint8_t *buf, uint16_t buflen)
+{
+	int count = 0;
+	unsigned char *pos = buf;
+	size_t left = buflen, plen;
+	unsigned char digest[SHA1_MAC_LEN];
+	uint8_t i =0;
+
+	while (left > 0) {
+        i++;
+		count++;
+		// DK = T1||T2||......T(dklen/hlen)
+		// dklen = 256 bits(32 bytes) , hlen = 160 bits(20 bytes)
+		// so, DK = T1||T2...here || means concatenate
+		pbkdf2_sha1_f(passphrase, ssid, ssid_len, iterations, count,
+			      digest);
+		plen = left > SHA1_MAC_LEN ? SHA1_MAC_LEN : left;
+		memcpy(pos, digest, plen);
+		//printf("%d bytes of key for i= %d for T",plen,i);
+		//printf("T%d:",i);
+		//dump(pos,plen);
+		pos += plen;
+		left -= plen;
+	}
+	//printf("Number of i's for T in PBKDF2 = %d\r\n",i);
+}
+
+
+
+
+
+/**
+ * sha1_vector - SHA-1 hash for data vector
+ * @num_elem: Number of elements in the data vector
+ * @addr: Pointers to the data areas
+ * @len: Lengths of the data blocks
+ * @mac: Buffer for the hash
+ */
+void sha1_vector(size_t num_elem, const uint8_t *addr[], const size_t *len,
+		 uint8_t *mac)
+{
+	SHA1_CTX ctx;
+	unsigned int i;
+
+	SHA1Init(&ctx);
+	for (i = 0; i < num_elem; i++)
+		SHA1Update(&ctx, addr[i], len[i]);
+	SHA1Final(mac, &ctx);
+}
+
 #if DEAD
 /**
  * sha1_transform - Perform one SHA-1 transform step
@@ -195,14 +382,6 @@ void SHA1Transform(SHA1_CTX *ctx, const uint8_t data[])
 	d = ctx->state[3];
 	e = ctx->state[4];
 
-
-	/*	For t = 0 to 79 do: // 3rd for loop
-	 *      TEMP = A<<<5 + f (t: B, C, D) + E + W(t) + K(t)
-     * 	     E = D, D = C, C = B<<<30, B = A, A = TEMP */
-
-	/* 1st 20 rounds of SHA-1
-	 * K = 0x5a827999
-	 * F(B,C,D) = (B & C) | ((! B) & D)  */
 	for (i = 0; i < 20; ++i) {
 		t = ROTLEFT(a, 5) + ((b & c) ^ (~b & d)) + e + 0x5a827999 + m[i];
 		e = d;
@@ -211,9 +390,6 @@ void SHA1Transform(SHA1_CTX *ctx, const uint8_t data[])
 		b = a;
 		a = t;
 	}
-	/* 2nd 20 rounds of SHA-1
-	 * K = 0x6ed9eba1
-	 * F(B,C,D) = B ^ C ^ D  */
 	for ( ; i < 40; ++i) {
 		t = ROTLEFT(a, 5) + (b ^ c ^ d) + e + 0x6ed9eba1 + m[i];
 		e = d;
@@ -222,9 +398,6 @@ void SHA1Transform(SHA1_CTX *ctx, const uint8_t data[])
 		b = a;
 		a = t;
 	}
-	/* 3rd 20 rounds of SHA-1
-	 * K = 0x8f1bbcdc
-	 * F(B,C,D) = (B & C) | (B & D) | (C & D)  */
 	for ( ; i < 60; ++i) {
 		t = ROTLEFT(a, 5) + ((b & c) ^ (b & d) ^ (c & d))  + e + 0x8f1bbcdc + m[i];
 		e = d;
@@ -233,9 +406,6 @@ void SHA1Transform(SHA1_CTX *ctx, const uint8_t data[])
 		b = a;
 		a = t;
 	}
-	/* 4th 20 rounds of SHA-1
-	 * K = 0xca62c1d6
-	 * F(B,C,D) = B ^ C ^ D   */
 	for ( ; i < 80; ++i) {
 		t = ROTLEFT(a, 5) + (b ^ c ^ d) + e + 0xca62c1d6 + m[i];
 		e = d;
@@ -244,8 +414,7 @@ void SHA1Transform(SHA1_CTX *ctx, const uint8_t data[])
 		b = a;
 		a = t;
 	}
-    /* Update the new Hash for the context
-	/* H0 = H0 + A, H1 = H1 + B, H2 = H2 + C, H3 = H3 + D, H4 = H4 + E */
+
 	ctx->state[0] += a;
 	ctx->state[1] += b;
 	ctx->state[2] += c;
@@ -254,16 +423,11 @@ void SHA1Transform(SHA1_CTX *ctx, const uint8_t data[])
 }
 
 /* SHA1Init - Initialize new context */
+
 static void SHA1Init(SHA1_CTX *context)
 {
 	context->datalen = 0;
 	context->bitlen = 0;
-	/* Initialize initial Hash
-	 * H0 = 0x67452301 ................................. (19)
-	 * H1 = 0xEFCDAB89 ................................. (20)
-	 * H2 = 0x98BADCFE ................................. (21)
-	 * H3 = 0x10325476 ................................. (22)
-	 * H4 = 0xC3D2E1F0 ................................. (23) */
 	context->state[0] = 0x67452301;
 	context->state[1] = 0xEFCDAB89;
 	context->state[2] = 0x98BADCFE;
@@ -295,30 +459,21 @@ static void SHA1Final(unsigned char digest[20], SHA1_CTX* context)
 
 	i = context->datalen;
 
-	/* if input data length is less than 56 bytes i.e 448 bits
-	 * 1st bit after the message is padded with 1
-	 * remaining bits up to 448 bits is padded with 0 */
+	// Pad whatever data is left in the buffer.
 	if (context->datalen < 56) {
 		context->data[i++] = 0x80;
 		while (i < 56)
 			context->data[i++] = 0x00;
 	}
-	/* if input data length is greater than 56 bytes i.e 448 bits
-	 * SHA-1 Transform is performed in two steps
-	 * For 1st Transform:
-	 * 1st bit after the message is padded with 1
-	 * remaining bits up to 512 bits (64 bytes) is padded with 0 and SHA-1 transform is performed */
 	else {
 		context->data[i++] = 0x80;
 		while (i < 64)
 			context->data[i++] = 0x00;
 		SHA1Transform(context, context->data);
-		/* For the second Transform all bits up to 448 bits (56 bytes) are reset to  0
-		 * Message length will be later added */
 		memset(context->data, 0, 56);
 	}
 
-	/* Append total message's length in bits in the last 64 bits of 512-bit block and perform SHA-1 transform. */
+	// Append to the padding the total message's length in bits and transform.
 	context->bitlen += context->datalen * 8;
 	context->data[63] = context->bitlen;
 	context->data[62] = context->bitlen >> 8;
@@ -328,10 +483,10 @@ static void SHA1Final(unsigned char digest[20], SHA1_CTX* context)
 	context->data[58] = context->bitlen >> 40;
 	context->data[57] = context->bitlen >> 48;
 	context->data[56] = context->bitlen >> 56;
-	/*  Perform SHA-1 Transfrom */
 	SHA1Transform(context, context->data);
 
-	/* For little endianess */
+	// Since this implementation uses little endian byte ordering and MD uses big endian,
+	// reverse all the bytes when copying the final state to the output hash.
 	for (i = 0; i < 4; ++i) {
 		digest[i]      = (context->state[0] >> (24 - i * 8)) & 0x000000ff;
 		digest[i + 4]  = (context->state[1] >> (24 - i * 8)) & 0x000000ff;

@@ -3230,3 +3230,134 @@ con
 11:39:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
 11:39:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274592278A" && level==0} -index 0' command is executed.
 11:39:24 INFO  : FPGA configured successfully with bitstream "C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk/design_1_wrapper_hw_platform_0/download.bit"
+11:40:00 INFO  : Disconnected from the channel tcfchan#29.
+11:40:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274592278A" && level==0} -index 0' command is executed.
+11:40:01 INFO  : 'fpga -state' command is executed.
+11:40:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:40:01 INFO  : Jtag cable 'Digilent Nexys4 210274592278A' is selected.
+11:40:01 INFO  : 'jtag frequency' command is executed.
+11:40:01 INFO  : Context for processor 'microblaze_0' is selected.
+11:40:01 INFO  : Processor reset is completed for 'microblaze_0'.
+11:40:01 INFO  : Context for processor 'microblaze_0' is selected.
+11:40:06 INFO  : The application 'C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk/myWiFiScan/Debug/myWiFiScan.elf' is downloaded to processor 'microblaze_0'.
+11:40:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274592278A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274592278A"} -index 0
+dow C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk/myWiFiScan/Debug/myWiFiScan.elf
+----------------End of Script----------------
+
+11:40:06 INFO  : Memory regions updated for context MicroBlaze #0
+11:40:06 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+11:40:07 INFO  : Context for processor 'microblaze_0' is selected.
+11:40:07 INFO  : 'con' command is executed.
+11:40:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274592278A"} -index 0
+con
+----------------End of Script----------------
+
+11:40:07 INFO  : Launch script is exported to file 'C:\College\Thesis\VivadoProjects\PMOD_WIFI\PMOD_WIFI.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_mywifiscan.elf_on_local.tcl'
+11:40:08 WARN  : Processor 'microblaze_0' is not supported for performance analysis as extended debug is not enabled.
+12:27:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:27:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274592278A" && level==0} -index 0' command is executed.
+12:27:48 INFO  : FPGA configured successfully with bitstream "C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk/design_1_wrapper_hw_platform_0/download.bit"
+12:28:05 INFO  : Disconnected from the channel tcfchan#30.
+12:28:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274592278A" && level==0} -index 0' command is executed.
+12:28:06 INFO  : 'fpga -state' command is executed.
+12:28:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:28:06 INFO  : Jtag cable 'Digilent Nexys4 210274592278A' is selected.
+12:28:06 INFO  : 'jtag frequency' command is executed.
+12:28:06 INFO  : Context for processor 'microblaze_0' is selected.
+12:28:06 INFO  : Processor reset is completed for 'microblaze_0'.
+12:28:06 INFO  : Context for processor 'microblaze_0' is selected.
+12:28:11 INFO  : The application 'C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk/myWiFiScan/Debug/myWiFiScan.elf' is downloaded to processor 'microblaze_0'.
+12:28:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274592278A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274592278A"} -index 0
+dow C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk/myWiFiScan/Debug/myWiFiScan.elf
+----------------End of Script----------------
+
+12:28:11 INFO  : Memory regions updated for context MicroBlaze #0
+12:28:11 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+12:28:12 INFO  : Context for processor 'microblaze_0' is selected.
+12:28:12 INFO  : 'con' command is executed.
+12:28:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274592278A"} -index 0
+con
+----------------End of Script----------------
+
+12:28:12 INFO  : Launch script is exported to file 'C:\College\Thesis\VivadoProjects\PMOD_WIFI\PMOD_WIFI.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_mywifiscan.elf_on_local.tcl'
+12:28:13 WARN  : Processor 'microblaze_0' is not supported for performance analysis as extended debug is not enabled.
+12:34:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:34:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274592278A" && level==0} -index 0' command is executed.
+12:34:28 INFO  : FPGA configured successfully with bitstream "C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk/design_1_wrapper_hw_platform_0/download.bit"
+12:34:39 INFO  : Disconnected from the channel tcfchan#31.
+12:34:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274592278A" && level==0} -index 0' command is executed.
+12:34:41 INFO  : 'fpga -state' command is executed.
+12:34:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:34:41 INFO  : Jtag cable 'Digilent Nexys4 210274592278A' is selected.
+12:34:41 INFO  : 'jtag frequency' command is executed.
+12:34:41 INFO  : Context for processor 'microblaze_0' is selected.
+12:34:41 INFO  : Processor reset is completed for 'microblaze_0'.
+12:34:41 INFO  : Context for processor 'microblaze_0' is selected.
+12:34:46 INFO  : The application 'C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk/myWiFiScan/Debug/myWiFiScan.elf' is downloaded to processor 'microblaze_0'.
+12:34:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274592278A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274592278A"} -index 0
+dow C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk/myWiFiScan/Debug/myWiFiScan.elf
+----------------End of Script----------------
+
+12:34:46 INFO  : Memory regions updated for context MicroBlaze #0
+12:34:46 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+12:34:46 INFO  : Context for processor 'microblaze_0' is selected.
+12:34:46 INFO  : 'con' command is executed.
+12:34:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274592278A"} -index 0
+con
+----------------End of Script----------------
+
+12:34:46 INFO  : Launch script is exported to file 'C:\College\Thesis\VivadoProjects\PMOD_WIFI\PMOD_WIFI.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_mywifiscan.elf_on_local.tcl'
+12:34:48 WARN  : Processor 'microblaze_0' is not supported for performance analysis as extended debug is not enabled.
+13:01:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:01:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274592278A" && level==0} -index 0' command is executed.
+13:01:13 INFO  : FPGA configured successfully with bitstream "C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk/design_1_wrapper_hw_platform_0/download.bit"
+13:03:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:03:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274592278A" && level==0} -index 0' command is executed.
+13:03:04 INFO  : FPGA configured successfully with bitstream "C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk/design_1_wrapper_hw_platform_0/download.bit"
+13:04:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:04:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274592278A" && level==0} -index 0' command is executed.
+13:04:06 INFO  : FPGA configured successfully with bitstream "C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk/design_1_wrapper_hw_platform_0/download.bit"
+13:04:16 INFO  : Disconnected from the channel tcfchan#32.
+13:04:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274592278A" && level==0} -index 0' command is executed.
+13:04:18 INFO  : 'fpga -state' command is executed.
+13:04:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:04:18 INFO  : Jtag cable 'Digilent Nexys4 210274592278A' is selected.
+13:04:18 INFO  : 'jtag frequency' command is executed.
+13:04:18 INFO  : Context for processor 'microblaze_0' is selected.
+13:04:18 INFO  : Processor reset is completed for 'microblaze_0'.
+13:04:18 INFO  : Context for processor 'microblaze_0' is selected.
+13:04:23 INFO  : The application 'C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk/myWiFiScan/Debug/myWiFiScan.elf' is downloaded to processor 'microblaze_0'.
+13:04:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274592278A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274592278A"} -index 0
+dow C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.sdk/myWiFiScan/Debug/myWiFiScan.elf
+----------------End of Script----------------
+
+13:04:23 INFO  : Memory regions updated for context MicroBlaze #0
+13:04:23 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+13:04:24 INFO  : Context for processor 'microblaze_0' is selected.
+13:04:24 INFO  : 'con' command is executed.
+13:04:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274592278A"} -index 0
+con
+----------------End of Script----------------
+
+13:04:24 INFO  : Launch script is exported to file 'C:\College\Thesis\VivadoProjects\PMOD_WIFI\PMOD_WIFI.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_mywifiscan.elf_on_local.tcl'
+13:04:25 WARN  : Processor 'microblaze_0' is not supported for performance analysis as extended debug is not enabled.

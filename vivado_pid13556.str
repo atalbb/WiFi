@@ -186,3 +186,6 @@ dismissDialog("Open Block Design"); // bs:g (cg:JFrame)
 // HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 52 MB. Current time: 12/5/17 10:14:05 AM EST
 // HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 51 MB. Current time: 12/5/17 10:44:05 AM EST
 // HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 51 MB. Current time: 12/5/17 11:14:05 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 52 MB. Current time: 12/5/17 11:44:05 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 52 MB. Current time: 12/5/17 12:14:06 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 51 MB. Current time: 12/5/17 12:44:06 PM EST

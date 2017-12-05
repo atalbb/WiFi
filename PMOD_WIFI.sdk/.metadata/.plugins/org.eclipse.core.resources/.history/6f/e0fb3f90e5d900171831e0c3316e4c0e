@@ -295,30 +295,21 @@ static void SHA1Final(unsigned char digest[20], SHA1_CTX* context)
 
 	i = context->datalen;
 
-	/* if input data length is less than 56 bytes i.e 448 bits
-	 * 1st bit after the message is padded with 1
-	 * remaining bits up to 448 bits is padded with 0 */
+	// Pad whatever data is left in the buffer.
 	if (context->datalen < 56) {
 		context->data[i++] = 0x80;
 		while (i < 56)
 			context->data[i++] = 0x00;
 	}
-	/* if input data length is greater than 56 bytes i.e 448 bits
-	 * SHA-1 Transform is performed in two steps
-	 * For 1st Transform:
-	 * 1st bit after the message is padded with 1
-	 * remaining bits up to 512 bits (64 bytes) is padded with 0 and SHA-1 transform is performed */
 	else {
 		context->data[i++] = 0x80;
 		while (i < 64)
 			context->data[i++] = 0x00;
 		SHA1Transform(context, context->data);
-		/* For the second Transform all bits up to 448 bits (56 bytes) are reset to  0
-		 * Message length will be later added */
 		memset(context->data, 0, 56);
 	}
 
-	/* Append total message's length in bits in the last 64 bits of 512-bit block and perform SHA-1 transform. */
+	// Append to the padding the total message's length in bits and transform.
 	context->bitlen += context->datalen * 8;
 	context->data[63] = context->bitlen;
 	context->data[62] = context->bitlen >> 8;
@@ -328,10 +319,10 @@ static void SHA1Final(unsigned char digest[20], SHA1_CTX* context)
 	context->data[58] = context->bitlen >> 40;
 	context->data[57] = context->bitlen >> 48;
 	context->data[56] = context->bitlen >> 56;
-	/*  Perform SHA-1 Transfrom */
 	SHA1Transform(context, context->data);
 
-	/* For little endianess */
+	// Since this implementation uses little endian byte ordering and MD uses big endian,
+	// reverse all the bytes when copying the final state to the output hash.
 	for (i = 0; i < 4; ++i) {
 		digest[i]      = (context->state[0] >> (24 - i * 8)) & 0x000000ff;
 		digest[i + 4]  = (context->state[1] >> (24 - i * 8)) & 0x000000ff;

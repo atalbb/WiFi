@@ -328,10 +328,10 @@ static void SHA1Final(unsigned char digest[20], SHA1_CTX* context)
 	context->data[58] = context->bitlen >> 40;
 	context->data[57] = context->bitlen >> 48;
 	context->data[56] = context->bitlen >> 56;
-	/*  Perform SHA-1 Transfrom */
 	SHA1Transform(context, context->data);
 
-	/* For little endianess */
+	// Since this implementation uses little endian byte ordering and MD uses big endian,
+	// reverse all the bytes when copying the final state to the output hash.
 	for (i = 0; i < 4; ++i) {
 		digest[i]      = (context->state[0] >> (24 - i * 8)) & 0x000000ff;
 		digest[i + 4]  = (context->state[1] >> (24 - i * 8)) & 0x000000ff;

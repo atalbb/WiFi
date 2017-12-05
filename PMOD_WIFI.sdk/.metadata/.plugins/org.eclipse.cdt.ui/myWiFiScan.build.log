@@ -1,6 +1,6 @@
-11:39:58 **** Incremental Build of configuration Debug for project myWiFiScan ****
+13:04:14 **** Incremental Build of configuration Debug for project myWiFiScan ****
 make all 
 make: Nothing to be done for `all'.
 
-11:39:58 Build Finished (took 232ms)
+13:04:14 Build Finished (took 208ms)
 
