@@ -1,4 +1,4 @@
-10:18:28 **** Auto Build of project myWiFiScan_bsp ****
+11:37:42 **** Auto Build of project myWiFiScan_bsp ****
 make -k all 
 "Running Make include in microblaze_0/libsrc/bram_v4_1/src"
 make -C microblaze_0/libsrc/bram_v4_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
@@ -416,6 +416,15 @@ In file included from MRF24G/utility/fpga/../../../DEIPcK/utility/fpga/System.h:
 ../../../include/xil_io.h:94:0: note: this is the location of the previous definition
  #define INLINE inline
  
+MRF24G/utility/wf_pbkdf2.c: In function 'pkcs5_pbkdf2':
+MRF24G/utility/wf_pbkdf2.c:510:10: warning: passing argument 1 of 'memcpy' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   memcpy(&salt[salt_len],temp,4);
+          ^
+In file included from c:\xilinx\sdk\2017.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\string.h:10:0,
+                 from MRF24G/utility/wf_pbkdf2.c:26:
+c:\xilinx\sdk\2017.2\gnu\microblaze\nt\microblaze-xilinx-elf\include\string.h:23:8: note: expected 'void * restrict' but argument is of type 'const uint8_t * {aka const unsigned char *}'
+ _PTR   _EXFUN(memcpy,(_PTR __restrict, const _PTR __restrict, size_t));
+        ^
 In file included from MRF24G/utility/fpga/../../../DEIPcK/utility/fpga/../../../MRF24G/utility/ud_inc/internal/wf_global_includes.h:44:0,
                  from MRF24G/utility/fpga/../../../DEIPcK/utility/fpga/System.h:64,
                  from MRF24G/utility/fpga/../../../DEIPcK/utility/System.h:54,
@@ -539,5 +548,5 @@ make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-
 "Compiling uartlite"
 'Finished building libraries'
 
-10:18:52 Build Finished (took 24s.314ms)
+11:38:06 Build Finished (took 24s.76ms)
 

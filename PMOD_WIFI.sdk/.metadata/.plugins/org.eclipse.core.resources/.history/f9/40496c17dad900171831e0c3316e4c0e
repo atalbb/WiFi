@@ -526,7 +526,7 @@ void WF_WpaConvPassphraseToKey(t_wpaKeyInfo *p_keyInfo)
 
     // overwrite the passphrase with binary key
     memcpy(p_keyInfo->key, binaryKey, WF_WPA_KEY_LENGTH);
-    //dump(p_keyInfo->key,32);
+    dump(p_keyInfo->key,32);
 
     // overwrite the length with the length of the binary key (always 32)
     p_keyInfo->keyLength = WF_WPA_KEY_LENGTH;

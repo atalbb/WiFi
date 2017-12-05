@@ -25,6 +25,7 @@
 
 #include <string.h>
 #include <stdint.h>
+#include <stdlib.h>
 
 #include "./ud_inc/shared/wf_universal_driver.h"
 
@@ -487,7 +488,7 @@ int
 pkcs5_pbkdf2(const char *pass, const uint8_t *salt,
     size_t salt_len, unsigned int rounds, uint8_t *key, size_t key_len )
 {
-	uint8_t temp[4],obuf[SHA1_MAC_LEN];
+	uint8_t *asalt, obuf[SHA1_MAC_LEN];
 	uint8_t d1[SHA1_MAC_LEN], d2[SHA1_MAC_LEN];
 	unsigned int i, j;
 	unsigned int count;
@@ -497,18 +498,17 @@ pkcs5_pbkdf2(const char *pass, const uint8_t *salt,
 		return -1;
 	if (salt_len == 0 || salt_len > SIZE_MAX - 4)
 		return -1;
-	//if ((asalt = malloc(salt_len + 4)) == NULL)
-	//	return -1;
+	if ((asalt = malloc(salt_len + 4)) == NULL)
+		return -1;
 
-	//memcpy(asalt, salt, salt_len);
+	memcpy(asalt, salt, salt_len);
 
 	for (count = 1; key_len > 0; count++) {
-		temp[0] = (count >> 24) & 0xff;
-		temp[1] = (count >> 16) & 0xff;
-		temp[2] = (count >> 8) & 0xff;
-		temp[3] = count & 0xff;
-		memcpy(&salt[salt_len],temp,4);
-		hmac_sha1( pass, pass_len, salt, salt_len + 4,d1);
+		asalt[salt_len + 0] = (count >> 24) & 0xff;
+		asalt[salt_len + 1] = (count >> 16) & 0xff;
+		asalt[salt_len + 2] = (count >> 8) & 0xff;
+		asalt[salt_len + 3] = count & 0xff;
+		hmac_sha1( pass, pass_len, asalt, salt_len + 4,d1);
 		memcpy(obuf, d1, sizeof(obuf));
         //dump(obuf,16);
 		for (i = 1; i < rounds; i++) {

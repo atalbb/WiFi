@@ -92,10 +92,8 @@ static void LowLevel_CAGetElement(uint8_t elementId,
 //                                  GLOBAL FUNCTION PROTOTYPES
 //==============================================================================
 // did not want to create header file for one function
-//extern void pbkdf2_sha1(const char *passphrase, const char *ssid, uint16_t ssid_len,
-//                        uint16_t iterations, uint8_t *buf, uint16_t buflen);
-extern int pkcs5_pbkdf2(const char *pass, const uint8_t *salt,
-    size_t salt_len, unsigned int rounds, uint8_t *key, size_t key_len );
+extern void pbkdf2_sha1(const char *passphrase, const char *ssid, uint16_t ssid_len,
+                        uint16_t iterations, uint8_t *buf, uint16_t buflen);
 
 
 /*******************************************************************************
@@ -517,7 +515,7 @@ void WF_WpaConvPassphraseToKey(t_wpaKeyInfo *p_keyInfo)
     p_keyInfo->key[p_keyInfo->keyLength] = '\0';   // make sure passphrase is terminated
 
     // generate the binary key
-    pkcs5_pbkdf2((const char *)p_keyInfo->key,
+    pbkdf2_sha1((const char *)p_keyInfo->key,
                 (const char *)p_keyInfo->ssid,
                 p_keyInfo->ssidLen,
                 4096,
