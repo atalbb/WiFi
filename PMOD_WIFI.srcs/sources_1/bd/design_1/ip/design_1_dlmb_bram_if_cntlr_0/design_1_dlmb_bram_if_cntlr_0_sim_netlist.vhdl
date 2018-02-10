@@ -1,10 +1,10 @@
--- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
--- Date        : Mon May 15 14:41:34 2017
+-- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+-- Date        : Wed Dec 13 13:48:15 2017
 -- Host        : LAPTOP-L1N8U9P6 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.srcs/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0_sim_netlist.vhdl
+--               C:/College/Thesis/VivadoProjects/PMOD_WIFI_OLD/PMOD_WIFI.srcs/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0_sim_netlist.vhdl
 -- Design      : design_1_dlmb_bram_if_cntlr_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -453,7 +453,7 @@ entity design_1_dlmb_bram_if_cntlr_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of design_1_dlmb_bram_if_cntlr_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of design_1_dlmb_bram_if_cntlr_0 : entity is "lmb_bram_if_cntlr,Vivado 2016.3";
+  attribute x_core_info of design_1_dlmb_bram_if_cntlr_0 : entity is "lmb_bram_if_cntlr,Vivado 2017.2";
 end design_1_dlmb_bram_if_cntlr_0;
 
 architecture STRUCTURE of design_1_dlmb_bram_if_cntlr_0 is

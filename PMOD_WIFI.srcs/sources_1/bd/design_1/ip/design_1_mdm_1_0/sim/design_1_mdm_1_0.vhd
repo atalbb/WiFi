@@ -47,14 +47,14 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:ip:mdm:3.2
--- IP Revision: 7
+-- IP Revision: 10
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-LIBRARY mdm_v3_2_7;
-USE mdm_v3_2_7.MDM;
+LIBRARY mdm_v3_2_10;
+USE mdm_v3_2_10.MDM;
 
 ENTITY design_1_mdm_1_0 IS
   PORT (
@@ -81,6 +81,7 @@ ARCHITECTURE design_1_mdm_1_0_arch OF design_1_mdm_1_0 IS
       C_USE_BSCAN : INTEGER;
       C_DEBUG_INTERFACE : INTEGER;
       C_USE_CONFIG_RESET : INTEGER;
+      C_AVOID_PRIMITIVES : INTEGER;
       C_INTERCONNECT : INTEGER;
       C_MB_DBG_PORTS : INTEGER;
       C_USE_UART : INTEGER;
@@ -91,6 +92,7 @@ ARCHITECTURE design_1_mdm_1_0_arch OF design_1_mdm_1_0 IS
       C_TRACE_DATA_WIDTH : INTEGER;
       C_TRACE_CLK_FREQ_HZ : INTEGER;
       C_TRACE_CLK_OUT_PHASE : INTEGER;
+      C_TRACE_ASYNC_RESET : INTEGER;
       C_S_AXI_ADDR_WIDTH : INTEGER;
       C_S_AXI_DATA_WIDTH : INTEGER;
       C_S_AXI_ACLK_FREQ_HZ : INTEGER;
@@ -1638,6 +1640,7 @@ BEGIN
       C_USE_BSCAN => 0,
       C_DEBUG_INTERFACE => 0,
       C_USE_CONFIG_RESET => 0,
+      C_AVOID_PRIMITIVES => 0,
       C_INTERCONNECT => 2,
       C_MB_DBG_PORTS => 1,
       C_USE_UART => 0,
@@ -1648,6 +1651,7 @@ BEGIN
       C_TRACE_DATA_WIDTH => 32,
       C_TRACE_CLK_FREQ_HZ => 200000000,
       C_TRACE_CLK_OUT_PHASE => 90,
+      C_TRACE_ASYNC_RESET => 0,
       C_S_AXI_ADDR_WIDTH => 4,
       C_S_AXI_DATA_WIDTH => 32,
       C_S_AXI_ACLK_FREQ_HZ => 100000000,

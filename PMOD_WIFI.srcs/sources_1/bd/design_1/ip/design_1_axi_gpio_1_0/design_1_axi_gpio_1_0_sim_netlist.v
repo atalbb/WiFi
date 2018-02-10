@@ -1,10 +1,10 @@
-// Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-// Date        : Mon May 15 14:46:36 2017
+// Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+// Date        : Wed Dec 13 13:56:56 2017
 // Host        : LAPTOP-L1N8U9P6 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0_sim_netlist.v
+//               C:/College/Thesis/VivadoProjects/PMOD_WIFI_OLD/PMOD_WIFI.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0_sim_netlist.v
 // Design      : design_1_axi_gpio_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_axi_gpio_1_0,axi_gpio,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_gpio,Vivado 2016.3" *) 
+(* CHECK_LICENSE_TYPE = "design_1_axi_gpio_1_0,axi_gpio,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_gpio,Vivado 2017.2" *) 
 (* NotValidForBitStream *)
 module design_1_axi_gpio_1_0
    (s_axi_aclk,
@@ -233,106 +233,106 @@ module design_1_axi_gpio_1_0_GPIO_Core
   wire [0:0]rst_reg;
   wire s_axi_aclk;
 
-  design_1_axi_gpio_1_0_cdc_sync \Not_Dual.INPUT_DOUBLE_REGS3 
-       (.gpio_io_i(gpio_io_i),
-        .s_axi_aclk(s_axi_aclk),
-        .scndry_vect_out({gpio_io_i_d2[0],gpio_io_i_d2[1],gpio_io_i_d2[2],gpio_io_i_d2[3],gpio_io_i_d2[4],gpio_io_i_d2[5],gpio_io_i_d2[6],gpio_io_i_d2[7],gpio_io_i_d2[8],gpio_io_i_d2[9],gpio_io_i_d2[10],gpio_io_i_d2[11],gpio_io_i_d2[12],gpio_io_i_d2[13],gpio_io_i_d2[14],gpio_io_i_d2[15]}));
-  FDRE \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[16] 
+  FDRE \Not_Dual.ALLIN1_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[16] 
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(GPIO_DBus_i),
         .Q(D[15]),
         .R(bus2ip_rnw_i_reg));
-  FDRE \Not_Dual.READ_REG_GEN[10].GPIO_DBus_i_reg[26] 
+  FDRE \Not_Dual.ALLIN1_ND.READ_REG_GEN[10].GPIO_DBus_i_reg[26] 
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(\Not_Dual.gpio_Data_In_reg[10]_0 ),
         .Q(D[5]),
         .R(bus2ip_rnw_i_reg));
-  FDRE \Not_Dual.READ_REG_GEN[11].GPIO_DBus_i_reg[27] 
+  FDRE \Not_Dual.ALLIN1_ND.READ_REG_GEN[11].GPIO_DBus_i_reg[27] 
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(\Not_Dual.gpio_Data_In_reg[11]_0 ),
         .Q(D[4]),
         .R(bus2ip_rnw_i_reg));
-  FDRE \Not_Dual.READ_REG_GEN[12].GPIO_DBus_i_reg[28] 
+  FDRE \Not_Dual.ALLIN1_ND.READ_REG_GEN[12].GPIO_DBus_i_reg[28] 
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(\Not_Dual.gpio_Data_In_reg[12]_0 ),
         .Q(D[3]),
         .R(bus2ip_rnw_i_reg));
-  FDRE \Not_Dual.READ_REG_GEN[13].GPIO_DBus_i_reg[29] 
+  FDRE \Not_Dual.ALLIN1_ND.READ_REG_GEN[13].GPIO_DBus_i_reg[29] 
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(\Not_Dual.gpio_Data_In_reg[13]_0 ),
         .Q(D[2]),
         .R(bus2ip_rnw_i_reg));
-  FDRE \Not_Dual.READ_REG_GEN[14].GPIO_DBus_i_reg[30] 
+  FDRE \Not_Dual.ALLIN1_ND.READ_REG_GEN[14].GPIO_DBus_i_reg[30] 
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(\Not_Dual.gpio_Data_In_reg[14]_0 ),
         .Q(D[1]),
         .R(bus2ip_rnw_i_reg));
-  FDRE \Not_Dual.READ_REG_GEN[15].GPIO_DBus_i_reg[31] 
+  FDRE \Not_Dual.ALLIN1_ND.READ_REG_GEN[15].GPIO_DBus_i_reg[31] 
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(\Not_Dual.gpio_Data_In_reg[15]_0 ),
         .Q(D[0]),
         .R(bus2ip_rnw_i_reg));
-  FDRE \Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[17] 
+  FDRE \Not_Dual.ALLIN1_ND.READ_REG_GEN[1].GPIO_DBus_i_reg[17] 
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(\Not_Dual.gpio_Data_In_reg[1]_0 ),
         .Q(D[14]),
         .R(bus2ip_rnw_i_reg));
-  FDRE \Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[18] 
+  FDRE \Not_Dual.ALLIN1_ND.READ_REG_GEN[2].GPIO_DBus_i_reg[18] 
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(\Not_Dual.gpio_Data_In_reg[2]_0 ),
         .Q(D[13]),
         .R(bus2ip_rnw_i_reg));
-  FDRE \Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[19] 
+  FDRE \Not_Dual.ALLIN1_ND.READ_REG_GEN[3].GPIO_DBus_i_reg[19] 
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(\Not_Dual.gpio_Data_In_reg[3]_0 ),
         .Q(D[12]),
         .R(bus2ip_rnw_i_reg));
-  FDRE \Not_Dual.READ_REG_GEN[4].GPIO_DBus_i_reg[20] 
+  FDRE \Not_Dual.ALLIN1_ND.READ_REG_GEN[4].GPIO_DBus_i_reg[20] 
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(\Not_Dual.gpio_Data_In_reg[4]_0 ),
         .Q(D[11]),
         .R(bus2ip_rnw_i_reg));
-  FDRE \Not_Dual.READ_REG_GEN[5].GPIO_DBus_i_reg[21] 
+  FDRE \Not_Dual.ALLIN1_ND.READ_REG_GEN[5].GPIO_DBus_i_reg[21] 
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(\Not_Dual.gpio_Data_In_reg[5]_0 ),
         .Q(D[10]),
         .R(bus2ip_rnw_i_reg));
-  FDRE \Not_Dual.READ_REG_GEN[6].GPIO_DBus_i_reg[22] 
+  FDRE \Not_Dual.ALLIN1_ND.READ_REG_GEN[6].GPIO_DBus_i_reg[22] 
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(\Not_Dual.gpio_Data_In_reg[6]_0 ),
         .Q(D[9]),
         .R(bus2ip_rnw_i_reg));
-  FDRE \Not_Dual.READ_REG_GEN[7].GPIO_DBus_i_reg[23] 
+  FDRE \Not_Dual.ALLIN1_ND.READ_REG_GEN[7].GPIO_DBus_i_reg[23] 
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(\Not_Dual.gpio_Data_In_reg[7]_0 ),
         .Q(D[8]),
         .R(bus2ip_rnw_i_reg));
-  FDRE \Not_Dual.READ_REG_GEN[8].GPIO_DBus_i_reg[24] 
+  FDRE \Not_Dual.ALLIN1_ND.READ_REG_GEN[8].GPIO_DBus_i_reg[24] 
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(\Not_Dual.gpio_Data_In_reg[8]_0 ),
         .Q(D[7]),
         .R(bus2ip_rnw_i_reg));
-  FDRE \Not_Dual.READ_REG_GEN[9].GPIO_DBus_i_reg[25] 
+  FDRE \Not_Dual.ALLIN1_ND.READ_REG_GEN[9].GPIO_DBus_i_reg[25] 
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(\Not_Dual.gpio_Data_In_reg[9]_0 ),
         .Q(D[6]),
         .R(bus2ip_rnw_i_reg));
+  design_1_axi_gpio_1_0_cdc_sync \Not_Dual.INPUT_DOUBLE_REGS3 
+       (.gpio_io_i(gpio_io_i),
+        .s_axi_aclk(s_axi_aclk),
+        .scndry_vect_out({gpio_io_i_d2[0],gpio_io_i_d2[1],gpio_io_i_d2[2],gpio_io_i_d2[3],gpio_io_i_d2[4],gpio_io_i_d2[5],gpio_io_i_d2[6],gpio_io_i_d2[7],gpio_io_i_d2[8],gpio_io_i_d2[9],gpio_io_i_d2[10],gpio_io_i_d2[11],gpio_io_i_d2[12],gpio_io_i_d2[13],gpio_io_i_d2[14],gpio_io_i_d2[15]}));
   FDRE \Not_Dual.gpio_Data_In_reg[0] 
        (.C(s_axi_aclk),
         .CE(1'b1),
@@ -728,23 +728,23 @@ module design_1_axi_gpio_1_0_address_decoder
     s_axi_arready,
     s_axi_wready,
     GPIO_DBus_i,
-    \Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[17] ,
-    \Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[18] ,
-    \Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[19] ,
-    \Not_Dual.READ_REG_GEN[4].GPIO_DBus_i_reg[20] ,
-    \Not_Dual.READ_REG_GEN[5].GPIO_DBus_i_reg[21] ,
-    \Not_Dual.READ_REG_GEN[6].GPIO_DBus_i_reg[22] ,
-    \Not_Dual.READ_REG_GEN[7].GPIO_DBus_i_reg[23] ,
-    \Not_Dual.READ_REG_GEN[8].GPIO_DBus_i_reg[24] ,
-    \Not_Dual.READ_REG_GEN[9].GPIO_DBus_i_reg[25] ,
-    \Not_Dual.READ_REG_GEN[10].GPIO_DBus_i_reg[26] ,
-    \Not_Dual.READ_REG_GEN[11].GPIO_DBus_i_reg[27] ,
-    \Not_Dual.READ_REG_GEN[12].GPIO_DBus_i_reg[28] ,
-    \Not_Dual.READ_REG_GEN[13].GPIO_DBus_i_reg[29] ,
-    \Not_Dual.READ_REG_GEN[14].GPIO_DBus_i_reg[30] ,
-    \Not_Dual.READ_REG_GEN[15].GPIO_DBus_i_reg[31] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[1].GPIO_DBus_i_reg[17] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[2].GPIO_DBus_i_reg[18] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[3].GPIO_DBus_i_reg[19] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[4].GPIO_DBus_i_reg[20] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[5].GPIO_DBus_i_reg[21] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[6].GPIO_DBus_i_reg[22] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[7].GPIO_DBus_i_reg[23] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[8].GPIO_DBus_i_reg[24] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[9].GPIO_DBus_i_reg[25] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[10].GPIO_DBus_i_reg[26] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[11].GPIO_DBus_i_reg[27] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[12].GPIO_DBus_i_reg[28] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[13].GPIO_DBus_i_reg[29] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[14].GPIO_DBus_i_reg[30] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[15].GPIO_DBus_i_reg[31] ,
     D,
-    \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[16] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[16] ,
     s_axi_aclk,
     rst_reg,
     bus2ip_rnw_i_reg,
@@ -767,23 +767,23 @@ module design_1_axi_gpio_1_0_address_decoder
   output s_axi_arready;
   output s_axi_wready;
   output [0:0]GPIO_DBus_i;
-  output \Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[17] ;
-  output \Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[18] ;
-  output \Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[19] ;
-  output \Not_Dual.READ_REG_GEN[4].GPIO_DBus_i_reg[20] ;
-  output \Not_Dual.READ_REG_GEN[5].GPIO_DBus_i_reg[21] ;
-  output \Not_Dual.READ_REG_GEN[6].GPIO_DBus_i_reg[22] ;
-  output \Not_Dual.READ_REG_GEN[7].GPIO_DBus_i_reg[23] ;
-  output \Not_Dual.READ_REG_GEN[8].GPIO_DBus_i_reg[24] ;
-  output \Not_Dual.READ_REG_GEN[9].GPIO_DBus_i_reg[25] ;
-  output \Not_Dual.READ_REG_GEN[10].GPIO_DBus_i_reg[26] ;
-  output \Not_Dual.READ_REG_GEN[11].GPIO_DBus_i_reg[27] ;
-  output \Not_Dual.READ_REG_GEN[12].GPIO_DBus_i_reg[28] ;
-  output \Not_Dual.READ_REG_GEN[13].GPIO_DBus_i_reg[29] ;
-  output \Not_Dual.READ_REG_GEN[14].GPIO_DBus_i_reg[30] ;
-  output \Not_Dual.READ_REG_GEN[15].GPIO_DBus_i_reg[31] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[1].GPIO_DBus_i_reg[17] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[2].GPIO_DBus_i_reg[18] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[3].GPIO_DBus_i_reg[19] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[4].GPIO_DBus_i_reg[20] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[5].GPIO_DBus_i_reg[21] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[6].GPIO_DBus_i_reg[22] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[7].GPIO_DBus_i_reg[23] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[8].GPIO_DBus_i_reg[24] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[9].GPIO_DBus_i_reg[25] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[10].GPIO_DBus_i_reg[26] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[11].GPIO_DBus_i_reg[27] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[12].GPIO_DBus_i_reg[28] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[13].GPIO_DBus_i_reg[29] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[14].GPIO_DBus_i_reg[30] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[15].GPIO_DBus_i_reg[31] ;
   output [15:0]D;
-  output \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[16] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[16] ;
   input s_axi_aclk;
   input rst_reg;
   input bus2ip_rnw_i_reg;
@@ -808,22 +808,22 @@ module design_1_axi_gpio_1_0_address_decoder
   wire [3:0]\INCLUDE_DPHASE_TIMER.dpto_cnt_reg[3] ;
   wire \MEM_DECODE_GEN[0].cs_out_i[0]_i_1_n_0 ;
   wire \MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ;
-  wire \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[16] ;
-  wire \Not_Dual.READ_REG_GEN[10].GPIO_DBus_i_reg[26] ;
-  wire \Not_Dual.READ_REG_GEN[11].GPIO_DBus_i_reg[27] ;
-  wire \Not_Dual.READ_REG_GEN[12].GPIO_DBus_i_reg[28] ;
-  wire \Not_Dual.READ_REG_GEN[13].GPIO_DBus_i_reg[29] ;
-  wire \Not_Dual.READ_REG_GEN[14].GPIO_DBus_i_reg[30] ;
-  wire \Not_Dual.READ_REG_GEN[15].GPIO_DBus_i_reg[31] ;
-  wire \Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[17] ;
-  wire \Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[18] ;
-  wire \Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[19] ;
-  wire \Not_Dual.READ_REG_GEN[4].GPIO_DBus_i_reg[20] ;
-  wire \Not_Dual.READ_REG_GEN[5].GPIO_DBus_i_reg[21] ;
-  wire \Not_Dual.READ_REG_GEN[6].GPIO_DBus_i_reg[22] ;
-  wire \Not_Dual.READ_REG_GEN[7].GPIO_DBus_i_reg[23] ;
-  wire \Not_Dual.READ_REG_GEN[8].GPIO_DBus_i_reg[24] ;
-  wire \Not_Dual.READ_REG_GEN[9].GPIO_DBus_i_reg[25] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[16] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[10].GPIO_DBus_i_reg[26] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[11].GPIO_DBus_i_reg[27] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[12].GPIO_DBus_i_reg[28] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[13].GPIO_DBus_i_reg[29] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[14].GPIO_DBus_i_reg[30] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[15].GPIO_DBus_i_reg[31] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[1].GPIO_DBus_i_reg[17] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[2].GPIO_DBus_i_reg[18] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[3].GPIO_DBus_i_reg[19] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[4].GPIO_DBus_i_reg[20] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[5].GPIO_DBus_i_reg[21] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[6].GPIO_DBus_i_reg[22] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[7].GPIO_DBus_i_reg[23] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[8].GPIO_DBus_i_reg[24] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[9].GPIO_DBus_i_reg[25] ;
   wire [15:0]\Not_Dual.gpio_Data_In_reg[0] ;
   wire [0:0]\Not_Dual.gpio_OE_reg[0] ;
   wire [2:0]Q;
@@ -859,7 +859,7 @@ module design_1_axi_gpio_1_0_address_decoder
         .R(1'b0));
   LUT6 #(
     .INIT(64'h000000E000000020)) 
-    \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i[16]_i_1 
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[0].GPIO_DBus_i[16]_i_1 
        (.I0(\Not_Dual.gpio_Data_In_reg[0] [15]),
         .I1(Q[0]),
         .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
@@ -869,162 +869,162 @@ module design_1_axi_gpio_1_0_address_decoder
         .O(GPIO_DBus_i));
   LUT6 #(
     .INIT(64'h000000E000000020)) 
-    \Not_Dual.READ_REG_GEN[10].GPIO_DBus_i[26]_i_1 
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[10].GPIO_DBus_i[26]_i_1 
        (.I0(\Not_Dual.gpio_Data_In_reg[0] [5]),
         .I1(Q[0]),
         .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
         .I3(Q[2]),
         .I4(Q[1]),
         .I5(gpio_io_t[5]),
-        .O(\Not_Dual.READ_REG_GEN[10].GPIO_DBus_i_reg[26] ));
+        .O(\Not_Dual.ALLIN1_ND.READ_REG_GEN[10].GPIO_DBus_i_reg[26] ));
   LUT6 #(
     .INIT(64'h000000E000000020)) 
-    \Not_Dual.READ_REG_GEN[11].GPIO_DBus_i[27]_i_1 
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[11].GPIO_DBus_i[27]_i_1 
        (.I0(\Not_Dual.gpio_Data_In_reg[0] [4]),
         .I1(Q[0]),
         .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
         .I3(Q[2]),
         .I4(Q[1]),
         .I5(gpio_io_t[4]),
-        .O(\Not_Dual.READ_REG_GEN[11].GPIO_DBus_i_reg[27] ));
+        .O(\Not_Dual.ALLIN1_ND.READ_REG_GEN[11].GPIO_DBus_i_reg[27] ));
   LUT6 #(
     .INIT(64'h000000E000000020)) 
-    \Not_Dual.READ_REG_GEN[12].GPIO_DBus_i[28]_i_1 
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[12].GPIO_DBus_i[28]_i_1 
        (.I0(\Not_Dual.gpio_Data_In_reg[0] [3]),
         .I1(Q[0]),
         .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
         .I3(Q[2]),
         .I4(Q[1]),
         .I5(gpio_io_t[3]),
-        .O(\Not_Dual.READ_REG_GEN[12].GPIO_DBus_i_reg[28] ));
+        .O(\Not_Dual.ALLIN1_ND.READ_REG_GEN[12].GPIO_DBus_i_reg[28] ));
   LUT6 #(
     .INIT(64'h000000E000000020)) 
-    \Not_Dual.READ_REG_GEN[13].GPIO_DBus_i[29]_i_1 
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[13].GPIO_DBus_i[29]_i_1 
        (.I0(\Not_Dual.gpio_Data_In_reg[0] [2]),
         .I1(Q[0]),
         .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
         .I3(Q[2]),
         .I4(Q[1]),
         .I5(gpio_io_t[2]),
-        .O(\Not_Dual.READ_REG_GEN[13].GPIO_DBus_i_reg[29] ));
+        .O(\Not_Dual.ALLIN1_ND.READ_REG_GEN[13].GPIO_DBus_i_reg[29] ));
   LUT6 #(
     .INIT(64'h000000E000000020)) 
-    \Not_Dual.READ_REG_GEN[14].GPIO_DBus_i[30]_i_1 
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[14].GPIO_DBus_i[30]_i_1 
        (.I0(\Not_Dual.gpio_Data_In_reg[0] [1]),
         .I1(Q[0]),
         .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
         .I3(Q[2]),
         .I4(Q[1]),
         .I5(gpio_io_t[1]),
-        .O(\Not_Dual.READ_REG_GEN[14].GPIO_DBus_i_reg[30] ));
+        .O(\Not_Dual.ALLIN1_ND.READ_REG_GEN[14].GPIO_DBus_i_reg[30] ));
   LUT4 #(
     .INIT(16'hFFF7)) 
-    \Not_Dual.READ_REG_GEN[15].GPIO_DBus_i[31]_i_1 
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[15].GPIO_DBus_i[31]_i_1 
        (.I0(bus2ip_rnw_i_reg),
         .I1(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
         .I2(gpio_xferAck_Reg),
         .I3(GPIO_xferAck_i),
-        .O(\Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[16] ));
+        .O(\Not_Dual.ALLIN1_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[16] ));
   LUT6 #(
     .INIT(64'h000000E000000020)) 
-    \Not_Dual.READ_REG_GEN[15].GPIO_DBus_i[31]_i_2 
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[15].GPIO_DBus_i[31]_i_2 
        (.I0(\Not_Dual.gpio_Data_In_reg[0] [0]),
         .I1(Q[0]),
         .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
         .I3(Q[2]),
         .I4(Q[1]),
         .I5(gpio_io_t[0]),
-        .O(\Not_Dual.READ_REG_GEN[15].GPIO_DBus_i_reg[31] ));
+        .O(\Not_Dual.ALLIN1_ND.READ_REG_GEN[15].GPIO_DBus_i_reg[31] ));
   LUT6 #(
     .INIT(64'h000000E000000020)) 
-    \Not_Dual.READ_REG_GEN[1].GPIO_DBus_i[17]_i_1 
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[1].GPIO_DBus_i[17]_i_1 
        (.I0(\Not_Dual.gpio_Data_In_reg[0] [14]),
         .I1(Q[0]),
         .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
         .I3(Q[2]),
         .I4(Q[1]),
         .I5(gpio_io_t[14]),
-        .O(\Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[17] ));
+        .O(\Not_Dual.ALLIN1_ND.READ_REG_GEN[1].GPIO_DBus_i_reg[17] ));
   LUT6 #(
     .INIT(64'h000000E000000020)) 
-    \Not_Dual.READ_REG_GEN[2].GPIO_DBus_i[18]_i_1 
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[2].GPIO_DBus_i[18]_i_1 
        (.I0(\Not_Dual.gpio_Data_In_reg[0] [13]),
         .I1(Q[0]),
         .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
         .I3(Q[2]),
         .I4(Q[1]),
         .I5(gpio_io_t[13]),
-        .O(\Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[18] ));
+        .O(\Not_Dual.ALLIN1_ND.READ_REG_GEN[2].GPIO_DBus_i_reg[18] ));
   LUT6 #(
     .INIT(64'h000000E000000020)) 
-    \Not_Dual.READ_REG_GEN[3].GPIO_DBus_i[19]_i_1 
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[3].GPIO_DBus_i[19]_i_1 
        (.I0(\Not_Dual.gpio_Data_In_reg[0] [12]),
         .I1(Q[0]),
         .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
         .I3(Q[2]),
         .I4(Q[1]),
         .I5(gpio_io_t[12]),
-        .O(\Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[19] ));
+        .O(\Not_Dual.ALLIN1_ND.READ_REG_GEN[3].GPIO_DBus_i_reg[19] ));
   LUT6 #(
     .INIT(64'h000000E000000020)) 
-    \Not_Dual.READ_REG_GEN[4].GPIO_DBus_i[20]_i_1 
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[4].GPIO_DBus_i[20]_i_1 
        (.I0(\Not_Dual.gpio_Data_In_reg[0] [11]),
         .I1(Q[0]),
         .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
         .I3(Q[2]),
         .I4(Q[1]),
         .I5(gpio_io_t[11]),
-        .O(\Not_Dual.READ_REG_GEN[4].GPIO_DBus_i_reg[20] ));
+        .O(\Not_Dual.ALLIN1_ND.READ_REG_GEN[4].GPIO_DBus_i_reg[20] ));
   LUT6 #(
     .INIT(64'h000000E000000020)) 
-    \Not_Dual.READ_REG_GEN[5].GPIO_DBus_i[21]_i_1 
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[5].GPIO_DBus_i[21]_i_1 
        (.I0(\Not_Dual.gpio_Data_In_reg[0] [10]),
         .I1(Q[0]),
         .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
         .I3(Q[2]),
         .I4(Q[1]),
         .I5(gpio_io_t[10]),
-        .O(\Not_Dual.READ_REG_GEN[5].GPIO_DBus_i_reg[21] ));
+        .O(\Not_Dual.ALLIN1_ND.READ_REG_GEN[5].GPIO_DBus_i_reg[21] ));
   LUT6 #(
     .INIT(64'h000000E000000020)) 
-    \Not_Dual.READ_REG_GEN[6].GPIO_DBus_i[22]_i_1 
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[6].GPIO_DBus_i[22]_i_1 
        (.I0(\Not_Dual.gpio_Data_In_reg[0] [9]),
         .I1(Q[0]),
         .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
         .I3(Q[2]),
         .I4(Q[1]),
         .I5(gpio_io_t[9]),
-        .O(\Not_Dual.READ_REG_GEN[6].GPIO_DBus_i_reg[22] ));
+        .O(\Not_Dual.ALLIN1_ND.READ_REG_GEN[6].GPIO_DBus_i_reg[22] ));
   LUT6 #(
     .INIT(64'h000000E000000020)) 
-    \Not_Dual.READ_REG_GEN[7].GPIO_DBus_i[23]_i_1 
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[7].GPIO_DBus_i[23]_i_1 
        (.I0(\Not_Dual.gpio_Data_In_reg[0] [8]),
         .I1(Q[0]),
         .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
         .I3(Q[2]),
         .I4(Q[1]),
         .I5(gpio_io_t[8]),
-        .O(\Not_Dual.READ_REG_GEN[7].GPIO_DBus_i_reg[23] ));
+        .O(\Not_Dual.ALLIN1_ND.READ_REG_GEN[7].GPIO_DBus_i_reg[23] ));
   LUT6 #(
     .INIT(64'h000000E000000020)) 
-    \Not_Dual.READ_REG_GEN[8].GPIO_DBus_i[24]_i_1 
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[8].GPIO_DBus_i[24]_i_1 
        (.I0(\Not_Dual.gpio_Data_In_reg[0] [7]),
         .I1(Q[0]),
         .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
         .I3(Q[2]),
         .I4(Q[1]),
         .I5(gpio_io_t[7]),
-        .O(\Not_Dual.READ_REG_GEN[8].GPIO_DBus_i_reg[24] ));
+        .O(\Not_Dual.ALLIN1_ND.READ_REG_GEN[8].GPIO_DBus_i_reg[24] ));
   LUT6 #(
     .INIT(64'h000000E000000020)) 
-    \Not_Dual.READ_REG_GEN[9].GPIO_DBus_i[25]_i_1 
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[9].GPIO_DBus_i[25]_i_1 
        (.I0(\Not_Dual.gpio_Data_In_reg[0] [6]),
         .I1(Q[0]),
         .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
         .I3(Q[2]),
         .I4(Q[1]),
         .I5(gpio_io_t[6]),
-        .O(\Not_Dual.READ_REG_GEN[9].GPIO_DBus_i_reg[25] ));
+        .O(\Not_Dual.ALLIN1_ND.READ_REG_GEN[9].GPIO_DBus_i_reg[25] ));
   LUT6 #(
     .INIT(64'hAAAAAAAAAAAAABAA)) 
     \Not_Dual.gpio_Data_Out[0]_i_1 
@@ -1036,132 +1036,132 @@ module design_1_axi_gpio_1_0_address_decoder
         .I5(Q[1]),
         .O(E));
   LUT4 #(
-    .INIT(16'hCCAC)) 
+    .INIT(16'hFB08)) 
     \Not_Dual.gpio_Data_Out[0]_i_2 
        (.I0(s_axi_wdata[15]),
-        .I1(s_axi_wdata[31]),
-        .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
-        .I3(Q[1]),
+        .I1(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
+        .I2(Q[1]),
+        .I3(s_axi_wdata[31]),
         .O(D[15]));
   LUT4 #(
-    .INIT(16'hCCAC)) 
+    .INIT(16'hFB08)) 
     \Not_Dual.gpio_Data_Out[10]_i_1 
        (.I0(s_axi_wdata[5]),
-        .I1(s_axi_wdata[21]),
-        .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
-        .I3(Q[1]),
+        .I1(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
+        .I2(Q[1]),
+        .I3(s_axi_wdata[21]),
         .O(D[5]));
   LUT4 #(
-    .INIT(16'hCCAC)) 
+    .INIT(16'hFB08)) 
     \Not_Dual.gpio_Data_Out[11]_i_1 
        (.I0(s_axi_wdata[4]),
-        .I1(s_axi_wdata[20]),
-        .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
-        .I3(Q[1]),
+        .I1(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
+        .I2(Q[1]),
+        .I3(s_axi_wdata[20]),
         .O(D[4]));
   LUT4 #(
-    .INIT(16'hCCAC)) 
+    .INIT(16'hFB08)) 
     \Not_Dual.gpio_Data_Out[12]_i_1 
        (.I0(s_axi_wdata[3]),
-        .I1(s_axi_wdata[19]),
-        .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
-        .I3(Q[1]),
+        .I1(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
+        .I2(Q[1]),
+        .I3(s_axi_wdata[19]),
         .O(D[3]));
   LUT4 #(
-    .INIT(16'hCCAC)) 
+    .INIT(16'hFB08)) 
     \Not_Dual.gpio_Data_Out[13]_i_1 
        (.I0(s_axi_wdata[2]),
-        .I1(s_axi_wdata[18]),
-        .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
-        .I3(Q[1]),
+        .I1(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
+        .I2(Q[1]),
+        .I3(s_axi_wdata[18]),
         .O(D[2]));
   LUT4 #(
-    .INIT(16'hCCAC)) 
+    .INIT(16'hFB08)) 
     \Not_Dual.gpio_Data_Out[14]_i_1 
        (.I0(s_axi_wdata[1]),
-        .I1(s_axi_wdata[17]),
-        .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
-        .I3(Q[1]),
+        .I1(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
+        .I2(Q[1]),
+        .I3(s_axi_wdata[17]),
         .O(D[1]));
   LUT4 #(
-    .INIT(16'hCCAC)) 
+    .INIT(16'hFB08)) 
     \Not_Dual.gpio_Data_Out[15]_i_1 
        (.I0(s_axi_wdata[0]),
-        .I1(s_axi_wdata[16]),
-        .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
-        .I3(Q[1]),
+        .I1(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
+        .I2(Q[1]),
+        .I3(s_axi_wdata[16]),
         .O(D[0]));
   LUT4 #(
-    .INIT(16'hCCAC)) 
+    .INIT(16'hFB08)) 
     \Not_Dual.gpio_Data_Out[1]_i_1 
        (.I0(s_axi_wdata[14]),
-        .I1(s_axi_wdata[30]),
-        .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
-        .I3(Q[1]),
+        .I1(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
+        .I2(Q[1]),
+        .I3(s_axi_wdata[30]),
         .O(D[14]));
   LUT4 #(
-    .INIT(16'hCCAC)) 
+    .INIT(16'hFB08)) 
     \Not_Dual.gpio_Data_Out[2]_i_1 
        (.I0(s_axi_wdata[13]),
-        .I1(s_axi_wdata[29]),
-        .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
-        .I3(Q[1]),
+        .I1(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
+        .I2(Q[1]),
+        .I3(s_axi_wdata[29]),
         .O(D[13]));
   LUT4 #(
-    .INIT(16'hCCAC)) 
+    .INIT(16'hFB08)) 
     \Not_Dual.gpio_Data_Out[3]_i_1 
        (.I0(s_axi_wdata[12]),
-        .I1(s_axi_wdata[28]),
-        .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
-        .I3(Q[1]),
+        .I1(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
+        .I2(Q[1]),
+        .I3(s_axi_wdata[28]),
         .O(D[12]));
   LUT4 #(
-    .INIT(16'hCCAC)) 
+    .INIT(16'hFB08)) 
     \Not_Dual.gpio_Data_Out[4]_i_1 
        (.I0(s_axi_wdata[11]),
-        .I1(s_axi_wdata[27]),
-        .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
-        .I3(Q[1]),
+        .I1(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
+        .I2(Q[1]),
+        .I3(s_axi_wdata[27]),
         .O(D[11]));
   LUT4 #(
-    .INIT(16'hCCAC)) 
+    .INIT(16'hFB08)) 
     \Not_Dual.gpio_Data_Out[5]_i_1 
        (.I0(s_axi_wdata[10]),
-        .I1(s_axi_wdata[26]),
-        .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
-        .I3(Q[1]),
+        .I1(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
+        .I2(Q[1]),
+        .I3(s_axi_wdata[26]),
         .O(D[10]));
   LUT4 #(
-    .INIT(16'hCCAC)) 
+    .INIT(16'hFB08)) 
     \Not_Dual.gpio_Data_Out[6]_i_1 
        (.I0(s_axi_wdata[9]),
-        .I1(s_axi_wdata[25]),
-        .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
-        .I3(Q[1]),
+        .I1(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
+        .I2(Q[1]),
+        .I3(s_axi_wdata[25]),
         .O(D[9]));
   LUT4 #(
-    .INIT(16'hCCAC)) 
+    .INIT(16'hFB08)) 
     \Not_Dual.gpio_Data_Out[7]_i_1 
        (.I0(s_axi_wdata[8]),
-        .I1(s_axi_wdata[24]),
-        .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
-        .I3(Q[1]),
+        .I1(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
+        .I2(Q[1]),
+        .I3(s_axi_wdata[24]),
         .O(D[8]));
   LUT4 #(
-    .INIT(16'hCCAC)) 
+    .INIT(16'hFB08)) 
     \Not_Dual.gpio_Data_Out[8]_i_1 
        (.I0(s_axi_wdata[7]),
-        .I1(s_axi_wdata[23]),
-        .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
-        .I3(Q[1]),
+        .I1(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
+        .I2(Q[1]),
+        .I3(s_axi_wdata[23]),
         .O(D[7]));
   LUT4 #(
-    .INIT(16'hCCAC)) 
+    .INIT(16'hFB08)) 
     \Not_Dual.gpio_Data_Out[9]_i_1 
        (.I0(s_axi_wdata[6]),
-        .I1(s_axi_wdata[22]),
-        .I2(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
-        .I3(Q[1]),
+        .I1(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
+        .I2(Q[1]),
+        .I3(s_axi_wdata[22]),
         .O(D[6]));
   LUT6 #(
     .INIT(64'hAAAAAAAAAABAAAAA)) 
@@ -1400,22 +1400,22 @@ module design_1_axi_gpio_1_0_axi_gpio
         .E(AXI_LITE_IPIF_I_n_6),
         .GPIO_DBus_i(GPIO_DBus_i),
         .GPIO_xferAck_i(GPIO_xferAck_i),
-        .\Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[16] (AXI_LITE_IPIF_I_n_41),
-        .\Not_Dual.READ_REG_GEN[10].GPIO_DBus_i_reg[26] (AXI_LITE_IPIF_I_n_19),
-        .\Not_Dual.READ_REG_GEN[11].GPIO_DBus_i_reg[27] (AXI_LITE_IPIF_I_n_20),
-        .\Not_Dual.READ_REG_GEN[12].GPIO_DBus_i_reg[28] (AXI_LITE_IPIF_I_n_21),
-        .\Not_Dual.READ_REG_GEN[13].GPIO_DBus_i_reg[29] (AXI_LITE_IPIF_I_n_22),
-        .\Not_Dual.READ_REG_GEN[14].GPIO_DBus_i_reg[30] (AXI_LITE_IPIF_I_n_23),
-        .\Not_Dual.READ_REG_GEN[15].GPIO_DBus_i_reg[31] (AXI_LITE_IPIF_I_n_24),
-        .\Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[17] (AXI_LITE_IPIF_I_n_10),
-        .\Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[18] (AXI_LITE_IPIF_I_n_11),
-        .\Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[19] (AXI_LITE_IPIF_I_n_12),
-        .\Not_Dual.READ_REG_GEN[4].GPIO_DBus_i_reg[20] (AXI_LITE_IPIF_I_n_13),
-        .\Not_Dual.READ_REG_GEN[5].GPIO_DBus_i_reg[21] (AXI_LITE_IPIF_I_n_14),
-        .\Not_Dual.READ_REG_GEN[6].GPIO_DBus_i_reg[22] (AXI_LITE_IPIF_I_n_15),
-        .\Not_Dual.READ_REG_GEN[7].GPIO_DBus_i_reg[23] (AXI_LITE_IPIF_I_n_16),
-        .\Not_Dual.READ_REG_GEN[8].GPIO_DBus_i_reg[24] (AXI_LITE_IPIF_I_n_17),
-        .\Not_Dual.READ_REG_GEN[9].GPIO_DBus_i_reg[25] (AXI_LITE_IPIF_I_n_18),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[16] (AXI_LITE_IPIF_I_n_41),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[10].GPIO_DBus_i_reg[26] (AXI_LITE_IPIF_I_n_19),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[11].GPIO_DBus_i_reg[27] (AXI_LITE_IPIF_I_n_20),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[12].GPIO_DBus_i_reg[28] (AXI_LITE_IPIF_I_n_21),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[13].GPIO_DBus_i_reg[29] (AXI_LITE_IPIF_I_n_22),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[14].GPIO_DBus_i_reg[30] (AXI_LITE_IPIF_I_n_23),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[15].GPIO_DBus_i_reg[31] (AXI_LITE_IPIF_I_n_24),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[1].GPIO_DBus_i_reg[17] (AXI_LITE_IPIF_I_n_10),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[2].GPIO_DBus_i_reg[18] (AXI_LITE_IPIF_I_n_11),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[3].GPIO_DBus_i_reg[19] (AXI_LITE_IPIF_I_n_12),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[4].GPIO_DBus_i_reg[20] (AXI_LITE_IPIF_I_n_13),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[5].GPIO_DBus_i_reg[21] (AXI_LITE_IPIF_I_n_14),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[6].GPIO_DBus_i_reg[22] (AXI_LITE_IPIF_I_n_15),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[7].GPIO_DBus_i_reg[23] (AXI_LITE_IPIF_I_n_16),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[8].GPIO_DBus_i_reg[24] (AXI_LITE_IPIF_I_n_17),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[9].GPIO_DBus_i_reg[25] (AXI_LITE_IPIF_I_n_18),
         .\Not_Dual.gpio_OE_reg[0] (AXI_LITE_IPIF_I_n_7),
         .Q({gpio_Data_In[0],gpio_Data_In[1],gpio_Data_In[2],gpio_Data_In[3],gpio_Data_In[4],gpio_Data_In[5],gpio_Data_In[6],gpio_Data_In[7],gpio_Data_In[8],gpio_Data_In[9],gpio_Data_In[10],gpio_Data_In[11],gpio_Data_In[12],gpio_Data_In[13],gpio_Data_In[14],gpio_Data_In[15]}),
         .bus2ip_cs(bus2ip_cs),
@@ -1601,23 +1601,23 @@ module design_1_axi_gpio_1_0_axi_lite_ipif
     \Not_Dual.gpio_OE_reg[0] ,
     s_axi_wready,
     GPIO_DBus_i,
-    \Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[17] ,
-    \Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[18] ,
-    \Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[19] ,
-    \Not_Dual.READ_REG_GEN[4].GPIO_DBus_i_reg[20] ,
-    \Not_Dual.READ_REG_GEN[5].GPIO_DBus_i_reg[21] ,
-    \Not_Dual.READ_REG_GEN[6].GPIO_DBus_i_reg[22] ,
-    \Not_Dual.READ_REG_GEN[7].GPIO_DBus_i_reg[23] ,
-    \Not_Dual.READ_REG_GEN[8].GPIO_DBus_i_reg[24] ,
-    \Not_Dual.READ_REG_GEN[9].GPIO_DBus_i_reg[25] ,
-    \Not_Dual.READ_REG_GEN[10].GPIO_DBus_i_reg[26] ,
-    \Not_Dual.READ_REG_GEN[11].GPIO_DBus_i_reg[27] ,
-    \Not_Dual.READ_REG_GEN[12].GPIO_DBus_i_reg[28] ,
-    \Not_Dual.READ_REG_GEN[13].GPIO_DBus_i_reg[29] ,
-    \Not_Dual.READ_REG_GEN[14].GPIO_DBus_i_reg[30] ,
-    \Not_Dual.READ_REG_GEN[15].GPIO_DBus_i_reg[31] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[1].GPIO_DBus_i_reg[17] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[2].GPIO_DBus_i_reg[18] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[3].GPIO_DBus_i_reg[19] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[4].GPIO_DBus_i_reg[20] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[5].GPIO_DBus_i_reg[21] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[6].GPIO_DBus_i_reg[22] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[7].GPIO_DBus_i_reg[23] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[8].GPIO_DBus_i_reg[24] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[9].GPIO_DBus_i_reg[25] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[10].GPIO_DBus_i_reg[26] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[11].GPIO_DBus_i_reg[27] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[12].GPIO_DBus_i_reg[28] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[13].GPIO_DBus_i_reg[29] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[14].GPIO_DBus_i_reg[30] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[15].GPIO_DBus_i_reg[31] ,
     D,
-    \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[16] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[16] ,
     s_axi_rdata,
     s_axi_aclk,
     s_axi_arvalid,
@@ -1646,23 +1646,23 @@ module design_1_axi_gpio_1_0_axi_lite_ipif
   output [0:0]\Not_Dual.gpio_OE_reg[0] ;
   output s_axi_wready;
   output [0:0]GPIO_DBus_i;
-  output \Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[17] ;
-  output \Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[18] ;
-  output \Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[19] ;
-  output \Not_Dual.READ_REG_GEN[4].GPIO_DBus_i_reg[20] ;
-  output \Not_Dual.READ_REG_GEN[5].GPIO_DBus_i_reg[21] ;
-  output \Not_Dual.READ_REG_GEN[6].GPIO_DBus_i_reg[22] ;
-  output \Not_Dual.READ_REG_GEN[7].GPIO_DBus_i_reg[23] ;
-  output \Not_Dual.READ_REG_GEN[8].GPIO_DBus_i_reg[24] ;
-  output \Not_Dual.READ_REG_GEN[9].GPIO_DBus_i_reg[25] ;
-  output \Not_Dual.READ_REG_GEN[10].GPIO_DBus_i_reg[26] ;
-  output \Not_Dual.READ_REG_GEN[11].GPIO_DBus_i_reg[27] ;
-  output \Not_Dual.READ_REG_GEN[12].GPIO_DBus_i_reg[28] ;
-  output \Not_Dual.READ_REG_GEN[13].GPIO_DBus_i_reg[29] ;
-  output \Not_Dual.READ_REG_GEN[14].GPIO_DBus_i_reg[30] ;
-  output \Not_Dual.READ_REG_GEN[15].GPIO_DBus_i_reg[31] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[1].GPIO_DBus_i_reg[17] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[2].GPIO_DBus_i_reg[18] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[3].GPIO_DBus_i_reg[19] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[4].GPIO_DBus_i_reg[20] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[5].GPIO_DBus_i_reg[21] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[6].GPIO_DBus_i_reg[22] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[7].GPIO_DBus_i_reg[23] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[8].GPIO_DBus_i_reg[24] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[9].GPIO_DBus_i_reg[25] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[10].GPIO_DBus_i_reg[26] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[11].GPIO_DBus_i_reg[27] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[12].GPIO_DBus_i_reg[28] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[13].GPIO_DBus_i_reg[29] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[14].GPIO_DBus_i_reg[30] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[15].GPIO_DBus_i_reg[31] ;
   output [15:0]D;
-  output \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[16] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[16] ;
   output [15:0]s_axi_rdata;
   input s_axi_aclk;
   input s_axi_arvalid;
@@ -1686,22 +1686,22 @@ module design_1_axi_gpio_1_0_axi_lite_ipif
   wire [0:0]E;
   wire [0:0]GPIO_DBus_i;
   wire GPIO_xferAck_i;
-  wire \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[16] ;
-  wire \Not_Dual.READ_REG_GEN[10].GPIO_DBus_i_reg[26] ;
-  wire \Not_Dual.READ_REG_GEN[11].GPIO_DBus_i_reg[27] ;
-  wire \Not_Dual.READ_REG_GEN[12].GPIO_DBus_i_reg[28] ;
-  wire \Not_Dual.READ_REG_GEN[13].GPIO_DBus_i_reg[29] ;
-  wire \Not_Dual.READ_REG_GEN[14].GPIO_DBus_i_reg[30] ;
-  wire \Not_Dual.READ_REG_GEN[15].GPIO_DBus_i_reg[31] ;
-  wire \Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[17] ;
-  wire \Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[18] ;
-  wire \Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[19] ;
-  wire \Not_Dual.READ_REG_GEN[4].GPIO_DBus_i_reg[20] ;
-  wire \Not_Dual.READ_REG_GEN[5].GPIO_DBus_i_reg[21] ;
-  wire \Not_Dual.READ_REG_GEN[6].GPIO_DBus_i_reg[22] ;
-  wire \Not_Dual.READ_REG_GEN[7].GPIO_DBus_i_reg[23] ;
-  wire \Not_Dual.READ_REG_GEN[8].GPIO_DBus_i_reg[24] ;
-  wire \Not_Dual.READ_REG_GEN[9].GPIO_DBus_i_reg[25] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[16] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[10].GPIO_DBus_i_reg[26] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[11].GPIO_DBus_i_reg[27] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[12].GPIO_DBus_i_reg[28] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[13].GPIO_DBus_i_reg[29] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[14].GPIO_DBus_i_reg[30] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[15].GPIO_DBus_i_reg[31] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[1].GPIO_DBus_i_reg[17] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[2].GPIO_DBus_i_reg[18] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[3].GPIO_DBus_i_reg[19] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[4].GPIO_DBus_i_reg[20] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[5].GPIO_DBus_i_reg[21] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[6].GPIO_DBus_i_reg[22] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[7].GPIO_DBus_i_reg[23] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[8].GPIO_DBus_i_reg[24] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[9].GPIO_DBus_i_reg[25] ;
   wire [0:0]\Not_Dual.gpio_OE_reg[0] ;
   wire [15:0]Q;
   wire bus2ip_cs;
@@ -1734,22 +1734,22 @@ module design_1_axi_gpio_1_0_axi_lite_ipif
         .GPIO_DBus_i(GPIO_DBus_i),
         .GPIO_xferAck_i(GPIO_xferAck_i),
         .\MEM_DECODE_GEN[0].cs_out_i_reg[0] (bus2ip_cs),
-        .\Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[16] (\Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[16] ),
-        .\Not_Dual.READ_REG_GEN[10].GPIO_DBus_i_reg[26] (\Not_Dual.READ_REG_GEN[10].GPIO_DBus_i_reg[26] ),
-        .\Not_Dual.READ_REG_GEN[11].GPIO_DBus_i_reg[27] (\Not_Dual.READ_REG_GEN[11].GPIO_DBus_i_reg[27] ),
-        .\Not_Dual.READ_REG_GEN[12].GPIO_DBus_i_reg[28] (\Not_Dual.READ_REG_GEN[12].GPIO_DBus_i_reg[28] ),
-        .\Not_Dual.READ_REG_GEN[13].GPIO_DBus_i_reg[29] (\Not_Dual.READ_REG_GEN[13].GPIO_DBus_i_reg[29] ),
-        .\Not_Dual.READ_REG_GEN[14].GPIO_DBus_i_reg[30] (\Not_Dual.READ_REG_GEN[14].GPIO_DBus_i_reg[30] ),
-        .\Not_Dual.READ_REG_GEN[15].GPIO_DBus_i_reg[31] (\Not_Dual.READ_REG_GEN[15].GPIO_DBus_i_reg[31] ),
-        .\Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[17] (\Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[17] ),
-        .\Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[18] (\Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[18] ),
-        .\Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[19] (\Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[19] ),
-        .\Not_Dual.READ_REG_GEN[4].GPIO_DBus_i_reg[20] (\Not_Dual.READ_REG_GEN[4].GPIO_DBus_i_reg[20] ),
-        .\Not_Dual.READ_REG_GEN[5].GPIO_DBus_i_reg[21] (\Not_Dual.READ_REG_GEN[5].GPIO_DBus_i_reg[21] ),
-        .\Not_Dual.READ_REG_GEN[6].GPIO_DBus_i_reg[22] (\Not_Dual.READ_REG_GEN[6].GPIO_DBus_i_reg[22] ),
-        .\Not_Dual.READ_REG_GEN[7].GPIO_DBus_i_reg[23] (\Not_Dual.READ_REG_GEN[7].GPIO_DBus_i_reg[23] ),
-        .\Not_Dual.READ_REG_GEN[8].GPIO_DBus_i_reg[24] (\Not_Dual.READ_REG_GEN[8].GPIO_DBus_i_reg[24] ),
-        .\Not_Dual.READ_REG_GEN[9].GPIO_DBus_i_reg[25] (\Not_Dual.READ_REG_GEN[9].GPIO_DBus_i_reg[25] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[16] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[16] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[10].GPIO_DBus_i_reg[26] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[10].GPIO_DBus_i_reg[26] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[11].GPIO_DBus_i_reg[27] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[11].GPIO_DBus_i_reg[27] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[12].GPIO_DBus_i_reg[28] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[12].GPIO_DBus_i_reg[28] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[13].GPIO_DBus_i_reg[29] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[13].GPIO_DBus_i_reg[29] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[14].GPIO_DBus_i_reg[30] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[14].GPIO_DBus_i_reg[30] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[15].GPIO_DBus_i_reg[31] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[15].GPIO_DBus_i_reg[31] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[1].GPIO_DBus_i_reg[17] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[1].GPIO_DBus_i_reg[17] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[2].GPIO_DBus_i_reg[18] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[2].GPIO_DBus_i_reg[18] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[3].GPIO_DBus_i_reg[19] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[3].GPIO_DBus_i_reg[19] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[4].GPIO_DBus_i_reg[20] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[4].GPIO_DBus_i_reg[20] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[5].GPIO_DBus_i_reg[21] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[5].GPIO_DBus_i_reg[21] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[6].GPIO_DBus_i_reg[22] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[6].GPIO_DBus_i_reg[22] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[7].GPIO_DBus_i_reg[23] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[7].GPIO_DBus_i_reg[23] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[8].GPIO_DBus_i_reg[24] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[8].GPIO_DBus_i_reg[24] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[9].GPIO_DBus_i_reg[25] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[9].GPIO_DBus_i_reg[25] ),
         .\Not_Dual.gpio_Data_Out_reg[0] (bus2ip_rnw),
         .\Not_Dual.gpio_OE_reg[0] (\Not_Dual.gpio_OE_reg[0] ),
         .Q(Q),
@@ -2555,23 +2555,23 @@ module design_1_axi_gpio_1_0_slave_attachment
     \Not_Dual.gpio_OE_reg[0] ,
     s_axi_wready,
     GPIO_DBus_i,
-    \Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[17] ,
-    \Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[18] ,
-    \Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[19] ,
-    \Not_Dual.READ_REG_GEN[4].GPIO_DBus_i_reg[20] ,
-    \Not_Dual.READ_REG_GEN[5].GPIO_DBus_i_reg[21] ,
-    \Not_Dual.READ_REG_GEN[6].GPIO_DBus_i_reg[22] ,
-    \Not_Dual.READ_REG_GEN[7].GPIO_DBus_i_reg[23] ,
-    \Not_Dual.READ_REG_GEN[8].GPIO_DBus_i_reg[24] ,
-    \Not_Dual.READ_REG_GEN[9].GPIO_DBus_i_reg[25] ,
-    \Not_Dual.READ_REG_GEN[10].GPIO_DBus_i_reg[26] ,
-    \Not_Dual.READ_REG_GEN[11].GPIO_DBus_i_reg[27] ,
-    \Not_Dual.READ_REG_GEN[12].GPIO_DBus_i_reg[28] ,
-    \Not_Dual.READ_REG_GEN[13].GPIO_DBus_i_reg[29] ,
-    \Not_Dual.READ_REG_GEN[14].GPIO_DBus_i_reg[30] ,
-    \Not_Dual.READ_REG_GEN[15].GPIO_DBus_i_reg[31] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[1].GPIO_DBus_i_reg[17] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[2].GPIO_DBus_i_reg[18] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[3].GPIO_DBus_i_reg[19] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[4].GPIO_DBus_i_reg[20] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[5].GPIO_DBus_i_reg[21] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[6].GPIO_DBus_i_reg[22] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[7].GPIO_DBus_i_reg[23] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[8].GPIO_DBus_i_reg[24] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[9].GPIO_DBus_i_reg[25] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[10].GPIO_DBus_i_reg[26] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[11].GPIO_DBus_i_reg[27] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[12].GPIO_DBus_i_reg[28] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[13].GPIO_DBus_i_reg[29] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[14].GPIO_DBus_i_reg[30] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[15].GPIO_DBus_i_reg[31] ,
     D,
-    \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[16] ,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[16] ,
     s_axi_rdata,
     s_axi_aclk,
     s_axi_arvalid,
@@ -2600,23 +2600,23 @@ module design_1_axi_gpio_1_0_slave_attachment
   output [0:0]\Not_Dual.gpio_OE_reg[0] ;
   output s_axi_wready;
   output [0:0]GPIO_DBus_i;
-  output \Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[17] ;
-  output \Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[18] ;
-  output \Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[19] ;
-  output \Not_Dual.READ_REG_GEN[4].GPIO_DBus_i_reg[20] ;
-  output \Not_Dual.READ_REG_GEN[5].GPIO_DBus_i_reg[21] ;
-  output \Not_Dual.READ_REG_GEN[6].GPIO_DBus_i_reg[22] ;
-  output \Not_Dual.READ_REG_GEN[7].GPIO_DBus_i_reg[23] ;
-  output \Not_Dual.READ_REG_GEN[8].GPIO_DBus_i_reg[24] ;
-  output \Not_Dual.READ_REG_GEN[9].GPIO_DBus_i_reg[25] ;
-  output \Not_Dual.READ_REG_GEN[10].GPIO_DBus_i_reg[26] ;
-  output \Not_Dual.READ_REG_GEN[11].GPIO_DBus_i_reg[27] ;
-  output \Not_Dual.READ_REG_GEN[12].GPIO_DBus_i_reg[28] ;
-  output \Not_Dual.READ_REG_GEN[13].GPIO_DBus_i_reg[29] ;
-  output \Not_Dual.READ_REG_GEN[14].GPIO_DBus_i_reg[30] ;
-  output \Not_Dual.READ_REG_GEN[15].GPIO_DBus_i_reg[31] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[1].GPIO_DBus_i_reg[17] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[2].GPIO_DBus_i_reg[18] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[3].GPIO_DBus_i_reg[19] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[4].GPIO_DBus_i_reg[20] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[5].GPIO_DBus_i_reg[21] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[6].GPIO_DBus_i_reg[22] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[7].GPIO_DBus_i_reg[23] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[8].GPIO_DBus_i_reg[24] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[9].GPIO_DBus_i_reg[25] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[10].GPIO_DBus_i_reg[26] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[11].GPIO_DBus_i_reg[27] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[12].GPIO_DBus_i_reg[28] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[13].GPIO_DBus_i_reg[29] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[14].GPIO_DBus_i_reg[30] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[15].GPIO_DBus_i_reg[31] ;
   output [15:0]D;
-  output \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[16] ;
+  output \Not_Dual.ALLIN1_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[16] ;
   output [15:0]s_axi_rdata;
   input s_axi_aclk;
   input s_axi_arvalid;
@@ -2642,22 +2642,22 @@ module design_1_axi_gpio_1_0_slave_attachment
   wire GPIO_xferAck_i;
   wire [3:0]\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 ;
   wire \MEM_DECODE_GEN[0].cs_out_i_reg[0] ;
-  wire \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[16] ;
-  wire \Not_Dual.READ_REG_GEN[10].GPIO_DBus_i_reg[26] ;
-  wire \Not_Dual.READ_REG_GEN[11].GPIO_DBus_i_reg[27] ;
-  wire \Not_Dual.READ_REG_GEN[12].GPIO_DBus_i_reg[28] ;
-  wire \Not_Dual.READ_REG_GEN[13].GPIO_DBus_i_reg[29] ;
-  wire \Not_Dual.READ_REG_GEN[14].GPIO_DBus_i_reg[30] ;
-  wire \Not_Dual.READ_REG_GEN[15].GPIO_DBus_i_reg[31] ;
-  wire \Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[17] ;
-  wire \Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[18] ;
-  wire \Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[19] ;
-  wire \Not_Dual.READ_REG_GEN[4].GPIO_DBus_i_reg[20] ;
-  wire \Not_Dual.READ_REG_GEN[5].GPIO_DBus_i_reg[21] ;
-  wire \Not_Dual.READ_REG_GEN[6].GPIO_DBus_i_reg[22] ;
-  wire \Not_Dual.READ_REG_GEN[7].GPIO_DBus_i_reg[23] ;
-  wire \Not_Dual.READ_REG_GEN[8].GPIO_DBus_i_reg[24] ;
-  wire \Not_Dual.READ_REG_GEN[9].GPIO_DBus_i_reg[25] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[16] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[10].GPIO_DBus_i_reg[26] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[11].GPIO_DBus_i_reg[27] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[12].GPIO_DBus_i_reg[28] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[13].GPIO_DBus_i_reg[29] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[14].GPIO_DBus_i_reg[30] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[15].GPIO_DBus_i_reg[31] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[1].GPIO_DBus_i_reg[17] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[2].GPIO_DBus_i_reg[18] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[3].GPIO_DBus_i_reg[19] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[4].GPIO_DBus_i_reg[20] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[5].GPIO_DBus_i_reg[21] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[6].GPIO_DBus_i_reg[22] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[7].GPIO_DBus_i_reg[23] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[8].GPIO_DBus_i_reg[24] ;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[9].GPIO_DBus_i_reg[25] ;
   wire \Not_Dual.gpio_Data_Out_reg[0] ;
   wire [0:0]\Not_Dual.gpio_OE_reg[0] ;
   wire [15:0]Q;
@@ -2773,22 +2773,22 @@ module design_1_axi_gpio_1_0_slave_attachment
         .GPIO_xferAck_i(GPIO_xferAck_i),
         .\INCLUDE_DPHASE_TIMER.dpto_cnt_reg[3] (\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 ),
         .\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 (\MEM_DECODE_GEN[0].cs_out_i_reg[0] ),
-        .\Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[16] (\Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[16] ),
-        .\Not_Dual.READ_REG_GEN[10].GPIO_DBus_i_reg[26] (\Not_Dual.READ_REG_GEN[10].GPIO_DBus_i_reg[26] ),
-        .\Not_Dual.READ_REG_GEN[11].GPIO_DBus_i_reg[27] (\Not_Dual.READ_REG_GEN[11].GPIO_DBus_i_reg[27] ),
-        .\Not_Dual.READ_REG_GEN[12].GPIO_DBus_i_reg[28] (\Not_Dual.READ_REG_GEN[12].GPIO_DBus_i_reg[28] ),
-        .\Not_Dual.READ_REG_GEN[13].GPIO_DBus_i_reg[29] (\Not_Dual.READ_REG_GEN[13].GPIO_DBus_i_reg[29] ),
-        .\Not_Dual.READ_REG_GEN[14].GPIO_DBus_i_reg[30] (\Not_Dual.READ_REG_GEN[14].GPIO_DBus_i_reg[30] ),
-        .\Not_Dual.READ_REG_GEN[15].GPIO_DBus_i_reg[31] (\Not_Dual.READ_REG_GEN[15].GPIO_DBus_i_reg[31] ),
-        .\Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[17] (\Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[17] ),
-        .\Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[18] (\Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[18] ),
-        .\Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[19] (\Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[19] ),
-        .\Not_Dual.READ_REG_GEN[4].GPIO_DBus_i_reg[20] (\Not_Dual.READ_REG_GEN[4].GPIO_DBus_i_reg[20] ),
-        .\Not_Dual.READ_REG_GEN[5].GPIO_DBus_i_reg[21] (\Not_Dual.READ_REG_GEN[5].GPIO_DBus_i_reg[21] ),
-        .\Not_Dual.READ_REG_GEN[6].GPIO_DBus_i_reg[22] (\Not_Dual.READ_REG_GEN[6].GPIO_DBus_i_reg[22] ),
-        .\Not_Dual.READ_REG_GEN[7].GPIO_DBus_i_reg[23] (\Not_Dual.READ_REG_GEN[7].GPIO_DBus_i_reg[23] ),
-        .\Not_Dual.READ_REG_GEN[8].GPIO_DBus_i_reg[24] (\Not_Dual.READ_REG_GEN[8].GPIO_DBus_i_reg[24] ),
-        .\Not_Dual.READ_REG_GEN[9].GPIO_DBus_i_reg[25] (\Not_Dual.READ_REG_GEN[9].GPIO_DBus_i_reg[25] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[16] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[16] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[10].GPIO_DBus_i_reg[26] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[10].GPIO_DBus_i_reg[26] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[11].GPIO_DBus_i_reg[27] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[11].GPIO_DBus_i_reg[27] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[12].GPIO_DBus_i_reg[28] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[12].GPIO_DBus_i_reg[28] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[13].GPIO_DBus_i_reg[29] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[13].GPIO_DBus_i_reg[29] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[14].GPIO_DBus_i_reg[30] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[14].GPIO_DBus_i_reg[30] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[15].GPIO_DBus_i_reg[31] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[15].GPIO_DBus_i_reg[31] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[1].GPIO_DBus_i_reg[17] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[1].GPIO_DBus_i_reg[17] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[2].GPIO_DBus_i_reg[18] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[2].GPIO_DBus_i_reg[18] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[3].GPIO_DBus_i_reg[19] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[3].GPIO_DBus_i_reg[19] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[4].GPIO_DBus_i_reg[20] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[4].GPIO_DBus_i_reg[20] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[5].GPIO_DBus_i_reg[21] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[5].GPIO_DBus_i_reg[21] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[6].GPIO_DBus_i_reg[22] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[6].GPIO_DBus_i_reg[22] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[7].GPIO_DBus_i_reg[23] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[7].GPIO_DBus_i_reg[23] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[8].GPIO_DBus_i_reg[24] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[8].GPIO_DBus_i_reg[24] ),
+        .\Not_Dual.ALLIN1_ND.READ_REG_GEN[9].GPIO_DBus_i_reg[25] (\Not_Dual.ALLIN1_ND.READ_REG_GEN[9].GPIO_DBus_i_reg[25] ),
         .\Not_Dual.gpio_Data_In_reg[0] (Q),
         .\Not_Dual.gpio_OE_reg[0] (\Not_Dual.gpio_OE_reg[0] ),
         .Q({bus2ip_addr[0],bus2ip_addr[5],bus2ip_addr[6]}),
@@ -3208,8 +3208,8 @@ module glbl ();
     reg JTAG_USER_TDO3_GLBL = 1'bz;
     reg JTAG_USER_TDO4_GLBL = 1'bz;
 
-    assign (weak1, weak0) GSR = GSR_int;
-    assign (weak1, weak0) GTS = GTS_int;
+    assign (strong1, weak0) GSR = GSR_int;
+    assign (strong1, weak0) GTS = GTS_int;
     assign (weak1, weak0) PRLD = PRLD_int;
 
     initial begin

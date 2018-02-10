@@ -65,12 +65,12 @@
 /************************************************************************/
 
 
-IPv4 ipServer = {192,168,1,190};//{0,0,0,0} for DHCP
+IPv4 ipServer = {0,0,0,0};//{192,168,1,140};//{0,0,0,0} for DHCP
 
 unsigned short portServer = DEIPcK::iPersonalPorts44 + 300;     // port 44300
 
 // Specify the SSID
-const char * szSsid = "HTC One_M8 4996";
+const char * szSsid = "SM-G950U5F0";
 
 // select 1 for the security you want, or none for no security
 #define USE_WPA2_PASSPHRASE
@@ -82,7 +82,7 @@ const char * szSsid = "HTC One_M8 4996";
 // modify the security key to what you have.
 #if defined(USE_WPA2_PASSPHRASE)
 
-    const char * szPassPhrase = "bajracha";
+    const char * szPassPhrase = "atal1234";
     #define WiFiConnectMacro() deIPcK.wfConnect(szSsid, szPassPhrase, &status)
 
 #elif defined(USE_WPA2_KEY)

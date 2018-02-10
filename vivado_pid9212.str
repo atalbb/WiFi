@@ -1,0 +1,137 @@
+/*
+
+Vivado v2017.1 (64-bit)
+SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+
+Process ID: 9212
+License: Customer
+
+Current time: 	2/10/18 2:23:43 PM EST
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1536x864
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 57 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2017.1/tps/win64/jre
+JVM executable location: 	C:/Xilinx/Vivado/2017.1/tps/win64/jre/bin/java.exe
+Java library paths: C:/Xilinx/Vivado/2017.1/bin/unwrapped/win64.o;C:/WINDOWS/Sun/Java/bin;C:/WINDOWS/system32;C:/WINDOWS;C:/Xilinx/Vivado/2017.1/bin;C:/Xilinx/Vivado/2017.1/lib/win64.o;C:/Xilinx/Vivado/2017.1/tps/win64/jre/bin/server;C:/Xilinx/Vivado/2017.1/tps/win64/jre/bin;C:/Xilinx/SDK/2017.1/bin;C:/Xilinx/Vivado/2017.1/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2017.1/ids_lite/ISE/lib/nt64;C:/Xilinx/Vivado_HLS/2017.1/bin;C:/WINDOWS/system32;C:/WINDOWS;C:/WINDOWS/System32/Wbem;C:/WINDOWS/System32/WindowsPowerShell/v1.0/;C:/Users/BAJRACHA/AppData/Local/Microsoft/WindowsApps;;C:/Xilinx/Vivado/2017.1/tps/mingw/6.2.0/win64.o/nt/bin;C:/Xilinx/Vivado/2017.1/tps/mingw/6.2.0/win64.o/nt/libexec/gcc/x86_64-w64-mingw32/6.2.0;.
+
+User name: 	BAJRACHA
+User home directory: C:/Users/BAJRACHA
+User working directory: C:/College/Thesis/VivadoProjects/PMOD_WIFI_OLD
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2017.1
+RDI_DATADIR: C:/Xilinx/Vivado/2017.1/data
+RDI_BINDIR: C:/Xilinx/Vivado/2017.1/bin
+
+User preferences location: C:/Users/BAJRACHA/AppData/Roaming/Xilinx/Vivado
+Vivado preferences directory: C:/Users/BAJRACHA/AppData/Roaming/Xilinx/Vivado/2017.1/vivado.xml
+Vivado layouts directory: C:/Users/BAJRACHA/AppData/Roaming/Xilinx/Vivado/2017.1/layouts
+PlanAhead jar location: 	C:/Xilinx/Vivado/2017.1/lib/classes/planAhead.jar
+Vivado Look & Feel: 	[Synthetica - the extended Synth Look and Feel. - ui.g.i.H]
+Engine tmp dir: 	C:/College/Thesis/VivadoProjects/PMOD_WIFI_OLD/.Xil/Vivado-9212-DESKTOP-F64LM88
+
+GUI allocated memory:	175 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 468 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bs:g (cg:JFrame):  Open Project : addNotify
+// Opening Vivado Project: C:\College\Thesis\VivadoProjects\PMOD_WIFI_OLD\PMOD_WIFI.xpr. Version: Vivado v2017.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/College/Thesis/VivadoProjects/PMOD_WIFI_OLD/PMOD_WIFI.xpr 
+// [GUI Memory]: 50 MB (+49997kb) [00:00:08]
+// [Engine Memory]: 461 MB (+331479kb) [00:00:08]
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// HMemoryUtils.trashcanNow. Engine heap size: 490 MB. GUI used memory: 33 MB. Current time: 2/10/18 2:23:45 PM EST
+// TclEventType: IP_LOCK_CHANGE
+// [Engine Memory]: 495 MB (+11846kb) [00:00:13]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 532 MB (+12420kb) [00:00:18]
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 626 MB (+71248kb) [00:00:20]
+// [GUI Memory]: 71 MB (+18834kb) [00:00:23]
+// [GUI Memory]: 77 MB (+2680kb) [00:00:24]
+// Tcl Message: open_project C:/College/Thesis/VivadoProjects/PMOD_WIFI_OLD/PMOD_WIFI.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/College/Thesis/vivado-library-master'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.1/data/ip'. 
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// Project name: PMOD_WIFI; location: C:/College/Thesis/VivadoProjects/PMOD_WIFI_OLD; part: xc7a100tcsg324-1
+// [Engine Memory]: 668 MB (+10631kb) [00:00:28]
+// Tcl Message: open_project: Time (s): cpu = 00:00:32 ; elapsed = 00:00:21 . Memory (MB): peak = 885.863 ; gain = 187.367 
+dismissDialog("Open Project"); // bs:g (cg:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 69 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Z:JMenu (JPopupMenu:JComponent, Popup:JWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // ac:JMenuItem (JPopupMenu:JComponent, Popup:JWindow)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// aa:p (cg:JFrame): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, aa:p)
+dismissDialog("Launch SDK"); // aa:p (cg:JFrame)
+// Tcl Message: launch_sdk -workspace C:/College/Thesis/VivadoProjects/PMOD_WIFI_OLD/PMOD_WIFI.sdk -hwspec C:/College/Thesis/VivadoProjects/PMOD_WIFI_OLD/PMOD_WIFI.sdk/design_1_wrapper.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace C:/College/Thesis/VivadoProjects/PMOD_WIFI_OLD/PMOD_WIFI.sdk -hwspec C:/College/Thesis/VivadoProjects/PMOD_WIFI_OLD/PMOD_WIFI.sdk/design_1_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+// HMemoryUtils.trashcanNow. Engine heap size: 683 MB. GUI used memory: 51 MB. Current time: 2/10/18 2:25:20 PM EST
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 4000 ms.
+// [GUI Memory]: 81 MB (+245kb) [00:06:01]
+// [GUI Memory]: 86 MB (+1729kb) [00:08:16]
+// [GUI Memory]: 92 MB (+1674kb) [00:12:41]
+// [GUI Memory]: 97 MB (+269kb) [00:17:42]
+// [GUI Memory]: 104 MB (+2245kb) [00:27:57]
+// HMemoryUtils.trashcanNow. Engine heap size: 696 MB. GUI used memory: 50 MB. Current time: 2/10/18 2:55:20 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 696 MB. GUI used memory: 48 MB. Current time: 2/10/18 3:25:21 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 696 MB. GUI used memory: 47 MB. Current time: 2/10/18 3:55:21 PM EST

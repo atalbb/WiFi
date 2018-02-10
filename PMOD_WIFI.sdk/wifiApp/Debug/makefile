@@ -47,7 +47,7 @@ all: wifiApp.elf secondary-outputs
 wifiApp.elf: $(OBJS) ../src/lscript.ld $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MicroBlaze g++ linker'
-	mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../myWiFiScan_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "wifiApp.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../wifiApp_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "wifiApp.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -1,10 +1,10 @@
--- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
--- Date        : Mon May 15 14:44:10 2017
+-- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+-- Date        : Wed Dec 13 13:52:27 2017
 -- Host        : LAPTOP-L1N8U9P6 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               c:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.srcs/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0_stub.vhdl
+--               C:/College/Thesis/VivadoProjects/PMOD_WIFI_OLD/PMOD_WIFI.srcs/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0_stub.vhdl
 -- Design      : design_1_lmb_bram_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tcsg324-1
@@ -38,6 +38,6 @@ attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
 attribute black_box_pad_pin of stub : architecture is "clka,rsta,ena,wea[3:0],addra[31:0],dina[31:0],douta[31:0],clkb,rstb,enb,web[3:0],addrb[31:0],dinb[31:0],doutb[31:0]";
 attribute x_core_info : string;
-attribute x_core_info of stub : architecture is "blk_mem_gen_v8_3_4,Vivado 2016.3";
+attribute x_core_info of stub : architecture is "blk_mem_gen_v8_3_6,Vivado 2017.2";
 begin
 end;

@@ -1,40 +1,40 @@
 #-----------------------------------------------------------
-# Vivado v2016.3 (64-bit)
-# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
-# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
-# Start of session at: Mon May 15 14:36:37 2017
-# Process ID: 11308
-# Current directory: C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.runs/design_1_ilmb_v10_0_synth_1
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Wed Dec 13 13:42:51 2017
+# Process ID: 11928
+# Current directory: C:/College/Thesis/VivadoProjects/PMOD_WIFI_OLD/PMOD_WIFI.runs/design_1_ilmb_v10_0_synth_1
 # Command line: vivado.exe -log design_1_ilmb_v10_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_ilmb_v10_0.tcl
-# Log file: C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.runs/design_1_ilmb_v10_0_synth_1/design_1_ilmb_v10_0.vds
-# Journal file: C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.runs/design_1_ilmb_v10_0_synth_1\vivado.jou
+# Log file: C:/College/Thesis/VivadoProjects/PMOD_WIFI_OLD/PMOD_WIFI.runs/design_1_ilmb_v10_0_synth_1/design_1_ilmb_v10_0.vds
+# Journal file: C:/College/Thesis/VivadoProjects/PMOD_WIFI_OLD/PMOD_WIFI.runs/design_1_ilmb_v10_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source design_1_ilmb_v10_0.tcl -notrace
-Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 357.688 ; gain = 147.438
-INFO: [Synth 8-638] synthesizing module 'design_1_ilmb_v10_0' [c:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.srcs/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/synth/design_1_ilmb_v10_0.vhd:89]
-INFO: [Synth 8-638] synthesizing module 'lmb_v10' [c:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.srcs/sources_1/bd/design_1/ipshared/162e/hdl/lmb_v10_v3_0_vh_rfs.vhd:140]
-INFO: [Synth 8-638] synthesizing module 'FDS' [C:/Xilinx/Vivado/2016.3/scripts/rt/data/unisim_comp.v:4087]
-INFO: [Synth 8-256] done synthesizing module 'FDS' (1#1) [C:/Xilinx/Vivado/2016.3/scripts/rt/data/unisim_comp.v:4087]
-INFO: [Synth 8-256] done synthesizing module 'lmb_v10' (2#1) [c:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.srcs/sources_1/bd/design_1/ipshared/162e/hdl/lmb_v10_v3_0_vh_rfs.vhd:140]
-INFO: [Synth 8-256] done synthesizing module 'design_1_ilmb_v10_0' (3#1) [c:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.srcs/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/synth/design_1_ilmb_v10_0.vhd:89]
-Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 395.023 ; gain = 184.773
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 395.023 ; gain = 184.773
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 405.207 ; gain = 86.648
+INFO: [Synth 8-638] synthesizing module 'design_1_ilmb_v10_0' [c:/College/Thesis/VivadoProjects/PMOD_WIFI_OLD/PMOD_WIFI.srcs/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/synth/design_1_ilmb_v10_0.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'lmb_v10' [c:/College/Thesis/VivadoProjects/PMOD_WIFI_OLD/PMOD_WIFI.srcs/sources_1/bd/design_1/ipshared/162e/hdl/lmb_v10_v3_0_vh_rfs.vhd:140]
+INFO: [Synth 8-638] synthesizing module 'FDS' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:4087]
+INFO: [Synth 8-256] done synthesizing module 'FDS' (1#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:4087]
+INFO: [Synth 8-256] done synthesizing module 'lmb_v10' (2#1) [c:/College/Thesis/VivadoProjects/PMOD_WIFI_OLD/PMOD_WIFI.srcs/sources_1/bd/design_1/ipshared/162e/hdl/lmb_v10_v3_0_vh_rfs.vhd:140]
+INFO: [Synth 8-256] done synthesizing module 'design_1_ilmb_v10_0' (3#1) [c:/College/Thesis/VivadoProjects/PMOD_WIFI_OLD/PMOD_WIFI.srcs/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/synth/design_1_ilmb_v10_0.vhd:89]
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 455.664 ; gain = 137.105
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 455.664 ; gain = 137.105
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 610.668 ; gain = 0.000
-Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 610.668 ; gain = 400.418
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 610.668 ; gain = 400.418
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 610.668 ; gain = 400.418
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 610.668 ; gain = 400.418
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 610.668 ; gain = 400.418
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 631.980 ; gain = 421.730
-Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 631.980 ; gain = 421.730
-Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 642.664 ; gain = 432.414
-Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 642.664 ; gain = 432.414
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 642.664 ; gain = 432.414
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 642.664 ; gain = 432.414
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 642.664 ; gain = 432.414
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 642.664 ; gain = 432.414
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 642.664 ; gain = 432.414
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.287 . Memory (MB): peak = 702.426 ; gain = 1.375
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 702.426 ; gain = 383.867
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 702.426 ; gain = 383.867
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 702.426 ; gain = 383.867
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 702.426 ; gain = 383.867
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 702.426 ; gain = 383.867
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:59 . Memory (MB): peak = 751.738 ; gain = 433.180
+Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:59 . Memory (MB): peak = 751.738 ; gain = 433.180
+Finished Technology Mapping : Time (s): cpu = 00:00:47 ; elapsed = 00:00:59 . Memory (MB): peak = 761.270 ; gain = 442.711
+Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:01:01 . Memory (MB): peak = 761.270 ; gain = 442.711
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:01:01 . Memory (MB): peak = 761.270 ; gain = 442.711
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:48 ; elapsed = 00:01:01 . Memory (MB): peak = 761.270 ; gain = 442.711
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:48 ; elapsed = 00:01:01 . Memory (MB): peak = 761.270 ; gain = 442.711
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:01:01 . Memory (MB): peak = 761.270 ; gain = 442.711
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:01:01 . Memory (MB): peak = 761.270 ; gain = 442.711
 
 Report Cell Usage: 
 +------+-----+------+
@@ -42,5 +42,5 @@ Report Cell Usage:
 +------+-----+------+
 |1     |FDS  |     1|
 +------+-----+------+
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 642.664 ; gain = 432.414
-synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 668.785 ; gain = 388.691
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:01:01 . Memory (MB): peak = 761.270 ; gain = 442.711
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:01:05 . Memory (MB): peak = 772.359 ; gain = 455.031

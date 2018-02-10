@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Sat Feb 10 14:23:23 2018
+# Process ID: 9212
+# Current directory: C:/College/Thesis/VivadoProjects/PMOD_WIFI_OLD
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5440 C:\College\Thesis\VivadoProjects\PMOD_WIFI_OLD\PMOD_WIFI.xpr
+# Log file: C:/College/Thesis/VivadoProjects/PMOD_WIFI_OLD/vivado.log
+# Journal file: C:/College/Thesis/VivadoProjects/PMOD_WIFI_OLD\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/College/Thesis/VivadoProjects/PMOD_WIFI_OLD/PMOD_WIFI.xpr
+update_compile_order -fileset sources_1
+launch_sdk -workspace C:/College/Thesis/VivadoProjects/PMOD_WIFI_OLD/PMOD_WIFI.sdk -hwspec C:/College/Thesis/VivadoProjects/PMOD_WIFI_OLD/PMOD_WIFI.sdk/design_1_wrapper.hdf

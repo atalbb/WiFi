@@ -58,10 +58,10 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_gp
 # IP: bd/design_1/ip/design_1_axi_mem_intercon_0/design_1_axi_mem_intercon_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_mem_intercon_0 || ORIG_REF_NAME==design_1_axi_mem_intercon_0}]
 
-# IP: bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xbar_0 || ORIG_REF_NAME==design_1_xbar_0}]
-
 # IP: bd/design_1/ip/design_1_xbar_1/design_1_xbar_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xbar_1 || ORIG_REF_NAME==design_1_xbar_1}]
+
+# IP: bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xbar_0 || ORIG_REF_NAME==design_1_xbar_0}]
 
 # XDC: bd/design_1/design_1_ooc.xdc

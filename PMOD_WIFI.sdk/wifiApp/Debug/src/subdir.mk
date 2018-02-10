@@ -20,7 +20,7 @@ OBJS += \
 src/%.o: ../src/%.cc
 	@echo 'Building file: $<'
 	@echo 'Invoking: MicroBlaze g++ compiler'
-	mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"$@" -I../../myWiFiScan_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"$@" -I../../wifiApp_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

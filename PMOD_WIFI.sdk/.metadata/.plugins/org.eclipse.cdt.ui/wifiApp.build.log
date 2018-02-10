@@ -1,40 +1,6 @@
-17:15:03 **** Incremental Build of configuration Debug for project wifiApp ****
+16:12:31 **** Incremental Build of configuration Debug for project wifiApp ****
 make all 
-'Building file: ../src/main.cc'
-'Invoking: MicroBlaze g++ compiler'
-mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../myWiFiScan_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
-In file included from ../../myWiFiScan_bsp/microblaze_0/include/DEIPcK/utility/fpga/../../../MRF24G/utility/ud_inc/internal/wf_global_includes.h:44:0,
-                 from ../../myWiFiScan_bsp/microblaze_0/include/DEIPcK/utility/fpga/System.h:64,
-                 from ../../myWiFiScan_bsp/microblaze_0/include/DEIPcK/utility/System.h:54,
-                 from ../../myWiFiScan_bsp/microblaze_0/include/DEIPcK/utility/deIP.h:59,
-                 from ../../myWiFiScan_bsp/microblaze_0/include/DEIPcK/DEIPcK.h:64,
-                 from ../../myWiFiScan_bsp/microblaze_0/include/PmodWIFI.h:2,
-                 from ../src/main.cc:52:
-../../myWiFiScan_bsp/microblaze_0/include/DEIPcK/utility/fpga/../../../MRF24G/utility/ud_inc/internal/../../wf_customize.h:50:0: warning: "INLINE" redefined
- #define INLINE
- ^
-In file included from ../../myWiFiScan_bsp/microblaze_0/include/DEIPcK/utility/fpga/System.h:62:0,
-                 from ../../myWiFiScan_bsp/microblaze_0/include/DEIPcK/utility/System.h:54,
-                 from ../../myWiFiScan_bsp/microblaze_0/include/DEIPcK/utility/deIP.h:59,
-                 from ../../myWiFiScan_bsp/microblaze_0/include/DEIPcK/DEIPcK.h:64,
-                 from ../../myWiFiScan_bsp/microblaze_0/include/PmodWIFI.h:2,
-                 from ../src/main.cc:52:
-../../myWiFiScan_bsp/microblaze_0/include/xil_io.h:94:0: note: this is the location of the previous definition
- #define INLINE inline
- ^
-'Finished building: ../src/main.cc'
-' '
-'Building target: wifiApp.elf'
-'Invoking: MicroBlaze g++ linker'
-mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../myWiFiScan_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -o "wifiApp.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
-'Finished building target: wifiApp.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size wifiApp.elf  |tee "wifiApp.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 373896	   8696	  20672	 403264	  62740	wifiApp.elf
-'Finished building: wifiApp.elf.size'
-' '
+make: Nothing to be done for `all'.
 
-17:15:04 Build Finished (took 859ms)
+16:12:32 Build Finished (took 210ms)
 

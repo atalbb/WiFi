@@ -1,7 +1,7 @@
-Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-| Date         : Mon May 15 14:36:34 2017
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Wed Dec 13 13:46:18 2017
 | Host         : LAPTOP-L1N8U9P6 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_axi_emc_0_0_utilization_synth.rpt -pb design_1_axi_emc_0_0_utilization_synth.pb
 | Design       : design_1_axi_emc_0_0
@@ -30,15 +30,15 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |  747 |     0 |     63400 |  1.18 |
-|   LUT as Logic             |  483 |     0 |     63400 |  0.76 |
+| Slice LUTs*                |  737 |     0 |     63400 |  1.16 |
+|   LUT as Logic             |  473 |     0 |     63400 |  0.75 |
 |   LUT as Memory            |  264 |     0 |     19000 |  1.39 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
 |     LUT as Shift Register  |  264 |     0 |           |       |
 | Slice Registers            |  452 |    89 |    126800 |  0.36 |
 |   Register as Flip Flop    |  452 |    89 |    126800 |  0.36 |
 |   Register as Latch        |    0 |     0 |    126800 |  0.00 |
-| F7 Muxes                   |  146 |     0 |     31700 |  0.46 |
+| F7 Muxes                   |  137 |     0 |     31700 |  0.43 |
 | F8 Muxes                   |   66 |     0 |     15850 |  0.42 |
 +----------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -150,14 +150,14 @@ Table of Contents
 +----------+------+---------------------+
 | FDRE     |  380 |        Flop & Latch |
 | SRLC32E  |  264 |  Distributed Memory |
-| LUT6     |  204 |                 LUT |
-| MUXF7    |  146 |               MuxFx |
-| LUT3     |  119 |                 LUT |
-| LUT2     |  119 |                 LUT |
-| LUT5     |   83 |                 LUT |
+| LUT6     |  192 |                 LUT |
+| MUXF7    |  137 |               MuxFx |
+| LUT2     |  117 |                 LUT |
+| LUT3     |  116 |                 LUT |
+| LUT5     |   80 |                 LUT |
 | FDSE     |   72 |        Flop & Latch |
+| LUT4     |   67 |                 LUT |
 | MUXF8    |   66 |               MuxFx |
-| LUT4     |   63 |                 LUT |
 | CARRY4   |   22 |          CarryLogic |
 | LUT1     |    4 |                 LUT |
 +----------+------+---------------------+

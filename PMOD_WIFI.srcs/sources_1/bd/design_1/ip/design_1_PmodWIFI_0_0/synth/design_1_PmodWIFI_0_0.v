@@ -50,7 +50,7 @@
 // IP VLNV: digilentinc.com:IP:PmodWIFI:1.0
 // IP Revision: 25
 
-(* X_CORE_INFO = "PmodWIFI,Vivado 2016.3" *)
+(* X_CORE_INFO = "PmodWIFI,Vivado 2017.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_PmodWIFI_0_0,PmodWIFI,{}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_PmodWIFI_0_0 (

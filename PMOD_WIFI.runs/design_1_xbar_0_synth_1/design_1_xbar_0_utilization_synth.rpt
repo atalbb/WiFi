@@ -1,7 +1,7 @@
-Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-| Date         : Mon May 15 14:51:42 2017
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Wed Dec 13 13:58:42 2017
 | Host         : LAPTOP-L1N8U9P6 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_xbar_0_utilization_synth.rpt -pb design_1_xbar_0_utilization_synth.pb
 | Design       : design_1_xbar_0
@@ -30,8 +30,8 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |  293 |     0 |     63400 |  0.46 |
-|   LUT as Logic             |  290 |     0 |     63400 |  0.46 |
+| Slice LUTs*                |  290 |     0 |     63400 |  0.46 |
+|   LUT as Logic             |  287 |     0 |     63400 |  0.45 |
 |   LUT as Memory            |    3 |     0 |     19000 |  0.02 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
 |     LUT as Shift Register  |    3 |     0 |           |       |
@@ -150,14 +150,13 @@ Table of Contents
 +----------+------+---------------------+
 | FDRE     |  288 |        Flop & Latch |
 | LUT3     |  130 |                 LUT |
-| LUT2     |  121 |                 LUT |
-| LUT6     |   81 |                 LUT |
+| LUT2     |  119 |                 LUT |
+| LUT6     |   80 |                 LUT |
 | LUT5     |   46 |                 LUT |
-| LUT4     |   43 |                 LUT |
+| LUT4     |   44 |                 LUT |
 | FDSE     |   17 |        Flop & Latch |
 | LUT1     |   10 |                 LUT |
-| SRLC32E  |    2 |  Distributed Memory |
-| SRL16E   |    1 |  Distributed Memory |
+| SRLC32E  |    3 |  Distributed Memory |
 +----------+------+---------------------+
 
 

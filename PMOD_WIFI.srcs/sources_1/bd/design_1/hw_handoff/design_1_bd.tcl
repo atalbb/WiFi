@@ -20,7 +20,7 @@ set script_folder [_tcl::get_script_folder]
 ################################################################
 # Check if script is running in correct Vivado version.
 ################################################################
-set scripts_vivado_version 2016.3
+set scripts_vivado_version 2017.2
 set current_vivado_version [version -short]
 
 if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
@@ -127,7 +127,7 @@ proc create_hier_cell_microblaze_0_local_memory { parentCell nameHier } {
   variable script_folder
 
   if { $parentCell eq "" || $nameHier eq "" } {
-     catch {common::send_msg_id "BD_TCL-102" "ERROR" create_hier_cell_microblaze_0_local_memory() - Empty argument(s)!"}
+     catch {common::send_msg_id "BD_TCL-102" "ERROR" "create_hier_cell_microblaze_0_local_memory() - Empty argument(s)!"}
      return
   }
 
@@ -184,7 +184,12 @@ CONFIG.C_ECC {0} \
   # Create instance: lmb_bram, and set properties
   set lmb_bram [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.3 lmb_bram ]
   set_property -dict [ list \
+CONFIG.Enable_B {Use_ENB_Pin} \
 CONFIG.Memory_Type {True_Dual_Port_RAM} \
+CONFIG.Port_B_Clock {100} \
+CONFIG.Port_B_Enable_Rate {100} \
+CONFIG.Port_B_Write_Rate {50} \
+CONFIG.Use_RSTB_Pin {true} \
 CONFIG.use_bram_block {BRAM_Controller} \
  ] $lmb_bram
 
@@ -265,6 +270,15 @@ CONFIG.USE_BOARD_FLOW {true} \
   # Create instance: axi_emc_0, and set properties
   set axi_emc_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_emc:3.0 axi_emc_0 ]
   set_property -dict [ list \
+CONFIG.C_MEM0_TYPE {1} \
+CONFIG.C_TAVDV_PS_MEM_0 {70000} \
+CONFIG.C_TCEDV_PS_MEM_0 {70000} \
+CONFIG.C_THZCE_PS_MEM_0 {8000} \
+CONFIG.C_THZOE_PS_MEM_0 {8000} \
+CONFIG.C_TPACC_PS_FLASH_0 {70000} \
+CONFIG.C_TWC_PS_MEM_0 {85000} \
+CONFIG.C_TWPH_PS_MEM_0 {10000} \
+CONFIG.C_TWP_PS_MEM_0 {55000} \
 CONFIG.EMC_BOARD_INTERFACE {cellular_ram} \
 CONFIG.USE_BOARD_FLOW {true} \
  ] $axi_emc_0
@@ -300,43 +314,27 @@ CONFIG.USE_BOARD_FLOW {true} \
  ] $axi_uartlite_0
 
   # Create instance: clk_wiz_0, and set properties
-  set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.3 clk_wiz_0 ]
+  set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.4 clk_wiz_0 ]
   set_property -dict [ list \
-CONFIG.CLKOUT1_JITTER {130.958} \
-CONFIG.CLKOUT1_PHASE_ERROR {98.575} \
 CONFIG.CLKOUT2_JITTER {114.829} \
 CONFIG.CLKOUT2_PHASE_ERROR {98.575} \
-CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {200.000} \
+CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {100.000} \
 CONFIG.CLKOUT2_USED {false} \
 CONFIG.CLKOUT3_JITTER {118.758} \
 CONFIG.CLKOUT3_PHASE_ERROR {98.575} \
-CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {166.667} \
+CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {100.000} \
 CONFIG.CLKOUT3_USED {false} \
 CONFIG.CLK_IN1_BOARD_INTERFACE {sys_clock} \
-CONFIG.MMCM_CLKFBOUT_MULT_F {10.000} \
-CONFIG.MMCM_CLKIN1_PERIOD {10.0} \
-CONFIG.MMCM_CLKIN2_PERIOD {10.0} \
-CONFIG.MMCM_CLKOUT0_DIVIDE_F {10.000} \
+CONFIG.MMCM_CLKIN1_PERIOD {10.000} \
+CONFIG.MMCM_CLKIN2_PERIOD {10.000} \
 CONFIG.MMCM_CLKOUT1_DIVIDE {1} \
 CONFIG.MMCM_CLKOUT2_DIVIDE {1} \
-CONFIG.MMCM_COMPENSATION {ZHOLD} \
 CONFIG.MMCM_DIVCLK_DIVIDE {1} \
 CONFIG.NUM_OUT_CLKS {1} \
 CONFIG.RESET_BOARD_INTERFACE {reset} \
 CONFIG.RESET_PORT {resetn} \
 CONFIG.RESET_TYPE {ACTIVE_LOW} \
 CONFIG.USE_BOARD_FLOW {true} \
- ] $clk_wiz_0
-
-  # Need to retain value_src of defaults
-  set_property -dict [ list \
-CONFIG.CLKOUT1_JITTER.VALUE_SRC {DEFAULT} \
-CONFIG.CLKOUT1_PHASE_ERROR.VALUE_SRC {DEFAULT} \
-CONFIG.MMCM_CLKFBOUT_MULT_F.VALUE_SRC {DEFAULT} \
-CONFIG.MMCM_CLKIN1_PERIOD.VALUE_SRC {DEFAULT} \
-CONFIG.MMCM_CLKIN2_PERIOD.VALUE_SRC {DEFAULT} \
-CONFIG.MMCM_CLKOUT0_DIVIDE_F.VALUE_SRC {DEFAULT} \
-CONFIG.MMCM_COMPENSATION.VALUE_SRC {DEFAULT} \
  ] $clk_wiz_0
 
   # Create instance: mdm_1, and set properties
@@ -434,68 +432,6 @@ CONFIG.USE_BOARD_FLOW {true} \
   create_bd_addr_seg -range 0x00008000 -offset 0x00000000 [get_bd_addr_spaces microblaze_0/Instruction] [get_bd_addr_segs microblaze_0_local_memory/ilmb_bram_if_cntlr/SLMB/Mem] SEG_ilmb_bram_if_cntlr_Mem
   create_bd_addr_seg -range 0x00010000 -offset 0x41200000 [get_bd_addr_spaces microblaze_0/Data] [get_bd_addr_segs microblaze_0_axi_intc/S_AXI/Reg] SEG_microblaze_0_axi_intc_Reg
 
-  # Perform GUI Layout
-  regenerate_bd_layout -layout_string {
-   guistr: "# # String gsaved with Nlview 6.6.5b  2016-09-06 bk=1.3687 VDI=39 GEI=35 GUI=JA:1.6
-#  -string -flagsOSRD
-preplace port led_16bits -pg 1 -y 720 -defaultsOSRD
-preplace port ja -pg 1 -y 550 -defaultsOSRD
-preplace port dip_switches_16bits -pg 1 -y 850 -defaultsOSRD
-preplace port sys_clock -pg 1 -y 720 -defaultsOSRD
-preplace port usb_uart -pg 1 -y 300 -defaultsOSRD
-preplace port rgb_led -pg 1 -y 740 -defaultsOSRD
-preplace port cellular_ram -pg 1 -y 170 -defaultsOSRD
-preplace port reset -pg 1 -y 770 -defaultsOSRD
-preplace inst rst_clk_wiz_0_100M -pg 1 -lvl 2 -y 790 -defaultsOSRD
-preplace inst axi_gpio_sw -pg 1 -lvl 7 -y 850 -defaultsOSRD
-preplace inst axi_emc_0 -pg 1 -lvl 7 -y 170 -defaultsOSRD
-preplace inst microblaze_0_axi_periph -pg 1 -lvl 3 -y 450 -defaultsOSRD
-preplace inst axi_gpio_led -pg 1 -lvl 7 -y 730 -defaultsOSRD
-preplace inst microblaze_0_xlconcat -pg 1 -lvl 3 -y 760 -defaultsOSRD
-preplace inst mdm_1 -pg 1 -lvl 4 -y 900 -defaultsOSRD
-preplace inst microblaze_0_axi_intc -pg 1 -lvl 4 -y 430 -defaultsOSRD
-preplace inst microblaze_0 -pg 1 -lvl 5 -y 420 -defaultsOSRD
-preplace inst axi_uartlite_0 -pg 1 -lvl 7 -y 310 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 710 -defaultsOSRD
-preplace inst axi_mem_intercon -pg 1 -lvl 6 -y 140 -defaultsOSRD
-preplace inst PmodWIFI_0 -pg 1 -lvl 7 -y 560 -defaultsOSRD
-preplace inst microblaze_0_local_memory -pg 1 -lvl 6 -y 410 -defaultsOSRD
-preplace netloc microblaze_0_axi_periph_M04_AXI 1 3 4 850 550 NJ 550 NJ 550 NJ
-preplace netloc rst_clk_wiz_0_100M_bus_struct_reset 1 2 4 520J 130 NJ 130 NJ 130 1620
-preplace netloc clk_wiz_0_locked 1 1 1 180
-preplace netloc microblaze_0_intr 1 3 1 870J
-preplace netloc microblaze_0_Clk 1 1 6 190 90 540 90 900 90 1150 90 1640 310 1920
-preplace netloc microblaze_0_axi_periph_M06_AXI 1 3 4 830 710 NJ 710 NJ 710 NJ
-preplace netloc microblaze_0_axi_periph_M03_AXI 1 3 4 860J 530 NJ 530 NJ 530 N
-preplace netloc PmodWIFI_0_Pmod_out 1 7 1 NJ
-preplace netloc microblaze_0_intc_axi 1 3 1 N
-preplace netloc microblaze_0_interrupt 1 4 1 1140
-preplace netloc axi_mem_intercon_M00_AXI 1 6 1 N
-preplace netloc microblaze_0_M_AXI_DC 1 5 1 1610
-preplace netloc microblaze_0_ilmb_1 1 5 1 N
-preplace netloc sys_clock_1 1 0 1 NJ
-preplace netloc microblaze_0_axi_periph_M05_AXI 1 3 4 840 570 NJ 570 NJ 570 NJ
-preplace netloc microblaze_0_axi_dp 1 2 4 560 170 NJ 170 NJ 170 1600
-preplace netloc PmodWIFI_0_WF_INTERRUPT 1 2 6 560 810 NJ 810 NJ 810 NJ 810 1910J 920 2220
-preplace netloc axi_emc_0_EMC_INTF 1 7 1 NJ
-preplace netloc microblaze_0_axi_periph_M01_AXI 1 3 4 850 290 NJ 290 NJ 290 NJ
-preplace netloc microblaze_0_M_AXI_IC 1 5 1 1650
-preplace netloc axi_gpio_0_GPIO2 1 7 1 NJ
-preplace netloc rst_clk_wiz_0_100M_mb_reset 1 2 3 530 140 880 140 1130J
-preplace netloc axi_gpio_0_GPIO 1 7 1 NJ
-preplace netloc axi_uartlite_0_UART 1 7 1 NJ
-preplace netloc microblaze_0_axi_periph_M07_AXI 1 3 4 820 830 NJ 830 NJ 830 NJ
-preplace netloc microblaze_0_axi_periph_M02_AXI 1 3 4 860J 320 NJ 320 NJ 320 1910
-preplace netloc microblaze_0_dlmb_1 1 5 1 N
-preplace netloc axi_gpio_1_GPIO 1 7 1 NJ
-preplace netloc microblaze_0_debug 1 4 1 1160
-preplace netloc reset_1 1 0 2 20 770 NJ
-preplace netloc mdm_1_debug_sys_rst 1 1 4 190 960 NJ 960 NJ 960 1140
-preplace netloc rst_clk_wiz_0_100M_peripheral_aresetn 1 2 5 550 150 890 150 NJ 150 1630 300 1930
-preplace netloc rst_clk_wiz_0_100M_interconnect_aresetn 1 2 4 510 110 NJ 110 NJ 110 NJ
-levelinfo -pg 1 0 100 350 690 1020 1380 1780 2080 2240 -top 0 -bot 970
-",
-}
 
   # Restore current instance
   current_bd_instance $oldCurInst
