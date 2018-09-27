@@ -1,10 +1,10 @@
-// Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-// Date        : Mon May 15 14:45:46 2017
+// Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+// Date        : Wed Dec 13 13:56:42 2017
 // Host        : LAPTOP-L1N8U9P6 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.srcs/sources_1/bd/design_1/ip/design_1_PmodWIFI_0_0/design_1_PmodWIFI_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_PmodWIFI_0_0 -prefix
+//               design_1_PmodWIFI_0_0_ design_1_PmodWIFI_0_0_sim_netlist.v
 // Design      : design_1_PmodWIFI_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,436 +12,51 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_PmodWIFI_0_0,PmodWIFI,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "PmodWIFI,Vivado 2016.3" *) 
-(* NotValidForBitStream *)
-module design_1_PmodWIFI_0_0
-   (AXI_LITE_GPIO_WFCS_araddr,
-    AXI_LITE_GPIO_WFCS_arready,
-    AXI_LITE_GPIO_WFCS_arvalid,
-    AXI_LITE_GPIO_WFCS_awaddr,
-    AXI_LITE_GPIO_WFCS_awready,
-    AXI_LITE_GPIO_WFCS_awvalid,
-    AXI_LITE_GPIO_WFCS_bready,
-    AXI_LITE_GPIO_WFCS_bresp,
-    AXI_LITE_GPIO_WFCS_bvalid,
-    AXI_LITE_GPIO_WFCS_rdata,
-    AXI_LITE_GPIO_WFCS_rready,
-    AXI_LITE_GPIO_WFCS_rresp,
-    AXI_LITE_GPIO_WFCS_rvalid,
-    AXI_LITE_GPIO_WFCS_wdata,
-    AXI_LITE_GPIO_WFCS_wready,
-    AXI_LITE_GPIO_WFCS_wstrb,
-    AXI_LITE_GPIO_WFCS_wvalid,
-    AXI_LITE_SPI_araddr,
-    AXI_LITE_SPI_arready,
-    AXI_LITE_SPI_arvalid,
-    AXI_LITE_SPI_awaddr,
-    AXI_LITE_SPI_awready,
-    AXI_LITE_SPI_awvalid,
-    AXI_LITE_SPI_bready,
-    AXI_LITE_SPI_bresp,
-    AXI_LITE_SPI_bvalid,
-    AXI_LITE_SPI_rdata,
-    AXI_LITE_SPI_rready,
-    AXI_LITE_SPI_rresp,
-    AXI_LITE_SPI_rvalid,
-    AXI_LITE_SPI_wdata,
-    AXI_LITE_SPI_wready,
-    AXI_LITE_SPI_wstrb,
-    AXI_LITE_SPI_wvalid,
-    AXI_LITE_WFGPIO_araddr,
-    AXI_LITE_WFGPIO_arready,
-    AXI_LITE_WFGPIO_arvalid,
-    AXI_LITE_WFGPIO_awaddr,
-    AXI_LITE_WFGPIO_awready,
-    AXI_LITE_WFGPIO_awvalid,
-    AXI_LITE_WFGPIO_bready,
-    AXI_LITE_WFGPIO_bresp,
-    AXI_LITE_WFGPIO_bvalid,
-    AXI_LITE_WFGPIO_rdata,
-    AXI_LITE_WFGPIO_rready,
-    AXI_LITE_WFGPIO_rresp,
-    AXI_LITE_WFGPIO_rvalid,
-    AXI_LITE_WFGPIO_wdata,
-    AXI_LITE_WFGPIO_wready,
-    AXI_LITE_WFGPIO_wstrb,
-    AXI_LITE_WFGPIO_wvalid,
-    Pmod_out_pin10_i,
-    Pmod_out_pin10_o,
-    Pmod_out_pin10_t,
-    Pmod_out_pin1_i,
-    Pmod_out_pin1_o,
-    Pmod_out_pin1_t,
-    Pmod_out_pin2_i,
-    Pmod_out_pin2_o,
-    Pmod_out_pin2_t,
-    Pmod_out_pin3_i,
-    Pmod_out_pin3_o,
-    Pmod_out_pin3_t,
-    Pmod_out_pin4_i,
-    Pmod_out_pin4_o,
-    Pmod_out_pin4_t,
-    Pmod_out_pin7_i,
-    Pmod_out_pin7_o,
-    Pmod_out_pin7_t,
-    Pmod_out_pin8_i,
-    Pmod_out_pin8_o,
-    Pmod_out_pin8_t,
-    Pmod_out_pin9_i,
-    Pmod_out_pin9_o,
-    Pmod_out_pin9_t,
-    S_AXI_TIMER_araddr,
-    S_AXI_TIMER_arready,
-    S_AXI_TIMER_arvalid,
-    S_AXI_TIMER_awaddr,
-    S_AXI_TIMER_awready,
-    S_AXI_TIMER_awvalid,
-    S_AXI_TIMER_bready,
-    S_AXI_TIMER_bresp,
-    S_AXI_TIMER_bvalid,
-    S_AXI_TIMER_rdata,
-    S_AXI_TIMER_rready,
-    S_AXI_TIMER_rresp,
-    S_AXI_TIMER_rvalid,
-    S_AXI_TIMER_wdata,
-    S_AXI_TIMER_wready,
-    S_AXI_TIMER_wstrb,
-    S_AXI_TIMER_wvalid,
-    WF_INTERRUPT,
-    s_axi_aclk,
-    s_axi_aresetn);
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS ARADDR" *) input [8:0]AXI_LITE_GPIO_WFCS_araddr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS ARREADY" *) output AXI_LITE_GPIO_WFCS_arready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS ARVALID" *) input AXI_LITE_GPIO_WFCS_arvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS AWADDR" *) input [8:0]AXI_LITE_GPIO_WFCS_awaddr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS AWREADY" *) output AXI_LITE_GPIO_WFCS_awready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS AWVALID" *) input AXI_LITE_GPIO_WFCS_awvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS BREADY" *) input AXI_LITE_GPIO_WFCS_bready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS BRESP" *) output [1:0]AXI_LITE_GPIO_WFCS_bresp;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS BVALID" *) output AXI_LITE_GPIO_WFCS_bvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS RDATA" *) output [31:0]AXI_LITE_GPIO_WFCS_rdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS RREADY" *) input AXI_LITE_GPIO_WFCS_rready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS RRESP" *) output [1:0]AXI_LITE_GPIO_WFCS_rresp;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS RVALID" *) output AXI_LITE_GPIO_WFCS_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS WDATA" *) input [31:0]AXI_LITE_GPIO_WFCS_wdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS WREADY" *) output AXI_LITE_GPIO_WFCS_wready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS WSTRB" *) input [3:0]AXI_LITE_GPIO_WFCS_wstrb;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS WVALID" *) input AXI_LITE_GPIO_WFCS_wvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI ARADDR" *) input [6:0]AXI_LITE_SPI_araddr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI ARREADY" *) output AXI_LITE_SPI_arready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI ARVALID" *) input AXI_LITE_SPI_arvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI AWADDR" *) input [6:0]AXI_LITE_SPI_awaddr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI AWREADY" *) output AXI_LITE_SPI_awready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI AWVALID" *) input AXI_LITE_SPI_awvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI BREADY" *) input AXI_LITE_SPI_bready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI BRESP" *) output [1:0]AXI_LITE_SPI_bresp;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI BVALID" *) output AXI_LITE_SPI_bvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI RDATA" *) output [31:0]AXI_LITE_SPI_rdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI RREADY" *) input AXI_LITE_SPI_rready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI RRESP" *) output [1:0]AXI_LITE_SPI_rresp;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI RVALID" *) output AXI_LITE_SPI_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI WDATA" *) input [31:0]AXI_LITE_SPI_wdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI WREADY" *) output AXI_LITE_SPI_wready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI WSTRB" *) input [3:0]AXI_LITE_SPI_wstrb;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI WVALID" *) input AXI_LITE_SPI_wvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO ARADDR" *) input [8:0]AXI_LITE_WFGPIO_araddr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO ARREADY" *) output AXI_LITE_WFGPIO_arready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO ARVALID" *) input AXI_LITE_WFGPIO_arvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO AWADDR" *) input [8:0]AXI_LITE_WFGPIO_awaddr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO AWREADY" *) output AXI_LITE_WFGPIO_awready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO AWVALID" *) input AXI_LITE_WFGPIO_awvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO BREADY" *) input AXI_LITE_WFGPIO_bready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO BRESP" *) output [1:0]AXI_LITE_WFGPIO_bresp;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO BVALID" *) output AXI_LITE_WFGPIO_bvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO RDATA" *) output [31:0]AXI_LITE_WFGPIO_rdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO RREADY" *) input AXI_LITE_WFGPIO_rready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO RRESP" *) output [1:0]AXI_LITE_WFGPIO_rresp;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO RVALID" *) output AXI_LITE_WFGPIO_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO WDATA" *) input [31:0]AXI_LITE_WFGPIO_wdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO WREADY" *) output AXI_LITE_WFGPIO_wready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO WSTRB" *) input [3:0]AXI_LITE_WFGPIO_wstrb;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO WVALID" *) input AXI_LITE_WFGPIO_wvalid;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_I" *) input Pmod_out_pin10_i;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_O" *) output Pmod_out_pin10_o;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_T" *) output Pmod_out_pin10_t;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_I" *) input Pmod_out_pin1_i;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_O" *) output Pmod_out_pin1_o;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_T" *) output Pmod_out_pin1_t;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_I" *) input Pmod_out_pin2_i;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_O" *) output Pmod_out_pin2_o;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_T" *) output Pmod_out_pin2_t;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_I" *) input Pmod_out_pin3_i;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_O" *) output Pmod_out_pin3_o;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_T" *) output Pmod_out_pin3_t;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_I" *) input Pmod_out_pin4_i;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_O" *) output Pmod_out_pin4_o;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_T" *) output Pmod_out_pin4_t;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_I" *) input Pmod_out_pin7_i;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_O" *) output Pmod_out_pin7_o;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_T" *) output Pmod_out_pin7_t;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_I" *) input Pmod_out_pin8_i;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_O" *) output Pmod_out_pin8_o;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_T" *) output Pmod_out_pin8_t;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_I" *) input Pmod_out_pin9_i;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_O" *) output Pmod_out_pin9_o;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_T" *) output Pmod_out_pin9_t;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER ARADDR" *) input [4:0]S_AXI_TIMER_araddr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER ARREADY" *) output S_AXI_TIMER_arready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER ARVALID" *) input S_AXI_TIMER_arvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER AWADDR" *) input [4:0]S_AXI_TIMER_awaddr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER AWREADY" *) output S_AXI_TIMER_awready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER AWVALID" *) input S_AXI_TIMER_awvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER BREADY" *) input S_AXI_TIMER_bready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER BRESP" *) output [1:0]S_AXI_TIMER_bresp;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER BVALID" *) output S_AXI_TIMER_bvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER RDATA" *) output [31:0]S_AXI_TIMER_rdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER RREADY" *) input S_AXI_TIMER_rready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER RRESP" *) output [1:0]S_AXI_TIMER_rresp;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER RVALID" *) output S_AXI_TIMER_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER WDATA" *) input [31:0]S_AXI_TIMER_wdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER WREADY" *) output S_AXI_TIMER_wready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER WSTRB" *) input [3:0]S_AXI_TIMER_wstrb;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER WVALID" *) input S_AXI_TIMER_wvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 INTR.WF_INTERRUPT INTERRUPT" *) output WF_INTERRUPT;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.S_AXI_ACLK CLK" *) input s_axi_aclk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.S_AXI_ARESETN RST" *) input s_axi_aresetn;
-
-  wire [8:0]AXI_LITE_GPIO_WFCS_araddr;
-  wire AXI_LITE_GPIO_WFCS_arready;
-  wire AXI_LITE_GPIO_WFCS_arvalid;
-  wire [8:0]AXI_LITE_GPIO_WFCS_awaddr;
-  wire AXI_LITE_GPIO_WFCS_awready;
-  wire AXI_LITE_GPIO_WFCS_awvalid;
-  wire AXI_LITE_GPIO_WFCS_bready;
-  wire [1:0]AXI_LITE_GPIO_WFCS_bresp;
-  wire AXI_LITE_GPIO_WFCS_bvalid;
-  wire [31:0]AXI_LITE_GPIO_WFCS_rdata;
-  wire AXI_LITE_GPIO_WFCS_rready;
-  wire [1:0]AXI_LITE_GPIO_WFCS_rresp;
-  wire AXI_LITE_GPIO_WFCS_rvalid;
-  wire [31:0]AXI_LITE_GPIO_WFCS_wdata;
-  wire AXI_LITE_GPIO_WFCS_wready;
-  wire [3:0]AXI_LITE_GPIO_WFCS_wstrb;
-  wire AXI_LITE_GPIO_WFCS_wvalid;
-  wire [6:0]AXI_LITE_SPI_araddr;
-  wire AXI_LITE_SPI_arready;
-  wire AXI_LITE_SPI_arvalid;
-  wire [6:0]AXI_LITE_SPI_awaddr;
-  wire AXI_LITE_SPI_awready;
-  wire AXI_LITE_SPI_awvalid;
-  wire AXI_LITE_SPI_bready;
-  wire [1:0]AXI_LITE_SPI_bresp;
-  wire AXI_LITE_SPI_bvalid;
-  wire [31:0]AXI_LITE_SPI_rdata;
-  wire AXI_LITE_SPI_rready;
-  wire [1:0]AXI_LITE_SPI_rresp;
-  wire AXI_LITE_SPI_rvalid;
-  wire [31:0]AXI_LITE_SPI_wdata;
-  wire AXI_LITE_SPI_wready;
-  wire [3:0]AXI_LITE_SPI_wstrb;
-  wire AXI_LITE_SPI_wvalid;
-  wire [8:0]AXI_LITE_WFGPIO_araddr;
-  wire AXI_LITE_WFGPIO_arready;
-  wire AXI_LITE_WFGPIO_arvalid;
-  wire [8:0]AXI_LITE_WFGPIO_awaddr;
-  wire AXI_LITE_WFGPIO_awready;
-  wire AXI_LITE_WFGPIO_awvalid;
-  wire AXI_LITE_WFGPIO_bready;
-  wire [1:0]AXI_LITE_WFGPIO_bresp;
-  wire AXI_LITE_WFGPIO_bvalid;
-  wire [31:0]AXI_LITE_WFGPIO_rdata;
-  wire AXI_LITE_WFGPIO_rready;
-  wire [1:0]AXI_LITE_WFGPIO_rresp;
-  wire AXI_LITE_WFGPIO_rvalid;
-  wire [31:0]AXI_LITE_WFGPIO_wdata;
-  wire AXI_LITE_WFGPIO_wready;
-  wire [3:0]AXI_LITE_WFGPIO_wstrb;
-  wire AXI_LITE_WFGPIO_wvalid;
-  wire Pmod_out_pin10_i;
-  wire Pmod_out_pin10_o;
-  wire Pmod_out_pin10_t;
-  wire Pmod_out_pin1_i;
-  wire Pmod_out_pin1_o;
-  wire Pmod_out_pin1_t;
-  wire Pmod_out_pin2_i;
-  wire Pmod_out_pin2_o;
-  wire Pmod_out_pin2_t;
-  wire Pmod_out_pin3_i;
-  wire Pmod_out_pin3_o;
-  wire Pmod_out_pin3_t;
-  wire Pmod_out_pin4_i;
-  wire Pmod_out_pin4_o;
-  wire Pmod_out_pin4_t;
-  wire Pmod_out_pin7_i;
-  wire Pmod_out_pin7_o;
-  wire Pmod_out_pin7_t;
-  wire Pmod_out_pin8_i;
-  wire Pmod_out_pin8_o;
-  wire Pmod_out_pin8_t;
-  wire Pmod_out_pin9_i;
-  wire Pmod_out_pin9_o;
-  wire Pmod_out_pin9_t;
-  wire [4:0]S_AXI_TIMER_araddr;
-  wire S_AXI_TIMER_arready;
-  wire S_AXI_TIMER_arvalid;
-  wire [4:0]S_AXI_TIMER_awaddr;
-  wire S_AXI_TIMER_awready;
-  wire S_AXI_TIMER_awvalid;
-  wire S_AXI_TIMER_bready;
-  wire [1:0]S_AXI_TIMER_bresp;
-  wire S_AXI_TIMER_bvalid;
-  wire [31:0]S_AXI_TIMER_rdata;
-  wire S_AXI_TIMER_rready;
-  wire [1:0]S_AXI_TIMER_rresp;
-  wire S_AXI_TIMER_rvalid;
-  wire [31:0]S_AXI_TIMER_wdata;
-  wire S_AXI_TIMER_wready;
-  wire [3:0]S_AXI_TIMER_wstrb;
-  wire S_AXI_TIMER_wvalid;
-  wire WF_INTERRUPT;
-  wire s_axi_aclk;
-  wire s_axi_aresetn;
-
-  (* HW_HANDOFF = "PmodWIFI.hwdef" *) 
-  design_1_PmodWIFI_0_0_PmodWIFI inst
-       (.AXI_LITE_GPIO_WFCS_araddr(AXI_LITE_GPIO_WFCS_araddr),
-        .AXI_LITE_GPIO_WFCS_arready(AXI_LITE_GPIO_WFCS_arready),
-        .AXI_LITE_GPIO_WFCS_arvalid(AXI_LITE_GPIO_WFCS_arvalid),
-        .AXI_LITE_GPIO_WFCS_awaddr(AXI_LITE_GPIO_WFCS_awaddr),
-        .AXI_LITE_GPIO_WFCS_awready(AXI_LITE_GPIO_WFCS_awready),
-        .AXI_LITE_GPIO_WFCS_awvalid(AXI_LITE_GPIO_WFCS_awvalid),
-        .AXI_LITE_GPIO_WFCS_bready(AXI_LITE_GPIO_WFCS_bready),
-        .AXI_LITE_GPIO_WFCS_bresp(AXI_LITE_GPIO_WFCS_bresp),
-        .AXI_LITE_GPIO_WFCS_bvalid(AXI_LITE_GPIO_WFCS_bvalid),
-        .AXI_LITE_GPIO_WFCS_rdata(AXI_LITE_GPIO_WFCS_rdata),
-        .AXI_LITE_GPIO_WFCS_rready(AXI_LITE_GPIO_WFCS_rready),
-        .AXI_LITE_GPIO_WFCS_rresp(AXI_LITE_GPIO_WFCS_rresp),
-        .AXI_LITE_GPIO_WFCS_rvalid(AXI_LITE_GPIO_WFCS_rvalid),
-        .AXI_LITE_GPIO_WFCS_wdata(AXI_LITE_GPIO_WFCS_wdata),
-        .AXI_LITE_GPIO_WFCS_wready(AXI_LITE_GPIO_WFCS_wready),
-        .AXI_LITE_GPIO_WFCS_wstrb(AXI_LITE_GPIO_WFCS_wstrb),
-        .AXI_LITE_GPIO_WFCS_wvalid(AXI_LITE_GPIO_WFCS_wvalid),
-        .AXI_LITE_SPI_araddr(AXI_LITE_SPI_araddr),
-        .AXI_LITE_SPI_arready(AXI_LITE_SPI_arready),
-        .AXI_LITE_SPI_arvalid(AXI_LITE_SPI_arvalid),
-        .AXI_LITE_SPI_awaddr(AXI_LITE_SPI_awaddr),
-        .AXI_LITE_SPI_awready(AXI_LITE_SPI_awready),
-        .AXI_LITE_SPI_awvalid(AXI_LITE_SPI_awvalid),
-        .AXI_LITE_SPI_bready(AXI_LITE_SPI_bready),
-        .AXI_LITE_SPI_bresp(AXI_LITE_SPI_bresp),
-        .AXI_LITE_SPI_bvalid(AXI_LITE_SPI_bvalid),
-        .AXI_LITE_SPI_rdata(AXI_LITE_SPI_rdata),
-        .AXI_LITE_SPI_rready(AXI_LITE_SPI_rready),
-        .AXI_LITE_SPI_rresp(AXI_LITE_SPI_rresp),
-        .AXI_LITE_SPI_rvalid(AXI_LITE_SPI_rvalid),
-        .AXI_LITE_SPI_wdata(AXI_LITE_SPI_wdata),
-        .AXI_LITE_SPI_wready(AXI_LITE_SPI_wready),
-        .AXI_LITE_SPI_wstrb(AXI_LITE_SPI_wstrb),
-        .AXI_LITE_SPI_wvalid(AXI_LITE_SPI_wvalid),
-        .AXI_LITE_WFGPIO_araddr(AXI_LITE_WFGPIO_araddr),
-        .AXI_LITE_WFGPIO_arready(AXI_LITE_WFGPIO_arready),
-        .AXI_LITE_WFGPIO_arvalid(AXI_LITE_WFGPIO_arvalid),
-        .AXI_LITE_WFGPIO_awaddr(AXI_LITE_WFGPIO_awaddr),
-        .AXI_LITE_WFGPIO_awready(AXI_LITE_WFGPIO_awready),
-        .AXI_LITE_WFGPIO_awvalid(AXI_LITE_WFGPIO_awvalid),
-        .AXI_LITE_WFGPIO_bready(AXI_LITE_WFGPIO_bready),
-        .AXI_LITE_WFGPIO_bresp(AXI_LITE_WFGPIO_bresp),
-        .AXI_LITE_WFGPIO_bvalid(AXI_LITE_WFGPIO_bvalid),
-        .AXI_LITE_WFGPIO_rdata(AXI_LITE_WFGPIO_rdata),
-        .AXI_LITE_WFGPIO_rready(AXI_LITE_WFGPIO_rready),
-        .AXI_LITE_WFGPIO_rresp(AXI_LITE_WFGPIO_rresp),
-        .AXI_LITE_WFGPIO_rvalid(AXI_LITE_WFGPIO_rvalid),
-        .AXI_LITE_WFGPIO_wdata(AXI_LITE_WFGPIO_wdata),
-        .AXI_LITE_WFGPIO_wready(AXI_LITE_WFGPIO_wready),
-        .AXI_LITE_WFGPIO_wstrb(AXI_LITE_WFGPIO_wstrb),
-        .AXI_LITE_WFGPIO_wvalid(AXI_LITE_WFGPIO_wvalid),
-        .Pmod_out_pin10_i(Pmod_out_pin10_i),
-        .Pmod_out_pin10_o(Pmod_out_pin10_o),
-        .Pmod_out_pin10_t(Pmod_out_pin10_t),
-        .Pmod_out_pin1_i(Pmod_out_pin1_i),
-        .Pmod_out_pin1_o(Pmod_out_pin1_o),
-        .Pmod_out_pin1_t(Pmod_out_pin1_t),
-        .Pmod_out_pin2_i(Pmod_out_pin2_i),
-        .Pmod_out_pin2_o(Pmod_out_pin2_o),
-        .Pmod_out_pin2_t(Pmod_out_pin2_t),
-        .Pmod_out_pin3_i(Pmod_out_pin3_i),
-        .Pmod_out_pin3_o(Pmod_out_pin3_o),
-        .Pmod_out_pin3_t(Pmod_out_pin3_t),
-        .Pmod_out_pin4_i(Pmod_out_pin4_i),
-        .Pmod_out_pin4_o(Pmod_out_pin4_o),
-        .Pmod_out_pin4_t(Pmod_out_pin4_t),
-        .Pmod_out_pin7_i(Pmod_out_pin7_i),
-        .Pmod_out_pin7_o(Pmod_out_pin7_o),
-        .Pmod_out_pin7_t(Pmod_out_pin7_t),
-        .Pmod_out_pin8_i(Pmod_out_pin8_i),
-        .Pmod_out_pin8_o(Pmod_out_pin8_o),
-        .Pmod_out_pin8_t(Pmod_out_pin8_t),
-        .Pmod_out_pin9_i(Pmod_out_pin9_i),
-        .Pmod_out_pin9_o(Pmod_out_pin9_o),
-        .Pmod_out_pin9_t(Pmod_out_pin9_t),
-        .S_AXI_TIMER_araddr(S_AXI_TIMER_araddr),
-        .S_AXI_TIMER_arready(S_AXI_TIMER_arready),
-        .S_AXI_TIMER_arvalid(S_AXI_TIMER_arvalid),
-        .S_AXI_TIMER_awaddr(S_AXI_TIMER_awaddr),
-        .S_AXI_TIMER_awready(S_AXI_TIMER_awready),
-        .S_AXI_TIMER_awvalid(S_AXI_TIMER_awvalid),
-        .S_AXI_TIMER_bready(S_AXI_TIMER_bready),
-        .S_AXI_TIMER_bresp(S_AXI_TIMER_bresp),
-        .S_AXI_TIMER_bvalid(S_AXI_TIMER_bvalid),
-        .S_AXI_TIMER_rdata(S_AXI_TIMER_rdata),
-        .S_AXI_TIMER_rready(S_AXI_TIMER_rready),
-        .S_AXI_TIMER_rresp(S_AXI_TIMER_rresp),
-        .S_AXI_TIMER_rvalid(S_AXI_TIMER_rvalid),
-        .S_AXI_TIMER_wdata(S_AXI_TIMER_wdata),
-        .S_AXI_TIMER_wready(S_AXI_TIMER_wready),
-        .S_AXI_TIMER_wstrb(S_AXI_TIMER_wstrb),
-        .S_AXI_TIMER_wvalid(S_AXI_TIMER_wvalid),
-        .WF_INTERRUPT(WF_INTERRUPT),
-        .s_axi_aclk(s_axi_aclk),
-        .s_axi_aresetn(s_axi_aresetn));
-endmodule
-
-(* ORIG_REF_NAME = "GPIO_Core" *) 
 module design_1_PmodWIFI_0_0_GPIO_Core
    (GPIO_xferAck_i,
     gpio_xferAck_Reg,
-    gpio_Data_In,
     ip2bus_data,
     gpio_io_t,
     gpio_io_o,
     ip2bus_rdack_i,
-    ip2bus_wrack_i,
+    ip2bus_wrack_i_D1_reg,
     rst,
     s_axi_aclk,
-    \Not_Dual.gpio_OE_reg[0]_0 ,
-    \bus2ip_addr_i_reg[2] ,
     bus2ip_rnw_i_reg,
+    bus2ip_rnw_i_reg_0,
     bus2ip_rnw,
     bus2ip_cs,
+    \bus2ip_addr_i_reg[2] ,
+    \MEM_DECODE_GEN[0].cs_out_i_reg[0] ,
+    bus2ip_rnw_i_reg_1,
     gpio_io_i);
   output GPIO_xferAck_i;
   output gpio_xferAck_Reg;
-  output gpio_Data_In;
   output [0:0]ip2bus_data;
   output [0:0]gpio_io_t;
   output [0:0]gpio_io_o;
   output ip2bus_rdack_i;
-  output ip2bus_wrack_i;
+  output ip2bus_wrack_i_D1_reg;
   input rst;
   input s_axi_aclk;
-  input \Not_Dual.gpio_OE_reg[0]_0 ;
-  input \bus2ip_addr_i_reg[2] ;
   input bus2ip_rnw_i_reg;
+  input bus2ip_rnw_i_reg_0;
   input bus2ip_rnw;
   input bus2ip_cs;
+  input \bus2ip_addr_i_reg[2] ;
+  input \MEM_DECODE_GEN[0].cs_out_i_reg[0] ;
+  input bus2ip_rnw_i_reg_1;
   input [0:0]gpio_io_i;
 
   wire GPIO_xferAck_i;
-  wire \Not_Dual.gpio_OE_reg[0]_0 ;
+  wire \MEM_DECODE_GEN[0].cs_out_i_reg[0] ;
+  wire \Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i[31]_i_1_n_0 ;
   wire \bus2ip_addr_i_reg[2] ;
   wire bus2ip_cs;
   wire bus2ip_rnw;
   wire bus2ip_rnw_i_reg;
+  wire bus2ip_rnw_i_reg_0;
+  wire bus2ip_rnw_i_reg_1;
   wire gpio_Data_In;
   wire [0:0]gpio_io_i;
   wire gpio_io_i_d2;
@@ -451,20 +66,30 @@ module design_1_PmodWIFI_0_0_GPIO_Core
   wire iGPIO_xferAck;
   wire [0:0]ip2bus_data;
   wire ip2bus_rdack_i;
-  wire ip2bus_wrack_i;
+  wire ip2bus_wrack_i_D1_reg;
   wire rst;
   wire s_axi_aclk;
 
+  LUT6 #(
+    .INIT(64'h00000000AFA0A0CC)) 
+    \Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i[31]_i_1 
+       (.I0(gpio_Data_In),
+        .I1(gpio_io_o),
+        .I2(\bus2ip_addr_i_reg[2] ),
+        .I3(gpio_io_t),
+        .I4(\MEM_DECODE_GEN[0].cs_out_i_reg[0] ),
+        .I5(bus2ip_rnw_i_reg_1),
+        .O(\Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i[31]_i_1_n_0 ));
+  FDRE \Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[31] 
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .D(\Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i[31]_i_1_n_0 ),
+        .Q(ip2bus_data),
+        .R(1'b0));
   design_1_PmodWIFI_0_0_cdc_sync \Not_Dual.INPUT_DOUBLE_REGS3 
        (.gpio_io_i(gpio_io_i),
         .s_axi_aclk(s_axi_aclk),
         .scndry_vect_out(gpio_io_i_d2));
-  FDRE \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[31] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(\Not_Dual.gpio_OE_reg[0]_0 ),
-        .Q(ip2bus_data),
-        .R(1'b0));
   FDRE \Not_Dual.gpio_Data_In_reg[0] 
        (.C(s_axi_aclk),
         .CE(1'b1),
@@ -476,7 +101,7 @@ module design_1_PmodWIFI_0_0_GPIO_Core
     \Not_Dual.gpio_Data_Out_reg[0] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(bus2ip_rnw_i_reg),
+        .D(bus2ip_rnw_i_reg_0),
         .Q(gpio_io_o),
         .R(rst));
   FDSE #(
@@ -484,7 +109,7 @@ module design_1_PmodWIFI_0_0_GPIO_Core
     \Not_Dual.gpio_OE_reg[0] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(\bus2ip_addr_i_reg[2] ),
+        .D(bus2ip_rnw_i_reg),
         .Q(gpio_io_t),
         .S(rst));
   FDRE gpio_xferAck_Reg_reg
@@ -495,11 +120,11 @@ module design_1_PmodWIFI_0_0_GPIO_Core
         .R(rst));
   (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
-    .INIT(8'h10)) 
+    .INIT(8'h02)) 
     iGPIO_xferAck_i_1
-       (.I0(gpio_xferAck_Reg),
-        .I1(GPIO_xferAck_i),
-        .I2(bus2ip_cs),
+       (.I0(bus2ip_cs),
+        .I1(gpio_xferAck_Reg),
+        .I2(GPIO_xferAck_i),
         .O(iGPIO_xferAck));
   FDRE iGPIO_xferAck_reg
        (.C(s_axi_aclk),
@@ -519,7 +144,7 @@ module design_1_PmodWIFI_0_0_GPIO_Core
     ip2bus_wrack_i_D1_i_1
        (.I0(GPIO_xferAck_i),
         .I1(bus2ip_rnw),
-        .O(ip2bus_wrack_i));
+        .O(ip2bus_wrack_i_D1_reg));
 endmodule
 
 (* ORIG_REF_NAME = "GPIO_Core" *) 
@@ -528,16 +153,13 @@ module design_1_PmodWIFI_0_0_GPIO_Core__parameterized0
     GPIO_xferAck_i,
     gpio_xferAck_Reg,
     GPIO_intr,
-    Q,
     gpio_io_o,
     gpio_io_t,
     Read_Reg_Rst,
-    \Not_Dual.gpio_OE_reg[3]_0 ,
     s_axi_aclk,
-    \Not_Dual.gpio_OE_reg[2]_0 ,
-    \Not_Dual.gpio_OE_reg[1]_0 ,
-    GPIO_DBus_i,
     bus2ip_reset,
+    \MEM_DECODE_GEN[0].cs_out_i_reg[0] ,
+    Q,
     bus2ip_cs,
     gpio_io_i,
     E,
@@ -547,16 +169,13 @@ module design_1_PmodWIFI_0_0_GPIO_Core__parameterized0
   output GPIO_xferAck_i;
   output gpio_xferAck_Reg;
   output GPIO_intr;
-  output [3:0]Q;
   output [3:0]gpio_io_o;
   output [3:0]gpio_io_t;
   input Read_Reg_Rst;
-  input \Not_Dual.gpio_OE_reg[3]_0 ;
   input s_axi_aclk;
-  input \Not_Dual.gpio_OE_reg[2]_0 ;
-  input \Not_Dual.gpio_OE_reg[1]_0 ;
-  input [0:0]GPIO_DBus_i;
   input bus2ip_reset;
+  input \MEM_DECODE_GEN[0].cs_out_i_reg[0] ;
+  input [0:0]Q;
   input [0:0]bus2ip_cs;
   input [3:0]gpio_io_i;
   input [0:0]E;
@@ -565,20 +184,22 @@ module design_1_PmodWIFI_0_0_GPIO_Core__parameterized0
 
   wire [3:0]D;
   wire [0:0]E;
-  wire [0:0]GPIO_DBus_i;
+  wire [28:28]GPIO_DBus_i;
   wire GPIO_intr;
   wire GPIO_xferAck_i;
+  wire \MEM_DECODE_GEN[0].cs_out_i_reg[0] ;
+  wire \Not_Dual.ALLOUT0_ND.READ_REG_GEN[1].GPIO_DBus_i[29]_i_1_n_0 ;
+  wire \Not_Dual.ALLOUT0_ND.READ_REG_GEN[2].GPIO_DBus_i[30]_i_1_n_0 ;
+  wire \Not_Dual.ALLOUT0_ND.READ_REG_GEN[3].GPIO_DBus_i[31]_i_2_n_0 ;
   wire \Not_Dual.GEN_INTERRUPT.gpio_data_in_xor_reg_reg_n_0_[0] ;
   wire \Not_Dual.GEN_INTERRUPT.gpio_data_in_xor_reg_reg_n_0_[1] ;
   wire \Not_Dual.GEN_INTERRUPT.gpio_data_in_xor_reg_reg_n_0_[3] ;
-  wire \Not_Dual.gpio_OE_reg[1]_0 ;
-  wire \Not_Dual.gpio_OE_reg[2]_0 ;
-  wire \Not_Dual.gpio_OE_reg[3]_0 ;
-  wire [3:0]Q;
+  wire [0:0]Q;
   wire Read_Reg_Rst;
   wire [0:0]bus2ip_cs;
   wire bus2ip_reset;
   wire [0:0]bus2ip_rnw_i_reg;
+  wire [0:3]gpio_Data_In;
   wire [0:3]gpio_data_in_xor;
   wire [3:0]gpio_io_i;
   wire [0:3]gpio_io_i_d2;
@@ -591,6 +212,66 @@ module design_1_PmodWIFI_0_0_GPIO_Core__parameterized0
   wire p_1_in;
   wire s_axi_aclk;
 
+  LUT5 #(
+    .INIT(32'h3232CF00)) 
+    \Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i[28]_i_1 
+       (.I0(gpio_Data_In[0]),
+        .I1(\MEM_DECODE_GEN[0].cs_out_i_reg[0] ),
+        .I2(Q),
+        .I3(gpio_io_o[3]),
+        .I4(gpio_io_t[3]),
+        .O(GPIO_DBus_i));
+  FDRE \Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[28] 
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .D(GPIO_DBus_i),
+        .Q(ip2bus_data[3]),
+        .R(Read_Reg_Rst));
+  LUT5 #(
+    .INIT(32'h3232CF00)) 
+    \Not_Dual.ALLOUT0_ND.READ_REG_GEN[1].GPIO_DBus_i[29]_i_1 
+       (.I0(gpio_Data_In[1]),
+        .I1(\MEM_DECODE_GEN[0].cs_out_i_reg[0] ),
+        .I2(Q),
+        .I3(gpio_io_o[2]),
+        .I4(gpio_io_t[2]),
+        .O(\Not_Dual.ALLOUT0_ND.READ_REG_GEN[1].GPIO_DBus_i[29]_i_1_n_0 ));
+  FDRE \Not_Dual.ALLOUT0_ND.READ_REG_GEN[1].GPIO_DBus_i_reg[29] 
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .D(\Not_Dual.ALLOUT0_ND.READ_REG_GEN[1].GPIO_DBus_i[29]_i_1_n_0 ),
+        .Q(ip2bus_data[2]),
+        .R(Read_Reg_Rst));
+  LUT5 #(
+    .INIT(32'h3232CF00)) 
+    \Not_Dual.ALLOUT0_ND.READ_REG_GEN[2].GPIO_DBus_i[30]_i_1 
+       (.I0(gpio_Data_In[2]),
+        .I1(\MEM_DECODE_GEN[0].cs_out_i_reg[0] ),
+        .I2(Q),
+        .I3(gpio_io_o[1]),
+        .I4(gpio_io_t[1]),
+        .O(\Not_Dual.ALLOUT0_ND.READ_REG_GEN[2].GPIO_DBus_i[30]_i_1_n_0 ));
+  FDRE \Not_Dual.ALLOUT0_ND.READ_REG_GEN[2].GPIO_DBus_i_reg[30] 
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .D(\Not_Dual.ALLOUT0_ND.READ_REG_GEN[2].GPIO_DBus_i[30]_i_1_n_0 ),
+        .Q(ip2bus_data[1]),
+        .R(Read_Reg_Rst));
+  LUT5 #(
+    .INIT(32'h3232CF00)) 
+    \Not_Dual.ALLOUT0_ND.READ_REG_GEN[3].GPIO_DBus_i[31]_i_2 
+       (.I0(gpio_Data_In[3]),
+        .I1(\MEM_DECODE_GEN[0].cs_out_i_reg[0] ),
+        .I2(Q),
+        .I3(gpio_io_o[0]),
+        .I4(gpio_io_t[0]),
+        .O(\Not_Dual.ALLOUT0_ND.READ_REG_GEN[3].GPIO_DBus_i[31]_i_2_n_0 ));
+  FDRE \Not_Dual.ALLOUT0_ND.READ_REG_GEN[3].GPIO_DBus_i_reg[31] 
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .D(\Not_Dual.ALLOUT0_ND.READ_REG_GEN[3].GPIO_DBus_i[31]_i_2_n_0 ),
+        .Q(ip2bus_data[0]),
+        .R(Read_Reg_Rst));
   FDRE \Not_Dual.GEN_INTERRUPT.GPIO_intr_reg 
        (.C(s_axi_aclk),
         .CE(1'b1),
@@ -623,57 +304,33 @@ module design_1_PmodWIFI_0_0_GPIO_Core__parameterized0
         .R(bus2ip_reset));
   design_1_PmodWIFI_0_0_cdc_sync__parameterized0 \Not_Dual.INPUT_DOUBLE_REGS3 
        (.D({gpio_data_in_xor[0],gpio_data_in_xor[1],gpio_data_in_xor[2],gpio_data_in_xor[3]}),
-        .Q(Q),
+        .Q({gpio_Data_In[0],gpio_Data_In[1],gpio_Data_In[2],gpio_Data_In[3]}),
         .gpio_io_i(gpio_io_i),
         .s_axi_aclk(s_axi_aclk),
         .scndry_vect_out({gpio_io_i_d2[0],gpio_io_i_d2[1],gpio_io_i_d2[2],gpio_io_i_d2[3]}));
-  FDRE \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[28] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(GPIO_DBus_i),
-        .Q(ip2bus_data[3]),
-        .R(Read_Reg_Rst));
-  FDRE \Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[29] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(\Not_Dual.gpio_OE_reg[1]_0 ),
-        .Q(ip2bus_data[2]),
-        .R(Read_Reg_Rst));
-  FDRE \Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[30] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(\Not_Dual.gpio_OE_reg[2]_0 ),
-        .Q(ip2bus_data[1]),
-        .R(Read_Reg_Rst));
-  FDRE \Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[31] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(\Not_Dual.gpio_OE_reg[3]_0 ),
-        .Q(ip2bus_data[0]),
-        .R(Read_Reg_Rst));
   FDRE \Not_Dual.gpio_Data_In_reg[0] 
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(gpio_io_i_d2[0]),
-        .Q(Q[3]),
+        .Q(gpio_Data_In[0]),
         .R(1'b0));
   FDRE \Not_Dual.gpio_Data_In_reg[1] 
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(gpio_io_i_d2[1]),
-        .Q(Q[2]),
+        .Q(gpio_Data_In[1]),
         .R(1'b0));
   FDRE \Not_Dual.gpio_Data_In_reg[2] 
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(gpio_io_i_d2[2]),
-        .Q(Q[1]),
+        .Q(gpio_Data_In[2]),
         .R(1'b0));
   FDRE \Not_Dual.gpio_Data_In_reg[3] 
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(gpio_io_i_d2[3]),
-        .Q(Q[0]),
+        .Q(gpio_Data_In[3]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -768,7 +425,7 @@ module design_1_PmodWIFI_0_0_GPIO_Core__parameterized0
         .O(or_ints));
 endmodule
 
-(* HW_HANDOFF = "PmodWIFI.hwdef" *) (* ORIG_REF_NAME = "PmodWIFI" *) 
+(* HW_HANDOFF = "PmodWIFI.hwdef" *) 
 module design_1_PmodWIFI_0_0_PmodWIFI
    (AXI_LITE_GPIO_WFCS_araddr,
     AXI_LITE_GPIO_WFCS_arready,
@@ -1081,7 +738,7 @@ module design_1_PmodWIFI_0_0_PmodWIFI
 
   (* CHECK_LICENSE_TYPE = "PmodWIFI_axi_gpio_0_0,axi_gpio,{}" *) 
   (* downgradeipidentifiedwarnings = "yes" *) 
-  (* x_core_info = "axi_gpio,Vivado 2016.3" *) 
+  (* x_core_info = "axi_gpio,Vivado 2017.2" *) 
   design_1_PmodWIFI_0_0_PmodWIFI_axi_gpio_0_0 axi_gpio_cs
        (.gpio_io_i(pmod_bridge_0_in0_I),
         .gpio_io_o(axi_gpio_cs_gpio_io_o),
@@ -1107,7 +764,7 @@ module design_1_PmodWIFI_0_0_PmodWIFI
         .s_axi_wvalid(AXI_LITE_GPIO_WFCS_wvalid));
   (* CHECK_LICENSE_TYPE = "PmodWIFI_axi_gpio_1_0,axi_gpio,{}" *) 
   (* downgradeipidentifiedwarnings = "yes" *) 
-  (* x_core_info = "axi_gpio,Vivado 2016.3" *) 
+  (* x_core_info = "axi_gpio,Vivado 2017.2" *) 
   design_1_PmodWIFI_0_0_PmodWIFI_axi_gpio_1_0 axi_gpio_wf
        (.gpio_io_i(axi_gpio_wf_GPIO_TRI_I),
         .gpio_io_o(axi_gpio_wf_GPIO_TRI_O),
@@ -1134,7 +791,7 @@ module design_1_PmodWIFI_0_0_PmodWIFI
         .s_axi_wvalid(AXI_LITE_WFGPIO_wvalid));
   (* CHECK_LICENSE_TYPE = "PmodWIFI_axi_quad_spi_0_0,axi_quad_spi,{}" *) 
   (* downgradeipidentifiedwarnings = "yes" *) 
-  (* x_core_info = "axi_quad_spi,Vivado 2016.3" *) 
+  (* x_core_info = "axi_quad_spi,Vivado 2017.2" *) 
   design_1_PmodWIFI_0_0_PmodWIFI_axi_quad_spi_0_0 axi_quad_spi_0
        (.ext_spi_clk(s_axi_aclk),
         .io0_i(axi_quad_spi_0_SPI_0_IO0_I),
@@ -1171,7 +828,7 @@ module design_1_PmodWIFI_0_0_PmodWIFI
         .ss_t(NLW_axi_quad_spi_0_ss_t_UNCONNECTED));
   (* CHECK_LICENSE_TYPE = "PmodWIFI_axi_timer_0_0,axi_timer,{}" *) 
   (* downgradeipidentifiedwarnings = "yes" *) 
-  (* x_core_info = "axi_timer,Vivado 2016.3" *) 
+  (* x_core_info = "axi_timer,Vivado 2017.2" *) 
   design_1_PmodWIFI_0_0_PmodWIFI_axi_timer_0_0 axi_timer_0
        (.capturetrig0(1'b0),
         .capturetrig1(1'b0),
@@ -1201,7 +858,7 @@ module design_1_PmodWIFI_0_0_PmodWIFI
         .s_axi_wvalid(S_AXI_TIMER_wvalid));
   (* CHECK_LICENSE_TYPE = "PmodWIFI_pmod_bridge_0_0,pmod_concat,{}" *) 
   (* downgradeipidentifiedwarnings = "yes" *) 
-  (* x_core_info = "pmod_concat,Vivado 2016.3" *) 
+  (* x_core_info = "pmod_concat,Vivado 2017.2" *) 
   design_1_PmodWIFI_0_0_PmodWIFI_pmod_bridge_0_0 pmod_bridge_0
        (.in0_I(pmod_bridge_0_in0_I),
         .in0_O(axi_gpio_cs_gpio_io_o),
@@ -1244,8 +901,7 @@ module design_1_PmodWIFI_0_0_PmodWIFI
         .out7_T(Pmod_out_pin10_t));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "PmodWIFI_axi_gpio_0_0,axi_gpio,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "PmodWIFI_axi_gpio_0_0" *) 
-(* X_CORE_INFO = "axi_gpio,Vivado 2016.3" *) 
+(* CHECK_LICENSE_TYPE = "PmodWIFI_axi_gpio_0_0,axi_gpio,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axi_gpio,Vivado 2017.2" *) 
 module design_1_PmodWIFI_0_0_PmodWIFI_axi_gpio_0_0
    (s_axi_aclk,
     s_axi_aresetn,
@@ -1364,8 +1020,7 @@ module design_1_PmodWIFI_0_0_PmodWIFI_axi_gpio_0_0
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "PmodWIFI_axi_gpio_1_0,axi_gpio,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "PmodWIFI_axi_gpio_1_0" *) 
-(* X_CORE_INFO = "axi_gpio,Vivado 2016.3" *) 
+(* CHECK_LICENSE_TYPE = "PmodWIFI_axi_gpio_1_0,axi_gpio,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axi_gpio,Vivado 2017.2" *) 
 module design_1_PmodWIFI_0_0_PmodWIFI_axi_gpio_1_0
    (s_axi_aclk,
     s_axi_aresetn,
@@ -1486,8 +1141,7 @@ module design_1_PmodWIFI_0_0_PmodWIFI_axi_gpio_1_0
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "PmodWIFI_axi_quad_spi_0_0,axi_quad_spi,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "PmodWIFI_axi_quad_spi_0_0" *) 
-(* X_CORE_INFO = "axi_quad_spi,Vivado 2016.3" *) 
+(* CHECK_LICENSE_TYPE = "PmodWIFI_axi_quad_spi_0_0,axi_quad_spi,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axi_quad_spi,Vivado 2017.2" *) 
 module design_1_PmodWIFI_0_0_PmodWIFI_axi_quad_spi_0_0
    (ext_spi_clk,
     s_axi_aclk,
@@ -1754,8 +1408,7 @@ module design_1_PmodWIFI_0_0_PmodWIFI_axi_quad_spi_0_0
         .usrdonets(1'b0));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "PmodWIFI_axi_timer_0_0,axi_timer,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "PmodWIFI_axi_timer_0_0" *) 
-(* X_CORE_INFO = "axi_timer,Vivado 2016.3" *) 
+(* CHECK_LICENSE_TYPE = "PmodWIFI_axi_timer_0_0,axi_timer,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axi_timer,Vivado 2017.2" *) 
 module design_1_PmodWIFI_0_0_PmodWIFI_axi_timer_0_0
    (capturetrig0,
     capturetrig1,
@@ -1876,8 +1529,7 @@ module design_1_PmodWIFI_0_0_PmodWIFI_axi_timer_0_0
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "PmodWIFI_pmod_bridge_0_0,pmod_concat,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "PmodWIFI_pmod_bridge_0_0" *) 
-(* X_CORE_INFO = "pmod_concat,Vivado 2016.3" *) 
+(* CHECK_LICENSE_TYPE = "PmodWIFI_pmod_bridge_0_0,pmod_concat,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "pmod_concat,Vivado 2017.2" *) 
 module design_1_PmodWIFI_0_0_PmodWIFI_pmod_bridge_0_0
    (in_bottom_bus_I,
     in_bottom_bus_O,
@@ -2078,25 +1730,25 @@ module design_1_PmodWIFI_0_0_PmodWIFI_pmod_bridge_0_0
         .out7_T(out7_T));
 endmodule
 
-(* ORIG_REF_NAME = "address_decoder" *) 
 module design_1_PmodWIFI_0_0_address_decoder
    (\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ,
     AXI_LITE_GPIO_WFCS_arready,
     AXI_LITE_GPIO_WFCS_wready,
     \Not_Dual.gpio_OE_reg[0] ,
+    \Not_Dual.gpio_OE_reg[0]_0 ,
     \Not_Dual.gpio_Data_Out_reg[0] ,
-    \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[31] ,
+    \Not_Dual.gpio_Data_Out_reg[0]_0 ,
+    \Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[31] ,
     s_axi_aclk,
     s_axi_wdata,
     Q,
-    gpio_xferAck_Reg,
-    GPIO_xferAck_i,
-    bus2ip_rnw_i_reg,
     start2_reg,
     s_axi_aresetn,
+    bus2ip_rnw_i_reg,
     gpio_io_t,
     gpio_io_o,
-    gpio_Data_In,
+    gpio_xferAck_Reg,
+    GPIO_xferAck_i,
     ip2bus_rdack_i_D1,
     is_read,
     \INCLUDE_DPHASE_TIMER.dpto_cnt_reg[3] ,
@@ -2106,19 +1758,20 @@ module design_1_PmodWIFI_0_0_address_decoder
   output AXI_LITE_GPIO_WFCS_arready;
   output AXI_LITE_GPIO_WFCS_wready;
   output \Not_Dual.gpio_OE_reg[0] ;
+  output \Not_Dual.gpio_OE_reg[0]_0 ;
   output \Not_Dual.gpio_Data_Out_reg[0] ;
-  output \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[31] ;
+  output \Not_Dual.gpio_Data_Out_reg[0]_0 ;
+  output \Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[31] ;
   input s_axi_aclk;
   input [1:0]s_axi_wdata;
   input [2:0]Q;
-  input gpio_xferAck_Reg;
-  input GPIO_xferAck_i;
-  input bus2ip_rnw_i_reg;
   input start2_reg;
   input s_axi_aresetn;
+  input bus2ip_rnw_i_reg;
   input [0:0]gpio_io_t;
   input [0:0]gpio_io_o;
-  input gpio_Data_In;
+  input gpio_xferAck_Reg;
+  input GPIO_xferAck_i;
   input ip2bus_rdack_i_D1;
   input is_read;
   input [3:0]\INCLUDE_DPHASE_TIMER.dpto_cnt_reg[3] ;
@@ -2132,15 +1785,13 @@ module design_1_PmodWIFI_0_0_address_decoder
   wire [3:0]\INCLUDE_DPHASE_TIMER.dpto_cnt_reg[3] ;
   wire \MEM_DECODE_GEN[0].cs_out_i[0]_i_1_n_0 ;
   wire \MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ;
-  wire \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i[31]_i_2_n_0 ;
-  wire \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[31] ;
-  wire \Not_Dual.gpio_Data_Out[0]_i_2_n_0 ;
-  wire \Not_Dual.gpio_Data_Out[0]_i_3_n_0 ;
+  wire \Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[31] ;
   wire \Not_Dual.gpio_Data_Out_reg[0] ;
+  wire \Not_Dual.gpio_Data_Out_reg[0]_0 ;
   wire \Not_Dual.gpio_OE_reg[0] ;
+  wire \Not_Dual.gpio_OE_reg[0]_0 ;
   wire [2:0]Q;
   wire bus2ip_rnw_i_reg;
-  wire gpio_Data_In;
   wire [0:0]gpio_io_o;
   wire [0:0]gpio_io_t;
   wire gpio_xferAck_Reg;
@@ -2168,70 +1819,56 @@ module design_1_PmodWIFI_0_0_address_decoder
         .D(\MEM_DECODE_GEN[0].cs_out_i[0]_i_1_n_0 ),
         .Q(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
         .R(1'b0));
-  LUT6 #(
-    .INIT(64'h00000000AABAAA8A)) 
-    \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i[31]_i_1 
-       (.I0(gpio_io_t),
-        .I1(Q[2]),
-        .I2(\Not_Dual.gpio_Data_Out[0]_i_2_n_0 ),
-        .I3(Q[0]),
-        .I4(gpio_Data_In),
-        .I5(\Not_Dual.READ_REG_GEN[0].GPIO_DBus_i[31]_i_2_n_0 ),
-        .O(\Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[31] ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFBFFFFFFFF)) 
-    \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i[31]_i_2 
-       (.I0(Q[2]),
+  LUT4 #(
+    .INIT(16'hFFF7)) 
+    \Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i[31]_i_2 
+       (.I0(bus2ip_rnw_i_reg),
         .I1(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
         .I2(gpio_xferAck_Reg),
         .I3(GPIO_xferAck_i),
-        .I4(Q[1]),
-        .I5(bus2ip_rnw_i_reg),
-        .O(\Not_Dual.READ_REG_GEN[0].GPIO_DBus_i[31]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFB8FF0000B800)) 
-    \Not_Dual.gpio_Data_Out[0]_i_1 
-       (.I0(s_axi_wdata[0]),
-        .I1(\Not_Dual.gpio_Data_Out[0]_i_2_n_0 ),
-        .I2(s_axi_wdata[1]),
-        .I3(\Not_Dual.gpio_Data_Out[0]_i_3_n_0 ),
-        .I4(bus2ip_rnw_i_reg),
-        .I5(gpio_io_o),
-        .O(\Not_Dual.gpio_Data_Out_reg[0] ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \Not_Dual.gpio_Data_Out[0]_i_2 
-       (.I0(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
-        .I1(Q[1]),
-        .O(\Not_Dual.gpio_Data_Out[0]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'h0004)) 
-    \Not_Dual.gpio_Data_Out[0]_i_3 
-       (.I0(Q[2]),
-        .I1(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
-        .I2(Q[1]),
-        .I3(Q[0]),
-        .O(\Not_Dual.gpio_Data_Out[0]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFBF00000080)) 
-    \Not_Dual.gpio_OE[0]_i_1 
-       (.I0(DBus_Reg),
-        .I1(Q[0]),
-        .I2(\Not_Dual.gpio_Data_Out[0]_i_2_n_0 ),
-        .I3(Q[2]),
-        .I4(bus2ip_rnw_i_reg),
-        .I5(gpio_io_t),
-        .O(\Not_Dual.gpio_OE_reg[0] ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+        .O(\Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[31] ));
   LUT4 #(
     .INIT(16'hFB08)) 
-    \Not_Dual.gpio_OE[0]_i_2 
+    \Not_Dual.gpio_Data_Out[0]_i_1 
+       (.I0(DBus_Reg),
+        .I1(\Not_Dual.gpio_Data_Out_reg[0]_0 ),
+        .I2(bus2ip_rnw_i_reg),
+        .I3(gpio_io_o),
+        .O(\Not_Dual.gpio_Data_Out_reg[0] ));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \Not_Dual.gpio_Data_Out[0]_i_2 
        (.I0(s_axi_wdata[0]),
         .I1(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
         .I2(Q[1]),
         .I3(s_axi_wdata[1]),
         .O(DBus_Reg));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT4 #(
+    .INIT(16'h0004)) 
+    \Not_Dual.gpio_Data_Out[0]_i_3 
+       (.I0(Q[0]),
+        .I1(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
+        .I2(Q[2]),
+        .I3(Q[1]),
+        .O(\Not_Dual.gpio_Data_Out_reg[0]_0 ));
+  LUT4 #(
+    .INIT(16'hFB08)) 
+    \Not_Dual.gpio_OE[0]_i_1 
+       (.I0(DBus_Reg),
+        .I1(\Not_Dual.gpio_OE_reg[0]_0 ),
+        .I2(bus2ip_rnw_i_reg),
+        .I3(gpio_io_t),
+        .O(\Not_Dual.gpio_OE_reg[0] ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT4 #(
+    .INIT(16'h0020)) 
+    \Not_Dual.gpio_OE[0]_i_2 
+       (.I0(\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ),
+        .I1(Q[2]),
+        .I2(Q[0]),
+        .I3(Q[1]),
+        .O(\Not_Dual.gpio_OE_reg[0]_0 ));
   LUT6 #(
     .INIT(64'hAAAAAAAAAAAEAAAA)) 
     s_axi_arready_INST_0
@@ -2262,12 +1899,9 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
     AXI_LITE_WFGPIO_arready,
     AXI_LITE_WFGPIO_wready,
     D,
-    \Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[31] ,
-    \Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[30] ,
-    \Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[29] ,
-    GPIO_DBus_i,
     E,
     \Not_Dual.gpio_Data_Out_reg[0] ,
+    \Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[28] ,
     \ip2bus_data_i_D1_reg[0]_0 ,
     intr2bus_rdack0,
     irpt_rdack,
@@ -2290,8 +1924,6 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
     ip2bus_wrack_i_D1,
     s_axi_wdata,
     \bus2ip_addr_i_reg[8] ,
-    gpio_io_t,
-    \Not_Dual.gpio_Data_In_reg[0] ,
     bus2ip_rnw_i_reg,
     bus2ip_reset,
     p_0_in,
@@ -2310,12 +1942,9 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
   output AXI_LITE_WFGPIO_arready;
   output AXI_LITE_WFGPIO_wready;
   output [3:0]D;
-  output \Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[31] ;
-  output \Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[30] ;
-  output \Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[29] ;
-  output [0:0]GPIO_DBus_i;
   output [0:0]E;
   output [0:0]\Not_Dual.gpio_Data_Out_reg[0] ;
+  output \Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[28] ;
   output [1:0]\ip2bus_data_i_D1_reg[0]_0 ;
   output intr2bus_rdack0;
   output irpt_rdack;
@@ -2338,8 +1967,6 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
   input ip2bus_wrack_i_D1;
   input [7:0]s_axi_wdata;
   input [6:0]\bus2ip_addr_i_reg[8] ;
-  input [3:0]gpio_io_t;
-  input [3:0]\Not_Dual.gpio_Data_In_reg[0] ;
   input bus2ip_rnw_i_reg;
   input bus2ip_reset;
   input [0:0]p_0_in;
@@ -2358,23 +1985,32 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
   wire Bus_RNW_reg_i_1_n_0;
   wire [3:0]D;
   wire [0:0]E;
+  wire \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[11].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[13].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[14].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[15].ce_out_i_reg ;
   wire \GEN_BKEND_CE_REGISTERS[16].ce_out_i[16]_i_1_n_0 ;
+  wire \GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg ;
   wire \GEN_BKEND_CE_REGISTERS[17].ce_out_i[17]_i_1_n_0 ;
+  wire \GEN_BKEND_CE_REGISTERS[17].ce_out_i_reg ;
   wire \GEN_BKEND_CE_REGISTERS[18].ce_out_i[18]_i_1_n_0 ;
-  wire \GEN_BKEND_CE_REGISTERS[19].ce_out_i[19]_i_1_n_0 ;
-  wire \GEN_BKEND_CE_REGISTERS[19].ce_out_i_reg_n_0_[19] ;
+  wire \GEN_BKEND_CE_REGISTERS[18].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[19].ce_out_i_reg ;
   wire \GEN_BKEND_CE_REGISTERS[4].ce_out_i[4]_i_1_n_0 ;
-  wire [0:0]GPIO_DBus_i;
+  wire \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[6].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[9].ce_out_i_reg ;
   wire GPIO_xferAck_i;
   wire \INTR_CTRLR_GEN.ip2Bus_RdAck_intr_reg_hole_reg ;
   wire \INTR_CTRLR_GEN.ip2Bus_WrAck_intr_reg_hole_d1_i_2_n_0 ;
   wire \INTR_CTRLR_GEN.ip2Bus_WrAck_intr_reg_hole_d1_i_3_n_0 ;
   wire \INTR_CTRLR_GEN.ip2Bus_WrAck_intr_reg_hole_d1_i_4_n_0 ;
   wire \INTR_CTRLR_GEN.ip2Bus_WrAck_intr_reg_hole_reg ;
-  wire \Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[29] ;
-  wire \Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[30] ;
-  wire \Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[31] ;
-  wire [3:0]\Not_Dual.gpio_Data_In_reg[0] ;
+  wire \Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[28] ;
   wire [0:0]\Not_Dual.gpio_Data_Out_reg[0] ;
   wire \Not_Dual.gpio_Data_Out_reg[3] ;
   wire [3:0]Q;
@@ -2382,7 +2018,6 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
   wire [6:0]\bus2ip_addr_i_reg[8] ;
   wire bus2ip_reset;
   wire bus2ip_rnw_i_reg;
-  wire [3:0]gpio_io_t;
   wire gpio_xferAck_Reg;
   wire interrupt_wrce_strb;
   wire intr2bus_rdack0;
@@ -2405,33 +2040,20 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
   wire is_read;
   wire is_write_reg;
   wire [0:0]p_0_in;
-  wire p_10_in;
   wire p_10_out;
-  wire p_11_in;
   wire p_11_out;
-  wire p_12_in;
   wire p_12_out;
-  wire p_13_in;
   wire p_13_out;
-  wire p_14_in;
   wire p_14_out;
-  wire p_15_in;
   wire p_15_out;
-  wire p_16_in;
   wire [0:0]p_1_in;
-  wire p_2_in;
+  wire p_1_out;
   wire [0:0]p_3_in;
-  wire p_3_in_0;
-  wire p_4_in;
   wire p_4_out;
-  wire p_5_in;
   wire p_5_out;
-  wire p_6_in;
   wire p_6_out;
-  wire p_7_in;
   wire p_7_out;
   wire p_8_out;
-  wire p_9_in;
   wire p_9_out;
   wire pselect_hit_i_1;
   wire s_axi_aclk;
@@ -2459,15 +2081,15 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
         .I1(\bus2ip_addr_i_reg[8] [1]),
         .I2(\bus2ip_addr_i_reg[8] [2]),
         .I3(\bus2ip_addr_i_reg[8] [0]),
-        .I4(\bus2ip_addr_i_reg[8] [6]),
-        .I5(start2),
+        .I4(start2),
+        .I5(\bus2ip_addr_i_reg[8] [6]),
         .O(p_9_out));
   FDRE \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(p_9_out),
-        .Q(p_10_in),
-        .R(\GEN_BKEND_CE_REGISTERS[19].ce_out_i[19]_i_1_n_0 ));
+        .Q(\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg ),
+        .R(p_1_out));
   LUT6 #(
     .INIT(64'h4000000000000000)) 
     \GEN_BKEND_CE_REGISTERS[11].ce_out_i[11]_i_1 
@@ -2475,15 +2097,15 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
         .I1(\bus2ip_addr_i_reg[8] [1]),
         .I2(\bus2ip_addr_i_reg[8] [2]),
         .I3(\bus2ip_addr_i_reg[8] [0]),
-        .I4(\bus2ip_addr_i_reg[8] [6]),
-        .I5(start2),
+        .I4(start2),
+        .I5(\bus2ip_addr_i_reg[8] [6]),
         .O(p_8_out));
   FDRE \GEN_BKEND_CE_REGISTERS[11].ce_out_i_reg[11] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(p_8_out),
-        .Q(p_9_in),
-        .R(\GEN_BKEND_CE_REGISTERS[19].ce_out_i[19]_i_1_n_0 ));
+        .Q(\GEN_BKEND_CE_REGISTERS[11].ce_out_i_reg ),
+        .R(p_1_out));
   LUT6 #(
     .INIT(64'h0004000000000000)) 
     \GEN_BKEND_CE_REGISTERS[12].ce_out_i[12]_i_1 
@@ -2491,15 +2113,15 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
         .I1(\bus2ip_addr_i_reg[8] [3]),
         .I2(\bus2ip_addr_i_reg[8] [2]),
         .I3(\bus2ip_addr_i_reg[8] [0]),
-        .I4(\bus2ip_addr_i_reg[8] [6]),
-        .I5(start2),
+        .I4(start2),
+        .I5(\bus2ip_addr_i_reg[8] [6]),
         .O(p_7_out));
   FDRE \GEN_BKEND_CE_REGISTERS[12].ce_out_i_reg[12] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(p_7_out),
         .Q(\ip2bus_data_i_D1_reg[0] ),
-        .R(\GEN_BKEND_CE_REGISTERS[19].ce_out_i[19]_i_1_n_0 ));
+        .R(p_1_out));
   LUT6 #(
     .INIT(64'h0400000000000000)) 
     \GEN_BKEND_CE_REGISTERS[13].ce_out_i[13]_i_1 
@@ -2507,15 +2129,15 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
         .I1(\bus2ip_addr_i_reg[8] [3]),
         .I2(\bus2ip_addr_i_reg[8] [2]),
         .I3(\bus2ip_addr_i_reg[8] [0]),
-        .I4(\bus2ip_addr_i_reg[8] [6]),
-        .I5(start2),
+        .I4(start2),
+        .I5(\bus2ip_addr_i_reg[8] [6]),
         .O(p_6_out));
   FDRE \GEN_BKEND_CE_REGISTERS[13].ce_out_i_reg[13] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(p_6_out),
-        .Q(p_7_in),
-        .R(\GEN_BKEND_CE_REGISTERS[19].ce_out_i[19]_i_1_n_0 ));
+        .Q(\GEN_BKEND_CE_REGISTERS[13].ce_out_i_reg ),
+        .R(p_1_out));
   LUT6 #(
     .INIT(64'h0008000000000000)) 
     \GEN_BKEND_CE_REGISTERS[14].ce_out_i[14]_i_1 
@@ -2523,15 +2145,15 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
         .I1(\bus2ip_addr_i_reg[8] [3]),
         .I2(\bus2ip_addr_i_reg[8] [2]),
         .I3(\bus2ip_addr_i_reg[8] [0]),
-        .I4(\bus2ip_addr_i_reg[8] [6]),
-        .I5(start2),
+        .I4(start2),
+        .I5(\bus2ip_addr_i_reg[8] [6]),
         .O(p_5_out));
   FDRE \GEN_BKEND_CE_REGISTERS[14].ce_out_i_reg[14] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(p_5_out),
-        .Q(p_6_in),
-        .R(\GEN_BKEND_CE_REGISTERS[19].ce_out_i[19]_i_1_n_0 ));
+        .Q(\GEN_BKEND_CE_REGISTERS[14].ce_out_i_reg ),
+        .R(p_1_out));
   LUT6 #(
     .INIT(64'h0800000000000000)) 
     \GEN_BKEND_CE_REGISTERS[15].ce_out_i[15]_i_1 
@@ -2539,15 +2161,15 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
         .I1(\bus2ip_addr_i_reg[8] [3]),
         .I2(\bus2ip_addr_i_reg[8] [2]),
         .I3(\bus2ip_addr_i_reg[8] [0]),
-        .I4(\bus2ip_addr_i_reg[8] [6]),
-        .I5(start2),
+        .I4(start2),
+        .I5(\bus2ip_addr_i_reg[8] [6]),
         .O(p_4_out));
   FDRE \GEN_BKEND_CE_REGISTERS[15].ce_out_i_reg[15] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(p_4_out),
-        .Q(p_5_in),
-        .R(\GEN_BKEND_CE_REGISTERS[19].ce_out_i[19]_i_1_n_0 ));
+        .Q(\GEN_BKEND_CE_REGISTERS[15].ce_out_i_reg ),
+        .R(p_1_out));
   LUT6 #(
     .INIT(64'h0008000000000000)) 
     \GEN_BKEND_CE_REGISTERS[16].ce_out_i[16]_i_1 
@@ -2555,15 +2177,15 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
         .I1(\bus2ip_addr_i_reg[8] [2]),
         .I2(\bus2ip_addr_i_reg[8] [1]),
         .I3(\bus2ip_addr_i_reg[8] [0]),
-        .I4(\bus2ip_addr_i_reg[8] [6]),
-        .I5(start2),
+        .I4(start2),
+        .I5(\bus2ip_addr_i_reg[8] [6]),
         .O(\GEN_BKEND_CE_REGISTERS[16].ce_out_i[16]_i_1_n_0 ));
   FDRE \GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg[16] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(\GEN_BKEND_CE_REGISTERS[16].ce_out_i[16]_i_1_n_0 ),
-        .Q(p_4_in),
-        .R(\GEN_BKEND_CE_REGISTERS[19].ce_out_i[19]_i_1_n_0 ));
+        .Q(\GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg ),
+        .R(p_1_out));
   LUT6 #(
     .INIT(64'h0800000000000000)) 
     \GEN_BKEND_CE_REGISTERS[17].ce_out_i[17]_i_1 
@@ -2571,15 +2193,15 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
         .I1(\bus2ip_addr_i_reg[8] [2]),
         .I2(\bus2ip_addr_i_reg[8] [1]),
         .I3(\bus2ip_addr_i_reg[8] [0]),
-        .I4(\bus2ip_addr_i_reg[8] [6]),
-        .I5(start2),
+        .I4(start2),
+        .I5(\bus2ip_addr_i_reg[8] [6]),
         .O(\GEN_BKEND_CE_REGISTERS[17].ce_out_i[17]_i_1_n_0 ));
   FDRE \GEN_BKEND_CE_REGISTERS[17].ce_out_i_reg[17] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(\GEN_BKEND_CE_REGISTERS[17].ce_out_i[17]_i_1_n_0 ),
-        .Q(p_3_in_0),
-        .R(\GEN_BKEND_CE_REGISTERS[19].ce_out_i[19]_i_1_n_0 ));
+        .Q(\GEN_BKEND_CE_REGISTERS[17].ce_out_i_reg ),
+        .R(p_1_out));
   LUT6 #(
     .INIT(64'h0080000000000000)) 
     \GEN_BKEND_CE_REGISTERS[18].ce_out_i[18]_i_1 
@@ -2587,22 +2209,22 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
         .I1(\bus2ip_addr_i_reg[8] [1]),
         .I2(\bus2ip_addr_i_reg[8] [2]),
         .I3(\bus2ip_addr_i_reg[8] [0]),
-        .I4(\bus2ip_addr_i_reg[8] [6]),
-        .I5(start2),
+        .I4(start2),
+        .I5(\bus2ip_addr_i_reg[8] [6]),
         .O(\GEN_BKEND_CE_REGISTERS[18].ce_out_i[18]_i_1_n_0 ));
   FDRE \GEN_BKEND_CE_REGISTERS[18].ce_out_i_reg[18] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(\GEN_BKEND_CE_REGISTERS[18].ce_out_i[18]_i_1_n_0 ),
-        .Q(p_2_in),
-        .R(\GEN_BKEND_CE_REGISTERS[19].ce_out_i[19]_i_1_n_0 ));
+        .Q(\GEN_BKEND_CE_REGISTERS[18].ce_out_i_reg ),
+        .R(p_1_out));
   LUT3 #(
     .INIT(8'hFD)) 
     \GEN_BKEND_CE_REGISTERS[19].ce_out_i[19]_i_1 
        (.I0(s_axi_aresetn),
         .I1(AXI_LITE_WFGPIO_arready),
         .I2(AXI_LITE_WFGPIO_wready),
-        .O(\GEN_BKEND_CE_REGISTERS[19].ce_out_i[19]_i_1_n_0 ));
+        .O(p_1_out));
   LUT6 #(
     .INIT(64'h8000000000000000)) 
     \GEN_BKEND_CE_REGISTERS[19].ce_out_i[19]_i_2 
@@ -2610,15 +2232,15 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
         .I1(\bus2ip_addr_i_reg[8] [1]),
         .I2(\bus2ip_addr_i_reg[8] [2]),
         .I3(\bus2ip_addr_i_reg[8] [0]),
-        .I4(\bus2ip_addr_i_reg[8] [6]),
-        .I5(start2),
+        .I4(start2),
+        .I5(\bus2ip_addr_i_reg[8] [6]),
         .O(p_15_out));
   FDRE \GEN_BKEND_CE_REGISTERS[19].ce_out_i_reg[19] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(p_15_out),
-        .Q(\GEN_BKEND_CE_REGISTERS[19].ce_out_i_reg_n_0_[19] ),
-        .R(\GEN_BKEND_CE_REGISTERS[19].ce_out_i[19]_i_1_n_0 ));
+        .Q(\GEN_BKEND_CE_REGISTERS[19].ce_out_i_reg ),
+        .R(p_1_out));
   LUT6 #(
     .INIT(64'h0001000000000000)) 
     \GEN_BKEND_CE_REGISTERS[4].ce_out_i[4]_i_1 
@@ -2626,15 +2248,15 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
         .I1(\bus2ip_addr_i_reg[8] [2]),
         .I2(\bus2ip_addr_i_reg[8] [3]),
         .I3(\bus2ip_addr_i_reg[8] [0]),
-        .I4(\bus2ip_addr_i_reg[8] [6]),
-        .I5(start2),
+        .I4(start2),
+        .I5(\bus2ip_addr_i_reg[8] [6]),
         .O(\GEN_BKEND_CE_REGISTERS[4].ce_out_i[4]_i_1_n_0 ));
   FDRE \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(\GEN_BKEND_CE_REGISTERS[4].ce_out_i[4]_i_1_n_0 ),
-        .Q(p_16_in),
-        .R(\GEN_BKEND_CE_REGISTERS[19].ce_out_i[19]_i_1_n_0 ));
+        .Q(\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg ),
+        .R(p_1_out));
   LUT6 #(
     .INIT(64'h0100000000000000)) 
     \GEN_BKEND_CE_REGISTERS[5].ce_out_i[5]_i_1 
@@ -2642,15 +2264,15 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
         .I1(\bus2ip_addr_i_reg[8] [2]),
         .I2(\bus2ip_addr_i_reg[8] [3]),
         .I3(\bus2ip_addr_i_reg[8] [0]),
-        .I4(\bus2ip_addr_i_reg[8] [6]),
-        .I5(start2),
+        .I4(start2),
+        .I5(\bus2ip_addr_i_reg[8] [6]),
         .O(p_14_out));
   FDRE \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(p_14_out),
-        .Q(p_15_in),
-        .R(\GEN_BKEND_CE_REGISTERS[19].ce_out_i[19]_i_1_n_0 ));
+        .Q(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ),
+        .R(p_1_out));
   LUT6 #(
     .INIT(64'h0002000000000000)) 
     \GEN_BKEND_CE_REGISTERS[6].ce_out_i[6]_i_1 
@@ -2658,15 +2280,15 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
         .I1(\bus2ip_addr_i_reg[8] [2]),
         .I2(\bus2ip_addr_i_reg[8] [3]),
         .I3(\bus2ip_addr_i_reg[8] [0]),
-        .I4(\bus2ip_addr_i_reg[8] [6]),
-        .I5(start2),
+        .I4(start2),
+        .I5(\bus2ip_addr_i_reg[8] [6]),
         .O(p_13_out));
   FDRE \GEN_BKEND_CE_REGISTERS[6].ce_out_i_reg[6] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(p_13_out),
-        .Q(p_14_in),
-        .R(\GEN_BKEND_CE_REGISTERS[19].ce_out_i[19]_i_1_n_0 ));
+        .Q(\GEN_BKEND_CE_REGISTERS[6].ce_out_i_reg ),
+        .R(p_1_out));
   LUT6 #(
     .INIT(64'h0200000000000000)) 
     \GEN_BKEND_CE_REGISTERS[7].ce_out_i[7]_i_1 
@@ -2674,15 +2296,15 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
         .I1(\bus2ip_addr_i_reg[8] [2]),
         .I2(\bus2ip_addr_i_reg[8] [3]),
         .I3(\bus2ip_addr_i_reg[8] [0]),
-        .I4(\bus2ip_addr_i_reg[8] [6]),
-        .I5(start2),
+        .I4(start2),
+        .I5(\bus2ip_addr_i_reg[8] [6]),
         .O(p_12_out));
   FDRE \GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg[7] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(p_12_out),
-        .Q(p_13_in),
-        .R(\GEN_BKEND_CE_REGISTERS[19].ce_out_i[19]_i_1_n_0 ));
+        .Q(\GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg ),
+        .R(p_1_out));
   LUT6 #(
     .INIT(64'h0004000000000000)) 
     \GEN_BKEND_CE_REGISTERS[8].ce_out_i[8]_i_1 
@@ -2690,15 +2312,15 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
         .I1(\bus2ip_addr_i_reg[8] [2]),
         .I2(\bus2ip_addr_i_reg[8] [1]),
         .I3(\bus2ip_addr_i_reg[8] [0]),
-        .I4(\bus2ip_addr_i_reg[8] [6]),
-        .I5(start2),
+        .I4(start2),
+        .I5(\bus2ip_addr_i_reg[8] [6]),
         .O(p_11_out));
   FDRE \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(p_11_out),
-        .Q(p_12_in),
-        .R(\GEN_BKEND_CE_REGISTERS[19].ce_out_i[19]_i_1_n_0 ));
+        .Q(\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg ),
+        .R(p_1_out));
   LUT6 #(
     .INIT(64'h0400000000000000)) 
     \GEN_BKEND_CE_REGISTERS[9].ce_out_i[9]_i_1 
@@ -2706,15 +2328,15 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
         .I1(\bus2ip_addr_i_reg[8] [2]),
         .I2(\bus2ip_addr_i_reg[8] [1]),
         .I3(\bus2ip_addr_i_reg[8] [0]),
-        .I4(\bus2ip_addr_i_reg[8] [6]),
-        .I5(start2),
+        .I4(start2),
+        .I5(\bus2ip_addr_i_reg[8] [6]),
         .O(p_10_out));
   FDRE \GEN_BKEND_CE_REGISTERS[9].ce_out_i_reg[9] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(p_10_out),
-        .Q(p_11_in),
-        .R(\GEN_BKEND_CE_REGISTERS[19].ce_out_i[19]_i_1_n_0 ));
+        .Q(\GEN_BKEND_CE_REGISTERS[9].ce_out_i_reg ),
+        .R(p_1_out));
   (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT4 #(
     .INIT(16'hFE00)) 
@@ -2724,7 +2346,7 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
         .I2(\INTR_CTRLR_GEN.ip2Bus_WrAck_intr_reg_hole_d1_i_4_n_0 ),
         .I3(\ip_irpt_enable_reg_reg[0] ),
         .O(intr_rd_ce_or_reduce));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT5 #(
     .INIT(32'h00FE0000)) 
     \INTR_CTRLR_GEN.ip2Bus_RdAck_intr_reg_hole_i_1 
@@ -2746,29 +2368,29 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
     \INTR_CTRLR_GEN.ip2Bus_WrAck_intr_reg_hole_d1_i_2 
-       (.I0(p_16_in),
-        .I1(p_2_in),
-        .I2(\GEN_BKEND_CE_REGISTERS[19].ce_out_i_reg_n_0_[19] ),
-        .I3(p_14_in),
-        .I4(p_15_in),
+       (.I0(\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg ),
+        .I1(\GEN_BKEND_CE_REGISTERS[18].ce_out_i_reg ),
+        .I2(\GEN_BKEND_CE_REGISTERS[19].ce_out_i_reg ),
+        .I3(\GEN_BKEND_CE_REGISTERS[6].ce_out_i_reg ),
+        .I4(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ),
         .O(\INTR_CTRLR_GEN.ip2Bus_WrAck_intr_reg_hole_d1_i_2_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
     \INTR_CTRLR_GEN.ip2Bus_WrAck_intr_reg_hole_d1_i_3 
-       (.I0(p_12_in),
-        .I1(p_13_in),
-        .I2(p_10_in),
-        .I3(p_11_in),
+       (.I0(\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg ),
+        .I1(\GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg ),
+        .I2(\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg ),
+        .I3(\GEN_BKEND_CE_REGISTERS[9].ce_out_i_reg ),
         .O(\INTR_CTRLR_GEN.ip2Bus_WrAck_intr_reg_hole_d1_i_3_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
     \INTR_CTRLR_GEN.ip2Bus_WrAck_intr_reg_hole_d1_i_4 
-       (.I0(p_5_in),
-        .I1(p_7_in),
-        .I2(p_3_in_0),
-        .I3(p_4_in),
+       (.I0(\GEN_BKEND_CE_REGISTERS[15].ce_out_i_reg ),
+        .I1(\GEN_BKEND_CE_REGISTERS[13].ce_out_i_reg ),
+        .I2(\GEN_BKEND_CE_REGISTERS[17].ce_out_i_reg ),
+        .I3(\GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg ),
         .O(\INTR_CTRLR_GEN.ip2Bus_WrAck_intr_reg_hole_d1_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT5 #(
     .INIT(32'h000000FE)) 
     \INTR_CTRLR_GEN.ip2Bus_WrAck_intr_reg_hole_i_1 
@@ -2779,12 +2401,12 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
         .I4(ip2Bus_WrAck_intr_reg_hole_d1),
         .O(\INTR_CTRLR_GEN.ip2Bus_WrAck_intr_reg_hole_reg ));
   LUT6 #(
-    .INIT(64'h0000000000000002)) 
+    .INIT(64'h0000000000000010)) 
     \MEM_DECODE_GEN[0].cs_out_i[0]_i_1 
-       (.I0(start2),
+       (.I0(\bus2ip_addr_i_reg[8] [5]),
         .I1(\bus2ip_addr_i_reg[8] [6]),
-        .I2(\bus2ip_addr_i_reg[8] [4]),
-        .I3(\bus2ip_addr_i_reg[8] [5]),
+        .I2(start2),
+        .I3(\bus2ip_addr_i_reg[8] [4]),
         .I4(\bus2ip_addr_i_reg[8] [3]),
         .I5(\bus2ip_addr_i_reg[8] [2]),
         .O(pselect_hit_i_1));
@@ -2793,65 +2415,34 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
         .CE(start2),
         .D(pselect_hit_i_1),
         .Q(\Not_Dual.gpio_Data_Out_reg[3] ),
-        .R(\GEN_BKEND_CE_REGISTERS[19].ce_out_i[19]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h000A0000000C0000)) 
-    \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i[28]_i_1 
-       (.I0(gpio_io_t[3]),
-        .I1(\Not_Dual.gpio_Data_In_reg[0] [3]),
-        .I2(\bus2ip_addr_i_reg[8] [6]),
-        .I3(\bus2ip_addr_i_reg[8] [1]),
-        .I4(\Not_Dual.gpio_Data_Out_reg[3] ),
-        .I5(\bus2ip_addr_i_reg[8] [0]),
-        .O(GPIO_DBus_i));
-  LUT6 #(
-    .INIT(64'h000A0000000C0000)) 
-    \Not_Dual.READ_REG_GEN[1].GPIO_DBus_i[29]_i_1 
-       (.I0(gpio_io_t[2]),
-        .I1(\Not_Dual.gpio_Data_In_reg[0] [2]),
-        .I2(\bus2ip_addr_i_reg[8] [6]),
-        .I3(\bus2ip_addr_i_reg[8] [1]),
-        .I4(\Not_Dual.gpio_Data_Out_reg[3] ),
-        .I5(\bus2ip_addr_i_reg[8] [0]),
-        .O(\Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[29] ));
-  LUT6 #(
-    .INIT(64'h000A0000000C0000)) 
-    \Not_Dual.READ_REG_GEN[2].GPIO_DBus_i[30]_i_1 
-       (.I0(gpio_io_t[1]),
-        .I1(\Not_Dual.gpio_Data_In_reg[0] [1]),
-        .I2(\bus2ip_addr_i_reg[8] [6]),
-        .I3(\bus2ip_addr_i_reg[8] [1]),
-        .I4(\Not_Dual.gpio_Data_Out_reg[3] ),
-        .I5(\bus2ip_addr_i_reg[8] [0]),
-        .O(\Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[30] ));
+        .R(p_1_out));
   LUT4 #(
     .INIT(16'hFFDF)) 
-    \Not_Dual.READ_REG_GEN[3].GPIO_DBus_i[31]_i_1 
+    \Not_Dual.ALLOUT0_ND.READ_REG_GEN[3].GPIO_DBus_i[31]_i_1 
        (.I0(\Not_Dual.gpio_Data_Out_reg[3] ),
         .I1(GPIO_xferAck_i),
         .I2(bus2ip_rnw_i_reg),
         .I3(gpio_xferAck_Reg),
         .O(Read_Reg_Rst));
-  LUT6 #(
-    .INIT(64'h000A0000000C0000)) 
-    \Not_Dual.READ_REG_GEN[3].GPIO_DBus_i[31]_i_2 
-       (.I0(gpio_io_t[0]),
-        .I1(\Not_Dual.gpio_Data_In_reg[0] [0]),
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  LUT3 #(
+    .INIT(8'hFD)) 
+    \Not_Dual.ALLOUT0_ND.READ_REG_GEN[3].GPIO_DBus_i[31]_i_3 
+       (.I0(\Not_Dual.gpio_Data_Out_reg[3] ),
+        .I1(\bus2ip_addr_i_reg[8] [1]),
         .I2(\bus2ip_addr_i_reg[8] [6]),
-        .I3(\bus2ip_addr_i_reg[8] [1]),
-        .I4(\Not_Dual.gpio_Data_Out_reg[3] ),
-        .I5(\bus2ip_addr_i_reg[8] [0]),
-        .O(\Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[31] ));
+        .O(\Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[28] ));
   LUT6 #(
-    .INIT(64'hFFFFFFFF00000100)) 
+    .INIT(64'hFFFFFFFF00000002)) 
     \Not_Dual.gpio_Data_Out[0]_i_1 
-       (.I0(bus2ip_rnw_i_reg),
-        .I1(\bus2ip_addr_i_reg[8] [6]),
-        .I2(\bus2ip_addr_i_reg[8] [1]),
-        .I3(\Not_Dual.gpio_Data_Out_reg[3] ),
+       (.I0(\Not_Dual.gpio_Data_Out_reg[3] ),
+        .I1(\bus2ip_addr_i_reg[8] [1]),
+        .I2(\bus2ip_addr_i_reg[8] [6]),
+        .I3(bus2ip_rnw_i_reg),
         .I4(\bus2ip_addr_i_reg[8] [0]),
         .I5(bus2ip_reset),
         .O(\Not_Dual.gpio_Data_Out_reg[0] ));
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT4 #(
     .INIT(16'hBA8A)) 
     \Not_Dual.gpio_Data_Out[0]_i_2 
@@ -2900,27 +2491,27 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
     intr2bus_rdack_i_1
        (.I0(irpt_rdack_d1),
         .I1(\ip_irpt_enable_reg_reg[0] ),
-        .I2(p_9_in),
+        .I2(\GEN_BKEND_CE_REGISTERS[11].ce_out_i_reg ),
         .I3(\ip2bus_data_i_D1_reg[0] ),
-        .I4(p_6_in),
+        .I4(\GEN_BKEND_CE_REGISTERS[14].ce_out_i_reg ),
         .O(intr2bus_rdack0));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT5 #(
     .INIT(32'h000000FE)) 
     intr2bus_wrack_i_1
-       (.I0(p_9_in),
+       (.I0(\GEN_BKEND_CE_REGISTERS[11].ce_out_i_reg ),
         .I1(\ip2bus_data_i_D1_reg[0] ),
-        .I2(p_6_in),
+        .I2(\GEN_BKEND_CE_REGISTERS[14].ce_out_i_reg ),
         .I3(\ip_irpt_enable_reg_reg[0] ),
         .I4(irpt_wrack_d1),
         .O(interrupt_wrce_strb));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT5 #(
     .INIT(32'h00000080)) 
     \ip2bus_data_i_D1[0]_i_1 
        (.I0(p_0_in),
-        .I1(p_9_in),
+        .I1(\GEN_BKEND_CE_REGISTERS[11].ce_out_i_reg ),
         .I2(\ip_irpt_enable_reg_reg[0] ),
-        .I3(p_6_in),
+        .I3(\GEN_BKEND_CE_REGISTERS[14].ce_out_i_reg ),
         .I4(\ip2bus_data_i_D1_reg[0] ),
         .O(\ip2bus_data_i_D1_reg[0]_0 [1]));
   LUT6 #(
@@ -2929,7 +2520,7 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
        (.I0(ip2bus_data),
         .I1(p_3_in),
         .I2(p_1_in),
-        .I3(p_6_in),
+        .I3(\GEN_BKEND_CE_REGISTERS[14].ce_out_i_reg ),
         .I4(\ip_irpt_enable_reg_reg[0] ),
         .I5(\ip2bus_data_i_D1_reg[0] ),
         .O(\ip2bus_data_i_D1_reg[0]_0 [0]));
@@ -2937,7 +2528,7 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
     .INIT(16'hFB08)) 
     \ip_irpt_enable_reg[0]_i_1 
        (.I0(s_axi_wdata[0]),
-        .I1(p_6_in),
+        .I1(\GEN_BKEND_CE_REGISTERS[14].ce_out_i_reg ),
         .I2(\ip_irpt_enable_reg_reg[0] ),
         .I3(p_1_in),
         .O(\ip_irpt_enable_reg_reg[0]_0 ));
@@ -2945,7 +2536,7 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
     .INIT(16'hFB08)) 
     ipif_glbl_irpt_enable_reg_i_1
        (.I0(s_axi_wdata[7]),
-        .I1(p_9_in),
+        .I1(\GEN_BKEND_CE_REGISTERS[11].ce_out_i_reg ),
         .I2(\ip_irpt_enable_reg_reg[0] ),
         .I3(p_0_in),
         .O(ipif_glbl_irpt_enable_reg_reg));
@@ -2953,18 +2544,18 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized0
   LUT4 #(
     .INIT(16'hFE00)) 
     irpt_rdack_d1_i_1
-       (.I0(p_9_in),
+       (.I0(\GEN_BKEND_CE_REGISTERS[11].ce_out_i_reg ),
         .I1(\ip2bus_data_i_D1_reg[0] ),
-        .I2(p_6_in),
+        .I2(\GEN_BKEND_CE_REGISTERS[14].ce_out_i_reg ),
         .I3(\ip_irpt_enable_reg_reg[0] ),
         .O(irpt_rdack));
   (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT4 #(
     .INIT(16'h00FE)) 
     irpt_wrack_d1_i_1
-       (.I0(p_9_in),
+       (.I0(\GEN_BKEND_CE_REGISTERS[11].ce_out_i_reg ),
         .I1(\ip2bus_data_i_D1_reg[0] ),
-        .I2(p_6_in),
+        .I2(\GEN_BKEND_CE_REGISTERS[14].ce_out_i_reg ),
         .I3(\ip_irpt_enable_reg_reg[0] ),
         .O(irpt_wrack));
   LUT6 #(
@@ -2993,7 +2584,7 @@ endmodule
 module design_1_PmodWIFI_0_0_address_decoder__parameterized1
    (\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_reg ,
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_reg ,
-    p_4_in,
+    \GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg ,
     Receive_ip2bus_error_reg,
     Transmit_ip2bus_error_reg,
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_reg_0 ,
@@ -3063,7 +2654,7 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
     Tx_FIFO_Full_int,
     spicr_9_lsb_frm_axi_clk,
     Tx_FIFO_Empty_SPISR_to_axi_clk,
-    p_4_in_0,
+    p_4_in,
     Receive_ip2bus_error_reg_0,
     bus2ip_rnw_i_reg_0,
     sw_rst_cond_d1,
@@ -3075,7 +2666,7 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
     reset2ip_reset_int);
   output \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_reg ;
   output \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_reg ;
-  output p_4_in;
+  output \GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg ;
   output Receive_ip2bus_error_reg;
   output Transmit_ip2bus_error_reg;
   output \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_reg_0 ;
@@ -3145,7 +2736,7 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
   input Tx_FIFO_Full_int;
   input spicr_9_lsb_frm_axi_clk;
   input Tx_FIFO_Empty_SPISR_to_axi_clk;
-  input p_4_in_0;
+  input p_4_in;
   input Receive_ip2bus_error_reg_0;
   input bus2ip_rnw_i_reg_0;
   input sw_rst_cond_d1;
@@ -3164,19 +2755,44 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
   wire \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] ;
   wire [2:0]D;
   wire [0:0]E;
+  wire \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[11].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[12].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[13].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[14].ce_out_i_reg ;
   wire \GEN_BKEND_CE_REGISTERS[15].ce_out_i[15]_i_1_n_0 ;
+  wire \GEN_BKEND_CE_REGISTERS[15].ce_out_i_reg ;
   wire \GEN_BKEND_CE_REGISTERS[16].ce_out_i[16]_i_1_n_0 ;
+  wire \GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg ;
   wire \GEN_BKEND_CE_REGISTERS[17].ce_out_i[17]_i_1_n_0 ;
+  wire \GEN_BKEND_CE_REGISTERS[17].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[18].ce_out_i_reg ;
   wire \GEN_BKEND_CE_REGISTERS[19].ce_out_i[19]_i_1_n_0 ;
+  wire \GEN_BKEND_CE_REGISTERS[19].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ;
   wire \GEN_BKEND_CE_REGISTERS[20].ce_out_i[20]_i_1_n_0 ;
+  wire \GEN_BKEND_CE_REGISTERS[20].ce_out_i_reg ;
   wire \GEN_BKEND_CE_REGISTERS[21].ce_out_i[21]_i_1_n_0 ;
+  wire \GEN_BKEND_CE_REGISTERS[21].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[22].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[23].ce_out_i_reg ;
   wire \GEN_BKEND_CE_REGISTERS[24].ce_out_i[24]_i_1_n_0 ;
   wire \GEN_BKEND_CE_REGISTERS[25].ce_out_i[25]_i_1_n_0 ;
   wire \GEN_BKEND_CE_REGISTERS[27].ce_out_i[27]_i_1_n_0 ;
   wire \GEN_BKEND_CE_REGISTERS[28].ce_out_i[28]_i_1_n_0 ;
+  wire \GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg ;
   wire \GEN_BKEND_CE_REGISTERS[29].ce_out_i[29]_i_1_n_0 ;
+  wire \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ;
   wire \GEN_BKEND_CE_REGISTERS[31].ce_out_i[31]_i_2_n_0 ;
-  wire \GEN_BKEND_CE_REGISTERS[31].ce_out_i_reg_n_0_[31] ;
+  wire \GEN_BKEND_CE_REGISTERS[31].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[6].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[9].ce_out_i_reg ;
   wire [5:0]\INCLUDE_DPHASE_TIMER.dpto_cnt_reg[5] ;
   wire IP2Bus_Error_1;
   wire IP2Bus_RdAck_receive_enable__1;
@@ -3244,51 +2860,26 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
   wire is_read;
   wire is_write_reg;
   wire out;
-  wire p_10_in;
   wire p_10_out;
-  wire p_11_in;
   wire p_11_out;
-  wire p_12_in;
   wire p_12_out;
-  wire p_13_in;
   wire p_13_out;
-  wire p_14_in;
   wire p_14_out;
   wire p_15_in;
-  wire p_15_in_0;
   wire p_15_out;
-  wire p_15_out_1;
-  wire p_16_in;
+  wire p_15_out_0;
   wire p_16_out;
-  wire p_17_in;
-  wire p_18_in;
-  wire p_19_in;
   wire p_1_in23_in;
   wire p_1_out;
-  wire p_20_in;
-  wire p_21_in;
-  wire p_22_in;
-  wire p_23_in;
-  wire p_24_in;
-  wire p_25_in;
-  wire p_26_in;
-  wire p_27_in;
-  wire p_28_in;
-  wire p_29_in;
   wire p_2_out;
-  wire p_30_in;
-  wire p_31_in;
-  wire p_32_in;
   wire p_39_out__0;
   wire p_3_out;
   wire p_4_in;
-  wire p_4_in_0;
   wire p_4_out;
   wire p_5_out;
   wire p_6_out;
   wire p_7_out;
   wire p_8_out;
-  wire p_9_in;
   wire p_9_out;
   wire rd_ce_or_reduce_core_cmb;
   wire reset2ip_reset_int;
@@ -3307,7 +2898,7 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
   wire sw_rst_cond_d1;
   wire wr_ce_or_reduce_core_cmb;
 
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     Bus_RNW_reg_i_1
@@ -3341,7 +2932,7 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
         .I4(ipif_glbl_irpt_enable_reg_reg),
         .I5(\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ),
         .O(\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] ));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \CONTROL_REG_5_9_GENERATE[9].SPICR_data_int[9]_i_1 
@@ -3353,37 +2944,37 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
        (.C(s_axi_aclk),
         .CE(start2),
         .D(\MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I_n_0 ),
-        .Q(p_32_in),
+        .Q(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ),
         .R(cs_ce_clr));
   FDRE \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(p_5_out),
-        .Q(p_22_in),
+        .Q(\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg ),
         .R(cs_ce_clr));
   FDRE \GEN_BKEND_CE_REGISTERS[11].ce_out_i_reg[11] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(p_4_out),
-        .Q(p_21_in),
+        .Q(\GEN_BKEND_CE_REGISTERS[11].ce_out_i_reg ),
         .R(cs_ce_clr));
   FDRE \GEN_BKEND_CE_REGISTERS[12].ce_out_i_reg[12] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(p_3_out),
-        .Q(p_20_in),
+        .Q(\GEN_BKEND_CE_REGISTERS[12].ce_out_i_reg ),
         .R(cs_ce_clr));
   FDRE \GEN_BKEND_CE_REGISTERS[13].ce_out_i_reg[13] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(p_2_out),
-        .Q(p_19_in),
+        .Q(\GEN_BKEND_CE_REGISTERS[13].ce_out_i_reg ),
         .R(cs_ce_clr));
   FDRE \GEN_BKEND_CE_REGISTERS[14].ce_out_i_reg[14] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(p_1_out),
-        .Q(p_18_in),
+        .Q(\GEN_BKEND_CE_REGISTERS[14].ce_out_i_reg ),
         .R(cs_ce_clr));
   LUT6 #(
     .INIT(64'h0080000000000000)) 
@@ -3399,52 +2990,52 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
        (.C(s_axi_aclk),
         .CE(start2),
         .D(\GEN_BKEND_CE_REGISTERS[15].ce_out_i[15]_i_1_n_0 ),
-        .Q(p_17_in),
+        .Q(\GEN_BKEND_CE_REGISTERS[15].ce_out_i_reg ),
         .R(cs_ce_clr));
   LUT6 #(
-    .INIT(64'h0000000001000000)) 
+    .INIT(64'h0000000000001000)) 
     \GEN_BKEND_CE_REGISTERS[16].ce_out_i[16]_i_1 
        (.I0(Q[0]),
         .I1(Q[2]),
-        .I2(Q[3]),
+        .I2(Q[4]),
         .I3(start2),
-        .I4(Q[4]),
+        .I4(Q[3]),
         .I5(Q[1]),
         .O(\GEN_BKEND_CE_REGISTERS[16].ce_out_i[16]_i_1_n_0 ));
   FDRE \GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg[16] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(\GEN_BKEND_CE_REGISTERS[16].ce_out_i[16]_i_1_n_0 ),
-        .Q(p_16_in),
+        .Q(\GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg ),
         .R(cs_ce_clr));
   LUT6 #(
-    .INIT(64'h0010000000000000)) 
+    .INIT(64'h0000000010000000)) 
     \GEN_BKEND_CE_REGISTERS[17].ce_out_i[17]_i_1 
        (.I0(Q[1]),
         .I1(Q[2]),
         .I2(Q[0]),
-        .I3(Q[3]),
+        .I3(Q[4]),
         .I4(start2),
-        .I5(Q[4]),
+        .I5(Q[3]),
         .O(\GEN_BKEND_CE_REGISTERS[17].ce_out_i[17]_i_1_n_0 ));
   FDRE \GEN_BKEND_CE_REGISTERS[17].ce_out_i_reg[17] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(\GEN_BKEND_CE_REGISTERS[17].ce_out_i[17]_i_1_n_0 ),
-        .Q(p_15_in_0),
+        .Q(\GEN_BKEND_CE_REGISTERS[17].ce_out_i_reg ),
         .R(cs_ce_clr));
   FDRE \GEN_BKEND_CE_REGISTERS[18].ce_out_i_reg[18] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(\MEM_DECODE_GEN[1].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I_n_0 ),
-        .Q(p_14_in),
+        .Q(\GEN_BKEND_CE_REGISTERS[18].ce_out_i_reg ),
         .R(cs_ce_clr));
   LUT6 #(
-    .INIT(64'h0040000000000000)) 
+    .INIT(64'h0008000000000000)) 
     \GEN_BKEND_CE_REGISTERS[19].ce_out_i[19]_i_1 
-       (.I0(Q[3]),
+       (.I0(Q[4]),
         .I1(start2),
-        .I2(Q[4]),
+        .I2(Q[3]),
         .I3(Q[2]),
         .I4(Q[0]),
         .I5(Q[1]),
@@ -3453,67 +3044,67 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
        (.C(s_axi_aclk),
         .CE(start2),
         .D(\GEN_BKEND_CE_REGISTERS[19].ce_out_i[19]_i_1_n_0 ),
-        .Q(p_13_in),
+        .Q(\GEN_BKEND_CE_REGISTERS[19].ce_out_i_reg ),
         .R(cs_ce_clr));
   FDRE \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(p_14_out),
-        .Q(p_31_in),
+        .Q(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ),
         .R(cs_ce_clr));
   LUT6 #(
-    .INIT(64'h0100000000000000)) 
+    .INIT(64'h0000100000000000)) 
     \GEN_BKEND_CE_REGISTERS[20].ce_out_i[20]_i_1 
        (.I0(Q[0]),
         .I1(Q[1]),
-        .I2(Q[3]),
+        .I2(Q[4]),
         .I3(start2),
-        .I4(Q[4]),
+        .I4(Q[3]),
         .I5(Q[2]),
         .O(\GEN_BKEND_CE_REGISTERS[20].ce_out_i[20]_i_1_n_0 ));
   FDRE \GEN_BKEND_CE_REGISTERS[20].ce_out_i_reg[20] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(\GEN_BKEND_CE_REGISTERS[20].ce_out_i[20]_i_1_n_0 ),
-        .Q(p_12_in),
+        .Q(\GEN_BKEND_CE_REGISTERS[20].ce_out_i_reg ),
         .R(cs_ce_clr));
   LUT6 #(
-    .INIT(64'h0020000000000000)) 
+    .INIT(64'h0000000020000000)) 
     \GEN_BKEND_CE_REGISTERS[21].ce_out_i[21]_i_1 
        (.I0(Q[2]),
         .I1(Q[1]),
         .I2(Q[0]),
-        .I3(Q[3]),
+        .I3(Q[4]),
         .I4(start2),
-        .I5(Q[4]),
+        .I5(Q[3]),
         .O(\GEN_BKEND_CE_REGISTERS[21].ce_out_i[21]_i_1_n_0 ));
   FDRE \GEN_BKEND_CE_REGISTERS[21].ce_out_i_reg[21] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(\GEN_BKEND_CE_REGISTERS[21].ce_out_i[21]_i_1_n_0 ),
-        .Q(p_11_in),
+        .Q(\GEN_BKEND_CE_REGISTERS[21].ce_out_i_reg ),
         .R(cs_ce_clr));
   FDRE \GEN_BKEND_CE_REGISTERS[22].ce_out_i_reg[22] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(\MEM_DECODE_GEN[1].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I_n_0 ),
-        .Q(p_10_in),
+        .Q(\GEN_BKEND_CE_REGISTERS[22].ce_out_i_reg ),
         .R(cs_ce_clr));
   LUT6 #(
-    .INIT(64'h4000000000000000)) 
+    .INIT(64'h0800000000000000)) 
     \GEN_BKEND_CE_REGISTERS[23].ce_out_i[23]_i_1 
-       (.I0(Q[3]),
+       (.I0(Q[4]),
         .I1(start2),
-        .I2(Q[4]),
+        .I2(Q[3]),
         .I3(Q[2]),
         .I4(Q[0]),
         .I5(Q[1]),
-        .O(p_15_out_1));
+        .O(p_15_out_0));
   FDRE \GEN_BKEND_CE_REGISTERS[23].ce_out_i_reg[23] 
        (.C(s_axi_aclk),
         .CE(start2),
-        .D(p_15_out_1),
-        .Q(p_9_in),
+        .D(p_15_out_0),
+        .Q(\GEN_BKEND_CE_REGISTERS[23].ce_out_i_reg ),
         .R(cs_ce_clr));
   LUT6 #(
     .INIT(64'h0000000010000000)) 
@@ -3521,8 +3112,8 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
        (.I0(Q[0]),
         .I1(Q[2]),
         .I2(Q[4]),
-        .I3(Q[3]),
-        .I4(start2),
+        .I3(start2),
+        .I4(Q[3]),
         .I5(Q[1]),
         .O(\GEN_BKEND_CE_REGISTERS[24].ce_out_i[24]_i_1_n_0 ));
   FDRE \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg[24] 
@@ -3538,8 +3129,8 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
         .I1(Q[2]),
         .I2(Q[0]),
         .I3(Q[4]),
-        .I4(Q[3]),
-        .I5(start2),
+        .I4(start2),
+        .I5(Q[3]),
         .O(\GEN_BKEND_CE_REGISTERS[25].ce_out_i[25]_i_1_n_0 ));
   FDRE \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg[25] 
        (.C(s_axi_aclk),
@@ -3557,8 +3148,8 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
     .INIT(64'h0080000000000000)) 
     \GEN_BKEND_CE_REGISTERS[27].ce_out_i[27]_i_1 
        (.I0(Q[4]),
-        .I1(Q[3]),
-        .I2(start2),
+        .I1(start2),
+        .I2(Q[3]),
         .I3(Q[2]),
         .I4(Q[0]),
         .I5(Q[1]),
@@ -3575,15 +3166,15 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
        (.I0(Q[0]),
         .I1(Q[1]),
         .I2(Q[4]),
-        .I3(Q[3]),
-        .I4(start2),
+        .I3(start2),
+        .I4(Q[3]),
         .I5(Q[2]),
         .O(\GEN_BKEND_CE_REGISTERS[28].ce_out_i[28]_i_1_n_0 ));
   FDRE \GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg[28] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(\GEN_BKEND_CE_REGISTERS[28].ce_out_i[28]_i_1_n_0 ),
-        .Q(p_4_in),
+        .Q(\GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg ),
         .R(cs_ce_clr));
   LUT6 #(
     .INIT(64'h2000000000000000)) 
@@ -3592,8 +3183,8 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
         .I1(Q[1]),
         .I2(Q[0]),
         .I3(Q[4]),
-        .I4(Q[3]),
-        .I5(start2),
+        .I4(start2),
+        .I5(Q[3]),
         .O(\GEN_BKEND_CE_REGISTERS[29].ce_out_i[29]_i_1_n_0 ));
   FDRE \GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg[29] 
        (.C(s_axi_aclk),
@@ -3605,7 +3196,7 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
        (.C(s_axi_aclk),
         .CE(start2),
         .D(p_13_out),
-        .Q(p_30_in),
+        .Q(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
         .R(cs_ce_clr));
   FDRE \GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg[30] 
        (.C(s_axi_aclk),
@@ -3624,8 +3215,8 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
     .INIT(64'h8000000000000000)) 
     \GEN_BKEND_CE_REGISTERS[31].ce_out_i[31]_i_2 
        (.I0(Q[4]),
-        .I1(Q[3]),
-        .I2(start2),
+        .I1(start2),
+        .I2(Q[3]),
         .I3(Q[2]),
         .I4(Q[0]),
         .I5(Q[1]),
@@ -3634,70 +3225,70 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
        (.C(s_axi_aclk),
         .CE(start2),
         .D(\GEN_BKEND_CE_REGISTERS[31].ce_out_i[31]_i_2_n_0 ),
-        .Q(\GEN_BKEND_CE_REGISTERS[31].ce_out_i_reg_n_0_[31] ),
+        .Q(\GEN_BKEND_CE_REGISTERS[31].ce_out_i_reg ),
         .R(cs_ce_clr));
   FDRE \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg[3] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(p_12_out),
-        .Q(p_29_in),
+        .Q(\GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg ),
         .R(cs_ce_clr));
   FDRE \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(p_11_out),
-        .Q(p_28_in),
+        .Q(\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg ),
         .R(cs_ce_clr));
   FDRE \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(p_10_out),
-        .Q(p_27_in),
+        .Q(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ),
         .R(cs_ce_clr));
   FDRE \GEN_BKEND_CE_REGISTERS[6].ce_out_i_reg[6] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(p_9_out),
-        .Q(p_26_in),
+        .Q(\GEN_BKEND_CE_REGISTERS[6].ce_out_i_reg ),
         .R(cs_ce_clr));
   FDRE \GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg[7] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(p_8_out),
-        .Q(p_25_in),
+        .Q(\GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg ),
         .R(cs_ce_clr));
   FDRE \GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(p_7_out),
-        .Q(p_24_in),
+        .Q(\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg ),
         .R(cs_ce_clr));
   FDRE \GEN_BKEND_CE_REGISTERS[9].ce_out_i_reg[9] 
        (.C(s_axi_aclk),
         .CE(start2),
         .D(p_6_out),
-        .Q(p_23_in),
+        .Q(\GEN_BKEND_CE_REGISTERS[9].ce_out_i_reg ),
         .R(cs_ce_clr));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT4 #(
     .INIT(16'h1000)) 
     \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg[0]_i_2 
        (.I0(irpt_wrack_d1),
         .I1(ipif_glbl_irpt_enable_reg_reg),
         .I2(bus2ip_be_int),
-        .I3(p_24_in),
+        .I3(\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg ),
         .O(p_39_out__0));
   LUT6 #(
     .INIT(64'h1000000000000000)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[0]_i_1 
-       (.I0(p_22_in),
-        .I1(p_24_in),
+       (.I0(\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg ),
+        .I1(\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg ),
         .I2(bus2ip_be_int),
         .I3(ipif_glbl_irpt_enable_reg_reg),
-        .I4(p_25_in),
+        .I4(\GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg ),
         .I5(ipif_glbl_irpt_enable_reg),
         .O(D[2]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[22]_i_1 
@@ -3705,30 +3296,30 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
         .I1(ipif_glbl_irpt_enable_reg_reg),
         .I2(\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ),
         .O(D[1]));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[23]_i_2 
        (.I0(\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ),
         .I1(ipif_glbl_irpt_enable_reg_reg),
         .O(bus2ip_rdce_int[1]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT4 #(
     .INIT(16'h8880)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[23]_i_3 
        (.I0(ipif_glbl_irpt_enable_reg_reg),
-        .I1(p_24_in),
+        .I1(\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg ),
         .I2(s_axi_wstrb),
         .I3(bus2ip_rnw_i_reg),
         .O(irpt_rdack144_out));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT5 #(
     .INIT(32'h00A80000)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[23]_i_4 
-       (.I0(p_22_in),
+       (.I0(\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg ),
         .I1(bus2ip_rnw_i_reg),
         .I2(s_axi_wstrb),
-        .I3(p_24_in),
+        .I3(\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg ),
         .I4(ipif_glbl_irpt_enable_reg_reg),
         .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] ));
   LUT5 #(
@@ -3750,7 +3341,7 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
         .I4(\ip_irpt_enable_reg_reg[5] ),
         .I5(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[23] ),
         .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[26]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[26]_i_3 
@@ -3764,7 +3355,7 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
        (.I0(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_reg_0 ),
         .I1(ipif_glbl_irpt_enable_reg_reg),
         .O(bus2ip_rdce_int[0]));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_5 
@@ -3772,7 +3363,7 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
         .I1(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_reg ),
         .I2(empty_fwft_i_reg),
         .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28] ));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_2 
@@ -3780,24 +3371,24 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
         .I1(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_reg ),
         .I2(Tx_FIFO_Empty_SPISR_to_axi_clk),
         .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29] ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT5 #(
     .INIT(32'hEEEEFEEE)) 
     \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_Error_i_1 
-       (.I0(p_4_in_0),
+       (.I0(p_4_in),
         .I1(Receive_ip2bus_error_reg_0),
         .I2(bus2ip_rnw_i_reg_0),
-        .I3(p_16_in),
+        .I3(\GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg ),
         .I4(ipif_glbl_irpt_enable_reg_reg),
         .O(IP2Bus_Error_1));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_i_2 
-       (.I0(p_16_in),
+       (.I0(\GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg ),
         .I1(ipif_glbl_irpt_enable_reg_reg),
         .O(\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT4 #(
     .INIT(16'hAFAE)) 
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_i_1 
@@ -3820,22 +3411,22 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
     .INIT(32'hFFFFFFFE)) 
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_i_3 
        (.I0(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_i_4_n_0 ),
-        .I1(p_12_in),
-        .I2(p_15_in_0),
-        .I3(p_9_in),
-        .I4(\GEN_BKEND_CE_REGISTERS[31].ce_out_i_reg_n_0_[31] ),
+        .I1(\GEN_BKEND_CE_REGISTERS[20].ce_out_i_reg ),
+        .I2(\GEN_BKEND_CE_REGISTERS[17].ce_out_i_reg ),
+        .I3(\GEN_BKEND_CE_REGISTERS[23].ce_out_i_reg ),
+        .I4(\GEN_BKEND_CE_REGISTERS[31].ce_out_i_reg ),
         .O(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_i_4 
-       (.I0(p_4_in),
+       (.I0(\GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg ),
         .I1(Receive_ip2bus_error_reg),
-        .I2(p_13_in),
-        .I3(p_11_in),
-        .I4(p_10_in),
-        .I5(p_14_in),
+        .I2(\GEN_BKEND_CE_REGISTERS[19].ce_out_i_reg ),
+        .I3(\GEN_BKEND_CE_REGISTERS[21].ce_out_i_reg ),
+        .I4(\GEN_BKEND_CE_REGISTERS[22].ce_out_i_reg ),
+        .I5(\GEN_BKEND_CE_REGISTERS[18].ce_out_i_reg ),
         .O(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT5 #(
     .INIT(32'h0000FF32)) 
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_i_1 
@@ -3845,7 +3436,7 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
         .I3(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_i_2_n_0 ),
         .I4(ip2Bus_WrAck_core_reg_d1),
         .O(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_reg_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT4 #(
     .INIT(16'hFAEA)) 
     \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_srl4___NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_r_i_1 
@@ -3857,90 +3448,90 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
   LUT6 #(
     .INIT(64'hFFFF0000FFFE0000)) 
     \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_srl4___NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_r_i_2 
-       (.I0(p_16_in),
+       (.I0(\GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg ),
         .I1(\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ),
         .I2(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_reg_0 ),
         .I3(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_reg ),
         .I4(ipif_glbl_irpt_enable_reg_reg),
         .I5(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_reg ),
         .O(\LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_srl4___NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_4_reg_r_i_2_n_0 ));
-  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized25 \MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized5 \MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] (\MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I_n_0 ),
         .Q(Q),
         .start2(start2));
-  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized35 \MEM_DECODE_GEN[0].PER_CE_GEN[10].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized15 \MEM_DECODE_GEN[0].PER_CE_GEN[10].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .p_5_out(p_5_out),
         .start2(start2));
-  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized36 \MEM_DECODE_GEN[0].PER_CE_GEN[11].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized16 \MEM_DECODE_GEN[0].PER_CE_GEN[11].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .p_4_out(p_4_out),
         .start2(start2));
-  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized37 \MEM_DECODE_GEN[0].PER_CE_GEN[12].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized17 \MEM_DECODE_GEN[0].PER_CE_GEN[12].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .p_3_out(p_3_out),
         .start2(start2));
-  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized38 \MEM_DECODE_GEN[0].PER_CE_GEN[13].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized18 \MEM_DECODE_GEN[0].PER_CE_GEN[13].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .p_2_out(p_2_out),
         .start2(start2));
-  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized39 \MEM_DECODE_GEN[0].PER_CE_GEN[14].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized19 \MEM_DECODE_GEN[0].PER_CE_GEN[14].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .p_1_out(p_1_out),
         .start2(start2));
-  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized26 \MEM_DECODE_GEN[0].PER_CE_GEN[1].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized6 \MEM_DECODE_GEN[0].PER_CE_GEN[1].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .p_14_out(p_14_out),
         .start2(start2));
-  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized27 \MEM_DECODE_GEN[0].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized7 \MEM_DECODE_GEN[0].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .p_13_out(p_13_out),
         .start2(start2));
-  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized28 \MEM_DECODE_GEN[0].PER_CE_GEN[3].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized8 \MEM_DECODE_GEN[0].PER_CE_GEN[3].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .p_12_out(p_12_out),
         .start2(start2));
-  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized29 \MEM_DECODE_GEN[0].PER_CE_GEN[4].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized9 \MEM_DECODE_GEN[0].PER_CE_GEN[4].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .p_11_out(p_11_out),
         .start2(start2));
-  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized30 \MEM_DECODE_GEN[0].PER_CE_GEN[5].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized10 \MEM_DECODE_GEN[0].PER_CE_GEN[5].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .p_10_out(p_10_out),
         .start2(start2));
-  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized31 \MEM_DECODE_GEN[0].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized11 \MEM_DECODE_GEN[0].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .p_9_out(p_9_out),
         .start2(start2));
-  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized32 \MEM_DECODE_GEN[0].PER_CE_GEN[7].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized12 \MEM_DECODE_GEN[0].PER_CE_GEN[7].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .p_8_out(p_8_out),
         .start2(start2));
-  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized33 \MEM_DECODE_GEN[0].PER_CE_GEN[8].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized13 \MEM_DECODE_GEN[0].PER_CE_GEN[8].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .p_7_out(p_7_out),
         .start2(start2));
-  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized34 \MEM_DECODE_GEN[0].PER_CE_GEN[9].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized14 \MEM_DECODE_GEN[0].PER_CE_GEN[9].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .p_6_out(p_6_out),
         .start2(start2));
-  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized44 \MEM_DECODE_GEN[1].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized25_36 \MEM_DECODE_GEN[1].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.\GEN_BKEND_CE_REGISTERS[18].ce_out_i_reg[18] (\MEM_DECODE_GEN[1].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I_n_0 ),
         .Q(Q),
         .start2(start2));
-  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized48 \MEM_DECODE_GEN[1].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized29_37 \MEM_DECODE_GEN[1].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.\GEN_BKEND_CE_REGISTERS[22].ce_out_i_reg[22] (\MEM_DECODE_GEN[1].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I_n_0 ),
         .Q(Q),
         .start2(start2));
-  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized53 \MEM_DECODE_GEN[2].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized25_38 \MEM_DECODE_GEN[2].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg[26] (\MEM_DECODE_GEN[2].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I_n_0 ),
         .Q(Q),
         .start2(start2));
-  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized57 \MEM_DECODE_GEN[2].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized29_39 \MEM_DECODE_GEN[2].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.\GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg[30] (\MEM_DECODE_GEN[2].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I_n_0 ),
         .Q(Q),
         .start2(start2));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT4 #(
     .INIT(16'h8880)) 
     Receive_ip2bus_error_i_1
@@ -3949,7 +3540,7 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
         .I2(rx_fifo_empty_i),
         .I3(empty_fwft_i_reg),
         .O(Receive_ip2bus_error0));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \SPICR_REG_78_GENERATE[7].SPI_TRISTATE_CONTROL_I_i_1 
@@ -3962,10 +3553,10 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
        (.I0(s_axi_wdata[0]),
         .I1(ipif_glbl_irpt_enable_reg_reg),
         .I2(ip2Bus_WrAck_core_reg_1),
-        .I3(p_4_in),
+        .I3(\GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg ),
         .I4(SPISSR_frm_axi_clk),
         .O(\SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0] ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT3 #(
     .INIT(8'h40)) 
     Transmit_ip2bus_error_i_1
@@ -3973,7 +3564,7 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
         .I1(Tx_FIFO_Full_int),
         .I2(Transmit_ip2bus_error_reg),
         .O(Transmit_ip2bus_error0));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT4 #(
     .INIT(16'h0800)) 
     \gc1.count_d1[3]_i_2 
@@ -3986,10 +3577,10 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
     .INIT(64'h00000000A0A0A080)) 
     intr2bus_rdack_i_1
        (.I0(ipif_glbl_irpt_enable_reg_reg),
-        .I1(p_24_in),
+        .I1(\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg ),
         .I2(bus2ip_be_int),
-        .I3(p_25_in),
-        .I4(p_22_in),
+        .I3(\GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg ),
+        .I4(\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg ),
         .I5(irpt_rdack_d1),
         .O(intr2bus_rdack0));
   LUT6 #(
@@ -3997,19 +3588,19 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
     intr2bus_wrack_i_1
        (.I0(ipif_glbl_irpt_enable_reg_reg),
         .I1(bus2ip_be_int),
-        .I2(p_22_in),
-        .I3(p_25_in),
-        .I4(p_24_in),
+        .I2(\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg ),
+        .I3(\GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg ),
+        .I4(\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg ),
         .I5(irpt_wrack_d1),
         .O(interrupt_wrce_strb));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT2 #(
     .INIT(4'h8)) 
     ip2Bus_RdAck_intr_reg_hole_d1_i_1
        (.I0(ip2Bus_WrAck_intr_reg_hole_d1_i_2_n_0),
         .I1(ipif_glbl_irpt_enable_reg_reg),
         .O(intr_controller_rd_ce_or_reduce));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT3 #(
     .INIT(8'h08)) 
     ip2Bus_RdAck_intr_reg_hole_i_1
@@ -4017,7 +3608,7 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
         .I1(ip2Bus_WrAck_intr_reg_hole_d1_i_2_n_0),
         .I2(ip2Bus_RdAck_intr_reg_hole_d1),
         .O(ip2Bus_RdAck_intr_reg_hole0));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT2 #(
     .INIT(4'h2)) 
     ip2Bus_WrAck_intr_reg_hole_d1_i_1
@@ -4028,30 +3619,30 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
     ip2Bus_WrAck_intr_reg_hole_d1_i_2
        (.I0(ip2Bus_WrAck_intr_reg_hole_d1_i_3_n_0),
-        .I1(p_20_in),
-        .I2(p_23_in),
-        .I3(p_18_in),
-        .I4(p_19_in),
+        .I1(\GEN_BKEND_CE_REGISTERS[12].ce_out_i_reg ),
+        .I2(\GEN_BKEND_CE_REGISTERS[9].ce_out_i_reg ),
+        .I3(\GEN_BKEND_CE_REGISTERS[14].ce_out_i_reg ),
+        .I4(\GEN_BKEND_CE_REGISTERS[13].ce_out_i_reg ),
         .I5(ip2Bus_WrAck_intr_reg_hole_d1_i_4_n_0),
         .O(ip2Bus_WrAck_intr_reg_hole_d1_i_2_n_0));
   LUT4 #(
     .INIT(16'hFFFE)) 
     ip2Bus_WrAck_intr_reg_hole_d1_i_3
-       (.I0(p_29_in),
-        .I1(p_21_in),
-        .I2(p_30_in),
-        .I3(p_32_in),
+       (.I0(\GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg ),
+        .I1(\GEN_BKEND_CE_REGISTERS[11].ce_out_i_reg ),
+        .I2(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I3(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ),
         .O(ip2Bus_WrAck_intr_reg_hole_d1_i_3_n_0));
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
     ip2Bus_WrAck_intr_reg_hole_d1_i_4
-       (.I0(p_31_in),
-        .I1(p_28_in),
-        .I2(p_17_in),
-        .I3(p_26_in),
-        .I4(p_27_in),
+       (.I0(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ),
+        .I1(\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg ),
+        .I2(\GEN_BKEND_CE_REGISTERS[15].ce_out_i_reg ),
+        .I3(\GEN_BKEND_CE_REGISTERS[6].ce_out_i_reg ),
+        .I4(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ),
         .O(ip2Bus_WrAck_intr_reg_hole_d1_i_4_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT3 #(
     .INIT(8'h04)) 
     ip2Bus_WrAck_intr_reg_hole_i_1
@@ -4059,14 +3650,14 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
         .I1(ip2Bus_WrAck_intr_reg_hole_d1_i_2_n_0),
         .I2(ip2Bus_WrAck_intr_reg_hole_d1),
         .O(ip2Bus_WrAck_intr_reg_hole0));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT4 #(
     .INIT(16'h5400)) 
     \ip_irpt_enable_reg[8]_i_1 
        (.I0(ipif_glbl_irpt_enable_reg_reg),
         .I1(bus2ip_rnw_i_reg),
         .I2(s_axi_wstrb),
-        .I3(p_22_in),
+        .I3(\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg ),
         .O(E));
   LUT6 #(
     .INIT(64'hEEEFFFFF22200000)) 
@@ -4075,35 +3666,35 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
         .I1(ipif_glbl_irpt_enable_reg_reg),
         .I2(bus2ip_rnw_i_reg),
         .I3(s_axi_wstrb),
-        .I4(p_25_in),
+        .I4(\GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg ),
         .I5(ipif_glbl_irpt_enable_reg),
         .O(ipif_glbl_irpt_enable_reg_reg_0));
   LUT6 #(
     .INIT(64'hFFF0EEE000000000)) 
     irpt_rdack_d1_i_1
-       (.I0(p_22_in),
-        .I1(p_25_in),
+       (.I0(\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg ),
+        .I1(\GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg ),
         .I2(bus2ip_rnw_i_reg),
         .I3(s_axi_wstrb),
-        .I4(p_24_in),
+        .I4(\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg ),
         .I5(ipif_glbl_irpt_enable_reg_reg),
         .O(irpt_rdack));
   LUT6 #(
     .INIT(64'h00000000FEFEFE00)) 
     irpt_wrack_d1_i_1
-       (.I0(p_24_in),
-        .I1(p_25_in),
-        .I2(p_22_in),
+       (.I0(\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg ),
+        .I1(\GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg ),
+        .I2(\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg ),
         .I3(s_axi_wstrb),
         .I4(bus2ip_rnw_i_reg),
         .I5(ipif_glbl_irpt_enable_reg_reg),
         .O(irpt_wrack));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT4 #(
     .INIT(16'h0004)) 
     reset_trig_i_1
        (.I0(sw_rst_cond_d1),
-        .I1(p_16_in),
+        .I1(\GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg ),
         .I2(ipif_glbl_irpt_enable_reg_reg),
         .I3(bus2ip_rnw_i_reg_0),
         .O(reset_trig0));
@@ -4133,12 +3724,12 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized1
         .I2(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg[5] [3]),
         .I3(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg[5] [2]),
         .O(s_axi_wready_INST_0_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT3 #(
     .INIT(8'h04)) 
     sw_rst_cond_d1_i_1
        (.I0(ipif_glbl_irpt_enable_reg_reg),
-        .I1(p_16_in),
+        .I1(\GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg ),
         .I2(bus2ip_rnw_i_reg_0),
         .O(sw_rst_cond));
 endmodule
@@ -4146,41 +3737,36 @@ endmodule
 (* ORIG_REF_NAME = "address_decoder" *) 
 module design_1_PmodWIFI_0_0_address_decoder__parameterized2
    (\LOAD_REG_GEN[31].LOAD_REG_I ,
-    \LOAD_REG_GEN[31].LOAD_REG_I_0 ,
-    \TCSR1_GENERATE[24].TCSR1_FF_I ,
-    \s_axi_rdata_i_reg[11] ,
-    \s_axi_rdata_i_reg[3] ,
-    bus2ip_rdce,
-    S_AXI_TIMER_wready,
-    S_AXI_TIMER_arready,
-    D,
-    \s_axi_rdata_i_reg[31] ,
-    \s_axi_rdata_i_reg[30] ,
-    \s_axi_rdata_i_reg[29] ,
-    \s_axi_rdata_i_reg[28] ,
-    \s_axi_rdata_i_reg[27] ,
-    \s_axi_rdata_i_reg[26] ,
-    \s_axi_rdata_i_reg[25] ,
-    \s_axi_rdata_i_reg[24] ,
-    \s_axi_rdata_i_reg[23] ,
-    \s_axi_rdata_i_reg[22] ,
-    \s_axi_rdata_i_reg[21] ,
-    \s_axi_rdata_i_reg[20] ,
-    \s_axi_rdata_i_reg[19] ,
-    \s_axi_rdata_i_reg[18] ,
-    \s_axi_rdata_i_reg[17] ,
-    \s_axi_rdata_i_reg[16] ,
-    \s_axi_rdata_i_reg[15] ,
-    \s_axi_rdata_i_reg[14] ,
-    \s_axi_rdata_i_reg[13] ,
-    \s_axi_rdata_i_reg[12] ,
-    pair0_Select,
     \TCSR0_GENERATE[23].TCSR0_FF_I ,
+    \s_axi_rdata_i_reg[12] ,
+    \s_axi_rdata_i_reg[13] ,
+    \s_axi_rdata_i_reg[14] ,
+    \s_axi_rdata_i_reg[15] ,
+    \s_axi_rdata_i_reg[16] ,
+    \s_axi_rdata_i_reg[17] ,
+    \s_axi_rdata_i_reg[18] ,
+    \s_axi_rdata_i_reg[19] ,
+    \s_axi_rdata_i_reg[20] ,
+    \s_axi_rdata_i_reg[21] ,
+    \s_axi_rdata_i_reg[22] ,
+    \s_axi_rdata_i_reg[23] ,
+    \s_axi_rdata_i_reg[24] ,
+    \s_axi_rdata_i_reg[25] ,
+    \s_axi_rdata_i_reg[26] ,
+    \s_axi_rdata_i_reg[27] ,
+    \s_axi_rdata_i_reg[28] ,
+    \s_axi_rdata_i_reg[29] ,
+    \s_axi_rdata_i_reg[30] ,
+    \s_axi_rdata_i_reg[31] ,
+    pair0_Select,
+    D,
+    S_AXI_TIMER_arready,
+    \s_axi_rdata_i_reg[11] ,
     \TCSR0_GENERATE[24].TCSR0_FF_I ,
-    bus2ip_wrce,
-    \TCSR1_GENERATE[23].TCSR1_FF_I ,
-    \TCSR1_GENERATE[24].TCSR1_FF_I_0 ,
-    \LOAD_REG_GEN[31].LOAD_REG_I_1 ,
+    \TCSR1_GENERATE[24].TCSR1_FF_I ,
+    S_AXI_TIMER_wready,
+    bus2ip_rdce,
+    \LOAD_REG_GEN[31].LOAD_REG_I_0 ,
     \LOAD_REG_GEN[30].LOAD_REG_I ,
     \LOAD_REG_GEN[29].LOAD_REG_I ,
     \LOAD_REG_GEN[28].LOAD_REG_I ,
@@ -4212,7 +3798,7 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized2
     \LOAD_REG_GEN[2].LOAD_REG_I ,
     \LOAD_REG_GEN[1].LOAD_REG_I ,
     D_0,
-    \LOAD_REG_GEN[31].LOAD_REG_I_2 ,
+    \LOAD_REG_GEN[31].LOAD_REG_I_1 ,
     \LOAD_REG_GEN[30].LOAD_REG_I_0 ,
     \LOAD_REG_GEN[29].LOAD_REG_I_0 ,
     \LOAD_REG_GEN[28].LOAD_REG_I_0 ,
@@ -4246,64 +3832,64 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized2
     D_1,
     s_axi_rvalid_i_reg,
     s_axi_bvalid_i_reg,
+    \TCSR0_GENERATE[23].TCSR0_FF_I_0 ,
+    \TCSR1_GENERATE[23].TCSR1_FF_I ,
+    \LOAD_REG_GEN[24].LOAD_REG_I_1 ,
+    \TCSR1_GENERATE[22].TCSR1_FF_I ,
+    \TCSR0_GENERATE[20].TCSR0_FF_I ,
     READ_DONE0_I,
     READ_DONE1_I,
     Q,
     s_axi_aclk,
     read_Mux_In,
-    s_axi_aresetn,
     state1__2,
-    S_AXI_TIMER_awvalid,
+    S_AXI_TIMER_arvalid,
     \state_reg[1] ,
-    is_read,
+    s_axi_wdata,
     s_axi_arvalid,
     is_write_reg,
-    s_axi_wdata,
+    is_read,
     \INCLUDE_DPHASE_TIMER.dpto_cnt_reg[5] ,
     s_axi_rready,
     s_axi_rvalid_i_reg_0,
     s_axi_bready,
     s_axi_bvalid_i_reg_0,
+    s_axi_aresetn,
     bus2ip_rnw_i,
     D_2,
     read_done1,
     \bus2ip_addr_i_reg[4] );
   output \LOAD_REG_GEN[31].LOAD_REG_I ;
-  output \LOAD_REG_GEN[31].LOAD_REG_I_0 ;
-  output \TCSR1_GENERATE[24].TCSR1_FF_I ;
-  output \s_axi_rdata_i_reg[11] ;
-  output \s_axi_rdata_i_reg[3] ;
-  output [5:0]bus2ip_rdce;
-  output S_AXI_TIMER_wready;
-  output S_AXI_TIMER_arready;
-  output [1:0]D;
-  output \s_axi_rdata_i_reg[31] ;
-  output \s_axi_rdata_i_reg[30] ;
-  output \s_axi_rdata_i_reg[29] ;
-  output \s_axi_rdata_i_reg[28] ;
-  output \s_axi_rdata_i_reg[27] ;
-  output \s_axi_rdata_i_reg[26] ;
-  output \s_axi_rdata_i_reg[25] ;
-  output \s_axi_rdata_i_reg[24] ;
-  output \s_axi_rdata_i_reg[23] ;
-  output \s_axi_rdata_i_reg[22] ;
-  output \s_axi_rdata_i_reg[21] ;
-  output \s_axi_rdata_i_reg[20] ;
-  output \s_axi_rdata_i_reg[19] ;
-  output \s_axi_rdata_i_reg[18] ;
-  output \s_axi_rdata_i_reg[17] ;
-  output \s_axi_rdata_i_reg[16] ;
-  output \s_axi_rdata_i_reg[15] ;
-  output \s_axi_rdata_i_reg[14] ;
-  output \s_axi_rdata_i_reg[13] ;
-  output \s_axi_rdata_i_reg[12] ;
-  output pair0_Select;
   output \TCSR0_GENERATE[23].TCSR0_FF_I ;
+  output \s_axi_rdata_i_reg[12] ;
+  output \s_axi_rdata_i_reg[13] ;
+  output \s_axi_rdata_i_reg[14] ;
+  output \s_axi_rdata_i_reg[15] ;
+  output \s_axi_rdata_i_reg[16] ;
+  output \s_axi_rdata_i_reg[17] ;
+  output \s_axi_rdata_i_reg[18] ;
+  output \s_axi_rdata_i_reg[19] ;
+  output \s_axi_rdata_i_reg[20] ;
+  output \s_axi_rdata_i_reg[21] ;
+  output \s_axi_rdata_i_reg[22] ;
+  output \s_axi_rdata_i_reg[23] ;
+  output \s_axi_rdata_i_reg[24] ;
+  output \s_axi_rdata_i_reg[25] ;
+  output \s_axi_rdata_i_reg[26] ;
+  output \s_axi_rdata_i_reg[27] ;
+  output \s_axi_rdata_i_reg[28] ;
+  output \s_axi_rdata_i_reg[29] ;
+  output \s_axi_rdata_i_reg[30] ;
+  output \s_axi_rdata_i_reg[31] ;
+  output pair0_Select;
+  output [1:0]D;
+  output S_AXI_TIMER_arready;
+  output \s_axi_rdata_i_reg[11] ;
   output \TCSR0_GENERATE[24].TCSR0_FF_I ;
-  output [1:0]bus2ip_wrce;
-  output \TCSR1_GENERATE[23].TCSR1_FF_I ;
-  output \TCSR1_GENERATE[24].TCSR1_FF_I_0 ;
-  output \LOAD_REG_GEN[31].LOAD_REG_I_1 ;
+  output \TCSR1_GENERATE[24].TCSR1_FF_I ;
+  output S_AXI_TIMER_wready;
+  output [5:0]bus2ip_rdce;
+  output \LOAD_REG_GEN[31].LOAD_REG_I_0 ;
   output \LOAD_REG_GEN[30].LOAD_REG_I ;
   output \LOAD_REG_GEN[29].LOAD_REG_I ;
   output \LOAD_REG_GEN[28].LOAD_REG_I ;
@@ -4335,7 +3921,7 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized2
   output \LOAD_REG_GEN[2].LOAD_REG_I ;
   output \LOAD_REG_GEN[1].LOAD_REG_I ;
   output D_0;
-  output \LOAD_REG_GEN[31].LOAD_REG_I_2 ;
+  output \LOAD_REG_GEN[31].LOAD_REG_I_1 ;
   output \LOAD_REG_GEN[30].LOAD_REG_I_0 ;
   output \LOAD_REG_GEN[29].LOAD_REG_I_0 ;
   output \LOAD_REG_GEN[28].LOAD_REG_I_0 ;
@@ -4369,24 +3955,29 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized2
   output D_1;
   output s_axi_rvalid_i_reg;
   output s_axi_bvalid_i_reg;
+  output \TCSR0_GENERATE[23].TCSR0_FF_I_0 ;
+  output \TCSR1_GENERATE[23].TCSR1_FF_I ;
+  output \LOAD_REG_GEN[24].LOAD_REG_I_1 ;
+  output \TCSR1_GENERATE[22].TCSR1_FF_I ;
+  output \TCSR0_GENERATE[20].TCSR0_FF_I ;
   output READ_DONE0_I;
   output READ_DONE1_I;
   input Q;
   input s_axi_aclk;
-  input [90:0]read_Mux_In;
-  input s_axi_aresetn;
+  input [87:0]read_Mux_In;
   input state1__2;
-  input S_AXI_TIMER_awvalid;
+  input S_AXI_TIMER_arvalid;
   input [1:0]\state_reg[1] ;
-  input is_read;
+  input [31:0]s_axi_wdata;
   input s_axi_arvalid;
   input is_write_reg;
-  input [31:0]s_axi_wdata;
+  input is_read;
   input [5:0]\INCLUDE_DPHASE_TIMER.dpto_cnt_reg[5] ;
   input s_axi_rready;
   input s_axi_rvalid_i_reg_0;
   input s_axi_bready;
   input s_axi_bvalid_i_reg_0;
+  input s_axi_aresetn;
   input bus2ip_rnw_i;
   input D_2;
   input read_done1;
@@ -4397,11 +3988,9 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized2
   wire D_0;
   wire D_1;
   wire D_2;
-  wire \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ;
-  wire \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ;
-  wire \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg ;
-  wire \GEN_BKEND_CE_REGISTERS[6].ce_out_i_reg ;
-  wire \GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[0].ce_out_i[0]_i_1_n_0 ;
+  wire \GEN_BKEND_CE_REGISTERS[7].ce_out_i[7]_i_1_n_0 ;
+  wire \GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg_n_0_[7] ;
   wire [5:0]\INCLUDE_DPHASE_TIMER.dpto_cnt_reg[5] ;
   wire \LOAD_REG_GEN[10].LOAD_REG_I ;
   wire \LOAD_REG_GEN[10].LOAD_REG_I_0 ;
@@ -4435,6 +4024,7 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized2
   wire \LOAD_REG_GEN[23].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[24].LOAD_REG_I ;
   wire \LOAD_REG_GEN[24].LOAD_REG_I_0 ;
+  wire \LOAD_REG_GEN[24].LOAD_REG_I_1 ;
   wire \LOAD_REG_GEN[25].LOAD_REG_I ;
   wire \LOAD_REG_GEN[25].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[26].LOAD_REG_I ;
@@ -4452,7 +4042,6 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized2
   wire \LOAD_REG_GEN[31].LOAD_REG_I ;
   wire \LOAD_REG_GEN[31].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[31].LOAD_REG_I_1 ;
-  wire \LOAD_REG_GEN[31].LOAD_REG_I_2 ;
   wire \LOAD_REG_GEN[3].LOAD_REG_I ;
   wire \LOAD_REG_GEN[3].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[4].LOAD_REG_I ;
@@ -4471,34 +4060,38 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized2
   wire READ_DONE0_I;
   wire READ_DONE1_I;
   wire S_AXI_TIMER_arready;
-  wire S_AXI_TIMER_awvalid;
+  wire S_AXI_TIMER_arvalid;
   wire S_AXI_TIMER_wready;
+  wire \TCSR0_GENERATE[20].TCSR0_FF_I ;
   wire \TCSR0_GENERATE[23].TCSR0_FF_I ;
+  wire \TCSR0_GENERATE[23].TCSR0_FF_I_0 ;
   wire \TCSR0_GENERATE[24].TCSR0_FF_I ;
+  wire \TCSR1_GENERATE[22].TCSR1_FF_I ;
   wire \TCSR1_GENERATE[23].TCSR1_FF_I ;
   wire \TCSR1_GENERATE[24].TCSR1_FF_I ;
-  wire \TCSR1_GENERATE[24].TCSR1_FF_I_0 ;
   wire [2:0]\bus2ip_addr_i_reg[4] ;
   wire [5:0]bus2ip_rdce;
   wire bus2ip_rnw_i;
-  wire [1:0]bus2ip_wrce;
-  wire ce_expnd_i_0;
-  wire ce_expnd_i_1;
-  wire ce_expnd_i_2;
-  wire ce_expnd_i_3;
-  wire ce_expnd_i_5;
-  wire ce_expnd_i_6;
-  wire ce_expnd_i_7;
-  wire cs_ce_clr;
   wire eqOp__4;
   wire is_read;
   wire is_write_reg;
+  wire p_1_out;
+  wire p_2_in;
+  wire p_2_out;
+  wire p_3_in;
+  wire p_3_out;
+  wire p_4_in;
+  wire p_5_out;
+  wire p_6_in;
+  wire p_6_out;
+  wire p_7_out;
+  wire p_8_in;
   wire pair0_Select;
-  wire [90:0]read_Mux_In;
+  wire [87:0]read_Mux_In;
   wire read_done1;
   wire s_axi_aclk;
   wire s_axi_aresetn;
-  wire s_axi_arready_INST_0_i_1_n_0;
+  wire s_axi_arready_INST_0_i_4_n_0;
   wire s_axi_arvalid;
   wire s_axi_bready;
   wire s_axi_bvalid_i_reg;
@@ -4524,925 +4117,938 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized2
   wire \s_axi_rdata_i_reg[29] ;
   wire \s_axi_rdata_i_reg[30] ;
   wire \s_axi_rdata_i_reg[31] ;
-  wire \s_axi_rdata_i_reg[3] ;
   wire s_axi_rready;
   wire s_axi_rvalid_i_reg;
   wire s_axi_rvalid_i_reg_0;
   wire [31:0]s_axi_wdata;
   wire s_axi_wready_INST_0_i_1_n_0;
+  wire s_axi_wready_INST_0_i_2_n_0;
   wire state1__2;
   wire [1:0]\state_reg[1] ;
 
-  (* SOFT_HLUTNM = "soft_lutpair77" *) 
+  (* SOFT_HLUTNM = "soft_lutpair79" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     Bus_RNW_reg_i_1
        (.I0(bus2ip_rnw_i),
         .I1(Q),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(Bus_RNW_reg_i_1_n_0));
   FDRE Bus_RNW_reg_reg
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(Bus_RNW_reg_i_1_n_0),
-        .Q(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .Q(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .R(1'b0));
   LUT3 #(
     .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(read_Mux_In[85]),
+       (.I0(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(read_Mux_In[84]),
         .O(\s_axi_rdata_i_reg[31] ));
-  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  (* SOFT_HLUTNM = "soft_lutpair76" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_2 
-       (.I0(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I1(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .O(bus2ip_rdce[1]));
-  (* SOFT_HLUTNM = "soft_lutpair73" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_3 
-       (.I0(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
-        .I1(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .O(bus2ip_rdce[3]));
+       (.I0(p_2_in),
+        .I1(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .O(bus2ip_rdce[0]));
   (* SOFT_HLUTNM = "soft_lutpair74" *) 
   LUT2 #(
     .INIT(4'h8)) 
-    \GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_4 
-       (.I0(\GEN_BKEND_CE_REGISTERS[6].ce_out_i_reg ),
-        .I1(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .O(bus2ip_rdce[0]));
+    \GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_3 
+       (.I0(p_3_in),
+        .I1(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .O(bus2ip_rdce[1]));
   LUT3 #(
     .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[10].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(read_Mux_In[75]),
+       (.I0(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(read_Mux_In[74]),
         .O(\s_axi_rdata_i_reg[21] ));
   LUT3 #(
     .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[11].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(read_Mux_In[74]),
+       (.I0(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(read_Mux_In[73]),
         .O(\s_axi_rdata_i_reg[20] ));
   LUT3 #(
     .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[12].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(read_Mux_In[73]),
+       (.I0(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(read_Mux_In[72]),
         .O(\s_axi_rdata_i_reg[19] ));
   LUT3 #(
     .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[13].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(read_Mux_In[72]),
+       (.I0(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(read_Mux_In[71]),
         .O(\s_axi_rdata_i_reg[18] ));
   LUT3 #(
     .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[14].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(read_Mux_In[71]),
+       (.I0(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(read_Mux_In[70]),
         .O(\s_axi_rdata_i_reg[17] ));
   LUT3 #(
     .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[15].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(read_Mux_In[70]),
+       (.I0(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(read_Mux_In[69]),
         .O(\s_axi_rdata_i_reg[16] ));
   LUT3 #(
     .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[16].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(read_Mux_In[69]),
+       (.I0(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(read_Mux_In[68]),
         .O(\s_axi_rdata_i_reg[15] ));
   LUT3 #(
     .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[17].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(read_Mux_In[68]),
+       (.I0(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(read_Mux_In[67]),
         .O(\s_axi_rdata_i_reg[14] ));
   LUT3 #(
     .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[18].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(read_Mux_In[67]),
+       (.I0(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(read_Mux_In[66]),
         .O(\s_axi_rdata_i_reg[13] ));
   LUT3 #(
     .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[19].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(read_Mux_In[66]),
+       (.I0(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(read_Mux_In[65]),
         .O(\s_axi_rdata_i_reg[12] ));
   LUT3 #(
     .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[1].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(read_Mux_In[84]),
+       (.I0(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(read_Mux_In[83]),
         .O(\s_axi_rdata_i_reg[30] ));
   LUT5 #(
-    .INIT(32'h0F7F7F7F)) 
+    .INIT(32'h0777FFFF)) 
     \GEN.DATA_WIDTH_GEN[20].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[90]),
-        .I1(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I4(read_Mux_In[65]),
+       (.I0(read_Mux_In[64]),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(read_Mux_In[87]),
+        .I3(p_8_in),
+        .I4(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\s_axi_rdata_i_reg[11] ));
-  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \GEN.DATA_WIDTH_GEN[21].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_2 
-       (.I0(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ),
-        .I1(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+       (.I0(p_8_in),
+        .I1(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(bus2ip_rdce[5]));
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \GEN.DATA_WIDTH_GEN[21].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_3 
-       (.I0(\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg ),
-        .I1(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .O(bus2ip_rdce[2]));
-  (* SOFT_HLUTNM = "soft_lutpair68" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \GEN.DATA_WIDTH_GEN[21].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_4 
-       (.I0(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I1(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .O(bus2ip_rdce[4]));
-  LUT6 #(
-    .INIT(64'h0000077707770777)) 
-    \GEN.DATA_WIDTH_GEN[28].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(bus2ip_rdce[5]),
-        .I1(read_Mux_In[88]),
-        .I2(bus2ip_rdce[2]),
-        .I3(read_Mux_In[86]),
-        .I4(bus2ip_rdce[4]),
-        .I5(read_Mux_In[64]),
-        .O(\s_axi_rdata_i_reg[3] ));
   LUT3 #(
     .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[2].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(read_Mux_In[83]),
+       (.I0(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(read_Mux_In[82]),
         .O(\s_axi_rdata_i_reg[29] ));
   LUT3 #(
     .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[3].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(read_Mux_In[82]),
+       (.I0(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(read_Mux_In[81]),
         .O(\s_axi_rdata_i_reg[28] ));
   LUT3 #(
     .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[4].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(read_Mux_In[81]),
+       (.I0(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(read_Mux_In[80]),
         .O(\s_axi_rdata_i_reg[27] ));
   LUT3 #(
     .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[5].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(read_Mux_In[80]),
+       (.I0(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(read_Mux_In[79]),
         .O(\s_axi_rdata_i_reg[26] ));
   LUT3 #(
     .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[6].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(read_Mux_In[79]),
+       (.I0(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(read_Mux_In[78]),
         .O(\s_axi_rdata_i_reg[25] ));
   LUT3 #(
     .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[7].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(read_Mux_In[78]),
+       (.I0(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(read_Mux_In[77]),
         .O(\s_axi_rdata_i_reg[24] ));
   LUT3 #(
     .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(read_Mux_In[77]),
+       (.I0(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(read_Mux_In[76]),
         .O(\s_axi_rdata_i_reg[23] ));
   LUT3 #(
     .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[9].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(read_Mux_In[76]),
+       (.I0(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(read_Mux_In[75]),
         .O(\s_axi_rdata_i_reg[22] ));
+  (* SOFT_HLUTNM = "soft_lutpair70" *) 
+  LUT4 #(
+    .INIT(16'h0010)) 
+    \GEN_BKEND_CE_REGISTERS[0].ce_out_i[0]_i_1 
+       (.I0(\bus2ip_addr_i_reg[4] [0]),
+        .I1(\bus2ip_addr_i_reg[4] [2]),
+        .I2(Q),
+        .I3(\bus2ip_addr_i_reg[4] [1]),
+        .O(\GEN_BKEND_CE_REGISTERS[0].ce_out_i[0]_i_1_n_0 ));
   FDRE \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] 
        (.C(s_axi_aclk),
         .CE(Q),
-        .D(ce_expnd_i_7),
-        .Q(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ),
-        .R(cs_ce_clr));
+        .D(\GEN_BKEND_CE_REGISTERS[0].ce_out_i[0]_i_1_n_0 ),
+        .Q(p_8_in),
+        .R(\GEN_BKEND_CE_REGISTERS[7].ce_out_i[7]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair71" *) 
   LUT4 #(
     .INIT(16'h1000)) 
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i[1]_i_1 
-       (.I0(\bus2ip_addr_i_reg[4] [2]),
-        .I1(\bus2ip_addr_i_reg[4] [1]),
-        .I2(Q),
-        .I3(\bus2ip_addr_i_reg[4] [0]),
-        .O(ce_expnd_i_6));
+       (.I0(\bus2ip_addr_i_reg[4] [1]),
+        .I1(\bus2ip_addr_i_reg[4] [2]),
+        .I2(\bus2ip_addr_i_reg[4] [0]),
+        .I3(Q),
+        .O(p_6_out));
   FDRE \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] 
        (.C(s_axi_aclk),
         .CE(Q),
-        .D(ce_expnd_i_6),
-        .Q(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .R(cs_ce_clr));
+        .D(p_6_out),
+        .Q(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .R(\GEN_BKEND_CE_REGISTERS[7].ce_out_i[7]_i_1_n_0 ));
   FDRE \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg[2] 
        (.C(s_axi_aclk),
         .CE(Q),
-        .D(ce_expnd_i_5),
-        .Q(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
-        .R(cs_ce_clr));
+        .D(p_5_out),
+        .Q(p_6_in),
+        .R(\GEN_BKEND_CE_REGISTERS[7].ce_out_i[7]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  LUT4 #(
+    .INIT(16'h1000)) 
+    \GEN_BKEND_CE_REGISTERS[4].ce_out_i[4]_i_1 
+       (.I0(\bus2ip_addr_i_reg[4] [0]),
+        .I1(\bus2ip_addr_i_reg[4] [1]),
+        .I2(Q),
+        .I3(\bus2ip_addr_i_reg[4] [2]),
+        .O(p_3_out));
   FDRE \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] 
        (.C(s_axi_aclk),
         .CE(Q),
-        .D(ce_expnd_i_3),
-        .Q(\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg ),
-        .R(cs_ce_clr));
+        .D(p_3_out),
+        .Q(p_4_in),
+        .R(\GEN_BKEND_CE_REGISTERS[7].ce_out_i[7]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair70" *) 
+  LUT4 #(
+    .INIT(16'h2000)) 
+    \GEN_BKEND_CE_REGISTERS[5].ce_out_i[5]_i_1 
+       (.I0(\bus2ip_addr_i_reg[4] [2]),
+        .I1(\bus2ip_addr_i_reg[4] [1]),
+        .I2(\bus2ip_addr_i_reg[4] [0]),
+        .I3(Q),
+        .O(p_2_out));
   FDRE \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] 
        (.C(s_axi_aclk),
         .CE(Q),
-        .D(ce_expnd_i_2),
-        .Q(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .R(cs_ce_clr));
+        .D(p_2_out),
+        .Q(p_3_in),
+        .R(\GEN_BKEND_CE_REGISTERS[7].ce_out_i[7]_i_1_n_0 ));
   FDRE \GEN_BKEND_CE_REGISTERS[6].ce_out_i_reg[6] 
        (.C(s_axi_aclk),
         .CE(Q),
-        .D(ce_expnd_i_1),
-        .Q(\GEN_BKEND_CE_REGISTERS[6].ce_out_i_reg ),
-        .R(cs_ce_clr));
+        .D(p_1_out),
+        .Q(p_2_in),
+        .R(\GEN_BKEND_CE_REGISTERS[7].ce_out_i[7]_i_1_n_0 ));
   LUT3 #(
     .INIT(8'hEF)) 
     \GEN_BKEND_CE_REGISTERS[7].ce_out_i[7]_i_1 
        (.I0(S_AXI_TIMER_wready),
         .I1(S_AXI_TIMER_arready),
         .I2(s_axi_aresetn),
-        .O(cs_ce_clr));
+        .O(\GEN_BKEND_CE_REGISTERS[7].ce_out_i[7]_i_1_n_0 ));
   FDRE \GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg[7] 
        (.C(s_axi_aclk),
         .CE(Q),
-        .D(ce_expnd_i_0),
-        .Q(\GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg ),
-        .R(cs_ce_clr));
+        .D(p_7_out),
+        .Q(\GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg_n_0_[7] ),
+        .R(\GEN_BKEND_CE_REGISTERS[7].ce_out_i[7]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[0].LOAD_REG_I_i_2 
        (.I0(s_axi_wdata[31]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[63]),
         .O(D_0));
-  (* SOFT_HLUTNM = "soft_lutpair72" *) 
+  (* SOFT_HLUTNM = "soft_lutpair73" *) 
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[0].LOAD_REG_I_i_2__0 
        (.I0(s_axi_wdata[31]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[31]),
+        .I1(read_Mux_In[31]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(D_1));
+  (* SOFT_HLUTNM = "soft_lutpair73" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \LOAD_REG_GEN[0].LOAD_REG_I_i_7 
+       (.I0(p_3_in),
+        .I1(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .O(\LOAD_REG_GEN[24].LOAD_REG_I_1 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[10].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[21]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[53]),
         .O(\LOAD_REG_GEN[10].LOAD_REG_I ));
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[10].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[21]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[21]),
+        .I1(read_Mux_In[21]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[10].LOAD_REG_I_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[11].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[20]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[52]),
         .O(\LOAD_REG_GEN[11].LOAD_REG_I ));
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[11].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[20]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[20]),
+        .I1(read_Mux_In[20]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[11].LOAD_REG_I_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[12].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[19]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[51]),
         .O(\LOAD_REG_GEN[12].LOAD_REG_I ));
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[12].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[19]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[19]),
+        .I1(read_Mux_In[19]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[12].LOAD_REG_I_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[13].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[18]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[50]),
         .O(\LOAD_REG_GEN[13].LOAD_REG_I ));
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[13].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[18]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[18]),
+        .I1(read_Mux_In[18]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[13].LOAD_REG_I_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[14].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[17]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[49]),
         .O(\LOAD_REG_GEN[14].LOAD_REG_I ));
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[14].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[17]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[17]),
+        .I1(read_Mux_In[17]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[14].LOAD_REG_I_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[15].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[16]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[48]),
         .O(\LOAD_REG_GEN[15].LOAD_REG_I ));
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[15].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[16]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[16]),
+        .I1(read_Mux_In[16]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[15].LOAD_REG_I_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[16].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[15]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[47]),
         .O(\LOAD_REG_GEN[16].LOAD_REG_I ));
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[16].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[15]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[15]),
+        .I1(read_Mux_In[15]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[16].LOAD_REG_I_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[17].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[14]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[46]),
         .O(\LOAD_REG_GEN[17].LOAD_REG_I ));
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[17].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[14]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[14]),
+        .I1(read_Mux_In[14]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[17].LOAD_REG_I_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[18].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[13]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[45]),
         .O(\LOAD_REG_GEN[18].LOAD_REG_I ));
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[18].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[13]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[13]),
+        .I1(read_Mux_In[13]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[18].LOAD_REG_I_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[19].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[12]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[44]),
         .O(\LOAD_REG_GEN[19].LOAD_REG_I ));
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[19].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[12]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[12]),
+        .I1(read_Mux_In[12]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[19].LOAD_REG_I_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair69" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[1].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[30]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[62]),
         .O(\LOAD_REG_GEN[1].LOAD_REG_I ));
-  (* SOFT_HLUTNM = "soft_lutpair73" *) 
+  (* SOFT_HLUTNM = "soft_lutpair74" *) 
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[1].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[30]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[30]),
+        .I1(read_Mux_In[30]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[1].LOAD_REG_I_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[20].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[11]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[43]),
         .O(\LOAD_REG_GEN[20].LOAD_REG_I ));
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[20].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[11]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[11]),
+        .I1(read_Mux_In[11]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[20].LOAD_REG_I_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[21].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[10]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[42]),
         .O(\LOAD_REG_GEN[21].LOAD_REG_I ));
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[21].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[10]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[10]),
+        .I1(read_Mux_In[10]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[21].LOAD_REG_I_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[22].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[9]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[41]),
         .O(\LOAD_REG_GEN[22].LOAD_REG_I ));
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[22].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[9]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[9]),
+        .I1(read_Mux_In[9]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[22].LOAD_REG_I_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[23].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[8]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[40]),
         .O(\LOAD_REG_GEN[23].LOAD_REG_I ));
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[23].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[8]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[8]),
+        .I1(read_Mux_In[8]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[23].LOAD_REG_I_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[24].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[7]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[39]),
         .O(\LOAD_REG_GEN[24].LOAD_REG_I ));
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[24].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[7]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[7]),
+        .I1(read_Mux_In[7]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[24].LOAD_REG_I_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[25].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[6]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[38]),
         .O(\LOAD_REG_GEN[25].LOAD_REG_I ));
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[25].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[6]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[6]),
+        .I1(read_Mux_In[6]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[25].LOAD_REG_I_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[26].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[5]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[37]),
         .O(\LOAD_REG_GEN[26].LOAD_REG_I ));
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[26].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[5]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[5]),
+        .I1(read_Mux_In[5]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[26].LOAD_REG_I_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[27].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[4]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[36]),
         .O(\LOAD_REG_GEN[27].LOAD_REG_I ));
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[27].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[4]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[4]),
+        .I1(read_Mux_In[4]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[27].LOAD_REG_I_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[28].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[3]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[35]),
         .O(\LOAD_REG_GEN[28].LOAD_REG_I ));
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[28].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[3]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[3]),
+        .I1(read_Mux_In[3]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[28].LOAD_REG_I_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[29].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[2]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[34]),
         .O(\LOAD_REG_GEN[29].LOAD_REG_I ));
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[29].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[2]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[2]),
+        .I1(read_Mux_In[2]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[29].LOAD_REG_I_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair69" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[2].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[29]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[61]),
         .O(\LOAD_REG_GEN[2].LOAD_REG_I ));
-  (* SOFT_HLUTNM = "soft_lutpair74" *) 
+  (* SOFT_HLUTNM = "soft_lutpair75" *) 
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[2].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[29]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[29]),
+        .I1(read_Mux_In[29]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[2].LOAD_REG_I_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair78" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[30].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[1]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[33]),
         .O(\LOAD_REG_GEN[30].LOAD_REG_I ));
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[30].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[1]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[1]),
+        .I1(read_Mux_In[1]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[30].LOAD_REG_I_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair77" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[31].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[0]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[32]),
-        .O(\LOAD_REG_GEN[31].LOAD_REG_I_1 ));
+        .O(\LOAD_REG_GEN[31].LOAD_REG_I_0 ));
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[31].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[0]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[0]),
-        .O(\LOAD_REG_GEN[31].LOAD_REG_I_2 ));
+        .I1(read_Mux_In[0]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .O(\LOAD_REG_GEN[31].LOAD_REG_I_1 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[3].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[28]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[60]),
         .O(\LOAD_REG_GEN[3].LOAD_REG_I ));
-  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+  (* SOFT_HLUTNM = "soft_lutpair76" *) 
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[3].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[28]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[28]),
+        .I1(read_Mux_In[28]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[3].LOAD_REG_I_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair71" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[4].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[27]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[59]),
         .O(\LOAD_REG_GEN[4].LOAD_REG_I ));
-  (* SOFT_HLUTNM = "soft_lutpair76" *) 
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[4].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[27]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[27]),
+        .I1(read_Mux_In[27]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[4].LOAD_REG_I_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[5].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[26]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[58]),
         .O(\LOAD_REG_GEN[5].LOAD_REG_I ));
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[5].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[26]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[26]),
+        .I1(read_Mux_In[26]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[5].LOAD_REG_I_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[6].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[25]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[57]),
         .O(\LOAD_REG_GEN[6].LOAD_REG_I ));
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[6].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[25]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[25]),
+        .I1(read_Mux_In[25]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[6].LOAD_REG_I_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[7].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[24]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[56]),
         .O(\LOAD_REG_GEN[7].LOAD_REG_I ));
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[7].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[24]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[24]),
+        .I1(read_Mux_In[24]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[7].LOAD_REG_I_0 ));
   (* SOFT_HLUTNM = "soft_lutpair68" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[8].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[23]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[55]),
         .O(\LOAD_REG_GEN[8].LOAD_REG_I ));
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[8].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[23]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[23]),
+        .I1(read_Mux_In[23]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[8].LOAD_REG_I_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[9].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[22]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I3(read_Mux_In[54]),
         .O(\LOAD_REG_GEN[9].LOAD_REG_I ));
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'hCCAC)) 
     \LOAD_REG_GEN[9].LOAD_REG_I_i_1__0 
        (.I0(s_axi_wdata[22]),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I3(read_Mux_In[22]),
+        .I1(read_Mux_In[22]),
+        .I2(p_3_in),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .O(\LOAD_REG_GEN[9].LOAD_REG_I_0 ));
-  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized59 \MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized25 \MEM_DECODE_GEN[0].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .\bus2ip_addr_i_reg[4] (\bus2ip_addr_i_reg[4] ),
-        .ce_expnd_i_7(ce_expnd_i_7));
-  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized61 \MEM_DECODE_GEN[0].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+        .p_5_out(p_5_out));
+  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized29 \MEM_DECODE_GEN[0].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .\bus2ip_addr_i_reg[4] (\bus2ip_addr_i_reg[4] ),
-        .ce_expnd_i_5(ce_expnd_i_5));
-  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized63 \MEM_DECODE_GEN[0].PER_CE_GEN[4].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+        .p_1_out(p_1_out));
+  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized30 \MEM_DECODE_GEN[0].PER_CE_GEN[7].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .\bus2ip_addr_i_reg[4] (\bus2ip_addr_i_reg[4] ),
-        .ce_expnd_i_3(ce_expnd_i_3));
-  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized64 \MEM_DECODE_GEN[0].PER_CE_GEN[5].MULTIPLE_CES_THIS_CS_GEN.CE_I 
-       (.Q(Q),
-        .\bus2ip_addr_i_reg[4] (\bus2ip_addr_i_reg[4] ),
-        .ce_expnd_i_2(ce_expnd_i_2));
-  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized65 \MEM_DECODE_GEN[0].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I 
-       (.Q(Q),
-        .\bus2ip_addr_i_reg[4] (\bus2ip_addr_i_reg[4] ),
-        .ce_expnd_i_1(ce_expnd_i_1));
-  design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized66 \MEM_DECODE_GEN[0].PER_CE_GEN[7].MULTIPLE_CES_THIS_CS_GEN.CE_I 
-       (.Q(Q),
-        .\bus2ip_addr_i_reg[4] (\bus2ip_addr_i_reg[4] ),
-        .ce_expnd_i_0(ce_expnd_i_0));
-  (* SOFT_HLUTNM = "soft_lutpair69" *) 
+        .p_7_out(p_7_out));
+  (* SOFT_HLUTNM = "soft_lutpair68" *) 
   LUT2 #(
     .INIT(4'hE)) 
     READ_DONE0_I_i_2
-       (.I0(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
+       (.I0(\LOAD_REG_GEN[31].LOAD_REG_I ),
         .I1(D_2),
         .O(READ_DONE0_I));
-  (* SOFT_HLUTNM = "soft_lutpair72" *) 
+  (* SOFT_HLUTNM = "soft_lutpair75" *) 
   LUT2 #(
     .INIT(4'hE)) 
     READ_DONE1_I_i_2
-       (.I0(\LOAD_REG_GEN[31].LOAD_REG_I ),
+       (.I0(p_3_in),
         .I1(read_done1),
         .O(READ_DONE1_I));
-  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+  (* SOFT_HLUTNM = "soft_lutpair78" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \TCSR0_GENERATE[20].TCSR0_FF_I_i_1 
-       (.I0(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ),
-        .I1(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .O(bus2ip_wrce[1]));
-  (* SOFT_HLUTNM = "soft_lutpair77" *) 
+       (.I0(p_8_in),
+        .I1(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .O(\TCSR0_GENERATE[20].TCSR0_FF_I ));
+  (* SOFT_HLUTNM = "soft_lutpair79" *) 
   LUT3 #(
     .INIT(8'h32)) 
     \TCSR0_GENERATE[21].TCSR0_FF_I_i_1 
-       (.I0(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ),
-        .I1(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I2(\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg ),
+       (.I0(p_8_in),
+        .I1(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .I2(p_4_in),
         .O(pair0_Select));
-  (* SOFT_HLUTNM = "soft_lutpair70" *) 
+  (* SOFT_HLUTNM = "soft_lutpair72" *) 
   LUT4 #(
     .INIT(16'h20FF)) 
     \TCSR0_GENERATE[23].TCSR0_FF_I_i_1 
-       (.I0(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ),
-        .I1(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+       (.I0(p_8_in),
+        .I1(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I2(s_axi_wdata[8]),
         .I3(s_axi_aresetn),
-        .O(\TCSR0_GENERATE[23].TCSR0_FF_I ));
-  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+        .O(\TCSR0_GENERATE[23].TCSR0_FF_I_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
   LUT5 #(
-    .INIT(32'hEEFEEEAE)) 
+    .INIT(32'hEFEEEAEE)) 
     \TCSR0_GENERATE[24].TCSR0_FF_I_i_1 
        (.I0(s_axi_wdata[10]),
-        .I1(read_Mux_In[89]),
-        .I2(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ),
-        .I3(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(read_Mux_In[86]),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .I3(p_8_in),
         .I4(s_axi_wdata[7]),
         .O(\TCSR0_GENERATE[24].TCSR0_FF_I ));
-  (* SOFT_HLUTNM = "soft_lutpair76" *) 
+  (* SOFT_HLUTNM = "soft_lutpair77" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \TCSR1_GENERATE[22].TCSR1_FF_I_i_1 
-       (.I0(\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg ),
-        .I1(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .O(bus2ip_wrce[0]));
-  (* SOFT_HLUTNM = "soft_lutpair70" *) 
+       (.I0(p_4_in),
+        .I1(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .O(\TCSR1_GENERATE[22].TCSR1_FF_I ));
+  (* SOFT_HLUTNM = "soft_lutpair72" *) 
   LUT4 #(
     .INIT(16'h20FF)) 
     \TCSR1_GENERATE[23].TCSR1_FF_I_i_1 
-       (.I0(\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg ),
-        .I1(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+       (.I0(p_4_in),
+        .I1(\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .I2(s_axi_wdata[8]),
         .I3(s_axi_aresetn),
         .O(\TCSR1_GENERATE[23].TCSR1_FF_I ));
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT5 #(
-    .INIT(32'hEEFEEEAE)) 
+    .INIT(32'hEFEEEAEE)) 
     \TCSR1_GENERATE[24].TCSR1_FF_I_i_1 
        (.I0(s_axi_wdata[10]),
-        .I1(read_Mux_In[87]),
-        .I2(\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg ),
-        .I3(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(read_Mux_In[85]),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .I3(p_4_in),
         .I4(s_axi_wdata[7]),
-        .O(\TCSR1_GENERATE[24].TCSR1_FF_I_0 ));
+        .O(\TCSR1_GENERATE[24].TCSR1_FF_I ));
   LUT6 #(
-    .INIT(64'hFFFFEAEAFFEAEAEA)) 
+    .INIT(64'hFFFFFEFFFEFFFEFF)) 
     s_axi_arready_INST_0
-       (.I0(s_axi_arready_INST_0_i_1_n_0),
-        .I1(eqOp__4),
-        .I2(is_read),
-        .I3(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
-        .I4(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I5(\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg ),
+       (.I0(bus2ip_rdce[4]),
+        .I1(bus2ip_rdce[2]),
+        .I2(bus2ip_rdce[3]),
+        .I3(s_axi_arready_INST_0_i_4_n_0),
+        .I4(is_read),
+        .I5(eqOp__4),
         .O(S_AXI_TIMER_arready));
-  LUT6 #(
-    .INIT(64'hFFFF0000FFFE0000)) 
+  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     s_axi_arready_INST_0_i_1
-       (.I0(\GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg ),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ),
-        .I3(\GEN_BKEND_CE_REGISTERS[6].ce_out_i_reg ),
-        .I4(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I5(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .O(s_axi_arready_INST_0_i_1_n_0));
+       (.I0(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I1(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .O(bus2ip_rdce[4]));
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    s_axi_arready_INST_0_i_2
+       (.I0(p_4_in),
+        .I1(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .O(bus2ip_rdce[2]));
+  (* SOFT_HLUTNM = "soft_lutpair69" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    s_axi_arready_INST_0_i_3
+       (.I0(p_6_in),
+        .I1(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .O(bus2ip_rdce[3]));
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  LUT5 #(
+    .INIT(32'h00FF01FF)) 
+    s_axi_arready_INST_0_i_4
+       (.I0(p_3_in),
+        .I1(p_2_in),
+        .I2(\GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg_n_0_[7] ),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .I4(p_8_in),
+        .O(s_axi_arready_INST_0_i_4_n_0));
   LUT5 #(
     .INIT(32'h08FF0808)) 
     s_axi_bvalid_i_i_1
@@ -5461,57 +5067,63 @@ module design_1_PmodWIFI_0_0_address_decoder__parameterized2
         .I3(s_axi_rready),
         .I4(s_axi_rvalid_i_reg_0),
         .O(s_axi_rvalid_i_reg));
-  LUT6 #(
-    .INIT(64'hEAEAFFFFEAEAFFEA)) 
+  LUT4 #(
+    .INIT(16'hF777)) 
     s_axi_wready_INST_0
        (.I0(s_axi_wready_INST_0_i_1_n_0),
-        .I1(eqOp__4),
+        .I1(s_axi_wready_INST_0_i_2_n_0),
         .I2(is_write_reg),
-        .I3(\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg ),
-        .I4(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I5(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
+        .I3(eqOp__4),
         .O(S_AXI_TIMER_wready));
-  LUT6 #(
-    .INIT(64'h0000FFFF0000FFFE)) 
+  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+  LUT4 #(
+    .INIT(16'hF0F1)) 
     s_axi_wready_INST_0_i_1
-       (.I0(\GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg ),
-        .I1(\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .I2(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ),
-        .I3(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
-        .I4(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I5(\GEN_BKEND_CE_REGISTERS[6].ce_out_i_reg ),
+       (.I0(\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .I1(p_4_in),
+        .I2(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .I3(p_6_in),
         .O(s_axi_wready_INST_0_i_1_n_0));
-  LUT6 #(
-    .INIT(64'h0000000100000000)) 
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  LUT5 #(
+    .INIT(32'hFF00FF01)) 
     s_axi_wready_INST_0_i_2
-       (.I0(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg[5] [2]),
-        .I1(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg[5] [3]),
-        .I2(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg[5] [0]),
-        .I3(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg[5] [1]),
-        .I4(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg[5] [4]),
-        .I5(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg[5] [5]),
+       (.I0(p_3_in),
+        .I1(p_2_in),
+        .I2(\GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg_n_0_[7] ),
+        .I3(\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .I4(p_8_in),
+        .O(s_axi_wready_INST_0_i_2_n_0));
+  LUT6 #(
+    .INIT(64'h0000000000000100)) 
+    s_axi_wready_INST_0_i_3
+       (.I0(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg[5] [4]),
+        .I1(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg[5] [2]),
+        .I2(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg[5] [3]),
+        .I3(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg[5] [5]),
+        .I4(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg[5] [0]),
+        .I5(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg[5] [1]),
         .O(eqOp__4));
   LUT5 #(
-    .INIT(32'h55FFCCF0)) 
+    .INIT(32'h77FC44FC)) 
     \state[0]_i_1 
        (.I0(state1__2),
-        .I1(S_AXI_TIMER_wready),
+        .I1(\state_reg[1] [0]),
         .I2(s_axi_arvalid),
         .I3(\state_reg[1] [1]),
-        .I4(\state_reg[1] [0]),
+        .I4(S_AXI_TIMER_wready),
         .O(D[0]));
   LUT5 #(
     .INIT(32'h5FFC50FC)) 
     \state[1]_i_1 
        (.I0(state1__2),
-        .I1(S_AXI_TIMER_awvalid),
+        .I1(S_AXI_TIMER_arvalid),
         .I2(\state_reg[1] [1]),
         .I3(\state_reg[1] [0]),
         .I4(S_AXI_TIMER_arready),
         .O(D[1]));
 endmodule
 
-(* ORIG_REF_NAME = "async_fifo_fg" *) 
 module design_1_PmodWIFI_0_0_async_fifo_fg
    (out,
     \FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg ,
@@ -5542,14 +5154,14 @@ module design_1_PmodWIFI_0_0_async_fifo_fg
     spicr_3_cpol_frm_axi_clk,
     p_1_in29_in,
     \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ,
-    p_7_in,
+    \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ,
     Bus_RNW_reg,
     \ip_irpt_enable_reg_reg[0] ,
     \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ,
-    p_5_in,
+    \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ,
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_reg ,
     \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ,
-    p_8_in,
+    \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ,
     spicr_7_ss_frm_axi_clk,
     spiXfer_done_int,
     scndry_out,
@@ -5584,14 +5196,14 @@ module design_1_PmodWIFI_0_0_async_fifo_fg
   input spicr_3_cpol_frm_axi_clk;
   input p_1_in29_in;
   input \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ;
-  input p_7_in;
+  input \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ;
   input Bus_RNW_reg;
   input [0:0]\ip_irpt_enable_reg_reg[0] ;
   input \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ;
-  input p_5_in;
+  input \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ;
   input \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_reg ;
   input \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ;
-  input p_8_in;
+  input \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ;
   input spicr_7_ss_frm_axi_clk;
   input spiXfer_done_int;
   input scndry_out;
@@ -5606,6 +5218,9 @@ module design_1_PmodWIFI_0_0_async_fifo_fg
   wire \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ;
   wire \FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg ;
   wire \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ;
+  wire \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ;
   wire \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ;
   wire IP2Bus_RdAck_receive_enable__1;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] ;
@@ -5627,9 +5242,6 @@ module design_1_PmodWIFI_0_0_async_fifo_fg
   wire p_1_in29_in;
   wire p_1_in32_in;
   wire p_1_in35_in;
-  wire p_5_in;
-  wire p_7_in;
-  wire p_8_in;
   wire ram_full_fb_i_reg;
   wire rx_fifo_reset;
   wire s_axi_aclk;
@@ -5641,7 +5253,7 @@ module design_1_PmodWIFI_0_0_async_fifo_fg
   wire spicr_7_ss_frm_axi_clk;
   wire [0:0]tx_fifo_count;
 
-  design_1_PmodWIFI_0_0_fifo_generator_v13_1_2_7 \USE_2N_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM 
+  design_1_PmodWIFI_0_0_fifo_generator_v13_1_4_13 \USE_2N_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM 
        (.Bus_RNW_reg(Bus_RNW_reg),
         .Bus_RNW_reg_reg(Bus_RNW_reg_reg),
         .\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] (\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ),
@@ -5650,6 +5262,9 @@ module design_1_PmodWIFI_0_0_async_fifo_fg
         .\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg (\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ),
         .\FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg (\FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg ),
         .\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] (\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ),
+        .\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ),
         .\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] (\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ),
         .IP2Bus_RdAck_receive_enable__1(IP2Bus_RdAck_receive_enable__1),
         .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] ),
@@ -5671,9 +5286,6 @@ module design_1_PmodWIFI_0_0_async_fifo_fg
         .p_1_in29_in(p_1_in29_in),
         .p_1_in32_in(p_1_in32_in),
         .p_1_in35_in(p_1_in35_in),
-        .p_5_in(p_5_in),
-        .p_7_in(p_7_in),
-        .p_8_in(p_8_in),
         .ram_full_fb_i_reg(ram_full_fb_i_reg),
         .rx_fifo_reset(rx_fifo_reset),
         .s_axi_aclk(s_axi_aclk),
@@ -5687,7 +5299,7 @@ module design_1_PmodWIFI_0_0_async_fifo_fg
 endmodule
 
 (* ORIG_REF_NAME = "async_fifo_fg" *) 
-module design_1_PmodWIFI_0_0_async_fifo_fg_3
+module design_1_PmodWIFI_0_0_async_fifo_fg_6
    (out,
     \gic0.gc1.count_reg[3] ,
     IP2Bus_WrAck_transmit_enable__0,
@@ -5699,7 +5311,7 @@ module design_1_PmodWIFI_0_0_async_fifo_fg_3
     spisel_d1_reg__0,
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ,
     Bus_RNW_reg,
-    p_6_in,
+    \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ,
     spicr_9_lsb_to_spi_clk,
     s_axi_wdata);
   output out;
@@ -5713,11 +5325,12 @@ module design_1_PmodWIFI_0_0_async_fifo_fg_3
   input spisel_d1_reg__0;
   input \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ;
   input Bus_RNW_reg;
-  input p_6_in;
+  input \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ;
   input spicr_9_lsb_to_spi_clk;
   input [7:0]s_axi_wdata;
 
   wire Bus_RNW_reg;
+  wire \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ;
   wire IP2Bus_WrAck_transmit_enable__0;
   wire \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ;
   wire \OTHER_RATIO_GENERATE.Serial_Dout_reg ;
@@ -5725,15 +5338,15 @@ module design_1_PmodWIFI_0_0_async_fifo_fg_3
   wire ext_spi_clk;
   wire \gic0.gc1.count_reg[3] ;
   wire out;
-  wire p_6_in;
   wire reset_TxFIFO_ptr_int;
   wire s_axi_aclk;
   wire [7:0]s_axi_wdata;
   wire spicr_9_lsb_to_spi_clk;
   wire spisel_d1_reg__0;
 
-  design_1_PmodWIFI_0_0_fifo_generator_v13_1_2 \USE_2N_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM 
+  design_1_PmodWIFI_0_0_fifo_generator_v13_1_4 \USE_2N_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM 
        (.Bus_RNW_reg(Bus_RNW_reg),
+        .\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ),
         .IP2Bus_WrAck_transmit_enable__0(IP2Bus_WrAck_transmit_enable__0),
         .\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg (\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ),
         .\OTHER_RATIO_GENERATE.Serial_Dout_reg (\OTHER_RATIO_GENERATE.Serial_Dout_reg ),
@@ -5741,7 +5354,6 @@ module design_1_PmodWIFI_0_0_async_fifo_fg_3
         .ext_spi_clk(ext_spi_clk),
         .\gic0.gc1.count_reg[3] (\gic0.gc1.count_reg[3] ),
         .out(out),
-        .p_6_in(p_6_in),
         .reset_TxFIFO_ptr_int(reset_TxFIFO_ptr_int),
         .s_axi_aclk(s_axi_aclk),
         .s_axi_wdata(s_axi_wdata),
@@ -5754,7 +5366,7 @@ endmodule
 (* C_FAMILY = "artix7" *) (* C_GPIO2_WIDTH = "32" *) (* C_GPIO_WIDTH = "1" *) 
 (* C_INTERRUPT_PRESENT = "0" *) (* C_IS_DUAL = "0" *) (* C_S_AXI_ADDR_WIDTH = "9" *) 
 (* C_S_AXI_DATA_WIDTH = "32" *) (* C_TRI_DEFAULT = "-1" *) (* C_TRI_DEFAULT_2 = "-1" *) 
-(* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "axi_gpio" *) (* ip_group = "LOGICORE" *) 
+(* DowngradeIPIdentifiedWarnings = "yes" *) (* ip_group = "LOGICORE" *) 
 module design_1_PmodWIFI_0_0_axi_gpio
    (s_axi_aclk,
     s_axi_aresetn,
@@ -5812,13 +5424,15 @@ module design_1_PmodWIFI_0_0_axi_gpio
   wire \<const0> ;
   wire \<const1> ;
   wire AXI_LITE_IPIF_I_n_10;
+  wire AXI_LITE_IPIF_I_n_11;
+  wire AXI_LITE_IPIF_I_n_12;
   wire AXI_LITE_IPIF_I_n_8;
   wire AXI_LITE_IPIF_I_n_9;
   wire GPIO_xferAck_i;
   wire \I_SLAVE_ATTACHMENT/rst ;
   wire bus2ip_cs;
   wire bus2ip_rnw;
-  wire gpio_Data_In;
+  wire gpio_core_1_n_6;
   wire [0:0]gpio_io_i;
   wire [0:0]gpio_io_o;
   wire [0:0]gpio_io_t;
@@ -5827,7 +5441,6 @@ module design_1_PmodWIFI_0_0_axi_gpio
   wire [31:31]ip2bus_data_i_D1;
   wire ip2bus_rdack_i;
   wire ip2bus_rdack_i_D1;
-  wire ip2bus_wrack_i;
   wire ip2bus_wrack_i_D1;
   (* MAX_FANOUT = "10000" *) (* RTL_MAX_FANOUT = "found" *) (* sigis = "Clk" *) wire s_axi_aclk;
   wire [8:0]s_axi_araddr;
@@ -5953,12 +5566,13 @@ module design_1_PmodWIFI_0_0_axi_gpio
         .AXI_LITE_GPIO_WFCS_rvalid(s_axi_rvalid),
         .AXI_LITE_GPIO_WFCS_wready(s_axi_wready),
         .GPIO_xferAck_i(GPIO_xferAck_i),
-        .\Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[31] (AXI_LITE_IPIF_I_n_10),
-        .\Not_Dual.gpio_Data_Out_reg[0] (AXI_LITE_IPIF_I_n_9),
+        .\Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[31] (AXI_LITE_IPIF_I_n_12),
+        .\Not_Dual.gpio_Data_Out_reg[0] (AXI_LITE_IPIF_I_n_10),
+        .\Not_Dual.gpio_Data_Out_reg[0]_0 (AXI_LITE_IPIF_I_n_11),
         .\Not_Dual.gpio_OE_reg[0] (AXI_LITE_IPIF_I_n_8),
+        .\Not_Dual.gpio_OE_reg[0]_0 (AXI_LITE_IPIF_I_n_9),
         .bus2ip_cs(bus2ip_cs),
         .bus2ip_rnw(bus2ip_rnw),
-        .gpio_Data_In(gpio_Data_In),
         .gpio_io_o(gpio_io_o),
         .gpio_io_t(gpio_io_t),
         .gpio_xferAck_Reg(gpio_xferAck_Reg),
@@ -5983,19 +5597,20 @@ module design_1_PmodWIFI_0_0_axi_gpio
        (.P(\<const1> ));
   design_1_PmodWIFI_0_0_GPIO_Core gpio_core_1
        (.GPIO_xferAck_i(GPIO_xferAck_i),
-        .\Not_Dual.gpio_OE_reg[0]_0 (AXI_LITE_IPIF_I_n_10),
-        .\bus2ip_addr_i_reg[2] (AXI_LITE_IPIF_I_n_8),
+        .\MEM_DECODE_GEN[0].cs_out_i_reg[0] (AXI_LITE_IPIF_I_n_9),
+        .\bus2ip_addr_i_reg[2] (AXI_LITE_IPIF_I_n_11),
         .bus2ip_cs(bus2ip_cs),
         .bus2ip_rnw(bus2ip_rnw),
-        .bus2ip_rnw_i_reg(AXI_LITE_IPIF_I_n_9),
-        .gpio_Data_In(gpio_Data_In),
+        .bus2ip_rnw_i_reg(AXI_LITE_IPIF_I_n_8),
+        .bus2ip_rnw_i_reg_0(AXI_LITE_IPIF_I_n_10),
+        .bus2ip_rnw_i_reg_1(AXI_LITE_IPIF_I_n_12),
         .gpio_io_i(gpio_io_i),
         .gpio_io_o(gpio_io_o),
         .gpio_io_t(gpio_io_t),
         .gpio_xferAck_Reg(gpio_xferAck_Reg),
         .ip2bus_data(ip2bus_data),
         .ip2bus_rdack_i(ip2bus_rdack_i),
-        .ip2bus_wrack_i(ip2bus_wrack_i),
+        .ip2bus_wrack_i_D1_reg(gpio_core_1_n_6),
         .rst(\I_SLAVE_ATTACHMENT/rst ),
         .s_axi_aclk(s_axi_aclk));
   FDRE \ip2bus_data_i_D1_reg[31] 
@@ -6013,7 +5628,7 @@ module design_1_PmodWIFI_0_0_axi_gpio
   FDRE ip2bus_wrack_i_D1_reg
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(ip2bus_wrack_i),
+        .D(gpio_core_1_n_6),
         .Q(ip2bus_wrack_i_D1),
         .R(\I_SLAVE_ATTACHMENT/rst ));
 endmodule
@@ -6080,28 +5695,25 @@ module design_1_PmodWIFI_0_0_axi_gpio__parameterized1
 
   wire \<const0> ;
   wire \<const1> ;
-  wire AXI_LITE_IPIF_I_n_12;
   wire AXI_LITE_IPIF_I_n_13;
   wire AXI_LITE_IPIF_I_n_14;
-  wire AXI_LITE_IPIF_I_n_16;
-  wire AXI_LITE_IPIF_I_n_17;
+  wire AXI_LITE_IPIF_I_n_15;
+  wire AXI_LITE_IPIF_I_n_23;
   wire AXI_LITE_IPIF_I_n_25;
   wire AXI_LITE_IPIF_I_n_27;
-  wire AXI_LITE_IPIF_I_n_29;
-  wire AXI_LITE_IPIF_I_n_30;
+  wire AXI_LITE_IPIF_I_n_28;
   wire [0:3]DBus_Reg;
-  wire [28:28]GPIO_DBus_i;
   wire GPIO_intr;
   wire GPIO_xferAck_i;
   wire IP2INTC_Irpt_i;
   wire \I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg ;
-  wire \I_SLAVE_ATTACHMENT/I_DECODER/p_8_in ;
+  wire \I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[12].ce_out_i_reg ;
   wire Read_Reg_Rst;
+  wire [6:6]bus2ip_addr;
   wire [1:1]bus2ip_cs;
   wire bus2ip_reset;
   wire bus2ip_reset_i_1_n_0;
   wire bus2ip_rnw;
-  wire [0:3]gpio_Data_In;
   wire [3:0]gpio_io_i;
   wire [3:0]gpio_io_o;
   wire [3:0]gpio_io_t;
@@ -6251,21 +5863,18 @@ module design_1_PmodWIFI_0_0_axi_gpio__parameterized1
         .AXI_LITE_WFGPIO_wready(s_axi_wready),
         .Bus_RNW_reg(\I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg ),
         .D({DBus_Reg[0],DBus_Reg[1],DBus_Reg[2],DBus_Reg[3]}),
-        .E(AXI_LITE_IPIF_I_n_16),
-        .GPIO_DBus_i(GPIO_DBus_i),
+        .E(AXI_LITE_IPIF_I_n_13),
+        .\GEN_BKEND_CE_REGISTERS[12].ce_out_i_reg (\I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[12].ce_out_i_reg ),
         .GPIO_xferAck_i(GPIO_xferAck_i),
-        .\INTR_CTRLR_GEN.ip2Bus_RdAck_intr_reg_hole_reg (AXI_LITE_IPIF_I_n_25),
-        .\INTR_CTRLR_GEN.ip2Bus_WrAck_intr_reg_hole_reg (AXI_LITE_IPIF_I_n_27),
-        .\Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[29] (AXI_LITE_IPIF_I_n_14),
-        .\Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[30] (AXI_LITE_IPIF_I_n_13),
-        .\Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[31] (AXI_LITE_IPIF_I_n_12),
-        .\Not_Dual.gpio_Data_Out_reg[0] (AXI_LITE_IPIF_I_n_17),
-        .Q({gpio_Data_In[0],gpio_Data_In[1],gpio_Data_In[2],gpio_Data_In[3]}),
+        .\INTR_CTRLR_GEN.ip2Bus_RdAck_intr_reg_hole_reg (AXI_LITE_IPIF_I_n_23),
+        .\INTR_CTRLR_GEN.ip2Bus_WrAck_intr_reg_hole_reg (AXI_LITE_IPIF_I_n_25),
+        .\Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[28] (AXI_LITE_IPIF_I_n_15),
+        .\Not_Dual.gpio_Data_Out_reg[0] (AXI_LITE_IPIF_I_n_14),
+        .Q(bus2ip_addr),
         .Read_Reg_Rst(Read_Reg_Rst),
         .bus2ip_cs(bus2ip_cs),
         .bus2ip_reset(bus2ip_reset),
         .bus2ip_rnw(bus2ip_rnw),
-        .gpio_io_t(gpio_io_t),
         .gpio_xferAck_Reg(gpio_xferAck_Reg),
         .interrupt_wrce_strb(interrupt_wrce_strb),
         .intr2bus_rdack0(intr2bus_rdack0),
@@ -6278,8 +5887,8 @@ module design_1_PmodWIFI_0_0_axi_gpio__parameterized1
         .\ip2bus_data_i_D1_reg[0]_0 ({ip2bus_data_i_D1[0],ip2bus_data_i_D1[28],ip2bus_data_i_D1[29],ip2bus_data_i_D1[30],ip2bus_data_i_D1[31]}),
         .ip2bus_rdack_i_D1(ip2bus_rdack_i_D1),
         .ip2bus_wrack_i_D1(ip2bus_wrack_i_D1),
-        .\ip_irpt_enable_reg_reg[0] (AXI_LITE_IPIF_I_n_29),
-        .ipif_glbl_irpt_enable_reg_reg(AXI_LITE_IPIF_I_n_30),
+        .\ip_irpt_enable_reg_reg[0] (AXI_LITE_IPIF_I_n_27),
+        .ipif_glbl_irpt_enable_reg_reg(AXI_LITE_IPIF_I_n_28),
         .irpt_rdack(irpt_rdack),
         .irpt_rdack_d1(irpt_rdack_d1),
         .irpt_wrack(irpt_wrack),
@@ -6287,7 +5896,6 @@ module design_1_PmodWIFI_0_0_axi_gpio__parameterized1
         .p_0_in(p_0_in),
         .p_1_in(p_1_in),
         .p_3_in(p_3_in),
-        .p_8_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_8_in ),
         .s_axi_aclk(s_axi_aclk),
         .s_axi_araddr(s_axi_araddr[8:2]),
         .s_axi_aresetn(s_axi_aresetn),
@@ -6303,8 +5911,9 @@ module design_1_PmodWIFI_0_0_axi_gpio__parameterized1
        (.G(\<const0> ));
   design_1_PmodWIFI_0_0_interrupt_control \INTR_CTRLR_GEN.INTERRUPT_CONTROL_I 
        (.Bus_RNW_reg(\I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg ),
-        .\GEN_BKEND_CE_REGISTERS[11].ce_out_i_reg[11] (AXI_LITE_IPIF_I_n_30),
-        .\GEN_BKEND_CE_REGISTERS[14].ce_out_i_reg[14] (AXI_LITE_IPIF_I_n_29),
+        .\GEN_BKEND_CE_REGISTERS[11].ce_out_i_reg[11] (AXI_LITE_IPIF_I_n_28),
+        .\GEN_BKEND_CE_REGISTERS[12].ce_out_i_reg (\I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[12].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[14].ce_out_i_reg[14] (AXI_LITE_IPIF_I_n_27),
         .GPIO_intr(GPIO_intr),
         .GPIO_xferAck_i(GPIO_xferAck_i),
         .IP2INTC_Irpt_i(IP2INTC_Irpt_i),
@@ -6323,7 +5932,6 @@ module design_1_PmodWIFI_0_0_axi_gpio__parameterized1
         .p_0_in(p_0_in),
         .p_1_in(p_1_in),
         .p_3_in(p_3_in),
-        .p_8_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_8_in ),
         .s_axi_aclk(s_axi_aclk),
         .s_axi_wdata(s_axi_wdata[0]));
   FDRE \INTR_CTRLR_GEN.ip2Bus_RdAck_intr_reg_hole_d1_reg 
@@ -6335,7 +5943,7 @@ module design_1_PmodWIFI_0_0_axi_gpio__parameterized1
   FDRE \INTR_CTRLR_GEN.ip2Bus_RdAck_intr_reg_hole_reg 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(AXI_LITE_IPIF_I_n_25),
+        .D(AXI_LITE_IPIF_I_n_23),
         .Q(ip2Bus_RdAck_intr_reg_hole),
         .R(bus2ip_reset));
   FDRE \INTR_CTRLR_GEN.ip2Bus_WrAck_intr_reg_hole_d1_reg 
@@ -6347,7 +5955,7 @@ module design_1_PmodWIFI_0_0_axi_gpio__parameterized1
   FDRE \INTR_CTRLR_GEN.ip2Bus_WrAck_intr_reg_hole_reg 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(AXI_LITE_IPIF_I_n_27),
+        .D(AXI_LITE_IPIF_I_n_25),
         .Q(ip2Bus_WrAck_intr_reg_hole),
         .R(bus2ip_reset));
   (* sigis = "INTR_LEVEL_HIGH" *) 
@@ -6372,18 +5980,15 @@ module design_1_PmodWIFI_0_0_axi_gpio__parameterized1
         .R(1'b0));
   design_1_PmodWIFI_0_0_GPIO_Core__parameterized0 gpio_core_1
        (.D({DBus_Reg[0],DBus_Reg[1],DBus_Reg[2],DBus_Reg[3]}),
-        .E(AXI_LITE_IPIF_I_n_17),
-        .GPIO_DBus_i(GPIO_DBus_i),
+        .E(AXI_LITE_IPIF_I_n_14),
         .GPIO_intr(GPIO_intr),
         .GPIO_xferAck_i(GPIO_xferAck_i),
-        .\Not_Dual.gpio_OE_reg[1]_0 (AXI_LITE_IPIF_I_n_14),
-        .\Not_Dual.gpio_OE_reg[2]_0 (AXI_LITE_IPIF_I_n_13),
-        .\Not_Dual.gpio_OE_reg[3]_0 (AXI_LITE_IPIF_I_n_12),
-        .Q({gpio_Data_In[0],gpio_Data_In[1],gpio_Data_In[2],gpio_Data_In[3]}),
+        .\MEM_DECODE_GEN[0].cs_out_i_reg[0] (AXI_LITE_IPIF_I_n_15),
+        .Q(bus2ip_addr),
         .Read_Reg_Rst(Read_Reg_Rst),
         .bus2ip_cs(bus2ip_cs),
         .bus2ip_reset(bus2ip_reset),
-        .bus2ip_rnw_i_reg(AXI_LITE_IPIF_I_n_16),
+        .bus2ip_rnw_i_reg(AXI_LITE_IPIF_I_n_13),
         .gpio_io_i(gpio_io_i),
         .gpio_io_o(gpio_io_o),
         .gpio_io_t(gpio_io_t),
@@ -6434,7 +6039,6 @@ module design_1_PmodWIFI_0_0_axi_gpio__parameterized1
         .R(bus2ip_reset));
 endmodule
 
-(* ORIG_REF_NAME = "axi_lite_ipif" *) 
 module design_1_PmodWIFI_0_0_axi_lite_ipif
    (rst,
     bus2ip_rnw,
@@ -6445,21 +6049,22 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif
     AXI_LITE_GPIO_WFCS_arready,
     AXI_LITE_GPIO_WFCS_wready,
     \Not_Dual.gpio_OE_reg[0] ,
+    \Not_Dual.gpio_OE_reg[0]_0 ,
     \Not_Dual.gpio_Data_Out_reg[0] ,
-    \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[31] ,
+    \Not_Dual.gpio_Data_Out_reg[0]_0 ,
+    \Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[31] ,
     s_axi_aclk,
     s_axi_wdata,
-    gpio_xferAck_Reg,
-    GPIO_xferAck_i,
     s_axi_aresetn,
     s_axi_rready,
     s_axi_bready,
     gpio_io_t,
     gpio_io_o,
-    gpio_Data_In,
     s_axi_arvalid,
     s_axi_awvalid,
     s_axi_wvalid,
+    gpio_xferAck_Reg,
+    GPIO_xferAck_i,
     ip2bus_data_i_D1,
     s_axi_araddr,
     s_axi_awaddr,
@@ -6474,21 +6079,22 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif
   output AXI_LITE_GPIO_WFCS_arready;
   output AXI_LITE_GPIO_WFCS_wready;
   output \Not_Dual.gpio_OE_reg[0] ;
+  output \Not_Dual.gpio_OE_reg[0]_0 ;
   output \Not_Dual.gpio_Data_Out_reg[0] ;
-  output \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[31] ;
+  output \Not_Dual.gpio_Data_Out_reg[0]_0 ;
+  output \Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[31] ;
   input s_axi_aclk;
   input [1:0]s_axi_wdata;
-  input gpio_xferAck_Reg;
-  input GPIO_xferAck_i;
   input s_axi_aresetn;
   input s_axi_rready;
   input s_axi_bready;
   input [0:0]gpio_io_t;
   input [0:0]gpio_io_o;
-  input gpio_Data_In;
   input s_axi_arvalid;
   input s_axi_awvalid;
   input s_axi_wvalid;
+  input gpio_xferAck_Reg;
+  input GPIO_xferAck_i;
   input [0:0]ip2bus_data_i_D1;
   input [2:0]s_axi_araddr;
   input [2:0]s_axi_awaddr;
@@ -6500,12 +6106,13 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif
   wire AXI_LITE_GPIO_WFCS_rvalid;
   wire AXI_LITE_GPIO_WFCS_wready;
   wire GPIO_xferAck_i;
-  wire \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[31] ;
+  wire \Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[31] ;
   wire \Not_Dual.gpio_Data_Out_reg[0] ;
+  wire \Not_Dual.gpio_Data_Out_reg[0]_0 ;
   wire \Not_Dual.gpio_OE_reg[0] ;
+  wire \Not_Dual.gpio_OE_reg[0]_0 ;
   wire bus2ip_cs;
   wire bus2ip_rnw;
-  wire gpio_Data_In;
   wire [0:0]gpio_io_o;
   wire [0:0]gpio_io_t;
   wire gpio_xferAck_Reg;
@@ -6532,12 +6139,13 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif
         .AXI_LITE_GPIO_WFCS_wready(AXI_LITE_GPIO_WFCS_wready),
         .GPIO_xferAck_i(GPIO_xferAck_i),
         .\MEM_DECODE_GEN[0].cs_out_i_reg[0] (bus2ip_cs),
-        .\Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[31] (\Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[31] ),
+        .\Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[31] (\Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[31] ),
         .\Not_Dual.gpio_Data_Out_reg[0] (\Not_Dual.gpio_Data_Out_reg[0] ),
+        .\Not_Dual.gpio_Data_Out_reg[0]_0 (\Not_Dual.gpio_Data_Out_reg[0]_0 ),
         .\Not_Dual.gpio_OE_reg[0] (bus2ip_rnw),
         .\Not_Dual.gpio_OE_reg[0]_0 (\Not_Dual.gpio_OE_reg[0] ),
+        .\Not_Dual.gpio_OE_reg[0]_1 (\Not_Dual.gpio_OE_reg[0]_0 ),
         .SR(rst),
-        .gpio_Data_In(gpio_Data_In),
         .gpio_io_o(gpio_io_o),
         .gpio_io_t(gpio_io_t),
         .gpio_xferAck_Reg(gpio_xferAck_Reg),
@@ -6559,7 +6167,7 @@ endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif" *) 
 module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized0
-   (p_8_in,
+   (\GEN_BKEND_CE_REGISTERS[12].ce_out_i_reg ,
     bus2ip_rnw,
     bus2ip_cs,
     Bus_RNW_reg,
@@ -6568,12 +6176,10 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized0
     AXI_LITE_WFGPIO_arready,
     AXI_LITE_WFGPIO_wready,
     D,
-    \Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[31] ,
-    \Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[30] ,
-    \Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[29] ,
-    GPIO_DBus_i,
+    Q,
     E,
     \Not_Dual.gpio_Data_Out_reg[0] ,
+    \Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[28] ,
     \ip2bus_data_i_D1_reg[0] ,
     intr2bus_rdack0,
     irpt_rdack,
@@ -6589,8 +6195,8 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized0
     s_axi_rdata,
     bus2ip_reset,
     s_axi_aclk,
-    s_axi_arvalid,
     s_axi_aresetn,
+    s_axi_arvalid,
     ip2bus_rdack_i_D1,
     ip2bus_wrack_i_D1,
     s_axi_bready,
@@ -6600,8 +6206,6 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized0
     s_axi_awvalid,
     s_axi_wvalid,
     s_axi_wdata,
-    gpio_io_t,
-    Q,
     p_0_in,
     irpt_rdack_d1,
     irpt_wrack_d1,
@@ -6613,7 +6217,7 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized0
     ip2Bus_RdAck_intr_reg_hole_d1,
     ip2Bus_WrAck_intr_reg_hole_d1,
     \ip2bus_data_i_D1_reg[0]_0 );
-  output p_8_in;
+  output \GEN_BKEND_CE_REGISTERS[12].ce_out_i_reg ;
   output bus2ip_rnw;
   output [0:0]bus2ip_cs;
   output Bus_RNW_reg;
@@ -6622,12 +6226,10 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized0
   output AXI_LITE_WFGPIO_arready;
   output AXI_LITE_WFGPIO_wready;
   output [3:0]D;
-  output \Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[31] ;
-  output \Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[30] ;
-  output \Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[29] ;
-  output [0:0]GPIO_DBus_i;
+  output [0:0]Q;
   output [0:0]E;
   output [0:0]\Not_Dual.gpio_Data_Out_reg[0] ;
+  output \Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[28] ;
   output [1:0]\ip2bus_data_i_D1_reg[0] ;
   output intr2bus_rdack0;
   output irpt_rdack;
@@ -6643,8 +6245,8 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized0
   output [4:0]s_axi_rdata;
   input bus2ip_reset;
   input s_axi_aclk;
-  input s_axi_arvalid;
   input s_axi_aresetn;
+  input s_axi_arvalid;
   input ip2bus_rdack_i_D1;
   input ip2bus_wrack_i_D1;
   input s_axi_bready;
@@ -6654,8 +6256,6 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized0
   input s_axi_awvalid;
   input s_axi_wvalid;
   input [7:0]s_axi_wdata;
-  input [3:0]gpio_io_t;
-  input [3:0]Q;
   input [0:0]p_0_in;
   input irpt_rdack_d1;
   input irpt_wrack_d1;
@@ -6675,20 +6275,17 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized0
   wire Bus_RNW_reg;
   wire [3:0]D;
   wire [0:0]E;
-  wire [0:0]GPIO_DBus_i;
+  wire \GEN_BKEND_CE_REGISTERS[12].ce_out_i_reg ;
   wire GPIO_xferAck_i;
   wire \INTR_CTRLR_GEN.ip2Bus_RdAck_intr_reg_hole_reg ;
   wire \INTR_CTRLR_GEN.ip2Bus_WrAck_intr_reg_hole_reg ;
-  wire \Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[29] ;
-  wire \Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[30] ;
-  wire \Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[31] ;
+  wire \Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[28] ;
   wire [0:0]\Not_Dual.gpio_Data_Out_reg[0] ;
-  wire [3:0]Q;
+  wire [0:0]Q;
   wire Read_Reg_Rst;
   wire [0:0]bus2ip_cs;
   wire bus2ip_reset;
   wire bus2ip_rnw;
-  wire [3:0]gpio_io_t;
   wire gpio_xferAck_Reg;
   wire interrupt_wrce_strb;
   wire intr2bus_rdack0;
@@ -6710,7 +6307,6 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized0
   wire [0:0]p_0_in;
   wire [0:0]p_1_in;
   wire [0:0]p_3_in;
-  wire p_8_in;
   wire s_axi_aclk;
   wire [6:0]s_axi_araddr;
   wire s_axi_aresetn;
@@ -6730,20 +6326,16 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized0
         .AXI_LITE_WFGPIO_wready(AXI_LITE_WFGPIO_wready),
         .D(D),
         .E(E),
-        .GPIO_DBus_i(GPIO_DBus_i),
         .GPIO_xferAck_i(GPIO_xferAck_i),
         .\INTR_CTRLR_GEN.ip2Bus_RdAck_intr_reg_hole_reg (\INTR_CTRLR_GEN.ip2Bus_RdAck_intr_reg_hole_reg ),
         .\INTR_CTRLR_GEN.ip2Bus_WrAck_intr_reg_hole_reg (\INTR_CTRLR_GEN.ip2Bus_WrAck_intr_reg_hole_reg ),
-        .\Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[29] (\Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[29] ),
-        .\Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[30] (\Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[30] ),
-        .\Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[31] (\Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[31] ),
+        .\Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[28] (\Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[28] ),
         .\Not_Dual.gpio_Data_Out_reg[0] (\Not_Dual.gpio_Data_Out_reg[0] ),
         .\Not_Dual.gpio_Data_Out_reg[3] (bus2ip_cs),
         .\Not_Dual.gpio_OE_reg[0] (bus2ip_rnw),
         .Q(Q),
         .Read_Reg_Rst(Read_Reg_Rst),
         .bus2ip_reset(bus2ip_reset),
-        .gpio_io_t(gpio_io_t),
         .gpio_xferAck_Reg(gpio_xferAck_Reg),
         .interrupt_wrce_strb(interrupt_wrce_strb),
         .intr2bus_rdack0(intr2bus_rdack0),
@@ -6752,7 +6344,7 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized0
         .ip2Bus_RdAck_intr_reg_hole_d1(ip2Bus_RdAck_intr_reg_hole_d1),
         .ip2Bus_WrAck_intr_reg_hole_d1(ip2Bus_WrAck_intr_reg_hole_d1),
         .ip2bus_data(ip2bus_data),
-        .\ip2bus_data_i_D1_reg[0] (p_8_in),
+        .\ip2bus_data_i_D1_reg[0] (\GEN_BKEND_CE_REGISTERS[12].ce_out_i_reg ),
         .\ip2bus_data_i_D1_reg[0]_0 (\ip2bus_data_i_D1_reg[0] ),
         .\ip2bus_data_i_D1_reg[0]_1 (\ip2bus_data_i_D1_reg[0]_0 ),
         .ip2bus_rdack_i_D1(ip2bus_rdack_i_D1),
@@ -6783,20 +6375,20 @@ endmodule
 (* ORIG_REF_NAME = "axi_lite_ipif" *) 
 module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized1
    (bus2ip_reset_ipif_inverted,
-    p_2_in,
-    p_3_in,
-    p_4_in,
-    p_5_in,
-    p_6_in,
-    p_7_in,
-    p_8_in,
+    \GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg ,
+    \GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg ,
+    \GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg ,
+    \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ,
+    \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ,
+    \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ,
+    \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ,
     s_axi_rresp,
     Bus_RNW_reg,
     AXI_LITE_SPI_rvalid,
     AXI_LITE_SPI_bvalid,
     s_axi_bresp,
-    AXI_LITE_SPI_arready,
     AXI_LITE_SPI_wready,
+    AXI_LITE_SPI_arready,
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_reg ,
     wr_ce_or_reduce_core_cmb,
     bus2ip_wrce_int,
@@ -6835,8 +6427,8 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized1
     s_axi_rdata,
     s_axi_aclk,
     IP2Bus_Error,
-    s_axi_arvalid,
     s_axi_aresetn,
+    s_axi_arvalid,
     p_15_out,
     p_16_out,
     s_axi_rready,
@@ -6864,7 +6456,7 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized1
     Tx_FIFO_Full_int,
     spicr_9_lsb_frm_axi_clk,
     Tx_FIFO_Empty_SPISR_to_axi_clk,
-    p_4_in_0,
+    p_4_in,
     Receive_ip2bus_error_reg,
     sw_rst_cond_d1,
     s_axi_wdata,
@@ -6874,20 +6466,20 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized1
     spicr_6_rxfifo_rst_frm_axi_clk,
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[0] );
   output bus2ip_reset_ipif_inverted;
-  output p_2_in;
-  output p_3_in;
-  output p_4_in;
-  output p_5_in;
-  output p_6_in;
-  output p_7_in;
-  output p_8_in;
+  output \GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg ;
+  output \GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg ;
+  output \GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg ;
+  output \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ;
+  output \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ;
+  output \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ;
+  output \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ;
   output [0:0]s_axi_rresp;
   output Bus_RNW_reg;
   output AXI_LITE_SPI_rvalid;
   output AXI_LITE_SPI_bvalid;
   output [0:0]s_axi_bresp;
-  output AXI_LITE_SPI_arready;
   output AXI_LITE_SPI_wready;
+  output AXI_LITE_SPI_arready;
   output \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_reg ;
   output wr_ce_or_reduce_core_cmb;
   output [0:0]bus2ip_wrce_int;
@@ -6926,8 +6518,8 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized1
   output [10:0]s_axi_rdata;
   input s_axi_aclk;
   input IP2Bus_Error;
-  input s_axi_arvalid;
   input s_axi_aresetn;
+  input s_axi_arvalid;
   input p_15_out;
   input p_16_out;
   input s_axi_rready;
@@ -6955,7 +6547,7 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized1
   input Tx_FIFO_Full_int;
   input spicr_9_lsb_frm_axi_clk;
   input Tx_FIFO_Empty_SPISR_to_axi_clk;
-  input p_4_in_0;
+  input p_4_in;
   input Receive_ip2bus_error_reg;
   input sw_rst_cond_d1;
   input [6:0]s_axi_wdata;
@@ -6974,6 +6566,13 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized1
   wire \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] ;
   wire [2:0]D;
   wire [0:0]E;
+  wire \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg ;
   wire IP2Bus_Error;
   wire IP2Bus_Error_1;
   wire IP2Bus_RdAck_receive_enable__1;
@@ -7023,15 +6622,8 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized1
   wire p_15_out;
   wire p_16_out;
   wire p_1_in23_in;
-  wire p_2_in;
   wire p_39_out__0;
-  wire p_3_in;
   wire p_4_in;
-  wire p_4_in_0;
-  wire p_5_in;
-  wire p_6_in;
-  wire p_7_in;
-  wire p_8_in;
   wire rd_ce_or_reduce_core_cmb;
   wire reset2ip_reset_int;
   wire reset_trig0;
@@ -7062,11 +6654,12 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized1
         .AXI_LITE_SPI_bvalid(AXI_LITE_SPI_bvalid),
         .AXI_LITE_SPI_rvalid(AXI_LITE_SPI_rvalid),
         .AXI_LITE_SPI_wready(AXI_LITE_SPI_wready),
-        .\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] (p_8_in),
+        .\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] (\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ),
         .\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3]_0 (\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ),
         .\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] (\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] ),
         .D(D),
         .E(E),
+        .\GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg ),
         .IP2Bus_Error(IP2Bus_Error),
         .IP2Bus_Error_1(IP2Bus_Error_1),
         .IP2Bus_RdAck_receive_enable__1(IP2Bus_RdAck_receive_enable__1),
@@ -7076,21 +6669,21 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized1
         .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29] (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29] ),
         .\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_Error_reg (data_is_non_reset_match__4),
         .\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg (\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_WrAck_reg ),
-        .\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_reg (p_3_in),
-        .\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_reg_0 (p_7_in),
-        .\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_reg (p_2_in),
+        .\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_reg (\GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg ),
+        .\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_reg_0 (\GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ),
+        .\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_reg (\GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg ),
         .\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_reg_0 (\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_reg ),
         .\LOGIC_GENERATION_FDR.SPISEL_D1_REG_S2AX_2 (\LOGIC_GENERATION_FDR.SPISEL_D1_REG_S2AX_2 ),
         .Q(Q),
         .\RESET_FLOPS[15].RST_FLOPS (\RESET_FLOPS[15].RST_FLOPS ),
         .Receive_ip2bus_error0(Receive_ip2bus_error0),
-        .Receive_ip2bus_error_reg(p_5_in),
+        .Receive_ip2bus_error_reg(\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ),
         .Receive_ip2bus_error_reg_0(Receive_ip2bus_error_reg),
         .SPICR_data_int_reg0(SPICR_data_int_reg0),
         .\SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0] (\SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0] ),
         .SPISSR_frm_axi_clk(SPISSR_frm_axi_clk),
         .Transmit_ip2bus_error0(Transmit_ip2bus_error0),
-        .Transmit_ip2bus_error_reg(p_6_in),
+        .Transmit_ip2bus_error_reg(\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ),
         .Tx_FIFO_Empty_SPISR_to_axi_clk(Tx_FIFO_Empty_SPISR_to_axi_clk),
         .Tx_FIFO_Full_int(Tx_FIFO_Full_int),
         .bus2ip_rdce_int(bus2ip_rdce_int),
@@ -7124,7 +6717,6 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized1
         .p_1_in23_in(p_1_in23_in),
         .p_39_out__0(p_39_out__0),
         .p_4_in(p_4_in),
-        .p_4_in_0(p_4_in_0),
         .rd_ce_or_reduce_core_cmb(rd_ce_or_reduce_core_cmb),
         .reset2ip_reset_int(reset2ip_reset_int),
         .reset_trig0(reset_trig0),
@@ -7153,42 +6745,37 @@ endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif" *) 
 module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized2
-   (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ,
-    \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ,
+   (p_7_in,
     Bus_RNW_reg,
     S_AXI_TIMER_rvalid,
     S_AXI_TIMER_bvalid,
-    \s_axi_rdata_i_reg[11] ,
-    \s_axi_rdata_i_reg[3] ,
-    bus2ip_rdce,
-    S_AXI_TIMER_wready,
-    S_AXI_TIMER_arready,
-    \s_axi_rdata_i_reg[31] ,
-    \s_axi_rdata_i_reg[30] ,
-    \s_axi_rdata_i_reg[29] ,
-    \s_axi_rdata_i_reg[28] ,
-    \s_axi_rdata_i_reg[27] ,
-    \s_axi_rdata_i_reg[26] ,
-    \s_axi_rdata_i_reg[25] ,
-    \s_axi_rdata_i_reg[24] ,
-    \s_axi_rdata_i_reg[23] ,
-    \s_axi_rdata_i_reg[22] ,
-    \s_axi_rdata_i_reg[21] ,
-    \s_axi_rdata_i_reg[20] ,
-    \s_axi_rdata_i_reg[19] ,
-    \s_axi_rdata_i_reg[18] ,
-    \s_axi_rdata_i_reg[17] ,
-    \s_axi_rdata_i_reg[16] ,
-    \s_axi_rdata_i_reg[15] ,
-    \s_axi_rdata_i_reg[14] ,
-    \s_axi_rdata_i_reg[13] ,
     \s_axi_rdata_i_reg[12] ,
+    \s_axi_rdata_i_reg[13] ,
+    \s_axi_rdata_i_reg[14] ,
+    \s_axi_rdata_i_reg[15] ,
+    \s_axi_rdata_i_reg[16] ,
+    \s_axi_rdata_i_reg[17] ,
+    \s_axi_rdata_i_reg[18] ,
+    \s_axi_rdata_i_reg[19] ,
+    \s_axi_rdata_i_reg[20] ,
+    \s_axi_rdata_i_reg[21] ,
+    \s_axi_rdata_i_reg[22] ,
+    \s_axi_rdata_i_reg[23] ,
+    \s_axi_rdata_i_reg[24] ,
+    \s_axi_rdata_i_reg[25] ,
+    \s_axi_rdata_i_reg[26] ,
+    \s_axi_rdata_i_reg[27] ,
+    \s_axi_rdata_i_reg[28] ,
+    \s_axi_rdata_i_reg[29] ,
+    \s_axi_rdata_i_reg[30] ,
+    \s_axi_rdata_i_reg[31] ,
     pair0_Select,
-    \TCSR0_GENERATE[23].TCSR0_FF_I ,
+    S_AXI_TIMER_arready,
+    \s_axi_rdata_i_reg[11] ,
     \TCSR0_GENERATE[24].TCSR0_FF_I ,
-    bus2ip_wrce,
-    \TCSR1_GENERATE[23].TCSR1_FF_I ,
     \TCSR1_GENERATE[24].TCSR1_FF_I ,
+    S_AXI_TIMER_wready,
+    bus2ip_rdce,
     \LOAD_REG_GEN[31].LOAD_REG_I ,
     \LOAD_REG_GEN[30].LOAD_REG_I ,
     \LOAD_REG_GEN[29].LOAD_REG_I ,
@@ -7253,60 +6840,60 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized2
     \LOAD_REG_GEN[2].LOAD_REG_I_0 ,
     \LOAD_REG_GEN[1].LOAD_REG_I_0 ,
     D_1,
+    \TCSR0_GENERATE[23].TCSR0_FF_I ,
+    \TCSR1_GENERATE[23].TCSR1_FF_I ,
+    \LOAD_REG_GEN[24].LOAD_REG_I_1 ,
+    \TCSR1_GENERATE[22].TCSR1_FF_I ,
+    \TCSR0_GENERATE[20].TCSR0_FF_I ,
     READ_DONE0_I,
     READ_DONE1_I,
     s_axi_rdata,
     bus2ip_reset,
     s_axi_aclk,
     read_Mux_In,
-    s_axi_aresetn,
     s_axi_arvalid,
-    s_axi_wdata,
-    s_axi_bready,
-    s_axi_rready,
     s_axi_awvalid,
     s_axi_wvalid,
     s_axi_araddr,
     s_axi_awaddr,
+    s_axi_rready,
+    s_axi_bready,
+    s_axi_wdata,
+    s_axi_aresetn,
     D_2,
     read_done1,
     D);
-  output \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ;
-  output \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ;
+  output p_7_in;
   output Bus_RNW_reg;
   output S_AXI_TIMER_rvalid;
   output S_AXI_TIMER_bvalid;
-  output \s_axi_rdata_i_reg[11] ;
-  output \s_axi_rdata_i_reg[3] ;
-  output [5:0]bus2ip_rdce;
-  output S_AXI_TIMER_wready;
-  output S_AXI_TIMER_arready;
-  output \s_axi_rdata_i_reg[31] ;
-  output \s_axi_rdata_i_reg[30] ;
-  output \s_axi_rdata_i_reg[29] ;
-  output \s_axi_rdata_i_reg[28] ;
-  output \s_axi_rdata_i_reg[27] ;
-  output \s_axi_rdata_i_reg[26] ;
-  output \s_axi_rdata_i_reg[25] ;
-  output \s_axi_rdata_i_reg[24] ;
-  output \s_axi_rdata_i_reg[23] ;
-  output \s_axi_rdata_i_reg[22] ;
-  output \s_axi_rdata_i_reg[21] ;
-  output \s_axi_rdata_i_reg[20] ;
-  output \s_axi_rdata_i_reg[19] ;
-  output \s_axi_rdata_i_reg[18] ;
-  output \s_axi_rdata_i_reg[17] ;
-  output \s_axi_rdata_i_reg[16] ;
-  output \s_axi_rdata_i_reg[15] ;
-  output \s_axi_rdata_i_reg[14] ;
-  output \s_axi_rdata_i_reg[13] ;
   output \s_axi_rdata_i_reg[12] ;
+  output \s_axi_rdata_i_reg[13] ;
+  output \s_axi_rdata_i_reg[14] ;
+  output \s_axi_rdata_i_reg[15] ;
+  output \s_axi_rdata_i_reg[16] ;
+  output \s_axi_rdata_i_reg[17] ;
+  output \s_axi_rdata_i_reg[18] ;
+  output \s_axi_rdata_i_reg[19] ;
+  output \s_axi_rdata_i_reg[20] ;
+  output \s_axi_rdata_i_reg[21] ;
+  output \s_axi_rdata_i_reg[22] ;
+  output \s_axi_rdata_i_reg[23] ;
+  output \s_axi_rdata_i_reg[24] ;
+  output \s_axi_rdata_i_reg[25] ;
+  output \s_axi_rdata_i_reg[26] ;
+  output \s_axi_rdata_i_reg[27] ;
+  output \s_axi_rdata_i_reg[28] ;
+  output \s_axi_rdata_i_reg[29] ;
+  output \s_axi_rdata_i_reg[30] ;
+  output \s_axi_rdata_i_reg[31] ;
   output pair0_Select;
-  output \TCSR0_GENERATE[23].TCSR0_FF_I ;
+  output S_AXI_TIMER_arready;
+  output \s_axi_rdata_i_reg[11] ;
   output \TCSR0_GENERATE[24].TCSR0_FF_I ;
-  output [1:0]bus2ip_wrce;
-  output \TCSR1_GENERATE[23].TCSR1_FF_I ;
   output \TCSR1_GENERATE[24].TCSR1_FF_I ;
+  output S_AXI_TIMER_wready;
+  output [5:0]bus2ip_rdce;
   output \LOAD_REG_GEN[31].LOAD_REG_I ;
   output \LOAD_REG_GEN[30].LOAD_REG_I ;
   output \LOAD_REG_GEN[29].LOAD_REG_I ;
@@ -7371,21 +6958,26 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized2
   output \LOAD_REG_GEN[2].LOAD_REG_I_0 ;
   output \LOAD_REG_GEN[1].LOAD_REG_I_0 ;
   output D_1;
+  output \TCSR0_GENERATE[23].TCSR0_FF_I ;
+  output \TCSR1_GENERATE[23].TCSR1_FF_I ;
+  output \LOAD_REG_GEN[24].LOAD_REG_I_1 ;
+  output \TCSR1_GENERATE[22].TCSR1_FF_I ;
+  output \TCSR0_GENERATE[20].TCSR0_FF_I ;
   output READ_DONE0_I;
   output READ_DONE1_I;
   output [31:0]s_axi_rdata;
   input bus2ip_reset;
   input s_axi_aclk;
-  input [90:0]read_Mux_In;
-  input s_axi_aresetn;
+  input [87:0]read_Mux_In;
   input s_axi_arvalid;
-  input [31:0]s_axi_wdata;
-  input s_axi_bready;
-  input s_axi_rready;
   input s_axi_awvalid;
   input s_axi_wvalid;
   input [2:0]s_axi_araddr;
   input [2:0]s_axi_awaddr;
+  input s_axi_rready;
+  input s_axi_bready;
+  input [31:0]s_axi_wdata;
+  input s_axi_aresetn;
   input D_2;
   input read_done1;
   input [31:0]D;
@@ -7395,8 +6987,6 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized2
   wire D_0;
   wire D_1;
   wire D_2;
-  wire \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ;
   wire \LOAD_REG_GEN[10].LOAD_REG_I ;
   wire \LOAD_REG_GEN[10].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[11].LOAD_REG_I ;
@@ -7429,6 +7019,7 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized2
   wire \LOAD_REG_GEN[23].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[24].LOAD_REG_I ;
   wire \LOAD_REG_GEN[24].LOAD_REG_I_0 ;
+  wire \LOAD_REG_GEN[24].LOAD_REG_I_1 ;
   wire \LOAD_REG_GEN[25].LOAD_REG_I ;
   wire \LOAD_REG_GEN[25].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[26].LOAD_REG_I ;
@@ -7465,15 +7056,17 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized2
   wire S_AXI_TIMER_bvalid;
   wire S_AXI_TIMER_rvalid;
   wire S_AXI_TIMER_wready;
+  wire \TCSR0_GENERATE[20].TCSR0_FF_I ;
   wire \TCSR0_GENERATE[23].TCSR0_FF_I ;
   wire \TCSR0_GENERATE[24].TCSR0_FF_I ;
+  wire \TCSR1_GENERATE[22].TCSR1_FF_I ;
   wire \TCSR1_GENERATE[23].TCSR1_FF_I ;
   wire \TCSR1_GENERATE[24].TCSR1_FF_I ;
   wire [5:0]bus2ip_rdce;
   wire bus2ip_reset;
-  wire [1:0]bus2ip_wrce;
+  wire p_7_in;
   wire pair0_Select;
-  wire [90:0]read_Mux_In;
+  wire [87:0]read_Mux_In;
   wire read_done1;
   wire s_axi_aclk;
   wire [2:0]s_axi_araddr;
@@ -7504,7 +7097,6 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized2
   wire \s_axi_rdata_i_reg[29] ;
   wire \s_axi_rdata_i_reg[30] ;
   wire \s_axi_rdata_i_reg[31] ;
-  wire \s_axi_rdata_i_reg[3] ;
   wire s_axi_rready;
   wire [31:0]s_axi_wdata;
   wire s_axi_wvalid;
@@ -7546,6 +7138,7 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized2
         .\LOAD_REG_GEN[23].LOAD_REG_I_0 (\LOAD_REG_GEN[23].LOAD_REG_I_0 ),
         .\LOAD_REG_GEN[24].LOAD_REG_I (\LOAD_REG_GEN[24].LOAD_REG_I ),
         .\LOAD_REG_GEN[24].LOAD_REG_I_0 (\LOAD_REG_GEN[24].LOAD_REG_I_0 ),
+        .\LOAD_REG_GEN[24].LOAD_REG_I_1 (\LOAD_REG_GEN[24].LOAD_REG_I_1 ),
         .\LOAD_REG_GEN[25].LOAD_REG_I (\LOAD_REG_GEN[25].LOAD_REG_I ),
         .\LOAD_REG_GEN[25].LOAD_REG_I_0 (\LOAD_REG_GEN[25].LOAD_REG_I_0 ),
         .\LOAD_REG_GEN[26].LOAD_REG_I (\LOAD_REG_GEN[26].LOAD_REG_I ),
@@ -7560,10 +7153,9 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized2
         .\LOAD_REG_GEN[2].LOAD_REG_I_0 (\LOAD_REG_GEN[2].LOAD_REG_I_0 ),
         .\LOAD_REG_GEN[30].LOAD_REG_I (\LOAD_REG_GEN[30].LOAD_REG_I ),
         .\LOAD_REG_GEN[30].LOAD_REG_I_0 (\LOAD_REG_GEN[30].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[31].LOAD_REG_I (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ),
-        .\LOAD_REG_GEN[31].LOAD_REG_I_0 (\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ),
-        .\LOAD_REG_GEN[31].LOAD_REG_I_1 (\LOAD_REG_GEN[31].LOAD_REG_I ),
-        .\LOAD_REG_GEN[31].LOAD_REG_I_2 (\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
+        .\LOAD_REG_GEN[31].LOAD_REG_I (p_7_in),
+        .\LOAD_REG_GEN[31].LOAD_REG_I_0 (\LOAD_REG_GEN[31].LOAD_REG_I ),
+        .\LOAD_REG_GEN[31].LOAD_REG_I_1 (\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
         .\LOAD_REG_GEN[3].LOAD_REG_I (\LOAD_REG_GEN[3].LOAD_REG_I ),
         .\LOAD_REG_GEN[3].LOAD_REG_I_0 (\LOAD_REG_GEN[3].LOAD_REG_I_0 ),
         .\LOAD_REG_GEN[4].LOAD_REG_I (\LOAD_REG_GEN[4].LOAD_REG_I ),
@@ -7584,14 +7176,15 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized2
         .S_AXI_TIMER_bvalid(S_AXI_TIMER_bvalid),
         .S_AXI_TIMER_rvalid(S_AXI_TIMER_rvalid),
         .S_AXI_TIMER_wready(S_AXI_TIMER_wready),
-        .\TCSR0_GENERATE[23].TCSR0_FF_I (\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .\TCSR0_GENERATE[20].TCSR0_FF_I (\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .\TCSR0_GENERATE[23].TCSR0_FF_I (Bus_RNW_reg),
+        .\TCSR0_GENERATE[23].TCSR0_FF_I_0 (\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .\TCSR0_GENERATE[24].TCSR0_FF_I (\TCSR0_GENERATE[24].TCSR0_FF_I ),
+        .\TCSR1_GENERATE[22].TCSR1_FF_I (\TCSR1_GENERATE[22].TCSR1_FF_I ),
         .\TCSR1_GENERATE[23].TCSR1_FF_I (\TCSR1_GENERATE[23].TCSR1_FF_I ),
-        .\TCSR1_GENERATE[24].TCSR1_FF_I (Bus_RNW_reg),
-        .\TCSR1_GENERATE[24].TCSR1_FF_I_0 (\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .\TCSR1_GENERATE[24].TCSR1_FF_I (\TCSR1_GENERATE[24].TCSR1_FF_I ),
         .bus2ip_rdce(bus2ip_rdce),
         .bus2ip_reset(bus2ip_reset),
-        .bus2ip_wrce(bus2ip_wrce),
         .pair0_Select(pair0_Select),
         .read_Mux_In(read_Mux_In),
         .read_done1(read_done1),
@@ -7624,139 +7217,13 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif__parameterized2
         .\s_axi_rdata_i_reg[29]_0 (\s_axi_rdata_i_reg[29] ),
         .\s_axi_rdata_i_reg[30]_0 (\s_axi_rdata_i_reg[30] ),
         .\s_axi_rdata_i_reg[31]_0 (\s_axi_rdata_i_reg[31] ),
-        .\s_axi_rdata_i_reg[3]_0 (\s_axi_rdata_i_reg[3] ),
         .s_axi_rready(s_axi_rready),
         .s_axi_wdata(s_axi_wdata),
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized25
-   (\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ,
-    Q,
-    start2);
-  output \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ;
-  input [4:0]Q;
-  input start2;
-
-  wire \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ;
-  wire [4:0]Q;
-  wire start2;
-
-  LUT6 #(
-    .INIT(64'h0000000000000004)) 
-    CS
-       (.I0(Q[4]),
-        .I1(start2),
-        .I2(Q[2]),
-        .I3(Q[1]),
-        .I4(Q[3]),
-        .I5(Q[0]),
-        .O(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ));
-endmodule
-
-(* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized26
-   (p_14_out,
-    Q,
-    start2);
-  output p_14_out;
-  input [4:0]Q;
-  input start2;
-
-  wire [4:0]Q;
-  wire p_14_out;
-  wire start2;
-
-  LUT6 #(
-    .INIT(64'h0000000000000200)) 
-    CS
-       (.I0(Q[0]),
-        .I1(Q[2]),
-        .I2(Q[4]),
-        .I3(start2),
-        .I4(Q[3]),
-        .I5(Q[1]),
-        .O(p_14_out));
-endmodule
-
-(* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized27
-   (p_13_out,
-    Q,
-    start2);
-  output p_13_out;
-  input [4:0]Q;
-  input start2;
-
-  wire [4:0]Q;
-  wire p_13_out;
-  wire start2;
-
-  LUT6 #(
-    .INIT(64'h0000000000000200)) 
-    CS
-       (.I0(Q[1]),
-        .I1(Q[2]),
-        .I2(Q[4]),
-        .I3(start2),
-        .I4(Q[3]),
-        .I5(Q[0]),
-        .O(p_13_out));
-endmodule
-
-(* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized28
-   (p_12_out,
-    Q,
-    start2);
-  output p_12_out;
-  input [4:0]Q;
-  input start2;
-
-  wire [4:0]Q;
-  wire p_12_out;
-  wire start2;
-
-  LUT6 #(
-    .INIT(64'h0000004000000000)) 
-    CS
-       (.I0(Q[3]),
-        .I1(Q[1]),
-        .I2(Q[0]),
-        .I3(Q[2]),
-        .I4(Q[4]),
-        .I5(start2),
-        .O(p_12_out));
-endmodule
-
-(* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized29
-   (p_11_out,
-    Q,
-    start2);
-  output p_11_out;
-  input [4:0]Q;
-  input start2;
-
-  wire [4:0]Q;
-  wire p_11_out;
-  wire start2;
-
-  LUT6 #(
-    .INIT(64'h0000000000000200)) 
-    CS
-       (.I0(Q[2]),
-        .I1(Q[0]),
-        .I2(Q[4]),
-        .I3(start2),
-        .I4(Q[3]),
-        .I5(Q[1]),
-        .O(p_11_out));
-endmodule
-
-(* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized30
+module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized10
    (p_10_out,
     Q,
     start2);
@@ -7781,7 +7248,7 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized30
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized31
+module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized11
    (p_9_out,
     Q,
     start2);
@@ -7806,7 +7273,7 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized31
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized32
+module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized12
    (p_8_out,
     Q,
     start2);
@@ -7831,7 +7298,7 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized32
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized33
+module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized13
    (p_7_out,
     Q,
     start2);
@@ -7856,7 +7323,7 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized33
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized34
+module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized14
    (p_6_out,
     Q,
     start2);
@@ -7881,7 +7348,7 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized34
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized35
+module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized15
    (p_5_out,
     Q,
     start2);
@@ -7906,7 +7373,7 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized35
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized36
+module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized16
    (p_4_out,
     Q,
     start2);
@@ -7931,7 +7398,7 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized36
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized37
+module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized17
    (p_3_out,
     Q,
     start2);
@@ -7956,7 +7423,7 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized37
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized38
+module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized18
    (p_2_out,
     Q,
     start2);
@@ -7981,7 +7448,7 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized38
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized39
+module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized19
    (p_1_out,
     Q,
     start2);
@@ -8006,7 +7473,30 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized39
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized44
+module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized25
+   (p_5_out,
+    \bus2ip_addr_i_reg[4] ,
+    Q);
+  output p_5_out;
+  input [2:0]\bus2ip_addr_i_reg[4] ;
+  input Q;
+
+  wire Q;
+  wire [2:0]\bus2ip_addr_i_reg[4] ;
+  wire p_5_out;
+
+  LUT4 #(
+    .INIT(16'h1000)) 
+    CS
+       (.I0(\bus2ip_addr_i_reg[4] [0]),
+        .I1(\bus2ip_addr_i_reg[4] [2]),
+        .I2(\bus2ip_addr_i_reg[4] [1]),
+        .I3(Q),
+        .O(p_5_out));
+endmodule
+
+(* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
+module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized25_36
    (\GEN_BKEND_CE_REGISTERS[18].ce_out_i_reg[18] ,
     Q,
     start2);
@@ -8019,44 +7509,19 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized44
   wire start2;
 
   LUT6 #(
-    .INIT(64'h0010000000000000)) 
+    .INIT(64'h0000000010000000)) 
     CS
        (.I0(Q[0]),
         .I1(Q[2]),
         .I2(Q[1]),
-        .I3(Q[3]),
+        .I3(Q[4]),
         .I4(start2),
-        .I5(Q[4]),
+        .I5(Q[3]),
         .O(\GEN_BKEND_CE_REGISTERS[18].ce_out_i_reg[18] ));
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized48
-   (\GEN_BKEND_CE_REGISTERS[22].ce_out_i_reg[22] ,
-    Q,
-    start2);
-  output \GEN_BKEND_CE_REGISTERS[22].ce_out_i_reg[22] ;
-  input [4:0]Q;
-  input start2;
-
-  wire \GEN_BKEND_CE_REGISTERS[22].ce_out_i_reg[22] ;
-  wire [4:0]Q;
-  wire start2;
-
-  LUT6 #(
-    .INIT(64'h0200000000000000)) 
-    CS
-       (.I0(Q[2]),
-        .I1(Q[0]),
-        .I2(Q[3]),
-        .I3(start2),
-        .I4(Q[4]),
-        .I5(Q[1]),
-        .O(\GEN_BKEND_CE_REGISTERS[22].ce_out_i_reg[22] ));
-endmodule
-
-(* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized53
+module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized25_38
    (\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg[26] ,
     Q,
     start2);
@@ -8075,13 +7540,61 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized53
         .I1(Q[2]),
         .I2(Q[1]),
         .I3(Q[4]),
-        .I4(Q[3]),
-        .I5(start2),
+        .I4(start2),
+        .I5(Q[3]),
         .O(\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg[26] ));
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized57
+module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized29
+   (p_1_out,
+    \bus2ip_addr_i_reg[4] ,
+    Q);
+  output p_1_out;
+  input [2:0]\bus2ip_addr_i_reg[4] ;
+  input Q;
+
+  wire Q;
+  wire [2:0]\bus2ip_addr_i_reg[4] ;
+  wire p_1_out;
+
+  LUT4 #(
+    .INIT(16'h2000)) 
+    CS
+       (.I0(\bus2ip_addr_i_reg[4] [2]),
+        .I1(\bus2ip_addr_i_reg[4] [0]),
+        .I2(Q),
+        .I3(\bus2ip_addr_i_reg[4] [1]),
+        .O(p_1_out));
+endmodule
+
+(* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
+module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized29_37
+   (\GEN_BKEND_CE_REGISTERS[22].ce_out_i_reg[22] ,
+    Q,
+    start2);
+  output \GEN_BKEND_CE_REGISTERS[22].ce_out_i_reg[22] ;
+  input [4:0]Q;
+  input start2;
+
+  wire \GEN_BKEND_CE_REGISTERS[22].ce_out_i_reg[22] ;
+  wire [4:0]Q;
+  wire start2;
+
+  LUT6 #(
+    .INIT(64'h0000200000000000)) 
+    CS
+       (.I0(Q[2]),
+        .I1(Q[0]),
+        .I2(Q[4]),
+        .I3(start2),
+        .I4(Q[3]),
+        .I5(Q[1]),
+        .O(\GEN_BKEND_CE_REGISTERS[22].ce_out_i_reg[22] ));
+endmodule
+
+(* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
+module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized29_39
    (\GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg[30] ,
     Q,
     start2);
@@ -8099,148 +7612,158 @@ module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized57
        (.I0(Q[2]),
         .I1(Q[0]),
         .I2(Q[4]),
-        .I3(Q[3]),
-        .I4(start2),
+        .I3(start2),
+        .I4(Q[3]),
         .I5(Q[1]),
         .O(\GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg[30] ));
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized59
-   (ce_expnd_i_7,
-    \bus2ip_addr_i_reg[4] ,
-    Q);
-  output ce_expnd_i_7;
-  input [2:0]\bus2ip_addr_i_reg[4] ;
+module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized30
+   (p_7_out,
+    Q,
+    \bus2ip_addr_i_reg[4] );
+  output p_7_out;
   input Q;
+  input [2:0]\bus2ip_addr_i_reg[4] ;
 
   wire Q;
   wire [2:0]\bus2ip_addr_i_reg[4] ;
-  wire ce_expnd_i_7;
-
-  LUT4 #(
-    .INIT(16'h0010)) 
-    CS
-       (.I0(\bus2ip_addr_i_reg[4] [2]),
-        .I1(\bus2ip_addr_i_reg[4] [1]),
-        .I2(Q),
-        .I3(\bus2ip_addr_i_reg[4] [0]),
-        .O(ce_expnd_i_7));
-endmodule
-
-(* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized61
-   (ce_expnd_i_5,
-    \bus2ip_addr_i_reg[4] ,
-    Q);
-  output ce_expnd_i_5;
-  input [2:0]\bus2ip_addr_i_reg[4] ;
-  input Q;
-
-  wire Q;
-  wire [2:0]\bus2ip_addr_i_reg[4] ;
-  wire ce_expnd_i_5;
-
-  LUT4 #(
-    .INIT(16'h1000)) 
-    CS
-       (.I0(\bus2ip_addr_i_reg[4] [2]),
-        .I1(\bus2ip_addr_i_reg[4] [0]),
-        .I2(Q),
-        .I3(\bus2ip_addr_i_reg[4] [1]),
-        .O(ce_expnd_i_5));
-endmodule
-
-(* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized63
-   (ce_expnd_i_3,
-    \bus2ip_addr_i_reg[4] ,
-    Q);
-  output ce_expnd_i_3;
-  input [2:0]\bus2ip_addr_i_reg[4] ;
-  input Q;
-
-  wire Q;
-  wire [2:0]\bus2ip_addr_i_reg[4] ;
-  wire ce_expnd_i_3;
-
-  LUT4 #(
-    .INIT(16'h1000)) 
-    CS
-       (.I0(\bus2ip_addr_i_reg[4] [1]),
-        .I1(\bus2ip_addr_i_reg[4] [0]),
-        .I2(\bus2ip_addr_i_reg[4] [2]),
-        .I3(Q),
-        .O(ce_expnd_i_3));
-endmodule
-
-(* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized64
-   (ce_expnd_i_2,
-    \bus2ip_addr_i_reg[4] ,
-    Q);
-  output ce_expnd_i_2;
-  input [2:0]\bus2ip_addr_i_reg[4] ;
-  input Q;
-
-  wire Q;
-  wire [2:0]\bus2ip_addr_i_reg[4] ;
-  wire ce_expnd_i_2;
-
-  LUT4 #(
-    .INIT(16'h4000)) 
-    CS
-       (.I0(\bus2ip_addr_i_reg[4] [1]),
-        .I1(\bus2ip_addr_i_reg[4] [2]),
-        .I2(Q),
-        .I3(\bus2ip_addr_i_reg[4] [0]),
-        .O(ce_expnd_i_2));
-endmodule
-
-(* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized65
-   (ce_expnd_i_1,
-    \bus2ip_addr_i_reg[4] ,
-    Q);
-  output ce_expnd_i_1;
-  input [2:0]\bus2ip_addr_i_reg[4] ;
-  input Q;
-
-  wire Q;
-  wire [2:0]\bus2ip_addr_i_reg[4] ;
-  wire ce_expnd_i_1;
-
-  LUT4 #(
-    .INIT(16'h4000)) 
-    CS
-       (.I0(\bus2ip_addr_i_reg[4] [0]),
-        .I1(\bus2ip_addr_i_reg[4] [2]),
-        .I2(Q),
-        .I3(\bus2ip_addr_i_reg[4] [1]),
-        .O(ce_expnd_i_1));
-endmodule
-
-(* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized66
-   (ce_expnd_i_0,
-    \bus2ip_addr_i_reg[4] ,
-    Q);
-  output ce_expnd_i_0;
-  input [2:0]\bus2ip_addr_i_reg[4] ;
-  input Q;
-
-  wire Q;
-  wire [2:0]\bus2ip_addr_i_reg[4] ;
-  wire ce_expnd_i_0;
+  wire p_7_out;
 
   LUT4 #(
     .INIT(16'h8000)) 
     CS
-       (.I0(\bus2ip_addr_i_reg[4] [1]),
-        .I1(\bus2ip_addr_i_reg[4] [0]),
-        .I2(\bus2ip_addr_i_reg[4] [2]),
-        .I3(Q),
-        .O(ce_expnd_i_0));
+       (.I0(Q),
+        .I1(\bus2ip_addr_i_reg[4] [2]),
+        .I2(\bus2ip_addr_i_reg[4] [0]),
+        .I3(\bus2ip_addr_i_reg[4] [1]),
+        .O(p_7_out));
+endmodule
+
+(* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
+module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized5
+   (\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ,
+    Q,
+    start2);
+  output \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ;
+  input [4:0]Q;
+  input start2;
+
+  wire \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ;
+  wire [4:0]Q;
+  wire start2;
+
+  LUT6 #(
+    .INIT(64'h0000000000000004)) 
+    CS
+       (.I0(Q[4]),
+        .I1(start2),
+        .I2(Q[2]),
+        .I3(Q[1]),
+        .I4(Q[3]),
+        .I5(Q[0]),
+        .O(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ));
+endmodule
+
+(* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
+module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized6
+   (p_14_out,
+    Q,
+    start2);
+  output p_14_out;
+  input [4:0]Q;
+  input start2;
+
+  wire [4:0]Q;
+  wire p_14_out;
+  wire start2;
+
+  LUT6 #(
+    .INIT(64'h0000000000000200)) 
+    CS
+       (.I0(Q[0]),
+        .I1(Q[2]),
+        .I2(Q[4]),
+        .I3(start2),
+        .I4(Q[3]),
+        .I5(Q[1]),
+        .O(p_14_out));
+endmodule
+
+(* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
+module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized7
+   (p_13_out,
+    Q,
+    start2);
+  output p_13_out;
+  input [4:0]Q;
+  input start2;
+
+  wire [4:0]Q;
+  wire p_13_out;
+  wire start2;
+
+  LUT6 #(
+    .INIT(64'h0000000000000200)) 
+    CS
+       (.I0(Q[1]),
+        .I1(Q[2]),
+        .I2(Q[4]),
+        .I3(start2),
+        .I4(Q[3]),
+        .I5(Q[0]),
+        .O(p_13_out));
+endmodule
+
+(* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
+module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized8
+   (p_12_out,
+    Q,
+    start2);
+  output p_12_out;
+  input [4:0]Q;
+  input start2;
+
+  wire [4:0]Q;
+  wire p_12_out;
+  wire start2;
+
+  LUT6 #(
+    .INIT(64'h0000004000000000)) 
+    CS
+       (.I0(Q[3]),
+        .I1(Q[1]),
+        .I2(Q[0]),
+        .I3(Q[2]),
+        .I4(Q[4]),
+        .I5(start2),
+        .O(p_12_out));
+endmodule
+
+(* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
+module design_1_PmodWIFI_0_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized9
+   (p_11_out,
+    Q,
+    start2);
+  output p_11_out;
+  input [4:0]Q;
+  input start2;
+
+  wire [4:0]Q;
+  wire p_11_out;
+  wire start2;
+
+  LUT6 #(
+    .INIT(64'h0000000000000200)) 
+    CS
+       (.I0(Q[2]),
+        .I1(Q[0]),
+        .I2(Q[4]),
+        .I3(start2),
+        .I4(Q[3]),
+        .I5(Q[1]),
+        .O(p_11_out));
 endmodule
 
 (* Async_Clk = "0" *) (* C_DUAL_QUAD_MODE = "0" *) (* C_FAMILY = "artix7" *) 
@@ -8252,7 +7775,7 @@ endmodule
 (* C_S_AXI4_HIGHADDR = "0" *) (* C_S_AXI4_ID_WIDTH = "1" *) (* C_S_AXI_ADDR_WIDTH = "7" *) 
 (* C_S_AXI_DATA_WIDTH = "32" *) (* C_TYPE_OF_AXI4_INTERFACE = "0" *) (* C_UC_FAMILY = "0" *) 
 (* C_USE_STARTUP = "0" *) (* C_USE_STARTUP_EXT = "0" *) (* C_XIP_MODE = "0" *) 
-(* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "axi_quad_spi" *) 
+(* DowngradeIPIdentifiedWarnings = "yes" *) 
 module design_1_PmodWIFI_0_0_axi_quad_spi
    (ext_spi_clk,
     s_axi_aclk,
@@ -8630,7 +8153,6 @@ module design_1_PmodWIFI_0_0_axi_quad_spi
        (.P(\<const1> ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_quad_spi_top" *) 
 module design_1_PmodWIFI_0_0_axi_quad_spi_top
    (sck_t,
     io0_t,
@@ -8639,8 +8161,8 @@ module design_1_PmodWIFI_0_0_axi_quad_spi_top
     sck_o,
     s_axi_rdata,
     s_axi_rresp,
-    AXI_LITE_SPI_arready,
     AXI_LITE_SPI_wready,
+    AXI_LITE_SPI_arready,
     AXI_LITE_SPI_rvalid,
     AXI_LITE_SPI_bvalid,
     ip2intc_irpt,
@@ -8648,16 +8170,16 @@ module design_1_PmodWIFI_0_0_axi_quad_spi_top
     s_axi_bresp,
     ss_o,
     s_axi_aclk,
-    io0_i,
     ext_spi_clk,
-    io1_i,
     s_axi_wdata,
     spisel,
     sck_i,
+    io0_i,
+    io1_i,
     s_axi4_aclk,
     s_axi4_aresetn,
-    s_axi_arvalid,
     s_axi_aresetn,
+    s_axi_arvalid,
     s_axi_rready,
     s_axi_bready,
     s_axi_araddr,
@@ -8672,8 +8194,8 @@ module design_1_PmodWIFI_0_0_axi_quad_spi_top
   output sck_o;
   output [10:0]s_axi_rdata;
   output [0:0]s_axi_rresp;
-  output AXI_LITE_SPI_arready;
   output AXI_LITE_SPI_wready;
+  output AXI_LITE_SPI_arready;
   output AXI_LITE_SPI_rvalid;
   output AXI_LITE_SPI_bvalid;
   output ip2intc_irpt;
@@ -8681,16 +8203,16 @@ module design_1_PmodWIFI_0_0_axi_quad_spi_top
   output [0:0]s_axi_bresp;
   output [0:0]ss_o;
   input s_axi_aclk;
-  input io0_i;
   input ext_spi_clk;
-  input io1_i;
   input [10:0]s_axi_wdata;
   input spisel;
   input sck_i;
+  input io0_i;
+  input io1_i;
   input s_axi4_aclk;
   input s_axi4_aresetn;
-  input s_axi_arvalid;
   input s_axi_aresetn;
+  input s_axi_arvalid;
   input s_axi_rready;
   input s_axi_bready;
   input [4:0]s_axi_araddr;
@@ -8725,13 +8247,13 @@ module design_1_PmodWIFI_0_0_axi_quad_spi_top
   wire IP2Bus_RdAck_receive_enable__1;
   wire [0:0]IP2Bus_SPICR_Data_int;
   wire \I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg ;
-  wire \I_SLAVE_ATTACHMENT/I_DECODER/p_2_in ;
-  wire \I_SLAVE_ATTACHMENT/I_DECODER/p_3_in ;
-  wire \I_SLAVE_ATTACHMENT/I_DECODER/p_4_in ;
-  wire \I_SLAVE_ATTACHMENT/I_DECODER/p_5_in ;
-  wire \I_SLAVE_ATTACHMENT/I_DECODER/p_6_in ;
-  wire \I_SLAVE_ATTACHMENT/I_DECODER/p_7_in ;
-  wire \I_SLAVE_ATTACHMENT/I_DECODER/p_8_in ;
+  wire \I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ;
+  wire \I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ;
+  wire \I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ;
+  wire \I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ;
+  wire \I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg ;
+  wire \I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg ;
+  wire \I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg ;
   wire \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_15 ;
   wire \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_29 ;
   wire \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_37 ;
@@ -8840,6 +8362,13 @@ module design_1_PmodWIFI_0_0_axi_quad_spi_top
         .\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_52 ),
         .D({intr_ip2bus_data,IP2Bus_SPICR_Data_int,ip2Bus_Data_1}),
         .E(\INTERRUPT_CONTROL_I/irpt_wrack_d11 ),
+        .\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg (\I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg (\I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg (\I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg (\I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg (\I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg (\I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg (\I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg ),
         .IP2Bus_Error(IP2Bus_Error),
         .IP2Bus_Error_1(IP2Bus_Error_1),
         .IP2Bus_RdAck_receive_enable__1(IP2Bus_RdAck_receive_enable__1),
@@ -8889,15 +8418,8 @@ module design_1_PmodWIFI_0_0_axi_quad_spi_top
         .p_15_out(p_15_out),
         .p_16_out(p_16_out),
         .p_1_in23_in(\INTERRUPT_CONTROL_I/p_1_in23_in ),
-        .p_2_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_2_in ),
         .p_39_out__0(\INTERRUPT_CONTROL_I/p_39_out__0 ),
-        .p_3_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_3_in ),
-        .p_4_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_4_in ),
-        .p_4_in_0(p_4_in),
-        .p_5_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_5_in ),
-        .p_6_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_6_in ),
-        .p_7_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_7_in ),
-        .p_8_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_8_in ),
+        .p_4_in(p_4_in),
         .rd_ce_or_reduce_core_cmb(rd_ce_or_reduce_core_cmb),
         .reset2ip_reset_int(reset2ip_reset_int),
         .reset_trig0(\SOFT_RESET_I/reset_trig0 ),
@@ -8936,6 +8458,13 @@ module design_1_PmodWIFI_0_0_axi_quad_spi_top
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to (Rx_FIFO_Empty),
         .\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_29 ),
         .\GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg[16] (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_43 ),
+        .\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg (\I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg (\I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg (\I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg (\I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg (\I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg (\I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg (\I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg ),
         .\GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg[30] (\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_15 ),
         .IP2Bus_Error(IP2Bus_Error),
         .IP2Bus_Error_1(IP2Bus_Error_1),
@@ -8983,15 +8512,8 @@ module design_1_PmodWIFI_0_0_axi_quad_spi_top
         .p_15_out(p_15_out),
         .p_16_out(p_16_out),
         .p_1_in23_in(\INTERRUPT_CONTROL_I/p_1_in23_in ),
-        .p_2_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_2_in ),
         .p_39_out__0(\INTERRUPT_CONTROL_I/p_39_out__0 ),
-        .p_3_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_3_in ),
         .p_4_in(p_4_in),
-        .p_4_in_0(\I_SLAVE_ATTACHMENT/I_DECODER/p_4_in ),
-        .p_5_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_5_in ),
-        .p_6_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_6_in ),
-        .p_7_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_7_in ),
-        .p_8_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_8_in ),
         .rd_ce_or_reduce_core_cmb(rd_ce_or_reduce_core_cmb),
         .reset2ip_reset_int(reset2ip_reset_int),
         .reset_trig0(\SOFT_RESET_I/reset_trig0 ),
@@ -9013,8 +8535,7 @@ module design_1_PmodWIFI_0_0_axi_quad_spi_top
         .wr_ce_or_reduce_core_cmb(wr_ce_or_reduce_core_cmb));
 endmodule
 
-(* ORIG_REF_NAME = "axi_quad_spi_v3_2_9_counter_f" *) 
-module design_1_PmodWIFI_0_0_axi_quad_spi_v3_2_9_counter_f
+module design_1_PmodWIFI_0_0_axi_quad_spi_v3_2_12_counter_f
    (rx_fifo_count,
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31] ,
     \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.Rx_FIFO_Full_i_reg ,
@@ -9029,10 +8550,10 @@ module design_1_PmodWIFI_0_0_axi_quad_spi_v3_2_9_counter_f
     p_15_in,
     spicr_0_loop_frm_axi_clk,
     Bus_RNW_reg,
-    p_8_in,
-    p_2_in,
+    \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ,
+    \GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg ,
     out,
-    p_4_in_0,
+    \GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg ,
     SPISSR_frm_axi_clk,
     spiXfer_done_to_axi_1,
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2_0 ,
@@ -9056,10 +8577,10 @@ module design_1_PmodWIFI_0_0_axi_quad_spi_v3_2_9_counter_f
   input p_15_in;
   input spicr_0_loop_frm_axi_clk;
   input Bus_RNW_reg;
-  input p_8_in;
-  input p_2_in;
+  input \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ;
+  input \GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg ;
   input out;
-  input p_4_in_0;
+  input \GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg ;
   input SPISSR_frm_axi_clk;
   input spiXfer_done_to_axi_1;
   input \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2_0 ;
@@ -9075,6 +8596,9 @@ module design_1_PmodWIFI_0_0_axi_quad_spi_v3_2_9_counter_f
   wire \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.Rx_FIFO_Full_i_reg ;
   wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2 ;
   wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2_0 ;
+  wire \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg ;
   wire IP2Bus_RdAck_receive_enable__1;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_4_n_0 ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31] ;
@@ -9091,9 +8615,6 @@ module design_1_PmodWIFI_0_0_axi_quad_spi_v3_2_9_counter_f
   wire \icount_out[3]_i_4__0_n_0 ;
   wire out;
   wire p_15_in;
-  wire p_2_in;
-  wire p_4_in_0;
-  wire p_8_in;
   wire reset2ip_reset_int;
   wire rst_reg;
   wire rst_reg_0;
@@ -9132,15 +8653,15 @@ module design_1_PmodWIFI_0_0_axi_quad_spi_v3_2_9_counter_f
         .I2(p_15_in),
         .I3(spicr_0_loop_frm_axi_clk),
         .I4(Bus_RNW_reg),
-        .I5(p_8_in),
+        .I5(\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ),
         .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31] ));
   LUT6 #(
     .INIT(64'hFF08000008080000)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_4 
        (.I0(rx_fifo_count[0]),
-        .I1(p_2_in),
+        .I1(\GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg ),
         .I2(out),
-        .I3(p_4_in_0),
+        .I3(\GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg ),
         .I4(Bus_RNW_reg),
         .I5(SPISSR_frm_axi_clk),
         .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_4_n_0 ));
@@ -9209,8 +8730,8 @@ module design_1_PmodWIFI_0_0_axi_quad_spi_v3_2_9_counter_f
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_quad_spi_v3_2_9_counter_f" *) 
-module design_1_PmodWIFI_0_0_axi_quad_spi_v3_2_9_counter_f_2
+(* ORIG_REF_NAME = "axi_quad_spi_v3_2_12_counter_f" *) 
+module design_1_PmodWIFI_0_0_axi_quad_spi_v3_2_12_counter_f_5
    (tx_fifo_count,
     D,
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30] ,
@@ -9227,7 +8748,7 @@ module design_1_PmodWIFI_0_0_axi_quad_spi_v3_2_9_counter_f_2
     \LOGIC_GENERATION_FDR.TX_EMPT_4_SPISR_S2AX_2 ,
     \goreg_dm.dout_i_reg[2] ,
     Bus_RNW_reg,
-    p_3_in,
+    \GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg ,
     \LOGIC_GENERATION_FDR.TX_EMPT_4_SPISR_S2AX_2_0 ,
     rx_fifo_count,
     Bus_RNW_reg_reg_0,
@@ -9254,7 +8775,7 @@ module design_1_PmodWIFI_0_0_axi_quad_spi_v3_2_9_counter_f_2
   input \LOGIC_GENERATION_FDR.TX_EMPT_4_SPISR_S2AX_2 ;
   input \goreg_dm.dout_i_reg[2] ;
   input Bus_RNW_reg;
-  input p_3_in;
+  input \GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg ;
   input \LOGIC_GENERATION_FDR.TX_EMPT_4_SPISR_S2AX_2_0 ;
   input [1:0]rx_fifo_count;
   input Bus_RNW_reg_reg_0;
@@ -9277,6 +8798,7 @@ module design_1_PmodWIFI_0_0_axi_quad_spi_v3_2_9_counter_f_2
   wire \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_reg ;
   wire \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg ;
   wire \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ;
+  wire \GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg ;
   wire IP2Bus_WrAck_transmit_enable__0;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28] ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30] ;
@@ -9292,7 +8814,6 @@ module design_1_PmodWIFI_0_0_axi_quad_spi_v3_2_9_counter_f_2
   wire \icount_out[2]_i_1__0_n_0 ;
   wire \icount_out[3]_i_2__0_n_0 ;
   wire \icount_out[3]_i_4_n_0 ;
-  wire p_3_in;
   wire reset2ip_reset_int;
   wire reset_TxFIFO_ptr_int;
   wire rst_reg;
@@ -9310,7 +8831,7 @@ module design_1_PmodWIFI_0_0_axi_quad_spi_v3_2_9_counter_f_2
         .I4(\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg ),
         .I5(reset_TxFIFO_ptr_int),
         .O(\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_reg ));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_i_2 
@@ -9328,7 +8849,7 @@ module design_1_PmodWIFI_0_0_axi_quad_spi_v3_2_9_counter_f_2
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[28]_i_3 
        (.I0(tx_fifo_count[3]),
         .I1(Bus_RNW_reg),
-        .I2(p_3_in),
+        .I2(\GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg ),
         .I3(\LOGIC_GENERATION_FDR.TX_EMPT_4_SPISR_S2AX_2_0 ),
         .I4(rx_fifo_count[1]),
         .I5(Bus_RNW_reg_reg_0),
@@ -9348,7 +8869,7 @@ module design_1_PmodWIFI_0_0_axi_quad_spi_v3_2_9_counter_f_2
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[30]_i_2 
        (.I0(tx_fifo_count[1]),
         .I1(Bus_RNW_reg),
-        .I2(p_3_in),
+        .I2(\GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg ),
         .I3(\LOGIC_GENERATION_FDR.TX_EMPT_4_SPISR_S2AX_2_0 ),
         .I4(rx_fifo_count[0]),
         .I5(Bus_RNW_reg_reg_0),
@@ -9383,7 +8904,7 @@ module design_1_PmodWIFI_0_0_axi_quad_spi_v3_2_9_counter_f_2
         .I4(tx_fifo_count[1]),
         .I5(\icount_out[3]_i_4_n_0 ),
         .O(\icount_out[3]_i_2__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT3 #(
     .INIT(8'h8E)) 
     \icount_out[3]_i_4 
@@ -9420,7 +8941,7 @@ endmodule
 (* C_COUNT_WIDTH = "32" *) (* C_FAMILY = "artix7" *) (* C_GEN0_ASSERT = "1'b1" *) 
 (* C_GEN1_ASSERT = "1'b1" *) (* C_ONE_TIMER_ONLY = "0" *) (* C_S_AXI_ADDR_WIDTH = "5" *) 
 (* C_S_AXI_DATA_WIDTH = "32" *) (* C_TRIG0_ASSERT = "1'b1" *) (* C_TRIG1_ASSERT = "1'b1" *) 
-(* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "axi_timer" *) 
+(* DowngradeIPIdentifiedWarnings = "yes" *) 
 module design_1_PmodWIFI_0_0_axi_timer
    (capturetrig0,
     capturetrig1,
@@ -9476,13 +8997,18 @@ module design_1_PmodWIFI_0_0_axi_timer
   input s_axi_rready;
 
   wire \<const0> ;
+  wire AXI4_LITE_I_n_10;
   wire AXI4_LITE_I_n_100;
   wire AXI4_LITE_I_n_101;
   wire AXI4_LITE_I_n_102;
   wire AXI4_LITE_I_n_103;
   wire AXI4_LITE_I_n_104;
+  wire AXI4_LITE_I_n_105;
   wire AXI4_LITE_I_n_106;
-  wire AXI4_LITE_I_n_107;
+  wire AXI4_LITE_I_n_11;
+  wire AXI4_LITE_I_n_12;
+  wire AXI4_LITE_I_n_13;
+  wire AXI4_LITE_I_n_14;
   wire AXI4_LITE_I_n_15;
   wire AXI4_LITE_I_n_16;
   wire AXI4_LITE_I_n_17;
@@ -9492,19 +9018,14 @@ module design_1_PmodWIFI_0_0_axi_timer
   wire AXI4_LITE_I_n_21;
   wire AXI4_LITE_I_n_22;
   wire AXI4_LITE_I_n_23;
-  wire AXI4_LITE_I_n_24;
-  wire AXI4_LITE_I_n_25;
   wire AXI4_LITE_I_n_26;
   wire AXI4_LITE_I_n_27;
   wire AXI4_LITE_I_n_28;
-  wire AXI4_LITE_I_n_29;
-  wire AXI4_LITE_I_n_30;
-  wire AXI4_LITE_I_n_31;
-  wire AXI4_LITE_I_n_32;
-  wire AXI4_LITE_I_n_33;
-  wire AXI4_LITE_I_n_34;
   wire AXI4_LITE_I_n_36;
   wire AXI4_LITE_I_n_37;
+  wire AXI4_LITE_I_n_38;
+  wire AXI4_LITE_I_n_39;
+  wire AXI4_LITE_I_n_4;
   wire AXI4_LITE_I_n_40;
   wire AXI4_LITE_I_n_41;
   wire AXI4_LITE_I_n_42;
@@ -9534,18 +9055,20 @@ module design_1_PmodWIFI_0_0_axi_timer
   wire AXI4_LITE_I_n_64;
   wire AXI4_LITE_I_n_65;
   wire AXI4_LITE_I_n_66;
-  wire AXI4_LITE_I_n_67;
   wire AXI4_LITE_I_n_68;
   wire AXI4_LITE_I_n_69;
+  wire AXI4_LITE_I_n_7;
   wire AXI4_LITE_I_n_70;
   wire AXI4_LITE_I_n_71;
   wire AXI4_LITE_I_n_72;
+  wire AXI4_LITE_I_n_73;
   wire AXI4_LITE_I_n_74;
   wire AXI4_LITE_I_n_75;
   wire AXI4_LITE_I_n_76;
   wire AXI4_LITE_I_n_77;
   wire AXI4_LITE_I_n_78;
   wire AXI4_LITE_I_n_79;
+  wire AXI4_LITE_I_n_8;
   wire AXI4_LITE_I_n_80;
   wire AXI4_LITE_I_n_81;
   wire AXI4_LITE_I_n_82;
@@ -9556,6 +9079,7 @@ module design_1_PmodWIFI_0_0_axi_timer
   wire AXI4_LITE_I_n_87;
   wire AXI4_LITE_I_n_88;
   wire AXI4_LITE_I_n_89;
+  wire AXI4_LITE_I_n_9;
   wire AXI4_LITE_I_n_90;
   wire AXI4_LITE_I_n_91;
   wire AXI4_LITE_I_n_92;
@@ -9565,18 +9089,15 @@ module design_1_PmodWIFI_0_0_axi_timer
   wire AXI4_LITE_I_n_96;
   wire AXI4_LITE_I_n_97;
   wire AXI4_LITE_I_n_98;
-  wire AXI4_LITE_I_n_99;
   wire \COUNTER_0_I/D ;
   wire \GEN_SECOND_TIMER.COUNTER_1_I/D ;
   wire \I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg ;
-  wire \I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ;
-  wire \I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ;
+  wire \I_SLAVE_ATTACHMENT/I_DECODER/p_7_in ;
   wire \TIMER_CONTROL_I/D ;
   wire \TIMER_CONTROL_I/pair0_Select ;
   wire \TIMER_CONTROL_I/read_done1 ;
   wire [0:6]bus2ip_rdce;
   wire bus2ip_reset;
-  wire [0:4]bus2ip_wrce;
   wire capturetrig0;
   wire capturetrig1;
   wire freeze;
@@ -9613,85 +9134,86 @@ module design_1_PmodWIFI_0_0_axi_timer
         .D_0(\COUNTER_0_I/D ),
         .D_1(\GEN_SECOND_TIMER.COUNTER_1_I/D ),
         .D_2(\TIMER_CONTROL_I/D ),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg (\I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg (\I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ),
-        .\LOAD_REG_GEN[10].LOAD_REG_I (AXI4_LITE_I_n_63),
-        .\LOAD_REG_GEN[10].LOAD_REG_I_0 (AXI4_LITE_I_n_95),
-        .\LOAD_REG_GEN[11].LOAD_REG_I (AXI4_LITE_I_n_62),
-        .\LOAD_REG_GEN[11].LOAD_REG_I_0 (AXI4_LITE_I_n_94),
-        .\LOAD_REG_GEN[12].LOAD_REG_I (AXI4_LITE_I_n_61),
-        .\LOAD_REG_GEN[12].LOAD_REG_I_0 (AXI4_LITE_I_n_93),
-        .\LOAD_REG_GEN[13].LOAD_REG_I (AXI4_LITE_I_n_60),
-        .\LOAD_REG_GEN[13].LOAD_REG_I_0 (AXI4_LITE_I_n_92),
-        .\LOAD_REG_GEN[14].LOAD_REG_I (AXI4_LITE_I_n_59),
-        .\LOAD_REG_GEN[14].LOAD_REG_I_0 (AXI4_LITE_I_n_91),
-        .\LOAD_REG_GEN[15].LOAD_REG_I (AXI4_LITE_I_n_58),
-        .\LOAD_REG_GEN[15].LOAD_REG_I_0 (AXI4_LITE_I_n_90),
-        .\LOAD_REG_GEN[16].LOAD_REG_I (AXI4_LITE_I_n_57),
-        .\LOAD_REG_GEN[16].LOAD_REG_I_0 (AXI4_LITE_I_n_89),
-        .\LOAD_REG_GEN[17].LOAD_REG_I (AXI4_LITE_I_n_56),
-        .\LOAD_REG_GEN[17].LOAD_REG_I_0 (AXI4_LITE_I_n_88),
-        .\LOAD_REG_GEN[18].LOAD_REG_I (AXI4_LITE_I_n_55),
-        .\LOAD_REG_GEN[18].LOAD_REG_I_0 (AXI4_LITE_I_n_87),
-        .\LOAD_REG_GEN[19].LOAD_REG_I (AXI4_LITE_I_n_54),
-        .\LOAD_REG_GEN[19].LOAD_REG_I_0 (AXI4_LITE_I_n_86),
-        .\LOAD_REG_GEN[1].LOAD_REG_I (AXI4_LITE_I_n_72),
-        .\LOAD_REG_GEN[1].LOAD_REG_I_0 (AXI4_LITE_I_n_104),
-        .\LOAD_REG_GEN[20].LOAD_REG_I (AXI4_LITE_I_n_53),
-        .\LOAD_REG_GEN[20].LOAD_REG_I_0 (AXI4_LITE_I_n_85),
-        .\LOAD_REG_GEN[21].LOAD_REG_I (AXI4_LITE_I_n_52),
-        .\LOAD_REG_GEN[21].LOAD_REG_I_0 (AXI4_LITE_I_n_84),
-        .\LOAD_REG_GEN[22].LOAD_REG_I (AXI4_LITE_I_n_51),
-        .\LOAD_REG_GEN[22].LOAD_REG_I_0 (AXI4_LITE_I_n_83),
-        .\LOAD_REG_GEN[23].LOAD_REG_I (AXI4_LITE_I_n_50),
-        .\LOAD_REG_GEN[23].LOAD_REG_I_0 (AXI4_LITE_I_n_82),
-        .\LOAD_REG_GEN[24].LOAD_REG_I (AXI4_LITE_I_n_49),
-        .\LOAD_REG_GEN[24].LOAD_REG_I_0 (AXI4_LITE_I_n_81),
-        .\LOAD_REG_GEN[25].LOAD_REG_I (AXI4_LITE_I_n_48),
-        .\LOAD_REG_GEN[25].LOAD_REG_I_0 (AXI4_LITE_I_n_80),
-        .\LOAD_REG_GEN[26].LOAD_REG_I (AXI4_LITE_I_n_47),
-        .\LOAD_REG_GEN[26].LOAD_REG_I_0 (AXI4_LITE_I_n_79),
-        .\LOAD_REG_GEN[27].LOAD_REG_I (AXI4_LITE_I_n_46),
-        .\LOAD_REG_GEN[27].LOAD_REG_I_0 (AXI4_LITE_I_n_78),
-        .\LOAD_REG_GEN[28].LOAD_REG_I (AXI4_LITE_I_n_45),
-        .\LOAD_REG_GEN[28].LOAD_REG_I_0 (AXI4_LITE_I_n_77),
-        .\LOAD_REG_GEN[29].LOAD_REG_I (AXI4_LITE_I_n_44),
-        .\LOAD_REG_GEN[29].LOAD_REG_I_0 (AXI4_LITE_I_n_76),
-        .\LOAD_REG_GEN[2].LOAD_REG_I (AXI4_LITE_I_n_71),
-        .\LOAD_REG_GEN[2].LOAD_REG_I_0 (AXI4_LITE_I_n_103),
-        .\LOAD_REG_GEN[30].LOAD_REG_I (AXI4_LITE_I_n_43),
-        .\LOAD_REG_GEN[30].LOAD_REG_I_0 (AXI4_LITE_I_n_75),
-        .\LOAD_REG_GEN[31].LOAD_REG_I (AXI4_LITE_I_n_42),
-        .\LOAD_REG_GEN[31].LOAD_REG_I_0 (AXI4_LITE_I_n_74),
-        .\LOAD_REG_GEN[3].LOAD_REG_I (AXI4_LITE_I_n_70),
-        .\LOAD_REG_GEN[3].LOAD_REG_I_0 (AXI4_LITE_I_n_102),
-        .\LOAD_REG_GEN[4].LOAD_REG_I (AXI4_LITE_I_n_69),
-        .\LOAD_REG_GEN[4].LOAD_REG_I_0 (AXI4_LITE_I_n_101),
-        .\LOAD_REG_GEN[5].LOAD_REG_I (AXI4_LITE_I_n_68),
-        .\LOAD_REG_GEN[5].LOAD_REG_I_0 (AXI4_LITE_I_n_100),
-        .\LOAD_REG_GEN[6].LOAD_REG_I (AXI4_LITE_I_n_67),
-        .\LOAD_REG_GEN[6].LOAD_REG_I_0 (AXI4_LITE_I_n_99),
-        .\LOAD_REG_GEN[7].LOAD_REG_I (AXI4_LITE_I_n_66),
-        .\LOAD_REG_GEN[7].LOAD_REG_I_0 (AXI4_LITE_I_n_98),
-        .\LOAD_REG_GEN[8].LOAD_REG_I (AXI4_LITE_I_n_65),
-        .\LOAD_REG_GEN[8].LOAD_REG_I_0 (AXI4_LITE_I_n_97),
-        .\LOAD_REG_GEN[9].LOAD_REG_I (AXI4_LITE_I_n_64),
-        .\LOAD_REG_GEN[9].LOAD_REG_I_0 (AXI4_LITE_I_n_96),
-        .READ_DONE0_I(AXI4_LITE_I_n_106),
-        .READ_DONE1_I(AXI4_LITE_I_n_107),
+        .\LOAD_REG_GEN[10].LOAD_REG_I (AXI4_LITE_I_n_57),
+        .\LOAD_REG_GEN[10].LOAD_REG_I_0 (AXI4_LITE_I_n_89),
+        .\LOAD_REG_GEN[11].LOAD_REG_I (AXI4_LITE_I_n_56),
+        .\LOAD_REG_GEN[11].LOAD_REG_I_0 (AXI4_LITE_I_n_88),
+        .\LOAD_REG_GEN[12].LOAD_REG_I (AXI4_LITE_I_n_55),
+        .\LOAD_REG_GEN[12].LOAD_REG_I_0 (AXI4_LITE_I_n_87),
+        .\LOAD_REG_GEN[13].LOAD_REG_I (AXI4_LITE_I_n_54),
+        .\LOAD_REG_GEN[13].LOAD_REG_I_0 (AXI4_LITE_I_n_86),
+        .\LOAD_REG_GEN[14].LOAD_REG_I (AXI4_LITE_I_n_53),
+        .\LOAD_REG_GEN[14].LOAD_REG_I_0 (AXI4_LITE_I_n_85),
+        .\LOAD_REG_GEN[15].LOAD_REG_I (AXI4_LITE_I_n_52),
+        .\LOAD_REG_GEN[15].LOAD_REG_I_0 (AXI4_LITE_I_n_84),
+        .\LOAD_REG_GEN[16].LOAD_REG_I (AXI4_LITE_I_n_51),
+        .\LOAD_REG_GEN[16].LOAD_REG_I_0 (AXI4_LITE_I_n_83),
+        .\LOAD_REG_GEN[17].LOAD_REG_I (AXI4_LITE_I_n_50),
+        .\LOAD_REG_GEN[17].LOAD_REG_I_0 (AXI4_LITE_I_n_82),
+        .\LOAD_REG_GEN[18].LOAD_REG_I (AXI4_LITE_I_n_49),
+        .\LOAD_REG_GEN[18].LOAD_REG_I_0 (AXI4_LITE_I_n_81),
+        .\LOAD_REG_GEN[19].LOAD_REG_I (AXI4_LITE_I_n_48),
+        .\LOAD_REG_GEN[19].LOAD_REG_I_0 (AXI4_LITE_I_n_80),
+        .\LOAD_REG_GEN[1].LOAD_REG_I (AXI4_LITE_I_n_66),
+        .\LOAD_REG_GEN[1].LOAD_REG_I_0 (AXI4_LITE_I_n_98),
+        .\LOAD_REG_GEN[20].LOAD_REG_I (AXI4_LITE_I_n_47),
+        .\LOAD_REG_GEN[20].LOAD_REG_I_0 (AXI4_LITE_I_n_79),
+        .\LOAD_REG_GEN[21].LOAD_REG_I (AXI4_LITE_I_n_46),
+        .\LOAD_REG_GEN[21].LOAD_REG_I_0 (AXI4_LITE_I_n_78),
+        .\LOAD_REG_GEN[22].LOAD_REG_I (AXI4_LITE_I_n_45),
+        .\LOAD_REG_GEN[22].LOAD_REG_I_0 (AXI4_LITE_I_n_77),
+        .\LOAD_REG_GEN[23].LOAD_REG_I (AXI4_LITE_I_n_44),
+        .\LOAD_REG_GEN[23].LOAD_REG_I_0 (AXI4_LITE_I_n_76),
+        .\LOAD_REG_GEN[24].LOAD_REG_I (AXI4_LITE_I_n_43),
+        .\LOAD_REG_GEN[24].LOAD_REG_I_0 (AXI4_LITE_I_n_75),
+        .\LOAD_REG_GEN[24].LOAD_REG_I_1 (AXI4_LITE_I_n_102),
+        .\LOAD_REG_GEN[25].LOAD_REG_I (AXI4_LITE_I_n_42),
+        .\LOAD_REG_GEN[25].LOAD_REG_I_0 (AXI4_LITE_I_n_74),
+        .\LOAD_REG_GEN[26].LOAD_REG_I (AXI4_LITE_I_n_41),
+        .\LOAD_REG_GEN[26].LOAD_REG_I_0 (AXI4_LITE_I_n_73),
+        .\LOAD_REG_GEN[27].LOAD_REG_I (AXI4_LITE_I_n_40),
+        .\LOAD_REG_GEN[27].LOAD_REG_I_0 (AXI4_LITE_I_n_72),
+        .\LOAD_REG_GEN[28].LOAD_REG_I (AXI4_LITE_I_n_39),
+        .\LOAD_REG_GEN[28].LOAD_REG_I_0 (AXI4_LITE_I_n_71),
+        .\LOAD_REG_GEN[29].LOAD_REG_I (AXI4_LITE_I_n_38),
+        .\LOAD_REG_GEN[29].LOAD_REG_I_0 (AXI4_LITE_I_n_70),
+        .\LOAD_REG_GEN[2].LOAD_REG_I (AXI4_LITE_I_n_65),
+        .\LOAD_REG_GEN[2].LOAD_REG_I_0 (AXI4_LITE_I_n_97),
+        .\LOAD_REG_GEN[30].LOAD_REG_I (AXI4_LITE_I_n_37),
+        .\LOAD_REG_GEN[30].LOAD_REG_I_0 (AXI4_LITE_I_n_69),
+        .\LOAD_REG_GEN[31].LOAD_REG_I (AXI4_LITE_I_n_36),
+        .\LOAD_REG_GEN[31].LOAD_REG_I_0 (AXI4_LITE_I_n_68),
+        .\LOAD_REG_GEN[3].LOAD_REG_I (AXI4_LITE_I_n_64),
+        .\LOAD_REG_GEN[3].LOAD_REG_I_0 (AXI4_LITE_I_n_96),
+        .\LOAD_REG_GEN[4].LOAD_REG_I (AXI4_LITE_I_n_63),
+        .\LOAD_REG_GEN[4].LOAD_REG_I_0 (AXI4_LITE_I_n_95),
+        .\LOAD_REG_GEN[5].LOAD_REG_I (AXI4_LITE_I_n_62),
+        .\LOAD_REG_GEN[5].LOAD_REG_I_0 (AXI4_LITE_I_n_94),
+        .\LOAD_REG_GEN[6].LOAD_REG_I (AXI4_LITE_I_n_61),
+        .\LOAD_REG_GEN[6].LOAD_REG_I_0 (AXI4_LITE_I_n_93),
+        .\LOAD_REG_GEN[7].LOAD_REG_I (AXI4_LITE_I_n_60),
+        .\LOAD_REG_GEN[7].LOAD_REG_I_0 (AXI4_LITE_I_n_92),
+        .\LOAD_REG_GEN[8].LOAD_REG_I (AXI4_LITE_I_n_59),
+        .\LOAD_REG_GEN[8].LOAD_REG_I_0 (AXI4_LITE_I_n_91),
+        .\LOAD_REG_GEN[9].LOAD_REG_I (AXI4_LITE_I_n_58),
+        .\LOAD_REG_GEN[9].LOAD_REG_I_0 (AXI4_LITE_I_n_90),
+        .READ_DONE0_I(AXI4_LITE_I_n_105),
+        .READ_DONE1_I(AXI4_LITE_I_n_106),
         .S_AXI_TIMER_arready(s_axi_arready),
         .S_AXI_TIMER_bvalid(s_axi_bvalid),
         .S_AXI_TIMER_rvalid(s_axi_rvalid),
         .S_AXI_TIMER_wready(s_axi_wready),
-        .\TCSR0_GENERATE[23].TCSR0_FF_I (AXI4_LITE_I_n_36),
-        .\TCSR0_GENERATE[24].TCSR0_FF_I (AXI4_LITE_I_n_37),
-        .\TCSR1_GENERATE[23].TCSR1_FF_I (AXI4_LITE_I_n_40),
-        .\TCSR1_GENERATE[24].TCSR1_FF_I (AXI4_LITE_I_n_41),
+        .\TCSR0_GENERATE[20].TCSR0_FF_I (AXI4_LITE_I_n_104),
+        .\TCSR0_GENERATE[23].TCSR0_FF_I (AXI4_LITE_I_n_100),
+        .\TCSR0_GENERATE[24].TCSR0_FF_I (AXI4_LITE_I_n_27),
+        .\TCSR1_GENERATE[22].TCSR1_FF_I (AXI4_LITE_I_n_103),
+        .\TCSR1_GENERATE[23].TCSR1_FF_I (AXI4_LITE_I_n_101),
+        .\TCSR1_GENERATE[24].TCSR1_FF_I (AXI4_LITE_I_n_28),
         .bus2ip_rdce({bus2ip_rdce[0],bus2ip_rdce[1],bus2ip_rdce[2],bus2ip_rdce[4],bus2ip_rdce[5],bus2ip_rdce[6]}),
         .bus2ip_reset(bus2ip_reset),
-        .bus2ip_wrce({bus2ip_wrce[0],bus2ip_wrce[4]}),
+        .p_7_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_7_in ),
         .pair0_Select(\TIMER_CONTROL_I/pair0_Select ),
-        .read_Mux_In({read_Mux_In[20],read_Mux_In[24],read_Mux_In[28],read_Mux_In[56],read_Mux_In[60],read_Mux_In[64],read_Mux_In[65],read_Mux_In[66],read_Mux_In[67],read_Mux_In[68],read_Mux_In[69],read_Mux_In[70],read_Mux_In[71],read_Mux_In[72],read_Mux_In[73],read_Mux_In[74],read_Mux_In[75],read_Mux_In[76],read_Mux_In[77],read_Mux_In[78],read_Mux_In[79],read_Mux_In[80],read_Mux_In[81],read_Mux_In[82],read_Mux_In[83],read_Mux_In[84],read_Mux_In[92],read_Mux_In[128],read_Mux_In[129],read_Mux_In[130],read_Mux_In[131],read_Mux_In[132],read_Mux_In[133],read_Mux_In[134],read_Mux_In[135],read_Mux_In[136],read_Mux_In[137],read_Mux_In[138],read_Mux_In[139],read_Mux_In[140],read_Mux_In[141],read_Mux_In[142],read_Mux_In[143],read_Mux_In[144],read_Mux_In[145],read_Mux_In[146],read_Mux_In[147],read_Mux_In[148],read_Mux_In[149],read_Mux_In[150],read_Mux_In[151],read_Mux_In[152],read_Mux_In[153],read_Mux_In[154],read_Mux_In[155],read_Mux_In[156],read_Mux_In[157],read_Mux_In[158],read_Mux_In[159],read_Mux_In[160],read_Mux_In[161],read_Mux_In[162],read_Mux_In[163],read_Mux_In[164],read_Mux_In[165],read_Mux_In[166],read_Mux_In[167],read_Mux_In[168],read_Mux_In[169],read_Mux_In[170],read_Mux_In[171],read_Mux_In[172],read_Mux_In[173],read_Mux_In[174],read_Mux_In[175],read_Mux_In[176],read_Mux_In[177],read_Mux_In[178],read_Mux_In[179],read_Mux_In[180],read_Mux_In[181],read_Mux_In[182],read_Mux_In[183],read_Mux_In[184],read_Mux_In[185],read_Mux_In[186],read_Mux_In[187],read_Mux_In[188],read_Mux_In[189],read_Mux_In[190],read_Mux_In[191]}),
+        .read_Mux_In({read_Mux_In[20],read_Mux_In[24],read_Mux_In[56],read_Mux_In[64],read_Mux_In[65],read_Mux_In[66],read_Mux_In[67],read_Mux_In[68],read_Mux_In[69],read_Mux_In[70],read_Mux_In[71],read_Mux_In[72],read_Mux_In[73],read_Mux_In[74],read_Mux_In[75],read_Mux_In[76],read_Mux_In[77],read_Mux_In[78],read_Mux_In[79],read_Mux_In[80],read_Mux_In[81],read_Mux_In[82],read_Mux_In[83],read_Mux_In[84],read_Mux_In[128],read_Mux_In[129],read_Mux_In[130],read_Mux_In[131],read_Mux_In[132],read_Mux_In[133],read_Mux_In[134],read_Mux_In[135],read_Mux_In[136],read_Mux_In[137],read_Mux_In[138],read_Mux_In[139],read_Mux_In[140],read_Mux_In[141],read_Mux_In[142],read_Mux_In[143],read_Mux_In[144],read_Mux_In[145],read_Mux_In[146],read_Mux_In[147],read_Mux_In[148],read_Mux_In[149],read_Mux_In[150],read_Mux_In[151],read_Mux_In[152],read_Mux_In[153],read_Mux_In[154],read_Mux_In[155],read_Mux_In[156],read_Mux_In[157],read_Mux_In[158],read_Mux_In[159],read_Mux_In[160],read_Mux_In[161],read_Mux_In[162],read_Mux_In[163],read_Mux_In[164],read_Mux_In[165],read_Mux_In[166],read_Mux_In[167],read_Mux_In[168],read_Mux_In[169],read_Mux_In[170],read_Mux_In[171],read_Mux_In[172],read_Mux_In[173],read_Mux_In[174],read_Mux_In[175],read_Mux_In[176],read_Mux_In[177],read_Mux_In[178],read_Mux_In[179],read_Mux_In[180],read_Mux_In[181],read_Mux_In[182],read_Mux_In[183],read_Mux_In[184],read_Mux_In[185],read_Mux_In[186],read_Mux_In[187],read_Mux_In[188],read_Mux_In[189],read_Mux_In[190],read_Mux_In[191]}),
         .read_done1(\TIMER_CONTROL_I/read_done1 ),
         .s_axi_aclk(s_axi_aclk),
         .s_axi_araddr(s_axi_araddr[4:2]),
@@ -9701,28 +9223,27 @@ module design_1_PmodWIFI_0_0_axi_timer
         .s_axi_awvalid(s_axi_awvalid),
         .s_axi_bready(s_axi_bready),
         .s_axi_rdata(s_axi_rdata),
-        .\s_axi_rdata_i_reg[11] (AXI4_LITE_I_n_5),
-        .\s_axi_rdata_i_reg[12] (AXI4_LITE_I_n_34),
-        .\s_axi_rdata_i_reg[13] (AXI4_LITE_I_n_33),
-        .\s_axi_rdata_i_reg[14] (AXI4_LITE_I_n_32),
-        .\s_axi_rdata_i_reg[15] (AXI4_LITE_I_n_31),
-        .\s_axi_rdata_i_reg[16] (AXI4_LITE_I_n_30),
-        .\s_axi_rdata_i_reg[17] (AXI4_LITE_I_n_29),
-        .\s_axi_rdata_i_reg[18] (AXI4_LITE_I_n_28),
-        .\s_axi_rdata_i_reg[19] (AXI4_LITE_I_n_27),
-        .\s_axi_rdata_i_reg[20] (AXI4_LITE_I_n_26),
-        .\s_axi_rdata_i_reg[21] (AXI4_LITE_I_n_25),
-        .\s_axi_rdata_i_reg[22] (AXI4_LITE_I_n_24),
-        .\s_axi_rdata_i_reg[23] (AXI4_LITE_I_n_23),
-        .\s_axi_rdata_i_reg[24] (AXI4_LITE_I_n_22),
-        .\s_axi_rdata_i_reg[25] (AXI4_LITE_I_n_21),
-        .\s_axi_rdata_i_reg[26] (AXI4_LITE_I_n_20),
+        .\s_axi_rdata_i_reg[11] (AXI4_LITE_I_n_26),
+        .\s_axi_rdata_i_reg[12] (AXI4_LITE_I_n_4),
+        .\s_axi_rdata_i_reg[13] (AXI4_LITE_I_n_5),
+        .\s_axi_rdata_i_reg[14] (AXI4_LITE_I_n_6),
+        .\s_axi_rdata_i_reg[15] (AXI4_LITE_I_n_7),
+        .\s_axi_rdata_i_reg[16] (AXI4_LITE_I_n_8),
+        .\s_axi_rdata_i_reg[17] (AXI4_LITE_I_n_9),
+        .\s_axi_rdata_i_reg[18] (AXI4_LITE_I_n_10),
+        .\s_axi_rdata_i_reg[19] (AXI4_LITE_I_n_11),
+        .\s_axi_rdata_i_reg[20] (AXI4_LITE_I_n_12),
+        .\s_axi_rdata_i_reg[21] (AXI4_LITE_I_n_13),
+        .\s_axi_rdata_i_reg[22] (AXI4_LITE_I_n_14),
+        .\s_axi_rdata_i_reg[23] (AXI4_LITE_I_n_15),
+        .\s_axi_rdata_i_reg[24] (AXI4_LITE_I_n_16),
+        .\s_axi_rdata_i_reg[25] (AXI4_LITE_I_n_17),
+        .\s_axi_rdata_i_reg[26] (AXI4_LITE_I_n_18),
         .\s_axi_rdata_i_reg[27] (AXI4_LITE_I_n_19),
-        .\s_axi_rdata_i_reg[28] (AXI4_LITE_I_n_18),
-        .\s_axi_rdata_i_reg[29] (AXI4_LITE_I_n_17),
-        .\s_axi_rdata_i_reg[30] (AXI4_LITE_I_n_16),
-        .\s_axi_rdata_i_reg[31] (AXI4_LITE_I_n_15),
-        .\s_axi_rdata_i_reg[3] (AXI4_LITE_I_n_6),
+        .\s_axi_rdata_i_reg[28] (AXI4_LITE_I_n_20),
+        .\s_axi_rdata_i_reg[29] (AXI4_LITE_I_n_21),
+        .\s_axi_rdata_i_reg[30] (AXI4_LITE_I_n_22),
+        .\s_axi_rdata_i_reg[31] (AXI4_LITE_I_n_23),
         .s_axi_rready(s_axi_rready),
         .s_axi_wdata(s_axi_wdata),
         .s_axi_wvalid(s_axi_wvalid));
@@ -9730,112 +9251,112 @@ module design_1_PmodWIFI_0_0_axi_timer
        (.G(\<const0> ));
   design_1_PmodWIFI_0_0_tc_core TC_CORE_I
        (.Bus_RNW_reg(\I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg ),
-        .Bus_RNW_reg_reg(AXI4_LITE_I_n_15),
-        .Bus_RNW_reg_reg_0(AXI4_LITE_I_n_16),
-        .Bus_RNW_reg_reg_1(AXI4_LITE_I_n_17),
-        .Bus_RNW_reg_reg_10(AXI4_LITE_I_n_26),
-        .Bus_RNW_reg_reg_11(AXI4_LITE_I_n_27),
-        .Bus_RNW_reg_reg_12(AXI4_LITE_I_n_28),
-        .Bus_RNW_reg_reg_13(AXI4_LITE_I_n_29),
-        .Bus_RNW_reg_reg_14(AXI4_LITE_I_n_30),
-        .Bus_RNW_reg_reg_15(AXI4_LITE_I_n_31),
-        .Bus_RNW_reg_reg_16(AXI4_LITE_I_n_32),
-        .Bus_RNW_reg_reg_17(AXI4_LITE_I_n_33),
-        .Bus_RNW_reg_reg_18(AXI4_LITE_I_n_34),
-        .Bus_RNW_reg_reg_2(AXI4_LITE_I_n_18),
+        .Bus_RNW_reg_reg(AXI4_LITE_I_n_23),
+        .Bus_RNW_reg_reg_0(AXI4_LITE_I_n_22),
+        .Bus_RNW_reg_reg_1(AXI4_LITE_I_n_21),
+        .Bus_RNW_reg_reg_10(AXI4_LITE_I_n_12),
+        .Bus_RNW_reg_reg_11(AXI4_LITE_I_n_11),
+        .Bus_RNW_reg_reg_12(AXI4_LITE_I_n_10),
+        .Bus_RNW_reg_reg_13(AXI4_LITE_I_n_9),
+        .Bus_RNW_reg_reg_14(AXI4_LITE_I_n_8),
+        .Bus_RNW_reg_reg_15(AXI4_LITE_I_n_7),
+        .Bus_RNW_reg_reg_16(AXI4_LITE_I_n_6),
+        .Bus_RNW_reg_reg_17(AXI4_LITE_I_n_5),
+        .Bus_RNW_reg_reg_18(AXI4_LITE_I_n_4),
+        .Bus_RNW_reg_reg_2(AXI4_LITE_I_n_20),
         .Bus_RNW_reg_reg_3(AXI4_LITE_I_n_19),
-        .Bus_RNW_reg_reg_4(AXI4_LITE_I_n_20),
-        .Bus_RNW_reg_reg_5(AXI4_LITE_I_n_21),
-        .Bus_RNW_reg_reg_6(AXI4_LITE_I_n_22),
-        .Bus_RNW_reg_reg_7(AXI4_LITE_I_n_23),
-        .Bus_RNW_reg_reg_8(AXI4_LITE_I_n_24),
-        .Bus_RNW_reg_reg_9(AXI4_LITE_I_n_25),
+        .Bus_RNW_reg_reg_4(AXI4_LITE_I_n_18),
+        .Bus_RNW_reg_reg_5(AXI4_LITE_I_n_17),
+        .Bus_RNW_reg_reg_6(AXI4_LITE_I_n_16),
+        .Bus_RNW_reg_reg_7(AXI4_LITE_I_n_15),
+        .Bus_RNW_reg_reg_8(AXI4_LITE_I_n_14),
+        .Bus_RNW_reg_reg_9(AXI4_LITE_I_n_13),
         .D({ip2bus_data[0],ip2bus_data[1],ip2bus_data[2],ip2bus_data[3],ip2bus_data[4],ip2bus_data[5],ip2bus_data[6],ip2bus_data[7],ip2bus_data[8],ip2bus_data[9],ip2bus_data[10],ip2bus_data[11],ip2bus_data[12],ip2bus_data[13],ip2bus_data[14],ip2bus_data[15],ip2bus_data[16],ip2bus_data[17],ip2bus_data[18],ip2bus_data[19],ip2bus_data[20],ip2bus_data[21],ip2bus_data[22],ip2bus_data[23],ip2bus_data[24],ip2bus_data[25],ip2bus_data[26],ip2bus_data[27],ip2bus_data[28],ip2bus_data[29],ip2bus_data[30],ip2bus_data[31]}),
         .D_0(\TIMER_CONTROL_I/D ),
         .D_1(\COUNTER_0_I/D ),
         .D_2(\GEN_SECOND_TIMER.COUNTER_1_I/D ),
-        .\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] (AXI4_LITE_I_n_36),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg (\I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] (AXI4_LITE_I_n_72),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 (AXI4_LITE_I_n_71),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_1 (AXI4_LITE_I_n_70),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_10 (AXI4_LITE_I_n_61),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_11 (AXI4_LITE_I_n_60),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_12 (AXI4_LITE_I_n_59),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_13 (AXI4_LITE_I_n_58),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_14 (AXI4_LITE_I_n_57),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_15 (AXI4_LITE_I_n_56),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_16 (AXI4_LITE_I_n_55),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_17 (AXI4_LITE_I_n_54),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_18 (AXI4_LITE_I_n_53),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_19 (AXI4_LITE_I_n_52),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_2 (AXI4_LITE_I_n_69),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_20 (AXI4_LITE_I_n_51),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_21 (AXI4_LITE_I_n_50),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_22 (AXI4_LITE_I_n_49),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_23 (AXI4_LITE_I_n_48),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_24 (AXI4_LITE_I_n_47),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_25 (AXI4_LITE_I_n_46),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_26 (AXI4_LITE_I_n_45),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_27 (AXI4_LITE_I_n_44),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_28 (AXI4_LITE_I_n_43),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_29 (AXI4_LITE_I_n_42),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_3 (AXI4_LITE_I_n_68),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_30 (AXI4_LITE_I_n_106),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_4 (AXI4_LITE_I_n_67),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_5 (AXI4_LITE_I_n_66),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_6 (AXI4_LITE_I_n_65),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_7 (AXI4_LITE_I_n_64),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_8 (AXI4_LITE_I_n_63),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_9 (AXI4_LITE_I_n_62),
-        .\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] (AXI4_LITE_I_n_40),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg (\I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] (AXI4_LITE_I_n_104),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 (AXI4_LITE_I_n_103),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_1 (AXI4_LITE_I_n_102),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_10 (AXI4_LITE_I_n_93),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_11 (AXI4_LITE_I_n_92),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_12 (AXI4_LITE_I_n_91),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_13 (AXI4_LITE_I_n_90),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_14 (AXI4_LITE_I_n_89),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_15 (AXI4_LITE_I_n_88),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_16 (AXI4_LITE_I_n_87),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_17 (AXI4_LITE_I_n_86),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_18 (AXI4_LITE_I_n_85),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_19 (AXI4_LITE_I_n_84),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_2 (AXI4_LITE_I_n_101),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_20 (AXI4_LITE_I_n_83),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_21 (AXI4_LITE_I_n_82),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_22 (AXI4_LITE_I_n_81),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_23 (AXI4_LITE_I_n_80),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_24 (AXI4_LITE_I_n_79),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_25 (AXI4_LITE_I_n_78),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_26 (AXI4_LITE_I_n_77),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_27 (AXI4_LITE_I_n_76),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_28 (AXI4_LITE_I_n_75),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_29 (AXI4_LITE_I_n_74),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_3 (AXI4_LITE_I_n_100),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_30 (AXI4_LITE_I_n_107),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_4 (AXI4_LITE_I_n_99),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_5 (AXI4_LITE_I_n_98),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_6 (AXI4_LITE_I_n_97),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_7 (AXI4_LITE_I_n_96),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_8 (AXI4_LITE_I_n_95),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_9 (AXI4_LITE_I_n_94),
-        .GenerateOut1_reg({read_Mux_In[20],read_Mux_In[24],read_Mux_In[28],read_Mux_In[56],read_Mux_In[60],read_Mux_In[64],read_Mux_In[65],read_Mux_In[66],read_Mux_In[67],read_Mux_In[68],read_Mux_In[69],read_Mux_In[70],read_Mux_In[71],read_Mux_In[72],read_Mux_In[73],read_Mux_In[74],read_Mux_In[75],read_Mux_In[76],read_Mux_In[77],read_Mux_In[78],read_Mux_In[79],read_Mux_In[80],read_Mux_In[81],read_Mux_In[82],read_Mux_In[83],read_Mux_In[84],read_Mux_In[92],read_Mux_In[128],read_Mux_In[129],read_Mux_In[130],read_Mux_In[131],read_Mux_In[132],read_Mux_In[133],read_Mux_In[134],read_Mux_In[135],read_Mux_In[136],read_Mux_In[137],read_Mux_In[138],read_Mux_In[139],read_Mux_In[140],read_Mux_In[141],read_Mux_In[142],read_Mux_In[143],read_Mux_In[144],read_Mux_In[145],read_Mux_In[146],read_Mux_In[147],read_Mux_In[148],read_Mux_In[149],read_Mux_In[150],read_Mux_In[151],read_Mux_In[152],read_Mux_In[153],read_Mux_In[154],read_Mux_In[155],read_Mux_In[156],read_Mux_In[157],read_Mux_In[158],read_Mux_In[159],read_Mux_In[160],read_Mux_In[161],read_Mux_In[162],read_Mux_In[163],read_Mux_In[164],read_Mux_In[165],read_Mux_In[166],read_Mux_In[167],read_Mux_In[168],read_Mux_In[169],read_Mux_In[170],read_Mux_In[171],read_Mux_In[172],read_Mux_In[173],read_Mux_In[174],read_Mux_In[175],read_Mux_In[176],read_Mux_In[177],read_Mux_In[178],read_Mux_In[179],read_Mux_In[180],read_Mux_In[181],read_Mux_In[182],read_Mux_In[183],read_Mux_In[184],read_Mux_In[185],read_Mux_In[186],read_Mux_In[187],read_Mux_In[188],read_Mux_In[189],read_Mux_In[190],read_Mux_In[191]}),
-        .\TCSR0_GENERATE[20].TCSR0_FF_I (AXI4_LITE_I_n_5),
-        .\TCSR0_GENERATE[24].TCSR0_FF_I (AXI4_LITE_I_n_37),
-        .\TCSR0_GENERATE[28].TCSR0_FF_I (AXI4_LITE_I_n_6),
-        .\TCSR1_GENERATE[24].TCSR1_FF_I (AXI4_LITE_I_n_41),
+        .\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] (AXI4_LITE_I_n_104),
+        .\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]_0 (AXI4_LITE_I_n_100),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] (AXI4_LITE_I_n_66),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 (AXI4_LITE_I_n_65),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_1 (AXI4_LITE_I_n_64),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_10 (AXI4_LITE_I_n_55),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_11 (AXI4_LITE_I_n_54),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_12 (AXI4_LITE_I_n_53),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_13 (AXI4_LITE_I_n_52),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_14 (AXI4_LITE_I_n_51),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_15 (AXI4_LITE_I_n_50),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_16 (AXI4_LITE_I_n_49),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_17 (AXI4_LITE_I_n_48),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_18 (AXI4_LITE_I_n_47),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_19 (AXI4_LITE_I_n_46),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_2 (AXI4_LITE_I_n_63),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_20 (AXI4_LITE_I_n_45),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_21 (AXI4_LITE_I_n_44),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_22 (AXI4_LITE_I_n_43),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_23 (AXI4_LITE_I_n_42),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_24 (AXI4_LITE_I_n_41),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_25 (AXI4_LITE_I_n_40),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_26 (AXI4_LITE_I_n_39),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_27 (AXI4_LITE_I_n_38),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_28 (AXI4_LITE_I_n_37),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_29 (AXI4_LITE_I_n_36),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_3 (AXI4_LITE_I_n_62),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_30 (AXI4_LITE_I_n_105),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_4 (AXI4_LITE_I_n_61),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_5 (AXI4_LITE_I_n_60),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_6 (AXI4_LITE_I_n_59),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_7 (AXI4_LITE_I_n_58),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_8 (AXI4_LITE_I_n_57),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_9 (AXI4_LITE_I_n_56),
+        .\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] (AXI4_LITE_I_n_103),
+        .\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4]_0 (AXI4_LITE_I_n_101),
+        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] (AXI4_LITE_I_n_106),
+        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 (AXI4_LITE_I_n_102),
+        .\INFERRED_GEN.icount_out_reg[0] ({read_Mux_In[20],read_Mux_In[24],read_Mux_In[56],read_Mux_In[64],read_Mux_In[65],read_Mux_In[66],read_Mux_In[67],read_Mux_In[68],read_Mux_In[69],read_Mux_In[70],read_Mux_In[71],read_Mux_In[72],read_Mux_In[73],read_Mux_In[74],read_Mux_In[75],read_Mux_In[76],read_Mux_In[77],read_Mux_In[78],read_Mux_In[79],read_Mux_In[80],read_Mux_In[81],read_Mux_In[82],read_Mux_In[83],read_Mux_In[84],read_Mux_In[128],read_Mux_In[129],read_Mux_In[130],read_Mux_In[131],read_Mux_In[132],read_Mux_In[133],read_Mux_In[134],read_Mux_In[135],read_Mux_In[136],read_Mux_In[137],read_Mux_In[138],read_Mux_In[139],read_Mux_In[140],read_Mux_In[141],read_Mux_In[142],read_Mux_In[143],read_Mux_In[144],read_Mux_In[145],read_Mux_In[146],read_Mux_In[147],read_Mux_In[148],read_Mux_In[149],read_Mux_In[150],read_Mux_In[151],read_Mux_In[152],read_Mux_In[153],read_Mux_In[154],read_Mux_In[155],read_Mux_In[156],read_Mux_In[157],read_Mux_In[158],read_Mux_In[159],read_Mux_In[160],read_Mux_In[161],read_Mux_In[162],read_Mux_In[163],read_Mux_In[164],read_Mux_In[165],read_Mux_In[166],read_Mux_In[167],read_Mux_In[168],read_Mux_In[169],read_Mux_In[170],read_Mux_In[171],read_Mux_In[172],read_Mux_In[173],read_Mux_In[174],read_Mux_In[175],read_Mux_In[176],read_Mux_In[177],read_Mux_In[178],read_Mux_In[179],read_Mux_In[180],read_Mux_In[181],read_Mux_In[182],read_Mux_In[183],read_Mux_In[184],read_Mux_In[185],read_Mux_In[186],read_Mux_In[187],read_Mux_In[188],read_Mux_In[189],read_Mux_In[190],read_Mux_In[191]}),
+        .\INFERRED_GEN.icount_out_reg[0]_0 (AXI4_LITE_I_n_68),
+        .\INFERRED_GEN.icount_out_reg[10] (AXI4_LITE_I_n_78),
+        .\INFERRED_GEN.icount_out_reg[11] (AXI4_LITE_I_n_79),
+        .\INFERRED_GEN.icount_out_reg[12] (AXI4_LITE_I_n_80),
+        .\INFERRED_GEN.icount_out_reg[13] (AXI4_LITE_I_n_81),
+        .\INFERRED_GEN.icount_out_reg[14] (AXI4_LITE_I_n_82),
+        .\INFERRED_GEN.icount_out_reg[15] (AXI4_LITE_I_n_83),
+        .\INFERRED_GEN.icount_out_reg[16] (AXI4_LITE_I_n_84),
+        .\INFERRED_GEN.icount_out_reg[17] (AXI4_LITE_I_n_85),
+        .\INFERRED_GEN.icount_out_reg[18] (AXI4_LITE_I_n_86),
+        .\INFERRED_GEN.icount_out_reg[19] (AXI4_LITE_I_n_87),
+        .\INFERRED_GEN.icount_out_reg[1] (AXI4_LITE_I_n_69),
+        .\INFERRED_GEN.icount_out_reg[20] (AXI4_LITE_I_n_88),
+        .\INFERRED_GEN.icount_out_reg[21] (AXI4_LITE_I_n_89),
+        .\INFERRED_GEN.icount_out_reg[22] (AXI4_LITE_I_n_90),
+        .\INFERRED_GEN.icount_out_reg[23] (AXI4_LITE_I_n_91),
+        .\INFERRED_GEN.icount_out_reg[24] (AXI4_LITE_I_n_92),
+        .\INFERRED_GEN.icount_out_reg[25] (AXI4_LITE_I_n_93),
+        .\INFERRED_GEN.icount_out_reg[26] (AXI4_LITE_I_n_94),
+        .\INFERRED_GEN.icount_out_reg[27] (AXI4_LITE_I_n_95),
+        .\INFERRED_GEN.icount_out_reg[28] (AXI4_LITE_I_n_96),
+        .\INFERRED_GEN.icount_out_reg[29] (AXI4_LITE_I_n_97),
+        .\INFERRED_GEN.icount_out_reg[2] (AXI4_LITE_I_n_70),
+        .\INFERRED_GEN.icount_out_reg[30] (AXI4_LITE_I_n_98),
+        .\INFERRED_GEN.icount_out_reg[3] (AXI4_LITE_I_n_71),
+        .\INFERRED_GEN.icount_out_reg[4] (AXI4_LITE_I_n_72),
+        .\INFERRED_GEN.icount_out_reg[5] (AXI4_LITE_I_n_73),
+        .\INFERRED_GEN.icount_out_reg[6] (AXI4_LITE_I_n_74),
+        .\INFERRED_GEN.icount_out_reg[7] (AXI4_LITE_I_n_75),
+        .\INFERRED_GEN.icount_out_reg[8] (AXI4_LITE_I_n_76),
+        .\INFERRED_GEN.icount_out_reg[9] (AXI4_LITE_I_n_77),
+        .\LOAD_REG_GEN[20].LOAD_REG_I (AXI4_LITE_I_n_26),
+        .\TCSR0_GENERATE[24].TCSR0_FF_I (AXI4_LITE_I_n_27),
+        .\TCSR1_GENERATE[24].TCSR1_FF_I (AXI4_LITE_I_n_28),
         .bus2ip_rdce({bus2ip_rdce[0],bus2ip_rdce[1],bus2ip_rdce[2],bus2ip_rdce[4],bus2ip_rdce[5],bus2ip_rdce[6]}),
         .bus2ip_reset(bus2ip_reset),
-        .bus2ip_wrce({bus2ip_wrce[0],bus2ip_wrce[4]}),
         .capturetrig0(capturetrig0),
         .capturetrig1(capturetrig1),
         .freeze(freeze),
         .generateout0(generateout0),
         .generateout1(generateout1),
         .interrupt(interrupt),
+        .p_7_in(\I_SLAVE_ATTACHMENT/I_DECODER/p_7_in ),
         .pair0_Select(\TIMER_CONTROL_I/pair0_Select ),
         .pwm0(pwm0),
         .read_done1(\TIMER_CONTROL_I/read_done1 ),
@@ -9844,147 +9365,140 @@ module design_1_PmodWIFI_0_0_axi_timer
         .s_axi_wdata({s_axi_wdata[11:9],s_axi_wdata[6:0]}));
 endmodule
 
-(* ORIG_REF_NAME = "axi_timer_v2_0_12_counter_f" *) 
-module design_1_PmodWIFI_0_0_axi_timer_v2_0_12_counter_f
+module design_1_PmodWIFI_0_0_axi_timer_v2_0_15_counter_f
    (Q,
-    \s_axi_rdata_i_reg[31] ,
-    \s_axi_rdata_i_reg[30] ,
-    \s_axi_rdata_i_reg[29] ,
-    \s_axi_rdata_i_reg[28] ,
-    \s_axi_rdata_i_reg[27] ,
-    \s_axi_rdata_i_reg[26] ,
-    \s_axi_rdata_i_reg[25] ,
-    \s_axi_rdata_i_reg[24] ,
-    \s_axi_rdata_i_reg[23] ,
-    \s_axi_rdata_i_reg[22] ,
-    \s_axi_rdata_i_reg[21] ,
-    \s_axi_rdata_i_reg[20] ,
-    \s_axi_rdata_i_reg[19] ,
-    \s_axi_rdata_i_reg[18] ,
-    \s_axi_rdata_i_reg[17] ,
-    \s_axi_rdata_i_reg[16] ,
-    \s_axi_rdata_i_reg[15] ,
-    \s_axi_rdata_i_reg[14] ,
-    \s_axi_rdata_i_reg[13] ,
-    \s_axi_rdata_i_reg[12] ,
-    \s_axi_rdata_i_reg[11] ,
-    \s_axi_rdata_i_reg[10] ,
-    \s_axi_rdata_i_reg[9] ,
-    \s_axi_rdata_i_reg[8] ,
-    \s_axi_rdata_i_reg[7] ,
-    \s_axi_rdata_i_reg[6] ,
-    \s_axi_rdata_i_reg[5] ,
-    \s_axi_rdata_i_reg[4] ,
-    \s_axi_rdata_i_reg[3] ,
-    \s_axi_rdata_i_reg[2] ,
-    \s_axi_rdata_i_reg[1] ,
-    \s_axi_rdata_i_reg[0] ,
     SR,
-    generateOutPre10,
+    \s_axi_rdata_i_reg[0] ,
+    \s_axi_rdata_i_reg[1] ,
+    \s_axi_rdata_i_reg[2] ,
+    \s_axi_rdata_i_reg[3] ,
+    \s_axi_rdata_i_reg[4] ,
+    \s_axi_rdata_i_reg[5] ,
+    \s_axi_rdata_i_reg[6] ,
+    \s_axi_rdata_i_reg[7] ,
+    \s_axi_rdata_i_reg[8] ,
+    \s_axi_rdata_i_reg[9] ,
+    \s_axi_rdata_i_reg[10] ,
+    \s_axi_rdata_i_reg[11] ,
+    \s_axi_rdata_i_reg[12] ,
+    \s_axi_rdata_i_reg[13] ,
+    \s_axi_rdata_i_reg[14] ,
+    \s_axi_rdata_i_reg[15] ,
+    \s_axi_rdata_i_reg[16] ,
+    \s_axi_rdata_i_reg[17] ,
+    \s_axi_rdata_i_reg[18] ,
+    \s_axi_rdata_i_reg[19] ,
+    \s_axi_rdata_i_reg[20] ,
+    \s_axi_rdata_i_reg[21] ,
+    \s_axi_rdata_i_reg[22] ,
+    \s_axi_rdata_i_reg[23] ,
+    \s_axi_rdata_i_reg[24] ,
+    \s_axi_rdata_i_reg[25] ,
+    \s_axi_rdata_i_reg[26] ,
+    \s_axi_rdata_i_reg[27] ,
+    \s_axi_rdata_i_reg[28] ,
+    \s_axi_rdata_i_reg[29] ,
+    \s_axi_rdata_i_reg[30] ,
+    \s_axi_rdata_i_reg[31] ,
+    generateOutPre1_reg,
     counter_TC,
     S,
     read_Mux_In,
+    load_Counter_Reg,
+    s_axi_aresetn,
     bus2ip_rdce,
     \INFERRED_GEN.icount_out_reg[31]_0 ,
-    s_axi_aresetn,
-    load_Counter_Reg,
     \counter_TC_Reg_reg[1] ,
     E,
-    s_axi_aclk,
-    \TCSR0_GENERATE[20].TCSR0_FF_I ,
-    counter_En);
+    s_axi_aclk);
   output [31:0]Q;
-  output \s_axi_rdata_i_reg[31] ;
-  output \s_axi_rdata_i_reg[30] ;
-  output \s_axi_rdata_i_reg[29] ;
-  output \s_axi_rdata_i_reg[28] ;
-  output \s_axi_rdata_i_reg[27] ;
-  output \s_axi_rdata_i_reg[26] ;
-  output \s_axi_rdata_i_reg[25] ;
-  output \s_axi_rdata_i_reg[24] ;
-  output \s_axi_rdata_i_reg[23] ;
-  output \s_axi_rdata_i_reg[22] ;
-  output \s_axi_rdata_i_reg[21] ;
-  output \s_axi_rdata_i_reg[20] ;
-  output \s_axi_rdata_i_reg[19] ;
-  output \s_axi_rdata_i_reg[18] ;
-  output \s_axi_rdata_i_reg[17] ;
-  output \s_axi_rdata_i_reg[16] ;
-  output \s_axi_rdata_i_reg[15] ;
-  output \s_axi_rdata_i_reg[14] ;
-  output \s_axi_rdata_i_reg[13] ;
-  output \s_axi_rdata_i_reg[12] ;
-  output \s_axi_rdata_i_reg[11] ;
-  output \s_axi_rdata_i_reg[10] ;
-  output \s_axi_rdata_i_reg[9] ;
-  output \s_axi_rdata_i_reg[8] ;
-  output \s_axi_rdata_i_reg[7] ;
-  output \s_axi_rdata_i_reg[6] ;
-  output \s_axi_rdata_i_reg[5] ;
-  output \s_axi_rdata_i_reg[4] ;
-  output \s_axi_rdata_i_reg[3] ;
-  output \s_axi_rdata_i_reg[2] ;
-  output \s_axi_rdata_i_reg[1] ;
-  output \s_axi_rdata_i_reg[0] ;
   output [0:0]SR;
-  output generateOutPre10;
+  output \s_axi_rdata_i_reg[0] ;
+  output \s_axi_rdata_i_reg[1] ;
+  output \s_axi_rdata_i_reg[2] ;
+  output \s_axi_rdata_i_reg[3] ;
+  output \s_axi_rdata_i_reg[4] ;
+  output \s_axi_rdata_i_reg[5] ;
+  output \s_axi_rdata_i_reg[6] ;
+  output \s_axi_rdata_i_reg[7] ;
+  output \s_axi_rdata_i_reg[8] ;
+  output \s_axi_rdata_i_reg[9] ;
+  output \s_axi_rdata_i_reg[10] ;
+  output \s_axi_rdata_i_reg[11] ;
+  output \s_axi_rdata_i_reg[12] ;
+  output \s_axi_rdata_i_reg[13] ;
+  output \s_axi_rdata_i_reg[14] ;
+  output \s_axi_rdata_i_reg[15] ;
+  output \s_axi_rdata_i_reg[16] ;
+  output \s_axi_rdata_i_reg[17] ;
+  output \s_axi_rdata_i_reg[18] ;
+  output \s_axi_rdata_i_reg[19] ;
+  output \s_axi_rdata_i_reg[20] ;
+  output \s_axi_rdata_i_reg[21] ;
+  output \s_axi_rdata_i_reg[22] ;
+  output \s_axi_rdata_i_reg[23] ;
+  output \s_axi_rdata_i_reg[24] ;
+  output \s_axi_rdata_i_reg[25] ;
+  output \s_axi_rdata_i_reg[26] ;
+  output \s_axi_rdata_i_reg[27] ;
+  output \s_axi_rdata_i_reg[28] ;
+  output \s_axi_rdata_i_reg[29] ;
+  output \s_axi_rdata_i_reg[30] ;
+  output \s_axi_rdata_i_reg[31] ;
+  output generateOutPre1_reg;
   output [0:0]counter_TC;
   input [0:0]S;
   input [31:0]read_Mux_In;
+  input [0:0]load_Counter_Reg;
+  input s_axi_aresetn;
   input [2:0]bus2ip_rdce;
   input [31:0]\INFERRED_GEN.icount_out_reg[31]_0 ;
-  input s_axi_aresetn;
-  input [0:0]load_Counter_Reg;
   input [0:0]\counter_TC_Reg_reg[1] ;
   input [0:0]E;
   input s_axi_aclk;
-  input \TCSR0_GENERATE[20].TCSR0_FF_I ;
-  input [0:0]counter_En;
 
   wire [0:0]E;
-  wire \INFERRED_GEN.icount_out[0]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[10]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[11]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[12]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[13]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[14]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[15]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[16]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[17]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[18]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[19]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[1]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[20]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[21]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[22]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[23]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[24]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[25]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[26]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[27]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[28]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[29]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[2]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[30]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[31]_i_2__0_n_0 ;
+  wire \INFERRED_GEN.icount_out[0]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[10]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[11]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[12]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[13]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[14]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[15]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[16]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[17]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[18]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[19]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[1]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[20]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[21]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[22]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[23]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[24]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[25]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[26]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[27]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[28]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[29]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[2]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[30]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[31]_i_2_n_0 ;
   wire \INFERRED_GEN.icount_out[32]_i_1_n_0 ;
-  wire \INFERRED_GEN.icount_out[3]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[4]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[5]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[6]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[7]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[8]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[9]_i_1__0_n_0 ;
+  wire \INFERRED_GEN.icount_out[3]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[4]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[5]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[6]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[7]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[8]_i_1_n_0 ;
+  wire \INFERRED_GEN.icount_out[9]_i_1_n_0 ;
   wire [31:0]\INFERRED_GEN.icount_out_reg[31]_0 ;
   wire [31:0]Q;
   wire [0:0]S;
   wire [0:0]SR;
-  wire \TCSR0_GENERATE[20].TCSR0_FF_I ;
   wire [2:0]bus2ip_rdce;
-  wire [0:0]counter_En;
   wire [0:0]counter_TC;
   wire [0:0]\counter_TC_Reg_reg[1] ;
-  wire generateOutPre10;
+  wire generateOutPre1_reg;
   wire icount_out0_carry__0_i_1_n_0;
   wire icount_out0_carry__0_i_2_n_0;
   wire icount_out0_carry__0_i_3_n_0;
@@ -10121,742 +9635,741 @@ module design_1_PmodWIFI_0_0_axi_timer_v2_0_12_counter_f
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[31]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [31]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[31]),
+       (.I0(Q[31]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[31]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [31]),
         .O(\s_axi_rdata_i_reg[31] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[10].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[21]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [21]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[21]),
+       (.I0(Q[21]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[21]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [21]),
         .O(\s_axi_rdata_i_reg[21] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[11].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[20]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [20]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[20]),
+       (.I0(Q[20]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[20]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [20]),
         .O(\s_axi_rdata_i_reg[20] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[12].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[19]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [19]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[19]),
+       (.I0(Q[19]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[19]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [19]),
         .O(\s_axi_rdata_i_reg[19] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[13].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[18]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [18]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[18]),
+       (.I0(Q[18]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[18]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [18]),
         .O(\s_axi_rdata_i_reg[18] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[14].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[17]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [17]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[17]),
+       (.I0(Q[17]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[17]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [17]),
         .O(\s_axi_rdata_i_reg[17] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[15].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[16]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [16]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[16]),
+       (.I0(Q[16]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[16]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [16]),
         .O(\s_axi_rdata_i_reg[16] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[16].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[15]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [15]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[15]),
+       (.I0(Q[15]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[15]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [15]),
         .O(\s_axi_rdata_i_reg[15] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[17].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[14]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [14]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[14]),
+       (.I0(Q[14]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[14]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [14]),
         .O(\s_axi_rdata_i_reg[14] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[18].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[13]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [13]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[13]),
+       (.I0(Q[13]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[13]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [13]),
         .O(\s_axi_rdata_i_reg[13] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[19].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[12]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [12]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[12]),
+       (.I0(Q[12]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[12]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [12]),
         .O(\s_axi_rdata_i_reg[12] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[1].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[30]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [30]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[30]),
+       (.I0(Q[30]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[30]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [30]),
         .O(\s_axi_rdata_i_reg[30] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[20].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[11]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [11]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[11]),
+       (.I0(Q[11]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[11]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [11]),
         .O(\s_axi_rdata_i_reg[11] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[21].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[10]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [10]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[10]),
+       (.I0(Q[10]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[10]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [10]),
         .O(\s_axi_rdata_i_reg[10] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[22].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[9]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [9]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[9]),
+       (.I0(Q[9]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[9]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [9]),
         .O(\s_axi_rdata_i_reg[9] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[23].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[8]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [8]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[8]),
+       (.I0(Q[8]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[8]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [8]),
         .O(\s_axi_rdata_i_reg[8] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[24].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[7]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [7]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[7]),
+       (.I0(Q[7]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[7]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [7]),
         .O(\s_axi_rdata_i_reg[7] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[25].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[6]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [6]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[6]),
+       (.I0(Q[6]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[6]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [6]),
         .O(\s_axi_rdata_i_reg[6] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[26].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[5]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [5]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[5]),
+       (.I0(Q[5]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[5]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [5]),
         .O(\s_axi_rdata_i_reg[5] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[27].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[4]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [4]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[4]),
+       (.I0(Q[4]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[4]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [4]),
         .O(\s_axi_rdata_i_reg[4] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[28].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[3]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [3]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[3]),
+       (.I0(Q[3]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[3]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [3]),
         .O(\s_axi_rdata_i_reg[3] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[29].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[2]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [2]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[2]),
+       (.I0(Q[2]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[2]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [2]),
         .O(\s_axi_rdata_i_reg[2] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[2].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[29]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [29]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[29]),
+       (.I0(Q[29]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[29]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [29]),
         .O(\s_axi_rdata_i_reg[29] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[30].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[1]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [1]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[1]),
+       (.I0(Q[1]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[1]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [1]),
         .O(\s_axi_rdata_i_reg[1] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[0]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [0]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[0]),
+       (.I0(Q[0]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[0]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [0]),
         .O(\s_axi_rdata_i_reg[0] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[3].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[28]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [28]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[28]),
+       (.I0(Q[28]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[28]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [28]),
         .O(\s_axi_rdata_i_reg[28] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[4].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[27]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [27]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[27]),
+       (.I0(Q[27]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[27]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [27]),
         .O(\s_axi_rdata_i_reg[27] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[5].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[26]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [26]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[26]),
+       (.I0(Q[26]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[26]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [26]),
         .O(\s_axi_rdata_i_reg[26] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[6].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[25]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [25]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[25]),
+       (.I0(Q[25]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[25]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [25]),
         .O(\s_axi_rdata_i_reg[25] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[7].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[24]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [24]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[24]),
+       (.I0(Q[24]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[24]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [24]),
         .O(\s_axi_rdata_i_reg[24] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[23]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [23]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[23]),
+       (.I0(Q[23]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[23]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [23]),
         .O(\s_axi_rdata_i_reg[23] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[9].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[22]),
-        .I1(bus2ip_rdce[1]),
-        .I2(bus2ip_rdce[2]),
-        .I3(\INFERRED_GEN.icount_out_reg[31]_0 [22]),
-        .I4(bus2ip_rdce[0]),
-        .I5(Q[22]),
+       (.I0(Q[22]),
+        .I1(bus2ip_rdce[0]),
+        .I2(bus2ip_rdce[1]),
+        .I3(read_Mux_In[22]),
+        .I4(bus2ip_rdce[2]),
+        .I5(\INFERRED_GEN.icount_out_reg[31]_0 [22]),
         .O(\s_axi_rdata_i_reg[22] ));
   LUT1 #(
     .INIT(2'h1)) 
     GenerateOut0_i_1
        (.I0(s_axi_aresetn),
         .O(SR));
-  (* SOFT_HLUTNM = "soft_lutpair113" *) 
+  (* SOFT_HLUTNM = "soft_lutpair115" *) 
   LUT3 #(
-    .INIT(8'h8B)) 
-    \INFERRED_GEN.icount_out[0]_i_1__0 
+    .INIT(8'hA3)) 
+    \INFERRED_GEN.icount_out[0]_i_1 
        (.I0(read_Mux_In[0]),
-        .I1(load_Counter_Reg),
-        .I2(Q[0]),
-        .O(\INFERRED_GEN.icount_out[0]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair107" *) 
+        .I1(Q[0]),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair109" *) 
   LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[10]_i_1__0 
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[10]_i_1 
        (.I0(read_Mux_In[10]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry__1_n_6),
-        .O(\INFERRED_GEN.icount_out[10]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair108" *) 
+        .I1(icount_out0_carry__1_n_6),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[10]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair110" *) 
   LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[11]_i_1__0 
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[11]_i_1 
        (.I0(read_Mux_In[11]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry__1_n_5),
-        .O(\INFERRED_GEN.icount_out[11]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair108" *) 
+        .I1(icount_out0_carry__1_n_5),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[11]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair110" *) 
   LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[12]_i_1__0 
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[12]_i_1 
        (.I0(read_Mux_In[12]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry__1_n_4),
-        .O(\INFERRED_GEN.icount_out[12]_i_1__0_n_0 ));
+        .I1(icount_out0_carry__1_n_4),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[12]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair109" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[13]_i_1 
+       (.I0(read_Mux_In[13]),
+        .I1(icount_out0_carry__2_n_7),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[13]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair107" *) 
   LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[13]_i_1__0 
-       (.I0(read_Mux_In[13]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry__2_n_7),
-        .O(\INFERRED_GEN.icount_out[13]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair105" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[14]_i_1__0 
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[14]_i_1 
        (.I0(read_Mux_In[14]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry__2_n_6),
-        .O(\INFERRED_GEN.icount_out[14]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair106" *) 
+        .I1(icount_out0_carry__2_n_6),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[14]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair108" *) 
   LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[15]_i_1__0 
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[15]_i_1 
        (.I0(read_Mux_In[15]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry__2_n_5),
-        .O(\INFERRED_GEN.icount_out[15]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair106" *) 
+        .I1(icount_out0_carry__2_n_5),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[15]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair108" *) 
   LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[16]_i_1__0 
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[16]_i_1 
        (.I0(read_Mux_In[16]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry__2_n_4),
-        .O(\INFERRED_GEN.icount_out[16]_i_1__0_n_0 ));
+        .I1(icount_out0_carry__2_n_4),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[16]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair107" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[17]_i_1 
+       (.I0(read_Mux_In[17]),
+        .I1(icount_out0_carry__3_n_7),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[17]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair105" *) 
   LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[17]_i_1__0 
-       (.I0(read_Mux_In[17]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry__3_n_7),
-        .O(\INFERRED_GEN.icount_out[17]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair103" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[18]_i_1__0 
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[18]_i_1 
        (.I0(read_Mux_In[18]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry__3_n_6),
-        .O(\INFERRED_GEN.icount_out[18]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair104" *) 
+        .I1(icount_out0_carry__3_n_6),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[18]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair106" *) 
   LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[19]_i_1__0 
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[19]_i_1 
        (.I0(read_Mux_In[19]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry__3_n_5),
-        .O(\INFERRED_GEN.icount_out[19]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair113" *) 
+        .I1(icount_out0_carry__3_n_5),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[19]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair115" *) 
   LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[1]_i_1__0 
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[1]_i_1 
        (.I0(read_Mux_In[1]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry_n_7),
-        .O(\INFERRED_GEN.icount_out[1]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair104" *) 
+        .I1(icount_out0_carry_n_7),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[1]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair106" *) 
   LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[20]_i_1__0 
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[20]_i_1 
        (.I0(read_Mux_In[20]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry__3_n_4),
-        .O(\INFERRED_GEN.icount_out[20]_i_1__0_n_0 ));
+        .I1(icount_out0_carry__3_n_4),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[20]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair105" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[21]_i_1 
+       (.I0(read_Mux_In[21]),
+        .I1(icount_out0_carry__4_n_7),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[21]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair103" *) 
   LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[21]_i_1__0 
-       (.I0(read_Mux_In[21]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry__4_n_7),
-        .O(\INFERRED_GEN.icount_out[21]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair101" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[22]_i_1__0 
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[22]_i_1 
        (.I0(read_Mux_In[22]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry__4_n_6),
-        .O(\INFERRED_GEN.icount_out[22]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair102" *) 
+        .I1(icount_out0_carry__4_n_6),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[22]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair104" *) 
   LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[23]_i_1__0 
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[23]_i_1 
        (.I0(read_Mux_In[23]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry__4_n_5),
-        .O(\INFERRED_GEN.icount_out[23]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair102" *) 
+        .I1(icount_out0_carry__4_n_5),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[23]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair104" *) 
   LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[24]_i_1__0 
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[24]_i_1 
        (.I0(read_Mux_In[24]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry__4_n_4),
-        .O(\INFERRED_GEN.icount_out[24]_i_1__0_n_0 ));
+        .I1(icount_out0_carry__4_n_4),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[24]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair103" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[25]_i_1 
+       (.I0(read_Mux_In[25]),
+        .I1(icount_out0_carry__5_n_7),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[25]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair101" *) 
   LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[25]_i_1__0 
-       (.I0(read_Mux_In[25]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry__5_n_7),
-        .O(\INFERRED_GEN.icount_out[25]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair99" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[26]_i_1__0 
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[26]_i_1 
        (.I0(read_Mux_In[26]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry__5_n_6),
-        .O(\INFERRED_GEN.icount_out[26]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair100" *) 
+        .I1(icount_out0_carry__5_n_6),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[26]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair102" *) 
   LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[27]_i_1__0 
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[27]_i_1 
        (.I0(read_Mux_In[27]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry__5_n_5),
-        .O(\INFERRED_GEN.icount_out[27]_i_1__0_n_0 ));
+        .I1(icount_out0_carry__5_n_5),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[27]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair102" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[28]_i_1 
+       (.I0(read_Mux_In[28]),
+        .I1(icount_out0_carry__5_n_4),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[28]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair101" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[29]_i_1 
+       (.I0(read_Mux_In[29]),
+        .I1(icount_out0_carry__6_n_7),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[29]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair114" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[2]_i_1 
+       (.I0(read_Mux_In[2]),
+        .I1(icount_out0_carry_n_6),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[2]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair100" *) 
   LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[28]_i_1__0 
-       (.I0(read_Mux_In[28]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry__5_n_4),
-        .O(\INFERRED_GEN.icount_out[28]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair99" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[29]_i_1__0 
-       (.I0(read_Mux_In[29]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry__6_n_7),
-        .O(\INFERRED_GEN.icount_out[29]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair112" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[2]_i_1__0 
-       (.I0(read_Mux_In[2]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry_n_6),
-        .O(\INFERRED_GEN.icount_out[2]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair98" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[30]_i_1__0 
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[30]_i_1 
        (.I0(read_Mux_In[30]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry__6_n_6),
-        .O(\INFERRED_GEN.icount_out[30]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair98" *) 
+        .I1(icount_out0_carry__6_n_6),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[30]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair100" *) 
   LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[31]_i_2__0 
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[31]_i_2 
        (.I0(read_Mux_In[31]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry__6_n_5),
-        .O(\INFERRED_GEN.icount_out[31]_i_2__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h00000000FE020000)) 
+        .I1(icount_out0_carry__6_n_5),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[31]_i_2_n_0 ));
+  LUT5 #(
+    .INIT(32'h0000E200)) 
     \INFERRED_GEN.icount_out[32]_i_1 
        (.I0(counter_TC),
-        .I1(\TCSR0_GENERATE[20].TCSR0_FF_I ),
-        .I2(counter_En),
-        .I3(icount_out0_carry__6_n_4),
-        .I4(s_axi_aresetn),
-        .I5(load_Counter_Reg),
+        .I1(E),
+        .I2(icount_out0_carry__6_n_4),
+        .I3(s_axi_aresetn),
+        .I4(load_Counter_Reg),
         .O(\INFERRED_GEN.icount_out[32]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair114" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[3]_i_1 
+       (.I0(read_Mux_In[3]),
+        .I1(icount_out0_carry_n_5),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[3]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair113" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[4]_i_1 
+       (.I0(read_Mux_In[4]),
+        .I1(icount_out0_carry_n_4),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[4]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair113" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[5]_i_1 
+       (.I0(read_Mux_In[5]),
+        .I1(icount_out0_carry__0_n_7),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[5]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair111" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[6]_i_1 
+       (.I0(read_Mux_In[6]),
+        .I1(icount_out0_carry__0_n_6),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[6]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair112" *) 
   LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[3]_i_1__0 
-       (.I0(read_Mux_In[3]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry_n_5),
-        .O(\INFERRED_GEN.icount_out[3]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair111" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[4]_i_1__0 
-       (.I0(read_Mux_In[4]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry_n_4),
-        .O(\INFERRED_GEN.icount_out[4]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair111" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[5]_i_1__0 
-       (.I0(read_Mux_In[5]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry__0_n_7),
-        .O(\INFERRED_GEN.icount_out[5]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair109" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[6]_i_1__0 
-       (.I0(read_Mux_In[6]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry__0_n_6),
-        .O(\INFERRED_GEN.icount_out[6]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair110" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[7]_i_1__0 
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[7]_i_1 
        (.I0(read_Mux_In[7]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry__0_n_5),
-        .O(\INFERRED_GEN.icount_out[7]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair110" *) 
+        .I1(icount_out0_carry__0_n_5),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[7]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair112" *) 
   LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[8]_i_1__0 
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[8]_i_1 
        (.I0(read_Mux_In[8]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry__0_n_4),
-        .O(\INFERRED_GEN.icount_out[8]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair109" *) 
+        .I1(icount_out0_carry__0_n_4),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[8]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair111" *) 
   LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[9]_i_1__0 
+    .INIT(8'hAC)) 
+    \INFERRED_GEN.icount_out[9]_i_1 
        (.I0(read_Mux_In[9]),
-        .I1(load_Counter_Reg),
-        .I2(icount_out0_carry__1_n_7),
-        .O(\INFERRED_GEN.icount_out[9]_i_1__0_n_0 ));
+        .I1(icount_out0_carry__1_n_7),
+        .I2(load_Counter_Reg),
+        .O(\INFERRED_GEN.icount_out[9]_i_1_n_0 ));
   FDRE \INFERRED_GEN.icount_out_reg[0] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[0]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[0]_i_1_n_0 ),
         .Q(Q[0]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[10] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[10]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[10]_i_1_n_0 ),
         .Q(Q[10]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[11] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[11]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[11]_i_1_n_0 ),
         .Q(Q[11]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[12] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[12]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[12]_i_1_n_0 ),
         .Q(Q[12]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[13] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[13]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[13]_i_1_n_0 ),
         .Q(Q[13]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[14] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[14]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[14]_i_1_n_0 ),
         .Q(Q[14]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[15] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[15]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[15]_i_1_n_0 ),
         .Q(Q[15]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[16] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[16]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[16]_i_1_n_0 ),
         .Q(Q[16]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[17] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[17]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[17]_i_1_n_0 ),
         .Q(Q[17]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[18] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[18]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[18]_i_1_n_0 ),
         .Q(Q[18]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[19] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[19]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[19]_i_1_n_0 ),
         .Q(Q[19]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[1] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[1]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[1]_i_1_n_0 ),
         .Q(Q[1]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[20] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[20]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[20]_i_1_n_0 ),
         .Q(Q[20]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[21] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[21]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[21]_i_1_n_0 ),
         .Q(Q[21]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[22] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[22]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[22]_i_1_n_0 ),
         .Q(Q[22]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[23] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[23]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[23]_i_1_n_0 ),
         .Q(Q[23]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[24] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[24]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[24]_i_1_n_0 ),
         .Q(Q[24]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[25] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[25]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[25]_i_1_n_0 ),
         .Q(Q[25]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[26] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[26]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[26]_i_1_n_0 ),
         .Q(Q[26]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[27] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[27]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[27]_i_1_n_0 ),
         .Q(Q[27]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[28] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[28]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[28]_i_1_n_0 ),
         .Q(Q[28]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[29] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[29]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[29]_i_1_n_0 ),
         .Q(Q[29]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[2] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[2]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[2]_i_1_n_0 ),
         .Q(Q[2]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[30] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[30]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[30]_i_1_n_0 ),
         .Q(Q[30]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[31] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[31]_i_2__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[31]_i_2_n_0 ),
         .Q(Q[31]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[32] 
@@ -10868,43 +10381,43 @@ module design_1_PmodWIFI_0_0_axi_timer_v2_0_12_counter_f
   FDRE \INFERRED_GEN.icount_out_reg[3] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[3]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[3]_i_1_n_0 ),
         .Q(Q[3]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[4] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[4]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[4]_i_1_n_0 ),
         .Q(Q[4]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[5] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[5]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[5]_i_1_n_0 ),
         .Q(Q[5]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[6] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[6]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[6]_i_1_n_0 ),
         .Q(Q[6]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[7] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[7]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[7]_i_1_n_0 ),
         .Q(Q[7]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[8] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[8]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[8]_i_1_n_0 ),
         .Q(Q[8]),
         .R(SR));
   FDRE \INFERRED_GEN.icount_out_reg[9] 
        (.C(s_axi_aclk),
         .CE(E),
-        .D(\INFERRED_GEN.icount_out[9]_i_1__0_n_0 ),
+        .D(\INFERRED_GEN.icount_out[9]_i_1_n_0 ),
         .Q(Q[9]),
         .R(SR));
   LUT2 #(
@@ -10912,7 +10425,7 @@ module design_1_PmodWIFI_0_0_axi_timer_v2_0_12_counter_f
     generateOutPre1_i_1
        (.I0(counter_TC),
         .I1(\counter_TC_Reg_reg[1] ),
-        .O(generateOutPre10));
+        .O(generateOutPre1_reg));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 icount_out0_carry
        (.CI(1'b0),
@@ -11169,28 +10682,28 @@ module design_1_PmodWIFI_0_0_axi_timer_v2_0_12_counter_f
         .O(icount_out0_carry_i_4_n_0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_timer_v2_0_12_counter_f" *) 
-module design_1_PmodWIFI_0_0_axi_timer_v2_0_12_counter_f_1
+(* ORIG_REF_NAME = "axi_timer_v2_0_15_counter_f" *) 
+module design_1_PmodWIFI_0_0_axi_timer_v2_0_15_counter_f_3
    (\LOAD_REG_GEN[0].LOAD_REG_I ,
-    generateOutPre00,
+    generateOutPre0_reg,
     counter_TC,
     S,
-    Q,
     read_Mux_In,
     load_Counter_Reg,
     \LOAD_REG_GEN[0].LOAD_REG_I_0 ,
+    Q,
     s_axi_aresetn_0,
     E,
     s_axi_aclk,
     s_axi_aresetn);
   output [31:0]\LOAD_REG_GEN[0].LOAD_REG_I ;
-  output generateOutPre00;
+  output generateOutPre0_reg;
   output [0:0]counter_TC;
   input [0:0]S;
-  input [0:0]Q;
-  input [9:0]read_Mux_In;
+  input [10:0]read_Mux_In;
   input [0:0]load_Counter_Reg;
-  input [21:0]\LOAD_REG_GEN[0].LOAD_REG_I_0 ;
+  input [20:0]\LOAD_REG_GEN[0].LOAD_REG_I_0 ;
+  input [0:0]Q;
   input s_axi_aresetn_0;
   input [0:0]E;
   input s_axi_aclk;
@@ -11199,11 +10712,11 @@ module design_1_PmodWIFI_0_0_axi_timer_v2_0_12_counter_f_1
   wire [0:0]E;
   wire \INFERRED_GEN.icount_out[32]_i_1_n_0 ;
   wire [31:0]\LOAD_REG_GEN[0].LOAD_REG_I ;
-  wire [21:0]\LOAD_REG_GEN[0].LOAD_REG_I_0 ;
+  wire [20:0]\LOAD_REG_GEN[0].LOAD_REG_I_0 ;
   wire [0:0]Q;
   wire [0:0]S;
   wire [0:0]counter_TC;
-  wire generateOutPre00;
+  wire generateOutPre0_reg;
   wire icount_out0_carry__0_i_1__0_n_0;
   wire icount_out0_carry__0_i_2__0_n_0;
   wire icount_out0_carry__0_i_3__0_n_0;
@@ -11301,209 +10814,209 @@ module design_1_PmodWIFI_0_0_axi_timer_v2_0_12_counter_f_1
   wire icount_out0_carry_n_7;
   wire [0:0]load_Counter_Reg;
   wire [31:0]p_1_in;
-  wire [9:0]read_Mux_In;
+  wire [10:0]read_Mux_In;
   wire s_axi_aclk;
   wire s_axi_aresetn;
   wire s_axi_aresetn_0;
   wire [3:3]NLW_icount_out0_carry__6_CO_UNCONNECTED;
 
-  (* SOFT_HLUTNM = "soft_lutpair97" *) 
+  (* SOFT_HLUTNM = "soft_lutpair99" *) 
   LUT3 #(
     .INIT(8'h8B)) 
-    \INFERRED_GEN.icount_out[0]_i_1 
+    \INFERRED_GEN.icount_out[0]_i_1__0 
        (.I0(read_Mux_In[0]),
         .I1(load_Counter_Reg),
         .I2(\LOAD_REG_GEN[0].LOAD_REG_I [0]),
         .O(p_1_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair91" *) 
+  (* SOFT_HLUTNM = "soft_lutpair93" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[10]_i_1 
-       (.I0(read_Mux_In[9]),
+    \INFERRED_GEN.icount_out[10]_i_1__0 
+       (.I0(read_Mux_In[10]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry__1_n_6),
         .O(p_1_in[10]));
-  (* SOFT_HLUTNM = "soft_lutpair92" *) 
+  (* SOFT_HLUTNM = "soft_lutpair94" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[11]_i_1 
-       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [1]),
+    \INFERRED_GEN.icount_out[11]_i_1__0 
+       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [0]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry__1_n_5),
         .O(p_1_in[11]));
-  (* SOFT_HLUTNM = "soft_lutpair92" *) 
+  (* SOFT_HLUTNM = "soft_lutpair94" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[12]_i_1 
-       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [2]),
+    \INFERRED_GEN.icount_out[12]_i_1__0 
+       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [1]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry__1_n_4),
         .O(p_1_in[12]));
-  (* SOFT_HLUTNM = "soft_lutpair91" *) 
+  (* SOFT_HLUTNM = "soft_lutpair93" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[13]_i_1 
-       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [3]),
+    \INFERRED_GEN.icount_out[13]_i_1__0 
+       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [2]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry__2_n_7),
         .O(p_1_in[13]));
-  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  (* SOFT_HLUTNM = "soft_lutpair91" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[14]_i_1 
-       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [4]),
+    \INFERRED_GEN.icount_out[14]_i_1__0 
+       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [3]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry__2_n_6),
         .O(p_1_in[14]));
-  (* SOFT_HLUTNM = "soft_lutpair90" *) 
+  (* SOFT_HLUTNM = "soft_lutpair92" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[15]_i_1 
-       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [5]),
+    \INFERRED_GEN.icount_out[15]_i_1__0 
+       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [4]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry__2_n_5),
         .O(p_1_in[15]));
-  (* SOFT_HLUTNM = "soft_lutpair90" *) 
+  (* SOFT_HLUTNM = "soft_lutpair92" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[16]_i_1 
-       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [6]),
+    \INFERRED_GEN.icount_out[16]_i_1__0 
+       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [5]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry__2_n_4),
         .O(p_1_in[16]));
-  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  (* SOFT_HLUTNM = "soft_lutpair91" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[17]_i_1 
-       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [7]),
+    \INFERRED_GEN.icount_out[17]_i_1__0 
+       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [6]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry__3_n_7),
         .O(p_1_in[17]));
-  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+  (* SOFT_HLUTNM = "soft_lutpair89" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[18]_i_1 
-       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [8]),
+    \INFERRED_GEN.icount_out[18]_i_1__0 
+       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [7]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry__3_n_6),
         .O(p_1_in[18]));
-  (* SOFT_HLUTNM = "soft_lutpair88" *) 
+  (* SOFT_HLUTNM = "soft_lutpair90" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[19]_i_1 
-       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [9]),
+    \INFERRED_GEN.icount_out[19]_i_1__0 
+       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [8]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry__3_n_5),
         .O(p_1_in[19]));
-  (* SOFT_HLUTNM = "soft_lutpair97" *) 
+  (* SOFT_HLUTNM = "soft_lutpair99" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[1]_i_1 
+    \INFERRED_GEN.icount_out[1]_i_1__0 
        (.I0(read_Mux_In[1]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry_n_7),
         .O(p_1_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair88" *) 
+  (* SOFT_HLUTNM = "soft_lutpair90" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[20]_i_1 
-       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [10]),
+    \INFERRED_GEN.icount_out[20]_i_1__0 
+       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [9]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry__3_n_4),
         .O(p_1_in[20]));
-  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+  (* SOFT_HLUTNM = "soft_lutpair89" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[21]_i_1 
-       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [11]),
+    \INFERRED_GEN.icount_out[21]_i_1__0 
+       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [10]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry__4_n_7),
         .O(p_1_in[21]));
-  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  (* SOFT_HLUTNM = "soft_lutpair87" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[22]_i_1 
-       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [12]),
+    \INFERRED_GEN.icount_out[22]_i_1__0 
+       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [11]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry__4_n_6),
         .O(p_1_in[22]));
-  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+  (* SOFT_HLUTNM = "soft_lutpair88" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[23]_i_1 
-       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [13]),
+    \INFERRED_GEN.icount_out[23]_i_1__0 
+       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [12]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry__4_n_5),
         .O(p_1_in[23]));
-  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+  (* SOFT_HLUTNM = "soft_lutpair88" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[24]_i_1 
-       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [14]),
+    \INFERRED_GEN.icount_out[24]_i_1__0 
+       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [13]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry__4_n_4),
         .O(p_1_in[24]));
-  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  (* SOFT_HLUTNM = "soft_lutpair87" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[25]_i_1 
-       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [15]),
+    \INFERRED_GEN.icount_out[25]_i_1__0 
+       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [14]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry__5_n_7),
         .O(p_1_in[25]));
-  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  (* SOFT_HLUTNM = "soft_lutpair85" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[26]_i_1 
-       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [16]),
+    \INFERRED_GEN.icount_out[26]_i_1__0 
+       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [15]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry__5_n_6),
         .O(p_1_in[26]));
-  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  (* SOFT_HLUTNM = "soft_lutpair86" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[27]_i_1 
-       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [17]),
+    \INFERRED_GEN.icount_out[27]_i_1__0 
+       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [16]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry__5_n_5),
         .O(p_1_in[27]));
-  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  (* SOFT_HLUTNM = "soft_lutpair86" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[28]_i_1 
-       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [18]),
+    \INFERRED_GEN.icount_out[28]_i_1__0 
+       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [17]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry__5_n_4),
         .O(p_1_in[28]));
-  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  (* SOFT_HLUTNM = "soft_lutpair85" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[29]_i_1 
-       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [19]),
+    \INFERRED_GEN.icount_out[29]_i_1__0 
+       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [18]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry__6_n_7),
         .O(p_1_in[29]));
-  (* SOFT_HLUTNM = "soft_lutpair96" *) 
+  (* SOFT_HLUTNM = "soft_lutpair98" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[2]_i_1 
+    \INFERRED_GEN.icount_out[2]_i_1__0 
        (.I0(read_Mux_In[2]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry_n_6),
         .O(p_1_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair82" *) 
+  (* SOFT_HLUTNM = "soft_lutpair84" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[30]_i_1 
-       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [20]),
+    \INFERRED_GEN.icount_out[30]_i_1__0 
+       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [19]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry__6_n_6),
         .O(p_1_in[30]));
-  (* SOFT_HLUTNM = "soft_lutpair82" *) 
+  (* SOFT_HLUTNM = "soft_lutpair84" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[31]_i_2 
-       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [21]),
+    \INFERRED_GEN.icount_out[31]_i_2__0 
+       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [20]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry__6_n_5),
         .O(p_1_in[31]));
@@ -11516,59 +11029,59 @@ module design_1_PmodWIFI_0_0_axi_timer_v2_0_12_counter_f_1
         .I3(s_axi_aresetn),
         .I4(load_Counter_Reg),
         .O(\INFERRED_GEN.icount_out[32]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair96" *) 
+  (* SOFT_HLUTNM = "soft_lutpair98" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[3]_i_1 
-       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_0 [0]),
+    \INFERRED_GEN.icount_out[3]_i_1__0 
+       (.I0(read_Mux_In[3]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry_n_5),
         .O(p_1_in[3]));
-  (* SOFT_HLUTNM = "soft_lutpair95" *) 
+  (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[4]_i_1 
-       (.I0(read_Mux_In[3]),
+    \INFERRED_GEN.icount_out[4]_i_1__0 
+       (.I0(read_Mux_In[4]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry_n_4),
         .O(p_1_in[4]));
-  (* SOFT_HLUTNM = "soft_lutpair95" *) 
+  (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[5]_i_1 
-       (.I0(read_Mux_In[4]),
+    \INFERRED_GEN.icount_out[5]_i_1__0 
+       (.I0(read_Mux_In[5]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry__0_n_7),
         .O(p_1_in[5]));
-  (* SOFT_HLUTNM = "soft_lutpair93" *) 
+  (* SOFT_HLUTNM = "soft_lutpair95" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[6]_i_1 
-       (.I0(read_Mux_In[5]),
+    \INFERRED_GEN.icount_out[6]_i_1__0 
+       (.I0(read_Mux_In[6]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry__0_n_6),
         .O(p_1_in[6]));
-  (* SOFT_HLUTNM = "soft_lutpair94" *) 
+  (* SOFT_HLUTNM = "soft_lutpair96" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[7]_i_1 
-       (.I0(read_Mux_In[6]),
+    \INFERRED_GEN.icount_out[7]_i_1__0 
+       (.I0(read_Mux_In[7]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry__0_n_5),
         .O(p_1_in[7]));
-  (* SOFT_HLUTNM = "soft_lutpair94" *) 
+  (* SOFT_HLUTNM = "soft_lutpair96" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[8]_i_1 
-       (.I0(read_Mux_In[7]),
+    \INFERRED_GEN.icount_out[8]_i_1__0 
+       (.I0(read_Mux_In[8]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry__0_n_4),
         .O(p_1_in[8]));
-  (* SOFT_HLUTNM = "soft_lutpair93" *) 
+  (* SOFT_HLUTNM = "soft_lutpair95" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[9]_i_1 
-       (.I0(read_Mux_In[8]),
+    \INFERRED_GEN.icount_out[9]_i_1__0 
+       (.I0(read_Mux_In[9]),
         .I1(load_Counter_Reg),
         .I2(icount_out0_carry__1_n_7),
         .O(p_1_in[9]));
@@ -11775,7 +11288,7 @@ module design_1_PmodWIFI_0_0_axi_timer_v2_0_12_counter_f_1
     generateOutPre0_i_1
        (.I0(counter_TC),
         .I1(Q),
-        .O(generateOutPre00));
+        .O(generateOutPre0_reg));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 icount_out0_carry
        (.CI(1'b0),
@@ -12032,7 +11545,6 @@ module design_1_PmodWIFI_0_0_axi_timer_v2_0_12_counter_f_1
         .O(icount_out0_carry_i_4__0_n_0));
 endmodule
 
-(* ORIG_REF_NAME = "cdc_sync" *) 
 module design_1_PmodWIFI_0_0_cdc_sync
    (scndry_vect_out,
     gpio_io_i,
@@ -12366,7 +11878,7 @@ module design_1_PmodWIFI_0_0_cdc_sync__parameterized1
 endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
-module design_1_PmodWIFI_0_0_cdc_sync__parameterized2
+module design_1_PmodWIFI_0_0_cdc_sync__parameterized1_4
    (D,
     scndry_out,
     Rx_FIFO_Full_Fifo_d1_synced_i,
@@ -12466,7 +11978,7 @@ module design_1_PmodWIFI_0_0_cdc_sync__parameterized2
         .I4(spiXfer_done_to_axi_1),
         .I5(Rx_FIFO_Full_int),
         .O(updown_cnt_en_rx__2));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT3 #(
     .INIT(8'h0D)) 
     \icount_out[3]_i_5 
@@ -12474,7 +11986,7 @@ module design_1_PmodWIFI_0_0_cdc_sync__parameterized2
         .I1(Rx_FIFO_Full_Fifo_d1_flag),
         .I2(Rx_FIFO_Full_Fifo_d1_sig),
         .O(\icount_out_reg[3] ));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT2 #(
     .INIT(4'h2)) 
     rc_FIFO_Full_d1_i_1
@@ -12484,213 +11996,20 @@ module design_1_PmodWIFI_0_0_cdc_sync__parameterized2
 endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
-module design_1_PmodWIFI_0_0_cdc_sync__parameterized3
-   (E,
-    \INFERRED_GEN.icount_out_reg[32] ,
-    counter_En,
-    \INFERRED_GEN.icount_out_reg[0] ,
-    S,
-    \INFERRED_GEN.icount_out_reg[4] ,
-    \INFERRED_GEN.icount_out_reg[32]_0 ,
-    \TCSR0_GENERATE[24].TCSR0_FF_I ,
-    \INFERRED_GEN.icount_out_reg[32]_1 ,
-    \TCSR0_GENERATE[31].TCSR0_FF_I ,
-    read_Mux_In,
-    \TCSR0_GENERATE[20].TCSR0_FF_I ,
-    \TCSR0_GENERATE[27].TCSR0_FF_I ,
-    \TCSR1_GENERATE[22].TCSR1_FF_I ,
-    \TCSR1_GENERATE[30].TCSR1_FF_I ,
-    \TCSR0_GENERATE[20].TCSR0_FF_I_0 ,
-    \TCSR1_GENERATE[24].TCSR1_FF_I ,
-    generateOutPre0,
-    load_Counter_Reg,
-    \INFERRED_GEN.icount_out_reg[1] ,
-    freeze,
-    s_axi_aclk);
-  output [0:0]E;
-  output \INFERRED_GEN.icount_out_reg[32] ;
-  output [0:0]counter_En;
-  output [0:0]\INFERRED_GEN.icount_out_reg[0] ;
-  output [0:0]S;
-  output [0:0]\INFERRED_GEN.icount_out_reg[4] ;
-  input \INFERRED_GEN.icount_out_reg[32]_0 ;
-  input \TCSR0_GENERATE[24].TCSR0_FF_I ;
-  input \INFERRED_GEN.icount_out_reg[32]_1 ;
-  input \TCSR0_GENERATE[31].TCSR0_FF_I ;
-  input [2:0]read_Mux_In;
-  input \TCSR0_GENERATE[20].TCSR0_FF_I ;
-  input \TCSR0_GENERATE[27].TCSR0_FF_I ;
-  input \TCSR1_GENERATE[22].TCSR1_FF_I ;
-  input \TCSR1_GENERATE[30].TCSR1_FF_I ;
-  input \TCSR0_GENERATE[20].TCSR0_FF_I_0 ;
-  input \TCSR1_GENERATE[24].TCSR1_FF_I ;
-  input generateOutPre0;
-  input [0:0]load_Counter_Reg;
-  input [1:0]\INFERRED_GEN.icount_out_reg[1] ;
-  input freeze;
-  input s_axi_aclk;
-
-  wire [0:0]E;
-  wire Freeze_int;
-  wire \INFERRED_GEN.icount_out[31]_i_7_n_0 ;
-  wire \INFERRED_GEN.icount_out[32]_i_4_n_0 ;
-  wire [0:0]\INFERRED_GEN.icount_out_reg[0] ;
-  wire [1:0]\INFERRED_GEN.icount_out_reg[1] ;
-  wire \INFERRED_GEN.icount_out_reg[32] ;
-  wire \INFERRED_GEN.icount_out_reg[32]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[32]_1 ;
-  wire [0:0]\INFERRED_GEN.icount_out_reg[4] ;
-  wire [0:0]S;
-  wire \TCSR0_GENERATE[20].TCSR0_FF_I ;
-  wire \TCSR0_GENERATE[20].TCSR0_FF_I_0 ;
-  wire \TCSR0_GENERATE[24].TCSR0_FF_I ;
-  wire \TCSR0_GENERATE[27].TCSR0_FF_I ;
-  wire \TCSR0_GENERATE[31].TCSR0_FF_I ;
-  wire \TCSR1_GENERATE[22].TCSR1_FF_I ;
-  wire \TCSR1_GENERATE[24].TCSR1_FF_I ;
-  wire \TCSR1_GENERATE[30].TCSR1_FF_I ;
-  wire [0:0]counter_En;
-  wire freeze;
-  wire generateOutPre0;
-  wire [0:0]load_Counter_Reg;
-  wire [2:0]read_Mux_In;
-  wire s_axi_aclk;
-  wire s_level_out_d1_cdc_to;
-  wire s_level_out_d2;
-  wire s_level_out_d3;
-
-  (* ASYNC_REG *) 
-  (* XILINX_LEGACY_PRIM = "FDR" *) 
-  (* box_type = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(freeze),
-        .Q(s_level_out_d1_cdc_to),
-        .R(1'b0));
-  (* ASYNC_REG *) 
-  (* XILINX_LEGACY_PRIM = "FDR" *) 
-  (* box_type = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(s_level_out_d1_cdc_to),
-        .Q(s_level_out_d2),
-        .R(1'b0));
-  (* ASYNC_REG *) 
-  (* XILINX_LEGACY_PRIM = "FDR" *) 
-  (* box_type = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(s_level_out_d2),
-        .Q(s_level_out_d3),
-        .R(1'b0));
-  (* ASYNC_REG *) 
-  (* XILINX_LEGACY_PRIM = "FDR" *) 
-  (* box_type = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(s_level_out_d3),
-        .Q(Freeze_int),
-        .R(1'b0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFF08)) 
-    \INFERRED_GEN.icount_out[31]_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[32]_0 ),
-        .I1(\TCSR0_GENERATE[24].TCSR0_FF_I ),
-        .I2(Freeze_int),
-        .I3(\INFERRED_GEN.icount_out_reg[32]_1 ),
-        .I4(\TCSR0_GENERATE[31].TCSR0_FF_I ),
-        .I5(read_Mux_In[2]),
-        .O(E));
-  LUT2 #(
-    .INIT(4'hE)) 
-    \INFERRED_GEN.icount_out[31]_i_1__0 
-       (.I0(load_Counter_Reg),
-        .I1(counter_En),
-        .O(\INFERRED_GEN.icount_out_reg[0] ));
-  LUT6 #(
-    .INIT(64'h8888888888F88888)) 
-    \INFERRED_GEN.icount_out[31]_i_4 
-       (.I0(\TCSR0_GENERATE[27].TCSR0_FF_I ),
-        .I1(\INFERRED_GEN.icount_out[31]_i_7_n_0 ),
-        .I2(\TCSR1_GENERATE[22].TCSR1_FF_I ),
-        .I3(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
-        .I4(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I5(Freeze_int),
-        .O(counter_En));
-  (* SOFT_HLUTNM = "soft_lutpair114" *) 
-  LUT4 #(
-    .INIT(16'h4000)) 
-    \INFERRED_GEN.icount_out[31]_i_7 
-       (.I0(Freeze_int),
-        .I1(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
-        .I2(\TCSR0_GENERATE[24].TCSR0_FF_I ),
-        .I3(generateOutPre0),
-        .O(\INFERRED_GEN.icount_out[31]_i_7_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFC0C0C0AA808080)) 
-    \INFERRED_GEN.icount_out[32]_i_2 
-       (.I0(\TCSR0_GENERATE[20].TCSR0_FF_I ),
-        .I1(\TCSR0_GENERATE[27].TCSR0_FF_I ),
-        .I2(\INFERRED_GEN.icount_out[31]_i_7_n_0 ),
-        .I3(\TCSR1_GENERATE[22].TCSR1_FF_I ),
-        .I4(\INFERRED_GEN.icount_out[32]_i_4_n_0 ),
-        .I5(\TCSR1_GENERATE[30].TCSR1_FF_I ),
-        .O(\INFERRED_GEN.icount_out_reg[32] ));
-  (* SOFT_HLUTNM = "soft_lutpair114" *) 
-  LUT3 #(
-    .INIT(8'h04)) 
-    \INFERRED_GEN.icount_out[32]_i_4 
-       (.I0(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
-        .I1(\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .I2(Freeze_int),
-        .O(\INFERRED_GEN.icount_out[32]_i_4_n_0 ));
-  LUT5 #(
-    .INIT(32'h56AA9AAA)) 
-    icount_out0_carry_i_5
-       (.I0(\INFERRED_GEN.icount_out_reg[1] [0]),
-        .I1(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
-        .I2(read_Mux_In[0]),
-        .I3(counter_En),
-        .I4(read_Mux_In[1]),
-        .O(S));
-  LUT5 #(
-    .INIT(32'h9AAAAAAA)) 
-    icount_out0_carry_i_5__0
-       (.I0(\INFERRED_GEN.icount_out_reg[1] [1]),
-        .I1(Freeze_int),
-        .I2(\TCSR0_GENERATE[24].TCSR0_FF_I ),
-        .I3(\INFERRED_GEN.icount_out_reg[32]_0 ),
-        .I4(read_Mux_In[1]),
-        .O(\INFERRED_GEN.icount_out_reg[4] ));
-endmodule
-
-(* ORIG_REF_NAME = "cdc_sync" *) 
-module design_1_PmodWIFI_0_0_cdc_sync__parameterized4
+module design_1_PmodWIFI_0_0_cdc_sync__parameterized2
    (captureTrig0_d0,
-    \TCSR0_GENERATE[28].TCSR0_FF_I ,
+    read_Mux_In,
     capturetrig0,
     s_axi_aclk);
   output captureTrig0_d0;
-  input [0:0]\TCSR0_GENERATE[28].TCSR0_FF_I ;
+  input [0:0]read_Mux_In;
   input capturetrig0;
   input s_axi_aclk;
 
   wire CaptureTrig0_int;
-  wire [0:0]\TCSR0_GENERATE[28].TCSR0_FF_I ;
   wire captureTrig0_d0;
   wire capturetrig0;
+  wire [0:0]read_Mux_In;
   wire s_axi_aclk;
   wire s_level_out_d1_cdc_to;
   wire s_level_out_d2;
@@ -12743,26 +12062,26 @@ module design_1_PmodWIFI_0_0_cdc_sync__parameterized4
   LUT2 #(
     .INIT(4'h8)) 
     captureTrig0_d_i_1
-       (.I0(\TCSR0_GENERATE[28].TCSR0_FF_I ),
+       (.I0(read_Mux_In),
         .I1(CaptureTrig0_int),
         .O(captureTrig0_d0));
 endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
-module design_1_PmodWIFI_0_0_cdc_sync__parameterized5
+module design_1_PmodWIFI_0_0_cdc_sync__parameterized2_1
    (captureTrig1_d0,
-    \TCSR1_GENERATE[28].TCSR1_FF_I ,
+    read_Mux_In,
     capturetrig1,
     s_axi_aclk);
   output captureTrig1_d0;
-  input [0:0]\TCSR1_GENERATE[28].TCSR1_FF_I ;
+  input [0:0]read_Mux_In;
   input capturetrig1;
   input s_axi_aclk;
 
   wire CaptureTrig1_int;
-  wire [0:0]\TCSR1_GENERATE[28].TCSR1_FF_I ;
   wire captureTrig1_d0;
   wire capturetrig1;
+  wire [0:0]read_Mux_In;
   wire s_axi_aclk;
   wire s_level_out_d1_cdc_to;
   wire s_level_out_d2;
@@ -12815,19 +12134,211 @@ module design_1_PmodWIFI_0_0_cdc_sync__parameterized5
   LUT2 #(
     .INIT(4'h8)) 
     captureTrig1_d_i_1
-       (.I0(\TCSR1_GENERATE[28].TCSR1_FF_I ),
+       (.I0(read_Mux_In),
         .I1(CaptureTrig1_int),
         .O(captureTrig1_d0));
 endmodule
 
-(* ORIG_REF_NAME = "count_module" *) 
+(* ORIG_REF_NAME = "cdc_sync" *) 
+module design_1_PmodWIFI_0_0_cdc_sync__parameterized2_2
+   (E,
+    \INFERRED_GEN.icount_out_reg[0] ,
+    S,
+    \INFERRED_GEN.icount_out_reg[4] ,
+    \TCSR0_GENERATE[20].TCSR0_FF_I ,
+    \TCSR0_GENERATE[24].TCSR0_FF_I ,
+    counter_TC,
+    read_Mux_In,
+    generateOutPre0,
+    \TCSR1_GENERATE[24].TCSR1_FF_I ,
+    Load_Counter_Reg030_out,
+    Load_Counter_Reg031_out,
+    Load_Counter_Reg0__0,
+    Load_Counter_Reg028_out,
+    \INFERRED_GEN.icount_out_reg[1] ,
+    freeze,
+    s_axi_aclk);
+  output [0:0]E;
+  output [0:0]\INFERRED_GEN.icount_out_reg[0] ;
+  output [0:0]S;
+  output [0:0]\INFERRED_GEN.icount_out_reg[4] ;
+  input \TCSR0_GENERATE[20].TCSR0_FF_I ;
+  input \TCSR0_GENERATE[24].TCSR0_FF_I ;
+  input [0:1]counter_TC;
+  input [7:0]read_Mux_In;
+  input generateOutPre0;
+  input \TCSR1_GENERATE[24].TCSR1_FF_I ;
+  input Load_Counter_Reg030_out;
+  input Load_Counter_Reg031_out;
+  input Load_Counter_Reg0__0;
+  input Load_Counter_Reg028_out;
+  input [1:0]\INFERRED_GEN.icount_out_reg[1] ;
+  input freeze;
+  input s_axi_aclk;
+
+  wire Counter_En041_out__2;
+  wire Counter_En043_out__0;
+  wire Counter_En045_out__1;
+  wire Counter_En0__4;
+  wire [0:0]E;
+  wire Freeze_int;
+  wire [0:0]\INFERRED_GEN.icount_out_reg[0] ;
+  wire [1:0]\INFERRED_GEN.icount_out_reg[1] ;
+  wire [0:0]\INFERRED_GEN.icount_out_reg[4] ;
+  wire Load_Counter_Reg028_out;
+  wire Load_Counter_Reg030_out;
+  wire Load_Counter_Reg031_out;
+  wire Load_Counter_Reg0__0;
+  wire [0:0]S;
+  wire \TCSR0_GENERATE[20].TCSR0_FF_I ;
+  wire \TCSR0_GENERATE[24].TCSR0_FF_I ;
+  wire \TCSR1_GENERATE[24].TCSR1_FF_I ;
+  wire [0:1]counter_En;
+  wire [0:1]counter_TC;
+  wire freeze;
+  wire generateOutPre0;
+  wire [7:0]read_Mux_In;
+  wire s_axi_aclk;
+  wire s_level_out_d1_cdc_to;
+  wire s_level_out_d2;
+  wire s_level_out_d3;
+
+  (* ASYNC_REG *) 
+  (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to 
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .D(freeze),
+        .Q(s_level_out_d1_cdc_to),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2 
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .D(s_level_out_d1_cdc_to),
+        .Q(s_level_out_d2),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .D(s_level_out_d2),
+        .Q(s_level_out_d3),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* box_type = "PRIMITIVE" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .D(s_level_out_d3),
+        .Q(Freeze_int),
+        .R(1'b0));
+  LUT5 #(
+    .INIT(32'hFCFFFCAA)) 
+    \INFERRED_GEN.icount_out[31]_i_1 
+       (.I0(Load_Counter_Reg030_out),
+        .I1(Load_Counter_Reg031_out),
+        .I2(Counter_En043_out__0),
+        .I3(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .I4(Counter_En041_out__2),
+        .O(E));
+  LUT5 #(
+    .INIT(32'hFCFFFCAA)) 
+    \INFERRED_GEN.icount_out[31]_i_1__0 
+       (.I0(Load_Counter_Reg0__0),
+        .I1(Load_Counter_Reg028_out),
+        .I2(Counter_En045_out__1),
+        .I3(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .I4(Counter_En0__4),
+        .O(\INFERRED_GEN.icount_out_reg[0] ));
+  LUT5 #(
+    .INIT(32'h00FB0000)) 
+    \INFERRED_GEN.icount_out[31]_i_5 
+       (.I0(read_Mux_In[4]),
+        .I1(counter_TC[1]),
+        .I2(read_Mux_In[6]),
+        .I3(Freeze_int),
+        .I4(\TCSR0_GENERATE[24].TCSR0_FF_I ),
+        .O(Counter_En043_out__0));
+  LUT6 #(
+    .INIT(64'h4040404040004040)) 
+    \INFERRED_GEN.icount_out[31]_i_5__0 
+       (.I0(Freeze_int),
+        .I1(\TCSR0_GENERATE[24].TCSR0_FF_I ),
+        .I2(generateOutPre0),
+        .I3(read_Mux_In[6]),
+        .I4(counter_TC[1]),
+        .I5(read_Mux_In[4]),
+        .O(Counter_En045_out__1));
+  LUT6 #(
+    .INIT(64'h4444444444444404)) 
+    \INFERRED_GEN.icount_out[31]_i_6 
+       (.I0(Freeze_int),
+        .I1(\TCSR0_GENERATE[24].TCSR0_FF_I ),
+        .I2(counter_TC[0]),
+        .I3(read_Mux_In[7]),
+        .I4(read_Mux_In[6]),
+        .I5(read_Mux_In[4]),
+        .O(Counter_En041_out__2));
+  LUT6 #(
+    .INIT(64'h2222222222202222)) 
+    \INFERRED_GEN.icount_out[31]_i_6__0 
+       (.I0(\TCSR1_GENERATE[24].TCSR1_FF_I ),
+        .I1(Freeze_int),
+        .I2(read_Mux_In[3]),
+        .I3(read_Mux_In[2]),
+        .I4(counter_TC[1]),
+        .I5(read_Mux_In[0]),
+        .O(Counter_En0__4));
+  LUT3 #(
+    .INIT(8'h6A)) 
+    icount_out0_carry_i_5
+       (.I0(\INFERRED_GEN.icount_out_reg[1] [1]),
+        .I1(counter_En[0]),
+        .I2(read_Mux_In[5]),
+        .O(S));
+  LUT5 #(
+    .INIT(32'h6A666AAA)) 
+    icount_out0_carry_i_5__0
+       (.I0(\INFERRED_GEN.icount_out_reg[1] [0]),
+        .I1(counter_En[1]),
+        .I2(read_Mux_In[5]),
+        .I3(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .I4(read_Mux_In[1]),
+        .O(\INFERRED_GEN.icount_out_reg[4] ));
+  MUXF7 icount_out0_carry_i_6
+       (.I0(Counter_En041_out__2),
+        .I1(Counter_En043_out__0),
+        .O(counter_En[0]),
+        .S(\TCSR0_GENERATE[20].TCSR0_FF_I ));
+  MUXF7 icount_out0_carry_i_6__0
+       (.I0(Counter_En0__4),
+        .I1(Counter_En045_out__1),
+        .O(counter_En[1]),
+        .S(\TCSR0_GENERATE[20].TCSR0_FF_I ));
+endmodule
+
 module design_1_PmodWIFI_0_0_count_module
    (\INFERRED_GEN.icount_out_reg[31] ,
     read_Mux_In,
-    generateOutPre00,
+    generateOutPre0_reg,
     counter_TC,
     s_axi_aresetn_0,
-    CE,
+    \TCSR0_GENERATE[27].TCSR0_FF_I ,
     D_1,
     s_axi_aclk,
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] ,
@@ -12862,16 +12373,16 @@ module design_1_PmodWIFI_0_0_count_module
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_28 ,
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_29 ,
     S,
-    Q,
     load_Counter_Reg,
+    Q,
     E,
     s_axi_aresetn);
-  output [53:0]\INFERRED_GEN.icount_out_reg[31] ;
-  output [9:0]read_Mux_In;
-  output generateOutPre00;
+  output [52:0]\INFERRED_GEN.icount_out_reg[31] ;
+  output [10:0]read_Mux_In;
+  output generateOutPre0_reg;
   output [0:0]counter_TC;
   input s_axi_aresetn_0;
-  input CE;
+  input \TCSR0_GENERATE[27].TCSR0_FF_I ;
   input D_1;
   input s_axi_aclk;
   input \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] ;
@@ -12906,12 +12417,11 @@ module design_1_PmodWIFI_0_0_count_module
   input \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_28 ;
   input \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_29 ;
   input [0:0]S;
-  input [0:0]Q;
   input [0:0]load_Counter_Reg;
+  input [0:0]Q;
   input [0:0]E;
   input s_axi_aresetn;
 
-  wire CE;
   wire D_1;
   wire [0:0]E;
   wire \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] ;
@@ -12945,25 +12455,26 @@ module design_1_PmodWIFI_0_0_count_module
   wire \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_7 ;
   wire \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_8 ;
   wire \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_9 ;
-  wire [53:0]\INFERRED_GEN.icount_out_reg[31] ;
+  wire [52:0]\INFERRED_GEN.icount_out_reg[31] ;
   wire [0:0]Q;
   wire [0:0]S;
+  wire \TCSR0_GENERATE[27].TCSR0_FF_I ;
   wire [0:0]counter_TC;
-  wire generateOutPre00;
+  wire generateOutPre0_reg;
   wire [0:0]load_Counter_Reg;
-  wire [9:0]read_Mux_In;
+  wire [10:0]read_Mux_In;
   wire s_axi_aclk;
   wire s_axi_aresetn;
   wire s_axi_aresetn_0;
 
-  design_1_PmodWIFI_0_0_axi_timer_v2_0_12_counter_f_1 COUNTER_I
+  design_1_PmodWIFI_0_0_axi_timer_v2_0_15_counter_f_3 COUNTER_I
        (.E(E),
         .\LOAD_REG_GEN[0].LOAD_REG_I (\INFERRED_GEN.icount_out_reg[31] [31:0]),
-        .\LOAD_REG_GEN[0].LOAD_REG_I_0 (\INFERRED_GEN.icount_out_reg[31] [53:32]),
+        .\LOAD_REG_GEN[0].LOAD_REG_I_0 (\INFERRED_GEN.icount_out_reg[31] [52:32]),
         .Q(Q),
         .S(S),
         .counter_TC(counter_TC),
-        .generateOutPre00(generateOutPre00),
+        .generateOutPre0_reg(generateOutPre0_reg),
         .load_Counter_Reg(load_Counter_Reg),
         .read_Mux_In(read_Mux_In),
         .s_axi_aclk(s_axi_aclk),
@@ -12977,9 +12488,9 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[0].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(D_1),
-        .Q(\INFERRED_GEN.icount_out_reg[31] [53]),
+        .Q(\INFERRED_GEN.icount_out_reg[31] [52]),
         .R(s_axi_aresetn_0));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -12989,9 +12500,9 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[10].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_8 ),
-        .Q(\INFERRED_GEN.icount_out_reg[31] [43]),
+        .Q(\INFERRED_GEN.icount_out_reg[31] [42]),
         .R(s_axi_aresetn_0));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -13001,9 +12512,9 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[11].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_9 ),
-        .Q(\INFERRED_GEN.icount_out_reg[31] [42]),
+        .Q(\INFERRED_GEN.icount_out_reg[31] [41]),
         .R(s_axi_aresetn_0));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -13013,9 +12524,9 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[12].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_10 ),
-        .Q(\INFERRED_GEN.icount_out_reg[31] [41]),
+        .Q(\INFERRED_GEN.icount_out_reg[31] [40]),
         .R(s_axi_aresetn_0));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -13025,9 +12536,9 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[13].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_11 ),
-        .Q(\INFERRED_GEN.icount_out_reg[31] [40]),
+        .Q(\INFERRED_GEN.icount_out_reg[31] [39]),
         .R(s_axi_aresetn_0));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -13037,9 +12548,9 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[14].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_12 ),
-        .Q(\INFERRED_GEN.icount_out_reg[31] [39]),
+        .Q(\INFERRED_GEN.icount_out_reg[31] [38]),
         .R(s_axi_aresetn_0));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -13049,9 +12560,9 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[15].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_13 ),
-        .Q(\INFERRED_GEN.icount_out_reg[31] [38]),
+        .Q(\INFERRED_GEN.icount_out_reg[31] [37]),
         .R(s_axi_aresetn_0));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -13061,9 +12572,9 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[16].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_14 ),
-        .Q(\INFERRED_GEN.icount_out_reg[31] [37]),
+        .Q(\INFERRED_GEN.icount_out_reg[31] [36]),
         .R(s_axi_aresetn_0));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -13073,9 +12584,9 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[17].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_15 ),
-        .Q(\INFERRED_GEN.icount_out_reg[31] [36]),
+        .Q(\INFERRED_GEN.icount_out_reg[31] [35]),
         .R(s_axi_aresetn_0));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -13085,9 +12596,9 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[18].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_16 ),
-        .Q(\INFERRED_GEN.icount_out_reg[31] [35]),
+        .Q(\INFERRED_GEN.icount_out_reg[31] [34]),
         .R(s_axi_aresetn_0));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -13097,9 +12608,9 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[19].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_17 ),
-        .Q(\INFERRED_GEN.icount_out_reg[31] [34]),
+        .Q(\INFERRED_GEN.icount_out_reg[31] [33]),
         .R(s_axi_aresetn_0));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -13109,9 +12620,9 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[1].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] ),
-        .Q(\INFERRED_GEN.icount_out_reg[31] [52]),
+        .Q(\INFERRED_GEN.icount_out_reg[31] [51]),
         .R(s_axi_aresetn_0));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -13121,9 +12632,9 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[20].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_18 ),
-        .Q(\INFERRED_GEN.icount_out_reg[31] [33]),
+        .Q(\INFERRED_GEN.icount_out_reg[31] [32]),
         .R(s_axi_aresetn_0));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -13133,9 +12644,9 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[21].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_19 ),
-        .Q(read_Mux_In[9]),
+        .Q(read_Mux_In[10]),
         .R(s_axi_aresetn_0));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -13145,9 +12656,9 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[22].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_20 ),
-        .Q(read_Mux_In[8]),
+        .Q(read_Mux_In[9]),
         .R(s_axi_aresetn_0));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -13157,9 +12668,9 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[23].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_21 ),
-        .Q(read_Mux_In[7]),
+        .Q(read_Mux_In[8]),
         .R(s_axi_aresetn_0));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -13169,9 +12680,9 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[24].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_22 ),
-        .Q(read_Mux_In[6]),
+        .Q(read_Mux_In[7]),
         .R(s_axi_aresetn_0));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -13181,9 +12692,9 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[25].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_23 ),
-        .Q(read_Mux_In[5]),
+        .Q(read_Mux_In[6]),
         .R(s_axi_aresetn_0));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -13193,9 +12704,9 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[26].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_24 ),
-        .Q(read_Mux_In[4]),
+        .Q(read_Mux_In[5]),
         .R(s_axi_aresetn_0));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -13205,9 +12716,9 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[27].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_25 ),
-        .Q(read_Mux_In[3]),
+        .Q(read_Mux_In[4]),
         .R(s_axi_aresetn_0));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -13217,9 +12728,9 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[28].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_26 ),
-        .Q(\INFERRED_GEN.icount_out_reg[31] [32]),
+        .Q(read_Mux_In[3]),
         .R(s_axi_aresetn_0));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -13229,7 +12740,7 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[29].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_27 ),
         .Q(read_Mux_In[2]),
         .R(s_axi_aresetn_0));
@@ -13241,9 +12752,9 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[2].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[31] [51]),
+        .Q(\INFERRED_GEN.icount_out_reg[31] [50]),
         .R(s_axi_aresetn_0));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -13253,7 +12764,7 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[30].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_28 ),
         .Q(read_Mux_In[1]),
         .R(s_axi_aresetn_0));
@@ -13265,7 +12776,7 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[31].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_29 ),
         .Q(read_Mux_In[0]),
         .R(s_axi_aresetn_0));
@@ -13277,9 +12788,9 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[3].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_1 ),
-        .Q(\INFERRED_GEN.icount_out_reg[31] [50]),
+        .Q(\INFERRED_GEN.icount_out_reg[31] [49]),
         .R(s_axi_aresetn_0));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -13289,9 +12800,9 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[4].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_2 ),
-        .Q(\INFERRED_GEN.icount_out_reg[31] [49]),
+        .Q(\INFERRED_GEN.icount_out_reg[31] [48]),
         .R(s_axi_aresetn_0));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -13301,9 +12812,9 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[5].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_3 ),
-        .Q(\INFERRED_GEN.icount_out_reg[31] [48]),
+        .Q(\INFERRED_GEN.icount_out_reg[31] [47]),
         .R(s_axi_aresetn_0));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -13313,9 +12824,9 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[6].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_4 ),
-        .Q(\INFERRED_GEN.icount_out_reg[31] [47]),
+        .Q(\INFERRED_GEN.icount_out_reg[31] [46]),
         .R(s_axi_aresetn_0));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -13325,9 +12836,9 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[7].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_5 ),
-        .Q(\INFERRED_GEN.icount_out_reg[31] [46]),
+        .Q(\INFERRED_GEN.icount_out_reg[31] [45]),
         .R(s_axi_aresetn_0));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -13337,9 +12848,9 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[8].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_6 ),
-        .Q(\INFERRED_GEN.icount_out_reg[31] [45]),
+        .Q(\INFERRED_GEN.icount_out_reg[31] [44]),
         .R(s_axi_aresetn_0));
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -13349,9 +12860,9 @@ module design_1_PmodWIFI_0_0_count_module
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[9].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[27].TCSR0_FF_I ),
         .D(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_7 ),
-        .Q(\INFERRED_GEN.icount_out_reg[31] [44]),
+        .Q(\INFERRED_GEN.icount_out_reg[31] [43]),
         .R(s_axi_aresetn_0));
 endmodule
 
@@ -13359,207 +12870,201 @@ endmodule
 module design_1_PmodWIFI_0_0_count_module_0
    (\INFERRED_GEN.icount_out_reg[31] ,
     Q,
-    \s_axi_rdata_i_reg[31] ,
-    \s_axi_rdata_i_reg[30] ,
-    \s_axi_rdata_i_reg[29] ,
-    \s_axi_rdata_i_reg[28] ,
-    \s_axi_rdata_i_reg[27] ,
-    \s_axi_rdata_i_reg[26] ,
-    \s_axi_rdata_i_reg[25] ,
-    \s_axi_rdata_i_reg[24] ,
-    \s_axi_rdata_i_reg[23] ,
-    \s_axi_rdata_i_reg[22] ,
-    \s_axi_rdata_i_reg[21] ,
-    \s_axi_rdata_i_reg[20] ,
-    \s_axi_rdata_i_reg[19] ,
-    \s_axi_rdata_i_reg[18] ,
-    \s_axi_rdata_i_reg[17] ,
-    \s_axi_rdata_i_reg[16] ,
-    \s_axi_rdata_i_reg[15] ,
-    \s_axi_rdata_i_reg[14] ,
-    \s_axi_rdata_i_reg[13] ,
-    \s_axi_rdata_i_reg[12] ,
-    \s_axi_rdata_i_reg[11] ,
-    \s_axi_rdata_i_reg[10] ,
-    \s_axi_rdata_i_reg[9] ,
-    \s_axi_rdata_i_reg[8] ,
-    \s_axi_rdata_i_reg[7] ,
-    \s_axi_rdata_i_reg[6] ,
-    \s_axi_rdata_i_reg[5] ,
-    \s_axi_rdata_i_reg[4] ,
-    \s_axi_rdata_i_reg[3] ,
-    \s_axi_rdata_i_reg[2] ,
-    \s_axi_rdata_i_reg[1] ,
     \s_axi_rdata_i_reg[0] ,
-    generateOutPre10,
+    \s_axi_rdata_i_reg[1] ,
+    \s_axi_rdata_i_reg[2] ,
+    \s_axi_rdata_i_reg[3] ,
+    \s_axi_rdata_i_reg[4] ,
+    \s_axi_rdata_i_reg[5] ,
+    \s_axi_rdata_i_reg[6] ,
+    \s_axi_rdata_i_reg[7] ,
+    \s_axi_rdata_i_reg[8] ,
+    \s_axi_rdata_i_reg[9] ,
+    \s_axi_rdata_i_reg[10] ,
+    \s_axi_rdata_i_reg[11] ,
+    \s_axi_rdata_i_reg[12] ,
+    \s_axi_rdata_i_reg[13] ,
+    \s_axi_rdata_i_reg[14] ,
+    \s_axi_rdata_i_reg[15] ,
+    \s_axi_rdata_i_reg[16] ,
+    \s_axi_rdata_i_reg[17] ,
+    \s_axi_rdata_i_reg[18] ,
+    \s_axi_rdata_i_reg[19] ,
+    \s_axi_rdata_i_reg[20] ,
+    \s_axi_rdata_i_reg[21] ,
+    \s_axi_rdata_i_reg[22] ,
+    \s_axi_rdata_i_reg[23] ,
+    \s_axi_rdata_i_reg[24] ,
+    \s_axi_rdata_i_reg[25] ,
+    \s_axi_rdata_i_reg[26] ,
+    \s_axi_rdata_i_reg[27] ,
+    \s_axi_rdata_i_reg[28] ,
+    \s_axi_rdata_i_reg[29] ,
+    \s_axi_rdata_i_reg[30] ,
+    \s_axi_rdata_i_reg[31] ,
+    generateOutPre1_reg,
     counter_TC,
-    CE,
+    \TCSR0_GENERATE[20].TCSR0_FF_I ,
     D_2,
     s_axi_aclk,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_1 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_2 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_3 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_4 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_5 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_6 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_7 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_8 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_9 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_10 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_11 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_12 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_13 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_14 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_15 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_16 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_17 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_18 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_19 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_20 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_21 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_22 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_23 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_24 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_25 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_26 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_27 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_28 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_29 ,
+    \INFERRED_GEN.icount_out_reg[30] ,
+    \INFERRED_GEN.icount_out_reg[29] ,
+    \INFERRED_GEN.icount_out_reg[28] ,
+    \INFERRED_GEN.icount_out_reg[27] ,
+    \INFERRED_GEN.icount_out_reg[26] ,
+    \INFERRED_GEN.icount_out_reg[25] ,
+    \INFERRED_GEN.icount_out_reg[24] ,
+    \INFERRED_GEN.icount_out_reg[23] ,
+    \INFERRED_GEN.icount_out_reg[22] ,
+    \INFERRED_GEN.icount_out_reg[21] ,
+    \INFERRED_GEN.icount_out_reg[20] ,
+    \INFERRED_GEN.icount_out_reg[19] ,
+    \INFERRED_GEN.icount_out_reg[18] ,
+    \INFERRED_GEN.icount_out_reg[17] ,
+    \INFERRED_GEN.icount_out_reg[16] ,
+    \INFERRED_GEN.icount_out_reg[15] ,
+    \INFERRED_GEN.icount_out_reg[14] ,
+    \INFERRED_GEN.icount_out_reg[13] ,
+    \INFERRED_GEN.icount_out_reg[12] ,
+    \INFERRED_GEN.icount_out_reg[11] ,
+    \INFERRED_GEN.icount_out_reg[10] ,
+    \INFERRED_GEN.icount_out_reg[9] ,
+    \INFERRED_GEN.icount_out_reg[8] ,
+    \INFERRED_GEN.icount_out_reg[7] ,
+    \INFERRED_GEN.icount_out_reg[6] ,
+    \INFERRED_GEN.icount_out_reg[5] ,
+    \INFERRED_GEN.icount_out_reg[4] ,
+    \INFERRED_GEN.icount_out_reg[3] ,
+    \INFERRED_GEN.icount_out_reg[2] ,
+    \INFERRED_GEN.icount_out_reg[1] ,
+    \INFERRED_GEN.icount_out_reg[0] ,
     S,
+    load_Counter_Reg,
+    s_axi_aresetn,
     bus2ip_rdce,
     \INFERRED_GEN.icount_out_reg[31]_0 ,
-    s_axi_aresetn,
-    load_Counter_Reg,
     \counter_TC_Reg_reg[1] ,
-    E,
-    \TCSR0_GENERATE[20].TCSR0_FF_I ,
-    counter_En);
+    E);
   output \INFERRED_GEN.icount_out_reg[31] ;
   output [31:0]Q;
-  output \s_axi_rdata_i_reg[31] ;
-  output \s_axi_rdata_i_reg[30] ;
-  output \s_axi_rdata_i_reg[29] ;
-  output \s_axi_rdata_i_reg[28] ;
-  output \s_axi_rdata_i_reg[27] ;
-  output \s_axi_rdata_i_reg[26] ;
-  output \s_axi_rdata_i_reg[25] ;
-  output \s_axi_rdata_i_reg[24] ;
-  output \s_axi_rdata_i_reg[23] ;
-  output \s_axi_rdata_i_reg[22] ;
-  output \s_axi_rdata_i_reg[21] ;
-  output \s_axi_rdata_i_reg[20] ;
-  output \s_axi_rdata_i_reg[19] ;
-  output \s_axi_rdata_i_reg[18] ;
-  output \s_axi_rdata_i_reg[17] ;
-  output \s_axi_rdata_i_reg[16] ;
-  output \s_axi_rdata_i_reg[15] ;
-  output \s_axi_rdata_i_reg[14] ;
-  output \s_axi_rdata_i_reg[13] ;
-  output \s_axi_rdata_i_reg[12] ;
-  output \s_axi_rdata_i_reg[11] ;
-  output \s_axi_rdata_i_reg[10] ;
-  output \s_axi_rdata_i_reg[9] ;
-  output \s_axi_rdata_i_reg[8] ;
-  output \s_axi_rdata_i_reg[7] ;
-  output \s_axi_rdata_i_reg[6] ;
-  output \s_axi_rdata_i_reg[5] ;
-  output \s_axi_rdata_i_reg[4] ;
-  output \s_axi_rdata_i_reg[3] ;
-  output \s_axi_rdata_i_reg[2] ;
-  output \s_axi_rdata_i_reg[1] ;
   output \s_axi_rdata_i_reg[0] ;
-  output generateOutPre10;
+  output \s_axi_rdata_i_reg[1] ;
+  output \s_axi_rdata_i_reg[2] ;
+  output \s_axi_rdata_i_reg[3] ;
+  output \s_axi_rdata_i_reg[4] ;
+  output \s_axi_rdata_i_reg[5] ;
+  output \s_axi_rdata_i_reg[6] ;
+  output \s_axi_rdata_i_reg[7] ;
+  output \s_axi_rdata_i_reg[8] ;
+  output \s_axi_rdata_i_reg[9] ;
+  output \s_axi_rdata_i_reg[10] ;
+  output \s_axi_rdata_i_reg[11] ;
+  output \s_axi_rdata_i_reg[12] ;
+  output \s_axi_rdata_i_reg[13] ;
+  output \s_axi_rdata_i_reg[14] ;
+  output \s_axi_rdata_i_reg[15] ;
+  output \s_axi_rdata_i_reg[16] ;
+  output \s_axi_rdata_i_reg[17] ;
+  output \s_axi_rdata_i_reg[18] ;
+  output \s_axi_rdata_i_reg[19] ;
+  output \s_axi_rdata_i_reg[20] ;
+  output \s_axi_rdata_i_reg[21] ;
+  output \s_axi_rdata_i_reg[22] ;
+  output \s_axi_rdata_i_reg[23] ;
+  output \s_axi_rdata_i_reg[24] ;
+  output \s_axi_rdata_i_reg[25] ;
+  output \s_axi_rdata_i_reg[26] ;
+  output \s_axi_rdata_i_reg[27] ;
+  output \s_axi_rdata_i_reg[28] ;
+  output \s_axi_rdata_i_reg[29] ;
+  output \s_axi_rdata_i_reg[30] ;
+  output \s_axi_rdata_i_reg[31] ;
+  output generateOutPre1_reg;
   output [0:0]counter_TC;
-  input CE;
+  input \TCSR0_GENERATE[20].TCSR0_FF_I ;
   input D_2;
   input s_axi_aclk;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_1 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_2 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_3 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_4 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_5 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_6 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_7 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_8 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_9 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_10 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_11 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_12 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_13 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_14 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_15 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_16 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_17 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_18 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_19 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_20 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_21 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_22 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_23 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_24 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_25 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_26 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_27 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_28 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_29 ;
+  input \INFERRED_GEN.icount_out_reg[30] ;
+  input \INFERRED_GEN.icount_out_reg[29] ;
+  input \INFERRED_GEN.icount_out_reg[28] ;
+  input \INFERRED_GEN.icount_out_reg[27] ;
+  input \INFERRED_GEN.icount_out_reg[26] ;
+  input \INFERRED_GEN.icount_out_reg[25] ;
+  input \INFERRED_GEN.icount_out_reg[24] ;
+  input \INFERRED_GEN.icount_out_reg[23] ;
+  input \INFERRED_GEN.icount_out_reg[22] ;
+  input \INFERRED_GEN.icount_out_reg[21] ;
+  input \INFERRED_GEN.icount_out_reg[20] ;
+  input \INFERRED_GEN.icount_out_reg[19] ;
+  input \INFERRED_GEN.icount_out_reg[18] ;
+  input \INFERRED_GEN.icount_out_reg[17] ;
+  input \INFERRED_GEN.icount_out_reg[16] ;
+  input \INFERRED_GEN.icount_out_reg[15] ;
+  input \INFERRED_GEN.icount_out_reg[14] ;
+  input \INFERRED_GEN.icount_out_reg[13] ;
+  input \INFERRED_GEN.icount_out_reg[12] ;
+  input \INFERRED_GEN.icount_out_reg[11] ;
+  input \INFERRED_GEN.icount_out_reg[10] ;
+  input \INFERRED_GEN.icount_out_reg[9] ;
+  input \INFERRED_GEN.icount_out_reg[8] ;
+  input \INFERRED_GEN.icount_out_reg[7] ;
+  input \INFERRED_GEN.icount_out_reg[6] ;
+  input \INFERRED_GEN.icount_out_reg[5] ;
+  input \INFERRED_GEN.icount_out_reg[4] ;
+  input \INFERRED_GEN.icount_out_reg[3] ;
+  input \INFERRED_GEN.icount_out_reg[2] ;
+  input \INFERRED_GEN.icount_out_reg[1] ;
+  input \INFERRED_GEN.icount_out_reg[0] ;
   input [0:0]S;
+  input [0:0]load_Counter_Reg;
+  input s_axi_aresetn;
   input [2:0]bus2ip_rdce;
   input [31:0]\INFERRED_GEN.icount_out_reg[31]_0 ;
-  input s_axi_aresetn;
-  input [0:0]load_Counter_Reg;
   input [0:0]\counter_TC_Reg_reg[1] ;
   input [0:0]E;
-  input \TCSR0_GENERATE[20].TCSR0_FF_I ;
-  input [0:0]counter_En;
 
-  wire CE;
   wire D_2;
   wire [0:0]E;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_1 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_10 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_11 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_12 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_13 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_14 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_15 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_16 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_17 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_18 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_19 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_2 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_20 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_21 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_22 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_23 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_24 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_25 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_26 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_27 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_28 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_29 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_3 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_4 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_5 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_6 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_7 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_8 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_9 ;
+  wire \INFERRED_GEN.icount_out_reg[0] ;
+  wire \INFERRED_GEN.icount_out_reg[10] ;
+  wire \INFERRED_GEN.icount_out_reg[11] ;
+  wire \INFERRED_GEN.icount_out_reg[12] ;
+  wire \INFERRED_GEN.icount_out_reg[13] ;
+  wire \INFERRED_GEN.icount_out_reg[14] ;
+  wire \INFERRED_GEN.icount_out_reg[15] ;
+  wire \INFERRED_GEN.icount_out_reg[16] ;
+  wire \INFERRED_GEN.icount_out_reg[17] ;
+  wire \INFERRED_GEN.icount_out_reg[18] ;
+  wire \INFERRED_GEN.icount_out_reg[19] ;
+  wire \INFERRED_GEN.icount_out_reg[1] ;
+  wire \INFERRED_GEN.icount_out_reg[20] ;
+  wire \INFERRED_GEN.icount_out_reg[21] ;
+  wire \INFERRED_GEN.icount_out_reg[22] ;
+  wire \INFERRED_GEN.icount_out_reg[23] ;
+  wire \INFERRED_GEN.icount_out_reg[24] ;
+  wire \INFERRED_GEN.icount_out_reg[25] ;
+  wire \INFERRED_GEN.icount_out_reg[26] ;
+  wire \INFERRED_GEN.icount_out_reg[27] ;
+  wire \INFERRED_GEN.icount_out_reg[28] ;
+  wire \INFERRED_GEN.icount_out_reg[29] ;
+  wire \INFERRED_GEN.icount_out_reg[2] ;
+  wire \INFERRED_GEN.icount_out_reg[30] ;
   wire \INFERRED_GEN.icount_out_reg[31] ;
   wire [31:0]\INFERRED_GEN.icount_out_reg[31]_0 ;
+  wire \INFERRED_GEN.icount_out_reg[3] ;
+  wire \INFERRED_GEN.icount_out_reg[4] ;
+  wire \INFERRED_GEN.icount_out_reg[5] ;
+  wire \INFERRED_GEN.icount_out_reg[6] ;
+  wire \INFERRED_GEN.icount_out_reg[7] ;
+  wire \INFERRED_GEN.icount_out_reg[8] ;
+  wire \INFERRED_GEN.icount_out_reg[9] ;
   wire [31:0]Q;
   wire [0:0]S;
   wire \TCSR0_GENERATE[20].TCSR0_FF_I ;
   wire [2:0]bus2ip_rdce;
-  wire [0:0]counter_En;
   wire [0:0]counter_TC;
   wire [0:0]\counter_TC_Reg_reg[1] ;
-  wire generateOutPre10;
+  wire generateOutPre1_reg;
   wire [0:0]load_Counter_Reg;
   wire [96:127]read_Mux_In;
   wire s_axi_aclk;
@@ -13597,18 +13102,16 @@ module design_1_PmodWIFI_0_0_count_module_0
   wire \s_axi_rdata_i_reg[8] ;
   wire \s_axi_rdata_i_reg[9] ;
 
-  design_1_PmodWIFI_0_0_axi_timer_v2_0_12_counter_f COUNTER_I
+  design_1_PmodWIFI_0_0_axi_timer_v2_0_15_counter_f COUNTER_I
        (.E(E),
         .\INFERRED_GEN.icount_out_reg[31]_0 (\INFERRED_GEN.icount_out_reg[31]_0 ),
         .Q(Q),
         .S(S),
         .SR(\INFERRED_GEN.icount_out_reg[31] ),
-        .\TCSR0_GENERATE[20].TCSR0_FF_I (\TCSR0_GENERATE[20].TCSR0_FF_I ),
         .bus2ip_rdce(bus2ip_rdce),
-        .counter_En(counter_En),
         .counter_TC(counter_TC),
         .\counter_TC_Reg_reg[1] (\counter_TC_Reg_reg[1] ),
-        .generateOutPre10(generateOutPre10),
+        .generateOutPre1_reg(generateOutPre1_reg),
         .load_Counter_Reg(load_Counter_Reg),
         .read_Mux_In({read_Mux_In[96],read_Mux_In[97],read_Mux_In[98],read_Mux_In[99],read_Mux_In[100],read_Mux_In[101],read_Mux_In[102],read_Mux_In[103],read_Mux_In[104],read_Mux_In[105],read_Mux_In[106],read_Mux_In[107],read_Mux_In[108],read_Mux_In[109],read_Mux_In[110],read_Mux_In[111],read_Mux_In[112],read_Mux_In[113],read_Mux_In[114],read_Mux_In[115],read_Mux_In[116],read_Mux_In[117],read_Mux_In[118],read_Mux_In[119],read_Mux_In[120],read_Mux_In[121],read_Mux_In[122],read_Mux_In[123],read_Mux_In[124],read_Mux_In[125],read_Mux_In[126],read_Mux_In[127]}),
         .s_axi_aclk(s_axi_aclk),
@@ -13653,7 +13156,7 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[0].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
         .D(D_2),
         .Q(read_Mux_In[96]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
@@ -13665,8 +13168,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[10].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_8 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[21] ),
         .Q(read_Mux_In[106]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -13677,8 +13180,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[11].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_9 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[20] ),
         .Q(read_Mux_In[107]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -13689,8 +13192,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[12].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_10 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[19] ),
         .Q(read_Mux_In[108]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -13701,8 +13204,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[13].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_11 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[18] ),
         .Q(read_Mux_In[109]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -13713,8 +13216,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[14].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_12 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[17] ),
         .Q(read_Mux_In[110]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -13725,8 +13228,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[15].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_13 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[16] ),
         .Q(read_Mux_In[111]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -13737,8 +13240,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[16].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_14 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[15] ),
         .Q(read_Mux_In[112]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -13749,8 +13252,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[17].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_15 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[14] ),
         .Q(read_Mux_In[113]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -13761,8 +13264,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[18].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_16 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[13] ),
         .Q(read_Mux_In[114]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -13773,8 +13276,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[19].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_17 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[12] ),
         .Q(read_Mux_In[115]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -13785,8 +13288,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[1].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[30] ),
         .Q(read_Mux_In[97]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -13797,8 +13300,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[20].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_18 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[11] ),
         .Q(read_Mux_In[116]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -13809,8 +13312,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[21].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_19 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[10] ),
         .Q(read_Mux_In[117]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -13821,8 +13324,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[22].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_20 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[9] ),
         .Q(read_Mux_In[118]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -13833,8 +13336,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[23].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_21 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[8] ),
         .Q(read_Mux_In[119]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -13845,8 +13348,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[24].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_22 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[7] ),
         .Q(read_Mux_In[120]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -13857,8 +13360,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[25].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_23 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[6] ),
         .Q(read_Mux_In[121]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -13869,8 +13372,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[26].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_24 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[5] ),
         .Q(read_Mux_In[122]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -13881,8 +13384,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[27].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_25 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[4] ),
         .Q(read_Mux_In[123]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -13893,8 +13396,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[28].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_26 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[3] ),
         .Q(read_Mux_In[124]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -13905,8 +13408,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[29].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_27 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[2] ),
         .Q(read_Mux_In[125]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -13917,8 +13420,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[2].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[29] ),
         .Q(read_Mux_In[98]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -13929,8 +13432,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[30].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_28 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[1] ),
         .Q(read_Mux_In[126]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -13941,8 +13444,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[31].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_29 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[0] ),
         .Q(read_Mux_In[127]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -13953,8 +13456,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[3].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_1 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[28] ),
         .Q(read_Mux_In[99]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -13965,8 +13468,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[4].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_2 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[27] ),
         .Q(read_Mux_In[100]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -13977,8 +13480,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[5].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_3 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[26] ),
         .Q(read_Mux_In[101]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -13989,8 +13492,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[6].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_4 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[25] ),
         .Q(read_Mux_In[102]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -14001,8 +13504,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[7].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_5 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[24] ),
         .Q(read_Mux_In[103]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -14013,8 +13516,8 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[8].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_6 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[23] ),
         .Q(read_Mux_In[104]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
   (* box_type = "PRIMITIVE" *) 
@@ -14025,13 +13528,12 @@ module design_1_PmodWIFI_0_0_count_module_0
     .IS_R_INVERTED(1'b0)) 
     \LOAD_REG_GEN[9].LOAD_REG_I 
        (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_7 ),
+        .CE(\TCSR0_GENERATE[20].TCSR0_FF_I ),
+        .D(\INFERRED_GEN.icount_out_reg[22] ),
         .Q(read_Mux_In[105]),
         .R(\INFERRED_GEN.icount_out_reg[31] ));
 endmodule
 
-(* ORIG_REF_NAME = "cross_clk_sync_fifo_1" *) 
 module design_1_PmodWIFI_0_0_cross_clk_sync_fifo_1
    (\LOGIC_GENERATION_FDR.SPISEL_PULSE_S2AX_1_CDC_0 ,
     \LOGIC_GENERATION_FDR.SLV_MODF_STRB_S2AX_1_CDC_0 ,
@@ -14098,7 +13600,7 @@ module design_1_PmodWIFI_0_0_cross_clk_sync_fifo_1
     \LOGIC_GENERATION_FDR.spisel_pulse_cdc_from_spi_int_2_reg_0 ,
     p_7_out,
     Allow_Slave_MODF_Strobe,
-    stop_clock,
+    stop_clock52_in,
     \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] ,
     \RESET_FLOPS[15].RST_FLOPS ,
     bus2ip_reset_ipif_inverted,
@@ -14112,11 +13614,11 @@ module design_1_PmodWIFI_0_0_cross_clk_sync_fifo_1
     tx_occ_msb_4,
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ,
     Bus_RNW_reg,
-    p_6_in,
+    \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ,
     ram_full_i_reg,
-    p_7_in,
+    \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ,
     rx_fifo_count,
-    p_2_in,
+    \GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg ,
     prmry_in,
     tx_fifo_count_d2,
     spiXfer_done_to_axi_d1,
@@ -14124,7 +13626,7 @@ module design_1_PmodWIFI_0_0_cross_clk_sync_fifo_1
     Rx_FIFO_Full_Fifo_d1_flag,
     Rx_FIFO_Full_Fifo_d1_sig,
     IP2Bus_RdAck_receive_enable__1,
-    transfer_start_reg_0,
+    transfer_start_d1,
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_reg ,
     bus2ip_rdce_int,
     Tx_FIFO_Full_i,
@@ -14135,9 +13637,9 @@ module design_1_PmodWIFI_0_0_cross_clk_sync_fifo_1
     spiXfer_done_int,
     drr_Overrun_int,
     Allow_MODF_Strobe,
-    \LOGIC_GENERATION_FDR.SPICR_2_MST_N_SLV_AX2S_2_0 ,
+    SPIXfer_done_int_d1_reg,
     Q,
-    SPIXfer_done_int,
+    \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg ,
     serial_dout_int,
     io1_i_sync,
     io0_i_sync,
@@ -14207,7 +13709,7 @@ module design_1_PmodWIFI_0_0_cross_clk_sync_fifo_1
   input \LOGIC_GENERATION_FDR.spisel_pulse_cdc_from_spi_int_2_reg_0 ;
   input p_7_out;
   input Allow_Slave_MODF_Strobe;
-  input stop_clock;
+  input stop_clock52_in;
   input \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] ;
   input \RESET_FLOPS[15].RST_FLOPS ;
   input bus2ip_reset_ipif_inverted;
@@ -14221,11 +13723,11 @@ module design_1_PmodWIFI_0_0_cross_clk_sync_fifo_1
   input tx_occ_msb_4;
   input \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ;
   input Bus_RNW_reg;
-  input p_6_in;
+  input \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ;
   input ram_full_i_reg;
-  input p_7_in;
+  input \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ;
   input [0:0]rx_fifo_count;
-  input p_2_in;
+  input \GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg ;
   input prmry_in;
   input [3:0]tx_fifo_count_d2;
   input spiXfer_done_to_axi_d1;
@@ -14233,7 +13735,7 @@ module design_1_PmodWIFI_0_0_cross_clk_sync_fifo_1
   input Rx_FIFO_Full_Fifo_d1_flag;
   input Rx_FIFO_Full_Fifo_d1_sig;
   input IP2Bus_RdAck_receive_enable__1;
-  input transfer_start_reg_0;
+  input transfer_start_d1;
   input \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_reg ;
   input [0:0]bus2ip_rdce_int;
   input Tx_FIFO_Full_i;
@@ -14244,9 +13746,9 @@ module design_1_PmodWIFI_0_0_cross_clk_sync_fifo_1
   input spiXfer_done_int;
   input drr_Overrun_int;
   input Allow_MODF_Strobe;
-  input \LOGIC_GENERATION_FDR.SPICR_2_MST_N_SLV_AX2S_2_0 ;
+  input SPIXfer_done_int_d1_reg;
   input [1:0]Q;
-  input SPIXfer_done_int;
+  input \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg ;
   input serial_dout_int;
   input io1_i_sync;
   input io0_i_sync;
@@ -14264,6 +13766,9 @@ module design_1_PmodWIFI_0_0_cross_clk_sync_fifo_1
   wire \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg_0 ;
   wire \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg ;
   wire \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg_0 ;
+  wire \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg ;
   wire \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ;
   wire \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]_0 ;
   wire \GEN_IP_IRPT_STATUS_REG[1].GEN_REG_STATUS.ip_irpt_status_reg_reg[1] ;
@@ -14277,7 +13782,6 @@ module design_1_PmodWIFI_0_0_cross_clk_sync_fifo_1
   wire \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ;
   wire \LOGIC_GENERATION_FDR.RX_FIFO_RST_AX2S_1_CDC_0 ;
   wire \LOGIC_GENERATION_FDR.SLV_MODF_STRB_S2AX_1_CDC_0 ;
-  wire \LOGIC_GENERATION_FDR.SPICR_2_MST_N_SLV_AX2S_2_0 ;
   wire \LOGIC_GENERATION_FDR.SPISEL_PULSE_S2AX_1_CDC_0 ;
   wire \LOGIC_GENERATION_FDR.SPISSR_SYNC_GEN[0].SPISSR_AX2S_1_CDC_n_0 ;
   wire \LOGIC_GENERATION_FDR.drr_Overrun_int_cdc_from_spi_int_2_reg_n_0 ;
@@ -14293,6 +13797,7 @@ module design_1_PmodWIFI_0_0_cross_clk_sync_fifo_1
   wire [1:0]Q;
   wire R;
   wire \RESET_FLOPS[15].RST_FLOPS ;
+  wire \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg ;
   wire Rst_to_spi;
   wire Rx_FIFO_Full_Fifo_d1_flag;
   wire Rx_FIFO_Full_Fifo_d1_sig;
@@ -14312,7 +13817,7 @@ module design_1_PmodWIFI_0_0_cross_clk_sync_fifo_1
   wire SPISR_0_CMD_Error_cdc_from_spi_d1;
   (* RTL_KEEP = "true" *) wire SPISR_0_CMD_Error_cdc_from_spi_d2;
   wire SPISSR_frm_axi_clk;
-  wire SPIXfer_done_int;
+  wire SPIXfer_done_int_d1_reg;
   wire SPI_TRISTATE_CONTROL_V;
   wire SR_3_modf_cdc_from_axi_d1;
   wire \SS_O_reg[0] ;
@@ -14345,12 +13850,9 @@ module design_1_PmodWIFI_0_0_cross_clk_sync_fifo_1
   wire p_1_in17_in;
   wire p_1_in23_in;
   wire p_1_in35_in;
-  wire p_2_in;
   wire p_2_out;
   wire p_39_out__0;
   wire p_5_out;
-  wire p_6_in;
-  wire p_7_in;
   wire p_7_out;
   wire prmry_in;
   wire ram_full_i_reg;
@@ -14398,17 +13900,17 @@ module design_1_PmodWIFI_0_0_cross_clk_sync_fifo_1
   wire spisel_pulse_cdc_from_spi_d3;
   wire sr_3_MODF_int;
   wire sr_3_modf_to_spi_clk;
-  wire stop_clock;
+  wire stop_clock52_in;
+  wire transfer_start_d1;
   wire transfer_start_i_2_n_0;
   wire transfer_start_reg;
-  wire transfer_start_reg_0;
   wire tx_FIFO_Empty_d1_reg;
   wire [3:0]tx_fifo_count_d2;
   wire tx_occ_msb;
   wire tx_occ_msb_4;
 
   assign \ip_irpt_enable_reg_reg[8]  = spisel_d1_reg_cdc_from_spi_d2;
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT3 #(
     .INIT(8'hE0)) 
     Allow_Slave_MODF_Strobe_i_1
@@ -14488,10 +13990,10 @@ module design_1_PmodWIFI_0_0_cross_clk_sync_fifo_1
     .INIT(64'h88008800F8008800)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[29]_i_3 
        (.I0(tx_FIFO_Empty_d1_reg),
-        .I1(p_7_in),
+        .I1(\GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ),
         .I2(rx_fifo_count),
         .I3(Bus_RNW_reg),
-        .I4(p_2_in),
+        .I4(\GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg ),
         .I5(prmry_in),
         .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29] ));
   (* XILINX_LEGACY_PRIM = "FDR" *) 
@@ -15071,17 +14573,11 @@ module design_1_PmodWIFI_0_0_cross_clk_sync_fifo_1
     .INIT(32'hB8BBB888)) 
     \OTHER_RATIO_GENERATE.Shift_Reg[7]_i_1 
        (.I0(\OTHER_RATIO_GENERATE.rx_shft_reg_s_reg[7] ),
-        .I1(\LOGIC_GENERATION_FDR.SPICR_2_MST_N_SLV_AX2S_2_0 ),
+        .I1(SPIXfer_done_int_d1_reg),
         .I2(Q[1]),
         .I3(spicr_9_lsb_to_spi_clk),
         .I4(Q[0]),
         .O(\OTHER_RATIO_GENERATE.Shift_Reg_reg[7] ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \OTHER_RATIO_GENERATE.rx_shft_reg_s[0]_i_2 
-       (.I0(spicr_4_cpha_to_spi_clk),
-        .I1(spicr_3_cpol_to_spi_clk),
-        .O(\OTHER_RATIO_GENERATE.sck_o_int_reg ));
   LUT5 #(
     .INIT(32'hB8FFB800)) 
     \OTHER_RATIO_GENERATE.rx_shft_reg_s[7]_i_1 
@@ -15091,6 +14587,12 @@ module design_1_PmodWIFI_0_0_cross_clk_sync_fifo_1
         .I3(SPICR_2_MST_N_SLV_to_spi_clk),
         .I4(io0_i_sync),
         .O(\OTHER_RATIO_GENERATE.rx_shft_reg_s_reg[7] ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \OTHER_RATIO_GENERATE.sck_o_int_i_4 
+       (.I0(spicr_4_cpha_to_spi_clk),
+        .I1(spicr_3_cpol_to_spi_clk),
+        .O(\OTHER_RATIO_GENERATE.sck_o_int_reg ));
   LUT1 #(
     .INIT(2'h1)) 
     \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST_i_1 
@@ -15113,15 +14615,16 @@ module design_1_PmodWIFI_0_0_cross_clk_sync_fifo_1
         .I2(spicr_bits_7_8_to_spi_clk[0]),
         .I3(SPISEL_sync),
         .O(SPI_TRISTATE_CONTROL_V));
-  LUT4 #(
-    .INIT(16'hFFAB)) 
+  LUT5 #(
+    .INIT(32'hFFFFAAFB)) 
     \SS_O[0]_i_1 
        (.I0(register_Data_slvsel_int),
-        .I1(transfer_start_reg_0),
-        .I2(spicr_7_ss_to_spi_clk),
-        .I3(Rst_to_spi),
+        .I1(transfer_start_d1),
+        .I2(stop_clock52_in),
+        .I3(spicr_7_ss_to_spi_clk),
+        .I4(Rst_to_spi),
         .O(\SS_O_reg[0] ));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT3 #(
     .INIT(8'h02)) 
     Slave_MODF_strobe_i_2
@@ -15134,7 +14637,7 @@ module design_1_PmodWIFI_0_0_cross_clk_sync_fifo_1
     \icount_out[2]_i_2 
        (.I0(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ),
         .I1(Bus_RNW_reg),
-        .I2(p_6_in),
+        .I2(\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ),
         .I3(ram_full_i_reg),
         .I4(spiXfer_done_d3),
         .I5(spiXfer_done_d2),
@@ -15183,22 +14686,22 @@ module design_1_PmodWIFI_0_0_cross_clk_sync_fifo_1
         .I2(reset_RcFIFO_ptr_cdc_from_axi_d2),
         .O(rx_fifo_reset));
   LUT5 #(
-    .INIT(32'h0202AA02)) 
+    .INIT(32'h020202AA)) 
     transfer_start_i_1
        (.I0(spicr_1_spe_to_spi_clk),
         .I1(Rst_to_spi),
         .I2(SPICR_2_MST_N_SLV_to_spi_clk),
-        .I3(transfer_start_i_2_n_0),
-        .I4(stop_clock),
+        .I3(stop_clock52_in),
+        .I4(transfer_start_i_2_n_0),
         .O(transfer_start_reg));
   LUT6 #(
-    .INIT(64'h0000000200020002)) 
+    .INIT(64'hFFFFFFFDFFFDFFFD)) 
     transfer_start_i_2
        (.I0(SPICR_2_MST_N_SLV_to_spi_clk),
         .I1(Rst_to_spi),
         .I2(sr_3_modf_to_spi_clk),
         .I3(spicr_8_tr_inhibit_to_spi_clk),
-        .I4(SPIXfer_done_int),
+        .I4(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg ),
         .I5(out),
         .O(transfer_start_i_2_n_0));
   LUT6 #(
@@ -15219,7 +14722,395 @@ module design_1_PmodWIFI_0_0_cross_clk_sync_fifo_1
         .O(tx_occ_msb));
 endmodule
 
-(* ORIG_REF_NAME = "interrupt_control" *) 
+(* CHECK_LICENSE_TYPE = "design_1_PmodWIFI_0_0,PmodWIFI,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "PmodWIFI,Vivado 2017.2" *) 
+(* NotValidForBitStream *)
+module design_1_PmodWIFI_0_0
+   (AXI_LITE_GPIO_WFCS_araddr,
+    AXI_LITE_GPIO_WFCS_arready,
+    AXI_LITE_GPIO_WFCS_arvalid,
+    AXI_LITE_GPIO_WFCS_awaddr,
+    AXI_LITE_GPIO_WFCS_awready,
+    AXI_LITE_GPIO_WFCS_awvalid,
+    AXI_LITE_GPIO_WFCS_bready,
+    AXI_LITE_GPIO_WFCS_bresp,
+    AXI_LITE_GPIO_WFCS_bvalid,
+    AXI_LITE_GPIO_WFCS_rdata,
+    AXI_LITE_GPIO_WFCS_rready,
+    AXI_LITE_GPIO_WFCS_rresp,
+    AXI_LITE_GPIO_WFCS_rvalid,
+    AXI_LITE_GPIO_WFCS_wdata,
+    AXI_LITE_GPIO_WFCS_wready,
+    AXI_LITE_GPIO_WFCS_wstrb,
+    AXI_LITE_GPIO_WFCS_wvalid,
+    AXI_LITE_SPI_araddr,
+    AXI_LITE_SPI_arready,
+    AXI_LITE_SPI_arvalid,
+    AXI_LITE_SPI_awaddr,
+    AXI_LITE_SPI_awready,
+    AXI_LITE_SPI_awvalid,
+    AXI_LITE_SPI_bready,
+    AXI_LITE_SPI_bresp,
+    AXI_LITE_SPI_bvalid,
+    AXI_LITE_SPI_rdata,
+    AXI_LITE_SPI_rready,
+    AXI_LITE_SPI_rresp,
+    AXI_LITE_SPI_rvalid,
+    AXI_LITE_SPI_wdata,
+    AXI_LITE_SPI_wready,
+    AXI_LITE_SPI_wstrb,
+    AXI_LITE_SPI_wvalid,
+    AXI_LITE_WFGPIO_araddr,
+    AXI_LITE_WFGPIO_arready,
+    AXI_LITE_WFGPIO_arvalid,
+    AXI_LITE_WFGPIO_awaddr,
+    AXI_LITE_WFGPIO_awready,
+    AXI_LITE_WFGPIO_awvalid,
+    AXI_LITE_WFGPIO_bready,
+    AXI_LITE_WFGPIO_bresp,
+    AXI_LITE_WFGPIO_bvalid,
+    AXI_LITE_WFGPIO_rdata,
+    AXI_LITE_WFGPIO_rready,
+    AXI_LITE_WFGPIO_rresp,
+    AXI_LITE_WFGPIO_rvalid,
+    AXI_LITE_WFGPIO_wdata,
+    AXI_LITE_WFGPIO_wready,
+    AXI_LITE_WFGPIO_wstrb,
+    AXI_LITE_WFGPIO_wvalid,
+    Pmod_out_pin10_i,
+    Pmod_out_pin10_o,
+    Pmod_out_pin10_t,
+    Pmod_out_pin1_i,
+    Pmod_out_pin1_o,
+    Pmod_out_pin1_t,
+    Pmod_out_pin2_i,
+    Pmod_out_pin2_o,
+    Pmod_out_pin2_t,
+    Pmod_out_pin3_i,
+    Pmod_out_pin3_o,
+    Pmod_out_pin3_t,
+    Pmod_out_pin4_i,
+    Pmod_out_pin4_o,
+    Pmod_out_pin4_t,
+    Pmod_out_pin7_i,
+    Pmod_out_pin7_o,
+    Pmod_out_pin7_t,
+    Pmod_out_pin8_i,
+    Pmod_out_pin8_o,
+    Pmod_out_pin8_t,
+    Pmod_out_pin9_i,
+    Pmod_out_pin9_o,
+    Pmod_out_pin9_t,
+    S_AXI_TIMER_araddr,
+    S_AXI_TIMER_arready,
+    S_AXI_TIMER_arvalid,
+    S_AXI_TIMER_awaddr,
+    S_AXI_TIMER_awready,
+    S_AXI_TIMER_awvalid,
+    S_AXI_TIMER_bready,
+    S_AXI_TIMER_bresp,
+    S_AXI_TIMER_bvalid,
+    S_AXI_TIMER_rdata,
+    S_AXI_TIMER_rready,
+    S_AXI_TIMER_rresp,
+    S_AXI_TIMER_rvalid,
+    S_AXI_TIMER_wdata,
+    S_AXI_TIMER_wready,
+    S_AXI_TIMER_wstrb,
+    S_AXI_TIMER_wvalid,
+    WF_INTERRUPT,
+    s_axi_aclk,
+    s_axi_aresetn);
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS ARADDR" *) input [8:0]AXI_LITE_GPIO_WFCS_araddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS ARREADY" *) output AXI_LITE_GPIO_WFCS_arready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS ARVALID" *) input AXI_LITE_GPIO_WFCS_arvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS AWADDR" *) input [8:0]AXI_LITE_GPIO_WFCS_awaddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS AWREADY" *) output AXI_LITE_GPIO_WFCS_awready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS AWVALID" *) input AXI_LITE_GPIO_WFCS_awvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS BREADY" *) input AXI_LITE_GPIO_WFCS_bready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS BRESP" *) output [1:0]AXI_LITE_GPIO_WFCS_bresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS BVALID" *) output AXI_LITE_GPIO_WFCS_bvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS RDATA" *) output [31:0]AXI_LITE_GPIO_WFCS_rdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS RREADY" *) input AXI_LITE_GPIO_WFCS_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS RRESP" *) output [1:0]AXI_LITE_GPIO_WFCS_rresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS RVALID" *) output AXI_LITE_GPIO_WFCS_rvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS WDATA" *) input [31:0]AXI_LITE_GPIO_WFCS_wdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS WREADY" *) output AXI_LITE_GPIO_WFCS_wready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS WSTRB" *) input [3:0]AXI_LITE_GPIO_WFCS_wstrb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFCS WVALID" *) input AXI_LITE_GPIO_WFCS_wvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI ARADDR" *) input [6:0]AXI_LITE_SPI_araddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI ARREADY" *) output AXI_LITE_SPI_arready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI ARVALID" *) input AXI_LITE_SPI_arvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI AWADDR" *) input [6:0]AXI_LITE_SPI_awaddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI AWREADY" *) output AXI_LITE_SPI_awready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI AWVALID" *) input AXI_LITE_SPI_awvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI BREADY" *) input AXI_LITE_SPI_bready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI BRESP" *) output [1:0]AXI_LITE_SPI_bresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI BVALID" *) output AXI_LITE_SPI_bvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI RDATA" *) output [31:0]AXI_LITE_SPI_rdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI RREADY" *) input AXI_LITE_SPI_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI RRESP" *) output [1:0]AXI_LITE_SPI_rresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI RVALID" *) output AXI_LITE_SPI_rvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI WDATA" *) input [31:0]AXI_LITE_SPI_wdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI WREADY" *) output AXI_LITE_SPI_wready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI WSTRB" *) input [3:0]AXI_LITE_SPI_wstrb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI WVALID" *) input AXI_LITE_SPI_wvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO ARADDR" *) input [8:0]AXI_LITE_WFGPIO_araddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO ARREADY" *) output AXI_LITE_WFGPIO_arready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO ARVALID" *) input AXI_LITE_WFGPIO_arvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO AWADDR" *) input [8:0]AXI_LITE_WFGPIO_awaddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO AWREADY" *) output AXI_LITE_WFGPIO_awready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO AWVALID" *) input AXI_LITE_WFGPIO_awvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO BREADY" *) input AXI_LITE_WFGPIO_bready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO BRESP" *) output [1:0]AXI_LITE_WFGPIO_bresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO BVALID" *) output AXI_LITE_WFGPIO_bvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO RDATA" *) output [31:0]AXI_LITE_WFGPIO_rdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO RREADY" *) input AXI_LITE_WFGPIO_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO RRESP" *) output [1:0]AXI_LITE_WFGPIO_rresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO RVALID" *) output AXI_LITE_WFGPIO_rvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO WDATA" *) input [31:0]AXI_LITE_WFGPIO_wdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO WREADY" *) output AXI_LITE_WFGPIO_wready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO WSTRB" *) input [3:0]AXI_LITE_WFGPIO_wstrb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_WFGPIO WVALID" *) input AXI_LITE_WFGPIO_wvalid;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_I" *) input Pmod_out_pin10_i;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_O" *) output Pmod_out_pin10_o;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_T" *) output Pmod_out_pin10_t;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_I" *) input Pmod_out_pin1_i;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_O" *) output Pmod_out_pin1_o;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_T" *) output Pmod_out_pin1_t;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_I" *) input Pmod_out_pin2_i;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_O" *) output Pmod_out_pin2_o;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_T" *) output Pmod_out_pin2_t;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_I" *) input Pmod_out_pin3_i;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_O" *) output Pmod_out_pin3_o;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_T" *) output Pmod_out_pin3_t;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_I" *) input Pmod_out_pin4_i;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_O" *) output Pmod_out_pin4_o;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_T" *) output Pmod_out_pin4_t;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_I" *) input Pmod_out_pin7_i;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_O" *) output Pmod_out_pin7_o;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_T" *) output Pmod_out_pin7_t;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_I" *) input Pmod_out_pin8_i;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_O" *) output Pmod_out_pin8_o;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_T" *) output Pmod_out_pin8_t;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_I" *) input Pmod_out_pin9_i;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_O" *) output Pmod_out_pin9_o;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_T" *) output Pmod_out_pin9_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER ARADDR" *) input [4:0]S_AXI_TIMER_araddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER ARREADY" *) output S_AXI_TIMER_arready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER ARVALID" *) input S_AXI_TIMER_arvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER AWADDR" *) input [4:0]S_AXI_TIMER_awaddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER AWREADY" *) output S_AXI_TIMER_awready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER AWVALID" *) input S_AXI_TIMER_awvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER BREADY" *) input S_AXI_TIMER_bready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER BRESP" *) output [1:0]S_AXI_TIMER_bresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER BVALID" *) output S_AXI_TIMER_bvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER RDATA" *) output [31:0]S_AXI_TIMER_rdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER RREADY" *) input S_AXI_TIMER_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER RRESP" *) output [1:0]S_AXI_TIMER_rresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER RVALID" *) output S_AXI_TIMER_rvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER WDATA" *) input [31:0]S_AXI_TIMER_wdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER WREADY" *) output S_AXI_TIMER_wready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER WSTRB" *) input [3:0]S_AXI_TIMER_wstrb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_TIMER WVALID" *) input S_AXI_TIMER_wvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 INTR.WF_INTERRUPT INTERRUPT" *) output WF_INTERRUPT;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.S_AXI_ACLK CLK" *) input s_axi_aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.S_AXI_ARESETN RST" *) input s_axi_aresetn;
+
+  wire [8:0]AXI_LITE_GPIO_WFCS_araddr;
+  wire AXI_LITE_GPIO_WFCS_arready;
+  wire AXI_LITE_GPIO_WFCS_arvalid;
+  wire [8:0]AXI_LITE_GPIO_WFCS_awaddr;
+  wire AXI_LITE_GPIO_WFCS_awready;
+  wire AXI_LITE_GPIO_WFCS_awvalid;
+  wire AXI_LITE_GPIO_WFCS_bready;
+  wire [1:0]AXI_LITE_GPIO_WFCS_bresp;
+  wire AXI_LITE_GPIO_WFCS_bvalid;
+  wire [31:0]AXI_LITE_GPIO_WFCS_rdata;
+  wire AXI_LITE_GPIO_WFCS_rready;
+  wire [1:0]AXI_LITE_GPIO_WFCS_rresp;
+  wire AXI_LITE_GPIO_WFCS_rvalid;
+  wire [31:0]AXI_LITE_GPIO_WFCS_wdata;
+  wire AXI_LITE_GPIO_WFCS_wready;
+  wire [3:0]AXI_LITE_GPIO_WFCS_wstrb;
+  wire AXI_LITE_GPIO_WFCS_wvalid;
+  wire [6:0]AXI_LITE_SPI_araddr;
+  wire AXI_LITE_SPI_arready;
+  wire AXI_LITE_SPI_arvalid;
+  wire [6:0]AXI_LITE_SPI_awaddr;
+  wire AXI_LITE_SPI_awready;
+  wire AXI_LITE_SPI_awvalid;
+  wire AXI_LITE_SPI_bready;
+  wire [1:0]AXI_LITE_SPI_bresp;
+  wire AXI_LITE_SPI_bvalid;
+  wire [31:0]AXI_LITE_SPI_rdata;
+  wire AXI_LITE_SPI_rready;
+  wire [1:0]AXI_LITE_SPI_rresp;
+  wire AXI_LITE_SPI_rvalid;
+  wire [31:0]AXI_LITE_SPI_wdata;
+  wire AXI_LITE_SPI_wready;
+  wire [3:0]AXI_LITE_SPI_wstrb;
+  wire AXI_LITE_SPI_wvalid;
+  wire [8:0]AXI_LITE_WFGPIO_araddr;
+  wire AXI_LITE_WFGPIO_arready;
+  wire AXI_LITE_WFGPIO_arvalid;
+  wire [8:0]AXI_LITE_WFGPIO_awaddr;
+  wire AXI_LITE_WFGPIO_awready;
+  wire AXI_LITE_WFGPIO_awvalid;
+  wire AXI_LITE_WFGPIO_bready;
+  wire [1:0]AXI_LITE_WFGPIO_bresp;
+  wire AXI_LITE_WFGPIO_bvalid;
+  wire [31:0]AXI_LITE_WFGPIO_rdata;
+  wire AXI_LITE_WFGPIO_rready;
+  wire [1:0]AXI_LITE_WFGPIO_rresp;
+  wire AXI_LITE_WFGPIO_rvalid;
+  wire [31:0]AXI_LITE_WFGPIO_wdata;
+  wire AXI_LITE_WFGPIO_wready;
+  wire [3:0]AXI_LITE_WFGPIO_wstrb;
+  wire AXI_LITE_WFGPIO_wvalid;
+  wire Pmod_out_pin10_i;
+  wire Pmod_out_pin10_o;
+  wire Pmod_out_pin10_t;
+  wire Pmod_out_pin1_i;
+  wire Pmod_out_pin1_o;
+  wire Pmod_out_pin1_t;
+  wire Pmod_out_pin2_i;
+  wire Pmod_out_pin2_o;
+  wire Pmod_out_pin2_t;
+  wire Pmod_out_pin3_i;
+  wire Pmod_out_pin3_o;
+  wire Pmod_out_pin3_t;
+  wire Pmod_out_pin4_i;
+  wire Pmod_out_pin4_o;
+  wire Pmod_out_pin4_t;
+  wire Pmod_out_pin7_i;
+  wire Pmod_out_pin7_o;
+  wire Pmod_out_pin7_t;
+  wire Pmod_out_pin8_i;
+  wire Pmod_out_pin8_o;
+  wire Pmod_out_pin8_t;
+  wire Pmod_out_pin9_i;
+  wire Pmod_out_pin9_o;
+  wire Pmod_out_pin9_t;
+  wire [4:0]S_AXI_TIMER_araddr;
+  wire S_AXI_TIMER_arready;
+  wire S_AXI_TIMER_arvalid;
+  wire [4:0]S_AXI_TIMER_awaddr;
+  wire S_AXI_TIMER_awready;
+  wire S_AXI_TIMER_awvalid;
+  wire S_AXI_TIMER_bready;
+  wire [1:0]S_AXI_TIMER_bresp;
+  wire S_AXI_TIMER_bvalid;
+  wire [31:0]S_AXI_TIMER_rdata;
+  wire S_AXI_TIMER_rready;
+  wire [1:0]S_AXI_TIMER_rresp;
+  wire S_AXI_TIMER_rvalid;
+  wire [31:0]S_AXI_TIMER_wdata;
+  wire S_AXI_TIMER_wready;
+  wire [3:0]S_AXI_TIMER_wstrb;
+  wire S_AXI_TIMER_wvalid;
+  wire WF_INTERRUPT;
+  wire s_axi_aclk;
+  wire s_axi_aresetn;
+
+  (* HW_HANDOFF = "PmodWIFI.hwdef" *) 
+  design_1_PmodWIFI_0_0_PmodWIFI inst
+       (.AXI_LITE_GPIO_WFCS_araddr(AXI_LITE_GPIO_WFCS_araddr),
+        .AXI_LITE_GPIO_WFCS_arready(AXI_LITE_GPIO_WFCS_arready),
+        .AXI_LITE_GPIO_WFCS_arvalid(AXI_LITE_GPIO_WFCS_arvalid),
+        .AXI_LITE_GPIO_WFCS_awaddr(AXI_LITE_GPIO_WFCS_awaddr),
+        .AXI_LITE_GPIO_WFCS_awready(AXI_LITE_GPIO_WFCS_awready),
+        .AXI_LITE_GPIO_WFCS_awvalid(AXI_LITE_GPIO_WFCS_awvalid),
+        .AXI_LITE_GPIO_WFCS_bready(AXI_LITE_GPIO_WFCS_bready),
+        .AXI_LITE_GPIO_WFCS_bresp(AXI_LITE_GPIO_WFCS_bresp),
+        .AXI_LITE_GPIO_WFCS_bvalid(AXI_LITE_GPIO_WFCS_bvalid),
+        .AXI_LITE_GPIO_WFCS_rdata(AXI_LITE_GPIO_WFCS_rdata),
+        .AXI_LITE_GPIO_WFCS_rready(AXI_LITE_GPIO_WFCS_rready),
+        .AXI_LITE_GPIO_WFCS_rresp(AXI_LITE_GPIO_WFCS_rresp),
+        .AXI_LITE_GPIO_WFCS_rvalid(AXI_LITE_GPIO_WFCS_rvalid),
+        .AXI_LITE_GPIO_WFCS_wdata(AXI_LITE_GPIO_WFCS_wdata),
+        .AXI_LITE_GPIO_WFCS_wready(AXI_LITE_GPIO_WFCS_wready),
+        .AXI_LITE_GPIO_WFCS_wstrb(AXI_LITE_GPIO_WFCS_wstrb),
+        .AXI_LITE_GPIO_WFCS_wvalid(AXI_LITE_GPIO_WFCS_wvalid),
+        .AXI_LITE_SPI_araddr(AXI_LITE_SPI_araddr),
+        .AXI_LITE_SPI_arready(AXI_LITE_SPI_arready),
+        .AXI_LITE_SPI_arvalid(AXI_LITE_SPI_arvalid),
+        .AXI_LITE_SPI_awaddr(AXI_LITE_SPI_awaddr),
+        .AXI_LITE_SPI_awready(AXI_LITE_SPI_awready),
+        .AXI_LITE_SPI_awvalid(AXI_LITE_SPI_awvalid),
+        .AXI_LITE_SPI_bready(AXI_LITE_SPI_bready),
+        .AXI_LITE_SPI_bresp(AXI_LITE_SPI_bresp),
+        .AXI_LITE_SPI_bvalid(AXI_LITE_SPI_bvalid),
+        .AXI_LITE_SPI_rdata(AXI_LITE_SPI_rdata),
+        .AXI_LITE_SPI_rready(AXI_LITE_SPI_rready),
+        .AXI_LITE_SPI_rresp(AXI_LITE_SPI_rresp),
+        .AXI_LITE_SPI_rvalid(AXI_LITE_SPI_rvalid),
+        .AXI_LITE_SPI_wdata(AXI_LITE_SPI_wdata),
+        .AXI_LITE_SPI_wready(AXI_LITE_SPI_wready),
+        .AXI_LITE_SPI_wstrb(AXI_LITE_SPI_wstrb),
+        .AXI_LITE_SPI_wvalid(AXI_LITE_SPI_wvalid),
+        .AXI_LITE_WFGPIO_araddr(AXI_LITE_WFGPIO_araddr),
+        .AXI_LITE_WFGPIO_arready(AXI_LITE_WFGPIO_arready),
+        .AXI_LITE_WFGPIO_arvalid(AXI_LITE_WFGPIO_arvalid),
+        .AXI_LITE_WFGPIO_awaddr(AXI_LITE_WFGPIO_awaddr),
+        .AXI_LITE_WFGPIO_awready(AXI_LITE_WFGPIO_awready),
+        .AXI_LITE_WFGPIO_awvalid(AXI_LITE_WFGPIO_awvalid),
+        .AXI_LITE_WFGPIO_bready(AXI_LITE_WFGPIO_bready),
+        .AXI_LITE_WFGPIO_bresp(AXI_LITE_WFGPIO_bresp),
+        .AXI_LITE_WFGPIO_bvalid(AXI_LITE_WFGPIO_bvalid),
+        .AXI_LITE_WFGPIO_rdata(AXI_LITE_WFGPIO_rdata),
+        .AXI_LITE_WFGPIO_rready(AXI_LITE_WFGPIO_rready),
+        .AXI_LITE_WFGPIO_rresp(AXI_LITE_WFGPIO_rresp),
+        .AXI_LITE_WFGPIO_rvalid(AXI_LITE_WFGPIO_rvalid),
+        .AXI_LITE_WFGPIO_wdata(AXI_LITE_WFGPIO_wdata),
+        .AXI_LITE_WFGPIO_wready(AXI_LITE_WFGPIO_wready),
+        .AXI_LITE_WFGPIO_wstrb(AXI_LITE_WFGPIO_wstrb),
+        .AXI_LITE_WFGPIO_wvalid(AXI_LITE_WFGPIO_wvalid),
+        .Pmod_out_pin10_i(Pmod_out_pin10_i),
+        .Pmod_out_pin10_o(Pmod_out_pin10_o),
+        .Pmod_out_pin10_t(Pmod_out_pin10_t),
+        .Pmod_out_pin1_i(Pmod_out_pin1_i),
+        .Pmod_out_pin1_o(Pmod_out_pin1_o),
+        .Pmod_out_pin1_t(Pmod_out_pin1_t),
+        .Pmod_out_pin2_i(Pmod_out_pin2_i),
+        .Pmod_out_pin2_o(Pmod_out_pin2_o),
+        .Pmod_out_pin2_t(Pmod_out_pin2_t),
+        .Pmod_out_pin3_i(Pmod_out_pin3_i),
+        .Pmod_out_pin3_o(Pmod_out_pin3_o),
+        .Pmod_out_pin3_t(Pmod_out_pin3_t),
+        .Pmod_out_pin4_i(Pmod_out_pin4_i),
+        .Pmod_out_pin4_o(Pmod_out_pin4_o),
+        .Pmod_out_pin4_t(Pmod_out_pin4_t),
+        .Pmod_out_pin7_i(Pmod_out_pin7_i),
+        .Pmod_out_pin7_o(Pmod_out_pin7_o),
+        .Pmod_out_pin7_t(Pmod_out_pin7_t),
+        .Pmod_out_pin8_i(Pmod_out_pin8_i),
+        .Pmod_out_pin8_o(Pmod_out_pin8_o),
+        .Pmod_out_pin8_t(Pmod_out_pin8_t),
+        .Pmod_out_pin9_i(Pmod_out_pin9_i),
+        .Pmod_out_pin9_o(Pmod_out_pin9_o),
+        .Pmod_out_pin9_t(Pmod_out_pin9_t),
+        .S_AXI_TIMER_araddr(S_AXI_TIMER_araddr),
+        .S_AXI_TIMER_arready(S_AXI_TIMER_arready),
+        .S_AXI_TIMER_arvalid(S_AXI_TIMER_arvalid),
+        .S_AXI_TIMER_awaddr(S_AXI_TIMER_awaddr),
+        .S_AXI_TIMER_awready(S_AXI_TIMER_awready),
+        .S_AXI_TIMER_awvalid(S_AXI_TIMER_awvalid),
+        .S_AXI_TIMER_bready(S_AXI_TIMER_bready),
+        .S_AXI_TIMER_bresp(S_AXI_TIMER_bresp),
+        .S_AXI_TIMER_bvalid(S_AXI_TIMER_bvalid),
+        .S_AXI_TIMER_rdata(S_AXI_TIMER_rdata),
+        .S_AXI_TIMER_rready(S_AXI_TIMER_rready),
+        .S_AXI_TIMER_rresp(S_AXI_TIMER_rresp),
+        .S_AXI_TIMER_rvalid(S_AXI_TIMER_rvalid),
+        .S_AXI_TIMER_wdata(S_AXI_TIMER_wdata),
+        .S_AXI_TIMER_wready(S_AXI_TIMER_wready),
+        .S_AXI_TIMER_wstrb(S_AXI_TIMER_wstrb),
+        .S_AXI_TIMER_wvalid(S_AXI_TIMER_wvalid),
+        .WF_INTERRUPT(WF_INTERRUPT),
+        .s_axi_aclk(s_axi_aclk),
+        .s_axi_aresetn(s_axi_aresetn));
+endmodule
+
 module design_1_PmodWIFI_0_0_interrupt_control
    (irpt_wrack_d1,
     p_3_in,
@@ -15238,7 +15129,7 @@ module design_1_PmodWIFI_0_0_interrupt_control
     intr2bus_rdack0,
     \GEN_BKEND_CE_REGISTERS[14].ce_out_i_reg[14] ,
     \GEN_BKEND_CE_REGISTERS[11].ce_out_i_reg[11] ,
-    p_8_in,
+    \GEN_BKEND_CE_REGISTERS[12].ce_out_i_reg ,
     s_axi_wdata,
     Bus_RNW_reg,
     ip2Bus_WrAck_intr_reg_hole,
@@ -15262,7 +15153,7 @@ module design_1_PmodWIFI_0_0_interrupt_control
   input intr2bus_rdack0;
   input \GEN_BKEND_CE_REGISTERS[14].ce_out_i_reg[14] ;
   input \GEN_BKEND_CE_REGISTERS[11].ce_out_i_reg[11] ;
-  input p_8_in;
+  input \GEN_BKEND_CE_REGISTERS[12].ce_out_i_reg ;
   input [0:0]s_axi_wdata;
   input Bus_RNW_reg;
   input ip2Bus_WrAck_intr_reg_hole;
@@ -15272,6 +15163,7 @@ module design_1_PmodWIFI_0_0_interrupt_control
 
   wire Bus_RNW_reg;
   wire \GEN_BKEND_CE_REGISTERS[11].ce_out_i_reg[11] ;
+  wire \GEN_BKEND_CE_REGISTERS[12].ce_out_i_reg ;
   wire \GEN_BKEND_CE_REGISTERS[14].ce_out_i_reg[14] ;
   wire \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg[0]_i_1_n_0 ;
   wire \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg[0]_i_2_n_0 ;
@@ -15297,7 +15189,6 @@ module design_1_PmodWIFI_0_0_interrupt_control
   wire [0:0]p_0_in;
   wire [0:0]p_1_in;
   wire [0:0]p_3_in;
-  wire p_8_in;
   wire s_axi_aclk;
   wire [0:0]s_axi_wdata;
 
@@ -15319,7 +15210,7 @@ module design_1_PmodWIFI_0_0_interrupt_control
        (.I0(irpt_dly2),
         .I1(irpt_dly1),
         .I2(p_3_in),
-        .I3(p_8_in),
+        .I3(\GEN_BKEND_CE_REGISTERS[12].ce_out_i_reg ),
         .I4(s_axi_wdata),
         .I5(\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg[0]_i_2_n_0 ),
         .O(\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg[0]_i_1_n_0 ));
@@ -15406,7 +15297,7 @@ module design_1_PmodWIFI_0_0_interrupt_control__parameterized0
     p_1_in26_in,
     p_1_in23_in,
     p_1_in17_in,
-    p_2_in_0,
+    p_2_in,
     irpt_rdack_d1,
     ipif_glbl_irpt_enable_reg_reg_0,
     D,
@@ -15456,7 +15347,7 @@ module design_1_PmodWIFI_0_0_interrupt_control__parameterized0
   output p_1_in26_in;
   output p_1_in23_in;
   output p_1_in17_in;
-  output p_2_in_0;
+  output p_2_in;
   output irpt_rdack_d1;
   output ipif_glbl_irpt_enable_reg_reg_0;
   output [3:0]D;
@@ -15553,7 +15444,7 @@ module design_1_PmodWIFI_0_0_interrupt_control__parameterized0
   wire p_1_in29_in;
   wire p_1_in32_in;
   wire p_1_in35_in;
-  wire p_2_in_0;
+  wire p_2_in;
   wire p_39_out__0;
   wire rc_FIFO_Full_d1_reg;
   wire reset2ip_reset_int;
@@ -15692,7 +15583,7 @@ module design_1_PmodWIFI_0_0_interrupt_control__parameterized0
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(interrupt_wrce_strb),
-        .Q(p_2_in_0),
+        .Q(p_2_in),
         .R(reset2ip_reset_int));
   LUT6 #(
     .INIT(64'hFFFFFFFFFEEEEEEE)) 
@@ -15815,138 +15706,137 @@ module design_1_PmodWIFI_0_0_interrupt_control__parameterized0
         .R(reset2ip_reset_int));
 endmodule
 
-(* ORIG_REF_NAME = "mux_onehot_f" *) 
 module design_1_PmodWIFI_0_0_mux_onehot_f
    (D,
     Bus_RNW_reg_reg,
-    \LOAD_REG_GEN[0].LOAD_REG_I ,
+    \INFERRED_GEN.icount_out_reg[31] ,
     Bus_RNW_reg_reg_0,
-    \LOAD_REG_GEN[1].LOAD_REG_I ,
+    \INFERRED_GEN.icount_out_reg[30] ,
     Bus_RNW_reg_reg_1,
-    \LOAD_REG_GEN[2].LOAD_REG_I ,
+    \INFERRED_GEN.icount_out_reg[29] ,
     Bus_RNW_reg_reg_2,
-    \LOAD_REG_GEN[3].LOAD_REG_I ,
+    \INFERRED_GEN.icount_out_reg[28] ,
     Bus_RNW_reg_reg_3,
-    \LOAD_REG_GEN[4].LOAD_REG_I ,
+    \INFERRED_GEN.icount_out_reg[27] ,
     Bus_RNW_reg_reg_4,
-    \LOAD_REG_GEN[5].LOAD_REG_I ,
+    \INFERRED_GEN.icount_out_reg[26] ,
     Bus_RNW_reg_reg_5,
-    \LOAD_REG_GEN[6].LOAD_REG_I ,
+    \INFERRED_GEN.icount_out_reg[25] ,
     Bus_RNW_reg_reg_6,
-    \LOAD_REG_GEN[7].LOAD_REG_I ,
+    \INFERRED_GEN.icount_out_reg[24] ,
     Bus_RNW_reg_reg_7,
-    \LOAD_REG_GEN[8].LOAD_REG_I ,
+    \INFERRED_GEN.icount_out_reg[23] ,
     Bus_RNW_reg_reg_8,
-    \LOAD_REG_GEN[9].LOAD_REG_I ,
+    \INFERRED_GEN.icount_out_reg[22] ,
     Bus_RNW_reg_reg_9,
-    \LOAD_REG_GEN[10].LOAD_REG_I ,
+    \INFERRED_GEN.icount_out_reg[21] ,
     Bus_RNW_reg_reg_10,
-    \LOAD_REG_GEN[11].LOAD_REG_I ,
+    \INFERRED_GEN.icount_out_reg[20] ,
     Bus_RNW_reg_reg_11,
-    \LOAD_REG_GEN[12].LOAD_REG_I ,
+    \INFERRED_GEN.icount_out_reg[19] ,
     Bus_RNW_reg_reg_12,
-    \LOAD_REG_GEN[13].LOAD_REG_I ,
+    \INFERRED_GEN.icount_out_reg[18] ,
     Bus_RNW_reg_reg_13,
-    \LOAD_REG_GEN[14].LOAD_REG_I ,
+    \INFERRED_GEN.icount_out_reg[17] ,
     Bus_RNW_reg_reg_14,
-    \LOAD_REG_GEN[15].LOAD_REG_I ,
+    \INFERRED_GEN.icount_out_reg[16] ,
     Bus_RNW_reg_reg_15,
-    \LOAD_REG_GEN[16].LOAD_REG_I ,
+    \INFERRED_GEN.icount_out_reg[15] ,
     Bus_RNW_reg_reg_16,
-    \LOAD_REG_GEN[17].LOAD_REG_I ,
+    \INFERRED_GEN.icount_out_reg[14] ,
     Bus_RNW_reg_reg_17,
-    \LOAD_REG_GEN[18].LOAD_REG_I ,
+    \INFERRED_GEN.icount_out_reg[13] ,
     Bus_RNW_reg_reg_18,
-    \LOAD_REG_GEN[19].LOAD_REG_I ,
-    \TCSR0_GENERATE[20].TCSR0_FF_I ,
+    \INFERRED_GEN.icount_out_reg[12] ,
     \LOAD_REG_GEN[20].LOAD_REG_I ,
-    \TCSR0_GENERATE[21].TCSR0_FF_I ,
+    \INFERRED_GEN.icount_out_reg[11] ,
     \LOAD_REG_GEN[21].LOAD_REG_I ,
-    \TCSR0_GENERATE[22].TCSR0_FF_I ,
+    \INFERRED_GEN.icount_out_reg[10] ,
     \LOAD_REG_GEN[22].LOAD_REG_I ,
-    \TCSR0_GENERATE[23].TCSR0_FF_I ,
+    \INFERRED_GEN.icount_out_reg[9] ,
     \LOAD_REG_GEN[23].LOAD_REG_I ,
-    \TCSR0_GENERATE[24].TCSR0_FF_I ,
+    \INFERRED_GEN.icount_out_reg[8] ,
     \LOAD_REG_GEN[24].LOAD_REG_I ,
-    \TCSR0_GENERATE[25].TCSR0_FF_I ,
+    \INFERRED_GEN.icount_out_reg[7] ,
     \LOAD_REG_GEN[25].LOAD_REG_I ,
-    \TCSR0_GENERATE[26].TCSR0_FF_I ,
+    \INFERRED_GEN.icount_out_reg[6] ,
     \LOAD_REG_GEN[26].LOAD_REG_I ,
-    \TCSR0_GENERATE[27].TCSR0_FF_I ,
+    \INFERRED_GEN.icount_out_reg[5] ,
     \LOAD_REG_GEN[27].LOAD_REG_I ,
-    \TCSR0_GENERATE[28].TCSR0_FF_I ,
+    \INFERRED_GEN.icount_out_reg[4] ,
     \LOAD_REG_GEN[28].LOAD_REG_I ,
-    \TCSR0_GENERATE[29].TCSR0_FF_I ,
+    \INFERRED_GEN.icount_out_reg[3] ,
     \LOAD_REG_GEN[29].LOAD_REG_I ,
-    \TCSR0_GENERATE[30].TCSR0_FF_I ,
+    \INFERRED_GEN.icount_out_reg[2] ,
     \LOAD_REG_GEN[30].LOAD_REG_I ,
-    \TCSR0_GENERATE[31].TCSR0_FF_I ,
-    \LOAD_REG_GEN[31].LOAD_REG_I );
+    \INFERRED_GEN.icount_out_reg[1] ,
+    \LOAD_REG_GEN[31].LOAD_REG_I ,
+    \INFERRED_GEN.icount_out_reg[0] );
   output [31:0]D;
   input Bus_RNW_reg_reg;
-  input \LOAD_REG_GEN[0].LOAD_REG_I ;
+  input \INFERRED_GEN.icount_out_reg[31] ;
   input Bus_RNW_reg_reg_0;
-  input \LOAD_REG_GEN[1].LOAD_REG_I ;
+  input \INFERRED_GEN.icount_out_reg[30] ;
   input Bus_RNW_reg_reg_1;
-  input \LOAD_REG_GEN[2].LOAD_REG_I ;
+  input \INFERRED_GEN.icount_out_reg[29] ;
   input Bus_RNW_reg_reg_2;
-  input \LOAD_REG_GEN[3].LOAD_REG_I ;
+  input \INFERRED_GEN.icount_out_reg[28] ;
   input Bus_RNW_reg_reg_3;
-  input \LOAD_REG_GEN[4].LOAD_REG_I ;
+  input \INFERRED_GEN.icount_out_reg[27] ;
   input Bus_RNW_reg_reg_4;
-  input \LOAD_REG_GEN[5].LOAD_REG_I ;
+  input \INFERRED_GEN.icount_out_reg[26] ;
   input Bus_RNW_reg_reg_5;
-  input \LOAD_REG_GEN[6].LOAD_REG_I ;
+  input \INFERRED_GEN.icount_out_reg[25] ;
   input Bus_RNW_reg_reg_6;
-  input \LOAD_REG_GEN[7].LOAD_REG_I ;
+  input \INFERRED_GEN.icount_out_reg[24] ;
   input Bus_RNW_reg_reg_7;
-  input \LOAD_REG_GEN[8].LOAD_REG_I ;
+  input \INFERRED_GEN.icount_out_reg[23] ;
   input Bus_RNW_reg_reg_8;
-  input \LOAD_REG_GEN[9].LOAD_REG_I ;
+  input \INFERRED_GEN.icount_out_reg[22] ;
   input Bus_RNW_reg_reg_9;
-  input \LOAD_REG_GEN[10].LOAD_REG_I ;
+  input \INFERRED_GEN.icount_out_reg[21] ;
   input Bus_RNW_reg_reg_10;
-  input \LOAD_REG_GEN[11].LOAD_REG_I ;
+  input \INFERRED_GEN.icount_out_reg[20] ;
   input Bus_RNW_reg_reg_11;
-  input \LOAD_REG_GEN[12].LOAD_REG_I ;
+  input \INFERRED_GEN.icount_out_reg[19] ;
   input Bus_RNW_reg_reg_12;
-  input \LOAD_REG_GEN[13].LOAD_REG_I ;
+  input \INFERRED_GEN.icount_out_reg[18] ;
   input Bus_RNW_reg_reg_13;
-  input \LOAD_REG_GEN[14].LOAD_REG_I ;
+  input \INFERRED_GEN.icount_out_reg[17] ;
   input Bus_RNW_reg_reg_14;
-  input \LOAD_REG_GEN[15].LOAD_REG_I ;
+  input \INFERRED_GEN.icount_out_reg[16] ;
   input Bus_RNW_reg_reg_15;
-  input \LOAD_REG_GEN[16].LOAD_REG_I ;
+  input \INFERRED_GEN.icount_out_reg[15] ;
   input Bus_RNW_reg_reg_16;
-  input \LOAD_REG_GEN[17].LOAD_REG_I ;
+  input \INFERRED_GEN.icount_out_reg[14] ;
   input Bus_RNW_reg_reg_17;
-  input \LOAD_REG_GEN[18].LOAD_REG_I ;
+  input \INFERRED_GEN.icount_out_reg[13] ;
   input Bus_RNW_reg_reg_18;
-  input \LOAD_REG_GEN[19].LOAD_REG_I ;
-  input \TCSR0_GENERATE[20].TCSR0_FF_I ;
+  input \INFERRED_GEN.icount_out_reg[12] ;
   input \LOAD_REG_GEN[20].LOAD_REG_I ;
-  input \TCSR0_GENERATE[21].TCSR0_FF_I ;
+  input \INFERRED_GEN.icount_out_reg[11] ;
   input \LOAD_REG_GEN[21].LOAD_REG_I ;
-  input \TCSR0_GENERATE[22].TCSR0_FF_I ;
+  input \INFERRED_GEN.icount_out_reg[10] ;
   input \LOAD_REG_GEN[22].LOAD_REG_I ;
-  input \TCSR0_GENERATE[23].TCSR0_FF_I ;
+  input \INFERRED_GEN.icount_out_reg[9] ;
   input \LOAD_REG_GEN[23].LOAD_REG_I ;
-  input \TCSR0_GENERATE[24].TCSR0_FF_I ;
+  input \INFERRED_GEN.icount_out_reg[8] ;
   input \LOAD_REG_GEN[24].LOAD_REG_I ;
-  input \TCSR0_GENERATE[25].TCSR0_FF_I ;
+  input \INFERRED_GEN.icount_out_reg[7] ;
   input \LOAD_REG_GEN[25].LOAD_REG_I ;
-  input \TCSR0_GENERATE[26].TCSR0_FF_I ;
+  input \INFERRED_GEN.icount_out_reg[6] ;
   input \LOAD_REG_GEN[26].LOAD_REG_I ;
-  input \TCSR0_GENERATE[27].TCSR0_FF_I ;
+  input \INFERRED_GEN.icount_out_reg[5] ;
   input \LOAD_REG_GEN[27].LOAD_REG_I ;
-  input \TCSR0_GENERATE[28].TCSR0_FF_I ;
+  input \INFERRED_GEN.icount_out_reg[4] ;
   input \LOAD_REG_GEN[28].LOAD_REG_I ;
-  input \TCSR0_GENERATE[29].TCSR0_FF_I ;
+  input \INFERRED_GEN.icount_out_reg[3] ;
   input \LOAD_REG_GEN[29].LOAD_REG_I ;
-  input \TCSR0_GENERATE[30].TCSR0_FF_I ;
+  input \INFERRED_GEN.icount_out_reg[2] ;
   input \LOAD_REG_GEN[30].LOAD_REG_I ;
-  input \TCSR0_GENERATE[31].TCSR0_FF_I ;
+  input \INFERRED_GEN.icount_out_reg[1] ;
   input \LOAD_REG_GEN[31].LOAD_REG_I ;
+  input \INFERRED_GEN.icount_out_reg[0] ;
 
   wire Bus_RNW_reg_reg;
   wire Bus_RNW_reg_reg_0;
@@ -16000,18 +15890,38 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
   wire \GEN.DATA_WIDTH_GEN[7].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_n_0 ;
   wire \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_n_0 ;
   wire \GEN.DATA_WIDTH_GEN[9].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_n_0 ;
-  wire \LOAD_REG_GEN[0].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[10].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[11].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[12].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[13].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[14].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[15].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[16].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[17].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[18].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[19].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[1].LOAD_REG_I ;
+  wire \INFERRED_GEN.icount_out_reg[0] ;
+  wire \INFERRED_GEN.icount_out_reg[10] ;
+  wire \INFERRED_GEN.icount_out_reg[11] ;
+  wire \INFERRED_GEN.icount_out_reg[12] ;
+  wire \INFERRED_GEN.icount_out_reg[13] ;
+  wire \INFERRED_GEN.icount_out_reg[14] ;
+  wire \INFERRED_GEN.icount_out_reg[15] ;
+  wire \INFERRED_GEN.icount_out_reg[16] ;
+  wire \INFERRED_GEN.icount_out_reg[17] ;
+  wire \INFERRED_GEN.icount_out_reg[18] ;
+  wire \INFERRED_GEN.icount_out_reg[19] ;
+  wire \INFERRED_GEN.icount_out_reg[1] ;
+  wire \INFERRED_GEN.icount_out_reg[20] ;
+  wire \INFERRED_GEN.icount_out_reg[21] ;
+  wire \INFERRED_GEN.icount_out_reg[22] ;
+  wire \INFERRED_GEN.icount_out_reg[23] ;
+  wire \INFERRED_GEN.icount_out_reg[24] ;
+  wire \INFERRED_GEN.icount_out_reg[25] ;
+  wire \INFERRED_GEN.icount_out_reg[26] ;
+  wire \INFERRED_GEN.icount_out_reg[27] ;
+  wire \INFERRED_GEN.icount_out_reg[28] ;
+  wire \INFERRED_GEN.icount_out_reg[29] ;
+  wire \INFERRED_GEN.icount_out_reg[2] ;
+  wire \INFERRED_GEN.icount_out_reg[30] ;
+  wire \INFERRED_GEN.icount_out_reg[31] ;
+  wire \INFERRED_GEN.icount_out_reg[3] ;
+  wire \INFERRED_GEN.icount_out_reg[4] ;
+  wire \INFERRED_GEN.icount_out_reg[5] ;
+  wire \INFERRED_GEN.icount_out_reg[6] ;
+  wire \INFERRED_GEN.icount_out_reg[7] ;
+  wire \INFERRED_GEN.icount_out_reg[8] ;
+  wire \INFERRED_GEN.icount_out_reg[9] ;
   wire \LOAD_REG_GEN[20].LOAD_REG_I ;
   wire \LOAD_REG_GEN[21].LOAD_REG_I ;
   wire \LOAD_REG_GEN[22].LOAD_REG_I ;
@@ -16022,28 +15932,8 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
   wire \LOAD_REG_GEN[27].LOAD_REG_I ;
   wire \LOAD_REG_GEN[28].LOAD_REG_I ;
   wire \LOAD_REG_GEN[29].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[2].LOAD_REG_I ;
   wire \LOAD_REG_GEN[30].LOAD_REG_I ;
   wire \LOAD_REG_GEN[31].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[3].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[4].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[5].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[6].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[7].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[8].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[9].LOAD_REG_I ;
-  wire \TCSR0_GENERATE[20].TCSR0_FF_I ;
-  wire \TCSR0_GENERATE[21].TCSR0_FF_I ;
-  wire \TCSR0_GENERATE[22].TCSR0_FF_I ;
-  wire \TCSR0_GENERATE[23].TCSR0_FF_I ;
-  wire \TCSR0_GENERATE[24].TCSR0_FF_I ;
-  wire \TCSR0_GENERATE[25].TCSR0_FF_I ;
-  wire \TCSR0_GENERATE[26].TCSR0_FF_I ;
-  wire \TCSR0_GENERATE[27].TCSR0_FF_I ;
-  wire \TCSR0_GENERATE[28].TCSR0_FF_I ;
-  wire \TCSR0_GENERATE[29].TCSR0_FF_I ;
-  wire \TCSR0_GENERATE[30].TCSR0_FF_I ;
-  wire \TCSR0_GENERATE[31].TCSR0_FF_I ;
   wire cyout_1;
   wire [3:2]\NLW_GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_CO_UNCONNECTED ;
   wire [3:2]\NLW_GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED ;
@@ -16182,7 +16072,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[0].LOAD_REG_I ,Bus_RNW_reg_reg}));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[31] ,Bus_RNW_reg_reg}));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[10].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16191,7 +16081,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[10].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[10].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[10].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[10].LOAD_REG_I ,Bus_RNW_reg_reg_9}));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[10].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[21] ,Bus_RNW_reg_reg_9}));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[11].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16200,7 +16090,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[11].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[11].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[11].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[11].LOAD_REG_I ,Bus_RNW_reg_reg_10}));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[11].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[20] ,Bus_RNW_reg_reg_10}));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[12].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16209,7 +16099,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[12].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[12].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[12].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[12].LOAD_REG_I ,Bus_RNW_reg_reg_11}));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[12].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[19] ,Bus_RNW_reg_reg_11}));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[13].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16218,7 +16108,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[13].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[13].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[13].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[13].LOAD_REG_I ,Bus_RNW_reg_reg_12}));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[13].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[18] ,Bus_RNW_reg_reg_12}));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[14].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16227,7 +16117,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[14].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[14].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[14].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[14].LOAD_REG_I ,Bus_RNW_reg_reg_13}));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[14].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[17] ,Bus_RNW_reg_reg_13}));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[15].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16236,7 +16126,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[15].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[15].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[15].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[15].LOAD_REG_I ,Bus_RNW_reg_reg_14}));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[15].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[16] ,Bus_RNW_reg_reg_14}));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[16].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16245,7 +16135,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[16].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[16].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[16].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[16].LOAD_REG_I ,Bus_RNW_reg_reg_15}));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[16].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[15] ,Bus_RNW_reg_reg_15}));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[17].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16254,7 +16144,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[17].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[17].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[17].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[17].LOAD_REG_I ,Bus_RNW_reg_reg_16}));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[17].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[14] ,Bus_RNW_reg_reg_16}));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[18].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16263,7 +16153,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[18].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[18].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[18].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[18].LOAD_REG_I ,Bus_RNW_reg_reg_17}));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[18].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[13] ,Bus_RNW_reg_reg_17}));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[19].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16272,7 +16162,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[19].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[19].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[19].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[19].LOAD_REG_I ,Bus_RNW_reg_reg_18}));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[19].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[12] ,Bus_RNW_reg_reg_18}));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[1].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16281,7 +16171,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[1].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[1].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[1].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[1].LOAD_REG_I ,Bus_RNW_reg_reg_0}));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[1].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[30] ,Bus_RNW_reg_reg_0}));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[20].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16290,7 +16180,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[20].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[20].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[20].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[20].LOAD_REG_I ,\TCSR0_GENERATE[20].TCSR0_FF_I }));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[20].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[11] ,\LOAD_REG_GEN[20].LOAD_REG_I }));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[21].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16299,7 +16189,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[21].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[21].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[21].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[21].LOAD_REG_I ,\TCSR0_GENERATE[21].TCSR0_FF_I }));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[21].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[10] ,\LOAD_REG_GEN[21].LOAD_REG_I }));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[22].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16308,7 +16198,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[22].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[22].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[22].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[22].LOAD_REG_I ,\TCSR0_GENERATE[22].TCSR0_FF_I }));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[22].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[9] ,\LOAD_REG_GEN[22].LOAD_REG_I }));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[23].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16317,7 +16207,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[23].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[23].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[23].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[23].LOAD_REG_I ,\TCSR0_GENERATE[23].TCSR0_FF_I }));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[23].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[8] ,\LOAD_REG_GEN[23].LOAD_REG_I }));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[24].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16326,7 +16216,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[24].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[24].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[24].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[24].LOAD_REG_I ,\TCSR0_GENERATE[24].TCSR0_FF_I }));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[24].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[7] ,\LOAD_REG_GEN[24].LOAD_REG_I }));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[25].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16335,7 +16225,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[25].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[25].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[25].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[25].LOAD_REG_I ,\TCSR0_GENERATE[25].TCSR0_FF_I }));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[25].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[6] ,\LOAD_REG_GEN[25].LOAD_REG_I }));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[26].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16344,7 +16234,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[26].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[26].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[26].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[26].LOAD_REG_I ,\TCSR0_GENERATE[26].TCSR0_FF_I }));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[26].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[5] ,\LOAD_REG_GEN[26].LOAD_REG_I }));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[27].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16353,7 +16243,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[27].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[27].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[27].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[27].LOAD_REG_I ,\TCSR0_GENERATE[27].TCSR0_FF_I }));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[27].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[4] ,\LOAD_REG_GEN[27].LOAD_REG_I }));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[28].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16362,7 +16252,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[28].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[28].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[28].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[28].LOAD_REG_I ,\TCSR0_GENERATE[28].TCSR0_FF_I }));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[28].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[3] ,\LOAD_REG_GEN[28].LOAD_REG_I }));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[29].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16371,7 +16261,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[29].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[29].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[29].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[29].LOAD_REG_I ,\TCSR0_GENERATE[29].TCSR0_FF_I }));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[29].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[2] ,\LOAD_REG_GEN[29].LOAD_REG_I }));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[2].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16380,7 +16270,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[2].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[2].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[2].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[2].LOAD_REG_I ,Bus_RNW_reg_reg_1}));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[2].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[29] ,Bus_RNW_reg_reg_1}));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[30].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16389,7 +16279,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[30].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[30].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[30].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[30].LOAD_REG_I ,\TCSR0_GENERATE[30].TCSR0_FF_I }));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[30].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[1] ,\LOAD_REG_GEN[30].LOAD_REG_I }));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16398,7 +16288,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[31].LOAD_REG_I ,\TCSR0_GENERATE[31].TCSR0_FF_I }));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[0] ,\LOAD_REG_GEN[31].LOAD_REG_I }));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[3].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16407,7 +16297,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[3].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[3].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[3].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[3].LOAD_REG_I ,Bus_RNW_reg_reg_2}));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[3].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[28] ,Bus_RNW_reg_reg_2}));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[4].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16416,7 +16306,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[4].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[4].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[4].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[4].LOAD_REG_I ,Bus_RNW_reg_reg_3}));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[4].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[27] ,Bus_RNW_reg_reg_3}));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[5].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16425,7 +16315,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[5].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[5].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[5].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[5].LOAD_REG_I ,Bus_RNW_reg_reg_4}));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[5].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[26] ,Bus_RNW_reg_reg_4}));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[6].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16434,7 +16324,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[6].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[6].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[6].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[6].LOAD_REG_I ,Bus_RNW_reg_reg_5}));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[6].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[25] ,Bus_RNW_reg_reg_5}));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[7].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16443,7 +16333,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[7].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[7].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[7].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[7].LOAD_REG_I ,Bus_RNW_reg_reg_6}));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[7].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[24] ,Bus_RNW_reg_reg_6}));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16452,7 +16342,7 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[8].LOAD_REG_I ,Bus_RNW_reg_reg_7}));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[23] ,Bus_RNW_reg_reg_7}));
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \GEN.DATA_WIDTH_GEN[9].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4 
@@ -16461,10 +16351,10 @@ module design_1_PmodWIFI_0_0_mux_onehot_f
         .CYINIT(1'b0),
         .DI({\NLW_GEN.DATA_WIDTH_GEN[9].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_DI_UNCONNECTED [3:2],1'b1,1'b1}),
         .O(\NLW_GEN.DATA_WIDTH_GEN[9].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_O_UNCONNECTED [3:0]),
-        .S({\NLW_GEN.DATA_WIDTH_GEN[9].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\LOAD_REG_GEN[9].LOAD_REG_I ,Bus_RNW_reg_reg_8}));
+        .S({\NLW_GEN.DATA_WIDTH_GEN[9].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\INFERRED_GEN.icount_out_reg[22] ,Bus_RNW_reg_reg_8}));
 endmodule
 
-(* Bottom_Row_Interface = "GPIO" *) (* ORIG_REF_NAME = "pmod_concat" *) (* Top_Row_Interface = "SPI" *) 
+(* Bottom_Row_Interface = "GPIO" *) (* Top_Row_Interface = "SPI" *) 
 module design_1_PmodWIFI_0_0_pmod_concat
    (in_top_bus_I,
     in_top_bus_O,
@@ -16663,7 +16553,6 @@ module design_1_PmodWIFI_0_0_pmod_concat
        (.G(\<const0> ));
 endmodule
 
-(* ORIG_REF_NAME = "qspi_cntrl_reg" *) 
 module design_1_PmodWIFI_0_0_qspi_cntrl_reg
    (spicr_bits_7_8_frm_axi_clk,
     spicr_0_loop_frm_axi_clk,
@@ -16845,7 +16734,6 @@ module design_1_PmodWIFI_0_0_qspi_cntrl_reg
         .O(reset_TxFIFO_ptr_int));
 endmodule
 
-(* ORIG_REF_NAME = "qspi_core_interface" *) 
 module design_1_PmodWIFI_0_0_qspi_core_interface
    (Tx_FIFO_Empty_SPISR_to_axi_clk,
     spicr_9_lsb_frm_axi_clk,
@@ -16920,15 +16808,15 @@ module design_1_PmodWIFI_0_0_qspi_core_interface
     bus2ip_rdce_int,
     \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ,
     p_15_in,
-    p_7_in,
+    \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ,
     Bus_RNW_reg,
     p_39_out__0,
-    p_6_in,
-    p_5_in,
-    p_8_in,
-    p_2_in,
-    p_4_in_0,
-    p_3_in,
+    \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ,
+    \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ,
+    \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ,
+    \GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg ,
+    \GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg ,
+    \GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg ,
     Bus_RNW_reg_reg_2,
     \GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg[16] ,
     data_is_non_reset_match__4,
@@ -17008,15 +16896,15 @@ module design_1_PmodWIFI_0_0_qspi_core_interface
   input [1:0]bus2ip_rdce_int;
   input \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ;
   input p_15_in;
-  input p_7_in;
+  input \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ;
   input Bus_RNW_reg;
   input p_39_out__0;
-  input p_6_in;
-  input p_5_in;
-  input p_8_in;
-  input p_2_in;
-  input p_4_in_0;
-  input p_3_in;
+  input \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ;
+  input \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ;
+  input \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ;
+  input \GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg ;
+  input \GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg ;
+  input \GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg ;
   input Bus_RNW_reg_reg_2;
   input \GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg[16] ;
   input data_is_non_reset_match__4;
@@ -17078,6 +16966,13 @@ module design_1_PmodWIFI_0_0_qspi_core_interface
   wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to ;
   wire \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ;
   wire \GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg[16] ;
+  wire \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg ;
   wire \GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg[30] ;
   wire INTERRUPT_CONTROL_I_n_1;
   wire INTERRUPT_CONTROL_I_n_20;
@@ -17098,16 +16993,16 @@ module design_1_PmodWIFI_0_0_qspi_core_interface
   wire \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_5_reg_NO_DUAL_QUAD_MODE.QSPI_NORMAL_QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I_LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_5_reg_r_n_0 ;
   wire \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_5_reg_gate_n_0 ;
   wire \LEGACY_MD_WR_RD_ACK_GEN.read_ack_delay_5_reg_r_n_0 ;
-  wire \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_11 ;
-  wire \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_19 ;
-  wire \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_21 ;
+  wire \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_12 ;
+  wire \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_20 ;
   wire \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_22 ;
+  wire \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_23 ;
+  wire \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_8 ;
   wire MODF_strobe0;
   wire [0:0]Q;
   wire R;
-  wire RESET_SYNC_AXI_SPI_CLK_INST_n_0;
+  wire RESET_SYNC_AXI_SPI_CLK_INST_n_2;
   wire RESET_SYNC_AXI_SPI_CLK_INST_n_3;
-  wire RESET_SYNC_AXI_SPI_CLK_INST_n_4;
   wire Receive_ip2bus_error0;
   wire Rx_FIFO_Empty_Synced_in_SPI_domain;
   wire Rx_FIFO_Full_Fifo;
@@ -17128,8 +17023,6 @@ module design_1_PmodWIFI_0_0_qspi_core_interface
   wire SPICR_data_int_reg0;
   wire SPISEL_sync;
   wire SPISSR_frm_axi_clk;
-  wire SPIXfer_done_int;
-  wire Serial_Din;
   wire Slave_MODF_strobe0;
   wire Transmit_ip2bus_error0;
   wire Tx_FIFO_Empty_SPISR_to_axi_clk;
@@ -17145,6 +17038,7 @@ module design_1_PmodWIFI_0_0_qspi_core_interface
   wire data_Exists_RcFIFO_pulse038_in;
   wire [3:7]data_from_rx_fifo;
   wire [0:7]data_from_txfifo;
+  wire data_in;
   wire data_is_non_reset_match__4;
   wire drr_Overrun_int;
   wire dtr_underrun_int;
@@ -17193,17 +17087,10 @@ module design_1_PmodWIFI_0_0_qspi_core_interface
   wire p_1_in32_in;
   wire p_1_in35_in;
   wire p_2_in;
-  wire p_2_in_0;
   wire p_39_out__0;
-  wire p_3_in;
   wire p_4_in;
-  wire p_4_in_0;
-  wire p_5_in;
-  wire p_6_in;
   wire p_6_out;
-  wire p_7_in;
   wire p_7_out;
-  wire p_8_in;
   wire rd_ce_or_reduce_core_cmb;
   wire read_ack_delay_6;
   wire read_ack_delay_7;
@@ -17249,9 +17136,10 @@ module design_1_PmodWIFI_0_0_qspi_core_interface
   wire sr_3_MODF_int;
   wire [0:0]ss_o;
   wire ss_t;
-  wire stop_clock;
+  wire stop_clock52_in;
   wire sw_rst_cond;
   wire sw_rst_cond_d1;
+  wire transfer_start_d1;
   wire tx_FIFO_Occpncy_MSB_d1;
   wire [3:0]tx_fifo_count;
   wire [3:0]tx_fifo_count_d1;
@@ -17301,6 +17189,9 @@ module design_1_PmodWIFI_0_0_qspi_core_interface
         .\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg_0 (rx_fifo_empty_i),
         .\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg (\FIFO_EXISTS.CLK_CROSS_I_n_32 ),
         .\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg_0 (Tx_FIFO_Full_int),
+        .\GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg ),
         .\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] (\FIFO_EXISTS.CLK_CROSS_I_n_21 ),
         .\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]_0 (INTERRUPT_CONTROL_I_n_1),
         .\GEN_IP_IRPT_STATUS_REG[1].GEN_REG_STATUS.ip_irpt_status_reg_reg[1] (\FIFO_EXISTS.CLK_CROSS_I_n_20 ),
@@ -17314,16 +17205,16 @@ module design_1_PmodWIFI_0_0_qspi_core_interface
         .\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg (ip2Bus_WrAck_core_reg_1),
         .\LOGIC_GENERATION_FDR.RX_FIFO_RST_AX2S_1_CDC_0 (\FIFO_EXISTS.CLK_CROSS_I_n_3 ),
         .\LOGIC_GENERATION_FDR.SLV_MODF_STRB_S2AX_1_CDC_0 (\FIFO_EXISTS.CLK_CROSS_I_n_1 ),
-        .\LOGIC_GENERATION_FDR.SPICR_2_MST_N_SLV_AX2S_2_0 (\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_22 ),
         .\LOGIC_GENERATION_FDR.SPISEL_PULSE_S2AX_1_CDC_0 (\FIFO_EXISTS.CLK_CROSS_I_n_0 ),
-        .\LOGIC_GENERATION_FDR.spisel_pulse_cdc_from_spi_int_2_reg_0 (\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_19 ),
+        .\LOGIC_GENERATION_FDR.spisel_pulse_cdc_from_spi_int_2_reg_0 (\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_20 ),
         .MODF_strobe0(MODF_strobe0),
         .\OTHER_RATIO_GENERATE.Shift_Reg_reg[7] (\FIFO_EXISTS.CLK_CROSS_I_n_37 ),
-        .\OTHER_RATIO_GENERATE.rx_shft_reg_s_reg[7] (Serial_Din),
+        .\OTHER_RATIO_GENERATE.rx_shft_reg_s_reg[7] (data_in),
         .\OTHER_RATIO_GENERATE.sck_o_int_reg (\FIFO_EXISTS.CLK_CROSS_I_n_39 ),
         .Q({data_from_txfifo[0],data_from_txfifo[7]}),
         .R(R),
         .\RESET_FLOPS[15].RST_FLOPS (FF_WRACK),
+        .\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_reg (\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_8 ),
         .Rst_to_spi(rst_to_spi_int),
         .Rx_FIFO_Full_Fifo_d1_flag(Rx_FIFO_Full_Fifo_d1_flag),
         .Rx_FIFO_Full_Fifo_d1_sig(Rx_FIFO_Full_Fifo_d1_sig),
@@ -17331,7 +17222,7 @@ module design_1_PmodWIFI_0_0_qspi_core_interface
         .SPICR_RX_FIFO_Rst_en(SPICR_RX_FIFO_Rst_en),
         .SPISEL_sync(SPISEL_sync),
         .SPISSR_frm_axi_clk(SPISSR_frm_axi_clk),
-        .SPIXfer_done_int(SPIXfer_done_int),
+        .SPIXfer_done_int_d1_reg(\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_22 ),
         .SPI_TRISTATE_CONTROL_V(\FIFO_EXISTS.CLK_CROSS_I_n_42 ),
         .\SS_O_reg[0] (\FIFO_EXISTS.CLK_CROSS_I_n_30 ),
         .Slave_MODF_strobe0(Slave_MODF_strobe0),
@@ -17355,10 +17246,7 @@ module design_1_PmodWIFI_0_0_qspi_core_interface
         .p_1_in17_in(p_1_in17_in),
         .p_1_in23_in(p_1_in23_in),
         .p_1_in35_in(p_1_in35_in),
-        .p_2_in(p_2_in),
         .p_39_out__0(p_39_out__0),
-        .p_6_in(p_6_in),
-        .p_7_in(p_7_in),
         .p_7_out(p_7_out),
         .prmry_in(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to ),
         .ram_full_i_reg(\gic0.gc1.count_reg[3] ),
@@ -17391,9 +17279,9 @@ module design_1_PmodWIFI_0_0_qspi_core_interface
         .spicr_bits_7_8_frm_axi_clk(spicr_bits_7_8_frm_axi_clk),
         .spisel_d1_reg(spisel_d1_reg),
         .sr_3_MODF_int(sr_3_MODF_int),
-        .stop_clock(stop_clock),
+        .stop_clock52_in(stop_clock52_in),
+        .transfer_start_d1(transfer_start_d1),
         .transfer_start_reg(\FIFO_EXISTS.CLK_CROSS_I_n_16 ),
-        .transfer_start_reg_0(\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_11 ),
         .tx_FIFO_Empty_d1_reg(Tx_FIFO_Empty_SPISR_to_axi_clk),
         .tx_fifo_count_d2(tx_fifo_count_d2),
         .tx_occ_msb(tx_occ_msb),
@@ -17427,12 +17315,15 @@ module design_1_PmodWIFI_0_0_qspi_core_interface
        (.ext_spi_clk(ext_spi_clk),
         .prmry_in(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to ),
         .scndry_out(Rx_FIFO_Empty_Synced_in_SPI_domain));
-  design_1_PmodWIFI_0_0_axi_quad_spi_v3_2_9_counter_f \FIFO_EXISTS.RX_FIFO_FULL_CNTR_I 
+  design_1_PmodWIFI_0_0_axi_quad_spi_v3_2_12_counter_f \FIFO_EXISTS.RX_FIFO_FULL_CNTR_I 
        (.Bus_RNW_reg(Bus_RNW_reg),
         .\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] (spicr_6_rxfifo_rst_frm_axi_clk),
         .\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.Rx_FIFO_Full_i_reg (\FIFO_EXISTS.RX_FIFO_FULL_CNTR_I_n_5 ),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2 (\FIFO_EXISTS.CLK_CROSS_I_n_29 ),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2_0 (\FIFO_EXISTS.RX_FIFO_FULL_SYNCED_SPI_2_AXI_CDC_n_4 ),
+        .\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg ),
         .IP2Bus_RdAck_receive_enable__1(IP2Bus_RdAck_receive_enable__1),
         .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[31] (\FIFO_EXISTS.RX_FIFO_FULL_CNTR_I_n_4 ),
         .Q(data_from_rx_fifo[7]),
@@ -17443,9 +17334,6 @@ module design_1_PmodWIFI_0_0_qspi_core_interface
         .bus2ip_reset_ipif_inverted(bus2ip_reset_ipif_inverted),
         .out(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to ),
         .p_15_in(p_15_in),
-        .p_2_in(p_2_in),
-        .p_4_in_0(p_4_in_0),
-        .p_8_in(p_8_in),
         .reset2ip_reset_int(reset2ip_reset_int),
         .rst_reg(SOFT_RESET_I_n_3),
         .rst_reg_0(SOFT_RESET_I_n_4),
@@ -17455,7 +17343,7 @@ module design_1_PmodWIFI_0_0_qspi_core_interface
         .spiXfer_done_d3(spiXfer_done_d3),
         .spiXfer_done_to_axi_1(spiXfer_done_to_axi_1),
         .spicr_0_loop_frm_axi_clk(spicr_0_loop_frm_axi_clk));
-  design_1_PmodWIFI_0_0_cdc_sync__parameterized2 \FIFO_EXISTS.RX_FIFO_FULL_SYNCED_SPI_2_AXI_CDC 
+  design_1_PmodWIFI_0_0_cdc_sync__parameterized1_4 \FIFO_EXISTS.RX_FIFO_FULL_SYNCED_SPI_2_AXI_CDC 
        (.D(ip2Bus_Data_1[30]),
         .\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] (\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ),
         .IP2Bus_RdAck_receive_enable__1(IP2Bus_RdAck_receive_enable__1),
@@ -17483,6 +17371,9 @@ module design_1_PmodWIFI_0_0_qspi_core_interface
         .\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg (rx_fifo_empty_i),
         .\FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg (Rx_FIFO_Full_Fifo_org),
         .\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] (\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ),
+        .\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ),
         .\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] (INTERRUPT_CONTROL_I_n_1),
         .IP2Bus_RdAck_receive_enable__1(IP2Bus_RdAck_receive_enable__1),
         .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] (\FIFO_EXISTS.RX_FIFO_II_n_11 ),
@@ -17504,9 +17395,6 @@ module design_1_PmodWIFI_0_0_qspi_core_interface
         .p_1_in29_in(p_1_in29_in),
         .p_1_in32_in(p_1_in32_in),
         .p_1_in35_in(p_1_in35_in),
-        .p_5_in(p_5_in),
-        .p_7_in(p_7_in),
-        .p_8_in(p_8_in),
         .ram_full_fb_i_reg(\FIFO_EXISTS.RX_FIFO_II_n_2 ),
         .rx_fifo_reset(rx_fifo_reset),
         .s_axi_aclk(s_axi_aclk),
@@ -17553,7 +17441,7 @@ module design_1_PmodWIFI_0_0_qspi_core_interface
         .D(SOFT_RESET_I_n_7),
         .Q(Rx_FIFO_Full_Fifo_d1_sig),
         .R(1'b0));
-  design_1_PmodWIFI_0_0_axi_quad_spi_v3_2_9_counter_f_2 \FIFO_EXISTS.TX_FIFO_EMPTY_CNTR_I 
+  design_1_PmodWIFI_0_0_axi_quad_spi_v3_2_12_counter_f_5 \FIFO_EXISTS.TX_FIFO_EMPTY_CNTR_I 
        (.Bus_RNW_reg(Bus_RNW_reg),
         .Bus_RNW_reg_reg(Bus_RNW_reg_reg_1),
         .Bus_RNW_reg_reg_0(Bus_RNW_reg_reg_2),
@@ -17563,6 +17451,7 @@ module design_1_PmodWIFI_0_0_qspi_core_interface
         .\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_reg (\FIFO_EXISTS.TX_FIFO_EMPTY_CNTR_I_n_7 ),
         .\FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_int_reg (Tx_FIFO_Full_int),
         .\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] (\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ),
+        .\GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[29].ce_out_i_reg ),
         .IP2Bus_WrAck_transmit_enable__0(IP2Bus_WrAck_transmit_enable__0),
         .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28] (\FIFO_EXISTS.TX_FIFO_EMPTY_CNTR_I_n_6 ),
         .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30] (\FIFO_EXISTS.TX_FIFO_EMPTY_CNTR_I_n_5 ),
@@ -17574,15 +17463,15 @@ module design_1_PmodWIFI_0_0_qspi_core_interface
         .Tx_FIFO_Full_i(Tx_FIFO_Full_i),
         .bus2ip_reset_ipif_inverted(bus2ip_reset_ipif_inverted),
         .\goreg_dm.dout_i_reg[2] (\FIFO_EXISTS.RX_FIFO_II_n_8 ),
-        .p_3_in(p_3_in),
         .reset2ip_reset_int(reset2ip_reset_int),
         .reset_TxFIFO_ptr_int(reset_TxFIFO_ptr_int),
         .rst_reg(SOFT_RESET_I_n_5),
         .rx_fifo_count({rx_fifo_count[3],rx_fifo_count[1]}),
         .s_axi_aclk(s_axi_aclk),
         .tx_fifo_count(tx_fifo_count));
-  design_1_PmodWIFI_0_0_async_fifo_fg_3 \FIFO_EXISTS.TX_FIFO_II 
+  design_1_PmodWIFI_0_0_async_fifo_fg_6 \FIFO_EXISTS.TX_FIFO_II 
        (.Bus_RNW_reg(Bus_RNW_reg),
+        .\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ),
         .IP2Bus_WrAck_transmit_enable__0(IP2Bus_WrAck_transmit_enable__0),
         .\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg (ip2Bus_WrAck_core_reg_1),
         .\OTHER_RATIO_GENERATE.Serial_Dout_reg (\FIFO_EXISTS.TX_FIFO_II_n_3 ),
@@ -17590,12 +17479,11 @@ module design_1_PmodWIFI_0_0_qspi_core_interface
         .ext_spi_clk(ext_spi_clk),
         .\gic0.gc1.count_reg[3] (\gic0.gc1.count_reg[3] ),
         .out(tx_fifo_empty),
-        .p_6_in(p_6_in),
         .reset_TxFIFO_ptr_int(reset_TxFIFO_ptr_int),
         .s_axi_aclk(s_axi_aclk),
         .s_axi_wdata(s_axi_wdata[7:0]),
         .spicr_9_lsb_to_spi_clk(spicr_9_lsb_to_spi_clk),
-        .spisel_d1_reg__0(\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_21 ));
+        .spisel_d1_reg__0(\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_23 ));
   FDRE \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_reg 
        (.C(s_axi_aclk),
         .CE(1'b1),
@@ -17721,7 +17609,7 @@ module design_1_PmodWIFI_0_0_qspi_core_interface
         .p_1_in29_in(p_1_in29_in),
         .p_1_in32_in(p_1_in32_in),
         .p_1_in35_in(p_1_in35_in),
-        .p_2_in_0(p_2_in_0),
+        .p_2_in(p_2_in),
         .p_39_out__0(p_39_out__0),
         .rc_FIFO_Full_d1_reg(\FIFO_EXISTS.FIFO_IF_MODULE_I_n_3 ),
         .reset2ip_reset_int(reset2ip_reset_int),
@@ -17911,7 +17799,7 @@ module design_1_PmodWIFI_0_0_qspi_core_interface
   design_1_PmodWIFI_0_0_qspi_mode_0_module \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I 
        (.Allow_MODF_Strobe(Allow_MODF_Strobe),
         .Allow_Slave_MODF_Strobe(Allow_Slave_MODF_Strobe),
-        .D(Serial_Din),
+        .D(data_in),
         .D_0(D_0),
         .E(\USE_2N_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM/inst_fifo_gen/gconvfifo.rf/grf.rf/p_18_out ),
         .\LOGIC_GENERATION_FDR.SPICR_1_SPE_AX2S_2 (\FIFO_EXISTS.CLK_CROSS_I_n_16 ),
@@ -17920,23 +17808,22 @@ module design_1_PmodWIFI_0_0_qspi_core_interface
         .\LOGIC_GENERATION_FDR.SPICR_BITS_7_8_SYNC_GEN[0].SPICR_BITS_7_8_AX2S_2 (\FIFO_EXISTS.CLK_CROSS_I_n_42 ),
         .\LOGIC_GENERATION_FDR.SPISSR_SYNC_GEN[0].SPISSR_SYNC_AXI_2_SPI_2 (\FIFO_EXISTS.CLK_CROSS_I_n_30 ),
         .\LOGIC_GENERATION_FDR.Slave_MODF_strobe_cdc_from_spi_int_2_reg (\FIFO_EXISTS.CLK_CROSS_I_n_1 ),
-        .\LOGIC_GENERATION_FDR.spisel_pulse_cdc_from_spi_int_2_reg (\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_19 ),
+        .\LOGIC_GENERATION_FDR.spisel_pulse_cdc_from_spi_int_2_reg (\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_20 ),
         .\LOGIC_GENERATION_FDR.spisel_pulse_cdc_from_spi_int_2_reg_0 (\FIFO_EXISTS.CLK_CROSS_I_n_0 ),
         .MODF_strobe0(MODF_strobe0),
-        .\OTHER_RATIO_GENERATE.Shift_Reg_reg[6]_0 (\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_22 ),
+        .\OTHER_RATIO_GENERATE.Serial_Dout_reg_0 (\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_22 ),
         .Q({data_from_txfifo[0],data_from_txfifo[1],data_from_txfifo[2],data_from_txfifo[3],data_from_txfifo[4],data_from_txfifo[5],data_from_txfifo[6],data_from_txfifo[7]}),
         .R(R),
-        .RESET_SYNC_AX2S_2(RESET_SYNC_AXI_SPI_CLK_INST_n_0),
+        .RESET_SYNC_AX2S_2(RESET_SYNC_AXI_SPI_CLK_INST_n_2),
         .RESET_SYNC_AX2S_2_0(RESET_SYNC_AXI_SPI_CLK_INST_n_3),
-        .RESET_SYNC_AX2S_2_1(RESET_SYNC_AXI_SPI_CLK_INST_n_4),
         .Rst_to_spi(rst_to_spi_int),
         .SPICR_2_MST_N_SLV_to_spi_clk(SPICR_2_MST_N_SLV_to_spi_clk),
         .SPISEL_sync(SPISEL_sync),
-        .SPIXfer_done_int(SPIXfer_done_int),
+        .SPIXfer_done_int_d1_reg_0(\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_8 ),
         .Slave_MODF_strobe0(Slave_MODF_strobe0),
         .drr_Overrun_int(drr_Overrun_int),
         .dtr_underrun_int(dtr_underrun_int),
-        .empty_fwft_fb_o_i_reg(\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_21 ),
+        .empty_fwft_fb_o_i_reg(\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_23 ),
         .ext_spi_clk(ext_spi_clk),
         .\goreg_dm.dout_i_reg[0] (\FIFO_EXISTS.TX_FIFO_II_n_3 ),
         .\goreg_dm.dout_i_reg[7] (\FIFO_EXISTS.CLK_CROSS_I_n_37 ),
@@ -17966,19 +17853,18 @@ module design_1_PmodWIFI_0_0_qspi_core_interface
         .spisel_d1_reg(spisel_d1_reg),
         .ss_o(ss_o),
         .ss_t(ss_t),
-        .stop_clock(stop_clock),
-        .transfer_start_d1_reg_0(\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_11 ));
+        .stop_clock52_in(stop_clock52_in),
+        .transfer_start_d1(transfer_start_d1),
+        .transfer_start_d1_reg_0(\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_12 ));
   design_1_PmodWIFI_0_0_reset_sync_module RESET_SYNC_AXI_SPI_CLK_INST
-       (.Allow_MODF_Strobe_reg(RESET_SYNC_AXI_SPI_CLK_INST_n_0),
-        .\DTR_UNDERRUN_FIFO_EXIST_GEN.DTR_underrun_reg (RESET_SYNC_AXI_SPI_CLK_INST_n_3),
-        .\OTHER_RATIO_GENERATE.sck_o_int_reg (RESET_SYNC_AXI_SPI_CLK_INST_n_4),
+       (.\DTR_UNDERRUN_FIFO_EXIST_GEN.DTR_underrun_reg (RESET_SYNC_AXI_SPI_CLK_INST_n_2),
+        .\OTHER_RATIO_GENERATE.sck_o_int_reg (RESET_SYNC_AXI_SPI_CLK_INST_n_3),
         .Rst_to_spi(rst_to_spi_int),
         .SPICR_2_MST_N_SLV_to_spi_clk(SPICR_2_MST_N_SLV_to_spi_clk),
-        .SPISEL_sync(SPISEL_sync),
         .ext_spi_clk(ext_spi_clk),
         .p_6_out(p_6_out),
         .reset2ip_reset_int(reset2ip_reset_int),
-        .transfer_start_reg(\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_11 ));
+        .transfer_start_reg(\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_12 ));
   design_1_PmodWIFI_0_0_soft_reset SOFT_RESET_I
        (.\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] (spicr_6_rxfifo_rst_frm_axi_clk),
         .\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] (spicr_5_txfifo_rst_frm_axi_clk),
@@ -17999,7 +17885,7 @@ module design_1_PmodWIFI_0_0_qspi_core_interface
         .\icount_out_reg[3] (SOFT_RESET_I_n_3),
         .ip2Bus_WrAck_core_reg(ip2Bus_WrAck_core_reg),
         .ip2Bus_WrAck_intr_reg_hole(ip2Bus_WrAck_intr_reg_hole),
-        .p_2_in_0(p_2_in_0),
+        .p_2_in(p_2_in),
         .reset_trig0(reset_trig0),
         .rx_fifo_count(rx_fifo_count[0]),
         .s_axi_aclk(s_axi_aclk),
@@ -18049,7 +17935,6 @@ module design_1_PmodWIFI_0_0_qspi_core_interface
         .R(reset2ip_reset_int));
 endmodule
 
-(* ORIG_REF_NAME = "qspi_fifo_ifmodule" *) 
 module design_1_PmodWIFI_0_0_qspi_fifo_ifmodule
    (\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_Error_reg ,
     p_4_in,
@@ -18211,7 +18096,6 @@ module design_1_PmodWIFI_0_0_qspi_fifo_ifmodule
         .R(reset2ip_reset_int));
 endmodule
 
-(* ORIG_REF_NAME = "qspi_mode_0_module" *) 
 module design_1_PmodWIFI_0_0_qspi_mode_0_module
    (sck_t,
     io0_t,
@@ -18221,9 +18105,10 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
     sck_o,
     modf_strobe_int,
     spisel_d1_reg,
-    stop_clock,
-    SPIXfer_done_int,
+    SPIXfer_done_int_d1_reg_0,
     spiXfer_done_int,
+    stop_clock52_in,
+    transfer_start_d1,
     transfer_start_d1_reg_0,
     drr_Overrun_int,
     Allow_Slave_MODF_Strobe,
@@ -18234,8 +18119,8 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
     ss_o,
     \LOGIC_GENERATION_FDR.spisel_pulse_cdc_from_spi_int_2_reg ,
     p_7_out,
+    \OTHER_RATIO_GENERATE.Serial_Dout_reg_0 ,
     empty_fwft_fb_o_i_reg,
-    \OTHER_RATIO_GENERATE.Shift_Reg_reg[6]_0 ,
     E,
     \gpr1.dout_i_reg[7] ,
     D_0,
@@ -18245,7 +18130,6 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
     sck_i,
     R,
     Rst_to_spi,
-    RESET_SYNC_AX2S_2,
     Slave_MODF_strobe0,
     MODF_strobe0,
     out,
@@ -18255,23 +18139,23 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
     \LOGIC_GENERATION_FDR.spisel_pulse_cdc_from_spi_int_2_reg_0 ,
     SPICR_2_MST_N_SLV_to_spi_clk,
     \LOGIC_GENERATION_FDR.Slave_MODF_strobe_cdc_from_spi_int_2_reg ,
+    \goreg_dm.dout_i_reg[0] ,
     spicr_0_loop_to_spi_clk,
     spicr_1_spe_to_spi_clk,
-    RESET_SYNC_AX2S_2_0,
-    \LOGIC_GENERATION_FDR.SPICR_4_CPHA_AX2S_2 ,
+    RESET_SYNC_AX2S_2,
     p_6_out,
+    \LOGIC_GENERATION_FDR.SPICR_4_CPHA_AX2S_2 ,
     spicr_4_cpha_to_spi_clk,
     spicr_3_cpol_to_spi_clk,
     Q,
     spicr_9_lsb_to_spi_clk,
-    \goreg_dm.dout_i_reg[0] ,
-    ram_full_fb_i_reg,
     register_Data_slvsel_int,
+    ram_full_fb_i_reg,
     scndry_out,
     ram_full_i_reg,
     D,
     \goreg_dm.dout_i_reg[7] ,
-    RESET_SYNC_AX2S_2_1);
+    RESET_SYNC_AX2S_2_0);
   output sck_t;
   output io0_t;
   output ss_t;
@@ -18280,9 +18164,10 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
   output sck_o;
   output modf_strobe_int;
   output spisel_d1_reg;
-  output stop_clock;
-  output SPIXfer_done_int;
+  output SPIXfer_done_int_d1_reg_0;
   output spiXfer_done_int;
+  output stop_clock52_in;
+  output transfer_start_d1;
   output transfer_start_d1_reg_0;
   output drr_Overrun_int;
   output Allow_Slave_MODF_Strobe;
@@ -18293,8 +18178,8 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
   output [0:0]ss_o;
   output \LOGIC_GENERATION_FDR.spisel_pulse_cdc_from_spi_int_2_reg ;
   output p_7_out;
+  output \OTHER_RATIO_GENERATE.Serial_Dout_reg_0 ;
   output empty_fwft_fb_o_i_reg;
-  output \OTHER_RATIO_GENERATE.Shift_Reg_reg[6]_0 ;
   output [0:0]E;
   output [7:0]\gpr1.dout_i_reg[7] ;
   input D_0;
@@ -18304,7 +18189,6 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
   input sck_i;
   input R;
   input Rst_to_spi;
-  input RESET_SYNC_AX2S_2;
   input Slave_MODF_strobe0;
   input MODF_strobe0;
   input out;
@@ -18314,23 +18198,23 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
   input \LOGIC_GENERATION_FDR.spisel_pulse_cdc_from_spi_int_2_reg_0 ;
   input SPICR_2_MST_N_SLV_to_spi_clk;
   input \LOGIC_GENERATION_FDR.Slave_MODF_strobe_cdc_from_spi_int_2_reg ;
+  input \goreg_dm.dout_i_reg[0] ;
   input spicr_0_loop_to_spi_clk;
   input spicr_1_spe_to_spi_clk;
-  input RESET_SYNC_AX2S_2_0;
-  input \LOGIC_GENERATION_FDR.SPICR_4_CPHA_AX2S_2 ;
+  input RESET_SYNC_AX2S_2;
   input p_6_out;
+  input \LOGIC_GENERATION_FDR.SPICR_4_CPHA_AX2S_2 ;
   input spicr_4_cpha_to_spi_clk;
   input spicr_3_cpol_to_spi_clk;
   input [7:0]Q;
   input spicr_9_lsb_to_spi_clk;
-  input \goreg_dm.dout_i_reg[0] ;
-  input ram_full_fb_i_reg;
   input register_Data_slvsel_int;
+  input ram_full_fb_i_reg;
   input scndry_out;
   input ram_full_i_reg;
   input [0:0]D;
   input [0:0]\goreg_dm.dout_i_reg[7] ;
-  input RESET_SYNC_AX2S_2_1;
+  input RESET_SYNC_AX2S_2_0;
 
   wire Allow_MODF_Strobe;
   wire Allow_MODF_Strobe_i_1_n_0;
@@ -18371,10 +18255,8 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
   wire \OTHER_RATIO_GENERATE.Ratio_Count[0]_i_1_n_0 ;
   wire \OTHER_RATIO_GENERATE.Ratio_Count[1]_i_1_n_0 ;
   wire \OTHER_RATIO_GENERATE.Serial_Dout_i_1_n_0 ;
-  wire \OTHER_RATIO_GENERATE.Serial_Dout_i_2_n_0 ;
-  wire \OTHER_RATIO_GENERATE.Serial_Dout_i_3_n_0 ;
   wire \OTHER_RATIO_GENERATE.Serial_Dout_i_4_n_0 ;
-  wire \OTHER_RATIO_GENERATE.Serial_Dout_i_6_n_0 ;
+  wire \OTHER_RATIO_GENERATE.Serial_Dout_reg_0 ;
   wire \OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ;
   wire \OTHER_RATIO_GENERATE.Shift_Reg[0]_i_2_n_0 ;
   wire \OTHER_RATIO_GENERATE.Shift_Reg[0]_i_3_n_0 ;
@@ -18385,7 +18267,6 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
   wire \OTHER_RATIO_GENERATE.Shift_Reg[4]_i_1_n_0 ;
   wire \OTHER_RATIO_GENERATE.Shift_Reg[5]_i_1_n_0 ;
   wire \OTHER_RATIO_GENERATE.Shift_Reg[6]_i_1_n_0 ;
-  wire \OTHER_RATIO_GENERATE.Shift_Reg_reg[6]_0 ;
   wire \OTHER_RATIO_GENERATE.Shift_Reg_reg_n_0_[1] ;
   wire \OTHER_RATIO_GENERATE.Shift_Reg_reg_n_0_[2] ;
   wire \OTHER_RATIO_GENERATE.Shift_Reg_reg_n_0_[3] ;
@@ -18394,15 +18275,16 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
   wire \OTHER_RATIO_GENERATE.Shift_Reg_reg_n_0_[6] ;
   wire \OTHER_RATIO_GENERATE.Shift_Reg_reg_n_0_[7] ;
   wire \OTHER_RATIO_GENERATE.rx_shft_reg_s[0]_i_1_n_0 ;
+  wire \OTHER_RATIO_GENERATE.rx_shft_reg_s[0]_i_2_n_0 ;
   wire \OTHER_RATIO_GENERATE.sck_o_int_i_1_n_0 ;
   wire \OTHER_RATIO_GENERATE.sck_o_int_i_2_n_0 ;
+  wire \OTHER_RATIO_GENERATE.sck_o_int_i_3_n_0 ;
   wire \OTHER_RATIO_GENERATE.serial_dout_int_i_1_n_0 ;
   wire [7:0]Q;
   wire R;
   wire \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST_i_2_n_0 ;
   wire RESET_SYNC_AX2S_2;
   wire RESET_SYNC_AX2S_2_0;
-  wire RESET_SYNC_AX2S_2_1;
   wire \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_i_1_n_0 ;
   wire \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_i_2_n_0 ;
   wire \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_i_3_n_0 ;
@@ -18428,14 +18310,15 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
   wire SCK_I_sync;
   wire SPICR_2_MST_N_SLV_to_spi_clk;
   wire SPISEL_sync;
-  wire SPIXfer_done_int;
   wire SPIXfer_done_int_d1;
+  wire SPIXfer_done_int_d1_reg_0;
   wire SPIXfer_done_int_pulse;
   wire SPIXfer_done_int_pulse_d1;
   wire SR_5_Tx_Empty_d1;
   wire SR_5_Tx_comeplete_Empty;
   wire SR_5_Tx_comeplete_Empty_i_1_n_0;
   wire Slave_MODF_strobe0;
+  wire Slave_MODF_strobe_i_1_n_0;
   wire drr_Overrun_int;
   wire dtr_underrun_int;
   wire empty_fwft_fb_o_i_reg;
@@ -18449,8 +18332,8 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
   wire load;
   wire modf_strobe_int;
   wire out;
-  wire p_18_out;
-  wire p_20_out;
+  wire p_17_out;
+  wire p_19_out20_out;
   wire p_37_out;
   wire p_3_in;
   wire p_6_out;
@@ -18485,7 +18368,7 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
   wire spisel_once_1_i_1_n_0;
   wire [0:0]ss_o;
   wire ss_t;
-  wire stop_clock;
+  wire stop_clock52_in;
   wire stop_clock_reg;
   wire transfer_start_d1;
   wire transfer_start_d1_reg_0;
@@ -18501,13 +18384,13 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
         .CE(1'b1),
         .D(Allow_MODF_Strobe_i_1_n_0),
         .Q(Allow_MODF_Strobe),
-        .S(RESET_SYNC_AX2S_2));
+        .S(Slave_MODF_strobe_i_1_n_0));
   FDSE Allow_Slave_MODF_Strobe_reg
        (.C(ext_spi_clk),
         .CE(1'b1),
         .D(\LOGIC_GENERATION_FDR.SPICR_2_MST_N_SLV_AX2S_2 ),
         .Q(Allow_Slave_MODF_Strobe),
-        .S(RESET_SYNC_AX2S_2));
+        .S(Slave_MODF_strobe_i_1_n_0));
   LUT6 #(
     .INIT(64'h000000000000C8AA)) 
     \DTR_UNDERRUN_FIFO_EXIST_GEN.DTR_underrun_i_1 
@@ -18515,7 +18398,7 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
         .I1(SR_5_Tx_comeplete_Empty),
         .I2(SPIXfer_done_int_pulse),
         .I3(spicr_1_spe_to_spi_clk),
-        .I4(RESET_SYNC_AX2S_2_0),
+        .I4(RESET_SYNC_AX2S_2),
         .I5(SPISEL_sync),
         .O(\DTR_UNDERRUN_FIFO_EXIST_GEN.DTR_underrun_i_1_n_0 ));
   FDRE \DTR_UNDERRUN_FIFO_EXIST_GEN.DTR_underrun_reg 
@@ -18539,14 +18422,14 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
         .Q(drr_Overrun_int),
         .R(Rst_to_spi));
   LUT6 #(
-    .INIT(64'h111111110000FCCC)) 
+    .INIT(64'h0353035003500350)) 
     \LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps[0]_i_1 
        (.I0(SR_5_Tx_comeplete_Empty),
-        .I1(spi_cntrl_ps[0]),
-        .I2(SPICR_2_MST_N_SLV_to_spi_clk),
-        .I3(\LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps[0]_i_2_n_0 ),
-        .I4(out),
-        .I5(spi_cntrl_ps[1]),
+        .I1(out),
+        .I2(spi_cntrl_ps[1]),
+        .I3(spi_cntrl_ps[0]),
+        .I4(SPICR_2_MST_N_SLV_to_spi_clk),
+        .I5(\LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps[0]_i_2_n_0 ),
         .O(\LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps[0]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT2 #(
@@ -18564,14 +18447,14 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
         .I3(spiXfer_done_int),
         .O(\LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps[1]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h00202C200C202C20)) 
+    .INIT(64'h000022AA3F000000)) 
     \LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps[1]_i_2 
        (.I0(out),
-        .I1(spi_cntrl_ps[1]),
-        .I2(spi_cntrl_ps[0]),
+        .I1(spiXfer_done_int),
+        .I2(spicr_0_loop_to_spi_clk),
         .I3(SR_5_Tx_comeplete_Empty),
-        .I4(spiXfer_done_int),
-        .I5(spicr_0_loop_to_spi_clk),
+        .I4(spi_cntrl_ps[1]),
+        .I5(spi_cntrl_ps[0]),
         .O(\LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps[1]_i_2_n_0 ));
   FDRE \LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps_reg[0] 
        (.C(ext_spi_clk),
@@ -18585,39 +18468,39 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
         .D(\LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps[1]_i_1_n_0 ),
         .Q(spi_cntrl_ps[1]),
         .R(Rst_to_spi));
-  LUT6 #(
-    .INIT(64'hAAAAEEEAAAAAAAAA)) 
+  LUT5 #(
+    .INIT(32'hFFFF5455)) 
     \LOCAL_TX_EMPTY_FIFO_12_GEN.stop_clock_reg_i_1 
        (.I0(\LOCAL_TX_EMPTY_FIFO_12_GEN.stop_clock_reg_i_2_n_0 ),
-        .I1(\LOCAL_TX_EMPTY_FIFO_12_GEN.stop_clock_reg_i_3_n_0 ),
-        .I2(stop_clock_reg),
-        .I3(SR_5_Tx_comeplete_Empty),
-        .I4(spi_cntrl_ps[0]),
-        .I5(spi_cntrl_ps[1]),
-        .O(stop_clock));
-  LUT6 #(
-    .INIT(64'h080C080C00FC000C)) 
-    \LOCAL_TX_EMPTY_FIFO_12_GEN.stop_clock_reg_i_2 
-       (.I0(SR_5_Tx_comeplete_Empty),
         .I1(out),
-        .I2(spi_cntrl_ps[1]),
-        .I3(spi_cntrl_ps[0]),
-        .I4(stop_clock_reg),
-        .I5(spiXfer_done_int),
-        .O(\LOCAL_TX_EMPTY_FIFO_12_GEN.stop_clock_reg_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFF5DDF5)) 
-    \LOCAL_TX_EMPTY_FIFO_12_GEN.stop_clock_reg_i_3 
-       (.I0(SR_5_Tx_comeplete_Empty),
-        .I1(spicr_0_loop_to_spi_clk),
-        .I2(register_Data_slvsel_int),
+        .I2(spicr_0_loop_to_spi_clk),
         .I3(spiXfer_done_int),
-        .I4(out),
+        .I4(\LOCAL_TX_EMPTY_FIFO_12_GEN.stop_clock_reg_i_3_n_0 ),
+        .O(stop_clock52_in));
+  LUT6 #(
+    .INIT(64'hFF01FFFFFFFFFFFF)) 
+    \LOCAL_TX_EMPTY_FIFO_12_GEN.stop_clock_reg_i_2 
+       (.I0(stop_clock_reg),
+        .I1(register_Data_slvsel_int),
+        .I2(spiXfer_done_int),
+        .I3(spi_cntrl_ps[0]),
+        .I4(spi_cntrl_ps[1]),
+        .I5(SR_5_Tx_comeplete_Empty),
+        .O(\LOCAL_TX_EMPTY_FIFO_12_GEN.stop_clock_reg_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h00800FCC008000CC)) 
+    \LOCAL_TX_EMPTY_FIFO_12_GEN.stop_clock_reg_i_3 
+       (.I0(spiXfer_done_int),
+        .I1(out),
+        .I2(SR_5_Tx_comeplete_Empty),
+        .I3(spi_cntrl_ps[1]),
+        .I4(spi_cntrl_ps[0]),
+        .I5(stop_clock_reg),
         .O(\LOCAL_TX_EMPTY_FIFO_12_GEN.stop_clock_reg_i_3_n_0 ));
   FDRE \LOCAL_TX_EMPTY_FIFO_12_GEN.stop_clock_reg_reg 
        (.C(ext_spi_clk),
         .CE(1'b1),
-        .D(stop_clock),
+        .D(stop_clock52_in),
         .Q(stop_clock_reg),
         .R(Rst_to_spi));
   LUT2 #(
@@ -18626,7 +18509,7 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
        (.I0(slave_MODF_strobe_int),
         .I1(\LOGIC_GENERATION_FDR.Slave_MODF_strobe_cdc_from_spi_int_2_reg ),
         .O(p_7_out));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT3 #(
     .INIT(8'hA6)) 
     \LOGIC_GENERATION_FDR.spisel_pulse_cdc_from_spi_int_2_i_1 
@@ -18639,7 +18522,7 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
         .CE(1'b1),
         .D(MODF_strobe0),
         .Q(modf_strobe_int),
-        .R(RESET_SYNC_AX2S_2));
+        .R(Slave_MODF_strobe_i_1_n_0));
   LUT2 #(
     .INIT(4'h1)) 
     \OTHER_RATIO_GENERATE.Count[0]_i_1 
@@ -18680,12 +18563,12 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
         .I1(Rst_to_spi),
         .I2(SPISEL_sync),
         .I3(SPICR_2_MST_N_SLV_to_spi_clk),
-        .I4(SPIXfer_done_int),
+        .I4(SPIXfer_done_int_d1_reg_0),
         .O(\OTHER_RATIO_GENERATE.Count[4]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h20202020202F2F20)) 
     \OTHER_RATIO_GENERATE.Count[4]_i_2 
-       (.I0(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_4_n_0 ),
+       (.I0(\OTHER_RATIO_GENERATE.sck_o_int_i_2_n_0 ),
         .I1(load),
         .I2(SPICR_2_MST_N_SLV_to_spi_clk),
         .I3(SCK_I_sync),
@@ -18781,7 +18664,6 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
         .I2(Rst_to_spi),
         .I3(transfer_start_d1_reg_0),
         .O(\OTHER_RATIO_GENERATE.Ratio_Count[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair54" *) 
   LUT3 #(
     .INIT(8'hDF)) 
     \OTHER_RATIO_GENERATE.Ratio_Count[1]_i_1 
@@ -18801,107 +18683,82 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
         .D(\OTHER_RATIO_GENERATE.Ratio_Count[1]_i_1_n_0 ),
         .Q(Ratio_Count[1]),
         .R(1'b0));
-  LUT6 #(
-    .INIT(64'hABFFABABA800A8A8)) 
+  LUT5 #(
+    .INIT(32'hB8FFB800)) 
     \OTHER_RATIO_GENERATE.Serial_Dout_i_1 
-       (.I0(\OTHER_RATIO_GENERATE.Serial_Dout_i_2_n_0 ),
-        .I1(\OTHER_RATIO_GENERATE.Serial_Dout_i_3_n_0 ),
-        .I2(transfer_start_d1_reg_0),
+       (.I0(p_3_in),
+        .I1(\OTHER_RATIO_GENERATE.Serial_Dout_reg_0 ),
+        .I2(\goreg_dm.dout_i_reg[0] ),
         .I3(\OTHER_RATIO_GENERATE.Serial_Dout_i_4_n_0 ),
-        .I4(\OTHER_RATIO_GENERATE.Count_reg_n_0_[0] ),
-        .I5(io0_o),
+        .I4(io0_o),
         .O(\OTHER_RATIO_GENERATE.Serial_Dout_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hFF10FF1FEF00E000)) 
+    .INIT(64'h101F1010101F101F)) 
     \OTHER_RATIO_GENERATE.Serial_Dout_i_2 
        (.I0(SPIXfer_done_int_d1),
         .I1(\LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps[0]_i_2_n_0 ),
         .I2(SPICR_2_MST_N_SLV_to_spi_clk),
-        .I3(\goreg_dm.dout_i_reg[0] ),
-        .I4(\OTHER_RATIO_GENERATE.Serial_Dout_i_6_n_0 ),
-        .I5(p_3_in),
-        .O(\OTHER_RATIO_GENERATE.Serial_Dout_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
-  LUT4 #(
-    .INIT(16'hFFAE)) 
-    \OTHER_RATIO_GENERATE.Serial_Dout_i_3 
-       (.I0(SPICR_2_MST_N_SLV_to_spi_clk),
-        .I1(SR_5_Tx_Empty_d1),
-        .I2(out),
-        .I3(SPIXfer_done_int),
-        .O(\OTHER_RATIO_GENERATE.Serial_Dout_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
-  LUT4 #(
-    .INIT(16'hF2FF)) 
+        .I3(SPIXfer_done_int_d1_reg_0),
+        .I4(out),
+        .I5(SR_5_Tx_Empty_d1),
+        .O(\OTHER_RATIO_GENERATE.Serial_Dout_reg_0 ));
+  LUT6 #(
+    .INIT(64'hF7FFF500F7FFF5FF)) 
     \OTHER_RATIO_GENERATE.Serial_Dout_i_4 
-       (.I0(transfer_start_d1_reg_0),
+       (.I0(\OTHER_RATIO_GENERATE.Count_reg_n_0_[0] ),
         .I1(transfer_start_d1),
         .I2(SPIXfer_done_int_d1),
         .I3(SPICR_2_MST_N_SLV_to_spi_clk),
+        .I4(transfer_start_d1_reg_0),
+        .I5(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_4_n_0 ),
         .O(\OTHER_RATIO_GENERATE.Serial_Dout_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
-  LUT3 #(
-    .INIT(8'hBA)) 
-    \OTHER_RATIO_GENERATE.Serial_Dout_i_6 
-       (.I0(SPIXfer_done_int),
-        .I1(out),
-        .I2(SR_5_Tx_Empty_d1),
-        .O(\OTHER_RATIO_GENERATE.Serial_Dout_i_6_n_0 ));
   FDSE \OTHER_RATIO_GENERATE.Serial_Dout_reg 
        (.C(ext_spi_clk),
         .CE(1'b1),
         .D(\OTHER_RATIO_GENERATE.Serial_Dout_i_1_n_0 ),
         .Q(io0_o),
         .S(Rst_to_spi));
-  LUT6 #(
-    .INIT(64'hFCCCFCCCA8880000)) 
+  LUT5 #(
+    .INIT(32'hCACFC0CF)) 
     \OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1 
-       (.I0(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_3_n_0 ),
-        .I1(\OTHER_RATIO_GENERATE.Serial_Dout_i_4_n_0 ),
-        .I2(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_4_n_0 ),
-        .I3(\OTHER_RATIO_GENERATE.Count_reg_n_0_[0] ),
-        .I4(transfer_start_d1_reg_0),
-        .I5(\OTHER_RATIO_GENERATE.Serial_Dout_i_3_n_0 ),
+       (.I0(transfer_start_d1_reg_0),
+        .I1(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_3_n_0 ),
+        .I2(SPICR_2_MST_N_SLV_to_spi_clk),
+        .I3(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_4_n_0 ),
+        .I4(\OTHER_RATIO_GENERATE.rx_shft_reg_s[0]_i_2_n_0 ),
         .O(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \OTHER_RATIO_GENERATE.Shift_Reg[0]_i_2 
        (.I0(\OTHER_RATIO_GENERATE.Shift_Reg_reg_n_0_[1] ),
-        .I1(\OTHER_RATIO_GENERATE.Shift_Reg_reg[6]_0 ),
+        .I1(\OTHER_RATIO_GENERATE.Serial_Dout_reg_0 ),
         .I2(Q[0]),
         .I3(spicr_9_lsb_to_spi_clk),
         .I4(Q[7]),
         .O(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'h00060900)) 
+  LUT6 #(
+    .INIT(64'hF2FFFFF2F2F2F2F2)) 
     \OTHER_RATIO_GENERATE.Shift_Reg[0]_i_3 
-       (.I0(spicr_4_cpha_to_spi_clk),
-        .I1(spicr_3_cpol_to_spi_clk),
-        .I2(SPISEL_sync),
-        .I3(SCK_I_sync),
-        .I4(sck_i_d1),
-        .O(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_3_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \OTHER_RATIO_GENERATE.Shift_Reg[0]_i_4 
-       (.I0(Count_trigger),
-        .I1(Count_trigger_d1),
-        .O(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
-  LUT5 #(
-    .INIT(32'h5D555D5D)) 
-    \OTHER_RATIO_GENERATE.Shift_Reg[0]_i_5 
-       (.I0(\OTHER_RATIO_GENERATE.Serial_Dout_i_3_n_0 ),
-        .I1(SPICR_2_MST_N_SLV_to_spi_clk),
+       (.I0(transfer_start_d1_reg_0),
+        .I1(transfer_start_d1),
         .I2(SPIXfer_done_int_d1),
-        .I3(transfer_start_d1),
-        .I4(transfer_start_d1_reg_0),
-        .O(\OTHER_RATIO_GENERATE.Shift_Reg_reg[6]_0 ));
+        .I3(Count_trigger),
+        .I4(Count_trigger_d1),
+        .I5(\OTHER_RATIO_GENERATE.Count_reg_n_0_[0] ),
+        .O(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  LUT3 #(
+    .INIT(8'h45)) 
+    \OTHER_RATIO_GENERATE.Shift_Reg[0]_i_4 
+       (.I0(SPIXfer_done_int_d1_reg_0),
+        .I1(out),
+        .I2(SR_5_Tx_Empty_d1),
+        .O(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_4_n_0 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \OTHER_RATIO_GENERATE.Shift_Reg[1]_i_1 
        (.I0(\OTHER_RATIO_GENERATE.Shift_Reg_reg_n_0_[2] ),
-        .I1(\OTHER_RATIO_GENERATE.Shift_Reg_reg[6]_0 ),
+        .I1(\OTHER_RATIO_GENERATE.Serial_Dout_reg_0 ),
         .I2(Q[1]),
         .I3(spicr_9_lsb_to_spi_clk),
         .I4(Q[6]),
@@ -18910,7 +18767,7 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
     .INIT(32'hB8BBB888)) 
     \OTHER_RATIO_GENERATE.Shift_Reg[2]_i_1 
        (.I0(\OTHER_RATIO_GENERATE.Shift_Reg_reg_n_0_[3] ),
-        .I1(\OTHER_RATIO_GENERATE.Shift_Reg_reg[6]_0 ),
+        .I1(\OTHER_RATIO_GENERATE.Serial_Dout_reg_0 ),
         .I2(Q[2]),
         .I3(spicr_9_lsb_to_spi_clk),
         .I4(Q[5]),
@@ -18919,7 +18776,7 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
     .INIT(32'hB8BBB888)) 
     \OTHER_RATIO_GENERATE.Shift_Reg[3]_i_1 
        (.I0(\OTHER_RATIO_GENERATE.Shift_Reg_reg_n_0_[4] ),
-        .I1(\OTHER_RATIO_GENERATE.Shift_Reg_reg[6]_0 ),
+        .I1(\OTHER_RATIO_GENERATE.Serial_Dout_reg_0 ),
         .I2(Q[3]),
         .I3(spicr_9_lsb_to_spi_clk),
         .I4(Q[4]),
@@ -18928,7 +18785,7 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
     .INIT(32'hB8BBB888)) 
     \OTHER_RATIO_GENERATE.Shift_Reg[4]_i_1 
        (.I0(\OTHER_RATIO_GENERATE.Shift_Reg_reg_n_0_[5] ),
-        .I1(\OTHER_RATIO_GENERATE.Shift_Reg_reg[6]_0 ),
+        .I1(\OTHER_RATIO_GENERATE.Serial_Dout_reg_0 ),
         .I2(Q[4]),
         .I3(spicr_9_lsb_to_spi_clk),
         .I4(Q[3]),
@@ -18937,7 +18794,7 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
     .INIT(32'hB8BBB888)) 
     \OTHER_RATIO_GENERATE.Shift_Reg[5]_i_1 
        (.I0(\OTHER_RATIO_GENERATE.Shift_Reg_reg_n_0_[6] ),
-        .I1(\OTHER_RATIO_GENERATE.Shift_Reg_reg[6]_0 ),
+        .I1(\OTHER_RATIO_GENERATE.Serial_Dout_reg_0 ),
         .I2(Q[5]),
         .I3(spicr_9_lsb_to_spi_clk),
         .I4(Q[2]),
@@ -18946,7 +18803,7 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
     .INIT(32'hB8BBB888)) 
     \OTHER_RATIO_GENERATE.Shift_Reg[6]_i_1 
        (.I0(\OTHER_RATIO_GENERATE.Shift_Reg_reg_n_0_[7] ),
-        .I1(\OTHER_RATIO_GENERATE.Shift_Reg_reg[6]_0 ),
+        .I1(\OTHER_RATIO_GENERATE.Serial_Dout_reg_0 ),
         .I2(Q[6]),
         .I3(spicr_9_lsb_to_spi_clk),
         .I4(Q[1]),
@@ -19005,12 +18862,12 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
        (.I0(sck_d1),
         .I1(transfer_start_d1_reg_0),
         .I2(sck_d2),
-        .O(p_20_out));
+        .O(p_19_out20_out));
   FDRE #(
     .INIT(1'b0)) 
     \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0011_reg[0] 
        (.C(ext_spi_clk),
-        .CE(p_20_out),
+        .CE(p_19_out20_out),
         .D(rx_shft_reg_mode_0011[1]),
         .Q(rx_shft_reg_mode_0011[0]),
         .R(Rst_to_spi));
@@ -19018,7 +18875,7 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
     .INIT(1'b0)) 
     \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0011_reg[1] 
        (.C(ext_spi_clk),
-        .CE(p_20_out),
+        .CE(p_19_out20_out),
         .D(rx_shft_reg_mode_0011[2]),
         .Q(rx_shft_reg_mode_0011[1]),
         .R(Rst_to_spi));
@@ -19026,7 +18883,7 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
     .INIT(1'b0)) 
     \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0011_reg[2] 
        (.C(ext_spi_clk),
-        .CE(p_20_out),
+        .CE(p_19_out20_out),
         .D(rx_shft_reg_mode_0011[3]),
         .Q(rx_shft_reg_mode_0011[2]),
         .R(Rst_to_spi));
@@ -19034,7 +18891,7 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
     .INIT(1'b0)) 
     \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0011_reg[3] 
        (.C(ext_spi_clk),
-        .CE(p_20_out),
+        .CE(p_19_out20_out),
         .D(rx_shft_reg_mode_0011[4]),
         .Q(rx_shft_reg_mode_0011[3]),
         .R(Rst_to_spi));
@@ -19042,7 +18899,7 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
     .INIT(1'b0)) 
     \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0011_reg[4] 
        (.C(ext_spi_clk),
-        .CE(p_20_out),
+        .CE(p_19_out20_out),
         .D(rx_shft_reg_mode_0011[5]),
         .Q(rx_shft_reg_mode_0011[4]),
         .R(Rst_to_spi));
@@ -19050,7 +18907,7 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
     .INIT(1'b0)) 
     \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0011_reg[5] 
        (.C(ext_spi_clk),
-        .CE(p_20_out),
+        .CE(p_19_out20_out),
         .D(rx_shft_reg_mode_0011[6]),
         .Q(rx_shft_reg_mode_0011[5]),
         .R(Rst_to_spi));
@@ -19058,7 +18915,7 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
     .INIT(1'b0)) 
     \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0011_reg[6] 
        (.C(ext_spi_clk),
-        .CE(p_20_out),
+        .CE(p_19_out20_out),
         .D(rx_shft_reg_mode_0011[7]),
         .Q(rx_shft_reg_mode_0011[6]),
         .R(Rst_to_spi));
@@ -19066,7 +18923,7 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
     .INIT(1'b0)) 
     \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0011_reg[7] 
        (.C(ext_spi_clk),
-        .CE(p_20_out),
+        .CE(p_19_out20_out),
         .D(D),
         .Q(rx_shft_reg_mode_0011[7]),
         .R(Rst_to_spi));
@@ -19076,12 +18933,12 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
        (.I0(sck_d2),
         .I1(transfer_start_d1_reg_0),
         .I2(sck_d1),
-        .O(p_18_out));
+        .O(p_17_out));
   FDRE #(
     .INIT(1'b0)) 
     \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[0] 
        (.C(ext_spi_clk),
-        .CE(p_18_out),
+        .CE(p_17_out),
         .D(rx_shft_reg_mode_0110[1]),
         .Q(rx_shft_reg_mode_0110[0]),
         .R(Rst_to_spi));
@@ -19089,7 +18946,7 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
     .INIT(1'b0)) 
     \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[1] 
        (.C(ext_spi_clk),
-        .CE(p_18_out),
+        .CE(p_17_out),
         .D(rx_shft_reg_mode_0110[2]),
         .Q(rx_shft_reg_mode_0110[1]),
         .R(Rst_to_spi));
@@ -19097,7 +18954,7 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
     .INIT(1'b0)) 
     \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[2] 
        (.C(ext_spi_clk),
-        .CE(p_18_out),
+        .CE(p_17_out),
         .D(rx_shft_reg_mode_0110[3]),
         .Q(rx_shft_reg_mode_0110[2]),
         .R(Rst_to_spi));
@@ -19105,7 +18962,7 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
     .INIT(1'b0)) 
     \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[3] 
        (.C(ext_spi_clk),
-        .CE(p_18_out),
+        .CE(p_17_out),
         .D(rx_shft_reg_mode_0110[4]),
         .Q(rx_shft_reg_mode_0110[3]),
         .R(Rst_to_spi));
@@ -19113,7 +18970,7 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
     .INIT(1'b0)) 
     \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[4] 
        (.C(ext_spi_clk),
-        .CE(p_18_out),
+        .CE(p_17_out),
         .D(rx_shft_reg_mode_0110[5]),
         .Q(rx_shft_reg_mode_0110[4]),
         .R(Rst_to_spi));
@@ -19121,7 +18978,7 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
     .INIT(1'b0)) 
     \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[5] 
        (.C(ext_spi_clk),
-        .CE(p_18_out),
+        .CE(p_17_out),
         .D(rx_shft_reg_mode_0110[6]),
         .Q(rx_shft_reg_mode_0110[5]),
         .R(Rst_to_spi));
@@ -19129,7 +18986,7 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
     .INIT(1'b0)) 
     \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[6] 
        (.C(ext_spi_clk),
-        .CE(p_18_out),
+        .CE(p_17_out),
         .D(rx_shft_reg_mode_0110[7]),
         .Q(rx_shft_reg_mode_0110[6]),
         .R(Rst_to_spi));
@@ -19137,20 +18994,29 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
     .INIT(1'b0)) 
     \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[7] 
        (.C(ext_spi_clk),
-        .CE(p_18_out),
+        .CE(p_17_out),
         .D(D),
         .Q(rx_shft_reg_mode_0110[7]),
         .R(Rst_to_spi));
   LUT6 #(
-    .INIT(64'h0000000000000204)) 
+    .INIT(64'h0000000000002202)) 
     \OTHER_RATIO_GENERATE.rx_shft_reg_s[0]_i_1 
-       (.I0(sck_i_d1),
-        .I1(SCK_I_sync),
-        .I2(SPISEL_sync),
-        .I3(\LOGIC_GENERATION_FDR.SPICR_4_CPHA_AX2S_2 ),
-        .I4(\OTHER_RATIO_GENERATE.Serial_Dout_i_3_n_0 ),
+       (.I0(\OTHER_RATIO_GENERATE.rx_shft_reg_s[0]_i_2_n_0 ),
+        .I1(SPICR_2_MST_N_SLV_to_spi_clk),
+        .I2(SR_5_Tx_Empty_d1),
+        .I3(out),
+        .I4(SPIXfer_done_int_d1_reg_0),
         .I5(p_6_out),
         .O(\OTHER_RATIO_GENERATE.rx_shft_reg_s[0]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h00060900)) 
+    \OTHER_RATIO_GENERATE.rx_shft_reg_s[0]_i_2 
+       (.I0(spicr_4_cpha_to_spi_clk),
+        .I1(spicr_3_cpol_to_spi_clk),
+        .I2(SPISEL_sync),
+        .I3(SCK_I_sync),
+        .I4(sck_i_d1),
+        .O(\OTHER_RATIO_GENERATE.rx_shft_reg_s[0]_i_2_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \OTHER_RATIO_GENERATE.rx_shft_reg_s_reg[0] 
@@ -19232,26 +19098,32 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
     \OTHER_RATIO_GENERATE.sck_o_int_i_1 
        (.I0(sck_o_int),
         .I1(transfer_start_d1_reg_0),
-        .I2(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_4_n_0 ),
-        .I3(\OTHER_RATIO_GENERATE.sck_o_int_i_2_n_0 ),
+        .I2(\OTHER_RATIO_GENERATE.sck_o_int_i_2_n_0 ),
+        .I3(\OTHER_RATIO_GENERATE.sck_o_int_i_3_n_0 ),
         .I4(\LOGIC_GENERATION_FDR.SPICR_4_CPHA_AX2S_2 ),
-        .I5(RESET_SYNC_AX2S_2_1),
+        .I5(RESET_SYNC_AX2S_2_0),
         .O(\OTHER_RATIO_GENERATE.sck_o_int_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    \OTHER_RATIO_GENERATE.sck_o_int_i_2 
+       (.I0(Count_trigger),
+        .I1(Count_trigger_d1),
+        .O(\OTHER_RATIO_GENERATE.sck_o_int_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
   LUT3 #(
     .INIT(8'hBA)) 
-    \OTHER_RATIO_GENERATE.sck_o_int_i_2 
-       (.I0(SPIXfer_done_int),
+    \OTHER_RATIO_GENERATE.sck_o_int_i_3 
+       (.I0(SPIXfer_done_int_d1_reg_0),
         .I1(transfer_start_d1),
         .I2(transfer_start_d1_reg_0),
-        .O(\OTHER_RATIO_GENERATE.sck_o_int_i_2_n_0 ));
+        .O(\OTHER_RATIO_GENERATE.sck_o_int_i_3_n_0 ));
   FDRE \OTHER_RATIO_GENERATE.sck_o_int_reg 
        (.C(ext_spi_clk),
         .CE(1'b1),
         .D(\OTHER_RATIO_GENERATE.sck_o_int_i_1_n_0 ),
         .Q(sck_o_int),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair54" *) 
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \OTHER_RATIO_GENERATE.serial_dout_int_i_1 
@@ -19293,7 +19165,7 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
     \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_i_1 
        (.I0(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_i_2_n_0 ),
         .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_i_3_n_0 ),
-        .I2(SPIXfer_done_int),
+        .I2(SPIXfer_done_int_d1_reg_0),
         .I3(transfer_start_d1),
         .I4(transfer_start_d1_reg_0),
         .I5(Rst_to_spi),
@@ -19302,20 +19174,20 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
   LUT4 #(
     .INIT(16'h8000)) 
     \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_i_2 
-       (.I0(\OTHER_RATIO_GENERATE.Shift_Reg[0]_i_3_n_0 ),
+       (.I0(\OTHER_RATIO_GENERATE.rx_shft_reg_s[0]_i_2_n_0 ),
         .I1(\OTHER_RATIO_GENERATE.Count_reg_n_0_[1] ),
         .I2(\OTHER_RATIO_GENERATE.Count_reg_n_0_[2] ),
         .I3(\OTHER_RATIO_GENERATE.Count_reg_n_0_[3] ),
         .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h00000000000E0000)) 
+    .INIT(64'h0004000400040000)) 
     \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_i_3 
-       (.I0(\LOGIC_GENERATION_FDR.SPICR_4_CPHA_AX2S_2 ),
-        .I1(Count_trigger),
+       (.I0(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_i_4_n_0 ),
+        .I1(SPICR_2_MST_N_SLV_to_spi_clk),
         .I2(Ratio_Count[0]),
         .I3(Ratio_Count[1]),
-        .I4(SPICR_2_MST_N_SLV_to_spi_clk),
-        .I5(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_i_4_n_0 ),
+        .I4(\LOGIC_GENERATION_FDR.SPICR_4_CPHA_AX2S_2 ),
+        .I5(Count_trigger),
         .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_i_3_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT4 #(
@@ -19330,7 +19202,7 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
        (.C(ext_spi_clk),
         .CE(1'b1),
         .D(\RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_PRESENT_GEN.SPIXfer_done_int_i_1_n_0 ),
-        .Q(SPIXfer_done_int),
+        .Q(SPIXfer_done_int_d1_reg_0),
         .R(1'b0));
   LUT6 #(
     .INIT(64'h3F305F5F3F305050)) 
@@ -19359,7 +19231,7 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
         .I3(rx_shft_reg_mode_0011[7]),
         .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'h3F305F5F3F305050)) 
+    .INIT(64'h5F503F3F5F503030)) 
     \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[1]_i_1 
        (.I0(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[1]_i_2_n_0 ),
         .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[1]_i_3_n_0 ),
@@ -19371,18 +19243,18 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
   LUT4 #(
     .INIT(16'h14D7)) 
     \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[1]_i_2 
-       (.I0(rx_shft_reg_mode_0110[1]),
-        .I1(spicr_4_cpha_to_spi_clk),
-        .I2(spicr_3_cpol_to_spi_clk),
-        .I3(rx_shft_reg_mode_0011[1]),
-        .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[1]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'h14D7)) 
-    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[1]_i_3 
        (.I0(rx_shft_reg_mode_0110[6]),
         .I1(spicr_4_cpha_to_spi_clk),
         .I2(spicr_3_cpol_to_spi_clk),
         .I3(rx_shft_reg_mode_0011[6]),
+        .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[1]_i_2_n_0 ));
+  LUT4 #(
+    .INIT(16'h14D7)) 
+    \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[1]_i_3 
+       (.I0(rx_shft_reg_mode_0110[1]),
+        .I1(spicr_4_cpha_to_spi_clk),
+        .I2(spicr_3_cpol_to_spi_clk),
+        .I3(rx_shft_reg_mode_0011[1]),
         .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[1]_i_3_n_0 ));
   LUT6 #(
     .INIT(64'h3F305F5F3F305050)) 
@@ -19447,10 +19319,10 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
         .I5(rx_shft_reg_s[4]),
         .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[4]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h5F503F3F5F503030)) 
+    .INIT(64'h3F305F5F3F305050)) 
     \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[5]_i_1 
-       (.I0(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[2]_i_2_n_0 ),
-        .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[2]_i_3_n_0 ),
+       (.I0(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[2]_i_3_n_0 ),
+        .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[2]_i_2_n_0 ),
         .I2(SPICR_2_MST_N_SLV_to_spi_clk),
         .I3(rx_shft_reg_s[2]),
         .I4(spicr_9_lsb_to_spi_clk),
@@ -19459,18 +19331,18 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
   LUT6 #(
     .INIT(64'h3F305F5F3F305050)) 
     \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[6]_i_1 
-       (.I0(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[1]_i_3_n_0 ),
-        .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[1]_i_2_n_0 ),
+       (.I0(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[1]_i_2_n_0 ),
+        .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[1]_i_3_n_0 ),
         .I2(SPICR_2_MST_N_SLV_to_spi_clk),
         .I3(rx_shft_reg_s[1]),
         .I4(spicr_9_lsb_to_spi_clk),
         .I5(rx_shft_reg_s[6]),
         .O(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[6]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h3F305F5F3F305050)) 
+    .INIT(64'h5F503F3F5F503030)) 
     \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[7]_i_1 
-       (.I0(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_3_n_0 ),
-        .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_2_n_0 ),
+       (.I0(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_2_n_0 ),
+        .I1(\RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_3_n_0 ),
         .I2(SPICR_2_MST_N_SLV_to_spi_clk),
         .I3(rx_shft_reg_s[0]),
         .I4(spicr_9_lsb_to_spi_clk),
@@ -19563,14 +19435,14 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
   FDRE SPIXfer_done_int_d1_reg
        (.C(ext_spi_clk),
         .CE(1'b1),
-        .D(SPIXfer_done_int),
+        .D(SPIXfer_done_int_d1_reg_0),
         .Q(SPIXfer_done_int_d1),
         .R(Rst_to_spi));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT2 #(
     .INIT(4'h2)) 
     SPIXfer_done_int_pulse_d1_i_1
-       (.I0(SPIXfer_done_int),
+       (.I0(SPIXfer_done_int_d1_reg_0),
         .I1(SPIXfer_done_int_d1),
         .O(SPIXfer_done_int_pulse));
   FDRE SPIXfer_done_int_pulse_d1_reg
@@ -19631,13 +19503,13 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
         .D(out),
         .Q(SR_5_Tx_Empty_d1),
         .R(Rst_to_spi));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT4 #(
     .INIT(16'hBA00)) 
     SR_5_Tx_comeplete_Empty_i_1
        (.I0(SR_5_Tx_comeplete_Empty),
         .I1(SPIXfer_done_int_d1),
-        .I2(SPIXfer_done_int),
+        .I2(SPIXfer_done_int_d1_reg_0),
         .I3(out),
         .O(SR_5_Tx_comeplete_Empty_i_1_n_0));
   FDRE SR_5_Tx_comeplete_Empty_reg
@@ -19652,12 +19524,18 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
         .D(\LOGIC_GENERATION_FDR.SPISSR_SYNC_GEN[0].SPISSR_SYNC_AXI_2_SPI_2 ),
         .Q(ss_o),
         .R(1'b0));
+  LUT2 #(
+    .INIT(4'hE)) 
+    Slave_MODF_strobe_i_1
+       (.I0(SPISEL_sync),
+        .I1(Rst_to_spi),
+        .O(Slave_MODF_strobe_i_1_n_0));
   FDRE Slave_MODF_strobe_reg
        (.C(ext_spi_clk),
         .CE(1'b1),
         .D(Slave_MODF_strobe0),
         .Q(slave_MODF_strobe_int),
-        .R(RESET_SYNC_AX2S_2));
+        .R(Slave_MODF_strobe_i_1_n_0));
   LUT6 #(
     .INIT(64'hFFFFFFFF4040FF40)) 
     \gc1.count_d1[3]_i_2__0 
@@ -19692,7 +19570,7 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
         .D(spisel_d1),
         .Q(spisel_d1_reg),
         .S(Rst_to_spi));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT3 #(
     .INIT(8'h8A)) 
     spisel_once_1_i_1
@@ -19720,7 +19598,6 @@ module design_1_PmodWIFI_0_0_qspi_mode_0_module
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "qspi_status_slave_sel_reg" *) 
 module design_1_PmodWIFI_0_0_qspi_status_slave_sel_reg
    (sr_3_MODF_int,
     SPISSR_frm_axi_clk,
@@ -19803,59 +19680,51 @@ module design_1_PmodWIFI_0_0_qspi_status_slave_sel_reg
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "reset_sync_module" *) 
 module design_1_PmodWIFI_0_0_reset_sync_module
-   (Allow_MODF_Strobe_reg,
+   (p_6_out,
     Rst_to_spi,
-    p_6_out,
     \DTR_UNDERRUN_FIFO_EXIST_GEN.DTR_underrun_reg ,
     \OTHER_RATIO_GENERATE.sck_o_int_reg ,
-    SPISEL_sync,
     transfer_start_reg,
     SPICR_2_MST_N_SLV_to_spi_clk,
     reset2ip_reset_int,
     ext_spi_clk);
-  output Allow_MODF_Strobe_reg;
-  output Rst_to_spi;
   output p_6_out;
+  output Rst_to_spi;
   output \DTR_UNDERRUN_FIFO_EXIST_GEN.DTR_underrun_reg ;
   output \OTHER_RATIO_GENERATE.sck_o_int_reg ;
-  input SPISEL_sync;
   input transfer_start_reg;
   input SPICR_2_MST_N_SLV_to_spi_clk;
   input reset2ip_reset_int;
   input ext_spi_clk;
 
-  wire Allow_MODF_Strobe_reg;
   wire \DTR_UNDERRUN_FIFO_EXIST_GEN.DTR_underrun_reg ;
   wire \OTHER_RATIO_GENERATE.sck_o_int_reg ;
   wire Rst_to_spi;
   wire SPICR_2_MST_N_SLV_to_spi_clk;
-  wire SPISEL_sync;
   wire Soft_Reset_frm_axi_d1;
   wire ext_spi_clk;
   wire p_6_out;
   wire reset2ip_reset_int;
   wire transfer_start_reg;
 
-  (* SOFT_HLUTNM = "soft_lutpair56" *) 
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \DTR_UNDERRUN_FIFO_EXIST_GEN.DTR_underrun_i_2 
        (.I0(Rst_to_spi),
         .I1(SPICR_2_MST_N_SLV_to_spi_clk),
         .O(\DTR_UNDERRUN_FIFO_EXIST_GEN.DTR_underrun_reg ));
-  (* SOFT_HLUTNM = "soft_lutpair55" *) 
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \OTHER_RATIO_GENERATE.rx_shft_reg_s[0]_i_3 
        (.I0(Rst_to_spi),
         .I1(transfer_start_reg),
         .O(p_6_out));
-  (* SOFT_HLUTNM = "soft_lutpair56" *) 
   LUT2 #(
     .INIT(4'hB)) 
-    \OTHER_RATIO_GENERATE.sck_o_int_i_3 
+    \OTHER_RATIO_GENERATE.sck_o_int_i_5 
        (.I0(Rst_to_spi),
         .I1(SPICR_2_MST_N_SLV_to_spi_clk),
         .O(\OTHER_RATIO_GENERATE.sck_o_int_reg ));
@@ -19880,16 +19749,8 @@ module design_1_PmodWIFI_0_0_reset_sync_module
         .D(Soft_Reset_frm_axi_d1),
         .Q(Rst_to_spi),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair55" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    Slave_MODF_strobe_i_1
-       (.I0(Rst_to_spi),
-        .I1(SPISEL_sync),
-        .O(Allow_MODF_Strobe_reg));
 endmodule
 
-(* ORIG_REF_NAME = "slave_attachment" *) 
 module design_1_PmodWIFI_0_0_slave_attachment
    (SR,
     \Not_Dual.gpio_OE_reg[0] ,
@@ -19900,21 +19761,22 @@ module design_1_PmodWIFI_0_0_slave_attachment
     AXI_LITE_GPIO_WFCS_arready,
     AXI_LITE_GPIO_WFCS_wready,
     \Not_Dual.gpio_OE_reg[0]_0 ,
+    \Not_Dual.gpio_OE_reg[0]_1 ,
     \Not_Dual.gpio_Data_Out_reg[0] ,
-    \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[31] ,
+    \Not_Dual.gpio_Data_Out_reg[0]_0 ,
+    \Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[31] ,
     s_axi_aclk,
     s_axi_wdata,
-    gpio_xferAck_Reg,
-    GPIO_xferAck_i,
     s_axi_aresetn,
     s_axi_rready,
     s_axi_bready,
     gpio_io_t,
     gpio_io_o,
-    gpio_Data_In,
     s_axi_arvalid,
     s_axi_awvalid,
     s_axi_wvalid,
+    gpio_xferAck_Reg,
+    GPIO_xferAck_i,
     ip2bus_data_i_D1,
     s_axi_araddr,
     s_axi_awaddr,
@@ -19929,21 +19791,22 @@ module design_1_PmodWIFI_0_0_slave_attachment
   output AXI_LITE_GPIO_WFCS_arready;
   output AXI_LITE_GPIO_WFCS_wready;
   output \Not_Dual.gpio_OE_reg[0]_0 ;
+  output \Not_Dual.gpio_OE_reg[0]_1 ;
   output \Not_Dual.gpio_Data_Out_reg[0] ;
-  output \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[31] ;
+  output \Not_Dual.gpio_Data_Out_reg[0]_0 ;
+  output \Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[31] ;
   input s_axi_aclk;
   input [1:0]s_axi_wdata;
-  input gpio_xferAck_Reg;
-  input GPIO_xferAck_i;
   input s_axi_aresetn;
   input s_axi_rready;
   input s_axi_bready;
   input [0:0]gpio_io_t;
   input [0:0]gpio_io_o;
-  input gpio_Data_In;
   input s_axi_arvalid;
   input s_axi_awvalid;
   input s_axi_wvalid;
+  input gpio_xferAck_Reg;
+  input GPIO_xferAck_i;
   input [0:0]ip2bus_data_i_D1;
   input [2:0]s_axi_araddr;
   input [2:0]s_axi_awaddr;
@@ -19957,10 +19820,12 @@ module design_1_PmodWIFI_0_0_slave_attachment
   wire GPIO_xferAck_i;
   wire [3:0]\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 ;
   wire \MEM_DECODE_GEN[0].cs_out_i_reg[0] ;
-  wire \Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[31] ;
+  wire \Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[31] ;
   wire \Not_Dual.gpio_Data_Out_reg[0] ;
+  wire \Not_Dual.gpio_Data_Out_reg[0]_0 ;
   wire \Not_Dual.gpio_OE_reg[0] ;
   wire \Not_Dual.gpio_OE_reg[0]_0 ;
+  wire \Not_Dual.gpio_OE_reg[0]_1 ;
   wire SR;
   wire [0:6]bus2ip_addr;
   wire \bus2ip_addr_i[2]_i_1_n_0 ;
@@ -19969,7 +19834,6 @@ module design_1_PmodWIFI_0_0_slave_attachment
   wire \bus2ip_addr_i[8]_i_2_n_0 ;
   wire bus2ip_rnw_i06_out;
   wire clear;
-  wire gpio_Data_In;
   wire [0:0]gpio_io_o;
   wire [0:0]gpio_io_t;
   wire gpio_xferAck_Reg;
@@ -20070,12 +19934,13 @@ module design_1_PmodWIFI_0_0_slave_attachment
         .GPIO_xferAck_i(GPIO_xferAck_i),
         .\INCLUDE_DPHASE_TIMER.dpto_cnt_reg[3] (\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 ),
         .\MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 (\MEM_DECODE_GEN[0].cs_out_i_reg[0] ),
-        .\Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[31] (\Not_Dual.READ_REG_GEN[0].GPIO_DBus_i_reg[31] ),
+        .\Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[31] (\Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[31] ),
         .\Not_Dual.gpio_Data_Out_reg[0] (\Not_Dual.gpio_Data_Out_reg[0] ),
+        .\Not_Dual.gpio_Data_Out_reg[0]_0 (\Not_Dual.gpio_Data_Out_reg[0]_0 ),
         .\Not_Dual.gpio_OE_reg[0] (\Not_Dual.gpio_OE_reg[0]_0 ),
+        .\Not_Dual.gpio_OE_reg[0]_0 (\Not_Dual.gpio_OE_reg[0]_1 ),
         .Q({bus2ip_addr[0],bus2ip_addr[5],bus2ip_addr[6]}),
         .bus2ip_rnw_i_reg(\Not_Dual.gpio_OE_reg[0] ),
-        .gpio_Data_In(gpio_Data_In),
         .gpio_io_o(gpio_io_o),
         .gpio_io_t(gpio_io_t),
         .gpio_xferAck_Reg(gpio_xferAck_Reg),
@@ -20333,12 +20198,10 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized0
     AXI_LITE_WFGPIO_arready,
     AXI_LITE_WFGPIO_wready,
     D,
-    \Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[31] ,
-    \Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[30] ,
-    \Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[29] ,
-    GPIO_DBus_i,
     E,
+    Q,
     \Not_Dual.gpio_Data_Out_reg[0] ,
+    \Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[28] ,
     \ip2bus_data_i_D1_reg[0]_0 ,
     intr2bus_rdack0,
     irpt_rdack,
@@ -20354,8 +20217,8 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized0
     s_axi_rdata,
     bus2ip_reset,
     s_axi_aclk,
-    s_axi_arvalid,
     s_axi_aresetn,
+    s_axi_arvalid,
     ip2bus_rdack_i_D1,
     ip2bus_wrack_i_D1,
     s_axi_bready,
@@ -20365,8 +20228,6 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized0
     s_axi_awvalid,
     s_axi_wvalid,
     s_axi_wdata,
-    gpio_io_t,
-    Q,
     p_0_in,
     irpt_rdack_d1,
     irpt_wrack_d1,
@@ -20387,12 +20248,10 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized0
   output AXI_LITE_WFGPIO_arready;
   output AXI_LITE_WFGPIO_wready;
   output [3:0]D;
-  output \Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[31] ;
-  output \Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[30] ;
-  output \Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[29] ;
-  output [0:0]GPIO_DBus_i;
   output [0:0]E;
+  output [0:0]Q;
   output [0:0]\Not_Dual.gpio_Data_Out_reg[0] ;
+  output \Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[28] ;
   output [1:0]\ip2bus_data_i_D1_reg[0]_0 ;
   output intr2bus_rdack0;
   output irpt_rdack;
@@ -20408,8 +20267,8 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized0
   output [4:0]s_axi_rdata;
   input bus2ip_reset;
   input s_axi_aclk;
-  input s_axi_arvalid;
   input s_axi_aresetn;
+  input s_axi_arvalid;
   input ip2bus_rdack_i_D1;
   input ip2bus_wrack_i_D1;
   input s_axi_bready;
@@ -20419,8 +20278,6 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized0
   input s_axi_awvalid;
   input s_axi_wvalid;
   input [7:0]s_axi_wdata;
-  input [3:0]gpio_io_t;
-  input [3:0]Q;
   input [0:0]p_0_in;
   input irpt_rdack_d1;
   input irpt_wrack_d1;
@@ -20439,24 +20296,20 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized0
   wire AXI_LITE_WFGPIO_wready;
   wire [3:0]D;
   wire [0:0]E;
-  wire [0:0]GPIO_DBus_i;
   wire GPIO_xferAck_i;
   wire [3:0]\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 ;
   wire \INTR_CTRLR_GEN.ip2Bus_RdAck_intr_reg_hole_reg ;
   wire \INTR_CTRLR_GEN.ip2Bus_WrAck_intr_reg_hole_reg ;
-  wire \Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[29] ;
-  wire \Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[30] ;
-  wire \Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[31] ;
+  wire \Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[28] ;
   wire [0:0]\Not_Dual.gpio_Data_Out_reg[0] ;
   wire \Not_Dual.gpio_Data_Out_reg[3] ;
   wire \Not_Dual.gpio_OE_reg[0] ;
-  wire [3:0]Q;
+  wire [0:0]Q;
   wire Read_Reg_Rst;
-  wire [0:6]bus2ip_addr;
+  wire [0:5]bus2ip_addr;
   wire bus2ip_reset;
   wire bus2ip_rnw_i06_out;
   wire clear;
-  wire [3:0]gpio_io_t;
   wire gpio_xferAck_Reg;
   wire interrupt_wrce_strb;
   wire intr2bus_rdack0;
@@ -20508,20 +20361,20 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized0
   wire \state[1]_i_2_n_0 ;
   wire \state[1]_i_3_n_0 ;
 
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[0]_i_1 
        (.I0(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [0]),
         .O(plusOp[0]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[1]_i_1 
        (.I0(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [0]),
         .I1(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [1]),
         .O(plusOp[1]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[2]_i_1 
@@ -20535,7 +20388,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized0
        (.I0(state[1]),
         .I1(state[0]),
         .O(clear));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[3]_i_2 
@@ -20573,22 +20426,17 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized0
         .AXI_LITE_WFGPIO_wready(AXI_LITE_WFGPIO_wready),
         .D(D),
         .E(E),
-        .GPIO_DBus_i(GPIO_DBus_i),
         .GPIO_xferAck_i(GPIO_xferAck_i),
         .\INTR_CTRLR_GEN.ip2Bus_RdAck_intr_reg_hole_reg (\INTR_CTRLR_GEN.ip2Bus_RdAck_intr_reg_hole_reg ),
         .\INTR_CTRLR_GEN.ip2Bus_WrAck_intr_reg_hole_reg (\INTR_CTRLR_GEN.ip2Bus_WrAck_intr_reg_hole_reg ),
-        .\Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[29] (\Not_Dual.READ_REG_GEN[1].GPIO_DBus_i_reg[29] ),
-        .\Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[30] (\Not_Dual.READ_REG_GEN[2].GPIO_DBus_i_reg[30] ),
-        .\Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[31] (\Not_Dual.READ_REG_GEN[3].GPIO_DBus_i_reg[31] ),
-        .\Not_Dual.gpio_Data_In_reg[0] (Q),
+        .\Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[28] (\Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg[28] ),
         .\Not_Dual.gpio_Data_Out_reg[0] (\Not_Dual.gpio_Data_Out_reg[0] ),
         .\Not_Dual.gpio_Data_Out_reg[3] (\Not_Dual.gpio_Data_Out_reg[3] ),
         .Q(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 ),
         .Read_Reg_Rst(Read_Reg_Rst),
-        .\bus2ip_addr_i_reg[8] ({bus2ip_addr[0],bus2ip_addr[1],bus2ip_addr[2],bus2ip_addr[3],bus2ip_addr[4],bus2ip_addr[5],bus2ip_addr[6]}),
+        .\bus2ip_addr_i_reg[8] ({bus2ip_addr[0],bus2ip_addr[1],bus2ip_addr[2],bus2ip_addr[3],bus2ip_addr[4],bus2ip_addr[5],Q}),
         .bus2ip_reset(bus2ip_reset),
         .bus2ip_rnw_i_reg(\Not_Dual.gpio_OE_reg[0] ),
-        .gpio_io_t(gpio_io_t),
         .gpio_xferAck_Reg(gpio_xferAck_Reg),
         .interrupt_wrce_strb(interrupt_wrce_strb),
         .intr2bus_rdack0(intr2bus_rdack0),
@@ -20635,7 +20483,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized0
         .I3(s_axi_arvalid),
         .I4(s_axi_araddr[1]),
         .O(p_1_in__0[3]));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT5 #(
     .INIT(32'hABAAA8AA)) 
     \bus2ip_addr_i[4]_i_1 
@@ -20685,7 +20533,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized0
        (.C(s_axi_aclk),
         .CE(start2_i_1_n_0),
         .D(p_1_in__0[2]),
-        .Q(bus2ip_addr[6]),
+        .Q(Q),
         .R(bus2ip_reset));
   FDRE \bus2ip_addr_i_reg[3] 
        (.C(s_axi_aclk),
@@ -20723,7 +20571,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized0
         .D(p_1_in__0[8]),
         .Q(bus2ip_addr[0]),
         .R(bus2ip_reset));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT3 #(
     .INIT(8'h02)) 
     bus2ip_rnw_i_i_1
@@ -20925,7 +20773,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized1
    (bus2ip_rnw_i_reg_0,
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_reg ,
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_reg ,
-    p_4_in,
+    \GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg ,
     Receive_ip2bus_error_reg,
     Transmit_ip2bus_error_reg,
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_reg_0 ,
@@ -20935,8 +20783,8 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized1
     AXI_LITE_SPI_rvalid,
     AXI_LITE_SPI_bvalid,
     s_axi_bresp,
-    AXI_LITE_SPI_arready,
     AXI_LITE_SPI_wready,
+    AXI_LITE_SPI_arready,
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_reg_0 ,
     wr_ce_or_reduce_core_cmb,
     bus2ip_wrce_int,
@@ -20975,8 +20823,8 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized1
     s_axi_rdata,
     s_axi_aclk,
     IP2Bus_Error,
-    s_axi_arvalid,
     s_axi_aresetn,
+    s_axi_arvalid,
     p_15_out,
     p_16_out,
     s_axi_rready,
@@ -21004,7 +20852,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized1
     Tx_FIFO_Full_int,
     spicr_9_lsb_frm_axi_clk,
     Tx_FIFO_Empty_SPISR_to_axi_clk,
-    p_4_in_0,
+    p_4_in,
     Receive_ip2bus_error_reg_0,
     sw_rst_cond_d1,
     s_axi_wdata,
@@ -21016,7 +20864,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized1
   output bus2ip_rnw_i_reg_0;
   output \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_reg ;
   output \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_reg ;
-  output p_4_in;
+  output \GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg ;
   output Receive_ip2bus_error_reg;
   output Transmit_ip2bus_error_reg;
   output \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_reg_0 ;
@@ -21026,8 +20874,8 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized1
   output AXI_LITE_SPI_rvalid;
   output AXI_LITE_SPI_bvalid;
   output [0:0]s_axi_bresp;
-  output AXI_LITE_SPI_arready;
   output AXI_LITE_SPI_wready;
+  output AXI_LITE_SPI_arready;
   output \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_reg_0 ;
   output wr_ce_or_reduce_core_cmb;
   output [0:0]bus2ip_wrce_int;
@@ -21066,8 +20914,8 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized1
   output [10:0]s_axi_rdata;
   input s_axi_aclk;
   input IP2Bus_Error;
-  input s_axi_arvalid;
   input s_axi_aresetn;
+  input s_axi_arvalid;
   input p_15_out;
   input p_16_out;
   input s_axi_rready;
@@ -21095,7 +20943,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized1
   input Tx_FIFO_Full_int;
   input spicr_9_lsb_frm_axi_clk;
   input Tx_FIFO_Empty_SPISR_to_axi_clk;
-  input p_4_in_0;
+  input p_4_in;
   input Receive_ip2bus_error_reg_0;
   input sw_rst_cond_d1;
   input [6:0]s_axi_wdata;
@@ -21114,6 +20962,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized1
   wire \CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] ;
   wire [2:0]D;
   wire [0:0]E;
+  wire \GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg ;
   wire [5:0]\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 ;
   wire IP2Bus_Error;
   wire IP2Bus_Error_1;
@@ -21193,7 +21042,6 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized1
   wire p_1_in23_in;
   wire p_39_out__0;
   wire p_4_in;
-  wire p_4_in_0;
   wire [5:0]plusOp;
   wire rd_ce_or_reduce_core_cmb;
   wire reset2ip_reset_int;
@@ -21234,14 +21082,14 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized1
     \INCLUDE_DPHASE_TIMER.dpto_cnt[0]_i_1 
        (.I0(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [0]),
         .O(plusOp[0]));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[1]_i_1 
        (.I0(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [0]),
         .I1(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [1]),
         .O(plusOp[1]));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[2]_i_1 
@@ -21249,7 +21097,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized1
         .I1(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [0]),
         .I2(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [2]),
         .O(plusOp[2]));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[3]_i_1 
@@ -21258,7 +21106,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized1
         .I2(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [1]),
         .I3(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [3]),
         .O(plusOp[3]));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[4]_i_1 
@@ -21328,6 +21176,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized1
         .\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] (\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] ),
         .D(D),
         .E(E),
+        .\GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg ),
         .\INCLUDE_DPHASE_TIMER.dpto_cnt_reg[5] (\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 ),
         .IP2Bus_Error_1(IP2Bus_Error_1),
         .IP2Bus_RdAck_receive_enable__1(IP2Bus_RdAck_receive_enable__1),
@@ -21387,7 +21236,6 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized1
         .p_1_in23_in(p_1_in23_in),
         .p_39_out__0(p_39_out__0),
         .p_4_in(p_4_in),
-        .p_4_in_0(p_4_in_0),
         .rd_ce_or_reduce_core_cmb(rd_ce_or_reduce_core_cmb),
         .reset2ip_reset_int(reset2ip_reset_int),
         .reset_trig0(reset_trig0),
@@ -21443,7 +21291,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized1
         .I3(s_axi_arvalid),
         .I4(s_axi_awaddr[1]),
         .O(\bus2ip_addr_i[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT5 #(
     .INIT(32'hFEFF0200)) 
     \bus2ip_addr_i[4]_i_1 
@@ -21501,7 +21349,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized1
         .D(\bus2ip_addr_i[6]_i_1_n_0 ),
         .Q(\bus2ip_addr_i_reg_n_0_[6] ),
         .R(bus2ip_rnw_i_reg_0));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT3 #(
     .INIT(8'h10)) 
     bus2ip_rnw_i_i_1
@@ -21784,42 +21632,37 @@ endmodule
 (* ORIG_REF_NAME = "slave_attachment" *) 
 module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
    (\LOAD_REG_GEN[31].LOAD_REG_I ,
-    \LOAD_REG_GEN[31].LOAD_REG_I_0 ,
-    \TCSR1_GENERATE[24].TCSR1_FF_I ,
+    \TCSR0_GENERATE[23].TCSR0_FF_I ,
     S_AXI_TIMER_rvalid,
     S_AXI_TIMER_bvalid,
-    \s_axi_rdata_i_reg[11]_0 ,
-    \s_axi_rdata_i_reg[3]_0 ,
-    bus2ip_rdce,
-    S_AXI_TIMER_wready,
-    S_AXI_TIMER_arready,
-    \s_axi_rdata_i_reg[31]_0 ,
-    \s_axi_rdata_i_reg[30]_0 ,
-    \s_axi_rdata_i_reg[29]_0 ,
-    \s_axi_rdata_i_reg[28]_0 ,
-    \s_axi_rdata_i_reg[27]_0 ,
-    \s_axi_rdata_i_reg[26]_0 ,
-    \s_axi_rdata_i_reg[25]_0 ,
-    \s_axi_rdata_i_reg[24]_0 ,
-    \s_axi_rdata_i_reg[23]_0 ,
-    \s_axi_rdata_i_reg[22]_0 ,
-    \s_axi_rdata_i_reg[21]_0 ,
-    \s_axi_rdata_i_reg[20]_0 ,
-    \s_axi_rdata_i_reg[19]_0 ,
-    \s_axi_rdata_i_reg[18]_0 ,
-    \s_axi_rdata_i_reg[17]_0 ,
-    \s_axi_rdata_i_reg[16]_0 ,
-    \s_axi_rdata_i_reg[15]_0 ,
-    \s_axi_rdata_i_reg[14]_0 ,
-    \s_axi_rdata_i_reg[13]_0 ,
     \s_axi_rdata_i_reg[12]_0 ,
+    \s_axi_rdata_i_reg[13]_0 ,
+    \s_axi_rdata_i_reg[14]_0 ,
+    \s_axi_rdata_i_reg[15]_0 ,
+    \s_axi_rdata_i_reg[16]_0 ,
+    \s_axi_rdata_i_reg[17]_0 ,
+    \s_axi_rdata_i_reg[18]_0 ,
+    \s_axi_rdata_i_reg[19]_0 ,
+    \s_axi_rdata_i_reg[20]_0 ,
+    \s_axi_rdata_i_reg[21]_0 ,
+    \s_axi_rdata_i_reg[22]_0 ,
+    \s_axi_rdata_i_reg[23]_0 ,
+    \s_axi_rdata_i_reg[24]_0 ,
+    \s_axi_rdata_i_reg[25]_0 ,
+    \s_axi_rdata_i_reg[26]_0 ,
+    \s_axi_rdata_i_reg[27]_0 ,
+    \s_axi_rdata_i_reg[28]_0 ,
+    \s_axi_rdata_i_reg[29]_0 ,
+    \s_axi_rdata_i_reg[30]_0 ,
+    \s_axi_rdata_i_reg[31]_0 ,
     pair0_Select,
-    \TCSR0_GENERATE[23].TCSR0_FF_I ,
+    S_AXI_TIMER_arready,
+    \s_axi_rdata_i_reg[11]_0 ,
     \TCSR0_GENERATE[24].TCSR0_FF_I ,
-    bus2ip_wrce,
-    \TCSR1_GENERATE[23].TCSR1_FF_I ,
-    \TCSR1_GENERATE[24].TCSR1_FF_I_0 ,
-    \LOAD_REG_GEN[31].LOAD_REG_I_1 ,
+    \TCSR1_GENERATE[24].TCSR1_FF_I ,
+    S_AXI_TIMER_wready,
+    bus2ip_rdce,
+    \LOAD_REG_GEN[31].LOAD_REG_I_0 ,
     \LOAD_REG_GEN[30].LOAD_REG_I ,
     \LOAD_REG_GEN[29].LOAD_REG_I ,
     \LOAD_REG_GEN[28].LOAD_REG_I ,
@@ -21851,7 +21694,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     \LOAD_REG_GEN[2].LOAD_REG_I ,
     \LOAD_REG_GEN[1].LOAD_REG_I ,
     D_0,
-    \LOAD_REG_GEN[31].LOAD_REG_I_2 ,
+    \LOAD_REG_GEN[31].LOAD_REG_I_1 ,
     \LOAD_REG_GEN[30].LOAD_REG_I_0 ,
     \LOAD_REG_GEN[29].LOAD_REG_I_0 ,
     \LOAD_REG_GEN[28].LOAD_REG_I_0 ,
@@ -21883,61 +21726,61 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     \LOAD_REG_GEN[2].LOAD_REG_I_0 ,
     \LOAD_REG_GEN[1].LOAD_REG_I_0 ,
     D_1,
+    \TCSR0_GENERATE[23].TCSR0_FF_I_0 ,
+    \TCSR1_GENERATE[23].TCSR1_FF_I ,
+    \LOAD_REG_GEN[24].LOAD_REG_I_1 ,
+    \TCSR1_GENERATE[22].TCSR1_FF_I ,
+    \TCSR0_GENERATE[20].TCSR0_FF_I ,
     READ_DONE0_I,
     READ_DONE1_I,
     s_axi_rdata,
     bus2ip_reset,
     s_axi_aclk,
     read_Mux_In,
-    s_axi_aresetn,
     s_axi_arvalid,
-    s_axi_wdata,
-    s_axi_bready,
-    s_axi_rready,
     s_axi_awvalid,
     s_axi_wvalid,
     s_axi_araddr,
     s_axi_awaddr,
+    s_axi_rready,
+    s_axi_bready,
+    s_axi_wdata,
+    s_axi_aresetn,
     D_2,
     read_done1,
     D);
   output \LOAD_REG_GEN[31].LOAD_REG_I ;
-  output \LOAD_REG_GEN[31].LOAD_REG_I_0 ;
-  output \TCSR1_GENERATE[24].TCSR1_FF_I ;
+  output \TCSR0_GENERATE[23].TCSR0_FF_I ;
   output S_AXI_TIMER_rvalid;
   output S_AXI_TIMER_bvalid;
-  output \s_axi_rdata_i_reg[11]_0 ;
-  output \s_axi_rdata_i_reg[3]_0 ;
-  output [5:0]bus2ip_rdce;
-  output S_AXI_TIMER_wready;
-  output S_AXI_TIMER_arready;
-  output \s_axi_rdata_i_reg[31]_0 ;
-  output \s_axi_rdata_i_reg[30]_0 ;
-  output \s_axi_rdata_i_reg[29]_0 ;
-  output \s_axi_rdata_i_reg[28]_0 ;
-  output \s_axi_rdata_i_reg[27]_0 ;
-  output \s_axi_rdata_i_reg[26]_0 ;
-  output \s_axi_rdata_i_reg[25]_0 ;
-  output \s_axi_rdata_i_reg[24]_0 ;
-  output \s_axi_rdata_i_reg[23]_0 ;
-  output \s_axi_rdata_i_reg[22]_0 ;
-  output \s_axi_rdata_i_reg[21]_0 ;
-  output \s_axi_rdata_i_reg[20]_0 ;
-  output \s_axi_rdata_i_reg[19]_0 ;
-  output \s_axi_rdata_i_reg[18]_0 ;
-  output \s_axi_rdata_i_reg[17]_0 ;
-  output \s_axi_rdata_i_reg[16]_0 ;
-  output \s_axi_rdata_i_reg[15]_0 ;
-  output \s_axi_rdata_i_reg[14]_0 ;
-  output \s_axi_rdata_i_reg[13]_0 ;
   output \s_axi_rdata_i_reg[12]_0 ;
+  output \s_axi_rdata_i_reg[13]_0 ;
+  output \s_axi_rdata_i_reg[14]_0 ;
+  output \s_axi_rdata_i_reg[15]_0 ;
+  output \s_axi_rdata_i_reg[16]_0 ;
+  output \s_axi_rdata_i_reg[17]_0 ;
+  output \s_axi_rdata_i_reg[18]_0 ;
+  output \s_axi_rdata_i_reg[19]_0 ;
+  output \s_axi_rdata_i_reg[20]_0 ;
+  output \s_axi_rdata_i_reg[21]_0 ;
+  output \s_axi_rdata_i_reg[22]_0 ;
+  output \s_axi_rdata_i_reg[23]_0 ;
+  output \s_axi_rdata_i_reg[24]_0 ;
+  output \s_axi_rdata_i_reg[25]_0 ;
+  output \s_axi_rdata_i_reg[26]_0 ;
+  output \s_axi_rdata_i_reg[27]_0 ;
+  output \s_axi_rdata_i_reg[28]_0 ;
+  output \s_axi_rdata_i_reg[29]_0 ;
+  output \s_axi_rdata_i_reg[30]_0 ;
+  output \s_axi_rdata_i_reg[31]_0 ;
   output pair0_Select;
-  output \TCSR0_GENERATE[23].TCSR0_FF_I ;
+  output S_AXI_TIMER_arready;
+  output \s_axi_rdata_i_reg[11]_0 ;
   output \TCSR0_GENERATE[24].TCSR0_FF_I ;
-  output [1:0]bus2ip_wrce;
-  output \TCSR1_GENERATE[23].TCSR1_FF_I ;
-  output \TCSR1_GENERATE[24].TCSR1_FF_I_0 ;
-  output \LOAD_REG_GEN[31].LOAD_REG_I_1 ;
+  output \TCSR1_GENERATE[24].TCSR1_FF_I ;
+  output S_AXI_TIMER_wready;
+  output [5:0]bus2ip_rdce;
+  output \LOAD_REG_GEN[31].LOAD_REG_I_0 ;
   output \LOAD_REG_GEN[30].LOAD_REG_I ;
   output \LOAD_REG_GEN[29].LOAD_REG_I ;
   output \LOAD_REG_GEN[28].LOAD_REG_I ;
@@ -21969,7 +21812,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
   output \LOAD_REG_GEN[2].LOAD_REG_I ;
   output \LOAD_REG_GEN[1].LOAD_REG_I ;
   output D_0;
-  output \LOAD_REG_GEN[31].LOAD_REG_I_2 ;
+  output \LOAD_REG_GEN[31].LOAD_REG_I_1 ;
   output \LOAD_REG_GEN[30].LOAD_REG_I_0 ;
   output \LOAD_REG_GEN[29].LOAD_REG_I_0 ;
   output \LOAD_REG_GEN[28].LOAD_REG_I_0 ;
@@ -22001,21 +21844,26 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
   output \LOAD_REG_GEN[2].LOAD_REG_I_0 ;
   output \LOAD_REG_GEN[1].LOAD_REG_I_0 ;
   output D_1;
+  output \TCSR0_GENERATE[23].TCSR0_FF_I_0 ;
+  output \TCSR1_GENERATE[23].TCSR1_FF_I ;
+  output \LOAD_REG_GEN[24].LOAD_REG_I_1 ;
+  output \TCSR1_GENERATE[22].TCSR1_FF_I ;
+  output \TCSR0_GENERATE[20].TCSR0_FF_I ;
   output READ_DONE0_I;
   output READ_DONE1_I;
   output [31:0]s_axi_rdata;
   input bus2ip_reset;
   input s_axi_aclk;
-  input [90:0]read_Mux_In;
-  input s_axi_aresetn;
+  input [87:0]read_Mux_In;
   input s_axi_arvalid;
-  input [31:0]s_axi_wdata;
-  input s_axi_bready;
-  input s_axi_rready;
   input s_axi_awvalid;
   input s_axi_wvalid;
   input [2:0]s_axi_araddr;
   input [2:0]s_axi_awaddr;
+  input s_axi_rready;
+  input s_axi_bready;
+  input [31:0]s_axi_wdata;
+  input s_axi_aresetn;
   input D_2;
   input read_done1;
   input [31:0]D;
@@ -22025,8 +21873,10 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
   wire D_1;
   wire D_2;
   wire [5:0]\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 ;
-  wire I_DECODER_n_106;
-  wire I_DECODER_n_107;
+  wire I_DECODER_n_100;
+  wire I_DECODER_n_101;
+  wire I_DECODER_n_23;
+  wire I_DECODER_n_24;
   wire \LOAD_REG_GEN[10].LOAD_REG_I ;
   wire \LOAD_REG_GEN[10].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[11].LOAD_REG_I ;
@@ -22059,6 +21909,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
   wire \LOAD_REG_GEN[23].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[24].LOAD_REG_I ;
   wire \LOAD_REG_GEN[24].LOAD_REG_I_0 ;
+  wire \LOAD_REG_GEN[24].LOAD_REG_I_1 ;
   wire \LOAD_REG_GEN[25].LOAD_REG_I ;
   wire \LOAD_REG_GEN[25].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[26].LOAD_REG_I ;
@@ -22076,7 +21927,6 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
   wire \LOAD_REG_GEN[31].LOAD_REG_I ;
   wire \LOAD_REG_GEN[31].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[31].LOAD_REG_I_1 ;
-  wire \LOAD_REG_GEN[31].LOAD_REG_I_2 ;
   wire \LOAD_REG_GEN[3].LOAD_REG_I ;
   wire \LOAD_REG_GEN[3].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[4].LOAD_REG_I ;
@@ -22097,11 +21947,13 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
   wire S_AXI_TIMER_bvalid;
   wire S_AXI_TIMER_rvalid;
   wire S_AXI_TIMER_wready;
+  wire \TCSR0_GENERATE[20].TCSR0_FF_I ;
   wire \TCSR0_GENERATE[23].TCSR0_FF_I ;
+  wire \TCSR0_GENERATE[23].TCSR0_FF_I_0 ;
   wire \TCSR0_GENERATE[24].TCSR0_FF_I ;
+  wire \TCSR1_GENERATE[22].TCSR1_FF_I ;
   wire \TCSR1_GENERATE[23].TCSR1_FF_I ;
   wire \TCSR1_GENERATE[24].TCSR1_FF_I ;
-  wire \TCSR1_GENERATE[24].TCSR1_FF_I_0 ;
   wire [0:2]bus2ip_addr;
   wire \bus2ip_addr_i[2]_i_1_n_0 ;
   wire \bus2ip_addr_i[3]_i_1_n_0 ;
@@ -22111,17 +21963,15 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
   wire bus2ip_reset;
   wire bus2ip_rnw_i;
   wire bus2ip_rnw_i06_out;
-  wire [1:0]bus2ip_wrce;
   wire clear;
   wire is_read;
   wire is_read_i_1_n_0;
   wire is_write;
   wire is_write_i_1_n_0;
   wire is_write_reg_n_0;
-  wire [1:0]p_0_out;
   wire pair0_Select;
   wire [5:0]plusOp;
-  wire [90:0]read_Mux_In;
+  wire [87:0]read_Mux_In;
   wire read_done1;
   wire rst;
   wire s_axi_aclk;
@@ -22132,7 +21982,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
   wire s_axi_awvalid;
   wire s_axi_bready;
   wire [31:0]s_axi_rdata;
-  wire s_axi_rdata_i;
+  wire \s_axi_rdata_i[31]_i_1_n_0 ;
   wire \s_axi_rdata_i_reg[11]_0 ;
   wire \s_axi_rdata_i_reg[12]_0 ;
   wire \s_axi_rdata_i_reg[13]_0 ;
@@ -22154,7 +22004,6 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
   wire \s_axi_rdata_i_reg[29]_0 ;
   wire \s_axi_rdata_i_reg[30]_0 ;
   wire \s_axi_rdata_i_reg[31]_0 ;
-  wire \s_axi_rdata_i_reg[3]_0 ;
   wire s_axi_rready;
   wire [31:0]s_axi_wdata;
   wire s_axi_wvalid;
@@ -22169,14 +22018,14 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     \INCLUDE_DPHASE_TIMER.dpto_cnt[0]_i_1 
        (.I0(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [0]),
         .O(plusOp[0]));
-  (* SOFT_HLUTNM = "soft_lutpair81" *) 
+  (* SOFT_HLUTNM = "soft_lutpair83" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[1]_i_1 
        (.I0(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [0]),
         .I1(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [1]),
         .O(plusOp[1]));
-  (* SOFT_HLUTNM = "soft_lutpair81" *) 
+  (* SOFT_HLUTNM = "soft_lutpair83" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[2]_i_1 
@@ -22184,7 +22033,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
         .I1(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [1]),
         .I2(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [2]),
         .O(plusOp[2]));
-  (* SOFT_HLUTNM = "soft_lutpair79" *) 
+  (* SOFT_HLUTNM = "soft_lutpair81" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[3]_i_1 
@@ -22193,7 +22042,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
         .I2(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [2]),
         .I3(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [3]),
         .O(plusOp[3]));
-  (* SOFT_HLUTNM = "soft_lutpair79" *) 
+  (* SOFT_HLUTNM = "soft_lutpair81" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[4]_i_1 
@@ -22256,7 +22105,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
         .Q(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [5]),
         .R(clear));
   design_1_PmodWIFI_0_0_address_decoder__parameterized2 I_DECODER
-       (.D(p_0_out),
+       (.D({I_DECODER_n_23,I_DECODER_n_24}),
         .D_0(D_0),
         .D_1(D_1),
         .D_2(D_2),
@@ -22293,6 +22142,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
         .\LOAD_REG_GEN[23].LOAD_REG_I_0 (\LOAD_REG_GEN[23].LOAD_REG_I_0 ),
         .\LOAD_REG_GEN[24].LOAD_REG_I (\LOAD_REG_GEN[24].LOAD_REG_I ),
         .\LOAD_REG_GEN[24].LOAD_REG_I_0 (\LOAD_REG_GEN[24].LOAD_REG_I_0 ),
+        .\LOAD_REG_GEN[24].LOAD_REG_I_1 (\LOAD_REG_GEN[24].LOAD_REG_I_1 ),
         .\LOAD_REG_GEN[25].LOAD_REG_I (\LOAD_REG_GEN[25].LOAD_REG_I ),
         .\LOAD_REG_GEN[25].LOAD_REG_I_0 (\LOAD_REG_GEN[25].LOAD_REG_I_0 ),
         .\LOAD_REG_GEN[26].LOAD_REG_I (\LOAD_REG_GEN[26].LOAD_REG_I ),
@@ -22310,7 +22160,6 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
         .\LOAD_REG_GEN[31].LOAD_REG_I (\LOAD_REG_GEN[31].LOAD_REG_I ),
         .\LOAD_REG_GEN[31].LOAD_REG_I_0 (\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
         .\LOAD_REG_GEN[31].LOAD_REG_I_1 (\LOAD_REG_GEN[31].LOAD_REG_I_1 ),
-        .\LOAD_REG_GEN[31].LOAD_REG_I_2 (\LOAD_REG_GEN[31].LOAD_REG_I_2 ),
         .\LOAD_REG_GEN[3].LOAD_REG_I (\LOAD_REG_GEN[3].LOAD_REG_I ),
         .\LOAD_REG_GEN[3].LOAD_REG_I_0 (\LOAD_REG_GEN[3].LOAD_REG_I_0 ),
         .\LOAD_REG_GEN[4].LOAD_REG_I (\LOAD_REG_GEN[4].LOAD_REG_I ),
@@ -22329,17 +22178,18 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
         .READ_DONE0_I(READ_DONE0_I),
         .READ_DONE1_I(READ_DONE1_I),
         .S_AXI_TIMER_arready(S_AXI_TIMER_arready),
-        .S_AXI_TIMER_awvalid(\state[1]_i_3_n_0 ),
+        .S_AXI_TIMER_arvalid(\state[1]_i_3_n_0 ),
         .S_AXI_TIMER_wready(S_AXI_TIMER_wready),
+        .\TCSR0_GENERATE[20].TCSR0_FF_I (\TCSR0_GENERATE[20].TCSR0_FF_I ),
         .\TCSR0_GENERATE[23].TCSR0_FF_I (\TCSR0_GENERATE[23].TCSR0_FF_I ),
+        .\TCSR0_GENERATE[23].TCSR0_FF_I_0 (\TCSR0_GENERATE[23].TCSR0_FF_I_0 ),
         .\TCSR0_GENERATE[24].TCSR0_FF_I (\TCSR0_GENERATE[24].TCSR0_FF_I ),
+        .\TCSR1_GENERATE[22].TCSR1_FF_I (\TCSR1_GENERATE[22].TCSR1_FF_I ),
         .\TCSR1_GENERATE[23].TCSR1_FF_I (\TCSR1_GENERATE[23].TCSR1_FF_I ),
         .\TCSR1_GENERATE[24].TCSR1_FF_I (\TCSR1_GENERATE[24].TCSR1_FF_I ),
-        .\TCSR1_GENERATE[24].TCSR1_FF_I_0 (\TCSR1_GENERATE[24].TCSR1_FF_I_0 ),
         .\bus2ip_addr_i_reg[4] ({bus2ip_addr[0],bus2ip_addr[1],bus2ip_addr[2]}),
         .bus2ip_rdce(bus2ip_rdce),
         .bus2ip_rnw_i(bus2ip_rnw_i),
-        .bus2ip_wrce(bus2ip_wrce),
         .is_read(is_read),
         .is_write_reg(is_write_reg_n_0),
         .pair0_Select(pair0_Select),
@@ -22349,7 +22199,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
         .s_axi_aresetn(s_axi_aresetn),
         .s_axi_arvalid(s_axi_arvalid),
         .s_axi_bready(s_axi_bready),
-        .s_axi_bvalid_i_reg(I_DECODER_n_107),
+        .s_axi_bvalid_i_reg(I_DECODER_n_101),
         .s_axi_bvalid_i_reg_0(S_AXI_TIMER_bvalid),
         .\s_axi_rdata_i_reg[11] (\s_axi_rdata_i_reg[11]_0 ),
         .\s_axi_rdata_i_reg[12] (\s_axi_rdata_i_reg[12]_0 ),
@@ -22372,48 +22222,47 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
         .\s_axi_rdata_i_reg[29] (\s_axi_rdata_i_reg[29]_0 ),
         .\s_axi_rdata_i_reg[30] (\s_axi_rdata_i_reg[30]_0 ),
         .\s_axi_rdata_i_reg[31] (\s_axi_rdata_i_reg[31]_0 ),
-        .\s_axi_rdata_i_reg[3] (\s_axi_rdata_i_reg[3]_0 ),
         .s_axi_rready(s_axi_rready),
-        .s_axi_rvalid_i_reg(I_DECODER_n_106),
+        .s_axi_rvalid_i_reg(I_DECODER_n_100),
         .s_axi_rvalid_i_reg_0(S_AXI_TIMER_rvalid),
         .s_axi_wdata(s_axi_wdata),
         .state1__2(state1__2),
         .\state_reg[1] (state));
   LUT5 #(
-    .INIT(32'hFFFB0008)) 
+    .INIT(32'hFEFF0200)) 
     \bus2ip_addr_i[2]_i_1 
        (.I0(s_axi_araddr[0]),
-        .I1(s_axi_arvalid),
-        .I2(state[0]),
-        .I3(state[1]),
+        .I1(state[0]),
+        .I2(state[1]),
+        .I3(s_axi_arvalid),
         .I4(s_axi_awaddr[0]),
         .O(\bus2ip_addr_i[2]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'hFFFB0008)) 
+    .INIT(32'hFEFF0200)) 
     \bus2ip_addr_i[3]_i_1 
        (.I0(s_axi_araddr[1]),
-        .I1(s_axi_arvalid),
-        .I2(state[0]),
-        .I3(state[1]),
+        .I1(state[0]),
+        .I2(state[1]),
+        .I3(s_axi_arvalid),
         .I4(s_axi_awaddr[1]),
         .O(\bus2ip_addr_i[3]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'h03020202)) 
+    .INIT(32'h000000EA)) 
     \bus2ip_addr_i[4]_i_1 
        (.I0(s_axi_arvalid),
-        .I1(state[1]),
-        .I2(state[0]),
-        .I3(s_axi_awvalid),
-        .I4(s_axi_wvalid),
+        .I1(s_axi_awvalid),
+        .I2(s_axi_wvalid),
+        .I3(state[1]),
+        .I4(state[0]),
         .O(\bus2ip_addr_i[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair78" *) 
+  (* SOFT_HLUTNM = "soft_lutpair80" *) 
   LUT5 #(
-    .INIT(32'hFFFB0008)) 
+    .INIT(32'hFEFF0200)) 
     \bus2ip_addr_i[4]_i_2 
        (.I0(s_axi_araddr[2]),
-        .I1(s_axi_arvalid),
-        .I2(state[0]),
-        .I3(state[1]),
+        .I1(state[0]),
+        .I2(state[1]),
+        .I3(s_axi_arvalid),
         .I4(s_axi_awaddr[2]),
         .O(\bus2ip_addr_i[4]_i_2_n_0 ));
   FDRE \bus2ip_addr_i_reg[2] 
@@ -22434,13 +22283,13 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
         .D(\bus2ip_addr_i[4]_i_2_n_0 ),
         .Q(bus2ip_addr[0]),
         .R(rst));
-  (* SOFT_HLUTNM = "soft_lutpair78" *) 
+  (* SOFT_HLUTNM = "soft_lutpair80" *) 
   LUT3 #(
-    .INIT(8'h02)) 
+    .INIT(8'h10)) 
     bus2ip_rnw_i_i_1
-       (.I0(s_axi_arvalid),
-        .I1(state[0]),
-        .I2(state[1]),
+       (.I0(state[0]),
+        .I1(state[1]),
+        .I2(s_axi_arvalid),
         .O(bus2ip_rnw_i06_out));
   FDRE bus2ip_rnw_i_reg
        (.C(s_axi_aclk),
@@ -22464,11 +22313,11 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
         .Q(is_read),
         .R(rst));
   LUT6 #(
-    .INIT(64'h0008FFFF00080000)) 
+    .INIT(64'h0040FFFF00400000)) 
     is_write_i_1
-       (.I0(s_axi_awvalid),
-        .I1(s_axi_wvalid),
-        .I2(s_axi_arvalid),
+       (.I0(s_axi_arvalid),
+        .I1(s_axi_awvalid),
+        .I2(s_axi_wvalid),
         .I3(state[1]),
         .I4(is_write),
         .I5(is_write_reg_n_0),
@@ -22476,10 +22325,10 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
   LUT6 #(
     .INIT(64'hF88800000000FFFF)) 
     is_write_i_2
-       (.I0(s_axi_bready),
-        .I1(S_AXI_TIMER_bvalid),
-        .I2(s_axi_rready),
-        .I3(S_AXI_TIMER_rvalid),
+       (.I0(S_AXI_TIMER_rvalid),
+        .I1(s_axi_rready),
+        .I2(S_AXI_TIMER_bvalid),
+        .I3(s_axi_bready),
         .I4(state[0]),
         .I5(state[1]),
         .O(is_write));
@@ -22500,7 +22349,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     s_axi_bvalid_i_reg
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(I_DECODER_n_107),
+        .D(I_DECODER_n_101),
         .Q(S_AXI_TIMER_bvalid),
         .R(rst));
   LUT2 #(
@@ -22508,12 +22357,12 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     \s_axi_rdata_i[31]_i_1 
        (.I0(state[0]),
         .I1(state[1]),
-        .O(s_axi_rdata_i));
+        .O(\s_axi_rdata_i[31]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[0] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[0]),
         .Q(s_axi_rdata[0]),
         .R(rst));
@@ -22521,7 +22370,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[10] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[10]),
         .Q(s_axi_rdata[10]),
         .R(rst));
@@ -22529,7 +22378,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[11] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[11]),
         .Q(s_axi_rdata[11]),
         .R(rst));
@@ -22537,7 +22386,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[12] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[12]),
         .Q(s_axi_rdata[12]),
         .R(rst));
@@ -22545,7 +22394,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[13] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[13]),
         .Q(s_axi_rdata[13]),
         .R(rst));
@@ -22553,7 +22402,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[14] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[14]),
         .Q(s_axi_rdata[14]),
         .R(rst));
@@ -22561,7 +22410,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[15] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[15]),
         .Q(s_axi_rdata[15]),
         .R(rst));
@@ -22569,7 +22418,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[16] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[16]),
         .Q(s_axi_rdata[16]),
         .R(rst));
@@ -22577,7 +22426,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[17] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[17]),
         .Q(s_axi_rdata[17]),
         .R(rst));
@@ -22585,7 +22434,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[18] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[18]),
         .Q(s_axi_rdata[18]),
         .R(rst));
@@ -22593,7 +22442,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[19] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[19]),
         .Q(s_axi_rdata[19]),
         .R(rst));
@@ -22601,7 +22450,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[1] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[1]),
         .Q(s_axi_rdata[1]),
         .R(rst));
@@ -22609,7 +22458,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[20] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[20]),
         .Q(s_axi_rdata[20]),
         .R(rst));
@@ -22617,7 +22466,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[21] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[21]),
         .Q(s_axi_rdata[21]),
         .R(rst));
@@ -22625,7 +22474,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[22] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[22]),
         .Q(s_axi_rdata[22]),
         .R(rst));
@@ -22633,7 +22482,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[23] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[23]),
         .Q(s_axi_rdata[23]),
         .R(rst));
@@ -22641,7 +22490,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[24] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[24]),
         .Q(s_axi_rdata[24]),
         .R(rst));
@@ -22649,7 +22498,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[25] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[25]),
         .Q(s_axi_rdata[25]),
         .R(rst));
@@ -22657,7 +22506,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[26] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[26]),
         .Q(s_axi_rdata[26]),
         .R(rst));
@@ -22665,7 +22514,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[27] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[27]),
         .Q(s_axi_rdata[27]),
         .R(rst));
@@ -22673,7 +22522,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[28] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[28]),
         .Q(s_axi_rdata[28]),
         .R(rst));
@@ -22681,7 +22530,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[29] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[29]),
         .Q(s_axi_rdata[29]),
         .R(rst));
@@ -22689,7 +22538,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[2] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[2]),
         .Q(s_axi_rdata[2]),
         .R(rst));
@@ -22697,7 +22546,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[30] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[30]),
         .Q(s_axi_rdata[30]),
         .R(rst));
@@ -22705,7 +22554,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[31] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[31]),
         .Q(s_axi_rdata[31]),
         .R(rst));
@@ -22713,7 +22562,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[3] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[3]),
         .Q(s_axi_rdata[3]),
         .R(rst));
@@ -22721,7 +22570,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[4] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[4]),
         .Q(s_axi_rdata[4]),
         .R(rst));
@@ -22729,7 +22578,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[5] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[5]),
         .Q(s_axi_rdata[5]),
         .R(rst));
@@ -22737,7 +22586,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[6] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[6]),
         .Q(s_axi_rdata[6]),
         .R(rst));
@@ -22745,7 +22594,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[7] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[7]),
         .Q(s_axi_rdata[7]),
         .R(rst));
@@ -22753,7 +22602,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[8] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[8]),
         .Q(s_axi_rdata[8]),
         .R(rst));
@@ -22761,7 +22610,7 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[9] 
        (.C(s_axi_aclk),
-        .CE(s_axi_rdata_i),
+        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
         .D(D[9]),
         .Q(s_axi_rdata[9]),
         .R(rst));
@@ -22770,18 +22619,18 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
     s_axi_rvalid_i_reg
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(I_DECODER_n_106),
+        .D(I_DECODER_n_100),
         .Q(S_AXI_TIMER_rvalid),
         .R(rst));
-  (* SOFT_HLUTNM = "soft_lutpair80" *) 
+  (* SOFT_HLUTNM = "soft_lutpair82" *) 
   LUT5 #(
-    .INIT(32'h000F0008)) 
+    .INIT(32'h000000F8)) 
     start2_i_1
        (.I0(s_axi_awvalid),
         .I1(s_axi_wvalid),
-        .I2(state[1]),
-        .I3(state[0]),
-        .I4(s_axi_arvalid),
+        .I2(s_axi_arvalid),
+        .I3(state[1]),
+        .I4(state[0]),
         .O(start2_i_1_n_0));
   FDRE start2_reg
        (.C(s_axi_aclk),
@@ -22797,29 +22646,28 @@ module design_1_PmodWIFI_0_0_slave_attachment__parameterized2
         .I2(s_axi_rready),
         .I3(S_AXI_TIMER_rvalid),
         .O(state1__2));
-  (* SOFT_HLUTNM = "soft_lutpair80" *) 
+  (* SOFT_HLUTNM = "soft_lutpair82" *) 
   LUT3 #(
-    .INIT(8'h40)) 
+    .INIT(8'h08)) 
     \state[1]_i_3 
-       (.I0(s_axi_arvalid),
-        .I1(s_axi_wvalid),
-        .I2(s_axi_awvalid),
+       (.I0(s_axi_wvalid),
+        .I1(s_axi_awvalid),
+        .I2(s_axi_arvalid),
         .O(\state[1]_i_3_n_0 ));
   FDRE \state_reg[0] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(p_0_out[0]),
+        .D(I_DECODER_n_24),
         .Q(state[0]),
         .R(rst));
   FDRE \state_reg[1] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(p_0_out[1]),
+        .D(I_DECODER_n_23),
         .Q(state[1]),
         .R(rst));
 endmodule
 
-(* ORIG_REF_NAME = "soft_reset" *) 
 module design_1_PmodWIFI_0_0_soft_reset
    (sw_rst_cond_d1,
     FF_WRACK_0,
@@ -22842,7 +22690,7 @@ module design_1_PmodWIFI_0_0_soft_reset
     \GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg[16] ,
     data_is_non_reset_match__4,
     ip2Bus_WrAck_intr_reg_hole,
-    p_2_in_0,
+    p_2_in,
     ip2Bus_WrAck_core_reg,
     Rx_FIFO_Full_Fifo_d1_flag,
     Rx_FIFO_Full_Fifo_d1_sig,
@@ -22869,7 +22717,7 @@ module design_1_PmodWIFI_0_0_soft_reset
   input \GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg[16] ;
   input data_is_non_reset_match__4;
   input ip2Bus_WrAck_intr_reg_hole;
-  input p_2_in_0;
+  input p_2_in;
   input ip2Bus_WrAck_core_reg;
   input Rx_FIFO_Full_Fifo_d1_flag;
   input Rx_FIFO_Full_Fifo_d1_sig;
@@ -22913,7 +22761,7 @@ module design_1_PmodWIFI_0_0_soft_reset
   wire \icount_out_reg[3] ;
   wire ip2Bus_WrAck_core_reg;
   wire ip2Bus_WrAck_intr_reg_hole;
-  wire p_2_in_0;
+  wire p_2_in;
   wire reset_trig0;
   wire [0:0]rx_fifo_count;
   wire s_axi_aclk;
@@ -22937,7 +22785,7 @@ module design_1_PmodWIFI_0_0_soft_reset
         .D(FF_WRACK_i_1_n_0),
         .Q(wrack),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  (* SOFT_HLUTNM = "soft_lutpair56" *) 
   LUT2 #(
     .INIT(4'h2)) 
     FF_WRACK_i_1
@@ -22961,10 +22809,10 @@ module design_1_PmodWIFI_0_0_soft_reset
         .I1(data_is_non_reset_match__4),
         .I2(ip2Bus_WrAck_intr_reg_hole),
         .I3(wrack),
-        .I4(p_2_in_0),
+        .I4(p_2_in),
         .I5(ip2Bus_WrAck_core_reg),
         .O(IP2Bus_WrAck_1));
-  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  (* SOFT_HLUTNM = "soft_lutpair55" *) 
   LUT4 #(
     .INIT(16'h01FE)) 
     \LOGIC_GENERATION_FDR.SPICR_RX_FIFO_Rst_en_d1_i_1 
@@ -23001,7 +22849,7 @@ module design_1_PmodWIFI_0_0_soft_reset
         .D(\RESET_FLOPS[10].RST_FLOPS_i_1_n_0 ),
         .Q(flop_q_chain[11]),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \RESET_FLOPS[10].RST_FLOPS_i_1 
@@ -23022,7 +22870,7 @@ module design_1_PmodWIFI_0_0_soft_reset
         .D(\RESET_FLOPS[11].RST_FLOPS_i_1_n_0 ),
         .Q(flop_q_chain[12]),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair64" *) 
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \RESET_FLOPS[11].RST_FLOPS_i_1 
@@ -23043,7 +22891,7 @@ module design_1_PmodWIFI_0_0_soft_reset
         .D(\RESET_FLOPS[12].RST_FLOPS_i_1_n_0 ),
         .Q(flop_q_chain[13]),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair64" *) 
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \RESET_FLOPS[12].RST_FLOPS_i_1 
@@ -23064,7 +22912,7 @@ module design_1_PmodWIFI_0_0_soft_reset
         .D(\RESET_FLOPS[13].RST_FLOPS_i_1_n_0 ),
         .Q(flop_q_chain[14]),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \RESET_FLOPS[13].RST_FLOPS_i_1 
@@ -23085,7 +22933,7 @@ module design_1_PmodWIFI_0_0_soft_reset
         .D(\RESET_FLOPS[14].RST_FLOPS_i_1_n_0 ),
         .Q(flop_q_chain[15]),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \RESET_FLOPS[14].RST_FLOPS_i_1 
@@ -23126,7 +22974,7 @@ module design_1_PmodWIFI_0_0_soft_reset
         .D(\RESET_FLOPS[1].RST_FLOPS_i_1_n_0 ),
         .Q(flop_q_chain[2]),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  (* SOFT_HLUTNM = "soft_lutpair57" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \RESET_FLOPS[1].RST_FLOPS_i_1 
@@ -23147,7 +22995,7 @@ module design_1_PmodWIFI_0_0_soft_reset
         .D(\RESET_FLOPS[2].RST_FLOPS_i_1_n_0 ),
         .Q(flop_q_chain[3]),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  (* SOFT_HLUTNM = "soft_lutpair57" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \RESET_FLOPS[2].RST_FLOPS_i_1 
@@ -23168,7 +23016,7 @@ module design_1_PmodWIFI_0_0_soft_reset
         .D(\RESET_FLOPS[3].RST_FLOPS_i_1_n_0 ),
         .Q(flop_q_chain[4]),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \RESET_FLOPS[3].RST_FLOPS_i_1 
@@ -23189,7 +23037,7 @@ module design_1_PmodWIFI_0_0_soft_reset
         .D(\RESET_FLOPS[4].RST_FLOPS_i_1_n_0 ),
         .Q(flop_q_chain[5]),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \RESET_FLOPS[4].RST_FLOPS_i_1 
@@ -23210,7 +23058,7 @@ module design_1_PmodWIFI_0_0_soft_reset
         .D(\RESET_FLOPS[5].RST_FLOPS_i_1_n_0 ),
         .Q(flop_q_chain[6]),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \RESET_FLOPS[5].RST_FLOPS_i_1 
@@ -23231,7 +23079,7 @@ module design_1_PmodWIFI_0_0_soft_reset
         .D(\RESET_FLOPS[6].RST_FLOPS_i_1_n_0 ),
         .Q(flop_q_chain[7]),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \RESET_FLOPS[6].RST_FLOPS_i_1 
@@ -23252,7 +23100,7 @@ module design_1_PmodWIFI_0_0_soft_reset
         .D(\RESET_FLOPS[7].RST_FLOPS_i_1_n_0 ),
         .Q(flop_q_chain[8]),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \RESET_FLOPS[7].RST_FLOPS_i_1 
@@ -23273,7 +23121,7 @@ module design_1_PmodWIFI_0_0_soft_reset
         .D(\RESET_FLOPS[8].RST_FLOPS_i_1_n_0 ),
         .Q(flop_q_chain[9]),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \RESET_FLOPS[8].RST_FLOPS_i_1 
@@ -23294,14 +23142,14 @@ module design_1_PmodWIFI_0_0_soft_reset
         .D(\RESET_FLOPS[9].RST_FLOPS_i_1_n_0 ),
         .Q(flop_q_chain[10]),
         .R(bus2ip_reset_ipif_inverted));
-  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \RESET_FLOPS[9].RST_FLOPS_i_1 
        (.I0(S),
         .I1(flop_q_chain[9]),
         .O(\RESET_FLOPS[9].RST_FLOPS_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  (* SOFT_HLUTNM = "soft_lutpair56" *) 
   LUT4 #(
     .INIT(16'hFEFF)) 
     \icount_out[0]_i_1 
@@ -23318,7 +23166,7 @@ module design_1_PmodWIFI_0_0_soft_reset
         .I2(\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] ),
         .I3(D),
         .O(\icount_out_reg[0]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  (* SOFT_HLUTNM = "soft_lutpair55" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     \icount_out[3]_i_1 
@@ -23341,10 +23189,9 @@ module design_1_PmodWIFI_0_0_soft_reset
         .R(bus2ip_reset_ipif_inverted));
 endmodule
 
-(* ORIG_REF_NAME = "tc_core" *) 
 module design_1_PmodWIFI_0_0_tc_core
    (D,
-    GenerateOut1_reg,
+    \INFERRED_GEN.icount_out_reg[0] ,
     bus2ip_reset,
     generateout0,
     generateout1,
@@ -23372,8 +23219,7 @@ module design_1_PmodWIFI_0_0_tc_core
     Bus_RNW_reg_reg_16,
     Bus_RNW_reg_reg_17,
     Bus_RNW_reg_reg_18,
-    \TCSR0_GENERATE[20].TCSR0_FF_I ,
-    \TCSR0_GENERATE[28].TCSR0_FF_I ,
+    \LOAD_REG_GEN[20].LOAD_REG_I ,
     D_1,
     s_axi_aclk,
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] ,
@@ -23408,56 +23254,57 @@ module design_1_PmodWIFI_0_0_tc_core
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_28 ,
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_29 ,
     D_2,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_1 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_2 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_3 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_4 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_5 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_6 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_7 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_8 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_9 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_10 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_11 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_12 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_13 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_14 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_15 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_16 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_17 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_18 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_19 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_20 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_21 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_22 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_23 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_24 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_25 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_26 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_27 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_28 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_29 ,
-    bus2ip_wrce,
+    \INFERRED_GEN.icount_out_reg[30] ,
+    \INFERRED_GEN.icount_out_reg[29] ,
+    \INFERRED_GEN.icount_out_reg[28] ,
+    \INFERRED_GEN.icount_out_reg[27] ,
+    \INFERRED_GEN.icount_out_reg[26] ,
+    \INFERRED_GEN.icount_out_reg[25] ,
+    \INFERRED_GEN.icount_out_reg[24] ,
+    \INFERRED_GEN.icount_out_reg[23] ,
+    \INFERRED_GEN.icount_out_reg[22] ,
+    \INFERRED_GEN.icount_out_reg[21] ,
+    \INFERRED_GEN.icount_out_reg[20] ,
+    \INFERRED_GEN.icount_out_reg[19] ,
+    \INFERRED_GEN.icount_out_reg[18] ,
+    \INFERRED_GEN.icount_out_reg[17] ,
+    \INFERRED_GEN.icount_out_reg[16] ,
+    \INFERRED_GEN.icount_out_reg[15] ,
+    \INFERRED_GEN.icount_out_reg[14] ,
+    \INFERRED_GEN.icount_out_reg[13] ,
+    \INFERRED_GEN.icount_out_reg[12] ,
+    \INFERRED_GEN.icount_out_reg[11] ,
+    \INFERRED_GEN.icount_out_reg[10] ,
+    \INFERRED_GEN.icount_out_reg[9] ,
+    \INFERRED_GEN.icount_out_reg[8] ,
+    \INFERRED_GEN.icount_out_reg[7] ,
+    \INFERRED_GEN.icount_out_reg[6] ,
+    \INFERRED_GEN.icount_out_reg[5] ,
+    \INFERRED_GEN.icount_out_reg[4] ,
+    \INFERRED_GEN.icount_out_reg[3] ,
+    \INFERRED_GEN.icount_out_reg[2] ,
+    \INFERRED_GEN.icount_out_reg[1] ,
+    \INFERRED_GEN.icount_out_reg[0]_0 ,
+    \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ,
     s_axi_wdata,
     pair0_Select,
     \TCSR0_GENERATE[24].TCSR0_FF_I ,
+    \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] ,
     \TCSR1_GENERATE[24].TCSR1_FF_I ,
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_30 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_30 ,
-    \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ,
-    \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] ,
-    bus2ip_rdce,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ,
-    Bus_RNW_reg,
-    \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ,
+    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] ,
+    \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]_0 ,
+    \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4]_0 ,
     s_axi_aresetn,
+    bus2ip_rdce,
+    Bus_RNW_reg,
+    p_7_in,
+    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ,
     freeze,
     capturetrig0,
     capturetrig1);
   output [31:0]D;
-  output [90:0]GenerateOut1_reg;
+  output [87:0]\INFERRED_GEN.icount_out_reg[0] ;
   output bus2ip_reset;
   output generateout0;
   output generateout1;
@@ -23485,8 +23332,7 @@ module design_1_PmodWIFI_0_0_tc_core
   input Bus_RNW_reg_reg_16;
   input Bus_RNW_reg_reg_17;
   input Bus_RNW_reg_reg_18;
-  input \TCSR0_GENERATE[20].TCSR0_FF_I ;
-  input \TCSR0_GENERATE[28].TCSR0_FF_I ;
+  input \LOAD_REG_GEN[20].LOAD_REG_I ;
   input D_1;
   input s_axi_aclk;
   input \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] ;
@@ -23521,51 +23367,52 @@ module design_1_PmodWIFI_0_0_tc_core
   input \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_28 ;
   input \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_29 ;
   input D_2;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_1 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_2 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_3 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_4 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_5 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_6 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_7 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_8 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_9 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_10 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_11 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_12 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_13 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_14 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_15 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_16 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_17 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_18 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_19 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_20 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_21 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_22 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_23 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_24 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_25 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_26 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_27 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_28 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_29 ;
-  input [1:0]bus2ip_wrce;
+  input \INFERRED_GEN.icount_out_reg[30] ;
+  input \INFERRED_GEN.icount_out_reg[29] ;
+  input \INFERRED_GEN.icount_out_reg[28] ;
+  input \INFERRED_GEN.icount_out_reg[27] ;
+  input \INFERRED_GEN.icount_out_reg[26] ;
+  input \INFERRED_GEN.icount_out_reg[25] ;
+  input \INFERRED_GEN.icount_out_reg[24] ;
+  input \INFERRED_GEN.icount_out_reg[23] ;
+  input \INFERRED_GEN.icount_out_reg[22] ;
+  input \INFERRED_GEN.icount_out_reg[21] ;
+  input \INFERRED_GEN.icount_out_reg[20] ;
+  input \INFERRED_GEN.icount_out_reg[19] ;
+  input \INFERRED_GEN.icount_out_reg[18] ;
+  input \INFERRED_GEN.icount_out_reg[17] ;
+  input \INFERRED_GEN.icount_out_reg[16] ;
+  input \INFERRED_GEN.icount_out_reg[15] ;
+  input \INFERRED_GEN.icount_out_reg[14] ;
+  input \INFERRED_GEN.icount_out_reg[13] ;
+  input \INFERRED_GEN.icount_out_reg[12] ;
+  input \INFERRED_GEN.icount_out_reg[11] ;
+  input \INFERRED_GEN.icount_out_reg[10] ;
+  input \INFERRED_GEN.icount_out_reg[9] ;
+  input \INFERRED_GEN.icount_out_reg[8] ;
+  input \INFERRED_GEN.icount_out_reg[7] ;
+  input \INFERRED_GEN.icount_out_reg[6] ;
+  input \INFERRED_GEN.icount_out_reg[5] ;
+  input \INFERRED_GEN.icount_out_reg[4] ;
+  input \INFERRED_GEN.icount_out_reg[3] ;
+  input \INFERRED_GEN.icount_out_reg[2] ;
+  input \INFERRED_GEN.icount_out_reg[1] ;
+  input \INFERRED_GEN.icount_out_reg[0]_0 ;
+  input \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ;
   input [9:0]s_axi_wdata;
   input pair0_Select;
   input \TCSR0_GENERATE[24].TCSR0_FF_I ;
+  input \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] ;
   input \TCSR1_GENERATE[24].TCSR1_FF_I ;
   input \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_30 ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_30 ;
-  input \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ;
-  input \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] ;
-  input [5:0]bus2ip_rdce;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ;
-  input Bus_RNW_reg;
-  input \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ;
+  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] ;
+  input \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]_0 ;
+  input \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4]_0 ;
   input s_axi_aresetn;
+  input [5:0]bus2ip_rdce;
+  input Bus_RNW_reg;
+  input p_7_in;
+  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ;
   input freeze;
   input capturetrig0;
   input capturetrig1;
@@ -23591,14 +23438,13 @@ module design_1_PmodWIFI_0_0_tc_core
   wire Bus_RNW_reg_reg_7;
   wire Bus_RNW_reg_reg_8;
   wire Bus_RNW_reg_reg_9;
-  wire CE;
-  wire CE_0;
+  wire COUNTER_0_I_n_64;
   wire [31:0]D;
   wire D_0;
   wire D_1;
   wire D_2;
   wire \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ;
-  wire \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]_0 ;
   wire \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] ;
   wire \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ;
   wire \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_1 ;
@@ -23632,39 +23478,9 @@ module design_1_PmodWIFI_0_0_tc_core
   wire \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_8 ;
   wire \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_9 ;
   wire \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4]_0 ;
   wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] ;
   wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_1 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_10 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_11 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_12 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_13 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_14 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_15 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_16 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_17 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_18 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_19 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_2 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_20 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_21 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_22 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_23 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_24 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_25 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_26 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_27 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_28 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_29 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_3 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_30 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_4 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_5 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_6 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_7 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_8 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_9 ;
   wire \GEN_SECOND_TIMER.COUNTER_1_I_n_33 ;
   wire \GEN_SECOND_TIMER.COUNTER_1_I_n_34 ;
   wire \GEN_SECOND_TIMER.COUNTER_1_I_n_35 ;
@@ -23697,11 +23513,42 @@ module design_1_PmodWIFI_0_0_tc_core
   wire \GEN_SECOND_TIMER.COUNTER_1_I_n_62 ;
   wire \GEN_SECOND_TIMER.COUNTER_1_I_n_63 ;
   wire \GEN_SECOND_TIMER.COUNTER_1_I_n_64 ;
-  wire [90:0]GenerateOut1_reg;
+  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_65 ;
+  wire [87:0]\INFERRED_GEN.icount_out_reg[0] ;
+  wire \INFERRED_GEN.icount_out_reg[0]_0 ;
+  wire \INFERRED_GEN.icount_out_reg[10] ;
+  wire \INFERRED_GEN.icount_out_reg[11] ;
+  wire \INFERRED_GEN.icount_out_reg[12] ;
+  wire \INFERRED_GEN.icount_out_reg[13] ;
+  wire \INFERRED_GEN.icount_out_reg[14] ;
+  wire \INFERRED_GEN.icount_out_reg[15] ;
+  wire \INFERRED_GEN.icount_out_reg[16] ;
+  wire \INFERRED_GEN.icount_out_reg[17] ;
+  wire \INFERRED_GEN.icount_out_reg[18] ;
+  wire \INFERRED_GEN.icount_out_reg[19] ;
+  wire \INFERRED_GEN.icount_out_reg[1] ;
+  wire \INFERRED_GEN.icount_out_reg[20] ;
+  wire \INFERRED_GEN.icount_out_reg[21] ;
+  wire \INFERRED_GEN.icount_out_reg[22] ;
+  wire \INFERRED_GEN.icount_out_reg[23] ;
+  wire \INFERRED_GEN.icount_out_reg[24] ;
+  wire \INFERRED_GEN.icount_out_reg[25] ;
+  wire \INFERRED_GEN.icount_out_reg[26] ;
+  wire \INFERRED_GEN.icount_out_reg[27] ;
+  wire \INFERRED_GEN.icount_out_reg[28] ;
+  wire \INFERRED_GEN.icount_out_reg[29] ;
+  wire \INFERRED_GEN.icount_out_reg[2] ;
+  wire \INFERRED_GEN.icount_out_reg[30] ;
+  wire \INFERRED_GEN.icount_out_reg[3] ;
+  wire \INFERRED_GEN.icount_out_reg[4] ;
+  wire \INFERRED_GEN.icount_out_reg[5] ;
+  wire \INFERRED_GEN.icount_out_reg[6] ;
+  wire \INFERRED_GEN.icount_out_reg[7] ;
+  wire \INFERRED_GEN.icount_out_reg[8] ;
+  wire \INFERRED_GEN.icount_out_reg[9] ;
+  wire \LOAD_REG_GEN[20].LOAD_REG_I ;
   wire R;
-  wire \TCSR0_GENERATE[20].TCSR0_FF_I ;
   wire \TCSR0_GENERATE[24].TCSR0_FF_I ;
-  wire \TCSR0_GENERATE[28].TCSR0_FF_I ;
   wire \TCSR1_GENERATE[24].TCSR1_FF_I ;
   wire TIMER_CONTROL_I_n_12;
   wire TIMER_CONTROL_I_n_13;
@@ -23713,28 +23560,27 @@ module design_1_PmodWIFI_0_0_tc_core
   wire TIMER_CONTROL_I_n_19;
   wire TIMER_CONTROL_I_n_20;
   wire TIMER_CONTROL_I_n_21;
+  wire TIMER_CONTROL_I_n_22;
   wire TIMER_CONTROL_I_n_24;
+  wire TIMER_CONTROL_I_n_25;
+  wire TIMER_CONTROL_I_n_26;
   wire TIMER_CONTROL_I_n_27;
+  wire TIMER_CONTROL_I_n_28;
+  wire TIMER_CONTROL_I_n_29;
   wire TIMER_CONTROL_I_n_3;
   wire TIMER_CONTROL_I_n_30;
-  wire TIMER_CONTROL_I_n_31;
-  wire TIMER_CONTROL_I_n_32;
-  wire TIMER_CONTROL_I_n_33;
   wire TIMER_CONTROL_I_n_4;
   wire [5:0]bus2ip_rdce;
   wire bus2ip_reset;
-  wire [1:0]bus2ip_wrce;
   wire capturetrig0;
   wire capturetrig1;
-  wire [1:1]counter_En;
   wire [0:1]counter_TC;
   wire freeze;
-  wire generateOutPre00;
-  wire generateOutPre10;
   wire generateout0;
   wire generateout1;
   wire interrupt;
   wire [0:1]load_Counter_Reg;
+  wire p_7_in;
   wire pair0_Select;
   wire pwm0;
   wire [85:95]read_Mux_In;
@@ -23744,8 +23590,7 @@ module design_1_PmodWIFI_0_0_tc_core
   wire [9:0]s_axi_wdata;
 
   design_1_PmodWIFI_0_0_count_module COUNTER_0_I
-       (.CE(CE),
-        .D_1(D_1),
+       (.D_1(D_1),
         .E(TIMER_CONTROL_I_n_24),
         .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] (\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] ),
         .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 (\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
@@ -23778,96 +23623,95 @@ module design_1_PmodWIFI_0_0_tc_core
         .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_7 (\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_7 ),
         .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_8 (\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_8 ),
         .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_9 (\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_9 ),
-        .\INFERRED_GEN.icount_out_reg[31] (GenerateOut1_reg[85:32]),
+        .\INFERRED_GEN.icount_out_reg[31] (\INFERRED_GEN.icount_out_reg[0] [84:32]),
         .Q(TIMER_CONTROL_I_n_3),
-        .S(TIMER_CONTROL_I_n_33),
+        .S(TIMER_CONTROL_I_n_27),
+        .\TCSR0_GENERATE[27].TCSR0_FF_I (TIMER_CONTROL_I_n_28),
         .counter_TC(counter_TC[0]),
-        .generateOutPre00(generateOutPre00),
+        .generateOutPre0_reg(COUNTER_0_I_n_64),
         .load_Counter_Reg(load_Counter_Reg[0]),
-        .read_Mux_In({read_Mux_In[85],read_Mux_In[86],read_Mux_In[87],read_Mux_In[88],read_Mux_In[89],read_Mux_In[90],read_Mux_In[91],read_Mux_In[93],read_Mux_In[94],read_Mux_In[95]}),
+        .read_Mux_In({read_Mux_In[85],read_Mux_In[86],read_Mux_In[87],read_Mux_In[88],read_Mux_In[89],read_Mux_In[90],read_Mux_In[91],read_Mux_In[92],read_Mux_In[93],read_Mux_In[94],read_Mux_In[95]}),
         .s_axi_aclk(s_axi_aclk),
         .s_axi_aresetn(s_axi_aresetn),
         .s_axi_aresetn_0(bus2ip_reset));
   design_1_PmodWIFI_0_0_count_module_0 \GEN_SECOND_TIMER.COUNTER_1_I 
-       (.CE(CE_0),
-        .D_2(D_2),
-        .E(TIMER_CONTROL_I_n_30),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_1 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_1 ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_10 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_10 ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_11 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_11 ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_12 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_12 ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_13 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_13 ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_14 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_14 ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_15 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_15 ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_16 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_16 ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_17 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_17 ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_18 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_18 ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_19 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_19 ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_2 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_2 ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_20 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_20 ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_21 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_21 ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_22 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_22 ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_23 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_23 ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_24 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_24 ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_25 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_25 ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_26 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_26 ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_27 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_27 ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_28 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_28 ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_29 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_29 ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_3 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_3 ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_4 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_4 ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_5 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_5 ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_6 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_6 ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_7 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_7 ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_8 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_8 ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_9 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_9 ),
+       (.D_2(D_2),
+        .E(TIMER_CONTROL_I_n_25),
+        .\INFERRED_GEN.icount_out_reg[0] (\INFERRED_GEN.icount_out_reg[0]_0 ),
+        .\INFERRED_GEN.icount_out_reg[10] (\INFERRED_GEN.icount_out_reg[10] ),
+        .\INFERRED_GEN.icount_out_reg[11] (\INFERRED_GEN.icount_out_reg[11] ),
+        .\INFERRED_GEN.icount_out_reg[12] (\INFERRED_GEN.icount_out_reg[12] ),
+        .\INFERRED_GEN.icount_out_reg[13] (\INFERRED_GEN.icount_out_reg[13] ),
+        .\INFERRED_GEN.icount_out_reg[14] (\INFERRED_GEN.icount_out_reg[14] ),
+        .\INFERRED_GEN.icount_out_reg[15] (\INFERRED_GEN.icount_out_reg[15] ),
+        .\INFERRED_GEN.icount_out_reg[16] (\INFERRED_GEN.icount_out_reg[16] ),
+        .\INFERRED_GEN.icount_out_reg[17] (\INFERRED_GEN.icount_out_reg[17] ),
+        .\INFERRED_GEN.icount_out_reg[18] (\INFERRED_GEN.icount_out_reg[18] ),
+        .\INFERRED_GEN.icount_out_reg[19] (\INFERRED_GEN.icount_out_reg[19] ),
+        .\INFERRED_GEN.icount_out_reg[1] (\INFERRED_GEN.icount_out_reg[1] ),
+        .\INFERRED_GEN.icount_out_reg[20] (\INFERRED_GEN.icount_out_reg[20] ),
+        .\INFERRED_GEN.icount_out_reg[21] (\INFERRED_GEN.icount_out_reg[21] ),
+        .\INFERRED_GEN.icount_out_reg[22] (\INFERRED_GEN.icount_out_reg[22] ),
+        .\INFERRED_GEN.icount_out_reg[23] (\INFERRED_GEN.icount_out_reg[23] ),
+        .\INFERRED_GEN.icount_out_reg[24] (\INFERRED_GEN.icount_out_reg[24] ),
+        .\INFERRED_GEN.icount_out_reg[25] (\INFERRED_GEN.icount_out_reg[25] ),
+        .\INFERRED_GEN.icount_out_reg[26] (\INFERRED_GEN.icount_out_reg[26] ),
+        .\INFERRED_GEN.icount_out_reg[27] (\INFERRED_GEN.icount_out_reg[27] ),
+        .\INFERRED_GEN.icount_out_reg[28] (\INFERRED_GEN.icount_out_reg[28] ),
+        .\INFERRED_GEN.icount_out_reg[29] (\INFERRED_GEN.icount_out_reg[29] ),
+        .\INFERRED_GEN.icount_out_reg[2] (\INFERRED_GEN.icount_out_reg[2] ),
+        .\INFERRED_GEN.icount_out_reg[30] (\INFERRED_GEN.icount_out_reg[30] ),
         .\INFERRED_GEN.icount_out_reg[31] (bus2ip_reset),
-        .\INFERRED_GEN.icount_out_reg[31]_0 (GenerateOut1_reg[63:32]),
-        .Q(GenerateOut1_reg[31:0]),
-        .S(TIMER_CONTROL_I_n_32),
-        .\TCSR0_GENERATE[20].TCSR0_FF_I (TIMER_CONTROL_I_n_27),
+        .\INFERRED_GEN.icount_out_reg[31]_0 (\INFERRED_GEN.icount_out_reg[0] [63:32]),
+        .\INFERRED_GEN.icount_out_reg[3] (\INFERRED_GEN.icount_out_reg[3] ),
+        .\INFERRED_GEN.icount_out_reg[4] (\INFERRED_GEN.icount_out_reg[4] ),
+        .\INFERRED_GEN.icount_out_reg[5] (\INFERRED_GEN.icount_out_reg[5] ),
+        .\INFERRED_GEN.icount_out_reg[6] (\INFERRED_GEN.icount_out_reg[6] ),
+        .\INFERRED_GEN.icount_out_reg[7] (\INFERRED_GEN.icount_out_reg[7] ),
+        .\INFERRED_GEN.icount_out_reg[8] (\INFERRED_GEN.icount_out_reg[8] ),
+        .\INFERRED_GEN.icount_out_reg[9] (\INFERRED_GEN.icount_out_reg[9] ),
+        .Q(\INFERRED_GEN.icount_out_reg[0] [31:0]),
+        .S(TIMER_CONTROL_I_n_30),
+        .\TCSR0_GENERATE[20].TCSR0_FF_I (TIMER_CONTROL_I_n_29),
         .bus2ip_rdce({bus2ip_rdce[3],bus2ip_rdce[1:0]}),
-        .counter_En(counter_En),
         .counter_TC(counter_TC[1]),
         .\counter_TC_Reg_reg[1] (TIMER_CONTROL_I_n_4),
-        .generateOutPre10(generateOutPre10),
+        .generateOutPre1_reg(\GEN_SECOND_TIMER.COUNTER_1_I_n_65 ),
         .load_Counter_Reg(load_Counter_Reg[1]),
         .s_axi_aclk(s_axi_aclk),
         .s_axi_aresetn(s_axi_aresetn),
-        .\s_axi_rdata_i_reg[0] (\GEN_SECOND_TIMER.COUNTER_1_I_n_64 ),
-        .\s_axi_rdata_i_reg[10] (\GEN_SECOND_TIMER.COUNTER_1_I_n_54 ),
-        .\s_axi_rdata_i_reg[11] (\GEN_SECOND_TIMER.COUNTER_1_I_n_53 ),
-        .\s_axi_rdata_i_reg[12] (\GEN_SECOND_TIMER.COUNTER_1_I_n_52 ),
-        .\s_axi_rdata_i_reg[13] (\GEN_SECOND_TIMER.COUNTER_1_I_n_51 ),
-        .\s_axi_rdata_i_reg[14] (\GEN_SECOND_TIMER.COUNTER_1_I_n_50 ),
-        .\s_axi_rdata_i_reg[15] (\GEN_SECOND_TIMER.COUNTER_1_I_n_49 ),
-        .\s_axi_rdata_i_reg[16] (\GEN_SECOND_TIMER.COUNTER_1_I_n_48 ),
-        .\s_axi_rdata_i_reg[17] (\GEN_SECOND_TIMER.COUNTER_1_I_n_47 ),
-        .\s_axi_rdata_i_reg[18] (\GEN_SECOND_TIMER.COUNTER_1_I_n_46 ),
-        .\s_axi_rdata_i_reg[19] (\GEN_SECOND_TIMER.COUNTER_1_I_n_45 ),
-        .\s_axi_rdata_i_reg[1] (\GEN_SECOND_TIMER.COUNTER_1_I_n_63 ),
-        .\s_axi_rdata_i_reg[20] (\GEN_SECOND_TIMER.COUNTER_1_I_n_44 ),
-        .\s_axi_rdata_i_reg[21] (\GEN_SECOND_TIMER.COUNTER_1_I_n_43 ),
-        .\s_axi_rdata_i_reg[22] (\GEN_SECOND_TIMER.COUNTER_1_I_n_42 ),
-        .\s_axi_rdata_i_reg[23] (\GEN_SECOND_TIMER.COUNTER_1_I_n_41 ),
-        .\s_axi_rdata_i_reg[24] (\GEN_SECOND_TIMER.COUNTER_1_I_n_40 ),
-        .\s_axi_rdata_i_reg[25] (\GEN_SECOND_TIMER.COUNTER_1_I_n_39 ),
-        .\s_axi_rdata_i_reg[26] (\GEN_SECOND_TIMER.COUNTER_1_I_n_38 ),
-        .\s_axi_rdata_i_reg[27] (\GEN_SECOND_TIMER.COUNTER_1_I_n_37 ),
-        .\s_axi_rdata_i_reg[28] (\GEN_SECOND_TIMER.COUNTER_1_I_n_36 ),
-        .\s_axi_rdata_i_reg[29] (\GEN_SECOND_TIMER.COUNTER_1_I_n_35 ),
-        .\s_axi_rdata_i_reg[2] (\GEN_SECOND_TIMER.COUNTER_1_I_n_62 ),
-        .\s_axi_rdata_i_reg[30] (\GEN_SECOND_TIMER.COUNTER_1_I_n_34 ),
-        .\s_axi_rdata_i_reg[31] (\GEN_SECOND_TIMER.COUNTER_1_I_n_33 ),
-        .\s_axi_rdata_i_reg[3] (\GEN_SECOND_TIMER.COUNTER_1_I_n_61 ),
-        .\s_axi_rdata_i_reg[4] (\GEN_SECOND_TIMER.COUNTER_1_I_n_60 ),
-        .\s_axi_rdata_i_reg[5] (\GEN_SECOND_TIMER.COUNTER_1_I_n_59 ),
-        .\s_axi_rdata_i_reg[6] (\GEN_SECOND_TIMER.COUNTER_1_I_n_58 ),
-        .\s_axi_rdata_i_reg[7] (\GEN_SECOND_TIMER.COUNTER_1_I_n_57 ),
-        .\s_axi_rdata_i_reg[8] (\GEN_SECOND_TIMER.COUNTER_1_I_n_56 ),
-        .\s_axi_rdata_i_reg[9] (\GEN_SECOND_TIMER.COUNTER_1_I_n_55 ));
+        .\s_axi_rdata_i_reg[0] (\GEN_SECOND_TIMER.COUNTER_1_I_n_33 ),
+        .\s_axi_rdata_i_reg[10] (\GEN_SECOND_TIMER.COUNTER_1_I_n_43 ),
+        .\s_axi_rdata_i_reg[11] (\GEN_SECOND_TIMER.COUNTER_1_I_n_44 ),
+        .\s_axi_rdata_i_reg[12] (\GEN_SECOND_TIMER.COUNTER_1_I_n_45 ),
+        .\s_axi_rdata_i_reg[13] (\GEN_SECOND_TIMER.COUNTER_1_I_n_46 ),
+        .\s_axi_rdata_i_reg[14] (\GEN_SECOND_TIMER.COUNTER_1_I_n_47 ),
+        .\s_axi_rdata_i_reg[15] (\GEN_SECOND_TIMER.COUNTER_1_I_n_48 ),
+        .\s_axi_rdata_i_reg[16] (\GEN_SECOND_TIMER.COUNTER_1_I_n_49 ),
+        .\s_axi_rdata_i_reg[17] (\GEN_SECOND_TIMER.COUNTER_1_I_n_50 ),
+        .\s_axi_rdata_i_reg[18] (\GEN_SECOND_TIMER.COUNTER_1_I_n_51 ),
+        .\s_axi_rdata_i_reg[19] (\GEN_SECOND_TIMER.COUNTER_1_I_n_52 ),
+        .\s_axi_rdata_i_reg[1] (\GEN_SECOND_TIMER.COUNTER_1_I_n_34 ),
+        .\s_axi_rdata_i_reg[20] (\GEN_SECOND_TIMER.COUNTER_1_I_n_53 ),
+        .\s_axi_rdata_i_reg[21] (\GEN_SECOND_TIMER.COUNTER_1_I_n_54 ),
+        .\s_axi_rdata_i_reg[22] (\GEN_SECOND_TIMER.COUNTER_1_I_n_55 ),
+        .\s_axi_rdata_i_reg[23] (\GEN_SECOND_TIMER.COUNTER_1_I_n_56 ),
+        .\s_axi_rdata_i_reg[24] (\GEN_SECOND_TIMER.COUNTER_1_I_n_57 ),
+        .\s_axi_rdata_i_reg[25] (\GEN_SECOND_TIMER.COUNTER_1_I_n_58 ),
+        .\s_axi_rdata_i_reg[26] (\GEN_SECOND_TIMER.COUNTER_1_I_n_59 ),
+        .\s_axi_rdata_i_reg[27] (\GEN_SECOND_TIMER.COUNTER_1_I_n_60 ),
+        .\s_axi_rdata_i_reg[28] (\GEN_SECOND_TIMER.COUNTER_1_I_n_61 ),
+        .\s_axi_rdata_i_reg[29] (\GEN_SECOND_TIMER.COUNTER_1_I_n_62 ),
+        .\s_axi_rdata_i_reg[2] (\GEN_SECOND_TIMER.COUNTER_1_I_n_35 ),
+        .\s_axi_rdata_i_reg[30] (\GEN_SECOND_TIMER.COUNTER_1_I_n_63 ),
+        .\s_axi_rdata_i_reg[31] (\GEN_SECOND_TIMER.COUNTER_1_I_n_64 ),
+        .\s_axi_rdata_i_reg[3] (\GEN_SECOND_TIMER.COUNTER_1_I_n_36 ),
+        .\s_axi_rdata_i_reg[4] (\GEN_SECOND_TIMER.COUNTER_1_I_n_37 ),
+        .\s_axi_rdata_i_reg[5] (\GEN_SECOND_TIMER.COUNTER_1_I_n_38 ),
+        .\s_axi_rdata_i_reg[6] (\GEN_SECOND_TIMER.COUNTER_1_I_n_39 ),
+        .\s_axi_rdata_i_reg[7] (\GEN_SECOND_TIMER.COUNTER_1_I_n_40 ),
+        .\s_axi_rdata_i_reg[8] (\GEN_SECOND_TIMER.COUNTER_1_I_n_41 ),
+        .\s_axi_rdata_i_reg[9] (\GEN_SECOND_TIMER.COUNTER_1_I_n_42 ));
   (* IS_S_INVERTED = "1'b0" *) 
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
@@ -23878,7 +23722,7 @@ module design_1_PmodWIFI_0_0_tc_core
     PWM_FF_I
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(TIMER_CONTROL_I_n_31),
+        .D(TIMER_CONTROL_I_n_26),
         .Q(pwm0),
         .R(R));
   design_1_PmodWIFI_0_0_mux_onehot_f READ_MUX_I
@@ -23903,160 +23747,159 @@ module design_1_PmodWIFI_0_0_tc_core
         .Bus_RNW_reg_reg_8(Bus_RNW_reg_reg_8),
         .Bus_RNW_reg_reg_9(Bus_RNW_reg_reg_9),
         .D(D),
-        .\LOAD_REG_GEN[0].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_33 ),
-        .\LOAD_REG_GEN[10].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_43 ),
-        .\LOAD_REG_GEN[11].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_44 ),
-        .\LOAD_REG_GEN[12].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_45 ),
-        .\LOAD_REG_GEN[13].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_46 ),
-        .\LOAD_REG_GEN[14].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_47 ),
-        .\LOAD_REG_GEN[15].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_48 ),
-        .\LOAD_REG_GEN[16].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_49 ),
-        .\LOAD_REG_GEN[17].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_50 ),
-        .\LOAD_REG_GEN[18].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_51 ),
-        .\LOAD_REG_GEN[19].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_52 ),
-        .\LOAD_REG_GEN[1].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_34 ),
-        .\LOAD_REG_GEN[20].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_53 ),
-        .\LOAD_REG_GEN[21].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_54 ),
-        .\LOAD_REG_GEN[22].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_55 ),
-        .\LOAD_REG_GEN[23].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_56 ),
-        .\LOAD_REG_GEN[24].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_57 ),
-        .\LOAD_REG_GEN[25].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_58 ),
-        .\LOAD_REG_GEN[26].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_59 ),
-        .\LOAD_REG_GEN[27].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_60 ),
-        .\LOAD_REG_GEN[28].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_61 ),
-        .\LOAD_REG_GEN[29].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_62 ),
-        .\LOAD_REG_GEN[2].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_35 ),
-        .\LOAD_REG_GEN[30].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_63 ),
-        .\LOAD_REG_GEN[31].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_64 ),
-        .\LOAD_REG_GEN[3].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_36 ),
-        .\LOAD_REG_GEN[4].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_37 ),
-        .\LOAD_REG_GEN[5].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_38 ),
-        .\LOAD_REG_GEN[6].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_39 ),
-        .\LOAD_REG_GEN[7].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_40 ),
-        .\LOAD_REG_GEN[8].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_41 ),
-        .\LOAD_REG_GEN[9].LOAD_REG_I (\GEN_SECOND_TIMER.COUNTER_1_I_n_42 ),
-        .\TCSR0_GENERATE[20].TCSR0_FF_I (\TCSR0_GENERATE[20].TCSR0_FF_I ),
-        .\TCSR0_GENERATE[21].TCSR0_FF_I (TIMER_CONTROL_I_n_12),
-        .\TCSR0_GENERATE[22].TCSR0_FF_I (TIMER_CONTROL_I_n_13),
-        .\TCSR0_GENERATE[23].TCSR0_FF_I (TIMER_CONTROL_I_n_14),
-        .\TCSR0_GENERATE[24].TCSR0_FF_I (TIMER_CONTROL_I_n_15),
-        .\TCSR0_GENERATE[25].TCSR0_FF_I (TIMER_CONTROL_I_n_16),
-        .\TCSR0_GENERATE[26].TCSR0_FF_I (TIMER_CONTROL_I_n_17),
-        .\TCSR0_GENERATE[27].TCSR0_FF_I (TIMER_CONTROL_I_n_18),
-        .\TCSR0_GENERATE[28].TCSR0_FF_I (\TCSR0_GENERATE[28].TCSR0_FF_I ),
-        .\TCSR0_GENERATE[29].TCSR0_FF_I (TIMER_CONTROL_I_n_19),
-        .\TCSR0_GENERATE[30].TCSR0_FF_I (TIMER_CONTROL_I_n_20),
-        .\TCSR0_GENERATE[31].TCSR0_FF_I (TIMER_CONTROL_I_n_21));
+        .\INFERRED_GEN.icount_out_reg[0] (\GEN_SECOND_TIMER.COUNTER_1_I_n_33 ),
+        .\INFERRED_GEN.icount_out_reg[10] (\GEN_SECOND_TIMER.COUNTER_1_I_n_43 ),
+        .\INFERRED_GEN.icount_out_reg[11] (\GEN_SECOND_TIMER.COUNTER_1_I_n_44 ),
+        .\INFERRED_GEN.icount_out_reg[12] (\GEN_SECOND_TIMER.COUNTER_1_I_n_45 ),
+        .\INFERRED_GEN.icount_out_reg[13] (\GEN_SECOND_TIMER.COUNTER_1_I_n_46 ),
+        .\INFERRED_GEN.icount_out_reg[14] (\GEN_SECOND_TIMER.COUNTER_1_I_n_47 ),
+        .\INFERRED_GEN.icount_out_reg[15] (\GEN_SECOND_TIMER.COUNTER_1_I_n_48 ),
+        .\INFERRED_GEN.icount_out_reg[16] (\GEN_SECOND_TIMER.COUNTER_1_I_n_49 ),
+        .\INFERRED_GEN.icount_out_reg[17] (\GEN_SECOND_TIMER.COUNTER_1_I_n_50 ),
+        .\INFERRED_GEN.icount_out_reg[18] (\GEN_SECOND_TIMER.COUNTER_1_I_n_51 ),
+        .\INFERRED_GEN.icount_out_reg[19] (\GEN_SECOND_TIMER.COUNTER_1_I_n_52 ),
+        .\INFERRED_GEN.icount_out_reg[1] (\GEN_SECOND_TIMER.COUNTER_1_I_n_34 ),
+        .\INFERRED_GEN.icount_out_reg[20] (\GEN_SECOND_TIMER.COUNTER_1_I_n_53 ),
+        .\INFERRED_GEN.icount_out_reg[21] (\GEN_SECOND_TIMER.COUNTER_1_I_n_54 ),
+        .\INFERRED_GEN.icount_out_reg[22] (\GEN_SECOND_TIMER.COUNTER_1_I_n_55 ),
+        .\INFERRED_GEN.icount_out_reg[23] (\GEN_SECOND_TIMER.COUNTER_1_I_n_56 ),
+        .\INFERRED_GEN.icount_out_reg[24] (\GEN_SECOND_TIMER.COUNTER_1_I_n_57 ),
+        .\INFERRED_GEN.icount_out_reg[25] (\GEN_SECOND_TIMER.COUNTER_1_I_n_58 ),
+        .\INFERRED_GEN.icount_out_reg[26] (\GEN_SECOND_TIMER.COUNTER_1_I_n_59 ),
+        .\INFERRED_GEN.icount_out_reg[27] (\GEN_SECOND_TIMER.COUNTER_1_I_n_60 ),
+        .\INFERRED_GEN.icount_out_reg[28] (\GEN_SECOND_TIMER.COUNTER_1_I_n_61 ),
+        .\INFERRED_GEN.icount_out_reg[29] (\GEN_SECOND_TIMER.COUNTER_1_I_n_62 ),
+        .\INFERRED_GEN.icount_out_reg[2] (\GEN_SECOND_TIMER.COUNTER_1_I_n_35 ),
+        .\INFERRED_GEN.icount_out_reg[30] (\GEN_SECOND_TIMER.COUNTER_1_I_n_63 ),
+        .\INFERRED_GEN.icount_out_reg[31] (\GEN_SECOND_TIMER.COUNTER_1_I_n_64 ),
+        .\INFERRED_GEN.icount_out_reg[3] (\GEN_SECOND_TIMER.COUNTER_1_I_n_36 ),
+        .\INFERRED_GEN.icount_out_reg[4] (\GEN_SECOND_TIMER.COUNTER_1_I_n_37 ),
+        .\INFERRED_GEN.icount_out_reg[5] (\GEN_SECOND_TIMER.COUNTER_1_I_n_38 ),
+        .\INFERRED_GEN.icount_out_reg[6] (\GEN_SECOND_TIMER.COUNTER_1_I_n_39 ),
+        .\INFERRED_GEN.icount_out_reg[7] (\GEN_SECOND_TIMER.COUNTER_1_I_n_40 ),
+        .\INFERRED_GEN.icount_out_reg[8] (\GEN_SECOND_TIMER.COUNTER_1_I_n_41 ),
+        .\INFERRED_GEN.icount_out_reg[9] (\GEN_SECOND_TIMER.COUNTER_1_I_n_42 ),
+        .\LOAD_REG_GEN[20].LOAD_REG_I (\LOAD_REG_GEN[20].LOAD_REG_I ),
+        .\LOAD_REG_GEN[21].LOAD_REG_I (TIMER_CONTROL_I_n_22),
+        .\LOAD_REG_GEN[22].LOAD_REG_I (TIMER_CONTROL_I_n_21),
+        .\LOAD_REG_GEN[23].LOAD_REG_I (TIMER_CONTROL_I_n_20),
+        .\LOAD_REG_GEN[24].LOAD_REG_I (TIMER_CONTROL_I_n_19),
+        .\LOAD_REG_GEN[25].LOAD_REG_I (TIMER_CONTROL_I_n_18),
+        .\LOAD_REG_GEN[26].LOAD_REG_I (TIMER_CONTROL_I_n_17),
+        .\LOAD_REG_GEN[27].LOAD_REG_I (TIMER_CONTROL_I_n_16),
+        .\LOAD_REG_GEN[28].LOAD_REG_I (TIMER_CONTROL_I_n_15),
+        .\LOAD_REG_GEN[29].LOAD_REG_I (TIMER_CONTROL_I_n_14),
+        .\LOAD_REG_GEN[30].LOAD_REG_I (TIMER_CONTROL_I_n_13),
+        .\LOAD_REG_GEN[31].LOAD_REG_I (TIMER_CONTROL_I_n_12));
   design_1_PmodWIFI_0_0_timer_control TIMER_CONTROL_I
        (.Bus_RNW_reg(Bus_RNW_reg),
-        .CE(CE_0),
-        .CE_0(CE),
         .D_0(D_0),
         .E(TIMER_CONTROL_I_n_24),
         .\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] (\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]_0 (\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]_0 ),
         .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] (\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_30 ),
         .\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] (\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_30 ),
-        .GenerateOut1_reg_0(GenerateOut1_reg[90]),
-        .\INFERRED_GEN.icount_out_reg[0] (GenerateOut1_reg[89]),
-        .\INFERRED_GEN.icount_out_reg[0]_0 (TIMER_CONTROL_I_n_30),
-        .\INFERRED_GEN.icount_out_reg[1] ({GenerateOut1_reg[33],GenerateOut1_reg[1]}),
-        .\INFERRED_GEN.icount_out_reg[32] (TIMER_CONTROL_I_n_27),
-        .\INFERRED_GEN.icount_out_reg[4] (TIMER_CONTROL_I_n_33),
-        .\LOAD_REG_GEN[21].LOAD_REG_I ({read_Mux_In[85],read_Mux_In[86],read_Mux_In[87],read_Mux_In[88],read_Mux_In[89],read_Mux_In[90],read_Mux_In[91],read_Mux_In[93],read_Mux_In[94],read_Mux_In[95]}),
-        .PWM_FF_I(TIMER_CONTROL_I_n_31),
+        .\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4]_0 (\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4]_0 ),
+        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] ),
+        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
+        .\INFERRED_GEN.icount_out_reg[0] (\INFERRED_GEN.icount_out_reg[0] [87]),
+        .\INFERRED_GEN.icount_out_reg[0]_0 (TIMER_CONTROL_I_n_25),
+        .\INFERRED_GEN.icount_out_reg[1] ({\INFERRED_GEN.icount_out_reg[0] [33],\INFERRED_GEN.icount_out_reg[0] [1]}),
+        .\INFERRED_GEN.icount_out_reg[32] (\GEN_SECOND_TIMER.COUNTER_1_I_n_65 ),
+        .\INFERRED_GEN.icount_out_reg[32]_0 (COUNTER_0_I_n_64),
+        .\INFERRED_GEN.icount_out_reg[4] (TIMER_CONTROL_I_n_30),
+        .\LOAD_REG_GEN[21].LOAD_REG_I ({read_Mux_In[85],read_Mux_In[86],read_Mux_In[87],read_Mux_In[88],read_Mux_In[89],read_Mux_In[90],read_Mux_In[91],read_Mux_In[92],read_Mux_In[93],read_Mux_In[94],read_Mux_In[95]}),
+        .\LOAD_REG_GEN[24].LOAD_REG_I (TIMER_CONTROL_I_n_28),
+        .\LOAD_REG_GEN[24].LOAD_REG_I_0 (TIMER_CONTROL_I_n_29),
+        .PWM_FF_I(TIMER_CONTROL_I_n_26),
         .Q({TIMER_CONTROL_I_n_3,TIMER_CONTROL_I_n_4}),
         .R(R),
-        .S(TIMER_CONTROL_I_n_32),
+        .S(TIMER_CONTROL_I_n_27),
         .SR(bus2ip_reset),
-        .\TCSR0_GENERATE[24].TCSR0_FF_I_0 (\TCSR0_GENERATE[24].TCSR0_FF_I ),
+        .\TCSR0_GENERATE[24].TCSR0_FF_I_0 (\INFERRED_GEN.icount_out_reg[0] [86]),
+        .\TCSR0_GENERATE[24].TCSR0_FF_I_1 (\TCSR0_GENERATE[24].TCSR0_FF_I ),
+        .\TCSR1_GENERATE[23].TCSR1_FF_I_0 (\INFERRED_GEN.icount_out_reg[0] [85]),
         .\TCSR1_GENERATE[24].TCSR1_FF_I_0 (\TCSR1_GENERATE[24].TCSR1_FF_I ),
         .bus2ip_rdce({bus2ip_rdce[5:4],bus2ip_rdce[2]}),
-        .bus2ip_wrce(bus2ip_wrce),
-        .captureTrig0_d_reg_0(GenerateOut1_reg[88:86]),
         .capturetrig0(capturetrig0),
         .capturetrig1(capturetrig1),
-        .counter_En(counter_En),
         .counter_TC(counter_TC),
         .freeze(freeze),
-        .generateOutPre00(generateOutPre00),
-        .generateOutPre10(generateOutPre10),
         .generateout0(generateout0),
         .generateout1(generateout1),
         .interrupt(interrupt),
         .load_Counter_Reg(load_Counter_Reg),
+        .p_7_in(p_7_in),
         .pair0_Select(pair0_Select),
         .pwm0(pwm0),
         .read_done1(read_done1),
         .s_axi_aclk(s_axi_aclk),
-        .\s_axi_rdata_i_reg[0] (TIMER_CONTROL_I_n_21),
-        .\s_axi_rdata_i_reg[10] (TIMER_CONTROL_I_n_12),
-        .\s_axi_rdata_i_reg[1] (TIMER_CONTROL_I_n_20),
-        .\s_axi_rdata_i_reg[2] (TIMER_CONTROL_I_n_19),
-        .\s_axi_rdata_i_reg[4] (TIMER_CONTROL_I_n_18),
+        .\s_axi_rdata_i_reg[0] (TIMER_CONTROL_I_n_12),
+        .\s_axi_rdata_i_reg[10] (TIMER_CONTROL_I_n_22),
+        .\s_axi_rdata_i_reg[1] (TIMER_CONTROL_I_n_13),
+        .\s_axi_rdata_i_reg[2] (TIMER_CONTROL_I_n_14),
+        .\s_axi_rdata_i_reg[3] (TIMER_CONTROL_I_n_15),
+        .\s_axi_rdata_i_reg[4] (TIMER_CONTROL_I_n_16),
         .\s_axi_rdata_i_reg[5] (TIMER_CONTROL_I_n_17),
-        .\s_axi_rdata_i_reg[6] (TIMER_CONTROL_I_n_16),
-        .\s_axi_rdata_i_reg[7] (TIMER_CONTROL_I_n_15),
-        .\s_axi_rdata_i_reg[8] (TIMER_CONTROL_I_n_14),
-        .\s_axi_rdata_i_reg[9] (TIMER_CONTROL_I_n_13),
+        .\s_axi_rdata_i_reg[6] (TIMER_CONTROL_I_n_18),
+        .\s_axi_rdata_i_reg[7] (TIMER_CONTROL_I_n_19),
+        .\s_axi_rdata_i_reg[8] (TIMER_CONTROL_I_n_20),
+        .\s_axi_rdata_i_reg[9] (TIMER_CONTROL_I_n_21),
         .s_axi_wdata(s_axi_wdata));
 endmodule
 
-(* ORIG_REF_NAME = "timer_control" *) 
 module design_1_PmodWIFI_0_0_timer_control
    (generateout0,
     generateout1,
     interrupt,
     Q,
-    GenerateOut1_reg_0,
     \INFERRED_GEN.icount_out_reg[0] ,
-    captureTrig0_d_reg_0,
+    \TCSR0_GENERATE[24].TCSR0_FF_I_0 ,
+    \TCSR1_GENERATE[23].TCSR1_FF_I_0 ,
     D_0,
     read_done1,
-    \s_axi_rdata_i_reg[10] ,
-    \s_axi_rdata_i_reg[9] ,
-    \s_axi_rdata_i_reg[8] ,
-    \s_axi_rdata_i_reg[7] ,
-    \s_axi_rdata_i_reg[6] ,
-    \s_axi_rdata_i_reg[5] ,
-    \s_axi_rdata_i_reg[4] ,
-    \s_axi_rdata_i_reg[2] ,
-    \s_axi_rdata_i_reg[1] ,
-    \s_axi_rdata_i_reg[0] ,
-    CE,
-    CE_0,
-    E,
     load_Counter_Reg,
-    \INFERRED_GEN.icount_out_reg[32] ,
-    counter_En,
+    \s_axi_rdata_i_reg[0] ,
+    \s_axi_rdata_i_reg[1] ,
+    \s_axi_rdata_i_reg[2] ,
+    \s_axi_rdata_i_reg[3] ,
+    \s_axi_rdata_i_reg[4] ,
+    \s_axi_rdata_i_reg[5] ,
+    \s_axi_rdata_i_reg[6] ,
+    \s_axi_rdata_i_reg[7] ,
+    \s_axi_rdata_i_reg[8] ,
+    \s_axi_rdata_i_reg[9] ,
+    \s_axi_rdata_i_reg[10] ,
     R,
+    E,
     \INFERRED_GEN.icount_out_reg[0]_0 ,
     PWM_FF_I,
     S,
+    \LOAD_REG_GEN[24].LOAD_REG_I ,
+    \LOAD_REG_GEN[24].LOAD_REG_I_0 ,
     \INFERRED_GEN.icount_out_reg[4] ,
     SR,
-    generateOutPre10,
+    \INFERRED_GEN.icount_out_reg[32] ,
     s_axi_aclk,
-    generateOutPre00,
-    bus2ip_wrce,
+    \INFERRED_GEN.icount_out_reg[32]_0 ,
+    \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ,
     s_axi_wdata,
     \LOAD_REG_GEN[21].LOAD_REG_I ,
     pair0_Select,
-    \TCSR0_GENERATE[24].TCSR0_FF_I_0 ,
+    \TCSR0_GENERATE[24].TCSR0_FF_I_1 ,
+    \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] ,
     \TCSR1_GENERATE[24].TCSR1_FF_I_0 ,
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] ,
     \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] ,
-    \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ,
-    \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] ,
-    bus2ip_rdce,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ,
-    Bus_RNW_reg,
-    \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ,
+    \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]_0 ,
+    \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4]_0 ,
     counter_TC,
+    bus2ip_rdce,
     pwm0,
     \INFERRED_GEN.icount_out_reg[1] ,
+    Bus_RNW_reg,
+    p_7_in,
+    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ,
     freeze,
     capturetrig0,
     capturetrig1);
@@ -24064,88 +23907,85 @@ module design_1_PmodWIFI_0_0_timer_control
   output generateout1;
   output interrupt;
   output [1:0]Q;
-  output GenerateOut1_reg_0;
   output \INFERRED_GEN.icount_out_reg[0] ;
-  output [2:0]captureTrig0_d_reg_0;
+  output \TCSR0_GENERATE[24].TCSR0_FF_I_0 ;
+  output \TCSR1_GENERATE[23].TCSR1_FF_I_0 ;
   output D_0;
   output read_done1;
-  output \s_axi_rdata_i_reg[10] ;
-  output \s_axi_rdata_i_reg[9] ;
-  output \s_axi_rdata_i_reg[8] ;
-  output \s_axi_rdata_i_reg[7] ;
-  output \s_axi_rdata_i_reg[6] ;
-  output \s_axi_rdata_i_reg[5] ;
-  output \s_axi_rdata_i_reg[4] ;
-  output \s_axi_rdata_i_reg[2] ;
-  output \s_axi_rdata_i_reg[1] ;
-  output \s_axi_rdata_i_reg[0] ;
-  output CE;
-  output CE_0;
-  output [0:0]E;
   output [0:1]load_Counter_Reg;
-  output \INFERRED_GEN.icount_out_reg[32] ;
-  output [0:0]counter_En;
+  output \s_axi_rdata_i_reg[0] ;
+  output \s_axi_rdata_i_reg[1] ;
+  output \s_axi_rdata_i_reg[2] ;
+  output \s_axi_rdata_i_reg[3] ;
+  output \s_axi_rdata_i_reg[4] ;
+  output \s_axi_rdata_i_reg[5] ;
+  output \s_axi_rdata_i_reg[6] ;
+  output \s_axi_rdata_i_reg[7] ;
+  output \s_axi_rdata_i_reg[8] ;
+  output \s_axi_rdata_i_reg[9] ;
+  output \s_axi_rdata_i_reg[10] ;
   output R;
+  output [0:0]E;
   output [0:0]\INFERRED_GEN.icount_out_reg[0]_0 ;
   output PWM_FF_I;
   output [0:0]S;
+  output \LOAD_REG_GEN[24].LOAD_REG_I ;
+  output \LOAD_REG_GEN[24].LOAD_REG_I_0 ;
   output [0:0]\INFERRED_GEN.icount_out_reg[4] ;
   input [0:0]SR;
-  input generateOutPre10;
+  input \INFERRED_GEN.icount_out_reg[32] ;
   input s_axi_aclk;
-  input generateOutPre00;
-  input [1:0]bus2ip_wrce;
+  input \INFERRED_GEN.icount_out_reg[32]_0 ;
+  input \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ;
   input [9:0]s_axi_wdata;
-  input [9:0]\LOAD_REG_GEN[21].LOAD_REG_I ;
+  input [10:0]\LOAD_REG_GEN[21].LOAD_REG_I ;
   input pair0_Select;
-  input \TCSR0_GENERATE[24].TCSR0_FF_I_0 ;
+  input \TCSR0_GENERATE[24].TCSR0_FF_I_1 ;
+  input \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] ;
   input \TCSR1_GENERATE[24].TCSR1_FF_I_0 ;
   input \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] ;
   input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] ;
-  input \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ;
-  input \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] ;
-  input [2:0]bus2ip_rdce;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ;
-  input Bus_RNW_reg;
-  input \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ;
+  input \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]_0 ;
+  input \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4]_0 ;
   input [0:1]counter_TC;
+  input [2:0]bus2ip_rdce;
   input pwm0;
   input [1:0]\INFERRED_GEN.icount_out_reg[1] ;
+  input Bus_RNW_reg;
+  input p_7_in;
+  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ;
   input freeze;
   input capturetrig0;
   input capturetrig1;
 
   wire Bus_RNW_reg;
-  wire CE;
-  wire CE_0;
   wire D_0;
   wire [0:0]E;
   wire \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ;
-  wire \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]_0 ;
   wire \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] ;
   wire \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4]_0 ;
   wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] ;
+  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ;
   wire GenerateOut00;
   wire GenerateOut10;
-  wire GenerateOut1_reg_0;
-  wire \INFERRED_GEN.icount_out[31]_i_3__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[31]_i_4__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[31]_i_5__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[31]_i_5_n_0 ;
-  wire \INFERRED_GEN.icount_out[31]_i_6__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[31]_i_8_n_0 ;
-  wire \INFERRED_GEN.icount_out[32]_i_3_n_0 ;
-  wire \INFERRED_GEN.icount_out[32]_i_5_n_0 ;
   wire \INFERRED_GEN.icount_out_reg[0] ;
   wire [0:0]\INFERRED_GEN.icount_out_reg[0]_0 ;
   wire [1:0]\INFERRED_GEN.icount_out_reg[1] ;
   wire \INFERRED_GEN.icount_out_reg[32] ;
+  wire \INFERRED_GEN.icount_out_reg[32]_0 ;
   wire [0:0]\INFERRED_GEN.icount_out_reg[4] ;
   wire Interrupt0;
-  wire \LOAD_REG_GEN[0].LOAD_REG_I_i_3__0_n_0 ;
-  wire \LOAD_REG_GEN[0].LOAD_REG_I_i_4_n_0 ;
-  wire [9:0]\LOAD_REG_GEN[21].LOAD_REG_I ;
+  wire \LOAD_REG_GEN[0].LOAD_REG_I_i_3_n_0 ;
+  wire \LOAD_REG_GEN[0].LOAD_REG_I_i_5_n_0 ;
+  wire [10:0]\LOAD_REG_GEN[21].LOAD_REG_I ;
+  wire \LOAD_REG_GEN[24].LOAD_REG_I ;
+  wire \LOAD_REG_GEN[24].LOAD_REG_I_0 ;
+  wire Load_Counter_Reg028_out;
+  wire Load_Counter_Reg030_out;
+  wire Load_Counter_Reg031_out;
+  wire Load_Counter_Reg0__0;
   wire PWM_FF_I;
   wire [1:0]Q;
   wire R;
@@ -24156,37 +23996,36 @@ module design_1_PmodWIFI_0_0_timer_control
   wire [0:0]S;
   wire [0:0]SR;
   wire \TCSR0_GENERATE[23].TCSR0_FF_I_i_2_n_0 ;
-  wire \TCSR0_GENERATE[23].TCSR0_FF_I_i_3_n_0 ;
   wire \TCSR0_GENERATE[24].TCSR0_FF_I_0 ;
+  wire \TCSR0_GENERATE[24].TCSR0_FF_I_1 ;
+  wire TCSR0_Set2__0;
+  wire \TCSR1_GENERATE[23].TCSR1_FF_I_0 ;
   wire \TCSR1_GENERATE[23].TCSR1_FF_I_i_2_n_0 ;
   wire \TCSR1_GENERATE[24].TCSR1_FF_I_0 ;
   wire [2:0]bus2ip_rdce;
-  wire [1:0]bus2ip_wrce;
   wire captureTrig0_d;
   wire captureTrig0_d0;
   wire captureTrig0_d2;
-  wire [2:0]captureTrig0_d_reg_0;
   wire captureTrig0_pulse_d1;
+  wire captureTrig0_pulse_d1_i_1_n_0;
   wire captureTrig0_pulse_d2;
   wire captureTrig1_d;
   wire captureTrig1_d0;
   wire captureTrig1_d2;
   wire capturetrig0;
   wire capturetrig1;
-  wire [0:0]counter_En;
   wire [0:1]counter_TC;
   wire counter_TC_Reg2;
   wire freeze;
   wire generateOutPre0;
-  wire generateOutPre00;
   wire generateOutPre1;
-  wire generateOutPre10;
   wire generateout0;
   wire generateout1;
   wire interrupt;
   wire [0:1]load_Counter_Reg;
-  wire p_30_in;
-  wire p_46_in;
+  wire p_33_in;
+  wire p_38_in;
+  wire p_7_in;
   wire pair0_Select;
   wire pwm0;
   wire [21:63]read_Mux_In;
@@ -24196,6 +24035,7 @@ module design_1_PmodWIFI_0_0_timer_control
   wire \s_axi_rdata_i_reg[10] ;
   wire \s_axi_rdata_i_reg[1] ;
   wire \s_axi_rdata_i_reg[2] ;
+  wire \s_axi_rdata_i_reg[3] ;
   wire \s_axi_rdata_i_reg[4] ;
   wire \s_axi_rdata_i_reg[5] ;
   wire \s_axi_rdata_i_reg[6] ;
@@ -24207,110 +24047,120 @@ module design_1_PmodWIFI_0_0_timer_control
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[21].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[21]),
-        .I1(bus2ip_rdce[2]),
-        .I2(bus2ip_rdce[0]),
-        .I3(read_Mux_In[53]),
-        .I4(bus2ip_rdce[1]),
-        .I5(\LOAD_REG_GEN[21].LOAD_REG_I [9]),
+       (.I0(\LOAD_REG_GEN[21].LOAD_REG_I [10]),
+        .I1(bus2ip_rdce[1]),
+        .I2(bus2ip_rdce[2]),
+        .I3(read_Mux_In[21]),
+        .I4(bus2ip_rdce[0]),
+        .I5(read_Mux_In[53]),
         .O(\s_axi_rdata_i_reg[10] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[22].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[22]),
-        .I1(bus2ip_rdce[2]),
-        .I2(bus2ip_rdce[0]),
-        .I3(read_Mux_In[54]),
-        .I4(bus2ip_rdce[1]),
-        .I5(\LOAD_REG_GEN[21].LOAD_REG_I [8]),
+       (.I0(\LOAD_REG_GEN[21].LOAD_REG_I [9]),
+        .I1(bus2ip_rdce[1]),
+        .I2(bus2ip_rdce[2]),
+        .I3(read_Mux_In[22]),
+        .I4(bus2ip_rdce[0]),
+        .I5(read_Mux_In[54]),
         .O(\s_axi_rdata_i_reg[9] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[23].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[23]),
-        .I1(bus2ip_rdce[2]),
-        .I2(bus2ip_rdce[0]),
-        .I3(read_Mux_In[55]),
-        .I4(bus2ip_rdce[1]),
-        .I5(\LOAD_REG_GEN[21].LOAD_REG_I [7]),
+       (.I0(\LOAD_REG_GEN[21].LOAD_REG_I [8]),
+        .I1(bus2ip_rdce[1]),
+        .I2(bus2ip_rdce[2]),
+        .I3(read_Mux_In[23]),
+        .I4(bus2ip_rdce[0]),
+        .I5(read_Mux_In[55]),
         .O(\s_axi_rdata_i_reg[8] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[24].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[0] ),
-        .I1(bus2ip_rdce[2]),
-        .I2(bus2ip_rdce[0]),
-        .I3(captureTrig0_d_reg_0[1]),
-        .I4(bus2ip_rdce[1]),
-        .I5(\LOAD_REG_GEN[21].LOAD_REG_I [6]),
+       (.I0(\LOAD_REG_GEN[21].LOAD_REG_I [7]),
+        .I1(bus2ip_rdce[1]),
+        .I2(bus2ip_rdce[2]),
+        .I3(\TCSR0_GENERATE[24].TCSR0_FF_I_0 ),
+        .I4(bus2ip_rdce[0]),
+        .I5(\TCSR1_GENERATE[23].TCSR1_FF_I_0 ),
         .O(\s_axi_rdata_i_reg[7] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[25].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[25]),
-        .I1(bus2ip_rdce[2]),
-        .I2(bus2ip_rdce[0]),
-        .I3(read_Mux_In[57]),
-        .I4(bus2ip_rdce[1]),
-        .I5(\LOAD_REG_GEN[21].LOAD_REG_I [5]),
+       (.I0(\LOAD_REG_GEN[21].LOAD_REG_I [6]),
+        .I1(bus2ip_rdce[1]),
+        .I2(bus2ip_rdce[2]),
+        .I3(read_Mux_In[25]),
+        .I4(bus2ip_rdce[0]),
+        .I5(read_Mux_In[57]),
         .O(\s_axi_rdata_i_reg[6] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[26].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[26]),
-        .I1(bus2ip_rdce[2]),
-        .I2(bus2ip_rdce[0]),
-        .I3(read_Mux_In[58]),
-        .I4(bus2ip_rdce[1]),
-        .I5(\LOAD_REG_GEN[21].LOAD_REG_I [4]),
+       (.I0(\LOAD_REG_GEN[21].LOAD_REG_I [5]),
+        .I1(bus2ip_rdce[1]),
+        .I2(bus2ip_rdce[2]),
+        .I3(read_Mux_In[26]),
+        .I4(bus2ip_rdce[0]),
+        .I5(read_Mux_In[58]),
         .O(\s_axi_rdata_i_reg[5] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[27].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[27]),
-        .I1(bus2ip_rdce[2]),
-        .I2(bus2ip_rdce[0]),
-        .I3(read_Mux_In[59]),
-        .I4(bus2ip_rdce[1]),
-        .I5(\LOAD_REG_GEN[21].LOAD_REG_I [3]),
+       (.I0(\LOAD_REG_GEN[21].LOAD_REG_I [4]),
+        .I1(bus2ip_rdce[1]),
+        .I2(bus2ip_rdce[2]),
+        .I3(read_Mux_In[27]),
+        .I4(bus2ip_rdce[0]),
+        .I5(read_Mux_In[59]),
         .O(\s_axi_rdata_i_reg[4] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
+    \GEN.DATA_WIDTH_GEN[28].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(\LOAD_REG_GEN[21].LOAD_REG_I [3]),
+        .I1(bus2ip_rdce[1]),
+        .I2(bus2ip_rdce[2]),
+        .I3(read_Mux_In[28]),
+        .I4(bus2ip_rdce[0]),
+        .I5(read_Mux_In[60]),
+        .O(\s_axi_rdata_i_reg[3] ));
+  LUT6 #(
+    .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[29].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[29]),
-        .I1(bus2ip_rdce[2]),
-        .I2(bus2ip_rdce[0]),
-        .I3(read_Mux_In[61]),
-        .I4(bus2ip_rdce[1]),
-        .I5(\LOAD_REG_GEN[21].LOAD_REG_I [2]),
+       (.I0(\LOAD_REG_GEN[21].LOAD_REG_I [2]),
+        .I1(bus2ip_rdce[1]),
+        .I2(bus2ip_rdce[2]),
+        .I3(read_Mux_In[29]),
+        .I4(bus2ip_rdce[0]),
+        .I5(read_Mux_In[61]),
         .O(\s_axi_rdata_i_reg[2] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[30].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[30]),
-        .I1(bus2ip_rdce[2]),
-        .I2(bus2ip_rdce[0]),
-        .I3(read_Mux_In[62]),
-        .I4(bus2ip_rdce[1]),
-        .I5(\LOAD_REG_GEN[21].LOAD_REG_I [1]),
+       (.I0(\LOAD_REG_GEN[21].LOAD_REG_I [1]),
+        .I1(bus2ip_rdce[1]),
+        .I2(bus2ip_rdce[2]),
+        .I3(read_Mux_In[30]),
+        .I4(bus2ip_rdce[0]),
+        .I5(read_Mux_In[62]),
         .O(\s_axi_rdata_i_reg[1] ));
   LUT6 #(
     .INIT(64'h0000077707770777)) 
     \GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(read_Mux_In[31]),
-        .I1(bus2ip_rdce[2]),
-        .I2(bus2ip_rdce[0]),
-        .I3(read_Mux_In[63]),
-        .I4(bus2ip_rdce[1]),
-        .I5(\LOAD_REG_GEN[21].LOAD_REG_I [0]),
+       (.I0(\LOAD_REG_GEN[21].LOAD_REG_I [0]),
+        .I1(bus2ip_rdce[1]),
+        .I2(bus2ip_rdce[2]),
+        .I3(read_Mux_In[31]),
+        .I4(bus2ip_rdce[0]),
+        .I5(read_Mux_In[63]),
         .O(\s_axi_rdata_i_reg[0] ));
-  (* SOFT_HLUTNM = "soft_lutpair115" *) 
+  (* SOFT_HLUTNM = "soft_lutpair116" *) 
   LUT4 #(
-    .INIT(16'hE200)) 
+    .INIT(16'hB800)) 
     GenerateOut0_i_2
-       (.I0(generateOutPre0),
-        .I1(GenerateOut1_reg_0),
-        .I2(generateOutPre1),
+       (.I0(generateOutPre1),
+        .I1(\INFERRED_GEN.icount_out_reg[0] ),
+        .I2(generateOutPre0),
         .I3(read_Mux_In[29]),
         .O(GenerateOut00));
   FDRE GenerateOut0_reg
@@ -24319,15 +24169,15 @@ module design_1_PmodWIFI_0_0_timer_control
         .D(GenerateOut00),
         .Q(generateout0),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair115" *) 
+  (* SOFT_HLUTNM = "soft_lutpair116" *) 
   LUT5 #(
     .INIT(32'h8F808080)) 
     GenerateOut1_i_1
        (.I0(generateOutPre0),
         .I1(read_Mux_In[29]),
-        .I2(GenerateOut1_reg_0),
-        .I3(generateOutPre1),
-        .I4(read_Mux_In[61]),
+        .I2(\INFERRED_GEN.icount_out_reg[0] ),
+        .I3(read_Mux_In[61]),
+        .I4(generateOutPre1),
         .O(GenerateOut10));
   FDRE GenerateOut1_reg
        (.C(s_axi_aclk),
@@ -24335,126 +24185,90 @@ module design_1_PmodWIFI_0_0_timer_control
         .D(GenerateOut10),
         .Q(generateout1),
         .R(SR));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFBAAAAAAA)) 
-    \INFERRED_GEN.icount_out[31]_i_3 
-       (.I0(\INFERRED_GEN.icount_out[31]_i_5__0_n_0 ),
-        .I1(read_Mux_In[31]),
-        .I2(counter_TC[1]),
-        .I3(GenerateOut1_reg_0),
-        .I4(read_Mux_In[27]),
-        .I5(read_Mux_In[58]),
-        .O(load_Counter_Reg[1]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFF77FF47)) 
-    \INFERRED_GEN.icount_out[31]_i_3__0 
-       (.I0(counter_TC[1]),
-        .I1(GenerateOut1_reg_0),
-        .I2(counter_TC[0]),
-        .I3(read_Mux_In[31]),
-        .I4(read_Mux_In[22]),
-        .I5(read_Mux_In[27]),
-        .O(\INFERRED_GEN.icount_out[31]_i_3__0_n_0 ));
   LUT5 #(
-    .INIT(32'h02020200)) 
-    \INFERRED_GEN.icount_out[31]_i_4__0 
-       (.I0(counter_TC[0]),
-        .I1(read_Mux_In[31]),
-        .I2(GenerateOut1_reg_0),
-        .I3(read_Mux_In[22]),
-        .I4(read_Mux_In[27]),
-        .O(\INFERRED_GEN.icount_out[31]_i_4__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair116" *) 
+    .INIT(32'hAAFEAAAA)) 
+    \INFERRED_GEN.icount_out[31]_i_3 
+       (.I0(read_Mux_In[26]),
+        .I1(read_Mux_In[22]),
+        .I2(read_Mux_In[27]),
+        .I3(read_Mux_In[31]),
+        .I4(counter_TC[0]),
+        .O(Load_Counter_Reg030_out));
+  LUT6 #(
+    .INIT(64'hFFFFAAEAAAAAAAEA)) 
+    \INFERRED_GEN.icount_out[31]_i_3__0 
+       (.I0(read_Mux_In[58]),
+        .I1(counter_TC[1]),
+        .I2(read_Mux_In[59]),
+        .I3(read_Mux_In[63]),
+        .I4(read_Mux_In[54]),
+        .I5(counter_TC[0]),
+        .O(Load_Counter_Reg0__0));
+  (* SOFT_HLUTNM = "soft_lutpair117" *) 
   LUT4 #(
-    .INIT(16'h4000)) 
-    \INFERRED_GEN.icount_out[31]_i_5 
+    .INIT(16'hFF40)) 
+    \INFERRED_GEN.icount_out[31]_i_4 
        (.I0(read_Mux_In[31]),
         .I1(counter_TC[1]),
-        .I2(GenerateOut1_reg_0),
-        .I3(read_Mux_In[27]),
-        .O(\INFERRED_GEN.icount_out[31]_i_5_n_0 ));
-  LUT6 #(
-    .INIT(64'h00AA00AA000C0000)) 
-    \INFERRED_GEN.icount_out[31]_i_5__0 
-       (.I0(counter_TC[0]),
-        .I1(read_Mux_In[59]),
-        .I2(read_Mux_In[63]),
-        .I3(GenerateOut1_reg_0),
-        .I4(counter_TC[1]),
-        .I5(read_Mux_In[54]),
-        .O(\INFERRED_GEN.icount_out[31]_i_5__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFBAAAAAAA)) 
-    \INFERRED_GEN.icount_out[31]_i_6 
-       (.I0(read_Mux_In[26]),
-        .I1(read_Mux_In[31]),
-        .I2(counter_TC[1]),
-        .I3(GenerateOut1_reg_0),
-        .I4(read_Mux_In[27]),
-        .I5(\INFERRED_GEN.icount_out[31]_i_4__0_n_0 ),
-        .O(load_Counter_Reg[0]));
-  (* SOFT_HLUTNM = "soft_lutpair116" *) 
-  LUT3 #(
-    .INIT(8'hEF)) 
-    \INFERRED_GEN.icount_out[31]_i_6__0 
-       (.I0(read_Mux_In[27]),
-        .I1(read_Mux_In[31]),
-        .I2(counter_TC[1]),
-        .O(\INFERRED_GEN.icount_out[31]_i_6__0_n_0 ));
+        .I2(read_Mux_In[27]),
+        .I3(read_Mux_In[58]),
+        .O(Load_Counter_Reg028_out));
+  (* SOFT_HLUTNM = "soft_lutpair117" *) 
   LUT4 #(
-    .INIT(16'hFFEF)) 
-    \INFERRED_GEN.icount_out[31]_i_8 
-       (.I0(read_Mux_In[54]),
-        .I1(read_Mux_In[59]),
-        .I2(counter_TC[1]),
-        .I3(read_Mux_In[63]),
-        .O(\INFERRED_GEN.icount_out[31]_i_8_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair119" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \INFERRED_GEN.icount_out[32]_i_3 
-       (.I0(GenerateOut1_reg_0),
-        .I1(read_Mux_In[30]),
-        .O(\INFERRED_GEN.icount_out[32]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair118" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \INFERRED_GEN.icount_out[32]_i_5 
-       (.I0(read_Mux_In[62]),
-        .I1(GenerateOut1_reg_0),
-        .O(\INFERRED_GEN.icount_out[32]_i_5_n_0 ));
-  design_1_PmodWIFI_0_0_cdc_sync__parameterized4 INPUT_DOUBLE_REGS
-       (.\TCSR0_GENERATE[28].TCSR0_FF_I (captureTrig0_d_reg_0[2]),
-        .captureTrig0_d0(captureTrig0_d0),
+    .INIT(16'hFF40)) 
+    \INFERRED_GEN.icount_out[31]_i_4__0 
+       (.I0(read_Mux_In[31]),
+        .I1(counter_TC[1]),
+        .I2(read_Mux_In[27]),
+        .I3(read_Mux_In[26]),
+        .O(Load_Counter_Reg031_out));
+  LUT6 #(
+    .INIT(64'hFF40FFFFFF400000)) 
+    \INFERRED_GEN.icount_out[31]_i_7 
+       (.I0(read_Mux_In[31]),
+        .I1(counter_TC[1]),
+        .I2(read_Mux_In[27]),
+        .I3(read_Mux_In[58]),
+        .I4(\INFERRED_GEN.icount_out_reg[0] ),
+        .I5(Load_Counter_Reg0__0),
+        .O(load_Counter_Reg[1]));
+  LUT6 #(
+    .INIT(64'hFF40FFFFFF400000)) 
+    \INFERRED_GEN.icount_out[31]_i_7__0 
+       (.I0(read_Mux_In[31]),
+        .I1(counter_TC[1]),
+        .I2(read_Mux_In[27]),
+        .I3(read_Mux_In[26]),
+        .I4(\INFERRED_GEN.icount_out_reg[0] ),
+        .I5(Load_Counter_Reg030_out),
+        .O(load_Counter_Reg[0]));
+  design_1_PmodWIFI_0_0_cdc_sync__parameterized2 INPUT_DOUBLE_REGS
+       (.captureTrig0_d0(captureTrig0_d0),
         .capturetrig0(capturetrig0),
+        .read_Mux_In(read_Mux_In[28]),
         .s_axi_aclk(s_axi_aclk));
-  design_1_PmodWIFI_0_0_cdc_sync__parameterized5 INPUT_DOUBLE_REGS2
-       (.\TCSR1_GENERATE[28].TCSR1_FF_I (captureTrig0_d_reg_0[0]),
-        .captureTrig1_d0(captureTrig1_d0),
+  design_1_PmodWIFI_0_0_cdc_sync__parameterized2_1 INPUT_DOUBLE_REGS2
+       (.captureTrig1_d0(captureTrig1_d0),
         .capturetrig1(capturetrig1),
+        .read_Mux_In(read_Mux_In[60]),
         .s_axi_aclk(s_axi_aclk));
-  design_1_PmodWIFI_0_0_cdc_sync__parameterized3 INPUT_DOUBLE_REGS3
+  design_1_PmodWIFI_0_0_cdc_sync__parameterized2_2 INPUT_DOUBLE_REGS3
        (.E(E),
         .\INFERRED_GEN.icount_out_reg[0] (\INFERRED_GEN.icount_out_reg[0]_0 ),
         .\INFERRED_GEN.icount_out_reg[1] (\INFERRED_GEN.icount_out_reg[1] ),
-        .\INFERRED_GEN.icount_out_reg[32] (\INFERRED_GEN.icount_out_reg[32] ),
-        .\INFERRED_GEN.icount_out_reg[32]_0 (\INFERRED_GEN.icount_out[31]_i_3__0_n_0 ),
-        .\INFERRED_GEN.icount_out_reg[32]_1 (\INFERRED_GEN.icount_out[31]_i_4__0_n_0 ),
         .\INFERRED_GEN.icount_out_reg[4] (\INFERRED_GEN.icount_out_reg[4] ),
+        .Load_Counter_Reg028_out(Load_Counter_Reg028_out),
+        .Load_Counter_Reg030_out(Load_Counter_Reg030_out),
+        .Load_Counter_Reg031_out(Load_Counter_Reg031_out),
+        .Load_Counter_Reg0__0(Load_Counter_Reg0__0),
         .S(S),
-        .\TCSR0_GENERATE[20].TCSR0_FF_I (\INFERRED_GEN.icount_out[32]_i_3_n_0 ),
-        .\TCSR0_GENERATE[20].TCSR0_FF_I_0 (GenerateOut1_reg_0),
-        .\TCSR0_GENERATE[24].TCSR0_FF_I (\INFERRED_GEN.icount_out_reg[0] ),
-        .\TCSR0_GENERATE[27].TCSR0_FF_I (\INFERRED_GEN.icount_out[31]_i_6__0_n_0 ),
-        .\TCSR0_GENERATE[31].TCSR0_FF_I (\INFERRED_GEN.icount_out[31]_i_5_n_0 ),
-        .\TCSR1_GENERATE[22].TCSR1_FF_I (\INFERRED_GEN.icount_out[31]_i_8_n_0 ),
-        .\TCSR1_GENERATE[24].TCSR1_FF_I (captureTrig0_d_reg_0[1]),
-        .\TCSR1_GENERATE[30].TCSR1_FF_I (\INFERRED_GEN.icount_out[32]_i_5_n_0 ),
-        .counter_En(counter_En),
+        .\TCSR0_GENERATE[20].TCSR0_FF_I (\INFERRED_GEN.icount_out_reg[0] ),
+        .\TCSR0_GENERATE[24].TCSR0_FF_I (\TCSR0_GENERATE[24].TCSR0_FF_I_0 ),
+        .\TCSR1_GENERATE[24].TCSR1_FF_I (\TCSR1_GENERATE[23].TCSR1_FF_I_0 ),
+        .counter_TC(counter_TC),
         .freeze(freeze),
         .generateOutPre0(generateOutPre0),
-        .load_Counter_Reg(load_Counter_Reg[1]),
-        .read_Mux_In({read_Mux_In[26],read_Mux_In[30],read_Mux_In[62]}),
+        .read_Mux_In({read_Mux_In[22],read_Mux_In[27],read_Mux_In[30],read_Mux_In[31],read_Mux_In[54],read_Mux_In[59],read_Mux_In[62],read_Mux_In[63]}),
         .s_axi_aclk(s_axi_aclk));
   LUT4 #(
     .INIT(16'hF888)) 
@@ -24470,58 +24284,66 @@ module design_1_PmodWIFI_0_0_timer_control
         .D(Interrupt0),
         .Q(interrupt),
         .R(SR));
-  LUT5 #(
-    .INIT(32'hFF22F222)) 
-    \LOAD_REG_GEN[0].LOAD_REG_I_i_1 
-       (.I0(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ),
-        .I1(Bus_RNW_reg),
-        .I2(\LOAD_REG_GEN[0].LOAD_REG_I_i_3__0_n_0 ),
-        .I3(READ_DONE1_I_i_1_n_0),
-        .I4(\LOAD_REG_GEN[0].LOAD_REG_I_i_4_n_0 ),
-        .O(CE));
-  LUT5 #(
-    .INIT(32'hFF22F222)) 
-    \LOAD_REG_GEN[0].LOAD_REG_I_i_1__0 
-       (.I0(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ),
-        .I1(Bus_RNW_reg),
-        .I2(D_0),
-        .I3(p_30_in),
-        .I4(read_Mux_In[27]),
-        .O(CE_0));
   LUT6 #(
-    .INIT(64'hEEEE222A00000000)) 
+    .INIT(64'hE000FFFFE000E000)) 
+    \LOAD_REG_GEN[0].LOAD_REG_I_i_1 
+       (.I0(read_Mux_In[27]),
+        .I1(D_0),
+        .I2(R_0),
+        .I3(read_Mux_In[31]),
+        .I4(Bus_RNW_reg),
+        .I5(p_7_in),
+        .O(\LOAD_REG_GEN[24].LOAD_REG_I ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFF8080808)) 
+    \LOAD_REG_GEN[0].LOAD_REG_I_i_1__0 
+       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_i_3_n_0 ),
+        .I1(p_38_in),
+        .I2(\INFERRED_GEN.icount_out_reg[0] ),
+        .I3(\LOAD_REG_GEN[0].LOAD_REG_I_i_5_n_0 ),
+        .I4(p_33_in),
+        .I5(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
+        .O(\LOAD_REG_GEN[24].LOAD_REG_I_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair119" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
     \LOAD_REG_GEN[0].LOAD_REG_I_i_3 
-       (.I0(p_46_in),
-        .I1(GenerateOut1_reg_0),
-        .I2(Q[1]),
-        .I3(counter_TC[0]),
+       (.I0(read_Mux_In[59]),
+        .I1(read_done1),
+        .O(\LOAD_REG_GEN[0].LOAD_REG_I_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'hF4F4F40400000000)) 
+    \LOAD_REG_GEN[0].LOAD_REG_I_i_4 
+       (.I0(captureTrig1_d2),
+        .I1(captureTrig1_d),
+        .I2(\INFERRED_GEN.icount_out_reg[0] ),
+        .I3(READ_DONE1_I_i_3_n_0),
+        .I4(READ_DONE0_I_i_3_n_0),
+        .I5(read_Mux_In[63]),
+        .O(p_38_in));
+  (* SOFT_HLUTNM = "soft_lutpair119" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
+    \LOAD_REG_GEN[0].LOAD_REG_I_i_5 
+       (.I0(read_Mux_In[27]),
+        .I1(read_done1),
+        .O(\LOAD_REG_GEN[0].LOAD_REG_I_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'hF4F4F40400000000)) 
+    \LOAD_REG_GEN[0].LOAD_REG_I_i_6 
+       (.I0(captureTrig1_d2),
+        .I1(captureTrig1_d),
+        .I2(\INFERRED_GEN.icount_out_reg[0] ),
+        .I3(READ_DONE1_I_i_3_n_0),
         .I4(READ_DONE0_I_i_3_n_0),
         .I5(read_Mux_In[31]),
-        .O(p_30_in));
-  (* SOFT_HLUTNM = "soft_lutpair118" *) 
-  LUT4 #(
-    .INIT(16'h3200)) 
-    \LOAD_REG_GEN[0].LOAD_REG_I_i_3__0 
-       (.I0(read_Mux_In[59]),
-        .I1(GenerateOut1_reg_0),
-        .I2(read_done1),
-        .I3(read_Mux_In[63]),
-        .O(\LOAD_REG_GEN[0].LOAD_REG_I_i_3__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair119" *) 
-  LUT4 #(
-    .INIT(16'h8880)) 
-    \LOAD_REG_GEN[0].LOAD_REG_I_i_4 
-       (.I0(GenerateOut1_reg_0),
-        .I1(read_Mux_In[31]),
-        .I2(read_Mux_In[27]),
-        .I3(read_done1),
-        .O(\LOAD_REG_GEN[0].LOAD_REG_I_i_4_n_0 ));
+        .O(p_33_in));
   LUT3 #(
-    .INIT(8'hF1)) 
+    .INIT(8'hAB)) 
     PWM_FF_I_i_1
-       (.I0(read_Mux_In[22]),
-        .I1(read_Mux_In[54]),
-        .I2(generateout1),
+       (.I0(generateout1),
+        .I1(read_Mux_In[22]),
+        .I2(read_Mux_In[54]),
         .O(R));
   LUT2 #(
     .INIT(4'hE)) 
@@ -24547,18 +24369,18 @@ module design_1_PmodWIFI_0_0_timer_control
     .INIT(64'hAA00AA00ABFFAA00)) 
     READ_DONE0_I_i_1
        (.I0(READ_DONE0_I_i_3_n_0),
-        .I1(counter_TC[0]),
-        .I2(Q[1]),
-        .I3(GenerateOut1_reg_0),
+        .I1(Q[1]),
+        .I2(counter_TC[0]),
+        .I3(\INFERRED_GEN.icount_out_reg[0] ),
         .I4(captureTrig0_d),
         .I5(captureTrig0_d2),
         .O(R_0));
   LUT3 #(
-    .INIT(8'hE0)) 
+    .INIT(8'hA8)) 
     READ_DONE0_I_i_3
-       (.I0(captureTrig0_pulse_d2),
-        .I1(captureTrig0_pulse_d1),
-        .I2(counter_TC_Reg2),
+       (.I0(counter_TC_Reg2),
+        .I1(captureTrig0_pulse_d2),
+        .I2(captureTrig0_pulse_d1),
         .O(READ_DONE0_I_i_3_n_0));
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
@@ -24579,18 +24401,18 @@ module design_1_PmodWIFI_0_0_timer_control
     READ_DONE1_I_i_1
        (.I0(READ_DONE0_I_i_3_n_0),
         .I1(READ_DONE1_I_i_3_n_0),
-        .I2(GenerateOut1_reg_0),
+        .I2(\INFERRED_GEN.icount_out_reg[0] ),
         .I3(captureTrig1_d),
         .I4(captureTrig1_d2),
         .O(READ_DONE1_I_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair117" *) 
+  (* SOFT_HLUTNM = "soft_lutpair118" *) 
   LUT4 #(
-    .INIT(16'h0100)) 
+    .INIT(16'h0004)) 
     READ_DONE1_I_i_3
-       (.I0(Q[1]),
-        .I1(counter_TC[0]),
-        .I2(captureTrig0_d2),
-        .I3(captureTrig0_d),
+       (.I0(captureTrig0_d2),
+        .I1(captureTrig0_d),
+        .I2(counter_TC[0]),
+        .I3(Q[1]),
         .O(READ_DONE1_I_i_3_n_0));
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
@@ -24602,9 +24424,9 @@ module design_1_PmodWIFI_0_0_timer_control
     .IS_R_INVERTED(1'b0)) 
     \TCSR0_GENERATE[20].TCSR0_FF_I 
        (.C(s_axi_aclk),
-        .CE(bus2ip_wrce[1]),
+        .CE(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ),
         .D(s_axi_wdata[9]),
-        .Q(GenerateOut1_reg_0),
+        .Q(\INFERRED_GEN.icount_out_reg[0] ),
         .R(SR));
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
@@ -24630,7 +24452,7 @@ module design_1_PmodWIFI_0_0_timer_control
     .IS_R_INVERTED(1'b0)) 
     \TCSR0_GENERATE[22].TCSR0_FF_I 
        (.C(s_axi_aclk),
-        .CE(bus2ip_wrce[1]),
+        .CE(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ),
         .D(s_axi_wdata[7]),
         .Q(read_Mux_In[22]),
         .R(SR));
@@ -24647,23 +24469,27 @@ module design_1_PmodWIFI_0_0_timer_control
         .CE(1'b1),
         .D(\TCSR0_GENERATE[23].TCSR0_FF_I_i_2_n_0 ),
         .Q(read_Mux_In[23]),
-        .R(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ));
-  LUT5 #(
-    .INIT(32'hFFFFF222)) 
+        .R(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFF3F2F0F2)) 
     \TCSR0_GENERATE[23].TCSR0_FF_I_i_2 
-       (.I0(\TCSR0_GENERATE[23].TCSR0_FF_I_i_3_n_0 ),
+       (.I0(generateOutPre0),
         .I1(read_Mux_In[31]),
-        .I2(p_30_in),
+        .I2(TCSR0_Set2__0),
         .I3(\INFERRED_GEN.icount_out_reg[0] ),
-        .I4(read_Mux_In[23]),
+        .I4(generateOutPre1),
+        .I5(read_Mux_In[23]),
         .O(\TCSR0_GENERATE[23].TCSR0_FF_I_i_2_n_0 ));
-  LUT3 #(
-    .INIT(8'hB8)) 
+  LUT6 #(
+    .INIT(64'hA8AAA80000000000)) 
     \TCSR0_GENERATE[23].TCSR0_FF_I_i_3 
-       (.I0(generateOutPre1),
-        .I1(GenerateOut1_reg_0),
-        .I2(generateOutPre0),
-        .O(\TCSR0_GENERATE[23].TCSR0_FF_I_i_3_n_0 ));
+       (.I0(read_Mux_In[31]),
+        .I1(READ_DONE0_I_i_3_n_0),
+        .I2(READ_DONE1_I_i_3_n_0),
+        .I3(\INFERRED_GEN.icount_out_reg[0] ),
+        .I4(captureTrig0_pulse_d1_i_1_n_0),
+        .I5(\TCSR0_GENERATE[24].TCSR0_FF_I_0 ),
+        .O(TCSR0_Set2__0));
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
   (* box_type = "PRIMITIVE" *) 
@@ -24675,8 +24501,8 @@ module design_1_PmodWIFI_0_0_timer_control
     \TCSR0_GENERATE[24].TCSR0_FF_I 
        (.C(s_axi_aclk),
         .CE(pair0_Select),
-        .D(\TCSR0_GENERATE[24].TCSR0_FF_I_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[0] ),
+        .D(\TCSR0_GENERATE[24].TCSR0_FF_I_1 ),
+        .Q(\TCSR0_GENERATE[24].TCSR0_FF_I_0 ),
         .R(SR));
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
@@ -24688,7 +24514,7 @@ module design_1_PmodWIFI_0_0_timer_control
     .IS_R_INVERTED(1'b0)) 
     \TCSR0_GENERATE[25].TCSR0_FF_I 
        (.C(s_axi_aclk),
-        .CE(bus2ip_wrce[1]),
+        .CE(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ),
         .D(s_axi_wdata[6]),
         .Q(read_Mux_In[25]),
         .R(SR));
@@ -24702,7 +24528,7 @@ module design_1_PmodWIFI_0_0_timer_control
     .IS_R_INVERTED(1'b0)) 
     \TCSR0_GENERATE[26].TCSR0_FF_I 
        (.C(s_axi_aclk),
-        .CE(bus2ip_wrce[1]),
+        .CE(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ),
         .D(s_axi_wdata[5]),
         .Q(read_Mux_In[26]),
         .R(SR));
@@ -24716,7 +24542,7 @@ module design_1_PmodWIFI_0_0_timer_control
     .IS_R_INVERTED(1'b0)) 
     \TCSR0_GENERATE[27].TCSR0_FF_I 
        (.C(s_axi_aclk),
-        .CE(bus2ip_wrce[1]),
+        .CE(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ),
         .D(s_axi_wdata[4]),
         .Q(read_Mux_In[27]),
         .R(SR));
@@ -24730,9 +24556,9 @@ module design_1_PmodWIFI_0_0_timer_control
     .IS_R_INVERTED(1'b0)) 
     \TCSR0_GENERATE[28].TCSR0_FF_I 
        (.C(s_axi_aclk),
-        .CE(bus2ip_wrce[1]),
+        .CE(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ),
         .D(s_axi_wdata[3]),
-        .Q(captureTrig0_d_reg_0[2]),
+        .Q(read_Mux_In[28]),
         .R(SR));
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
@@ -24744,7 +24570,7 @@ module design_1_PmodWIFI_0_0_timer_control
     .IS_R_INVERTED(1'b0)) 
     \TCSR0_GENERATE[29].TCSR0_FF_I 
        (.C(s_axi_aclk),
-        .CE(bus2ip_wrce[1]),
+        .CE(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ),
         .D(s_axi_wdata[2]),
         .Q(read_Mux_In[29]),
         .R(SR));
@@ -24758,7 +24584,7 @@ module design_1_PmodWIFI_0_0_timer_control
     .IS_R_INVERTED(1'b0)) 
     \TCSR0_GENERATE[30].TCSR0_FF_I 
        (.C(s_axi_aclk),
-        .CE(bus2ip_wrce[1]),
+        .CE(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ),
         .D(s_axi_wdata[1]),
         .Q(read_Mux_In[30]),
         .R(SR));
@@ -24772,7 +24598,7 @@ module design_1_PmodWIFI_0_0_timer_control
     .IS_R_INVERTED(1'b0)) 
     \TCSR0_GENERATE[31].TCSR0_FF_I 
        (.C(s_axi_aclk),
-        .CE(bus2ip_wrce[1]),
+        .CE(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ),
         .D(s_axi_wdata[0]),
         .Q(read_Mux_In[31]),
         .R(SR));
@@ -24800,7 +24626,7 @@ module design_1_PmodWIFI_0_0_timer_control
     .IS_R_INVERTED(1'b0)) 
     \TCSR1_GENERATE[22].TCSR1_FF_I 
        (.C(s_axi_aclk),
-        .CE(bus2ip_wrce[0]),
+        .CE(\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] ),
         .D(s_axi_wdata[7]),
         .Q(read_Mux_In[54]),
         .R(SR));
@@ -24817,15 +24643,15 @@ module design_1_PmodWIFI_0_0_timer_control
         .CE(1'b1),
         .D(\TCSR1_GENERATE[23].TCSR1_FF_I_i_2_n_0 ),
         .Q(read_Mux_In[55]),
-        .R(\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] ));
+        .R(\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4]_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFF54040404)) 
+    .INIT(64'hFFFFFFFF00008F80)) 
     \TCSR1_GENERATE[23].TCSR1_FF_I_i_2 
-       (.I0(GenerateOut1_reg_0),
-        .I1(generateOutPre1),
+       (.I0(\TCSR1_GENERATE[23].TCSR1_FF_I_0 ),
+        .I1(READ_DONE1_I_i_1_n_0),
         .I2(read_Mux_In[63]),
-        .I3(captureTrig0_d_reg_0[1]),
-        .I4(READ_DONE1_I_i_1_n_0),
+        .I3(generateOutPre1),
+        .I4(\INFERRED_GEN.icount_out_reg[0] ),
         .I5(read_Mux_In[55]),
         .O(\TCSR1_GENERATE[23].TCSR1_FF_I_i_2_n_0 ));
   (* IS_CE_INVERTED = "1'b0" *) 
@@ -24840,7 +24666,7 @@ module design_1_PmodWIFI_0_0_timer_control
        (.C(s_axi_aclk),
         .CE(pair0_Select),
         .D(\TCSR1_GENERATE[24].TCSR1_FF_I_0 ),
-        .Q(captureTrig0_d_reg_0[1]),
+        .Q(\TCSR1_GENERATE[23].TCSR1_FF_I_0 ),
         .R(SR));
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
@@ -24852,7 +24678,7 @@ module design_1_PmodWIFI_0_0_timer_control
     .IS_R_INVERTED(1'b0)) 
     \TCSR1_GENERATE[25].TCSR1_FF_I 
        (.C(s_axi_aclk),
-        .CE(bus2ip_wrce[0]),
+        .CE(\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] ),
         .D(s_axi_wdata[6]),
         .Q(read_Mux_In[57]),
         .R(SR));
@@ -24866,7 +24692,7 @@ module design_1_PmodWIFI_0_0_timer_control
     .IS_R_INVERTED(1'b0)) 
     \TCSR1_GENERATE[26].TCSR1_FF_I 
        (.C(s_axi_aclk),
-        .CE(bus2ip_wrce[0]),
+        .CE(\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] ),
         .D(s_axi_wdata[5]),
         .Q(read_Mux_In[58]),
         .R(SR));
@@ -24880,7 +24706,7 @@ module design_1_PmodWIFI_0_0_timer_control
     .IS_R_INVERTED(1'b0)) 
     \TCSR1_GENERATE[27].TCSR1_FF_I 
        (.C(s_axi_aclk),
-        .CE(bus2ip_wrce[0]),
+        .CE(\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] ),
         .D(s_axi_wdata[4]),
         .Q(read_Mux_In[59]),
         .R(SR));
@@ -24894,9 +24720,9 @@ module design_1_PmodWIFI_0_0_timer_control
     .IS_R_INVERTED(1'b0)) 
     \TCSR1_GENERATE[28].TCSR1_FF_I 
        (.C(s_axi_aclk),
-        .CE(bus2ip_wrce[0]),
+        .CE(\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] ),
         .D(s_axi_wdata[3]),
-        .Q(captureTrig0_d_reg_0[0]),
+        .Q(read_Mux_In[60]),
         .R(SR));
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
@@ -24908,7 +24734,7 @@ module design_1_PmodWIFI_0_0_timer_control
     .IS_R_INVERTED(1'b0)) 
     \TCSR1_GENERATE[29].TCSR1_FF_I 
        (.C(s_axi_aclk),
-        .CE(bus2ip_wrce[0]),
+        .CE(\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] ),
         .D(s_axi_wdata[2]),
         .Q(read_Mux_In[61]),
         .R(SR));
@@ -24922,7 +24748,7 @@ module design_1_PmodWIFI_0_0_timer_control
     .IS_R_INVERTED(1'b0)) 
     \TCSR1_GENERATE[30].TCSR1_FF_I 
        (.C(s_axi_aclk),
-        .CE(bus2ip_wrce[0]),
+        .CE(\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] ),
         .D(s_axi_wdata[1]),
         .Q(read_Mux_In[62]),
         .R(SR));
@@ -24936,7 +24762,7 @@ module design_1_PmodWIFI_0_0_timer_control
     .IS_R_INVERTED(1'b0)) 
     \TCSR1_GENERATE[31].TCSR1_FF_I 
        (.C(s_axi_aclk),
-        .CE(bus2ip_wrce[0]),
+        .CE(\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] ),
         .D(s_axi_wdata[0]),
         .Q(read_Mux_In[63]),
         .R(SR));
@@ -24952,17 +24778,17 @@ module design_1_PmodWIFI_0_0_timer_control
         .D(captureTrig0_d0),
         .Q(captureTrig0_d),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair117" *) 
+  (* SOFT_HLUTNM = "soft_lutpair118" *) 
   LUT2 #(
     .INIT(4'h2)) 
     captureTrig0_pulse_d1_i_1
        (.I0(captureTrig0_d),
         .I1(captureTrig0_d2),
-        .O(p_46_in));
+        .O(captureTrig0_pulse_d1_i_1_n_0));
   FDRE captureTrig0_pulse_d1_reg
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(p_46_in),
+        .D(captureTrig0_pulse_d1_i_1_n_0),
         .Q(captureTrig0_pulse_d1),
         .R(SR));
   FDRE captureTrig0_pulse_d2_reg
@@ -25004,18 +24830,17 @@ module design_1_PmodWIFI_0_0_timer_control
   FDRE generateOutPre0_reg
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(generateOutPre00),
+        .D(\INFERRED_GEN.icount_out_reg[32]_0 ),
         .Q(generateOutPre0),
         .R(SR));
   FDRE generateOutPre1_reg
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(generateOutPre10),
+        .D(\INFERRED_GEN.icount_out_reg[32] ),
         .Q(generateOutPre1),
         .R(SR));
 endmodule
 
-(* ORIG_REF_NAME = "clk_x_pntrs" *) 
 module design_1_PmodWIFI_0_0_clk_x_pntrs
    (out,
     ram_empty_i_reg,
@@ -25080,7 +24905,7 @@ module design_1_PmodWIFI_0_0_clk_x_pntrs
         .I1(out[1]),
         .I2(out[3]),
         .O(\_inferred__0/i__n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT4 #(
     .INIT(16'h6996)) 
     \_inferred__2/i_ 
@@ -25089,7 +24914,7 @@ module design_1_PmodWIFI_0_0_clk_x_pntrs
         .I2(p_6_out[3]),
         .I3(p_6_out[2]),
         .O(\_inferred__2/i__n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT3 #(
     .INIT(8'h96)) 
     \_inferred__3/i_ 
@@ -25102,18 +24927,18 @@ module design_1_PmodWIFI_0_0_clk_x_pntrs
         .Q({\gnxpm_cdc.wr_pntr_gc_reg_n_0_[3] ,\gnxpm_cdc.wr_pntr_gc_reg_n_0_[2] ,\gnxpm_cdc.wr_pntr_gc_reg_n_0_[1] ,\gnxpm_cdc.wr_pntr_gc_reg_n_0_[0] }),
         .ext_spi_clk(ext_spi_clk),
         .\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] (\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ));
-  design_1_PmodWIFI_0_0_synchronizer_ff__parameterized1 \gnxpm_cdc.gsync_stage[1].wr_stg_inst 
+  design_1_PmodWIFI_0_0_synchronizer_ff__parameterized0_10 \gnxpm_cdc.gsync_stage[1].wr_stg_inst 
        (.AR(AR),
         .D(p_4_out),
         .Q({\gnxpm_cdc.rd_pntr_gc_reg_n_0_[3] ,\gnxpm_cdc.rd_pntr_gc_reg_n_0_[2] ,\gnxpm_cdc.rd_pntr_gc_reg_n_0_[1] ,\gnxpm_cdc.rd_pntr_gc_reg_n_0_[0] }),
         .s_axi_aclk(s_axi_aclk));
-  design_1_PmodWIFI_0_0_synchronizer_ff__parameterized2 \gnxpm_cdc.gsync_stage[2].rd_stg_inst 
+  design_1_PmodWIFI_0_0_synchronizer_ff__parameterized0_11 \gnxpm_cdc.gsync_stage[2].rd_stg_inst 
        (.D(\gnxpm_cdc.gsync_stage[2].rd_stg_inst_n_4 ),
         .\Q_reg_reg[3]_0 (p_3_out),
         .ext_spi_clk(ext_spi_clk),
         .\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] (\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ),
         .out(out));
-  design_1_PmodWIFI_0_0_synchronizer_ff__parameterized3 \gnxpm_cdc.gsync_stage[2].wr_stg_inst 
+  design_1_PmodWIFI_0_0_synchronizer_ff__parameterized0_12 \gnxpm_cdc.gsync_stage[2].wr_stg_inst 
        (.AR(AR),
         .D(\gnxpm_cdc.gsync_stage[2].wr_stg_inst_n_4 ),
         .\Q_reg_reg[3]_0 (p_4_out),
@@ -25221,14 +25046,14 @@ module design_1_PmodWIFI_0_0_clk_x_pntrs
        (.I0(\gic0.gc1.count_d3_reg[3] [0]),
         .I1(\gic0.gc1.count_d3_reg[3] [1]),
         .O(bin2gray[0]));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \gnxpm_cdc.wr_pntr_gc[1]_i_1 
        (.I0(\gic0.gc1.count_d3_reg[3] [1]),
         .I1(\gic0.gc1.count_d3_reg[3] [2]),
         .O(bin2gray[1]));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \gnxpm_cdc.wr_pntr_gc[2]_i_1 
@@ -25287,7 +25112,7 @@ module design_1_PmodWIFI_0_0_clk_x_pntrs
 endmodule
 
 (* ORIG_REF_NAME = "clk_x_pntrs" *) 
-module design_1_PmodWIFI_0_0_clk_x_pntrs_11
+module design_1_PmodWIFI_0_0_clk_x_pntrs_17
    (out,
     ram_empty_i_reg,
     ram_empty_i_reg_0,
@@ -25356,7 +25181,7 @@ module design_1_PmodWIFI_0_0_clk_x_pntrs_11
         .I1(out[1]),
         .I2(out[3]),
         .O(gray2bin[1]));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT4 #(
     .INIT(16'h6996)) 
     \_inferred__2/i_ 
@@ -25365,7 +25190,7 @@ module design_1_PmodWIFI_0_0_clk_x_pntrs_11
         .I2(p_6_out[3]),
         .I3(p_6_out[2]),
         .O(\_inferred__2/i__n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT3 #(
     .INIT(8'h96)) 
     \_inferred__3/i_ 
@@ -25373,23 +25198,23 @@ module design_1_PmodWIFI_0_0_clk_x_pntrs_11
         .I1(p_6_out[1]),
         .I2(p_6_out[3]),
         .O(\_inferred__3/i__n_0 ));
-  design_1_PmodWIFI_0_0_synchronizer_ff__parameterized0_26 \gnxpm_cdc.gsync_stage[1].rd_stg_inst 
+  design_1_PmodWIFI_0_0_synchronizer_ff__parameterized0_32 \gnxpm_cdc.gsync_stage[1].rd_stg_inst 
        (.D(p_3_out),
         .Q(wr_pntr_gc),
         .\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] (\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ),
         .s_axi_aclk(s_axi_aclk));
-  design_1_PmodWIFI_0_0_synchronizer_ff__parameterized1_27 \gnxpm_cdc.gsync_stage[1].wr_stg_inst 
+  design_1_PmodWIFI_0_0_synchronizer_ff__parameterized0_33 \gnxpm_cdc.gsync_stage[1].wr_stg_inst 
        (.AR(AR),
         .D(p_4_out),
         .Q(rd_pntr_gc),
         .ext_spi_clk(ext_spi_clk));
-  design_1_PmodWIFI_0_0_synchronizer_ff__parameterized2_28 \gnxpm_cdc.gsync_stage[2].rd_stg_inst 
+  design_1_PmodWIFI_0_0_synchronizer_ff__parameterized0_34 \gnxpm_cdc.gsync_stage[2].rd_stg_inst 
        (.D(gray2bin[2]),
         .\Q_reg_reg[3]_0 (p_3_out),
         .\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] (\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ),
         .out(out),
         .s_axi_aclk(s_axi_aclk));
-  design_1_PmodWIFI_0_0_synchronizer_ff__parameterized3_29 \gnxpm_cdc.gsync_stage[2].wr_stg_inst 
+  design_1_PmodWIFI_0_0_synchronizer_ff__parameterized0_35 \gnxpm_cdc.gsync_stage[2].wr_stg_inst 
        (.AR(AR),
         .D(\gnxpm_cdc.gsync_stage[2].wr_stg_inst_n_4 ),
         .\Q_reg_reg[3]_0 (p_4_out),
@@ -25491,14 +25316,14 @@ module design_1_PmodWIFI_0_0_clk_x_pntrs_11
         .CLR(\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ),
         .D(out[3]),
         .Q(p_22_out[3]));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \gnxpm_cdc.wr_pntr_gc[0]_i_1 
        (.I0(\gic0.gc1.count_d3_reg[3] [0]),
         .I1(\gic0.gc1.count_d3_reg[3] [1]),
         .O(bin2gray[0]));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \gnxpm_cdc.wr_pntr_gc[1]_i_1 
@@ -25596,7 +25421,6 @@ module design_1_PmodWIFI_0_0_clk_x_pntrs_11
         .O(ram_full_i_i_5__0_n_0));
 endmodule
 
-(* ORIG_REF_NAME = "dmem" *) 
 module design_1_PmodWIFI_0_0_dmem
    (Q,
     s_axi_aclk,
@@ -25738,7 +25562,7 @@ module design_1_PmodWIFI_0_0_dmem
 endmodule
 
 (* ORIG_REF_NAME = "dmem" *) 
-module design_1_PmodWIFI_0_0_dmem_20
+module design_1_PmodWIFI_0_0_dmem_26
    (\goreg_dm.dout_i_reg[7] ,
     ext_spi_clk,
     E,
@@ -25878,7 +25702,6 @@ module design_1_PmodWIFI_0_0_dmem_20
         .Q(\goreg_dm.dout_i_reg[7] [7]));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_ramfifo" *) 
 module design_1_PmodWIFI_0_0_fifo_generator_ramfifo
    (out,
     \gic0.gc1.count_reg[3] ,
@@ -25891,7 +25714,7 @@ module design_1_PmodWIFI_0_0_fifo_generator_ramfifo
     spisel_d1_reg__0,
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ,
     Bus_RNW_reg,
-    p_6_in,
+    \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ,
     spicr_9_lsb_to_spi_clk,
     s_axi_wdata);
   output out;
@@ -25905,11 +25728,12 @@ module design_1_PmodWIFI_0_0_fifo_generator_ramfifo
   input spisel_d1_reg__0;
   input \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ;
   input Bus_RNW_reg;
-  input p_6_in;
+  input \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ;
   input spicr_9_lsb_to_spi_clk;
   input [7:0]s_axi_wdata;
 
   wire Bus_RNW_reg;
+  wire \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ;
   wire IP2Bus_WrAck_transmit_enable__0;
   wire \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ;
   wire \OTHER_RATIO_GENERATE.Serial_Dout_reg ;
@@ -25930,7 +25754,6 @@ module design_1_PmodWIFI_0_0_fifo_generator_ramfifo
   wire [3:0]p_23_out;
   wire p_5_out;
   wire [3:0]p_5_out_0;
-  wire p_6_in;
   wire [2:0]rd_rst_i;
   wire reset_TxFIFO_ptr_int;
   wire rst_full_ff_i;
@@ -25977,6 +25800,7 @@ module design_1_PmodWIFI_0_0_fifo_generator_ramfifo
        (.AR(wr_rst_i[1]),
         .Bus_RNW_reg(Bus_RNW_reg),
         .E(p_18_out),
+        .\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ),
         .IP2Bus_WrAck_transmit_enable__0(IP2Bus_WrAck_transmit_enable__0),
         .\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg (\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ),
         .Q(p_12_out),
@@ -25984,7 +25808,6 @@ module design_1_PmodWIFI_0_0_fifo_generator_ramfifo
         .\grstd1.grst_full.grst_f.rst_d2_reg (rst_full_ff_i),
         .\grstd1.grst_full.grst_f.rst_d3_reg (rstblk_n_6),
         .out(\gic0.gc1.count_reg[3] ),
-        .p_6_in(p_6_in),
         .s_axi_aclk(s_axi_aclk));
   design_1_PmodWIFI_0_0_memory \gntv_or_sync_fifo.mem 
        (.AR(rd_rst_i[0]),
@@ -26010,7 +25833,7 @@ module design_1_PmodWIFI_0_0_fifo_generator_ramfifo
 endmodule
 
 (* ORIG_REF_NAME = "fifo_generator_ramfifo" *) 
-module design_1_PmodWIFI_0_0_fifo_generator_ramfifo_10
+module design_1_PmodWIFI_0_0_fifo_generator_ramfifo_16
    (out,
     \FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg ,
     ram_full_fb_i_reg,
@@ -26040,14 +25863,14 @@ module design_1_PmodWIFI_0_0_fifo_generator_ramfifo_10
     spicr_3_cpol_frm_axi_clk,
     p_1_in29_in,
     \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ,
-    p_7_in,
+    \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ,
     Bus_RNW_reg,
     \ip_irpt_enable_reg_reg[0] ,
     \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ,
-    p_5_in,
+    \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ,
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_reg ,
     \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ,
-    p_8_in,
+    \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ,
     spicr_7_ss_frm_axi_clk,
     spiXfer_done_int,
     scndry_out,
@@ -26082,14 +25905,14 @@ module design_1_PmodWIFI_0_0_fifo_generator_ramfifo_10
   input spicr_3_cpol_frm_axi_clk;
   input p_1_in29_in;
   input \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ;
-  input p_7_in;
+  input \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ;
   input Bus_RNW_reg;
   input [0:0]\ip_irpt_enable_reg_reg[0] ;
   input \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ;
-  input p_5_in;
+  input \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ;
   input \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_reg ;
   input \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ;
-  input p_8_in;
+  input \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ;
   input spicr_7_ss_frm_axi_clk;
   input spiXfer_done_int;
   input scndry_out;
@@ -26104,6 +25927,9 @@ module design_1_PmodWIFI_0_0_fifo_generator_ramfifo_10
   wire \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ;
   wire \FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg ;
   wire \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ;
+  wire \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ;
   wire \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ;
   wire IP2Bus_RdAck_receive_enable__1;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] ;
@@ -26136,11 +25962,8 @@ module design_1_PmodWIFI_0_0_fifo_generator_ramfifo_10
   wire p_1_in32_in;
   wire p_1_in35_in;
   wire [3:0]p_23_out;
-  wire p_5_in;
   wire p_5_out;
   wire [3:0]p_5_out_0;
-  wire p_7_in;
-  wire p_8_in;
   wire ram_full_fb_i_reg;
   wire ram_rd_en_i;
   wire [3:0]rd_pntr_plus1;
@@ -26158,7 +25981,7 @@ module design_1_PmodWIFI_0_0_fifo_generator_ramfifo_10
   wire [0:0]tx_fifo_count;
   wire [1:0]wr_rst_i;
 
-  design_1_PmodWIFI_0_0_clk_x_pntrs_11 \gntv_or_sync_fifo.gcx.clkx 
+  design_1_PmodWIFI_0_0_clk_x_pntrs_17 \gntv_or_sync_fifo.gcx.clkx 
        (.AR(wr_rst_i[0]),
         .D(gray2bin),
         .Q(p_0_out),
@@ -26182,7 +26005,7 @@ module design_1_PmodWIFI_0_0_fifo_generator_ramfifo_10
         .I2(p_5_out_0[3]),
         .I3(p_5_out_0[2]),
         .O(gray2bin));
-  design_1_PmodWIFI_0_0_rd_logic_12 \gntv_or_sync_fifo.gl0.rd 
+  design_1_PmodWIFI_0_0_rd_logic_18 \gntv_or_sync_fifo.gl0.rd 
        (.AR(rd_rst_i[2]),
         .Bus_RNW_reg(Bus_RNW_reg),
         .Bus_RNW_reg_reg(Bus_RNW_reg_reg),
@@ -26190,6 +26013,8 @@ module design_1_PmodWIFI_0_0_fifo_generator_ramfifo_10
         .E(ram_rd_en_i),
         .\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg (\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ),
         .\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] (\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ),
+        .\GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ),
         .\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] (\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ),
         .IP2Bus_RdAck_receive_enable__1(IP2Bus_RdAck_receive_enable__1),
         .\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_reg (\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_reg ),
@@ -26203,11 +26028,9 @@ module design_1_PmodWIFI_0_0_fifo_generator_ramfifo_10
         .\ip_irpt_enable_reg_reg[0] (\ip_irpt_enable_reg_reg[0] ),
         .irpt_rdack144_out(irpt_rdack144_out),
         .out(out),
-        .p_5_in(p_5_in),
-        .p_7_in(p_7_in),
         .s_axi_aclk(s_axi_aclk),
         .tx_fifo_count(tx_fifo_count));
-  design_1_PmodWIFI_0_0_wr_logic_13 \gntv_or_sync_fifo.gl0.wr 
+  design_1_PmodWIFI_0_0_wr_logic_19 \gntv_or_sync_fifo.gl0.wr 
        (.AR(wr_rst_i[1]),
         .E(E),
         .\FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg (\FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg ),
@@ -26222,11 +26045,13 @@ module design_1_PmodWIFI_0_0_fifo_generator_ramfifo_10
         .ram_full_fb_i_reg(ram_full_fb_i_reg),
         .scndry_out(scndry_out),
         .spiXfer_done_int(spiXfer_done_int));
-  design_1_PmodWIFI_0_0_memory_14 \gntv_or_sync_fifo.mem 
+  design_1_PmodWIFI_0_0_memory_20 \gntv_or_sync_fifo.mem 
        (.AR(rd_rst_i[0]),
         .Bus_RNW_reg(Bus_RNW_reg),
         .\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] (\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ),
         .E(E),
+        .\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ),
         .L(p_12_out),
         .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] ),
         .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[25] (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[25] ),
@@ -26246,14 +26071,12 @@ module design_1_PmodWIFI_0_0_fifo_generator_ramfifo_10
         .p_1_in29_in(p_1_in29_in),
         .p_1_in32_in(p_1_in32_in),
         .p_1_in35_in(p_1_in35_in),
-        .p_5_in(p_5_in),
-        .p_8_in(p_8_in),
         .s_axi_aclk(s_axi_aclk),
         .spicr_1_spe_frm_axi_clk(spicr_1_spe_frm_axi_clk),
         .spicr_2_mst_n_slv_frm_axi_clk(spicr_2_mst_n_slv_frm_axi_clk),
         .spicr_3_cpol_frm_axi_clk(spicr_3_cpol_frm_axi_clk),
         .spicr_7_ss_frm_axi_clk(spicr_7_ss_frm_axi_clk));
-  design_1_PmodWIFI_0_0_reset_blk_ramfifo_15 rstblk
+  design_1_PmodWIFI_0_0_reset_blk_ramfifo_21 rstblk
        (.ext_spi_clk(ext_spi_clk),
         .\gc1.count_reg[0] (rd_rst_i),
         .\grstd1.grst_full.grst_f.rst_d3_reg_0 (rst_full_ff_i),
@@ -26263,7 +26086,6 @@ module design_1_PmodWIFI_0_0_fifo_generator_ramfifo_10
         .s_axi_aclk(s_axi_aclk));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_top" *) 
 module design_1_PmodWIFI_0_0_fifo_generator_top
    (out,
     \gic0.gc1.count_reg[3] ,
@@ -26276,7 +26098,7 @@ module design_1_PmodWIFI_0_0_fifo_generator_top
     spisel_d1_reg__0,
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ,
     Bus_RNW_reg,
-    p_6_in,
+    \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ,
     spicr_9_lsb_to_spi_clk,
     s_axi_wdata);
   output out;
@@ -26290,11 +26112,12 @@ module design_1_PmodWIFI_0_0_fifo_generator_top
   input spisel_d1_reg__0;
   input \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ;
   input Bus_RNW_reg;
-  input p_6_in;
+  input \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ;
   input spicr_9_lsb_to_spi_clk;
   input [7:0]s_axi_wdata;
 
   wire Bus_RNW_reg;
+  wire \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ;
   wire IP2Bus_WrAck_transmit_enable__0;
   wire \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ;
   wire \OTHER_RATIO_GENERATE.Serial_Dout_reg ;
@@ -26302,7 +26125,6 @@ module design_1_PmodWIFI_0_0_fifo_generator_top
   wire ext_spi_clk;
   wire \gic0.gc1.count_reg[3] ;
   wire out;
-  wire p_6_in;
   wire reset_TxFIFO_ptr_int;
   wire s_axi_aclk;
   wire [7:0]s_axi_wdata;
@@ -26311,6 +26133,7 @@ module design_1_PmodWIFI_0_0_fifo_generator_top
 
   design_1_PmodWIFI_0_0_fifo_generator_ramfifo \grf.rf 
        (.Bus_RNW_reg(Bus_RNW_reg),
+        .\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ),
         .IP2Bus_WrAck_transmit_enable__0(IP2Bus_WrAck_transmit_enable__0),
         .\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg (\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ),
         .\OTHER_RATIO_GENERATE.Serial_Dout_reg (\OTHER_RATIO_GENERATE.Serial_Dout_reg ),
@@ -26318,7 +26141,6 @@ module design_1_PmodWIFI_0_0_fifo_generator_top
         .ext_spi_clk(ext_spi_clk),
         .\gic0.gc1.count_reg[3] (\gic0.gc1.count_reg[3] ),
         .out(out),
-        .p_6_in(p_6_in),
         .reset_TxFIFO_ptr_int(reset_TxFIFO_ptr_int),
         .s_axi_aclk(s_axi_aclk),
         .s_axi_wdata(s_axi_wdata),
@@ -26327,7 +26149,7 @@ module design_1_PmodWIFI_0_0_fifo_generator_top
 endmodule
 
 (* ORIG_REF_NAME = "fifo_generator_top" *) 
-module design_1_PmodWIFI_0_0_fifo_generator_top_9
+module design_1_PmodWIFI_0_0_fifo_generator_top_15
    (out,
     \FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg ,
     ram_full_fb_i_reg,
@@ -26357,14 +26179,14 @@ module design_1_PmodWIFI_0_0_fifo_generator_top_9
     spicr_3_cpol_frm_axi_clk,
     p_1_in29_in,
     \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ,
-    p_7_in,
+    \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ,
     Bus_RNW_reg,
     \ip_irpt_enable_reg_reg[0] ,
     \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ,
-    p_5_in,
+    \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ,
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_reg ,
     \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ,
-    p_8_in,
+    \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ,
     spicr_7_ss_frm_axi_clk,
     spiXfer_done_int,
     scndry_out,
@@ -26399,14 +26221,14 @@ module design_1_PmodWIFI_0_0_fifo_generator_top_9
   input spicr_3_cpol_frm_axi_clk;
   input p_1_in29_in;
   input \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ;
-  input p_7_in;
+  input \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ;
   input Bus_RNW_reg;
   input [0:0]\ip_irpt_enable_reg_reg[0] ;
   input \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ;
-  input p_5_in;
+  input \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ;
   input \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_reg ;
   input \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ;
-  input p_8_in;
+  input \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ;
   input spicr_7_ss_frm_axi_clk;
   input spiXfer_done_int;
   input scndry_out;
@@ -26421,6 +26243,9 @@ module design_1_PmodWIFI_0_0_fifo_generator_top_9
   wire \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ;
   wire \FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg ;
   wire \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ;
+  wire \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ;
   wire \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ;
   wire IP2Bus_RdAck_receive_enable__1;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] ;
@@ -26442,9 +26267,6 @@ module design_1_PmodWIFI_0_0_fifo_generator_top_9
   wire p_1_in29_in;
   wire p_1_in32_in;
   wire p_1_in35_in;
-  wire p_5_in;
-  wire p_7_in;
-  wire p_8_in;
   wire ram_full_fb_i_reg;
   wire rx_fifo_reset;
   wire s_axi_aclk;
@@ -26456,7 +26278,7 @@ module design_1_PmodWIFI_0_0_fifo_generator_top_9
   wire spicr_7_ss_frm_axi_clk;
   wire [0:0]tx_fifo_count;
 
-  design_1_PmodWIFI_0_0_fifo_generator_ramfifo_10 \grf.rf 
+  design_1_PmodWIFI_0_0_fifo_generator_ramfifo_16 \grf.rf 
        (.Bus_RNW_reg(Bus_RNW_reg),
         .Bus_RNW_reg_reg(Bus_RNW_reg_reg),
         .\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] (\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ),
@@ -26465,6 +26287,9 @@ module design_1_PmodWIFI_0_0_fifo_generator_top_9
         .\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg (\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ),
         .\FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg (\FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg ),
         .\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] (\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ),
+        .\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ),
         .\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] (\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ),
         .IP2Bus_RdAck_receive_enable__1(IP2Bus_RdAck_receive_enable__1),
         .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] ),
@@ -26486,9 +26311,6 @@ module design_1_PmodWIFI_0_0_fifo_generator_top_9
         .p_1_in29_in(p_1_in29_in),
         .p_1_in32_in(p_1_in32_in),
         .p_1_in35_in(p_1_in35_in),
-        .p_5_in(p_5_in),
-        .p_7_in(p_7_in),
-        .p_8_in(p_8_in),
         .ram_full_fb_i_reg(ram_full_fb_i_reg),
         .rx_fifo_reset(rx_fifo_reset),
         .s_axi_aclk(s_axi_aclk),
@@ -26501,8 +26323,7 @@ module design_1_PmodWIFI_0_0_fifo_generator_top_9
         .tx_fifo_count(tx_fifo_count));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_v13_1_2" *) 
-module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2
+module design_1_PmodWIFI_0_0_fifo_generator_v13_1_4
    (out,
     \gic0.gc1.count_reg[3] ,
     IP2Bus_WrAck_transmit_enable__0,
@@ -26514,7 +26335,7 @@ module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2
     spisel_d1_reg__0,
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ,
     Bus_RNW_reg,
-    p_6_in,
+    \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ,
     spicr_9_lsb_to_spi_clk,
     s_axi_wdata);
   output out;
@@ -26528,11 +26349,12 @@ module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2
   input spisel_d1_reg__0;
   input \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ;
   input Bus_RNW_reg;
-  input p_6_in;
+  input \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ;
   input spicr_9_lsb_to_spi_clk;
   input [7:0]s_axi_wdata;
 
   wire Bus_RNW_reg;
+  wire \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ;
   wire IP2Bus_WrAck_transmit_enable__0;
   wire \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ;
   wire \OTHER_RATIO_GENERATE.Serial_Dout_reg ;
@@ -26540,15 +26362,15 @@ module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2
   wire ext_spi_clk;
   wire \gic0.gc1.count_reg[3] ;
   wire out;
-  wire p_6_in;
   wire reset_TxFIFO_ptr_int;
   wire s_axi_aclk;
   wire [7:0]s_axi_wdata;
   wire spicr_9_lsb_to_spi_clk;
   wire spisel_d1_reg__0;
 
-  design_1_PmodWIFI_0_0_fifo_generator_v13_1_2_synth inst_fifo_gen
+  design_1_PmodWIFI_0_0_fifo_generator_v13_1_4_synth inst_fifo_gen
        (.Bus_RNW_reg(Bus_RNW_reg),
+        .\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ),
         .IP2Bus_WrAck_transmit_enable__0(IP2Bus_WrAck_transmit_enable__0),
         .\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg (\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ),
         .\OTHER_RATIO_GENERATE.Serial_Dout_reg (\OTHER_RATIO_GENERATE.Serial_Dout_reg ),
@@ -26556,7 +26378,6 @@ module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2
         .ext_spi_clk(ext_spi_clk),
         .\gic0.gc1.count_reg[3] (\gic0.gc1.count_reg[3] ),
         .out(out),
-        .p_6_in(p_6_in),
         .reset_TxFIFO_ptr_int(reset_TxFIFO_ptr_int),
         .s_axi_aclk(s_axi_aclk),
         .s_axi_wdata(s_axi_wdata),
@@ -26564,8 +26385,8 @@ module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2
         .spisel_d1_reg__0(spisel_d1_reg__0));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_v13_1_2" *) 
-module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2_7
+(* ORIG_REF_NAME = "fifo_generator_v13_1_4" *) 
+module design_1_PmodWIFI_0_0_fifo_generator_v13_1_4_13
    (out,
     \FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg ,
     ram_full_fb_i_reg,
@@ -26595,14 +26416,14 @@ module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2_7
     spicr_3_cpol_frm_axi_clk,
     p_1_in29_in,
     \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ,
-    p_7_in,
+    \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ,
     Bus_RNW_reg,
     \ip_irpt_enable_reg_reg[0] ,
     \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ,
-    p_5_in,
+    \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ,
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_reg ,
     \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ,
-    p_8_in,
+    \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ,
     spicr_7_ss_frm_axi_clk,
     spiXfer_done_int,
     scndry_out,
@@ -26637,14 +26458,14 @@ module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2_7
   input spicr_3_cpol_frm_axi_clk;
   input p_1_in29_in;
   input \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ;
-  input p_7_in;
+  input \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ;
   input Bus_RNW_reg;
   input [0:0]\ip_irpt_enable_reg_reg[0] ;
   input \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ;
-  input p_5_in;
+  input \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ;
   input \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_reg ;
   input \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ;
-  input p_8_in;
+  input \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ;
   input spicr_7_ss_frm_axi_clk;
   input spiXfer_done_int;
   input scndry_out;
@@ -26659,6 +26480,9 @@ module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2_7
   wire \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ;
   wire \FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg ;
   wire \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ;
+  wire \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ;
   wire \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ;
   wire IP2Bus_RdAck_receive_enable__1;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] ;
@@ -26680,9 +26504,6 @@ module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2_7
   wire p_1_in29_in;
   wire p_1_in32_in;
   wire p_1_in35_in;
-  wire p_5_in;
-  wire p_7_in;
-  wire p_8_in;
   wire ram_full_fb_i_reg;
   wire rx_fifo_reset;
   wire s_axi_aclk;
@@ -26694,7 +26515,7 @@ module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2_7
   wire spicr_7_ss_frm_axi_clk;
   wire [0:0]tx_fifo_count;
 
-  design_1_PmodWIFI_0_0_fifo_generator_v13_1_2_synth_8 inst_fifo_gen
+  design_1_PmodWIFI_0_0_fifo_generator_v13_1_4_synth_14 inst_fifo_gen
        (.Bus_RNW_reg(Bus_RNW_reg),
         .Bus_RNW_reg_reg(Bus_RNW_reg_reg),
         .\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] (\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ),
@@ -26703,6 +26524,9 @@ module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2_7
         .\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg (\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ),
         .\FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg (\FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg ),
         .\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] (\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ),
+        .\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ),
         .\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] (\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ),
         .IP2Bus_RdAck_receive_enable__1(IP2Bus_RdAck_receive_enable__1),
         .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] ),
@@ -26724,9 +26548,6 @@ module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2_7
         .p_1_in29_in(p_1_in29_in),
         .p_1_in32_in(p_1_in32_in),
         .p_1_in35_in(p_1_in35_in),
-        .p_5_in(p_5_in),
-        .p_7_in(p_7_in),
-        .p_8_in(p_8_in),
         .ram_full_fb_i_reg(ram_full_fb_i_reg),
         .rx_fifo_reset(rx_fifo_reset),
         .s_axi_aclk(s_axi_aclk),
@@ -26739,8 +26560,7 @@ module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2_7
         .tx_fifo_count(tx_fifo_count));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_v13_1_2_synth" *) 
-module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2_synth
+module design_1_PmodWIFI_0_0_fifo_generator_v13_1_4_synth
    (out,
     \gic0.gc1.count_reg[3] ,
     IP2Bus_WrAck_transmit_enable__0,
@@ -26752,7 +26572,7 @@ module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2_synth
     spisel_d1_reg__0,
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ,
     Bus_RNW_reg,
-    p_6_in,
+    \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ,
     spicr_9_lsb_to_spi_clk,
     s_axi_wdata);
   output out;
@@ -26766,11 +26586,12 @@ module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2_synth
   input spisel_d1_reg__0;
   input \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ;
   input Bus_RNW_reg;
-  input p_6_in;
+  input \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ;
   input spicr_9_lsb_to_spi_clk;
   input [7:0]s_axi_wdata;
 
   wire Bus_RNW_reg;
+  wire \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ;
   wire IP2Bus_WrAck_transmit_enable__0;
   wire \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ;
   wire \OTHER_RATIO_GENERATE.Serial_Dout_reg ;
@@ -26778,7 +26599,6 @@ module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2_synth
   wire ext_spi_clk;
   wire \gic0.gc1.count_reg[3] ;
   wire out;
-  wire p_6_in;
   wire reset_TxFIFO_ptr_int;
   wire s_axi_aclk;
   wire [7:0]s_axi_wdata;
@@ -26787,6 +26607,7 @@ module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2_synth
 
   design_1_PmodWIFI_0_0_fifo_generator_top \gconvfifo.rf 
        (.Bus_RNW_reg(Bus_RNW_reg),
+        .\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ),
         .IP2Bus_WrAck_transmit_enable__0(IP2Bus_WrAck_transmit_enable__0),
         .\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg (\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ),
         .\OTHER_RATIO_GENERATE.Serial_Dout_reg (\OTHER_RATIO_GENERATE.Serial_Dout_reg ),
@@ -26794,7 +26615,6 @@ module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2_synth
         .ext_spi_clk(ext_spi_clk),
         .\gic0.gc1.count_reg[3] (\gic0.gc1.count_reg[3] ),
         .out(out),
-        .p_6_in(p_6_in),
         .reset_TxFIFO_ptr_int(reset_TxFIFO_ptr_int),
         .s_axi_aclk(s_axi_aclk),
         .s_axi_wdata(s_axi_wdata),
@@ -26802,8 +26622,8 @@ module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2_synth
         .spisel_d1_reg__0(spisel_d1_reg__0));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_v13_1_2_synth" *) 
-module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2_synth_8
+(* ORIG_REF_NAME = "fifo_generator_v13_1_4_synth" *) 
+module design_1_PmodWIFI_0_0_fifo_generator_v13_1_4_synth_14
    (out,
     \FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg ,
     ram_full_fb_i_reg,
@@ -26833,14 +26653,14 @@ module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2_synth_8
     spicr_3_cpol_frm_axi_clk,
     p_1_in29_in,
     \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ,
-    p_7_in,
+    \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ,
     Bus_RNW_reg,
     \ip_irpt_enable_reg_reg[0] ,
     \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ,
-    p_5_in,
+    \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ,
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_reg ,
     \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ,
-    p_8_in,
+    \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ,
     spicr_7_ss_frm_axi_clk,
     spiXfer_done_int,
     scndry_out,
@@ -26875,14 +26695,14 @@ module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2_synth_8
   input spicr_3_cpol_frm_axi_clk;
   input p_1_in29_in;
   input \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ;
-  input p_7_in;
+  input \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ;
   input Bus_RNW_reg;
   input [0:0]\ip_irpt_enable_reg_reg[0] ;
   input \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ;
-  input p_5_in;
+  input \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ;
   input \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_reg ;
   input \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ;
-  input p_8_in;
+  input \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ;
   input spicr_7_ss_frm_axi_clk;
   input spiXfer_done_int;
   input scndry_out;
@@ -26897,6 +26717,9 @@ module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2_synth_8
   wire \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ;
   wire \FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg ;
   wire \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ;
+  wire \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ;
   wire \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ;
   wire IP2Bus_RdAck_receive_enable__1;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] ;
@@ -26918,9 +26741,6 @@ module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2_synth_8
   wire p_1_in29_in;
   wire p_1_in32_in;
   wire p_1_in35_in;
-  wire p_5_in;
-  wire p_7_in;
-  wire p_8_in;
   wire ram_full_fb_i_reg;
   wire rx_fifo_reset;
   wire s_axi_aclk;
@@ -26932,7 +26752,7 @@ module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2_synth_8
   wire spicr_7_ss_frm_axi_clk;
   wire [0:0]tx_fifo_count;
 
-  design_1_PmodWIFI_0_0_fifo_generator_top_9 \gconvfifo.rf 
+  design_1_PmodWIFI_0_0_fifo_generator_top_15 \gconvfifo.rf 
        (.Bus_RNW_reg(Bus_RNW_reg),
         .Bus_RNW_reg_reg(Bus_RNW_reg_reg),
         .\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] (\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ),
@@ -26941,6 +26761,9 @@ module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2_synth_8
         .\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg (\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ),
         .\FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg (\FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg ),
         .\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] (\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ),
+        .\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ),
         .\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] (\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ),
         .IP2Bus_RdAck_receive_enable__1(IP2Bus_RdAck_receive_enable__1),
         .\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] ),
@@ -26962,9 +26785,6 @@ module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2_synth_8
         .p_1_in29_in(p_1_in29_in),
         .p_1_in32_in(p_1_in32_in),
         .p_1_in35_in(p_1_in35_in),
-        .p_5_in(p_5_in),
-        .p_7_in(p_7_in),
-        .p_8_in(p_8_in),
         .ram_full_fb_i_reg(ram_full_fb_i_reg),
         .rx_fifo_reset(rx_fifo_reset),
         .s_axi_aclk(s_axi_aclk),
@@ -26977,7 +26797,6 @@ module design_1_PmodWIFI_0_0_fifo_generator_v13_1_2_synth_8
         .tx_fifo_count(tx_fifo_count));
 endmodule
 
-(* ORIG_REF_NAME = "memory" *) 
 module design_1_PmodWIFI_0_0_memory
    (\OTHER_RATIO_GENERATE.Serial_Dout_reg ,
     Q,
@@ -27027,7 +26846,7 @@ module design_1_PmodWIFI_0_0_memory
 
   LUT3 #(
     .INIT(8'hB8)) 
-    \OTHER_RATIO_GENERATE.Serial_Dout_i_5 
+    \OTHER_RATIO_GENERATE.Serial_Dout_i_3 
        (.I0(Q[0]),
         .I1(spicr_9_lsb_to_spi_clk),
         .I2(Q[7]),
@@ -27109,7 +26928,7 @@ module design_1_PmodWIFI_0_0_memory
 endmodule
 
 (* ORIG_REF_NAME = "memory" *) 
-module design_1_PmodWIFI_0_0_memory_14
+module design_1_PmodWIFI_0_0_memory_20
    (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30] ,
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29] ,
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[28] ,
@@ -27126,9 +26945,9 @@ module design_1_PmodWIFI_0_0_memory_14
     spicr_3_cpol_frm_axi_clk,
     p_1_in29_in,
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_reg ,
-    p_5_in,
+    \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ,
     \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ,
-    p_8_in,
+    \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ,
     Bus_RNW_reg,
     spicr_7_ss_frm_axi_clk,
     ext_spi_clk,
@@ -27156,9 +26975,9 @@ module design_1_PmodWIFI_0_0_memory_14
   input spicr_3_cpol_frm_axi_clk;
   input p_1_in29_in;
   input \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_reg ;
-  input p_5_in;
+  input \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ;
   input \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ;
-  input p_8_in;
+  input \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ;
   input Bus_RNW_reg;
   input spicr_7_ss_frm_axi_clk;
   input ext_spi_clk;
@@ -27175,6 +26994,8 @@ module design_1_PmodWIFI_0_0_memory_14
   wire Bus_RNW_reg;
   wire \CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ;
   wire [0:0]E;
+  wire \GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ;
   wire [3:0]L;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] ;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[25] ;
@@ -27203,8 +27024,6 @@ module design_1_PmodWIFI_0_0_memory_14
   wire p_1_in29_in;
   wire p_1_in32_in;
   wire p_1_in35_in;
-  wire p_5_in;
-  wire p_8_in;
   wire s_axi_aclk;
   wire spicr_1_spe_frm_axi_clk;
   wire spicr_2_mst_n_slv_frm_axi_clk;
@@ -27215,9 +27034,9 @@ module design_1_PmodWIFI_0_0_memory_14
     .INIT(64'hFF80000080800000)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[24]_i_2 
        (.I0(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_reg ),
-        .I1(p_5_in),
+        .I1(\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ),
         .I2(data_from_rx_fifo[0]),
-        .I3(p_8_in),
+        .I3(\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ),
         .I4(Bus_RNW_reg),
         .I5(spicr_7_ss_frm_axi_clk),
         .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] ));
@@ -27225,10 +27044,10 @@ module design_1_PmodWIFI_0_0_memory_14
     .INIT(64'hFF80808000000000)) 
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[25]_i_2 
        (.I0(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_reg ),
-        .I1(p_5_in),
+        .I1(\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ),
         .I2(data_from_rx_fifo[1]),
         .I3(\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ),
-        .I4(p_8_in),
+        .I4(\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg ),
         .I5(Bus_RNW_reg),
         .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[25] ));
   LUT6 #(
@@ -27261,7 +27080,7 @@ module design_1_PmodWIFI_0_0_memory_14
         .I4(p_1_in35_in),
         .I5(irpt_rdack144_out),
         .O(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[30] ));
-  design_1_PmodWIFI_0_0_dmem_20 \gdm.dm_gen.dm 
+  design_1_PmodWIFI_0_0_dmem_26 \gdm.dm_gen.dm 
        (.AR(AR),
         .E(E),
         .L(L),
@@ -27337,7 +27156,6 @@ module design_1_PmodWIFI_0_0_memory_14
         .Q(data_from_rx_fifo[0]));
 endmodule
 
-(* ORIG_REF_NAME = "rd_bin_cntr" *) 
 module design_1_PmodWIFI_0_0_rd_bin_cntr
    (D,
     Q,
@@ -27377,7 +27195,7 @@ module design_1_PmodWIFI_0_0_rd_bin_cntr
        (.I0(rd_pntr_plus2[0]),
         .I1(rd_pntr_plus2[1]),
         .O(plusOp__3[1]));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \gc1.count[2]_i_1__0 
@@ -27385,7 +27203,7 @@ module design_1_PmodWIFI_0_0_rd_bin_cntr
         .I1(rd_pntr_plus2[1]),
         .I2(rd_pntr_plus2[0]),
         .O(plusOp__3[2]));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT4 #(
     .INIT(16'h6AAA)) 
     \gc1.count[3]_i_1__0 
@@ -27490,14 +27308,14 @@ module design_1_PmodWIFI_0_0_rd_bin_cntr
         .CLR(AR),
         .D(plusOp__3[3]),
         .Q(rd_pntr_plus2[3]));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \gnxpm_cdc.rd_pntr_gc[0]_i_1__0 
        (.I0(Q[1]),
         .I1(Q[0]),
         .O(D[0]));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \gnxpm_cdc.rd_pntr_gc[1]_i_1__0 
@@ -27530,7 +27348,7 @@ module design_1_PmodWIFI_0_0_rd_bin_cntr
 endmodule
 
 (* ORIG_REF_NAME = "rd_bin_cntr" *) 
-module design_1_PmodWIFI_0_0_rd_bin_cntr_25
+module design_1_PmodWIFI_0_0_rd_bin_cntr_31
    (\gnxpm_cdc.rd_pntr_gc_reg[2] ,
     Q,
     \gc1.count_d2_reg[3]_0 ,
@@ -27564,7 +27382,7 @@ module design_1_PmodWIFI_0_0_rd_bin_cntr_25
        (.I0(rd_pntr_plus2[0]),
         .I1(rd_pntr_plus2[1]),
         .O(plusOp__0[1]));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \gc1.count[2]_i_1 
@@ -27572,7 +27390,7 @@ module design_1_PmodWIFI_0_0_rd_bin_cntr_25
         .I1(rd_pntr_plus2[1]),
         .I2(rd_pntr_plus2[2]),
         .O(plusOp__0[2]));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \gc1.count[3]_i_1 
@@ -27677,14 +27495,14 @@ module design_1_PmodWIFI_0_0_rd_bin_cntr_25
         .CLR(AR),
         .D(plusOp__0[3]),
         .Q(rd_pntr_plus2[3]));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \gnxpm_cdc.rd_pntr_gc[0]_i_1 
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\gnxpm_cdc.rd_pntr_gc_reg[2] [0]));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \gnxpm_cdc.rd_pntr_gc[1]_i_1 
@@ -27699,7 +27517,6 @@ module design_1_PmodWIFI_0_0_rd_bin_cntr_25
         .O(\gnxpm_cdc.rd_pntr_gc_reg[2] [2]));
 endmodule
 
-(* ORIG_REF_NAME = "rd_fwft" *) 
 module design_1_PmodWIFI_0_0_rd_fwft
    (out,
     E,
@@ -27901,7 +27718,7 @@ module design_1_PmodWIFI_0_0_rd_fwft
 endmodule
 
 (* ORIG_REF_NAME = "rd_fwft" *) 
-module design_1_PmodWIFI_0_0_rd_fwft_23
+module design_1_PmodWIFI_0_0_rd_fwft_29
    (out,
     ram_empty_i0,
     E,
@@ -27920,11 +27737,11 @@ module design_1_PmodWIFI_0_0_rd_fwft_23
     Bus_RNW_reg_reg,
     \goreg_dm.dout_i_reg[0] ,
     \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ,
-    p_7_in,
+    \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ,
     Bus_RNW_reg,
     \ip_irpt_enable_reg_reg[0] ,
     \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ,
-    p_5_in,
+    \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ,
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_reg );
   output out;
   output ram_empty_i0;
@@ -27944,11 +27761,11 @@ module design_1_PmodWIFI_0_0_rd_fwft_23
   input Bus_RNW_reg_reg;
   input \goreg_dm.dout_i_reg[0] ;
   input \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ;
-  input p_7_in;
+  input \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ;
   input Bus_RNW_reg;
   input [0:0]\ip_irpt_enable_reg_reg[0] ;
   input \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ;
-  input p_5_in;
+  input \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ;
   input \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_reg ;
 
   wire [0:0]AR;
@@ -27958,6 +27775,8 @@ module design_1_PmodWIFI_0_0_rd_fwft_23
   wire [0:0]E;
   wire \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ;
   wire \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ;
+  wire \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ;
   wire \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ;
   wire IP2Bus_RdAck_receive_enable__1;
   wire \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_2_n_0 ;
@@ -27979,8 +27798,6 @@ module design_1_PmodWIFI_0_0_rd_fwft_23
   wire [0:0]\ip_irpt_enable_reg_reg[0] ;
   wire irpt_rdack144_out;
   wire [1:0]next_fwft_state;
-  wire p_5_in;
-  wire p_7_in;
   wire ram_empty_fb_i_reg;
   wire ram_empty_i0;
   wire s_axi_aclk;
@@ -28003,7 +27820,7 @@ module design_1_PmodWIFI_0_0_rd_fwft_23
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data[31]_i_2 
        (.I0(empty_fwft_i),
         .I1(\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ),
-        .I2(p_7_in),
+        .I2(\GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ),
         .I3(Bus_RNW_reg),
         .I4(\ip_irpt_enable_reg_reg[0] ),
         .I5(\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ),
@@ -28101,7 +27918,7 @@ module design_1_PmodWIFI_0_0_rd_fwft_23
     \goreg_dm.dout_i[7]_i_1 
        (.I0(curr_fwft_state[0]),
         .I1(Bus_RNW_reg),
-        .I2(p_5_in),
+        .I2(\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ),
         .I3(empty_fwft_i),
         .I4(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_reg ),
         .I5(curr_fwft_state[1]),
@@ -28120,7 +27937,7 @@ module design_1_PmodWIFI_0_0_rd_fwft_23
        (.I0(curr_fwft_state[1]),
         .I1(curr_fwft_state[0]),
         .I2(Bus_RNW_reg),
-        .I3(p_5_in),
+        .I3(\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ),
         .I4(empty_fwft_i),
         .I5(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_reg ),
         .O(next_fwft_state[0]));
@@ -28177,7 +27994,6 @@ module design_1_PmodWIFI_0_0_rd_fwft_23
         .O(ram_empty_i0));
 endmodule
 
-(* ORIG_REF_NAME = "rd_logic" *) 
 module design_1_PmodWIFI_0_0_rd_logic
    (out,
     E,
@@ -28241,7 +28057,7 @@ module design_1_PmodWIFI_0_0_rd_logic
 endmodule
 
 (* ORIG_REF_NAME = "rd_logic" *) 
-module design_1_PmodWIFI_0_0_rd_logic_12
+module design_1_PmodWIFI_0_0_rd_logic_18
    (out,
     E,
     D,
@@ -28260,11 +28076,11 @@ module design_1_PmodWIFI_0_0_rd_logic_12
     Bus_RNW_reg_reg,
     \goreg_dm.dout_i_reg[0] ,
     \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ,
-    p_7_in,
+    \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ,
     Bus_RNW_reg,
     \ip_irpt_enable_reg_reg[0] ,
     \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ,
-    p_5_in,
+    \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ,
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_reg );
   output out;
   output [0:0]E;
@@ -28284,11 +28100,11 @@ module design_1_PmodWIFI_0_0_rd_logic_12
   input Bus_RNW_reg_reg;
   input \goreg_dm.dout_i_reg[0] ;
   input \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ;
-  input p_7_in;
+  input \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ;
   input Bus_RNW_reg;
   input [0:0]\ip_irpt_enable_reg_reg[0] ;
   input \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ;
-  input p_5_in;
+  input \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ;
   input \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_reg ;
 
   wire [0:0]AR;
@@ -28298,6 +28114,8 @@ module design_1_PmodWIFI_0_0_rd_logic_12
   wire [0:0]E;
   wire \FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ;
   wire \GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ;
+  wire \GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ;
+  wire \GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ;
   wire \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ;
   wire IP2Bus_RdAck_receive_enable__1;
   wire \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_reg ;
@@ -28312,14 +28130,12 @@ module design_1_PmodWIFI_0_0_rd_logic_12
   wire irpt_rdack144_out;
   wire out;
   wire p_2_out;
-  wire p_5_in;
-  wire p_7_in;
   wire p_7_out;
   wire ram_empty_i0;
   wire s_axi_aclk;
   wire [0:0]tx_fifo_count;
 
-  design_1_PmodWIFI_0_0_rd_fwft_23 \gr1.gr1_int.rfwft 
+  design_1_PmodWIFI_0_0_rd_fwft_29 \gr1.gr1_int.rfwft 
        (.AR(AR),
         .Bus_RNW_reg(Bus_RNW_reg),
         .Bus_RNW_reg_reg(Bus_RNW_reg_reg),
@@ -28327,6 +28143,8 @@ module design_1_PmodWIFI_0_0_rd_logic_12
         .E(E),
         .\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg (\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ),
         .\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] (\GEN_BKEND_CE_REGISTERS[10].ce_out_i_reg[10] ),
+        .\GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[25].ce_out_i_reg ),
+        .\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg ),
         .\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] (\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0] ),
         .IP2Bus_RdAck_receive_enable__1(IP2Bus_RdAck_receive_enable__1),
         .\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_reg (\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_reg ),
@@ -28338,18 +28156,16 @@ module design_1_PmodWIFI_0_0_rd_logic_12
         .\ip_irpt_enable_reg_reg[0] (\ip_irpt_enable_reg_reg[0] ),
         .irpt_rdack144_out(irpt_rdack144_out),
         .out(out),
-        .p_5_in(p_5_in),
-        .p_7_in(p_7_in),
         .ram_empty_fb_i_reg(p_2_out),
         .ram_empty_i0(ram_empty_i0),
         .s_axi_aclk(s_axi_aclk),
         .tx_fifo_count(tx_fifo_count));
-  design_1_PmodWIFI_0_0_rd_status_flags_as_24 \gras.rsts 
+  design_1_PmodWIFI_0_0_rd_status_flags_as_30 \gras.rsts 
        (.AR(AR),
         .out(p_2_out),
         .ram_empty_i0(ram_empty_i0),
         .s_axi_aclk(s_axi_aclk));
-  design_1_PmodWIFI_0_0_rd_bin_cntr_25 rpntr
+  design_1_PmodWIFI_0_0_rd_bin_cntr_31 rpntr
        (.AR(AR),
         .E(p_7_out),
         .Q(Q),
@@ -28358,7 +28174,6 @@ module design_1_PmodWIFI_0_0_rd_logic_12
         .s_axi_aclk(s_axi_aclk));
 endmodule
 
-(* ORIG_REF_NAME = "rd_status_flags_as" *) 
 module design_1_PmodWIFI_0_0_rd_status_flags_as
    (out,
     ram_empty_i0,
@@ -28401,7 +28216,7 @@ module design_1_PmodWIFI_0_0_rd_status_flags_as
 endmodule
 
 (* ORIG_REF_NAME = "rd_status_flags_as" *) 
-module design_1_PmodWIFI_0_0_rd_status_flags_as_24
+module design_1_PmodWIFI_0_0_rd_status_flags_as_30
    (out,
     ram_empty_i0,
     s_axi_aclk,
@@ -28442,7 +28257,6 @@ module design_1_PmodWIFI_0_0_rd_status_flags_as_24
         .Q(ram_empty_i));
 endmodule
 
-(* ORIG_REF_NAME = "reset_blk_ramfifo" *) 
 module design_1_PmodWIFI_0_0_reset_blk_ramfifo
    (out,
     \gc1.count_reg[0] ,
@@ -28522,17 +28336,17 @@ module design_1_PmodWIFI_0_0_reset_blk_ramfifo
         .in0(rd_rst_asreg),
         .\ngwrdrst.grst.g7serrst.rd_rst_asreg_reg (\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].rrst_inst_n_1 ),
         .out(p_7_out));
-  design_1_PmodWIFI_0_0_synchronizer_ff_4 \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst 
+  design_1_PmodWIFI_0_0_synchronizer_ff_7 \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst 
        (.in0(wr_rst_asreg),
         .\ngwrdrst.grst.g7serrst.wr_rst_asreg_reg (\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst_n_1 ),
         .out(p_8_out),
         .s_axi_aclk(s_axi_aclk));
-  design_1_PmodWIFI_0_0_synchronizer_ff_5 \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst 
+  design_1_PmodWIFI_0_0_synchronizer_ff_8 \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst 
        (.AS(\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst_n_0 ),
         .ext_spi_clk(ext_spi_clk),
         .in0(rd_rst_asreg),
         .out(p_7_out));
-  design_1_PmodWIFI_0_0_synchronizer_ff_6 \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst 
+  design_1_PmodWIFI_0_0_synchronizer_ff_9 \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst 
        (.AS(\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst_n_0 ),
         .in0(wr_rst_asreg),
         .out(p_8_out),
@@ -28666,7 +28480,7 @@ module design_1_PmodWIFI_0_0_reset_blk_ramfifo
 endmodule
 
 (* ORIG_REF_NAME = "reset_blk_ramfifo" *) 
-module design_1_PmodWIFI_0_0_reset_blk_ramfifo_15
+module design_1_PmodWIFI_0_0_reset_blk_ramfifo_21
    (out,
     \gc1.count_reg[0] ,
     \grstd1.grst_full.grst_f.rst_d3_reg_0 ,
@@ -28740,22 +28554,22 @@ module design_1_PmodWIFI_0_0_reset_blk_ramfifo_15
         .D(rst_d2),
         .PRE(rst_wr_reg2),
         .Q(rst_d3));
-  design_1_PmodWIFI_0_0_synchronizer_ff_16 \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].rrst_inst 
+  design_1_PmodWIFI_0_0_synchronizer_ff_22 \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].rrst_inst 
        (.in0(rd_rst_asreg),
         .\ngwrdrst.grst.g7serrst.rd_rst_asreg_reg (\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].rrst_inst_n_1 ),
         .out(p_7_out),
         .s_axi_aclk(s_axi_aclk));
-  design_1_PmodWIFI_0_0_synchronizer_ff_17 \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst 
+  design_1_PmodWIFI_0_0_synchronizer_ff_23 \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst 
        (.ext_spi_clk(ext_spi_clk),
         .in0(wr_rst_asreg),
         .\ngwrdrst.grst.g7serrst.wr_rst_asreg_reg (\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst_n_1 ),
         .out(p_8_out));
-  design_1_PmodWIFI_0_0_synchronizer_ff_18 \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst 
+  design_1_PmodWIFI_0_0_synchronizer_ff_24 \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst 
        (.AS(\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst_n_0 ),
         .in0(rd_rst_asreg),
         .out(p_7_out),
         .s_axi_aclk(s_axi_aclk));
-  design_1_PmodWIFI_0_0_synchronizer_ff_19 \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst 
+  design_1_PmodWIFI_0_0_synchronizer_ff_25 \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst 
        (.AS(\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst_n_0 ),
         .ext_spi_clk(ext_spi_clk),
         .in0(wr_rst_asreg),
@@ -28888,7 +28702,6 @@ module design_1_PmodWIFI_0_0_reset_blk_ramfifo_15
         .Q(wr_rst_reg[2]));
 endmodule
 
-(* ORIG_REF_NAME = "synchronizer_ff" *) 
 module design_1_PmodWIFI_0_0_synchronizer_ff
    (out,
     \ngwrdrst.grst.g7serrst.rd_rst_asreg_reg ,
@@ -28925,7 +28738,7 @@ module design_1_PmodWIFI_0_0_synchronizer_ff
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module design_1_PmodWIFI_0_0_synchronizer_ff_16
+module design_1_PmodWIFI_0_0_synchronizer_ff_22
    (out,
     \ngwrdrst.grst.g7serrst.rd_rst_asreg_reg ,
     in0,
@@ -28961,7 +28774,7 @@ module design_1_PmodWIFI_0_0_synchronizer_ff_16
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module design_1_PmodWIFI_0_0_synchronizer_ff_17
+module design_1_PmodWIFI_0_0_synchronizer_ff_23
    (out,
     \ngwrdrst.grst.g7serrst.wr_rst_asreg_reg ,
     in0,
@@ -28997,7 +28810,7 @@ module design_1_PmodWIFI_0_0_synchronizer_ff_17
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module design_1_PmodWIFI_0_0_synchronizer_ff_18
+module design_1_PmodWIFI_0_0_synchronizer_ff_24
    (AS,
     out,
     s_axi_aclk,
@@ -29033,7 +28846,7 @@ module design_1_PmodWIFI_0_0_synchronizer_ff_18
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module design_1_PmodWIFI_0_0_synchronizer_ff_19
+module design_1_PmodWIFI_0_0_synchronizer_ff_25
    (AS,
     out,
     ext_spi_clk,
@@ -29069,7 +28882,7 @@ module design_1_PmodWIFI_0_0_synchronizer_ff_19
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module design_1_PmodWIFI_0_0_synchronizer_ff_4
+module design_1_PmodWIFI_0_0_synchronizer_ff_7
    (out,
     \ngwrdrst.grst.g7serrst.wr_rst_asreg_reg ,
     in0,
@@ -29105,7 +28918,7 @@ module design_1_PmodWIFI_0_0_synchronizer_ff_4
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module design_1_PmodWIFI_0_0_synchronizer_ff_5
+module design_1_PmodWIFI_0_0_synchronizer_ff_8
    (AS,
     out,
     ext_spi_clk,
@@ -29141,7 +28954,7 @@ module design_1_PmodWIFI_0_0_synchronizer_ff_5
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module design_1_PmodWIFI_0_0_synchronizer_ff_6
+module design_1_PmodWIFI_0_0_synchronizer_ff_9
    (AS,
     out,
     s_axi_aclk,
@@ -29240,70 +29053,7 @@ module design_1_PmodWIFI_0_0_synchronizer_ff__parameterized0
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module design_1_PmodWIFI_0_0_synchronizer_ff__parameterized0_26
-   (D,
-    Q,
-    s_axi_aclk,
-    \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] );
-  output [3:0]D;
-  input [3:0]Q;
-  input s_axi_aclk;
-  input [0:0]\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ;
-
-  wire [3:0]Q;
-  (* async_reg = "true" *) (* msgon = "true" *) wire [3:0]Q_reg;
-  wire [0:0]\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ;
-  wire s_axi_aclk;
-
-  assign D[3:0] = Q_reg;
-  (* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  (* msgon = "true" *) 
-  FDCE #(
-    .INIT(1'b0)) 
-    \Q_reg_reg[0] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .CLR(\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ),
-        .D(Q[0]),
-        .Q(Q_reg[0]));
-  (* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  (* msgon = "true" *) 
-  FDCE #(
-    .INIT(1'b0)) 
-    \Q_reg_reg[1] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .CLR(\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ),
-        .D(Q[1]),
-        .Q(Q_reg[1]));
-  (* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  (* msgon = "true" *) 
-  FDCE #(
-    .INIT(1'b0)) 
-    \Q_reg_reg[2] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .CLR(\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ),
-        .D(Q[2]),
-        .Q(Q_reg[2]));
-  (* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  (* msgon = "true" *) 
-  FDCE #(
-    .INIT(1'b0)) 
-    \Q_reg_reg[3] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .CLR(\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ),
-        .D(Q[3]),
-        .Q(Q_reg[3]));
-endmodule
-
-(* ORIG_REF_NAME = "synchronizer_ff" *) 
-module design_1_PmodWIFI_0_0_synchronizer_ff__parameterized1
+module design_1_PmodWIFI_0_0_synchronizer_ff__parameterized0_10
    (D,
     Q,
     s_axi_aclk,
@@ -29366,70 +29116,7 @@ module design_1_PmodWIFI_0_0_synchronizer_ff__parameterized1
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module design_1_PmodWIFI_0_0_synchronizer_ff__parameterized1_27
-   (D,
-    Q,
-    ext_spi_clk,
-    AR);
-  output [3:0]D;
-  input [3:0]Q;
-  input ext_spi_clk;
-  input [0:0]AR;
-
-  wire [0:0]AR;
-  wire [3:0]Q;
-  (* async_reg = "true" *) (* msgon = "true" *) wire [3:0]Q_reg;
-  wire ext_spi_clk;
-
-  assign D[3:0] = Q_reg;
-  (* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  (* msgon = "true" *) 
-  FDCE #(
-    .INIT(1'b0)) 
-    \Q_reg_reg[0] 
-       (.C(ext_spi_clk),
-        .CE(1'b1),
-        .CLR(AR),
-        .D(Q[0]),
-        .Q(Q_reg[0]));
-  (* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  (* msgon = "true" *) 
-  FDCE #(
-    .INIT(1'b0)) 
-    \Q_reg_reg[1] 
-       (.C(ext_spi_clk),
-        .CE(1'b1),
-        .CLR(AR),
-        .D(Q[1]),
-        .Q(Q_reg[1]));
-  (* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  (* msgon = "true" *) 
-  FDCE #(
-    .INIT(1'b0)) 
-    \Q_reg_reg[2] 
-       (.C(ext_spi_clk),
-        .CE(1'b1),
-        .CLR(AR),
-        .D(Q[2]),
-        .Q(Q_reg[2]));
-  (* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  (* msgon = "true" *) 
-  FDCE #(
-    .INIT(1'b0)) 
-    \Q_reg_reg[3] 
-       (.C(ext_spi_clk),
-        .CE(1'b1),
-        .CLR(AR),
-        .D(Q[3]),
-        .Q(Q_reg[3]));
-endmodule
-
-(* ORIG_REF_NAME = "synchronizer_ff" *) 
-module design_1_PmodWIFI_0_0_synchronizer_ff__parameterized2
+module design_1_PmodWIFI_0_0_synchronizer_ff__parameterized0_11
    (out,
     D,
     \Q_reg_reg[3]_0 ,
@@ -29501,79 +29188,7 @@ module design_1_PmodWIFI_0_0_synchronizer_ff__parameterized2
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module design_1_PmodWIFI_0_0_synchronizer_ff__parameterized2_28
-   (out,
-    D,
-    \Q_reg_reg[3]_0 ,
-    s_axi_aclk,
-    \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] );
-  output [3:0]out;
-  output [0:0]D;
-  input [3:0]\Q_reg_reg[3]_0 ;
-  input s_axi_aclk;
-  input [0:0]\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ;
-
-  wire [0:0]D;
-  (* async_reg = "true" *) (* msgon = "true" *) wire [3:0]Q_reg;
-  wire [3:0]\Q_reg_reg[3]_0 ;
-  wire [0:0]\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ;
-  wire s_axi_aclk;
-
-  assign out[3:0] = Q_reg;
-  (* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  (* msgon = "true" *) 
-  FDCE #(
-    .INIT(1'b0)) 
-    \Q_reg_reg[0] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .CLR(\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ),
-        .D(\Q_reg_reg[3]_0 [0]),
-        .Q(Q_reg[0]));
-  (* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  (* msgon = "true" *) 
-  FDCE #(
-    .INIT(1'b0)) 
-    \Q_reg_reg[1] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .CLR(\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ),
-        .D(\Q_reg_reg[3]_0 [1]),
-        .Q(Q_reg[1]));
-  (* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  (* msgon = "true" *) 
-  FDCE #(
-    .INIT(1'b0)) 
-    \Q_reg_reg[2] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .CLR(\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ),
-        .D(\Q_reg_reg[3]_0 [2]),
-        .Q(Q_reg[2]));
-  (* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  (* msgon = "true" *) 
-  FDCE #(
-    .INIT(1'b0)) 
-    \Q_reg_reg[3] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .CLR(\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ),
-        .D(\Q_reg_reg[3]_0 [3]),
-        .Q(Q_reg[3]));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \gnxpm_cdc.wr_pntr_bin[2]_i_1 
-       (.I0(Q_reg[2]),
-        .I1(Q_reg[3]),
-        .O(D));
-endmodule
-
-(* ORIG_REF_NAME = "synchronizer_ff" *) 
-module design_1_PmodWIFI_0_0_synchronizer_ff__parameterized3
+module design_1_PmodWIFI_0_0_synchronizer_ff__parameterized0_12
    (out,
     D,
     \Q_reg_reg[3]_0 ,
@@ -29645,7 +29260,205 @@ module design_1_PmodWIFI_0_0_synchronizer_ff__parameterized3
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module design_1_PmodWIFI_0_0_synchronizer_ff__parameterized3_29
+module design_1_PmodWIFI_0_0_synchronizer_ff__parameterized0_32
+   (D,
+    Q,
+    s_axi_aclk,
+    \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] );
+  output [3:0]D;
+  input [3:0]Q;
+  input s_axi_aclk;
+  input [0:0]\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ;
+
+  wire [3:0]Q;
+  (* async_reg = "true" *) (* msgon = "true" *) wire [3:0]Q_reg;
+  wire [0:0]\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ;
+  wire s_axi_aclk;
+
+  assign D[3:0] = Q_reg;
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  (* msgon = "true" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \Q_reg_reg[0] 
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .CLR(\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ),
+        .D(Q[0]),
+        .Q(Q_reg[0]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  (* msgon = "true" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \Q_reg_reg[1] 
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .CLR(\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ),
+        .D(Q[1]),
+        .Q(Q_reg[1]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  (* msgon = "true" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \Q_reg_reg[2] 
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .CLR(\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ),
+        .D(Q[2]),
+        .Q(Q_reg[2]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  (* msgon = "true" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \Q_reg_reg[3] 
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .CLR(\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ),
+        .D(Q[3]),
+        .Q(Q_reg[3]));
+endmodule
+
+(* ORIG_REF_NAME = "synchronizer_ff" *) 
+module design_1_PmodWIFI_0_0_synchronizer_ff__parameterized0_33
+   (D,
+    Q,
+    ext_spi_clk,
+    AR);
+  output [3:0]D;
+  input [3:0]Q;
+  input ext_spi_clk;
+  input [0:0]AR;
+
+  wire [0:0]AR;
+  wire [3:0]Q;
+  (* async_reg = "true" *) (* msgon = "true" *) wire [3:0]Q_reg;
+  wire ext_spi_clk;
+
+  assign D[3:0] = Q_reg;
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  (* msgon = "true" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \Q_reg_reg[0] 
+       (.C(ext_spi_clk),
+        .CE(1'b1),
+        .CLR(AR),
+        .D(Q[0]),
+        .Q(Q_reg[0]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  (* msgon = "true" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \Q_reg_reg[1] 
+       (.C(ext_spi_clk),
+        .CE(1'b1),
+        .CLR(AR),
+        .D(Q[1]),
+        .Q(Q_reg[1]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  (* msgon = "true" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \Q_reg_reg[2] 
+       (.C(ext_spi_clk),
+        .CE(1'b1),
+        .CLR(AR),
+        .D(Q[2]),
+        .Q(Q_reg[2]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  (* msgon = "true" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \Q_reg_reg[3] 
+       (.C(ext_spi_clk),
+        .CE(1'b1),
+        .CLR(AR),
+        .D(Q[3]),
+        .Q(Q_reg[3]));
+endmodule
+
+(* ORIG_REF_NAME = "synchronizer_ff" *) 
+module design_1_PmodWIFI_0_0_synchronizer_ff__parameterized0_34
+   (out,
+    D,
+    \Q_reg_reg[3]_0 ,
+    s_axi_aclk,
+    \ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] );
+  output [3:0]out;
+  output [0:0]D;
+  input [3:0]\Q_reg_reg[3]_0 ;
+  input s_axi_aclk;
+  input [0:0]\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ;
+
+  wire [0:0]D;
+  (* async_reg = "true" *) (* msgon = "true" *) wire [3:0]Q_reg;
+  wire [3:0]\Q_reg_reg[3]_0 ;
+  wire [0:0]\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ;
+  wire s_axi_aclk;
+
+  assign out[3:0] = Q_reg;
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  (* msgon = "true" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \Q_reg_reg[0] 
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .CLR(\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ),
+        .D(\Q_reg_reg[3]_0 [0]),
+        .Q(Q_reg[0]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  (* msgon = "true" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \Q_reg_reg[1] 
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .CLR(\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ),
+        .D(\Q_reg_reg[3]_0 [1]),
+        .Q(Q_reg[1]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  (* msgon = "true" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \Q_reg_reg[2] 
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .CLR(\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ),
+        .D(\Q_reg_reg[3]_0 [2]),
+        .Q(Q_reg[2]));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  (* msgon = "true" *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \Q_reg_reg[3] 
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .CLR(\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ),
+        .D(\Q_reg_reg[3]_0 [3]),
+        .Q(Q_reg[3]));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \gnxpm_cdc.wr_pntr_bin[2]_i_1 
+       (.I0(Q_reg[2]),
+        .I1(Q_reg[3]),
+        .O(D));
+endmodule
+
+(* ORIG_REF_NAME = "synchronizer_ff" *) 
+module design_1_PmodWIFI_0_0_synchronizer_ff__parameterized0_35
    (out,
     D,
     \Q_reg_reg[3]_0 ,
@@ -29716,7 +29529,6 @@ module design_1_PmodWIFI_0_0_synchronizer_ff__parameterized3_29
         .O(D));
 endmodule
 
-(* ORIG_REF_NAME = "wr_bin_cntr" *) 
 module design_1_PmodWIFI_0_0_wr_bin_cntr
    (ram_full_i_reg,
     Q,
@@ -29751,20 +29563,20 @@ module design_1_PmodWIFI_0_0_wr_bin_cntr
   wire [3:0]wr_pntr_plus2;
   wire [3:0]wr_pntr_plus3;
 
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \gic0.gc1.count[0]_i_1 
        (.I0(wr_pntr_plus3[0]),
         .O(plusOp__1[0]));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \gic0.gc1.count[1]_i_1 
        (.I0(wr_pntr_plus3[0]),
         .I1(wr_pntr_plus3[1]),
         .O(plusOp__1[1]));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \gic0.gc1.count[2]_i_1 
@@ -29772,7 +29584,7 @@ module design_1_PmodWIFI_0_0_wr_bin_cntr
         .I1(wr_pntr_plus3[1]),
         .I2(wr_pntr_plus3[2]),
         .O(plusOp__1[2]));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \gic0.gc1.count[3]_i_1 
@@ -29949,7 +29761,7 @@ module design_1_PmodWIFI_0_0_wr_bin_cntr
 endmodule
 
 (* ORIG_REF_NAME = "wr_bin_cntr" *) 
-module design_1_PmodWIFI_0_0_wr_bin_cntr_22
+module design_1_PmodWIFI_0_0_wr_bin_cntr_28
    (ram_full_fb_i_reg,
     Q,
     \gnxpm_cdc.wr_pntr_gc_reg[3] ,
@@ -29977,20 +29789,20 @@ module design_1_PmodWIFI_0_0_wr_bin_cntr_22
   wire [3:0]wr_pntr_plus2;
   wire [3:0]wr_pntr_plus3;
 
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \gic0.gc1.count[0]_i_1__0 
        (.I0(wr_pntr_plus3[0]),
         .O(plusOp__2[0]));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \gic0.gc1.count[1]_i_1__0 
        (.I0(wr_pntr_plus3[0]),
         .I1(wr_pntr_plus3[1]),
         .O(plusOp__2[1]));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \gic0.gc1.count[2]_i_1__0 
@@ -29998,7 +29810,7 @@ module design_1_PmodWIFI_0_0_wr_bin_cntr_22
         .I1(wr_pntr_plus3[1]),
         .I2(wr_pntr_plus3[0]),
         .O(plusOp__2[2]));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT4 #(
     .INIT(16'h6AAA)) 
     \gic0.gc1.count[3]_i_1__0 
@@ -30138,23 +29950,22 @@ module design_1_PmodWIFI_0_0_wr_bin_cntr_22
   LUT5 #(
     .INIT(32'hFFFF6FF6)) 
     ram_full_i_i_2__0
-       (.I0(\gnxpm_cdc.rd_pntr_bin_reg[3] [3]),
-        .I1(wr_pntr_plus2[3]),
-        .I2(\gnxpm_cdc.rd_pntr_bin_reg[3] [2]),
-        .I3(wr_pntr_plus2[2]),
+       (.I0(\gnxpm_cdc.rd_pntr_bin_reg[3] [0]),
+        .I1(wr_pntr_plus2[0]),
+        .I2(\gnxpm_cdc.rd_pntr_bin_reg[3] [1]),
+        .I3(wr_pntr_plus2[1]),
         .I4(ram_full_i_i_4__0_n_0),
         .O(ram_full_fb_i_reg));
   LUT4 #(
     .INIT(16'h6FF6)) 
     ram_full_i_i_4__0
-       (.I0(wr_pntr_plus2[1]),
-        .I1(\gnxpm_cdc.rd_pntr_bin_reg[3] [1]),
-        .I2(wr_pntr_plus2[0]),
-        .I3(\gnxpm_cdc.rd_pntr_bin_reg[3] [0]),
+       (.I0(wr_pntr_plus2[2]),
+        .I1(\gnxpm_cdc.rd_pntr_bin_reg[3] [2]),
+        .I2(wr_pntr_plus2[3]),
+        .I3(\gnxpm_cdc.rd_pntr_bin_reg[3] [3]),
         .O(ram_full_i_i_4__0_n_0));
 endmodule
 
-(* ORIG_REF_NAME = "wr_logic" *) 
 module design_1_PmodWIFI_0_0_wr_logic
    (out,
     E,
@@ -30166,7 +29977,7 @@ module design_1_PmodWIFI_0_0_wr_logic
     \grstd1.grst_full.grst_f.rst_d3_reg ,
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ,
     Bus_RNW_reg,
-    p_6_in,
+    \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ,
     AR);
   output out;
   output [0:0]E;
@@ -30178,12 +29989,13 @@ module design_1_PmodWIFI_0_0_wr_logic
   input \grstd1.grst_full.grst_f.rst_d3_reg ;
   input \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ;
   input Bus_RNW_reg;
-  input p_6_in;
+  input \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ;
   input [0:0]AR;
 
   wire [0:0]AR;
   wire Bus_RNW_reg;
   wire [0:0]E;
+  wire \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ;
   wire IP2Bus_WrAck_transmit_enable__0;
   wire \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ;
   wire [3:0]Q;
@@ -30192,20 +30004,19 @@ module design_1_PmodWIFI_0_0_wr_logic
   wire \grstd1.grst_full.grst_f.rst_d3_reg ;
   wire \gwas.wsts_n_1 ;
   wire out;
-  wire p_6_in;
   wire s_axi_aclk;
   wire wpntr_n_0;
 
   design_1_PmodWIFI_0_0_wr_status_flags_as \gwas.wsts 
        (.Bus_RNW_reg(Bus_RNW_reg),
         .E(E),
+        .\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ),
         .IP2Bus_WrAck_transmit_enable__0(IP2Bus_WrAck_transmit_enable__0),
         .\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg (\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ),
         .\gic0.gc1.count_d2_reg[3] (wpntr_n_0),
         .\grstd1.grst_full.grst_f.rst_d2_reg (\grstd1.grst_full.grst_f.rst_d2_reg ),
         .\grstd1.grst_full.grst_f.rst_d3_reg (\grstd1.grst_full.grst_f.rst_d3_reg ),
         .out(out),
-        .p_6_in(p_6_in),
         .ram_full_i_reg_0(\gwas.wsts_n_1 ),
         .s_axi_aclk(s_axi_aclk));
   design_1_PmodWIFI_0_0_wr_bin_cntr wpntr
@@ -30220,7 +30031,7 @@ module design_1_PmodWIFI_0_0_wr_logic
 endmodule
 
 (* ORIG_REF_NAME = "wr_logic" *) 
-module design_1_PmodWIFI_0_0_wr_logic_13
+module design_1_PmodWIFI_0_0_wr_logic_19
    (\FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg ,
     ram_full_fb_i_reg,
     Rx_FIFO_Full_Fifo,
@@ -30266,18 +30077,18 @@ module design_1_PmodWIFI_0_0_wr_logic_13
   wire spiXfer_done_int;
   wire wpntr_n_0;
 
-  design_1_PmodWIFI_0_0_wr_status_flags_as_21 \gwas.wsts 
+  design_1_PmodWIFI_0_0_wr_status_flags_as_27 \gwas.wsts 
        (.\FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg (\FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg ),
         .Rx_FIFO_Full_Fifo(Rx_FIFO_Full_Fifo),
         .ext_spi_clk(ext_spi_clk),
         .\gic0.gc1.count_d2_reg[3] (\gic0.gc1.count_d2_reg[3] ),
-        .\gnxpm_cdc.rd_pntr_bin_reg[3] (wpntr_n_0),
+        .\gnxpm_cdc.rd_pntr_bin_reg[0] (wpntr_n_0),
         .\grstd1.grst_full.grst_f.rst_d3_reg (\grstd1.grst_full.grst_f.rst_d3_reg ),
         .out(out),
         .ram_full_fb_i_reg_0(ram_full_fb_i_reg),
         .scndry_out(scndry_out),
         .spiXfer_done_int(spiXfer_done_int));
-  design_1_PmodWIFI_0_0_wr_bin_cntr_22 wpntr
+  design_1_PmodWIFI_0_0_wr_bin_cntr_28 wpntr
        (.AR(AR),
         .E(E),
         .Q(Q),
@@ -30287,7 +30098,6 @@ module design_1_PmodWIFI_0_0_wr_logic_13
         .ram_full_fb_i_reg(wpntr_n_0));
 endmodule
 
-(* ORIG_REF_NAME = "wr_status_flags_as" *) 
 module design_1_PmodWIFI_0_0_wr_status_flags_as
    (out,
     ram_full_i_reg_0,
@@ -30299,7 +30109,7 @@ module design_1_PmodWIFI_0_0_wr_status_flags_as
     \grstd1.grst_full.grst_f.rst_d3_reg ,
     \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ,
     Bus_RNW_reg,
-    p_6_in);
+    \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg );
   output out;
   output ram_full_i_reg_0;
   output [0:0]E;
@@ -30310,16 +30120,16 @@ module design_1_PmodWIFI_0_0_wr_status_flags_as
   input \grstd1.grst_full.grst_f.rst_d3_reg ;
   input \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ;
   input Bus_RNW_reg;
-  input p_6_in;
+  input \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ;
 
   wire Bus_RNW_reg;
   wire [0:0]E;
+  wire \GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ;
   wire IP2Bus_WrAck_transmit_enable__0;
   wire \LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ;
   wire \gic0.gc1.count_d2_reg[3] ;
   wire \grstd1.grst_full.grst_f.rst_d2_reg ;
   wire \grstd1.grst_full.grst_f.rst_d3_reg ;
-  wire p_6_in;
   (* DONT_TOUCH *) wire ram_full_fb_i;
   (* DONT_TOUCH *) wire ram_full_i;
   wire ram_full_i_reg_0;
@@ -30331,7 +30141,7 @@ module design_1_PmodWIFI_0_0_wr_status_flags_as
     \gic0.gc1.count_d1[3]_i_1 
        (.I0(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ),
         .I1(Bus_RNW_reg),
-        .I2(p_6_in),
+        .I2(\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ),
         .I3(ram_full_i),
         .I4(ram_full_fb_i),
         .O(E));
@@ -30339,7 +30149,7 @@ module design_1_PmodWIFI_0_0_wr_status_flags_as
     .INIT(16'h0400)) 
     \icount_out[3]_i_3__0 
        (.I0(ram_full_i),
-        .I1(p_6_in),
+        .I1(\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ),
         .I2(Bus_RNW_reg),
         .I3(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ),
         .O(IP2Bus_WrAck_transmit_enable__0));
@@ -30361,7 +30171,7 @@ module design_1_PmodWIFI_0_0_wr_status_flags_as
         .I1(\grstd1.grst_full.grst_f.rst_d3_reg ),
         .I2(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_1_reg ),
         .I3(Bus_RNW_reg),
-        .I4(p_6_in),
+        .I4(\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg ),
         .I5(ram_full_i),
         .O(ram_full_i_reg_0));
   (* DONT_TOUCH *) 
@@ -30378,14 +30188,14 @@ module design_1_PmodWIFI_0_0_wr_status_flags_as
 endmodule
 
 (* ORIG_REF_NAME = "wr_status_flags_as" *) 
-module design_1_PmodWIFI_0_0_wr_status_flags_as_21
+module design_1_PmodWIFI_0_0_wr_status_flags_as_27
    (\FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg ,
     ram_full_fb_i_reg_0,
     Rx_FIFO_Full_Fifo,
     ext_spi_clk,
     out,
     spiXfer_done_int,
-    \gnxpm_cdc.rd_pntr_bin_reg[3] ,
+    \gnxpm_cdc.rd_pntr_bin_reg[0] ,
     \gic0.gc1.count_d2_reg[3] ,
     \grstd1.grst_full.grst_f.rst_d3_reg ,
     scndry_out);
@@ -30395,7 +30205,7 @@ module design_1_PmodWIFI_0_0_wr_status_flags_as_21
   input ext_spi_clk;
   input out;
   input spiXfer_done_int;
-  input \gnxpm_cdc.rd_pntr_bin_reg[3] ;
+  input \gnxpm_cdc.rd_pntr_bin_reg[0] ;
   input \gic0.gc1.count_d2_reg[3] ;
   input \grstd1.grst_full.grst_f.rst_d3_reg ;
   input scndry_out;
@@ -30403,7 +30213,7 @@ module design_1_PmodWIFI_0_0_wr_status_flags_as_21
   wire Rx_FIFO_Full_Fifo;
   wire ext_spi_clk;
   wire \gic0.gc1.count_d2_reg[3] ;
-  wire \gnxpm_cdc.rd_pntr_bin_reg[3] ;
+  wire \gnxpm_cdc.rd_pntr_bin_reg[0] ;
   wire \grstd1.grst_full.grst_f.rst_d3_reg ;
   wire out;
   (* DONT_TOUCH *) wire ram_full_fb_i;
@@ -30436,7 +30246,7 @@ module design_1_PmodWIFI_0_0_wr_status_flags_as_21
     ram_full_i_i_1__0
        (.I0(spiXfer_done_int),
         .I1(ram_full_fb_i),
-        .I2(\gnxpm_cdc.rd_pntr_bin_reg[3] ),
+        .I2(\gnxpm_cdc.rd_pntr_bin_reg[0] ),
         .I3(\gic0.gc1.count_d2_reg[3] ),
         .I4(\grstd1.grst_full.grst_f.rst_d3_reg ),
         .O(ram_full_i_i_1__0_n_0));
@@ -30502,8 +30312,8 @@ module glbl ();
     reg JTAG_USER_TDO3_GLBL = 1'bz;
     reg JTAG_USER_TDO4_GLBL = 1'bz;
 
-    assign (weak1, weak0) GSR = GSR_int;
-    assign (weak1, weak0) GTS = GTS_int;
+    assign (strong1, weak0) GSR = GSR_int;
+    assign (strong1, weak0) GTS = GTS_int;
     assign (weak1, weak0) PRLD = PRLD_int;
 
     initial begin

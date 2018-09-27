@@ -1,0 +1,45 @@
+23:06:38 **** Auto Build of configuration Debug for project wifiApp ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../wifiApp_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+In file included from ../../wifiApp_bsp/microblaze_0/include/DEIPcK/utility/fpga/../../../MRF24G/utility/ud_inc/internal/wf_global_includes.h:44:0,
+                 from ../../wifiApp_bsp/microblaze_0/include/DEIPcK/utility/fpga/System.h:64,
+                 from ../../wifiApp_bsp/microblaze_0/include/DEIPcK/utility/System.h:54,
+                 from ../../wifiApp_bsp/microblaze_0/include/DEIPcK/utility/deIP.h:59,
+                 from ../../wifiApp_bsp/microblaze_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../wifiApp_bsp/microblaze_0/include/PmodWIFI.h:2,
+                 from ../src/main.cc:52:
+c:\xilinx\vivado\pmod_wifi_old\pmodwifi\pmodwifi.sdk\wifiapp_bsp\microblaze_0\include\mrf24g\utility\wf_customize.h:50:0: warning: "INLINE" redefined
+ #define INLINE
+ 
+In file included from ../../wifiApp_bsp/microblaze_0/include/DEIPcK/utility/fpga/System.h:62:0,
+                 from ../../wifiApp_bsp/microblaze_0/include/DEIPcK/utility/System.h:54,
+                 from ../../wifiApp_bsp/microblaze_0/include/DEIPcK/utility/deIP.h:59,
+                 from ../../wifiApp_bsp/microblaze_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../wifiApp_bsp/microblaze_0/include/PmodWIFI.h:2,
+                 from ../src/main.cc:52:
+../../wifiApp_bsp/microblaze_0/include/xil_io.h:99:0: note: this is the location of the previous definition
+ #define INLINE inline
+ 
+'Finished building: ../src/main.cc'
+' '
+'Building target: wifiApp.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../wifiApp_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "wifiApp.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+../../wifiApp_bsp/microblaze_0/lib\libxil.a(DEIPcK.o): In function `DEIPcK::deIPInit()':
+(.text._ZN6DEIPcK8deIPInitEv+0xc): undefined reference to `_mcount'
+../../wifiApp_bsp/microblaze_0/lib\libxil.a(DEIPcK.o): In function `DEIPcK::DEIPcK()':
+(.text._ZN6DEIPcKC2Ev+0x8): undefined reference to `_mcount'
+../../wifiApp_bsp/microblaze_0/lib\libxil.a(DEIPcK.o): In function `DEIPcK::begin(IPv4_T const&, IPv4_T const&, IPv4_T const&)':
+(.text._ZN6DEIPcK5beginERK6IPv4_TS2_S2_+0x1c): undefined reference to `_mcount'
+../../wifiApp_bsp/microblaze_0/lib\libxil.a(DEIPcK.o): In function `DEIPcK::begin()':
+(.text._ZN6DEIPcK5beginEv+0x8): undefined reference to `_mcount'
+../../wifiApp_bsp/microblaze_0/lib\libxil.a(DEIPcK.o): In function `DEIPcK::resolveEndPoint(char const*, unsigned short, IPEndPoint&, unsigned long*)':
+(.text._ZN6DEIPcK15resolveEndPointEPKctR10IPEndPointPm+0x1c): undefined reference to `_mcount'
+../../wifiApp_bsp/microblaze_0/lib\libxil.a(DEIPcK.o):(.text._ZN6DEIPcK10tcpConnectERK6IPv4_TtR9TCPSockettPm+0x20): more undefined references to `_mcount' follow
+collect2.exe: error: ld returned 1 exit status
+make: *** [wifiApp.elf] Error 1
+
+23:06:39 Build Finished (took 574ms)
+

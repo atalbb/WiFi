@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# 
+# Start of session at: Wed Dec 13 15:07:51 2017
+# Process ID: 11652
+# Current directory: C:/College/Thesis/VivadoProjects/PMOD_WIFI_OLD/PMOD_WIFI.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: C:/College/Thesis/VivadoProjects/PMOD_WIFI_OLD/PMOD_WIFI.sdk/webtalk/webtalk.log
+# Journal file: C:/College/Thesis/VivadoProjects/PMOD_WIFI_OLD/PMOD_WIFI.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

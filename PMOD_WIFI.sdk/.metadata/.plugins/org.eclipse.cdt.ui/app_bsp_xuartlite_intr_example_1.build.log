@@ -1,0 +1,22 @@
+17:03:25 **** Build of configuration Debug for project app_bsp_xuartlite_intr_example_1 ****
+make all 
+'Building file: ../src/xuartlite_intr_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartlite_intr_example.o" -I../../app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xuartlite_intr_example.d" -MT"src/xuartlite_intr_example.o" -o "src/xuartlite_intr_example.o" "../src/xuartlite_intr_example.c"
+../src/xuartlite_intr_example.c: In function 'SetupInterruptSystem':
+../src/xuartlite_intr_example.c:78:33: error: 'XPAR_INTC_0_UARTLITE_0_VEC_ID' undeclared (first use in this function)
+ #define UARTLITE_INT_IRQ_ID     XPAR_INTC_0_UARTLITE_0_VEC_ID
+                                 ^
+../src/xuartlite_intr_example.c:363:47: note: in expansion of macro 'UARTLITE_INT_IRQ_ID'
+  Status = XIntc_Connect(&InterruptController, UARTLITE_INT_IRQ_ID,
+                                               ^~~~~~~~~~~~~~~~~~~
+../src/xuartlite_intr_example.c:78:33: note: each undeclared identifier is reported only once for each function it appears in
+ #define UARTLITE_INT_IRQ_ID     XPAR_INTC_0_UARTLITE_0_VEC_ID
+                                 ^
+../src/xuartlite_intr_example.c:363:47: note: in expansion of macro 'UARTLITE_INT_IRQ_ID'
+  Status = XIntc_Connect(&InterruptController, UARTLITE_INT_IRQ_ID,
+                                               ^~~~~~~~~~~~~~~~~~~
+make: *** [src/xuartlite_intr_example.o] Error 1
+
+17:03:25 Build Finished (took 474ms)
+

@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2017 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -47,14 +47,14 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:ip:axi_uartlite:2.0
--- IP Revision: 14
+-- IP Revision: 17
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-LIBRARY axi_uartlite_v2_0_14;
-USE axi_uartlite_v2_0_14.axi_uartlite;
+LIBRARY axi_uartlite_v2_0_17;
+USE axi_uartlite_v2_0_17.axi_uartlite;
 
 ENTITY design_1_axi_uartlite_0_0 IS
   PORT (
