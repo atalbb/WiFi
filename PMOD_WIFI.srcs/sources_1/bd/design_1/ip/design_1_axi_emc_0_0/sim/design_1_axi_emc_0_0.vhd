@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2017 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -47,14 +47,14 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:ip:axi_emc:3.0
--- IP Revision: 10
+-- IP Revision: 13
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-LIBRARY axi_emc_v3_0_10;
-USE axi_emc_v3_0_10.axi_emc;
+LIBRARY axi_emc_v3_0_13;
+USE axi_emc_v3_0_13.axi_emc;
 
 ENTITY design_1_axi_emc_0_0 IS
   PORT (

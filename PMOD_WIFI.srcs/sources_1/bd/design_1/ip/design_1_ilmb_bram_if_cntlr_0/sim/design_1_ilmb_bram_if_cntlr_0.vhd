@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2017 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -47,14 +47,14 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:ip:lmb_bram_if_cntlr:4.0
--- IP Revision: 10
+-- IP Revision: 12
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-LIBRARY lmb_bram_if_cntlr_v4_0_10;
-USE lmb_bram_if_cntlr_v4_0_10.lmb_bram_if_cntlr;
+LIBRARY lmb_bram_if_cntlr_v4_0_12;
+USE lmb_bram_if_cntlr_v4_0_12.lmb_bram_if_cntlr;
 
 ENTITY design_1_ilmb_bram_if_cntlr_0 IS
   PORT (
@@ -216,7 +216,7 @@ BEGIN
       C_HIGHADDR => X"0000000000007FFF",
       C_BASEADDR => X"0000000000000000",
       C_NUM_LMB => 1,
-      C_MASK => X"0000000020000000",
+      C_MASK => X"0000000040000000",
       C_MASK1 => X"0000000000800000",
       C_MASK2 => X"0000000000800000",
       C_MASK3 => X"0000000000800000",

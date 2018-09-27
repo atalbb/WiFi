@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# updatemem v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# 
+# Start of session at: Thu Sep 27 01:21:13 2018
+# Process ID: 4540
+# Current directory: C:/Xilinx/Vivado/MyProjects/PMOD_WIFI_OLD
+# Command line: updatemem.exe -mode batch -source C:/Xilinx/SDK/2017.2/scripts/updatemem/main.tcl -notrace -tclargs -meminfo C:/Xilinx/Vivado/MyProjects/PMOD_WIFI_OLD/PMOD_WIFI.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.mmi -data C:/Xilinx/SDK/2017.2/data/embeddedsw/lib/microblaze/mb_bootloop_le.elf -proc design_1_i/microblaze_0 -bit C:/Xilinx/Vivado/MyProjects/PMOD_WIFI_OLD/PMOD_WIFI.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit -out C:/Xilinx/Vivado/MyProjects/PMOD_WIFI_OLD/PMOD_WIFI.sdk/design_1_wrapper_hw_platform_0/download.bit -force
+# Log file: C:/Xilinx/Vivado/MyProjects/PMOD_WIFI_OLD/updatemem.log
+# Journal file: C:/Xilinx/Vivado/MyProjects/PMOD_WIFI_OLD\updatemem.jou
+#-----------------------------------------------------------
+source C:/Xilinx/SDK/2017.2/scripts/updatemem/main.tcl -notrace
+ Loading bitfile C:/Xilinx/Vivado/MyProjects/PMOD_WIFI_OLD/PMOD_WIFI.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+Loading data files...
+Updating memory content...
+Creating bitstream...
+Writing bitstream C:/Xilinx/Vivado/MyProjects/PMOD_WIFI_OLD/PMOD_WIFI.sdk/design_1_wrapper_hw_platform_0/download.bit...
+  update_mem: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 517.785 ; gain = 462.289
+INFO: [Common 17-206] Exiting updatemem at Thu Sep 27 01:21:29 2018...

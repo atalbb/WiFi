@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2017 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:ip:xlconcat:2.1
-// IP Revision: 2
+// IP Revision: 1
 
 `timescale 1ns/1ps
 
@@ -61,7 +61,7 @@ module design_1_microblaze_0_xlconcat_0 (
 input wire [0 : 0] In0;
 output wire [0 : 0] dout;
 
-  xlconcat #(
+  xlconcat_v2_1_1_xlconcat #(
     .IN0_WIDTH(1),
     .IN1_WIDTH(1),
     .IN2_WIDTH(1),

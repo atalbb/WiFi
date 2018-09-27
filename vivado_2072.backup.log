@@ -1,0 +1,51 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Fri Sep 21 19:34:51 2018
+# Process ID: 2072
+# Current directory: C:/Xilinx/Vivado/MyProjects/PMOD_WIFI_OLD
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent216 C:\Xilinx\Vivado\MyProjects\PMOD_WIFI_OLD\PMOD_WIFI.xpr
+# Log file: C:/Xilinx/Vivado/MyProjects/PMOD_WIFI_OLD/vivado.log
+# Journal file: C:/Xilinx/Vivado/MyProjects/PMOD_WIFI_OLD\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Xilinx/Vivado/MyProjects/PMOD_WIFI_OLD/PMOD_WIFI.xpr
+INFO: [Project 1-313] Project file moved from 'C:/College/Thesis/VivadoProjects/PMOD_WIFI_OLD' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [filemgmt 56-1] IP Repository Path: Directory not found as 'C:/Xilinx/Vivado/vivado-library-master'; using path 'C:/College/Thesis/vivado-library-master' instead.
+INFO: [filemgmt 56-1] IPUserFilesDir: Directory not found as 'C:/Xilinx/Vivado/MyProjects/PMOD_WIFI/PMOD_WIFI.ip_user_files'; using path 'C:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.ip_user_files' instead.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/College/Thesis/vivado-library-master'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.1/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'design_1.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+design_1_ilmb_bram_if_cntlr_0
+design_1_axi_emc_0_0
+design_1_axi_gpio_1_0
+design_1_dlmb_bram_if_cntlr_0
+design_1_clk_wiz_0_0
+design_1_mdm_1_0
+design_1_axi_uartlite_0_0
+design_1_microblaze_0_0
+design_1_microblaze_0_axi_intc_0
+design_1_microblaze_0_axi_periph_0
+design_1_PmodWIFI_0_0
+design_1_axi_gpio_0_0
+design_1_axi_mem_intercon_0
+design_1_xbar_1
+design_1_xbar_0
+
+open_project: Time (s): cpu = 00:00:29 ; elapsed = 00:00:25 . Memory (MB): peak = 813.957 ; gain = 173.828
+update_compile_order -fileset sources_1
+launch_sdk -workspace C:/Xilinx/Vivado/MyProjects/PMOD_WIFI_OLD/PMOD_WIFI.sdk -hwspec C:/Xilinx/Vivado/MyProjects/PMOD_WIFI_OLD/PMOD_WIFI.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Xilinx/Vivado/MyProjects/PMOD_WIFI_OLD/PMOD_WIFI.sdk -hwspec C:/Xilinx/Vivado/MyProjects/PMOD_WIFI_OLD/PMOD_WIFI.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace C:/Xilinx/Vivado/MyProjects/PMOD_WIFI_OLD/PMOD_WIFI.sdk -hwspec C:/Xilinx/Vivado/MyProjects/PMOD_WIFI_OLD/PMOD_WIFI.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Xilinx/Vivado/MyProjects/PMOD_WIFI_OLD/PMOD_WIFI.sdk -hwspec C:/Xilinx/Vivado/MyProjects/PMOD_WIFI_OLD/PMOD_WIFI.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 21 19:54:10 2018...

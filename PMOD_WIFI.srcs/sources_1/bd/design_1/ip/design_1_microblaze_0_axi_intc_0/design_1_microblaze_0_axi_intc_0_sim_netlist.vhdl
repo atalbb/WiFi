@@ -1,10 +1,10 @@
--- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
--- Date        : Mon May 15 14:47:22 2017
+-- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+-- Date        : Wed Dec 13 13:50:54 2017
 -- Host        : LAPTOP-L1N8U9P6 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0/design_1_microblaze_0_axi_intc_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_1_microblaze_0_axi_intc_0 -prefix
+--               design_1_microblaze_0_axi_intc_0_ design_1_microblaze_0_axi_intc_0_sim_netlist.vhdl
 -- Design      : design_1_microblaze_0_axi_intc_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -58,8 +58,6 @@ entity design_1_microblaze_0_axi_intc_0_address_decoder is
     p_0_in_0 : in STD_LOGIC;
     bus2ip_rnw_i_reg : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_microblaze_0_axi_intc_0_address_decoder : entity is "address_decoder";
 end design_1_microblaze_0_axi_intc_0_address_decoder;
 
 architecture STRUCTURE of design_1_microblaze_0_axi_intc_0_address_decoder is
@@ -1161,8 +1159,6 @@ entity design_1_microblaze_0_axi_intc_0_shared_ram_ivar is
     Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
     ivar_index_axi_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_microblaze_0_axi_intc_0_shared_ram_ivar : entity is "shared_ram_ivar";
 end design_1_microblaze_0_axi_intc_0_shared_ram_ivar;
 
 architecture STRUCTURE of design_1_microblaze_0_axi_intc_0_shared_ram_ivar is
@@ -2454,8 +2450,6 @@ entity design_1_microblaze_0_axi_intc_0_intc_core is
     bus2ip_wrce : in STD_LOGIC_VECTOR ( 0 to 0 );
     Q : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_microblaze_0_axi_intc_0_intc_core : entity is "intc_core";
 end design_1_microblaze_0_axi_intc_0_intc_core;
 
 architecture STRUCTURE of design_1_microblaze_0_axi_intc_0_intc_core is
@@ -2989,8 +2983,6 @@ entity design_1_microblaze_0_axi_intc_0_slave_attachment is
     sie : in STD_LOGIC;
     cie : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_microblaze_0_axi_intc_0_slave_attachment : entity is "slave_attachment";
 end design_1_microblaze_0_axi_intc_0_slave_attachment;
 
 architecture STRUCTURE of design_1_microblaze_0_axi_intc_0_slave_attachment is
@@ -4046,8 +4038,6 @@ entity design_1_microblaze_0_axi_intc_0_axi_lite_ipif is
     sie : in STD_LOGIC;
     cie : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_microblaze_0_axi_intc_0_axi_lite_ipif : entity is "axi_lite_ipif";
 end design_1_microblaze_0_axi_intc_0_axi_lite_ipif;
 
 architecture STRUCTURE of design_1_microblaze_0_axi_intc_0_axi_lite_ipif is
@@ -4189,8 +4179,6 @@ entity design_1_microblaze_0_axi_intc_0_axi_intc is
   attribute C_S_AXI_ADDR_WIDTH of design_1_microblaze_0_axi_intc_0_axi_intc : entity is 9;
   attribute C_S_AXI_DATA_WIDTH : integer;
   attribute C_S_AXI_DATA_WIDTH of design_1_microblaze_0_axi_intc_0_axi_intc : entity is 32;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_microblaze_0_axi_intc_0_axi_intc : entity is "axi_intc";
   attribute hdl : string;
   attribute hdl of design_1_microblaze_0_axi_intc_0_axi_intc : entity is "VHDL";
   attribute imp_netlist : string;
@@ -4408,7 +4396,7 @@ entity design_1_microblaze_0_axi_intc_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of design_1_microblaze_0_axi_intc_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of design_1_microblaze_0_axi_intc_0 : entity is "axi_intc,Vivado 2016.3";
+  attribute x_core_info of design_1_microblaze_0_axi_intc_0 : entity is "axi_intc,Vivado 2017.2";
 end design_1_microblaze_0_axi_intc_0;
 
 architecture STRUCTURE of design_1_microblaze_0_axi_intc_0 is

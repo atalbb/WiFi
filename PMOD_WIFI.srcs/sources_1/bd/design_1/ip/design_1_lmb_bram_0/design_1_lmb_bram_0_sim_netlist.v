@@ -1,10 +1,10 @@
-// Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-// Date        : Mon May 15 14:44:10 2017
+// Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+// Date        : Wed Dec 13 13:52:26 2017
 // Host        : LAPTOP-L1N8U9P6 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/College/Thesis/VivadoProjects/PMOD_WIFI/PMOD_WIFI.srcs/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_lmb_bram_0 -prefix
+//               design_1_lmb_bram_0_ design_1_lmb_bram_0_sim_netlist.v
 // Design      : design_1_lmb_bram_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_lmb_bram_0,blk_mem_gen_v8_3_4,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "blk_mem_gen_v8_3_4,Vivado 2016.3" *) 
+(* CHECK_LICENSE_TYPE = "design_1_lmb_bram_0,blk_mem_gen_v8_3_6,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "blk_mem_gen_v8_3_6,Vivado 2017.2" *) 
 (* NotValidForBitStream *)
 module design_1_lmb_bram_0
    (clka,
@@ -152,7 +152,7 @@ module design_1_lmb_bram_0
   (* C_WRITE_WIDTH_B = "32" *) 
   (* C_XDEVICEFAMILY = "artix7" *) 
   (* downgradeipidentifiedwarnings = "yes" *) 
-  design_1_lmb_bram_0_blk_mem_gen_v8_3_4 U0
+  design_1_lmb_bram_0_blk_mem_gen_v8_3_6 U0
        (.addra(addra),
         .addrb(addrb),
         .clka(clka),
@@ -218,7 +218,6 @@ module design_1_lmb_bram_0
         .web(web));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module design_1_lmb_bram_0_blk_mem_gen_generic_cstr
    (douta,
     doutb,
@@ -386,7 +385,6 @@ module design_1_lmb_bram_0_blk_mem_gen_generic_cstr
         .web(web[3]));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module design_1_lmb_bram_0_blk_mem_gen_prim_width
    (douta,
     doutb,
@@ -890,7 +888,6 @@ module design_1_lmb_bram_0_blk_mem_gen_prim_width__parameterized6
         .web(web));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
 module design_1_lmb_bram_0_blk_mem_gen_prim_wrapper
    (douta,
     doutb,
@@ -946,7 +943,6 @@ module design_1_lmb_bram_0_blk_mem_gen_prim_wrapper
   wire [7:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED ;
   wire [8:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED ;
 
-  (* CLOCK_DOMAINS = "INDEPENDENT" *) 
   (* bmm_info_memory_device = "[3:0][0:8191]" *) 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
@@ -1216,7 +1212,6 @@ module design_1_lmb_bram_0_blk_mem_gen_prim_wrapper__parameterized0
   wire [7:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED ;
   wire [8:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED ;
 
-  (* CLOCK_DOMAINS = "INDEPENDENT" *) 
   (* bmm_info_memory_device = "[7:4][0:8191]" *) 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
@@ -1486,7 +1481,6 @@ module design_1_lmb_bram_0_blk_mem_gen_prim_wrapper__parameterized1
   wire [7:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED ;
   wire [8:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED ;
 
-  (* CLOCK_DOMAINS = "INDEPENDENT" *) 
   (* bmm_info_memory_device = "[11:8][0:8191]" *) 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
@@ -1756,7 +1750,6 @@ module design_1_lmb_bram_0_blk_mem_gen_prim_wrapper__parameterized2
   wire [7:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED ;
   wire [8:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED ;
 
-  (* CLOCK_DOMAINS = "INDEPENDENT" *) 
   (* bmm_info_memory_device = "[15:12][0:8191]" *) 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
@@ -2026,7 +2019,6 @@ module design_1_lmb_bram_0_blk_mem_gen_prim_wrapper__parameterized3
   wire [7:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED ;
   wire [8:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED ;
 
-  (* CLOCK_DOMAINS = "INDEPENDENT" *) 
   (* bmm_info_memory_device = "[19:16][0:8191]" *) 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
@@ -2296,7 +2288,6 @@ module design_1_lmb_bram_0_blk_mem_gen_prim_wrapper__parameterized4
   wire [7:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED ;
   wire [8:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED ;
 
-  (* CLOCK_DOMAINS = "INDEPENDENT" *) 
   (* bmm_info_memory_device = "[23:20][0:8191]" *) 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
@@ -2566,7 +2557,6 @@ module design_1_lmb_bram_0_blk_mem_gen_prim_wrapper__parameterized5
   wire [7:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED ;
   wire [8:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED ;
 
-  (* CLOCK_DOMAINS = "INDEPENDENT" *) 
   (* bmm_info_memory_device = "[27:24][0:8191]" *) 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
@@ -2836,7 +2826,6 @@ module design_1_lmb_bram_0_blk_mem_gen_prim_wrapper__parameterized6
   wire [7:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_ECCPARITY_UNCONNECTED ;
   wire [8:0]\NLW_DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_RDADDRECC_UNCONNECTED ;
 
-  (* CLOCK_DOMAINS = "INDEPENDENT" *) 
   (* bmm_info_memory_device = "[31:28][0:8191]" *) 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
@@ -3050,7 +3039,6 @@ module design_1_lmb_bram_0_blk_mem_gen_prim_wrapper__parameterized6
         .WEBWE({1'b0,1'b0,1'b0,1'b0,web,web,web,web}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module design_1_lmb_bram_0_blk_mem_gen_top
    (douta,
     doutb,
@@ -3137,8 +3125,8 @@ endmodule
 (* C_USE_URAM = "0" *) (* C_WEA_WIDTH = "4" *) (* C_WEB_WIDTH = "4" *) 
 (* C_WRITE_DEPTH_A = "8192" *) (* C_WRITE_DEPTH_B = "8192" *) (* C_WRITE_MODE_A = "WRITE_FIRST" *) 
 (* C_WRITE_MODE_B = "WRITE_FIRST" *) (* C_WRITE_WIDTH_A = "32" *) (* C_WRITE_WIDTH_B = "32" *) 
-(* C_XDEVICEFAMILY = "artix7" *) (* ORIG_REF_NAME = "blk_mem_gen_v8_3_4" *) (* downgradeipidentifiedwarnings = "yes" *) 
-module design_1_lmb_bram_0_blk_mem_gen_v8_3_4
+(* C_XDEVICEFAMILY = "artix7" *) (* downgradeipidentifiedwarnings = "yes" *) 
+module design_1_lmb_bram_0_blk_mem_gen_v8_3_6
    (clka,
     rsta,
     ena,
@@ -3404,7 +3392,7 @@ module design_1_lmb_bram_0_blk_mem_gen_v8_3_4
   assign sbiterr = \<const0> ;
   GND GND
        (.G(\<const0> ));
-  design_1_lmb_bram_0_blk_mem_gen_v8_3_4_synth inst_blk_mem_gen
+  design_1_lmb_bram_0_blk_mem_gen_v8_3_6_synth inst_blk_mem_gen
        (.addra(addra[14:2]),
         .addrb(addrb[14:2]),
         .clka(clka),
@@ -3421,8 +3409,7 @@ module design_1_lmb_bram_0_blk_mem_gen_v8_3_4
         .web(web));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_3_4_synth" *) 
-module design_1_lmb_bram_0_blk_mem_gen_v8_3_4_synth
+module design_1_lmb_bram_0_blk_mem_gen_v8_3_6_synth
    (douta,
     doutb,
     clka,
@@ -3533,8 +3520,8 @@ module glbl ();
     reg JTAG_USER_TDO3_GLBL = 1'bz;
     reg JTAG_USER_TDO4_GLBL = 1'bz;
 
-    assign (weak1, weak0) GSR = GSR_int;
-    assign (weak1, weak0) GTS = GTS_int;
+    assign (strong1, weak0) GSR = GSR_int;
+    assign (strong1, weak0) GTS = GTS_int;
     assign (weak1, weak0) PRLD = PRLD_int;
 
     initial begin
